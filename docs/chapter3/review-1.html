@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3.15. Multiple Choice Exercises &#8212; CISC 192 Course Reader Overview</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.5.5" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/runestone.js?v=92D8BBF0"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../_static/theme.js?v=D899FB97"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3.16. Mixed-Up Code Exercises" href="review-2.html" />
+    <link rel="prev" title="3.14. Glossary" href="glossary.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'https://daveparillo.github.io/cisc192-reader/' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/cisc192-reader';
+    eBookConfig.course = 'cisc192-reader';
+    eBookConfig.basecourse = 'cisc192-reader';
+    eBookConfig.isLoggedIn = false;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
+  eBookConfig.runestone_version = '5.5.5';
+  eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+          <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;'>&nbsp;<span aria-label="logo" class="visuallyhidden">Runestone Logo</span> </a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          cisc192-reader
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">3.14. </span>Glossary" data-toggle="tooltip">
+    <a href="glossary.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">3.16. </span>Mixed-Up Code Exercises' data-toggle="tooltip" >              
+    <a href="review-2.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+      </div> <!-- navbar -->
+
+
+
+
+
+
+
+    </div> <!-- container -->
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="multiple-choice-exercises">
+<h1><span class="section-number">3.15. </span>Multiple Choice Exercises<a class="headerlink" href="#multiple-choice-exercises" title="Permalink to this headline">¶</a></h1>
+<p>Answer the following <strong>Multiple Choice</strong> questions to
+assess what you have learned in this chapter.</p>
+<div id='tab_check' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Q1" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="3.15.1" data-multipleanswers="false"  id="functions_mc1"  style="visibility: hidden;">
+            <p>Q-1: You want to spice up your resume before the career fair, so you decide to
+update your GPA using the program below. What is the GPA that you will
+have on display for future employers?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">double</span> <span class="n">GPA</span> <span class="o">=</span> <span class="mf">3.52</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">updatedGPA</span> <span class="o">=</span> <span class="kt">int</span><span class="p">(</span><span class="n">GPA</span><span class="p">);</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;GPA: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">updatedGPA</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<li data-component="answer"  id="functions_mc1_opt_a"><p><code class="docutils literal notranslate"><span class="pre">3.0</span></code></p>
+</li><li data-component="feedback" id="functions_mc1_opt_a">
+<p>Its correct to think that your GPA will be rounded down, but what
+else happens when you convert from <code class="docutils literal notranslate"><span class="pre">int</span></code> to <code class="docutils literal notranslate"><span class="pre">double</span></code>?</p></li><li data-component="answer" data-correct id="functions_mc1_opt_b"><p><code class="docutils literal notranslate"><span class="pre">3</span></code></p>
+</li><li data-component="feedback" id="functions_mc1_opt_b">
+<p>Converting to an <code class="docutils literal notranslate"><span class="pre">int</span></code> always rounds down to the nearest integer, so I do not
+recommend using type conversions to build your resume… especially if you’re
+close to <code class="docutils literal notranslate"><span class="pre">4.0</span></code>.</p></li><li data-component="answer"  id="functions_mc1_opt_c"><p><code class="docutils literal notranslate"><span class="pre">4.0</span></code></p>
+</li><li data-component="feedback" id="functions_mc1_opt_c">
+<p>Converting to an int <em>will</em> round your GPA, but not in the direction
+that you were hoping for… what else happens when you convert from
+<code class="docutils literal notranslate"><span class="pre">int</span></code> to <code class="docutils literal notranslate"><span class="pre">double</span></code>?</p></li><li data-component="answer"  id="functions_mc1_opt_d"><p><code class="docutils literal notranslate"><span class="pre">4</span></code></p>
+</li><li data-component="feedback" id="functions_mc1_opt_d">
+<p>Converting to an int <em>will</em> round yor GPA, but not in the direction
+that you were hoping for.</p></li><li data-component="answer"  id="functions_mc1_opt_e"><p>Error!</p>
+</li><li data-component="feedback" id="functions_mc1_opt_e">
+<p>No errors here! Type conversions are perfectly legal in C++!</p></li>
+
+            </ul>
+            </div>
+            </div><div data-component="tab" data-tabname="Q2" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="3.15.2" data-multipleanswers="false"  id="functions_mc2"  style="visibility: hidden;">
+            <p>Q-2: What is the value of x after the program executes?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">acos</span><span class="p">(</span><span class="mi">-1</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<li data-component="answer"  id="functions_mc2_opt_a"><p>3.14159265358979323846</p>
+</li><li data-component="feedback" id="functions_mc2_opt_a">
+<p>If <code class="docutils literal notranslate"><span class="pre">x</span></code> were a double, C++ would automatically round the value
+of pi to <strong>15</strong> decimal places.</p></li><li data-component="answer"  id="functions_mc2_opt_b"><p>3.142</p>
+</li><li data-component="feedback" id="functions_mc2_opt_b">
+<p>If <code class="docutils literal notranslate"><span class="pre">x</span></code> were a double, C++ would automatically round the value
+of pi to <strong>15</strong> decimal places.</p></li><li data-component="answer"  id="functions_mc2_opt_c"><p>3.0</p>
+</li><li data-component="feedback" id="functions_mc2_opt_c">
+<p>Automatic type conversion will round the value of pi down to the
+nearest integer, but what else happens when we convert a <code class="docutils literal notranslate"><span class="pre">double</span></code>
+to an <code class="docutils literal notranslate"><span class="pre">int</span></code>?</p></li><li data-component="answer"  id="functions_mc2_opt_d"><p>3</p>
+</li><li data-component="feedback" id="functions_mc2_opt_d">
+<p>The value of x <em>should</em> be 3, since automatic type conversion will
+round the value of pi down to the nearest integer.</p></li><li data-component="answer" data-correct id="functions_mc2_opt_e"><p>Error!</p>
+</li><li data-component="feedback" id="functions_mc2_opt_e">
+<p>Whenever we use math functions, we must include the <code class="docutils literal notranslate"><span class="pre">&lt;cmath&gt;</span></code> header file.</p></li>
+
+            </ul>
+            </div>
+            </div><div data-component="tab" data-tabname="Q3" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="3.15.3" data-multipleanswers="true"  id="functions_mc3"  style="visibility: hidden;">
+            <p>Q-3: <strong>Multiple Response</strong> Select all variables that have a <em>non-zero</em> value after the decimal place.
+(3.1 has a <em>non-zero</em> value, while 3.0 does not)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">1.5</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mf">1.5</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">c</span> <span class="o">=</span> <span class="mf">2.4</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">d</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">5</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">e</span> <span class="o">=</span> <span class="n">c</span> <span class="o">*</span> <span class="n">c</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">f</span> <span class="o">=</span> <span class="kt">int</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<li data-component="answer"  id="functions_mc3_opt_a"><p><code class="docutils literal notranslate"><span class="pre">a</span></code></p>
+</li><li data-component="feedback" id="functions_mc3_opt_a">
+<p>C++ performs automatic type conversion to round 1.5 down to the
+nearest integer.</p></li><li data-component="answer" data-correct id="functions_mc3_opt_b"><p><code class="docutils literal notranslate"><span class="pre">b</span></code></p>
+</li><li data-component="feedback" id="functions_mc3_opt_b">
+<p>Since <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">1</span></code>, we know that <code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">=</span> <span class="pre">2.5</span></code>, which is a non-zero decimal.</p></li><li data-component="answer" data-correct id="functions_mc3_opt_c"><p><code class="docutils literal notranslate"><span class="pre">c</span></code></p>
+</li><li data-component="feedback" id="functions_mc3_opt_c">
+<p><code class="docutils literal notranslate"><span class="pre">c</span></code> is a <code class="docutils literal notranslate"><span class="pre">double</span></code> and has a non-zero decimal.</p></li><li data-component="answer"  id="functions_mc3_opt_d"><p><code class="docutils literal notranslate"><span class="pre">d</span></code></p>
+</li><li data-component="feedback" id="functions_mc3_opt_d">
+<p>C++ performs integer division to round <code class="docutils literal notranslate"><span class="pre">1/5</span></code> down to the nearest
+integer.  The value will be stored as <code class="docutils literal notranslate"><span class="pre">0</span></code>, not <code class="docutils literal notranslate"><span class="pre">0.2</span></code>.</p></li><li data-component="answer"  id="functions_mc3_opt_e"><p><code class="docutils literal notranslate"><span class="pre">e</span></code></p>
+</li><li data-component="feedback" id="functions_mc3_opt_e">
+<p><code class="docutils literal notranslate"><span class="pre">c</span></code> squared may have a non-zero decimal, but automatic type conversion
+will round it down to the nearest integer before storing the value in <code class="docutils literal notranslate"><span class="pre">e</span></code>.</p></li><li data-component="answer"  id="functions_mc3_opt_f"><p><code class="docutils literal notranslate"><span class="pre">f</span></code></p>
+</li><li data-component="feedback" id="functions_mc3_opt_f">
+<p><code class="docutils literal notranslate"><span class="pre">int(c)</span></code> rounds <code class="docutils literal notranslate"><span class="pre">c</span></code> down to the nearest integer before storing the
+value in <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p></li>
+
+            </ul>
+            </div>
+            </div><div data-component="tab" data-tabname="Q4" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="3.15.4" data-multipleanswers="true"  id="functions_mc4"  style="visibility: hidden;">
+            <p>Q-4: <strong>Multiple Response</strong> Which of the following would work as a function header
+(first line of a function).</p>
+<li data-component="answer"  id="functions_mc4_opt_a"><p><code class="docutils literal notranslate"><span class="pre">printHelloWorld</span> <span class="pre">()</span> <span class="pre">{</span></code></p>
+</li><li data-component="feedback" id="functions_mc4_opt_a">
+<p>This function header is missing a type.</p></li><li data-component="answer"  id="functions_mc4_opt_b"><p><code class="docutils literal notranslate"><span class="pre">string</span> <span class="pre">palindrome</span> <span class="pre">(word)</span> <span class="pre">{</span></code></p>
+</li><li data-component="feedback" id="functions_mc4_opt_b">
+<p>The function’s parameter is missing a type.</p></li><li data-component="answer" data-correct id="functions_mc4_opt_c"><p><code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">mult</span> <span class="pre">(int</span> <span class="pre">a,</span> <span class="pre">int</span> <span class="pre">b)</span> <span class="pre">{</span></code></p>
+</li><li data-component="feedback" id="functions_mc4_opt_c">
+<p>Correct! The function header has a type, empty parentheses, and
+a squiggly bracket.</p></li><li data-component="answer"  id="functions_mc4_opt_d"><p><code class="docutils literal notranslate"><span class="pre">char</span> <span class="pre">shiftThree</span> <span class="pre">(char</span> <span class="pre">letter)</span></code></p>
+</li><li data-component="feedback" id="functions_mc4_opt_d">
+<p>This function header is missing a squiggly bracket <code class="docutils literal notranslate"><span class="pre">{</span></code>.</p></li><li data-component="answer" data-correct id="functions_mc4_opt_e"><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">giveCompliment</span> <span class="pre">()</span> <span class="pre">{</span></code></p>
+</li><li data-component="feedback" id="functions_mc4_opt_e">
+<p>Correct! The function header has a type, empty parentheses, and
+a squiggly bracket.</p></li><li data-component="answer"  id="functions_mc4_opt_f"><p><code class="docutils literal notranslate"><span class="pre">string</span> <span class="pre">friend</span> <span class="pre">(string</span> <span class="pre">name)</span> <span class="pre">{</span></code></p>
+</li><li data-component="feedback" id="functions_mc4_opt_f">
+<p><code class="docutils literal notranslate"><span class="pre">friend</span></code> is a reserved keyword in C++.</p></li>
+
+            </ul>
+            </div>
+            </div><div data-component="tab" data-tabname="Q5" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="3.15.5" data-multipleanswers="false"  id="functions_mc5"  style="visibility: hidden;">
+            <p>Q-5: What is printed when the following code runs?  Are there any errors?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">giveCompliment</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;You are awesome!&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">giveInsult</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="n">insult</span> <span class="o">=</span> <span class="s">&quot;You suck!&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="n">giveInsult</span> <span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<li data-component="answer"  id="functions_mc5_opt_a"><p><code class="docutils literal notranslate"><span class="pre">&quot;You</span> <span class="pre">are</span> <span class="pre">awesome!&quot;</span></code></p>
+</li><li data-component="feedback" id="functions_mc5_opt_a">
+<p>The <code class="docutils literal notranslate"><span class="pre">giveCompliment</span></code> function is not called in <code class="docutils literal notranslate"><span class="pre">main</span></code>.</p></li><li data-component="answer"  id="functions_mc5_opt_b"><p><code class="docutils literal notranslate"><span class="pre">&quot;You</span> <span class="pre">suck!&quot;</span></code></p>
+</li><li data-component="feedback" id="functions_mc5_opt_b">
+<p>The <code class="docutils literal notranslate"><span class="pre">giveInsult</span></code> function doesn’t <code class="docutils literal notranslate"><span class="pre">cout</span></code> anything.</p></li><li data-component="answer" data-correct id="functions_mc5_opt_c"><p>Nothing is printed.</p>
+</li><li data-component="feedback" id="functions_mc5_opt_c">
+<p>Correct!  <code class="docutils literal notranslate"><span class="pre">giveInsult</span></code> doesn’t <code class="docutils literal notranslate"><span class="pre">cout</span></code> anything.</p></li><li data-component="answer"  id="functions_mc5_opt_d"><p>Error!</p>
+</li><li data-component="feedback" id="functions_mc5_opt_d">
+<p>There are no errors with this program!</p></li>
+
+            </ul>
+            </div>
+            </div><div data-component="tab" data-tabname="Q6" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="3.15.6" data-multipleanswers="false"  id="functions_mc6"  style="visibility: hidden;">
+            <p>Q-6: Rachel and Monica are best friends.  They write a function
+called <code class="docutils literal notranslate"><span class="pre">bestFriends</span></code> so that they announce this fact to the
+rest of their friends.  What is printed when they run the code
+below? Are there any errors?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">bestFriends</span> <span class="p">(</span><span class="n">string</span> <span class="n">a</span><span class="p">,</span> <span class="n">string</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; is best friends with &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="n">string</span> <span class="n">a</span> <span class="o">=</span> <span class="s">&quot;Rachel&quot;</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">b</span> <span class="o">=</span> <span class="s">&quot;Monica&quot;</span><span class="p">;</span>
+    <span class="n">bestFriends</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<li data-component="answer" data-correct id="functions_mc6_opt_a"><p><code class="docutils literal notranslate"><span class="pre">&quot;Monica</span> <span class="pre">is</span> <span class="pre">best</span> <span class="pre">friends</span> <span class="pre">with</span> <span class="pre">Rachel&quot;</span></code></p>
+</li><li data-component="feedback" id="functions_mc6_opt_a">
+<p>Correct!  Although the function definition has <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;&lt;</span> <span class="pre">&quot;</span> <span class="pre">is</span> <span class="pre">best</span>
+<span class="pre">friends</span> <span class="pre">with</span> <span class="pre">&quot;</span> <span class="pre">&lt;&lt;</span> <span class="pre">b</span></code>, we call the function with variable <code class="docutils literal notranslate"><span class="pre">b</span></code>
+as argument <code class="docutils literal notranslate"><span class="pre">a</span></code> and variable <code class="docutils literal notranslate"><span class="pre">a</span></code> as argument <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p></li><li data-component="answer"  id="functions_mc6_opt_b"><p><code class="docutils literal notranslate"><span class="pre">&quot;Rachel</span> <span class="pre">is</span> <span class="pre">best</span> <span class="pre">friends</span> <span class="pre">with</span> <span class="pre">Monica&quot;</span></code></p>
+</li><li data-component="feedback" id="functions_mc6_opt_b">
+<p>You seem to be confusing your arguments and parameters!</p></li><li data-component="answer"  id="functions_mc6_opt_c"><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">is</span> <span class="pre">best</span> <span class="pre">friends</span> <span class="pre">with</span> <span class="pre">b</span></code></p>
+</li><li data-component="feedback" id="functions_mc6_opt_c">
+<p>The function <code class="docutils literal notranslate"><span class="pre">couts</span></code> the <em>values</em> of the variables, not their
+names!</p></li><li data-component="answer"  id="functions_mc6_opt_d"><p><code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">is</span> <span class="pre">best</span> <span class="pre">friends</span> <span class="pre">with</span> <span class="pre">a</span></code></p>
+</li><li data-component="feedback" id="functions_mc6_opt_d">
+<p>The function <code class="docutils literal notranslate"><span class="pre">couts</span></code> the <em>values</em> of the variables, not their
+names!</p></li><li data-component="answer"  id="functions_mc6_opt_e"><p>Error!</p>
+</li><li data-component="feedback" id="functions_mc6_opt_e">
+<p>There are no errors with this program!</p></li>
+
+            </ul>
+            </div>
+            </div><div data-component="tab" data-tabname="Q7" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="3.15.7" data-multipleanswers="false"  id="functions_mc7"  style="visibility: hidden;">
+            <p>Q-7: What is printed when the following code runs?  Are there any errors?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">greeting</span> <span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;hello, &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">name</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;!&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">goodbye</span> <span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">greeting</span> <span class="p">(</span><span class="n">name</span><span class="p">);</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;!!&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="n">string</span> <span class="n">hannah</span> <span class="o">=</span> <span class="s">&quot;Hannah&quot;</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">anna</span> <span class="o">=</span> <span class="s">&quot;Anna&quot;</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">louise</span> <span class="o">=</span> <span class="n">hannah</span><span class="p">;</span>
+    <span class="n">hannah</span> <span class="o">=</span> <span class="n">anna</span><span class="p">;</span>
+    <span class="n">anna</span> <span class="o">=</span> <span class="n">louise</span><span class="p">;</span>
+    <span class="n">goodbye</span> <span class="p">(</span><span class="n">anna</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<li data-component="answer" data-correct id="functions_mc7_opt_a"><p><code class="docutils literal notranslate"><span class="pre">hello,</span> <span class="pre">Hannah!!!</span></code></p>
+</li><li data-component="feedback" id="functions_mc7_opt_a">
+<p>Correct!  The string “Hannah” is assigned to the variable <code class="docutils literal notranslate"><span class="pre">louise</span></code>,
+then the value of <code class="docutils literal notranslate"><span class="pre">louise</span></code> is assigned to the variable <code class="docutils literal notranslate"><span class="pre">anna</span></code>.  When
+<code class="docutils literal notranslate"><span class="pre">goodbye</span> <span class="pre">(anna)</span></code> runs, <code class="docutils literal notranslate"><span class="pre">anna</span></code> has the value “Hannah”.</p></li><li data-component="answer"  id="functions_mc7_opt_b"><p><code class="docutils literal notranslate"><span class="pre">hello,</span> <span class="pre">anna!!!</span></code></p>
+</li><li data-component="feedback" id="functions_mc7_opt_b">
+<p>The function <code class="docutils literal notranslate"><span class="pre">couts</span></code> the <em>value</em> of the variable <code class="docutils literal notranslate"><span class="pre">anna</span></code> not
+the variable name!</p></li><li data-component="answer"  id="functions_mc7_opt_c"><p><code class="docutils literal notranslate"><span class="pre">hello,</span> <span class="pre">Anna!!!</span></code></p>
+</li><li data-component="feedback" id="functions_mc7_opt_c">
+<p>Is <code class="docutils literal notranslate"><span class="pre">&quot;Anna&quot;</span></code> still the value of <code class="docutils literal notranslate"><span class="pre">anna</span></code>?</p></li><li data-component="answer"  id="functions_mc7_opt_d"><p><code class="docutils literal notranslate"><span class="pre">hello,</span> <span class="pre">Louise!</span></code></p>
+</li><li data-component="feedback" id="functions_mc7_opt_d">
+<p>The <code class="docutils literal notranslate"><span class="pre">goodbye</span></code> function adds extra exclamation points.</p></li><li data-component="answer"  id="functions_mc7_opt_e"><p><code class="docutils literal notranslate"><span class="pre">hello,</span> <span class="pre">Louise!!!</span></code></p>
+</li><li data-component="feedback" id="functions_mc7_opt_e">
+<p>We assigned the value of <code class="docutils literal notranslate"><span class="pre">louise</span></code> to <code class="docutils literal notranslate"><span class="pre">anna</span></code>.  Is <code class="docutils literal notranslate"><span class="pre">&quot;Louise&quot;</span></code>
+the value of <code class="docutils literal notranslate"><span class="pre">louise</span></code>?</p></li><li data-component="answer"  id="functions_mc7_opt_f"><p>Error!</p>
+</li><li data-component="feedback" id="functions_mc7_opt_f">
+<p>There are no errors with this program!</p></li>
+
+            </ul>
+            </div>
+            </div><div data-component="tab" data-tabname="Q8" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="3.15.8" data-multipleanswers="true"  id="functions_mc8"  style="visibility: hidden;">
+            <p>Q-8: <strong>Multiple Response</strong> Which of the following are legal function
+calls of <code class="docutils literal notranslate"><span class="pre">orderFood</span></code>?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">orderFood</span> <span class="p">(</span><span class="n">string</span> <span class="n">food</span><span class="p">,</span> <span class="kt">int</span> <span class="n">quantity</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;I&#39;ll have &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">quantity</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">food</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="n">string</span> <span class="n">a</span> <span class="o">=</span> <span class="s">&quot;wings&quot;</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">b</span> <span class="o">=</span> <span class="s">&quot;sliders&quot;</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">d</span> <span class="o">=</span> <span class="mf">8.64</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">e</span> <span class="o">=</span> <span class="sc">&#39;p&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<li data-component="answer" data-correct id="functions_mc8_opt_a"><p><code class="docutils literal notranslate"><span class="pre">orderFood(a,</span> <span class="pre">c);</span></code></p>
+</li><li data-component="feedback" id="functions_mc8_opt_a">
+<p>Correct! <code class="docutils literal notranslate"><span class="pre">a</span></code> is a string and <code class="docutils literal notranslate"><span class="pre">c</span></code> is an int.</p></li><li data-component="answer" data-correct id="functions_mc8_opt_b"><p><code class="docutils literal notranslate"><span class="pre">orderFood(b,</span> <span class="pre">d);</span></code></p>
+</li><li data-component="feedback" id="functions_mc8_opt_b">
+<p>Correct!  Automatic type conversion will convert d to
+an <code class="docutils literal notranslate"><span class="pre">int</span></code>.</p></li><li data-component="answer"  id="functions_mc8_opt_c"><p><code class="docutils literal notranslate"><span class="pre">orderFood(e,</span> <span class="pre">c);</span></code></p>
+</li><li data-component="feedback" id="functions_mc8_opt_c">
+<p><code class="docutils literal notranslate"><span class="pre">e</span></code> has a character value, and this function takes a <em>string</em>.</p></li><li data-component="answer" data-correct id="functions_mc8_opt_d"><p><code class="docutils literal notranslate"><span class="pre">orderfood(a,</span> <span class="pre">d);</span></code></p>
+</li><li data-component="feedback" id="functions_mc8_opt_d">
+<p>Correct! Automatic type conversion will convert d to
+an <code class="docutils literal notranslate"><span class="pre">int</span></code>.</p></li><li data-component="answer"  id="functions_mc8_opt_e"><p><code class="docutils literal notranslate"><span class="pre">orderFood(c,</span> <span class="pre">a);</span></code></p>
+</li><li data-component="feedback" id="functions_mc8_opt_e">
+<p>You have to input your arguments in the correct order.</p></li>
+
+            </ul>
+            </div>
+            </div><div data-component="tab" data-tabname="Q9" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="3.15.9" data-multipleanswers="false"  id="functions_mc9"  style="visibility: hidden;">
+            <p>Q-9: What is printed when the following code runs?  Are there any errors?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">printWord</span> <span class="p">(</span><span class="n">string</span> <span class="n">w</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">w</span> <span class="o">&lt;&lt;</span> <span class="n">w</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="kt">char</span> <span class="n">a</span> <span class="o">=</span> <span class="sc">&#39;a&#39;</span> <span class="o">+</span> <span class="mi">5</span><span class="p">;</span>
+    <span class="n">printWord</span> <span class="p">(</span><span class="n">a</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<li data-component="answer"  id="functions_mc9_opt_a"><p><code class="docutils literal notranslate"><span class="pre">a</span></code></p>
+</li><li data-component="feedback" id="functions_mc9_opt_a">
+<p><code class="docutils literal notranslate"><span class="pre">'a'</span></code> is no longer the value of <code class="docutils literal notranslate"><span class="pre">a</span></code>, and the function would
+print it more than once.  Hint: think about the <em>type</em> of <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p></li><li data-component="answer"  id="functions_mc9_opt_b"><p><code class="docutils literal notranslate"><span class="pre">f</span></code></p>
+</li><li data-component="feedback" id="functions_mc9_opt_b">
+<p><code class="docutils literal notranslate"><span class="pre">'f'</span></code> is the value of a, but the function would print it more than once.
+Hint: think about the <em>type</em> of <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p></li><li data-component="answer"  id="functions_mc9_opt_c"><p><code class="docutils literal notranslate"><span class="pre">aa</span></code></p>
+</li><li data-component="feedback" id="functions_mc9_opt_c">
+<p><code class="docutils literal notranslate"><span class="pre">'a'</span></code> is no longer the value of <code class="docutils literal notranslate"><span class="pre">a</span></code>.  Hint: think about the <em>type</em> of <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p></li><li data-component="answer"  id="functions_mc9_opt_d"><p><code class="docutils literal notranslate"><span class="pre">ff</span></code></p>
+</li><li data-component="feedback" id="functions_mc9_opt_d">
+<p>Hint: think about the <em>type</em> of <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p></li><li data-component="answer" data-correct id="functions_mc9_opt_e"><p>Error!</p>
+</li><li data-component="feedback" id="functions_mc9_opt_e">
+<p><code class="docutils literal notranslate"><span class="pre">printWord</span></code> takes a string, not a character, as an argument.</p></li>
+
+            </ul>
+            </div>
+            </div><div data-component="tab" data-tabname="Q10" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="3.15.10" data-multipleanswers="false"  id="functions_mc10"  style="visibility: hidden;">
+            <p>Q-10: How many local variables and parameters does <code class="docutils literal notranslate"><span class="pre">mult</span></code> have?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">mult</span> <span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">,</span> <span class="kt">int</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">d</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span> <span class="o">*</span> <span class="n">c</span> <span class="o">*</span> <span class="n">d</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<li data-component="answer"  id="functions_mc10_opt_a"><p>1 parameter, 3 local variables</p>
+</li><li data-component="feedback" id="functions_mc10_opt_a">
+<p>Remember, the parameters are declared in the function definition,
+and the local variables are declared <em>inside</em> of the function.</p></li><li data-component="answer"  id="functions_mc10_opt_b"><p>2 parameters, 4 local variables</p>
+</li><li data-component="feedback" id="functions_mc10_opt_b">
+<p>You can declare multiple variables at once!  Also, remember that
+local variables are declared <em>inside</em> of the function.</p></li><li data-component="answer"  id="functions_mc10_opt_c"><p>2 parameters, 1 local variables</p>
+</li><li data-component="feedback" id="functions_mc10_opt_c">
+<p>You can declare multiple variables at once!</p></li><li data-component="answer" data-correct id="functions_mc10_opt_d"><p>3 parameters, 1 local variable</p>
+</li><li data-component="feedback" id="functions_mc10_opt_d">
+<p><code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, and <code class="docutils literal notranslate"><span class="pre">c</span></code> are parameters declared in the function
+definition. <code class="docutils literal notranslate"><span class="pre">d</span></code> is a local variable declared inside of the function.</p></li><li data-component="answer"  id="functions_mc10_opt_e"><p>3 parameters, 4 local variables</p>
+</li><li data-component="feedback" id="functions_mc10_opt_e">
+<p>Remember that local variables are declared <em>inside</em> of the function.</p></li>
+
+            </ul>
+            </div>
+            </div><div data-component="tab" data-tabname="Q11" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="3.15.11" data-multipleanswers="false"  id="functions_mc11"  style="visibility: hidden;">
+            <p>Q-11: How many calls are made to <code class="docutils literal notranslate"><span class="pre">party</span></code> during the entire program?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">party</span> <span class="p">(</span><span class="kt">int</span> <span class="n">day_of_month</span><span class="p">,</span> <span class="n">string</span> <span class="n">address</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span><span class="s">&quot;party on &quot;</span><span class="o">&lt;&lt;</span><span class="n">day_of_month</span><span class="o">&lt;&lt;</span><span class="s">&quot; at &quot;</span><span class="o">&lt;&lt;</span><span class="n">address</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">weekend</span><span class="p">(</span><span class="kt">bool</span> <span class="n">available</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">available</span><span class="o">==</span><span class="nb">true</span><span class="p">){</span>
+       <span class="n">party</span><span class="p">(</span><span class="mi">21</span><span class="p">,</span><span class="s">&quot;Big house&quot;</span><span class="p">);</span> <span class="n">party</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="s">&quot;CCTC&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">else</span><span class="p">{</span>
+       <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;sorry I have to study for ENGR101!&quot;</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">bool</span> <span class="n">im_free</span><span class="o">=</span><span class="nb">false</span><span class="p">;</span>
+    <span class="n">party</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="s">&quot;North campus&quot;</span><span class="p">);</span>
+    <span class="n">weekend</span><span class="p">(</span><span class="n">im_free</span><span class="p">);</span>
+
+    <span class="n">im_free</span><span class="o">=</span><span class="nb">true</span><span class="p">;</span>
+    <span class="n">party</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="s">&quot;Central campus&quot;</span><span class="p">);</span>
+    <span class="n">weekend</span><span class="p">(</span><span class="n">im_free</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<li data-component="answer"  id="functions_mc11_opt_a"><p>6 calls</p>
+</li><li data-component="feedback" id="functions_mc11_opt_a">
+<p>Take into account that <code class="docutils literal notranslate"><span class="pre">weekend</span></code> only calls <code class="docutils literal notranslate"><span class="pre">party</span></code> if a conditional is true!</p></li><li data-component="answer"  id="functions_mc11_opt_b"><p>2 calls</p>
+</li><li data-component="feedback" id="functions_mc11_opt_b">
+<p><code class="docutils literal notranslate"><span class="pre">weekend</span></code> can also call the function <code class="docutils literal notranslate"><span class="pre">party</span></code></p></li><li data-component="answer" data-correct id="functions_mc11_opt_c"><p>4 calls</p>
+</li><li data-component="feedback" id="functions_mc11_opt_c">
+<p>Correct! two calls by <code class="docutils literal notranslate"><span class="pre">main</span></code> and two calls by <code class="docutils literal notranslate"><span class="pre">weekend</span></code></p></li><li data-component="answer"  id="functions_mc11_opt_d"><p>3 calls</p>
+</li><li data-component="feedback" id="functions_mc11_opt_d">
+<p>One invocation of <code class="docutils literal notranslate"><span class="pre">weekend</span></code> calls <code class="docutils literal notranslate"><span class="pre">party</span></code> twice.</p></li>
+
+            </ul>
+            </div>
+            </div>
+    </div>
+
+</div>
+
+
+  <div id=scprogresscontainer>
+    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+  </div>
+  
+      
+<ul>
+  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 3.14. Glossary' data-toggle="tooltip">
+    <a href="glossary.html" aria-label="3.14. Glossary">
+        <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+            <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+        </div>
+    </a>
+  </li>
+</ul>
+
+  
+<ul>
+  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - 3.16. Mixed-Up Code Exercises' data-toggle="tooltip" >
+    <a href="review-2.html" aria-label="3.16. Mixed-Up Code Exercises">
+      <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+          <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+      </div>
+    </a>
+  </li>
+</ul>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+<script>
+	function mouseOverPrev() {
+		document.getElementById("relations-prev").style.opacity=1;
+	}
+
+	function mouseOutPrev() {
+		document.getElementById("relations-prev").style.opacity=0.4;
+	}
+	function mouseOverNext() {
+		document.getElementById("relations-next").style.opacity=1;
+	}
+
+	function mouseOutNext() {
+		document.getElementById("relations-next").style.opacity=0.4;
+	}
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020-2021 Dave Parillo.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.5.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> getSwitch(); </script>
+
+
+  </body>
+</html>

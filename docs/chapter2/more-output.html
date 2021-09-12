@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.1. More Output &#8212; CISC 192 Course Reader Overview</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.5.5" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/runestone.js?v=92D8BBF0"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../_static/theme.js?v=D899FB97"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2.2. Values" href="values.html" />
+    <link rel="prev" title="2. Variables and types" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'https://daveparillo.github.io/cisc192-reader/' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/cisc192-reader';
+    eBookConfig.course = 'cisc192-reader';
+    eBookConfig.basecourse = 'cisc192-reader';
+    eBookConfig.isLoggedIn = false;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
+  eBookConfig.runestone_version = '5.5.5';
+  eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+          <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;'>&nbsp;<span aria-label="logo" class="visuallyhidden">Runestone Logo</span> </a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          cisc192-reader
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">2. </span>Variables and types" data-toggle="tooltip">
+    <a href="index.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">2.2. </span>Values' data-toggle="tooltip" >              
+    <a href="values.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+      </div> <!-- navbar -->
+
+
+
+
+
+
+
+    </div> <!-- container -->
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="more-output">
+<h1><span class="section-number">2.1. </span>More Output<a class="headerlink" href="#more-output" title="Permalink to this headline">¶</a></h1>
+<p>As I mentioned in the last chapter, you can put as many statements as
+you want in <code class="docutils literal notranslate"><span class="pre">main</span></code>. For example, to output more than one line:</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=more_output_AC_1 >
+<div id=more_output_AC_1_question class="ac_question col-md-12">
+<p>This program prints two different statements on two different lines
+using <code class="docutils literal notranslate"><span class="pre">endl</span></code>.</p>
+
+</div>
+<textarea data-lang="cpp" id="more_output_AC_1_editor" data-question_label="2.1.1" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Two Lines of Output'  data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+// main: generate some simple output
+int main () {
+    cout << "Hello, world." << endl;     // output one line
+    cout << "How are you?" << endl;      // output another
+}
+</textarea>
+</div>
+</div>
+<p>As you can see, it is legal to put comments at the end of a line, as
+well as on a line by themselves.</p>
+<p id="index-0">The phrases that appear in quotation marks are called <strong>strings</strong>,
+because they are made up of a sequence (string) of letters.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In C++, strings are declared as type <code class="docutils literal notranslate"><span class="pre">string</span></code>.  We’ll explain what that
+means in the next few pages.</p>
+</div>
+<p>Actually, strings can contain any combination of letters, numbers,
+punctuation marks, and other special characters.</p>
+<p>Often it is useful to display the output from multiple output statements
+all on one line. You can do this by leaving out the first <code class="docutils literal notranslate"><span class="pre">endl</span></code>:</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=more_output_AC_2 >
+<div id=more_output_AC_2_question class="ac_question col-md-12">
+<p>This program prints two different statements on the same line.</p>
+
+</div>
+<textarea data-lang="cpp" id="more_output_AC_2_editor" data-question_label="2.1.2" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Two Statements, One Line of Output'  data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+int main () {
+    cout << "Goodbye, ";
+    cout << "cruel world!" << endl;
+}
+</textarea>
+</div>
+</div>
+<p>In this case the output appears on a single line as <code class="docutils literal notranslate"><span class="pre">Goodbye,</span> <span class="pre">cruel</span>
+<span class="pre">world!</span></code>. Notice in <code class="docutils literal notranslate"><span class="pre">main</span></code> that there is a space between “Goodbye,” and the
+second quotation mark. This space appears in the output, so it affects
+the behavior of the program.</p>
+<p>Spaces that appear outside of quotation marks generally do not affect
+the behavior of the program. For example, I could have written:</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=more_output_AC_3 >
+<div id=more_output_AC_3_question class="ac_question col-md-12">
+<p>This program accomplishes the same thing as the one above.  The
+difference is that there are no spaces separating the different
+components of each line.  This is a matter of personal preference.</p>
+
+</div>
+<textarea data-lang="cpp" id="more_output_AC_3_editor" data-question_label="2.1.3" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Spaces Removed (messy)'  data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+int main () {
+    cout<<"Goodbye, ";
+    cout<<"cruel world!"<<endl;
+}
+</textarea>
+</div>
+</div>
+<p>This program would compile and run just as well as the original. The
+breaks at the ends of lines (newlines) do not affect the program’s
+behavior either, so I could have written:</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=more_output_AC_4 >
+<div id=more_output_AC_4_question class="ac_question col-md-12">
+<p>This program accomplishes the same thing as the two above, but
+it only uses one line.  Once again, this is a matter of personal
+preference.  However, this format is pretty messy and relatively
+hard to follow.</p>
+
+</div>
+<textarea data-lang="cpp" id="more_output_AC_4_editor" data-question_label="2.1.4" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Spaces removed, One Line (very messy)'  data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+int main(){cout<<"Goodbye, ";cout<<"cruel world!"<<endl;}
+</textarea>
+</div>
+</div>
+<p>That would work, too, although you have probably noticed that the
+program is getting harder and harder to read. Newlines and spaces are
+useful for organizing your program visually, making it easier to read
+the program and locate syntax errors.</p>
+<div id='tab_check' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Q1" >
+
+        <div class="runestone">
+        <div data-component="fillintheblank" data-question_label="2.1.5" id="more_output_2"  style="visibility: hidden;">
+            <p>Q-5: The phrases that appear in quotation marks are called <input type="text">.</p>
+
+        <script type="application/json">
+            [[{"regex": "^\\s*[Ss][Tt][Rr][Ii][Nn][Gg][Ss]?\\s*$", "regexFlags": "", "feedback": "<p>Correct!</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            </div><div data-component="tab" data-tabname="Q2" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="2.1.6" data-multipleanswers="false"  id="more_output_3.0"  style="visibility: hidden;">
+            <p>Q-6: On how many separate lines will the 7’s be printed?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="mi">7</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="mi">7</span><span class="p">;</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="mi">7</span><span class="p">;</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="mi">7</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="more_output_3.0_opt_a">1</li><li data-component="feedback">There is an "endl" statement, implying that a new line is created.</li>
+            
+            <li data-component="answer" data-correct id="more_output_3.0_opt_b">2</li><li data-component="feedback">"endl" creates one new line. The first line will say 7, while the second will print 777.</li>
+            
+            <li data-component="answer"  id="more_output_3.0_opt_c">3</li><li data-component="feedback">In C++, you must make sure to say "endl" every time you'd like to create a new line.</li>
+            
+            <li data-component="answer"  id="more_output_3.0_opt_d">4</li><li data-component="feedback">In C++, you must make sure to say "endl" every time you'd like to create a new line.</li>
+            
+
+            </ul>
+            </div>
+            </div><div data-component="tab" data-tabname="Q3" >
+
+        <div class="runestone" style="max-width: none;">
+        <pre data-component="parsons" data-question_label="2.1.7" id="more_output_3"  data-adaptive="true"    data-noindent="true"   data-numbered="left"  style="visibility: hidden;">
+        <span data-question>Q-7 Construct a main function that prints "Snap!" on the first line, "Crackle!" on the third line, and "Pop!" on the sixth line.  You might not use all of endl blocks provided.
+</span>int main () {
+---
+ cout << "Snap!";
+---
+ cout << endl; // first endl
+---
+ cout << endl; // second endl
+---
+ cout << "Crakcle!" << endl;
+---
+ cout << endl; // third endl
+---
+ cout << endl; // fourth endl
+---
+ cout << "Pop!";
+---
+ cout << endl; // fifth endl #distractor
+---
+ cout << endl; // sixth endl #distractor
+---
+}
+        </pre>
+        </div>
+    </div><div data-component="tab" data-tabname="Q4" >
+
+        <div class="runestone" style="max-width: none;">
+        <pre data-component="parsons" data-question_label="2.1.8" id="more_output_3.1"  data-adaptive="true"    data-noindent="true"   data-numbered="left"  style="visibility: hidden;">
+        <span data-question>Q-8 Construct a main function that prints "Hello, world!" so that "Hello," and "world!" are printed on two separate lines.
+</span>int main () {
+---
+ cout << "Hello," << endl; cout << "world!";
+---
+ cout << "Hello," << "world!" << endl; #distractor
+---
+ cout >> "Hello," >> endl; cout >> "world!"; #distractor
+---
+ cout >> "Hello," >> "world!" >> endl; #distractor
+---
+}
+        </pre>
+        </div>
+    </div>
+    </div>
+
+</div>
+
+
+  <div id=scprogresscontainer>
+    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+  </div>
+  
+      
+<ul>
+  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 2. Variables and types' data-toggle="tooltip">
+    <a href="index.html" aria-label="2. Variables and types">
+        <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+            <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+        </div>
+    </a>
+  </li>
+</ul>
+
+  
+<ul>
+  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - 2.2. Values' data-toggle="tooltip" >
+    <a href="values.html" aria-label="2.2. Values">
+      <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+          <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+      </div>
+    </a>
+  </li>
+</ul>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+<script>
+	function mouseOverPrev() {
+		document.getElementById("relations-prev").style.opacity=1;
+	}
+
+	function mouseOutPrev() {
+		document.getElementById("relations-prev").style.opacity=0.4;
+	}
+	function mouseOverNext() {
+		document.getElementById("relations-next").style.opacity=1;
+	}
+
+	function mouseOutNext() {
+		document.getElementById("relations-next").style.opacity=0.4;
+	}
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020-2021 Dave Parillo.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.5.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> getSwitch(); </script>
+
+
+  </body>
+</html>

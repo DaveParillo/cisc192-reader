@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.6. The First Program &#8212; CISC 192 Course Reader Overview</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.5.5" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/runestone.js?v=92D8BBF0"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../_static/theme.js?v=D899FB97"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1.7. Glossary" href="glossary.html" />
+    <link rel="prev" title="1.5. Formal and Natural Languages" href="formal_natural.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'https://daveparillo.github.io/cisc192-reader/' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/cisc192-reader';
+    eBookConfig.course = 'cisc192-reader';
+    eBookConfig.basecourse = 'cisc192-reader';
+    eBookConfig.isLoggedIn = false;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
+  eBookConfig.runestone_version = '5.5.5';
+  eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+          <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;'>&nbsp;<span aria-label="logo" class="visuallyhidden">Runestone Logo</span> </a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          cisc192-reader
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">1.5. </span>Formal and Natural Languages" data-toggle="tooltip">
+    <a href="formal_natural.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">1.7. </span>Glossary' data-toggle="tooltip" >              
+    <a href="glossary.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+      </div> <!-- navbar -->
+
+
+
+
+
+
+
+    </div> <!-- container -->
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="the-first-program">
+<span id="hello"></span><h1><span class="section-number">1.6. </span>The First Program<a class="headerlink" href="#the-first-program" title="Permalink to this headline">¶</a></h1>
+<p>Traditionally the first program people write in a new language is called
+“Hello, World.” because all it does is print the words “Hello, World.”
+In C++, this program looks like this:</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=first_program_AC >
+<div id=first_program_AC_question class="ac_question col-md-12">
+<p>The “Hello, World.” program is a great place to start learning a new
+language.  Observe the program structure below.</p>
+
+</div>
+<textarea data-lang="cpp" id="first_program_AC_editor" data-question_label="1.6.1" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Hello World'  data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+// main: generate some simple output
+int main () {
+    cout << "Hello, World." << endl;
+    return 0;
+}
+</textarea>
+</div>
+</div>
+<p>Some people judge the quality of a programming language by the
+simplicity of the “Hello, World.” program. By this standard, C++ does
+reasonably well. Even so, this simple program contains several features
+that are hard to explain to beginning programmers. For now, we will
+ignore some of them, like the first two lines.</p>
+<p id="index-0">The third line begins with <code class="docutils literal notranslate"><span class="pre">//</span></code>, which indicates that it is a <strong>comment</strong>.
+A comment is a bit of English text that you can put in the middle of a
+program, usually to explain what the program does. When the compiler
+sees a <code class="docutils literal notranslate"><span class="pre">//</span></code>, it ignores everything from there until the end of the line.</p>
+<p>In the fourth line, you can ignore the word <code class="docutils literal notranslate"><span class="pre">int</span></code> for now, but notice the
+word <code class="docutils literal notranslate"><span class="pre">main</span></code>.  <code class="docutils literal notranslate"><span class="pre">main</span></code> is a special name that indicates the place in the
+program where execution begins. When the program runs, it starts by
+executing the first statement in <code class="docutils literal notranslate"><span class="pre">main</span></code> and it continues, in order, until
+it gets to the last statement, and then it quits.</p>
+<p id="index-1">There is no limit to the number of statements that can be in <code class="docutils literal notranslate"><span class="pre">main</span></code>, but
+the example contains only one. It is a basic <strong>output</strong> statement,
+meaning that it outputs or displays a message on the screen.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cout</span></code> is a special object provided by the system to allow you to send
+output to the screen. The symbol <code class="docutils literal notranslate"><span class="pre">&lt;&lt;</span></code> is an operator that you apply to
+<code class="docutils literal notranslate"><span class="pre">cout</span></code> and a string, and that causes the string to be displayed.</p>
+<p><code class="docutils literal notranslate"><span class="pre">endl</span></code> is a special symbol that represents the end of a line. When you
+send an <code class="docutils literal notranslate"><span class="pre">endl</span></code> to <code class="docutils literal notranslate"><span class="pre">cout</span></code>, it causes the cursor to move to the next line of
+the display. The next time you output something, the new text appears on
+the next line.</p>
+<p>Like all statements, the output statement ends with a semi-colon (<code class="docutils literal notranslate"><span class="pre">;</span></code>).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Failure to terminate a statement with a semicolon will result
+in a syntax (compile) error.</p>
+</div>
+<p>There are a few other things you should notice about the syntax of this
+program. First, C++ uses curly-braces (<code class="docutils literal notranslate"><span class="pre">{</span></code> and <code class="docutils literal notranslate"><span class="pre">}</span></code>) to group things
+together. In this case, the output statement is enclosed in
+curly-braces, indicating that it is <em>inside</em> the definition of <code class="docutils literal notranslate"><span class="pre">main</span></code>.
+Also, notice that the statement is indented, which helps to show
+visually which lines are inside the definition.</p>
+<p>As I mentioned, the C++ compiler is a real stickler for syntax. If you
+make any errors when you type in the program, chances are that it will
+not compile successfully. For example, if you misspell <code class="docutils literal notranslate"><span class="pre">iostream</span></code>, you
+might get an error message like the following:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">hello</span><span class="p">.</span><span class="nl">cpp</span><span class="p">:</span><span class="mi">1</span><span class="o">:</span> <span class="n">oistream</span><span class="p">.</span><span class="nl">h</span><span class="p">:</span> <span class="n">No</span> <span class="n">such</span> <span class="n">file</span> <span class="n">or</span> <span class="n">directory</span>
+</pre></div>
+</div>
+<p>There is a lot of information on this line, but it is presented in a
+dense format that is not easy to interpret. A more friendly compiler
+might say something like:</p>
+<blockquote>
+<div><p>“On line 1 of the source code file named hello.cpp, you tried to
+include a header file named <code class="docutils literal notranslate"><span class="pre">oistream.h</span></code>. I didn’t find anything with
+that name, but I did find something named <code class="docutils literal notranslate"><span class="pre">iostream</span></code>. Is that what you
+meant, by any chance?”</p>
+</div></blockquote>
+<p>Unfortunately, few compilers are so accommodating. The compiler is not
+really very smart, and in most cases the error message you get will be
+only a hint about what is wrong. It will take some time to gain facility
+at interpreting compiler messages.</p>
+<p>Nevertheless, the compiler can be a useful tool for learning the syntax
+rules of a language.</p>
+<div class="admonition-try-this admonition">
+<p class="admonition-title">Try This!</p>
+<p>Starting with the working ‘hello world’ program above,
+modify it in various ways and see what happens. If you get an error
+message, try to remember what the message says and what caused it, so if
+you see it again in the future you will know what it means.</p>
+</div>
+<div id='tab_check' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Q1" >
+
+        <div class="runestone">
+        <div data-component="fillintheblank" data-question_label="1.6.2" id="first_program_1"  style="visibility: hidden;">
+            <p>Q-2: How do you indicate a comment in C++?</p>
+<input type="text">
+        <script type="application/json">
+            [[{"regex": "^\\s*[//][//]\\s*$", "regexFlags": "", "feedback": "<p>Correct!</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            </div><div data-component="tab" data-tabname="Q2" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="1.6.3" data-multipleanswers="true"  id="first_program_2"  style="visibility: hidden;">
+            <p>Q-3: <strong>Multiple Response</strong> Which is true about writing a program?</p>
+
+            <li data-component="answer" data-correct id="first_program_2_opt_a">The main marks the spot in the program where execution begins.</li><li data-component="feedback">The main indicates where the program begins executing!</li>
+            
+            <li data-component="answer"  id="first_program_2_opt_b">There is a limit the number of statements you can put in the main because they occupy system memory.</li><li data-component="feedback">There is no limit to the number of statements you can put in the main, but it is good practice to keep it as short as possible.</li>
+            
+            <li data-component="answer" data-correct id="first_program_2_opt_c">Inside the main, program execution happens in order from top to bottom.</li><li data-component="feedback">When the program runs, it starts by executing the first statement in main, and it continues until the last.</li>
+            
+            <li data-component="answer"  id="first_program_2_opt_d">The main program is enclosed by parentheses.</li><li data-component="feedback">The main program and all functions in C++ are enclosed by curly brackets ( { and } ).</li>
+            
+            <li data-component="answer" data-correct id="first_program_2_opt_e">The end of each statement is marked with a semicolon ( ; ).</li><li data-component="feedback">Forgetting a semicolon will cause a compile error!</li>
+            
+
+            </ul>
+            </div>
+            </div><div data-component="tab" data-tabname="Q3" >
+
+        <div class="runestone">
+        <div data-component="fillintheblank" data-question_label="1.6.4" id="first_program_3"  style="visibility: hidden;">
+            <p>Q-4: <input type="text"> is an object that allows you to send output to the terminal.
+It requires you to use the <input type="text"> operator.</p>
+
+        <script type="application/json">
+            [[{"regex": "^\\s*(cout)\\s*$", "regexFlags": "", "feedback": "<p>Correct!</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}], [{"regex": "^\\s*(\\<\\<)\\s*$", "regexFlags": "", "feedback": "<p>Correct!</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            </div>
+    </div>
+
+</div>
+
+
+  <div id=scprogresscontainer>
+    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+  </div>
+  
+      
+<ul>
+  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 1.5. Formal and Natural Languages' data-toggle="tooltip">
+    <a href="formal_natural.html" aria-label="1.5. Formal and Natural Languages">
+        <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+            <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+        </div>
+    </a>
+  </li>
+</ul>
+
+  
+<ul>
+  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - 1.7. Glossary' data-toggle="tooltip" >
+    <a href="glossary.html" aria-label="1.7. Glossary">
+      <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+          <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+      </div>
+    </a>
+  </li>
+</ul>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+<script>
+	function mouseOverPrev() {
+		document.getElementById("relations-prev").style.opacity=1;
+	}
+
+	function mouseOutPrev() {
+		document.getElementById("relations-prev").style.opacity=0.4;
+	}
+	function mouseOverNext() {
+		document.getElementById("relations-next").style.opacity=1;
+	}
+
+	function mouseOutNext() {
+		document.getElementById("relations-next").style.opacity=0.4;
+	}
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020-2021 Dave Parillo.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.5.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> getSwitch(); </script>
+
+
+  </body>
+</html>

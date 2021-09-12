@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5.1. Return Values &#8212; CISC 192 Course Reader Overview</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.5.5" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/runestone.js?v=92D8BBF0"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../_static/theme.js?v=D899FB97"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5.2. Program Development" href="program-development.html" />
+    <link rel="prev" title="5. Fruitful functions" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'https://daveparillo.github.io/cisc192-reader/' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/cisc192-reader';
+    eBookConfig.course = 'cisc192-reader';
+    eBookConfig.basecourse = 'cisc192-reader';
+    eBookConfig.isLoggedIn = false;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
+  eBookConfig.runestone_version = '5.5.5';
+  eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+          <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;'>&nbsp;<span aria-label="logo" class="visuallyhidden">Runestone Logo</span> </a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          cisc192-reader
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">5. </span>Fruitful functions" data-toggle="tooltip">
+    <a href="index.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">5.2. </span>Program Development' data-toggle="tooltip" >              
+    <a href="program-development.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+      </div> <!-- navbar -->
+
+
+
+
+
+
+
+    </div> <!-- container -->
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="return-values">
+<h1><span class="section-number">5.1. </span>Return Values<a class="headerlink" href="#return-values" title="Permalink to this headline">¶</a></h1>
+<p>Some of the built-in functions we have used, like the math functions,
+have produced results. That is, the effect of calling the function is to
+generate a new value, which we usually assign to a variable or use as
+part of an expression. For example:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="n">e</span> <span class="o">=</span> <span class="n">exp</span> <span class="p">(</span><span class="mf">1.0</span><span class="p">);</span>
+<span class="kt">double</span> <span class="n">height</span> <span class="o">=</span> <span class="n">radius</span> <span class="o">*</span> <span class="n">sin</span> <span class="p">(</span><span class="n">angle</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>But so far all the functions we have written have been <code class="docutils literal notranslate"><span class="pre">void</span></code>
+functions; that is, functions that return no value. When you call a <code class="docutils literal notranslate"><span class="pre">void</span></code>
+function, it is typically on a line by itself, with no assignment:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">nLines</span> <span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">countdown</span> <span class="p">(</span><span class="n">n</span><span class="mi">-1</span><span class="p">);</span>
+</pre></div>
+</div>
+<p id="index-0">In this chapter, we are going to write functions that return things,
+which I will refer to as <strong>fruitful</strong> functions, for want of a better
+name. The first example is area, which takes a double as a parameter,
+and returns the area of a circle with the given radius:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="nf">area</span> <span class="p">(</span><span class="kt">double</span> <span class="n">radius</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">double</span> <span class="n">pi</span> <span class="o">=</span> <span class="n">acos</span> <span class="p">(</span><span class="mf">-1.0</span><span class="p">);</span>
+  <span class="kt">double</span> <span class="n">area</span> <span class="o">=</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">*</span> <span class="n">radius</span><span class="p">;</span>
+  <span class="k">return</span> <span class="n">area</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The first thing you should notice is that the beginning of the function
+definition is different. Instead of <code class="docutils literal notranslate"><span class="pre">void</span></code>, which indicates a <code class="docutils literal notranslate"><span class="pre">void</span></code>
+function, we see <code class="docutils literal notranslate"><span class="pre">double</span></code>, which indicates that the return value from this
+function will have type <code class="docutils literal notranslate"><span class="pre">double</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Functions can have any return type in C++.  The return type is always
+specified before the name of the function.</p>
+</div>
+<p>Also, notice that the last line is an alternate form of the return
+statement that includes a return value. This statement means, “return
+immediately from this function and use the following expression as a
+return value.” The expression you provide can be arbitrarily
+complicated, so we could have written this function more concisely:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="nf">area</span> <span class="p">(</span><span class="kt">double</span> <span class="n">radius</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="n">acos</span><span class="p">(</span><span class="mf">-1.0</span><span class="p">)</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">*</span> <span class="n">radius</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p id="index-1">On the other hand, <strong>temporary</strong> variables like area often make
+debugging easier. In either case, the type of the expression in the
+return statement must match the return type of the function. In other
+words, when you declare that the return type is <code class="docutils literal notranslate"><span class="pre">double</span></code>, you are making a
+promise that this function will eventually produce a <code class="docutils literal notranslate"><span class="pre">double</span></code>. If you try
+to return with no expression, or an expression with the wrong type, the
+compiler will take you to task.</p>
+<p>Sometimes it is useful to have multiple return statements, one in each
+branch of a conditional:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="nf">absoluteValue</span> <span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="o">-</span><span class="n">x</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">else</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">x</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Since these returns statements are in an alternative conditional, only
+one will be executed. Although it is legal to have more than one return
+statement in a function, you should keep in mind that as soon as one is
+executed, the function terminates without executing any subsequent
+statements.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you put return statements inside of a chain of conditionals, then
+you have to guarantee that <em>every possible path</em> through the program
+hits a return statement.  If you forget, your code will have errors.</p>
+</div>
+<p id="index-2">Code that appears after a return statement, or any place else where it
+can never be executed, is called <strong>dead code</strong>. Some compilers warn you
+if part of your code is dead.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=return_vals_AC_1 >
+<div id=return_vals_AC_1_question class="ac_question col-md-12">
+<p>Notice that there are two return statements in the code below.
+What if we pass zero as an argument, and neither conditional
+returns true?</p>
+
+</div>
+<textarea data-lang="cpp" id="return_vals_AC_1_editor" data-question_label="5.1.1" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Return Values'  data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+
+double absoluteValue (double x) {
+    if (x < 0) {
+        return -x;
+    }
+    else if (x > 0) {
+        return x;
+    }                          // WRONG!!
+}
+
+int main () {
+    std::cout << absoluteValue(0);
+    return 0;
+}
+</textarea>
+</div>
+</div>
+<p>This program is not correct because if x happens to be 0, then neither
+condition will be true and the function will end without hitting a
+return statement. Unfortunately, the program compiles and runs,
+but the return value when <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">0</span></code> could be anything,
+and will probably be different in
+different environments.</p>
+<p>By now you are probably sick of seeing compiler errors, but as you gain
+more experience, you will realize that the only thing worse than getting
+a compiler error is <em>not</em> getting a compiler error when your program is
+wrong.</p>
+<p>Here’s the kind of thing that’s likely to happen: you test <code class="docutils literal notranslate"><span class="pre">absoluteValue</span></code>
+with several values of x and it seems to work correctly. Then you give
+your program to someone else and they run it in another environment. It
+fails in some mysterious way, and it takes days of debugging to discover
+that the problem is an incorrect implementation of <code class="docutils literal notranslate"><span class="pre">absoluteValue</span></code>. If
+only the compiler had warned you!</p>
+<p>From now on, if the compiler points out an error in your program, you
+should not blame the compiler. Rather, you should <em>thank</em> the compiler for
+finding your error and sparing you days of debugging. Some compilers
+have an option that tells them to be extra strict and report all the
+errors they can find. You should turn this option on all the time. The
+implementation below would fix the error in the code.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=return_vals_AC_2 >
+<div id=return_vals_AC_2_question class="ac_question col-md-12">
+<p>This code fixes the error in the previoius implementation of
+absoluteValue.  If we pass 0 as an argument, the function will
+return 0.  Thus, every route through the conditonal is satisfied.</p>
+<p>In almost all cases, when you see an <code class="docutils literal notranslate"><span class="pre">else</span></code> after a <code class="docutils literal notranslate"><span class="pre">return</span></code> the code
+can be simplified (and less error prone) to eliminate the else block
+entirely:</p>
+
+</div>
+<textarea data-lang="cpp" id="return_vals_AC_2_editor" data-question_label="5.1.2" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Return Values'  data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+
+double absoluteValue (double x) {
+    if (x < 0) {
+        return -x;
+    }
+    return x;
+}
+
+int main () {
+   std::cout << absoluteValue(0);
+   return 0;
+}
+</textarea>
+</div>
+</div>
+<p>This version is simpler and safer.</p>
+<p>As an aside, you should know that there is a function in the math
+library called <a class="reference external" href="https://en.cppreference.com/w/cpp/numeric/math/fabs">fabs</a> that calculates the absolute value of a
+double—correctly.</p>
+<div id='self_check' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Q1" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="5.1.3" data-multipleanswers="false"  id="return_vals_1"  style="visibility: hidden;">
+            <p>Q-3: What should the return type of the below function be?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">________</span> <span class="nf">weather</span> <span class="p">(</span><span class="kt">int</span> <span class="n">temp</span><span class="p">)</span> <span class="p">{</span>
+ <span class="n">string</span> <span class="n">outside</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
+ <span class="k">if</span> <span class="p">(</span><span class="n">temp</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">outside</span> <span class="o">=</span> <span class="s">&quot;cold&quot;</span><span class="p">;</span>
+ <span class="p">}</span>
+ <span class="k">else</span> <span class="p">{</span>
+   <span class="n">outside</span> <span class="o">=</span> <span class="s">&quot;warm&quot;</span>
+ <span class="p">}</span>
+ <span class="k">return</span> <span class="n">outside</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="return_vals_1_opt_a">double</li><li data-component="feedback">There are no doubles used in this function.</li>
+            
+            <li data-component="answer"  id="return_vals_1_opt_b">int</li><li data-component="feedback">The parameter does not have to be the same type as the return type.</li>
+            
+            <li data-component="answer" data-correct id="return_vals_1_opt_c">string</li><li data-component="feedback">The variable "outside" is being returned, which is of string type.</li>
+            
+            <li data-component="answer"  id="return_vals_1_opt_d">char</li><li data-component="feedback">The return type is actually a string of chars.</li>
+            
+
+            </ul>
+            </div>
+            </div><div data-component="tab" data-tabname="Q2" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="5.1.4" data-multipleanswers="false"  id="return_vals_2"  style="visibility: hidden;">
+            <p>Q-4: What will print?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">timesTwo</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+  <span class="k">return</span> <span class="n">y</span><span class="p">;</span>
+  <span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">timesTwo</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="return_vals_2_opt_a">4</li><li data-component="feedback">The function returns y before reaching the line where y is doubled.</li>
+            
+            <li data-component="answer" data-correct id="return_vals_2_opt_b">2</li><li data-component="feedback">Because the return statement in the timesTwo function returns prior to the modification of y, 2 is returned and then printed.</li>
+            
+            <li data-component="answer"  id="return_vals_2_opt_c">16</li><li data-component="feedback">The function returns y before reaching the line where y is doubled.</li>
+            
+            <li data-component="answer"  id="return_vals_2_opt_d">The function does not return.</li><li data-component="feedback">The function has an integer return type, so it WILL return an int.</li>
+            
+
+            </ul>
+            </div>
+            </div><div data-component="tab" data-tabname="Q3" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="5.1.5" data-multipleanswers="false"  id="dead_code_printing_1"  style="visibility: hidden;">
+            <p>Q-5: What will print?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="kt">double</span> <span class="nf">ticket_price</span><span class="p">(</span><span class="kt">int</span> <span class="n">age</span><span class="p">)</span> <span class="p">{</span>
+   <span class="k">if</span><span class="p">(</span><span class="n">age</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+       <span class="k">return</span> <span class="mf">5.50</span><span class="p">;</span>
+       <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; You get a child discount yay!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+   <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+       <span class="k">return</span> <span class="mf">9.50</span><span class="p">;</span>
+       <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; Sorry you have to pay full price.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="k">return</span> <span class="mf">0.0</span><span class="p">;</span> <span class="c1">//to avoid compiler error</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">years</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">price</span> <span class="o">=</span> <span class="n">ticket_price</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="dead_code_printing_1_opt_a">You get a child discount yay!</li><li data-component="feedback">The function returns goes to the else block as age is not less than 5.</li>
+            
+            <li data-component="answer"  id="dead_code_printing_1_opt_b">Sorry you have to pay full price.</li><li data-component="feedback">The function returns 9.50 before reaching the output statment.</li>
+            
+            <li data-component="answer" data-correct id="dead_code_printing_1_opt_c">nothing gets printed</li><li data-component="feedback">The return statement is encountered before the cout statement.</li>
+            
+            <li data-component="answer"  id="dead_code_printing_1_opt_d">9.50</li><li data-component="feedback">Although 9.50 is returned there is no printing of this value.</li>
+            
+
+            </ul>
+            </div>
+            </div><div data-component="tab" data-tabname="Q4" >
+
+        <div class="runestone">
+        <div data-component="fillintheblank" data-question_label="5.1.6" id="return_vals_3"  style="visibility: hidden;">
+            <p>Q-6: A variable that exists only inside a function, is called a <input type="text"> variable.</p>
+
+        <script type="application/json">
+            [[{"regex": "^\\s*[Tt][Ee][Mm][Pp][Oo][Rr][Aa][Rr][Yy]\\s*$", "regexFlags": "", "feedback": "<p>Temporary variables are useful for calculating and returning values inside functions since they are short-lived.</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            </div>
+    </div>
+
+</div>
+
+
+  <div id=scprogresscontainer>
+    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+  </div>
+  
+      
+<ul>
+  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 5. Fruitful functions' data-toggle="tooltip">
+    <a href="index.html" aria-label="5. Fruitful functions">
+        <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+            <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+        </div>
+    </a>
+  </li>
+</ul>
+
+  
+<ul>
+  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - 5.2. Program Development' data-toggle="tooltip" >
+    <a href="program-development.html" aria-label="5.2. Program Development">
+      <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+          <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+      </div>
+    </a>
+  </li>
+</ul>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+<script>
+	function mouseOverPrev() {
+		document.getElementById("relations-prev").style.opacity=1;
+	}
+
+	function mouseOutPrev() {
+		document.getElementById("relations-prev").style.opacity=0.4;
+	}
+	function mouseOverNext() {
+		document.getElementById("relations-next").style.opacity=1;
+	}
+
+	function mouseOutNext() {
+		document.getElementById("relations-next").style.opacity=0.4;
+	}
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020-2021 Dave Parillo.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.5.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> getSwitch(); </script>
+
+
+  </body>
+</html>

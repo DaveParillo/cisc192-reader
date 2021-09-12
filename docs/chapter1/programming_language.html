@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.2. What is a Programming Language? &#8212; CISC 192 Course Reader Overview</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.5.5" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/runestone.js?v=92D8BBF0"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../_static/theme.js?v=D899FB97"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1.3. What is a Program?" href="program.html" />
+    <link rel="prev" title="1.1. The Way of the Program" href="the_way.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'https://daveparillo.github.io/cisc192-reader/' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/cisc192-reader';
+    eBookConfig.course = 'cisc192-reader';
+    eBookConfig.basecourse = 'cisc192-reader';
+    eBookConfig.isLoggedIn = false;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
+  eBookConfig.runestone_version = '5.5.5';
+  eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+          <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;'>&nbsp;<span aria-label="logo" class="visuallyhidden">Runestone Logo</span> </a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          cisc192-reader
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">1.1. </span>The Way of the Program" data-toggle="tooltip">
+    <a href="the_way.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">1.3. </span>What is a Program?' data-toggle="tooltip" >              
+    <a href="program.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+      </div> <!-- navbar -->
+
+
+
+
+
+
+
+    </div> <!-- container -->
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="what-is-a-programming-language">
+<h1><span class="section-number">1.2. </span>What is a Programming Language?<a class="headerlink" href="#what-is-a-programming-language" title="Permalink to this headline">¶</a></h1>
+<p id="index-0">The programming language you will be learning is C++. It is a <strong>high-level language</strong>.</p>
+<p id="index-1">As you might infer from the name “high-level language,” there are also
+<strong>low-level languages</strong>, sometimes referred to as machine language or
+assembly language. Loosely-speaking, computers can only execute programs
+written in low-level languages. Thus, programs written in a high-level
+language have to be translated before they can run. This translation
+takes some time, which is a small disadvantage of high-level languages.</p>
+<p id="index-2">But the advantages are enormous. First, it is <em>much</em> easier to program
+in a high-level language; by “easier” I mean that the program takes less
+time to write, it’s shorter and easier to read, and it’s more likely to
+be correct. Secondly, high-level languages are <strong>portable</strong>, meaning
+that they can run on different kinds of computers with few or no
+modifications. Low-level programs can only run on one kind of computer,
+and have to be rewritten to run on another.</p>
+<p>Due to these advantages, almost all programs are written in high-level
+languages. Low-level languages are only used for a few special
+applications.</p>
+<p id="index-3">There are two ways to translate a program; interpreting or
+compiling. An <strong>interpreter</strong> is a program that reads a high-level
+program and does what it says. In effect, it translates the program
+line-by-line, alternately reading lines and carrying out commands.</p>
+<div align="center" class="align-center"><div class="graphviz"><img src="../_images/graphviz-75808e6b4d904690c105242b040ccf12e7cbceeb.png" alt="Simplified interpreter process" class="graphviz" /></div>
+</div>
+<span class="target" id="index-4"></span><span class="target" id="index-5"></span><span class="target" id="index-6"></span><p id="index-7">A <strong>compiler</strong> is a program that reads a high-level program and translates
+it all at once, before executing any of the commands. Often you compile
+the program as a separate step, and then execute the compiled code
+later. In this case, the high-level program is called the <strong>source
+code</strong>, and the translated program is called the <strong>object code</strong> or the
+<strong>executable</strong>.</p>
+<p>As an example, suppose you write a program in C++. You might use a text
+editor to write the program (a text editor is a simple word processor).
+When the program is finished, you might save it in a file named
+program.cpp, where “program” is an arbitrary name you make up, and the
+suffix .cpp is a convention that indicates that the file contains C++
+source code.</p>
+<p>Then, depending on what your programming environment is like, you might
+leave the text editor and run the compiler. The compiler would read your
+source code, translate it, and create a new file named program.o to
+contain the object code, or program.exe to contain the executable.</p>
+<div align="center" class="align-center"><div class="graphviz"><img src="../_images/graphviz-bd7a542e75c3470c212a63205ac8a44950f76c40.png" alt="Simplified compilation process" class="graphviz" /></div>
+</div>
+<p>The next step is to run the program, which requires some kind of
+executor. The role of the executor is to load the program (copy it from
+disk into memory) and make the computer start executing the program.</p>
+<p>Although this process may seem complicated, the good news is that in
+most programming environments (sometimes called development
+environments), these steps are automated for you. Usually you will only
+have to write a program and type a single command to compile and run it.
+On the other hand, it is useful to know what the steps are that are
+happening in the background, so that if something goes wrong you can
+figure out what it is.</p>
+<div id='tab_check' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Q1" >
+
+        <div class="runestone">
+        <div data-component="fillintheblank" data-question_label="1.2.1" id="program_lang_1"  style="visibility: hidden;">
+            <p>Q-1: A(n) <input type="text"> translates a high-level program line by line, executing
+commands as they come.  A(n) <input type="text"> translates a high-level program
+all at once, before executing any of the commands!</p>
+
+        <script type="application/json">
+            [[{"regex": "^\\s*[Ii][Nn][Tt][Ee][Rr][Pp][Rr][Ee][Tt][Ee][Rr]\\s*$", "regexFlags": "", "feedback": "<p>Correct!</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}], [{"regex": "^\\s*[Cc][Oo][Mm][Pp][Ii][Ll][Ee][Rr]\\s*$", "regexFlags": "", "feedback": "<p>Correct!</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            </div><div data-component="tab" data-tabname="Q2" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="1.2.2" data-multipleanswers="true"  id="program_lang_2"  style="visibility: hidden;">
+            <p>Q-2: <strong>Multiple Response</strong> Which is true about a high-level programming language?</p>
+
+            <li data-component="answer" data-correct id="program_lang_2_opt_a">Almost all programs are written in high-level languages.</li><li data-component="feedback">High-level languages are efficient and easy to understand, an obvious choice for writing a program!</li>
+            
+            <li data-component="answer" data-correct id="program_lang_2_opt_b">Programs written in a high-level language must be translated before they can be run.</li><li data-component="feedback">All programs in high-level language must be translated to a low-level language before the computer can execute them!</li>
+            
+            <li data-component="answer"  id="program_lang_2_opt_c">It's easier to program in a low-level language than a high-level language.</li><li data-component="feedback">Actually, its much the other way around!</li>
+            
+            <li data-component="answer"  id="program_lang_2_opt_d">Computers can only execute programs written in high-level languages.</li><li data-component="feedback">Computers actually can't understand high-level languages as they are written.</li>
+            
+            <li data-component="answer"  id="program_lang_2_opt_e">High-level programs can only run on one kind of computer (you'd have to rewrite the program if you wanted to use a different machine).</li><li data-component="feedback">High-level programs are portable, meaning they can run on different kinds of computers with little to no modification.</li>
+            
+
+            </ul>
+            </div>
+            </div><div data-component="tab" data-tabname="Q3" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="1.2.3" data-multipleanswers="false"  id="program_lang_3"  style="visibility: hidden;">
+            <p>Q-3: What is the role of an executor?</p>
+
+            <li data-component="answer"  id="program_lang_3_opt_a">To translate the program line by line.</li><li data-component="feedback">This is the role of an interpreter!</li>
+            
+            <li data-component="answer" data-correct id="program_lang_3_opt_b">To copy the program from disk to memory and make the computer run the program.</li><li data-component="feedback">The role of an executor is to carry out, or execute, the program!</li>
+            
+            <li data-component="answer"  id="program_lang_3_opt_c">To translate the program all at once.</li><li data-component="feedback">This is the role of a compiler!</li>
+            
+            <li data-component="answer"  id="program_lang_3_opt_d">To give an error message if something is preventing the code from being translated.</li><li data-component="feedback">This happens automatically when we try to compile/interpret our program.</li>
+            
+
+            </ul>
+            </div>
+            </div><div data-component="tab" data-tabname="Q4" >
+
+<div class="runestone">
+<ul data-component="dragndrop" data-question_label="1.2.4" id="program_lang_4"  style="visibility: hidden;">
+    <span data-component="question">Q-4: Match each term to an example of it!</span>
+	<span data-component=feedback>Try again!</span>
+
+    <li data-component="draggable" id="program_lang_4_drag1">source code</li>
+    <li data-component="dropzone" for="program_lang_4_drag1">our program written in C++</li>
+
+    <li data-component="draggable" id="program_lang_4_drag2">object code</li>
+    <li data-component="dropzone" for="program_lang_4_drag2">translated version of our program that the computer can understand and execute</li>
+</ul></div></div>
+    </div>
+
+</div>
+
+
+  <div id=scprogresscontainer>
+    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+  </div>
+  
+      
+<ul>
+  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 1.1. The Way of the Program' data-toggle="tooltip">
+    <a href="the_way.html" aria-label="1.1. The Way of the Program">
+        <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+            <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+        </div>
+    </a>
+  </li>
+</ul>
+
+  
+<ul>
+  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - 1.3. What is a Program?' data-toggle="tooltip" >
+    <a href="program.html" aria-label="1.3. What is a Program?">
+      <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+          <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+      </div>
+    </a>
+  </li>
+</ul>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+<script>
+	function mouseOverPrev() {
+		document.getElementById("relations-prev").style.opacity=1;
+	}
+
+	function mouseOutPrev() {
+		document.getElementById("relations-prev").style.opacity=0.4;
+	}
+	function mouseOverNext() {
+		document.getElementById("relations-next").style.opacity=1;
+	}
+
+	function mouseOutNext() {
+		document.getElementById("relations-next").style.opacity=0.4;
+	}
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020-2021 Dave Parillo.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.5.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> getSwitch(); </script>
+
+
+  </body>
+</html>

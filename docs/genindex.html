@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index &#8212; CISC 192 Course Reader Overview</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="_static/runestone-custom-sphinx-bootstrap.css?v=5.5.5" />
+    <link rel="stylesheet" type="text/css" href="_static/theme-overrides.css?v=2DAFE138" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="_static/animationbase.js?v=A043C3A7"></script>
+    <script src="_static/html4css1.css?v=4533ACD3"></script>
+    <script src="_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="_static/webglinteractive.js?v=2B768384"></script>
+    <script src="_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="_static/runestone.js?v=92D8BBF0"></script>
+    <script src="_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="_static/jquery-fix.js?v=1226591B"></script>
+    <script src="_static/bootstrap-sphinx.js"></script>
+    <script src="_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="_static/theme.js?v=D899FB97"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="#" />
+    <link rel="search" title="Search" href="search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'https://daveparillo.github.io/cisc192-reader/' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/cisc192-reader';
+    eBookConfig.course = 'cisc192-reader';
+    eBookConfig.basecourse = 'cisc192-reader';
+    eBookConfig.isLoggedIn = false;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
+  eBookConfig.runestone_version = '5.5.5';
+  eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+          <a class="brand-logo" style='background: transparent url("_static/img/logo_small.png") no-repeat 0px 0px;'>&nbsp;<span aria-label="logo" class="visuallyhidden">Runestone Logo</span> </a>
+        
+        <a class="navbar-brand" href="index.html" aria-label="index-page">
+          
+          cisc192-reader
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='#'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+
+   
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        
+-->
+        
+          <li></li>
+        
+      </ul>
+
+      </div> <!-- navbar -->
+
+
+
+
+
+
+
+    </div> <!-- container -->
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+
+<h1 id="index">Index</h1>
+
+<div class="genindex-jumpbox">
+ <a href="#A"><strong>A</strong></a>
+ | <a href="#B"><strong>B</strong></a>
+ | <a href="#C"><strong>C</strong></a>
+ | <a href="#D"><strong>D</strong></a>
+ | <a href="#E"><strong>E</strong></a>
+ | <a href="#F"><strong>F</strong></a>
+ | <a href="#H"><strong>H</strong></a>
+ | <a href="#I"><strong>I</strong></a>
+ | <a href="#K"><strong>K</strong></a>
+ | <a href="#L"><strong>L</strong></a>
+ | <a href="#M"><strong>M</strong></a>
+ | <a href="#N"><strong>N</strong></a>
+ | <a href="#O"><strong>O</strong></a>
+ | <a href="#P"><strong>P</strong></a>
+ | <a href="#R"><strong>R</strong></a>
+ | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
+ | <a href="#V"><strong>V</strong></a>
+ 
+</div>
+<h2 id="A">A</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    Andrei Alexandrescu
+
+      <ul>
+        <li><a href="chapter3/namespace-std.html#index-1">namespace using</a>
+</li>
+      </ul></li>
+      <li><a href="chapter3/parameters-arguments.html#index-1">argument</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="chapter2/operators-char.html#index-0">ASCII</a>
+</li>
+      <li><a href="chapter2/assignment.html#index-0">assignment</a>
+</li>
+      <li><a href="chapter2/assignment.html#index-0">assignment statement</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="B">B</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="chapter4/infinite-recursion.html#index-0">base case</a>
+</li>
+      <li>
+    bool functions
+
+      <ul>
+        <li><a href="chapter5/bool-functions.html#index-0">functions</a>
+</li>
+      </ul></li>
+      <li>
+    bool types
+
+      <ul>
+        <li><a href="chapter5/bool-variables.html#index-0">types</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    boolean types
+
+      <ul>
+        <li><a href="chapter5/bool-values.html#index-0">types</a>
+</li>
+      </ul></li>
+      <li><a href="chapter1/debugging.html#index-0">bug</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="C">C</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="chapter4/chained.html#index-0">chained conditionals</a>
+</li>
+      <li><a href="chapter4/chained.html#index-0">chaining</a>
+</li>
+      <li><a href="chapter2/values.html#index-3">char</a>
+</li>
+      <li><a href="chapter2/values.html#index-3">character</a>
+</li>
+      <li>
+    code
+
+      <ul>
+        <li><a href="chapter5/return-values.html#index-2">dead code</a>
+</li>
+      </ul></li>
+      <li><a href="chapter1/first_program.html#index-0">comment</a>
+</li>
+      <li><a href="chapter4/conditionals.html#index-1">comparison operators</a>
+</li>
+      <li><a href="chapter1/programming_language.html#index-4">compile</a>
+</li>
+      <li><a href="chapter1/debugging.html#index-2">compile error</a>
+</li>
+      <li><a href="chapter1/programming_language.html#index-4">compiler</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    complete programming language
+
+      <ul>
+        <li><a href="chapter5/recursion.html#index-0">programming language</a>
+</li>
+      </ul></li>
+      <li><a href="chapter2/composition.html#index-0">compose</a>
+</li>
+      <li><a href="chapter2/composition.html#index-0">composition</a>, <a href="chapter3/composition.html#index-0">[1]</a>
+</li>
+      <li><a href="chapter4/conditionals.html#index-0">conditional statement</a>
+</li>
+      <li>
+    const
+
+      <ul>
+        <li><a href="chapter2/constants.html#index-0">keyword</a>
+</li>
+      </ul></li>
+      <li>
+    const reference
+
+      <ul>
+        <li><a href="chapter2/constants.html#index-1">parameter passing</a>
+</li>
+      </ul></li>
+      <li><a href="chapter2/constants.html#index-2">const vs define</a>
+</li>
+      <li><a href="chapter2/constants.html#index-0">constants</a>
+</li>
+      <li><a href="chapter1/first_program.html#index-1">cout</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="D">D</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    dead code
+
+      <ul>
+        <li><a href="chapter5/return-values.html#index-2">code</a>
+</li>
+      </ul></li>
+      <li><a href="chapter1/debugging.html#index-1">debug</a>
+</li>
+      <li><a href="chapter2/variables.html#index-1">declaration</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="chapter2/variables.html#index-1">declaration statement</a>
+</li>
+      <li>
+    development
+
+      <ul>
+        <li><a href="chapter5/program-development.html#index-0">incremental development</a>
+</li>
+      </ul></li>
+      <li><a href="chapter2/operators.html#index-4">double</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="E">E</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="chapter1/programming_language.html#index-7">executable</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="chapter2/operators.html#index-1">expression</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="F">F</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="chapter5/recursion.html#index-1">factorial</a>
+</li>
+      <li><a href="chapter5/bool-variables.html#index-1">flag</a>
+</li>
+      <li><a href="chapter2/operators.html#index-4">floating-point</a>
+</li>
+      <li><a href="chapter3/multiple-functions.html#index-0">flow of execution</a>
+</li>
+      <li><a href="chapter1/formal_natural.html#index-1">formal language</a>
+</li>
+      <li>
+    fruitful functions
+
+      <ul>
+        <li><a href="chapter5/return-values.html#index-0">functions</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    function
+
+      <ul>
+        <li><a href="chapter3/parameters-variables.html#index-2">instance</a>
+</li>
+      </ul></li>
+      <li><a href="chapter3/functions.html#index-0">function call</a>
+</li>
+      <li>
+    functions
+
+      <ul>
+        <li><a href="chapter5/bool-functions.html#index-0">bool functions</a>
+</li>
+        <li><a href="chapter5/return-values.html#index-0">fruitful functions</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="H">H</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="chapter3/math.html#index-0">header file</a>
+</li>
+      <li>
+    Herb Sutter
+
+      <ul>
+        <li><a href="chapter3/namespace-std.html#index-1">namespace using</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="chapter1/programming_language.html#index-0">high-level language</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="I">I</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="chapter3/math.html#index-1">include</a>
+</li>
+      <li><a href="chapter3/math.html#index-1">include statement</a>
+</li>
+      <li>
+    incremental development
+
+      <ul>
+        <li><a href="chapter5/program-development.html#index-0">development</a>
+</li>
+      </ul></li>
+      <li><a href="chapter4/infinite-recursion.html#index-1">infinite recursion</a>
+</li>
+      <li><a href="chapter3/float.html#index-0">initialization</a>
+</li>
+      <li><a href="chapter3/float.html#index-0">initialization statement</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="chapter3/float.html#index-0">initialize</a>
+</li>
+      <li>
+    instance
+
+      <ul>
+        <li><a href="chapter3/parameters-variables.html#index-2">function</a>
+</li>
+      </ul></li>
+      <li><a href="chapter2/values.html#index-2">int</a>
+</li>
+      <li><a href="chapter2/values.html#index-2">integer</a>
+</li>
+      <li><a href="chapter2/operators.html#index-2">integer division</a>
+</li>
+      <li><a href="chapter1/programming_language.html#index-3">interpret</a>
+</li>
+      <li><a href="chapter1/programming_language.html#index-3">interpreter</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="K">K</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="chapter2/keywords.html#index-0">keyword</a>
+
+      <ul>
+        <li><a href="chapter2/constants.html#index-0">const</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="L">L</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="chapter5/leap-of-faith.html#index-0">leap of faith</a>
+</li>
+      <li><a href="chapter3/parameters-variables.html#index-0">local</a>
+</li>
+      <li><a href="chapter3/parameters-variables.html#index-0">local variable</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="chapter1/debugging.html#index-5">logical error</a>
+</li>
+      <li><a href="chapter5/logical-operators.html#index-0">logical operators</a>
+</li>
+      <li><a href="chapter1/programming_language.html#index-1">low-level language</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="M">M</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="chapter4/modulus.html#index-0">modulus operator</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="N">N</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="chapter3/namespace.html#index-0">namespace</a>
+
+      <ul>
+        <li><a href="chapter3/namespace-std.html#index-0">using directive</a>
+</li>
+      </ul></li>
+      <li>
+    namespace using
+
+      <ul>
+        <li><a href="chapter3/namespace-std.html#index-1">Andrei Alexandrescu</a>
+</li>
+        <li><a href="chapter3/namespace-std.html#index-1">Herb Sutter</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="chapter1/formal_natural.html#index-0">natural language</a>
+</li>
+      <li><a href="chapter4/nested.html#index-0">nested conditionals</a>
+</li>
+      <li><a href="chapter4/nested.html#index-0">nesting</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="O">O</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="chapter1/programming_language.html#index-6">object code</a>
+</li>
+      <li><a href="chapter2/operators.html#index-3">operand</a>
+</li>
+      <li><a href="chapter2/operators.html#index-0">operator</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="chapter3/multiple-functions.html#index-0">order of execution</a>
+</li>
+      <li><a href="chapter2/order-of-operations.html#index-0">order of operations</a>
+</li>
+      <li><a href="chapter1/first_program.html#index-1">output</a>
+</li>
+      <li><a href="chapter5/overloading.html#index-0">overloading</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="P">P</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="chapter3/parameters-arguments.html#index-0">parameter</a>
+</li>
+      <li>
+    parameter passing
+
+      <ul>
+        <li><a href="chapter2/constants.html#index-1">const reference</a>
+</li>
+      </ul></li>
+      <li><a href="chapter1/formal_natural.html#index-2">parse</a>
+</li>
+      <li><a href="chapter3/parameters-arguments.html#index-2">pass</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="chapter1/programming_language.html#index-2">portable</a>
+</li>
+      <li><a href="chapter2/order-of-operations.html#index-0">precedence</a>
+</li>
+      <li><a href="chapter1/the_way.html#index-0">problem-solving</a>
+</li>
+      <li><a href="chapter1/program.html#index-0">program</a>
+</li>
+      <li>
+    programming language
+
+      <ul>
+        <li><a href="chapter5/recursion.html#index-0">complete programming language</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="R">R</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="chapter4/recursion.html#index-1">random</a>
+</li>
+      <li><a href="chapter4/recursion.html#index-0">recursion</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="chapter4/recursion.html#index-0">recursive function</a>
+</li>
+      <li><a href="chapter4/return.html#index-0">return statement</a>
+</li>
+      <li><a href="chapter1/debugging.html#index-4">run-time error</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="S">S</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="chapter5/program-development.html#index-1">scaffolding</a>
+</li>
+      <li><a href="chapter1/debugging.html#index-5">semantic error</a>
+</li>
+      <li><a href="chapter1/debugging.html#index-6">semantics</a>
+</li>
+      <li><a href="chapter1/programming_language.html#index-5">source code</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="chapter3/parameters-variables.html#index-1">stack diagram</a>, <a href="chapter4/stack-diagrams.html#index-0">[1]</a>
+</li>
+      <li><a href="chapter2/assignment.html#index-1">state diagram</a>
+</li>
+      <li><a href="chapter2/more-output.html#index-0">string</a>
+</li>
+      <li><a href="chapter1/debugging.html#index-3">syntax</a>
+</li>
+      <li><a href="chapter1/debugging.html#index-2">syntax error</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    temporary variables
+
+      <ul>
+        <li><a href="chapter5/return-values.html#index-1">variables</a>
+</li>
+      </ul></li>
+      <li><a href="chapter2/values.html#index-1">type</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="chapter3/convert.html#index-0">typecast</a>
+</li>
+      <li>
+    types
+
+      <ul>
+        <li><a href="chapter5/bool-variables.html#index-0">bool types</a>
+</li>
+        <li><a href="chapter5/bool-values.html#index-0">boolean types</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    using directive
+
+      <ul>
+        <li><a href="chapter3/namespace-std.html#index-0">namespace</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="V">V</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="chapter2/values.html#index-0">value</a>
+</li>
+      <li><a href="chapter2/variables.html#index-0">variable</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    variables
+
+      <ul>
+        <li><a href="chapter5/return-values.html#index-1">temporary variables</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+
+
+  <div id=scprogresscontainer>
+    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+  </div>
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+<script>
+	function mouseOverPrev() {
+		document.getElementById("relations-prev").style.opacity=1;
+	}
+
+	function mouseOutPrev() {
+		document.getElementById("relations-prev").style.opacity=0.4;
+	}
+	function mouseOverNext() {
+		document.getElementById("relations-next").style.opacity=1;
+	}
+
+	function mouseOutNext() {
+		document.getElementById("relations-next").style.opacity=0.4;
+	}
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020-2021 Dave Parillo.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.5.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> getSwitch(); </script>
+
+
+  </body>
+</html>

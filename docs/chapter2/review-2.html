@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.14. Mixed-Up Code Exercises &#8212; CISC 192 Course Reader Overview</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.5.5" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/runestone.js?v=92D8BBF0"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../_static/theme.js?v=D899FB97"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2.15. Activecode Exercises" href="review-3.html" />
+    <link rel="prev" title="2.13. Multiple Choice Exercises" href="review-1.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'https://daveparillo.github.io/cisc192-reader/' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/cisc192-reader';
+    eBookConfig.course = 'cisc192-reader';
+    eBookConfig.basecourse = 'cisc192-reader';
+    eBookConfig.isLoggedIn = false;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
+  eBookConfig.runestone_version = '5.5.5';
+  eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+          <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;'>&nbsp;<span aria-label="logo" class="visuallyhidden">Runestone Logo</span> </a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          cisc192-reader
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">2.13. </span>Multiple Choice Exercises" data-toggle="tooltip">
+    <a href="review-1.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">2.15. </span>Activecode Exercises' data-toggle="tooltip" >              
+    <a href="review-3.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+      </div> <!-- navbar -->
+
+
+
+
+
+
+
+    </div> <!-- container -->
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="mixed-up-code-exercises">
+<h1><span class="section-number">2.14. </span>Mixed-Up Code Exercises<a class="headerlink" href="#mixed-up-code-exercises" title="Permalink to this headline">¶</a></h1>
+<p>Answer the following <strong>Mixed-Up Code</strong> questions to assess what you have learned in this chapter.</p>
+<div id='tab_check' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Q1" >
+
+        <div class="runestone" style="max-width: none;">
+        <pre data-component="parsons" data-question_label="2.14.1" id="VARS_p1"  data-adaptive="true"    data-noindent="true"   data-numbered="left"  style="visibility: hidden;">
+        <span data-question>Q-1 Construct a block of code that prints: "Lions &" one the first line, "Tigers & Bears!" on the second line, and "Oh my!" on the FOURTH line.
+</span>int main() {
+---
+ cout << "Lions &" << endl;
+---
+ cout << "Lions &"; #paired
+---
+ cout << "Tigers &";
+---
+ cout << "Tigers &" << endl; #paired
+---
+ cout << " Bears!" << endl;
+---
+ cout << "Bears!" << endl; #paired
+---
+ cout << endl;
+---
+ cout << "Oh my!";
+---
+}
+        </pre>
+        </div>
+    </div><div data-component="tab" data-tabname="Q2" >
+
+        <div class="runestone" style="max-width: none;">
+        <pre data-component="parsons" data-question_label="2.14.2" id="VARS_p2"  data-adaptive="true"    data-noindent="true"   data-numbered="left"  style="visibility: hidden;">
+        <span data-question>Q-2 Construct a block of code that swaps the value of integers x and y, which have values 3 and 6, respectively.
+</span>int main() {
+---
+ int x;
+ int y;
+---
+ x = 3;
+ y = 6;
+---
+ int x = 3 #distractor
+ int y = 6
+---
+ int temp = x;
+---
+ x = y;
+ y = temp;
+---
+ x = y; #distractor
+ y = x;
+---
+}
+        </pre>
+        </div>
+    </div><div data-component="tab" data-tabname="Q3" >
+
+        <div class="runestone" style="max-width: none;">
+        <pre data-component="parsons" data-question_label="2.14.3" id="VARS_p3"  data-adaptive="true"    data-noindent="true"   data-numbered="left"  style="visibility: hidden;">
+        <span data-question>Q-3 Dan Humphrey is a 3.98 student at Constance High School.  His crush's first initial is S.  Construct a program that assigns the variables name, GPA, and crush, in that order.
+</span>int main() {
+---
+ string name = "Dan Humphrey";
+---
+ string name;  #paired
+ name = Dan Humphrey;
+---
+ double GPA;
+ GPA = 3.98;
+---
+ int GPA = 3.98; #paired
+---
+ char crush = 'S';
+---
+ char crush = "S"; #paired
+---
+}
+        </pre>
+        </div>
+    </div><div data-component="tab" data-tabname="Q4" >
+
+        <div class="runestone" style="max-width: none;">
+        <pre data-component="parsons" data-question_label="2.14.4" id="VARS_p4"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        <span data-question>Q-4 You decide to make homemade Mac 'n' Cheese for you and your roomates.  Whoever wrote the recipe wanted to make things hard for you by stating that it calls for 1% of a gallon of milk.  Construct a block of code that converts this to tablespoons.
+</span>int main() {
+---
+ double gallons = 0.01;
+---
+ double gallons = 0.01 #paired
+---
+ double cups = 16 * gallons;
+---
+ double cups; #paired
+ 16 * gallons = cups;
+---
+ double tbsp;
+ tbsp = 16 * cups;
+---
+ double tbsp = 16 * cups #paired
+---
+}
+        </pre>
+        </div>
+    </div><div data-component="tab" data-tabname="Q5" >
+
+        <div class="runestone" style="max-width: none;">
+        <pre data-component="parsons" data-question_label="2.14.5" id="VARS_p5"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        <span data-question>Q-5 Construct a block of code that takes the volume of the rectangular prism defined by length, width, and height and prints the result to the terminal.
+</span>int main() {
+---
+ int length = 2;
+ int width = 3;
+ int height = 4;
+---
+ length = 2; #paired
+ width = 3;
+ height = 4;
+---
+ int volume;
+---
+ volume = height * width * length;
+---
+ int volume = length * width * height #distractor
+---
+ cout << volume;
+---
+ print (volume) #distractor
+---
+}
+        </pre>
+        </div>
+    </div><div data-component="tab" data-tabname="Q6" >
+
+        <div class="runestone" style="max-width: none;">
+        <pre data-component="parsons" data-question_label="2.14.6" id="VARS_p6"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        <span data-question>Q-6 Construct a block of code that changes the value of the variable a from the character 'a' to the character 'z'.
+</span>int main() {
+---
+ char a = 'a';
+---
+ char a = "a"; #paired
+---
+ a = a + 25;
+---
+ a = a + 26; #paired
+---
+ a = a + 27; #paired
+---
+}
+        </pre>
+        </div>
+    </div><div data-component="tab" data-tabname="Q7" >
+
+        <div class="runestone" style="max-width: none;">
+        <pre data-component="parsons" data-question_label="2.14.7" id="VARS_p7"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        <span data-question>Q-7 Construct a block of code that outputs the volume of a cylinder with a radius of 3 and a height of 4.  There are many ways to do this using the choices below, but only the correct answer that uses the LEAST lines of code will be accepted.
+</span>int main() {
+---
+ cout << 3.14 * 3 * 3 * 4;
+---
+ cout << 3.14 * 3 ^ 2 * 4; #distractor
+---
+ height = 4; #distractor
+---
+ base = 3.14 * 3 * 3; #distractor
+---
+ base = 3.14 * 3 ^ 2; #distractor
+---
+ cout << base * height; #distractor
+---
+ volume = base * height; #distractor
+---
+ cout << volume; #distractor
+---
+}
+        </pre>
+        </div>
+    </div><div data-component="tab" data-tabname="Q8" >
+
+        <div class="runestone" style="max-width: none;">
+        <pre data-component="parsons" data-question_label="2.14.8" id="VARS_p8"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        <span data-question>Q-8 Construct a block of code that prints "My favorite class is MATH" on the same line.
+</span>int main() {
+---
+ string favClass = "MATH";
+---
+ string favClass = 'MATH'; #paired
+---
+ cout << "My favorite class is ";
+ cout << favClass;
+---
+ cout << "My favorite class is " << endl; #paired
+ cout << favClass;
+---
+ cout << "My favorite class is" << favClass; #paired
+---
+}
+        </pre>
+        </div>
+    </div><div data-component="tab" data-tabname="Q9" >
+
+        <div class="runestone" style="max-width: none;">
+        <pre data-component="parsons" data-question_label="2.14.9" id="VARS_p9"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        <span data-question>Q-9 It's Black Friday and the Nintendo Switch you'be been saving up for is marked down to 60% of its original price!  Construct a block of code that calculates how much money you'd be saving if the system originally costed $359.99?
+</span>int main() {
+---
+ double game = 359.99;
+---
+ double game = $359.99; #paired
+---
+ double discount = game * 0.60;
+---
+ double discount = game - (0.60 * game); #paired
+---
+ double moneySaved = game - discount;
+---
+ double moneySaved = discount; #paired
+---
+ double moneySaved = game + discount; #paired
+---
+}
+        </pre>
+        </div>
+    </div><div data-component="tab" data-tabname="Q10" >
+
+        <div class="runestone" style="max-width: none;">
+        <pre data-component="parsons" data-question_label="2.14.10" id="VARS_p10"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        <span data-question>Q-10 Your family just bought a dog and everyone has been fighting over what to name it.  It went from Champ to Copper to Higgins, and after a few days of being Higgins, everyone agreed on Buddy.  Construct a block of code that illustrates this concept.
+</span>int main() {
+---
+ string name = "Champ";
+---
+ string name = 'Champ'; #paired
+---
+ name = "Copper";
+---
+ string name = "Copper"; #paired
+---
+ string newName = "Higgins";
+ name = newName;
+---
+ string name = "Higgins"; #paired
+---
+ name = "Buddy";
+---
+ name = "Buddy" #paired
+---
+}
+        </pre>
+        </div>
+    </div>
+    </div>
+
+</div>
+
+
+  <div id=scprogresscontainer>
+    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+  </div>
+  
+      
+<ul>
+  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 2.13. Multiple Choice Exercises' data-toggle="tooltip">
+    <a href="review-1.html" aria-label="2.13. Multiple Choice Exercises">
+        <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+            <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+        </div>
+    </a>
+  </li>
+</ul>
+
+  
+<ul>
+  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - 2.15. Activecode Exercises' data-toggle="tooltip" >
+    <a href="review-3.html" aria-label="2.15. Activecode Exercises">
+      <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+          <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+      </div>
+    </a>
+  </li>
+</ul>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+<script>
+	function mouseOverPrev() {
+		document.getElementById("relations-prev").style.opacity=1;
+	}
+
+	function mouseOutPrev() {
+		document.getElementById("relations-prev").style.opacity=0.4;
+	}
+	function mouseOverNext() {
+		document.getElementById("relations-next").style.opacity=1;
+	}
+
+	function mouseOutNext() {
+		document.getElementById("relations-next").style.opacity=0.4;
+	}
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020-2021 Dave Parillo.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.5.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> getSwitch(); </script>
+
+
+  </body>
+</html>

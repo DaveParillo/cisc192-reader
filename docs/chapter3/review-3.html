@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3.17. Activecode Exercises &#8212; CISC 192 Course Reader Overview</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.5.5" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/runestone.js?v=92D8BBF0"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../_static/theme.js?v=D899FB97"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4. Conditionals and recursion" href="../chapter4/index.html" />
+    <link rel="prev" title="3.16. Mixed-Up Code Exercises" href="review-2.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'https://daveparillo.github.io/cisc192-reader/' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/cisc192-reader';
+    eBookConfig.course = 'cisc192-reader';
+    eBookConfig.basecourse = 'cisc192-reader';
+    eBookConfig.isLoggedIn = false;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
+  eBookConfig.runestone_version = '5.5.5';
+  eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+          <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;'>&nbsp;<span aria-label="logo" class="visuallyhidden">Runestone Logo</span> </a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          cisc192-reader
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">3.16. </span>Mixed-Up Code Exercises" data-toggle="tooltip">
+    <a href="review-2.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">4. </span>Conditionals and recursion' data-toggle="tooltip" >              
+    <a href="../chapter4/index.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+      </div> <!-- navbar -->
+
+
+
+
+
+
+
+    </div> <!-- container -->
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="activecode-exercises">
+<h1><span class="section-number">3.17. </span>Activecode Exercises<a class="headerlink" href="#activecode-exercises" title="Permalink to this headline">¶</a></h1>
+<p>Answer the following <strong>Activecode</strong> questions to
+assess what you have learned in this chapter.</p>
+<div id='tab_check' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Q1" >
+<div id='functions_a1' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=functions_a1q >
+<div id=functions_a1q_question class="ac_question col-md-12">
+<p>Fix the errors in the code below so that it prints the area of a circle with radius 5.  Use cmath functions to get an accurate value for pi.</p>
+
+</div>
+<textarea data-lang="cpp" id="functions_a1q_editor" data-question_label="3.17.1" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+void printArea(int r) {
+    double pi = acos(1.0);
+    double area = pi * r ^ 2;
+    cout << area;
+}
+
+int main () {
+    // DO NOT MODIFY ANYTHING BELOW THIS LINE
+    cout << "Testing with radius = 5..." << endl; cout << "    Your function had area = "; printArea(5); cout << endl; cout << "    The correct solution has area = 78.5398" << endl; cout << "Testing with radius = 7.5..." << endl; cout << "    Your function had area = "; printArea(7.5); cout << endl; cout << "    The correct solution has area = 176.715";
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=functions_a1a >
+<div id=functions_a1a_question class="ac_question col-md-12">
+<p>Below is one way to fix the program.  C++ doesn’t use the <code class="docutils literal notranslate"><span class="pre">^</span></code> operator for exponents.  We can get the square of <code class="docutils literal notranslate"><span class="pre">r</span></code> by multiplying it by itself.  We call the function with an argument of <code class="docutils literal notranslate"><span class="pre">5</span></code>.</p>
+
+</div>
+<textarea data-lang="cpp" id="functions_a1a_editor" data-question_label="3.17.2" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void printArea(double r) {
+    double pi = acos(-1.0);
+    double area = pi * r * r;
+    cout << area;
+}
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</div><div data-component="tab" data-tabname="Q2" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=functions_a2 >
+<div id=functions_a2_question class="ac_question col-md-12">
+<p>Fix the code below so that it prints “2 elephants”.</p>
+
+</div>
+<textarea data-lang="cpp" id="functions_a2_editor" data-question_label="3.17.3" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+void printAnimals(string a, int b) {
+    cout << b << a;
+}
+
+int main () {
+    // DO NOT MODIFY ANYTHING BELOW THIS LINE
+    printAnimals(2, "elephants");
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Q3" >
+<div id='functions_a3' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=functions_a3q >
+<div id=functions_a3q_question class="ac_question col-md-12">
+<p>Fix the code below so that it prints <code class="docutils literal notranslate"><span class="pre">12</span> <span class="pre">/</span> <span class="pre">8</span> <span class="pre">=</span> <span class="pre">1.5.</span></code></p>
+
+</div>
+<textarea data-lang="cpp" id="functions_a3q_editor" data-question_label="3.17.4" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+void divide (int a, int b) {
+    cout << a / b;
+}
+
+int main () {
+    int a = 8;
+    int b = 12;
+
+    // DO NOT MODIFY ANYTHING BELOW THIS LINE
+    cout << b << " / " << a << " = "; divide (a, b);
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=functions_a3a >
+<div id=functions_a3a_question class="ac_question col-md-12">
+<p>Below is one way to fix the program.  It’s crucial that you input your arguments in the correct order so as to avoid a semantic error.  Also, it’s important that you understand that when you divide two integers… you will get an integer as a result.</p>
+
+</div>
+<textarea data-lang="cpp" id="functions_a3a_editor" data-question_label="3.17.5" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+void divide (double a, double b) {
+    cout << a / b;
+}
+
+int main () {
+    int a = 8;
+    int b = 12;
+    cout << b << " / " << a << " = "; divide (b, a);
+}
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</div><div data-component="tab" data-tabname="Q4" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=functions_a4 >
+<div id=functions_a4_question class="ac_question col-md-12">
+<p>Finish the code below so that it calculates the common log of <code class="docutils literal notranslate"><span class="pre">a</span></code> minus the <em>natural</em> log of <code class="docutils literal notranslate"><span class="pre">a</span></code> and prints the difference. You will need to use cmath functions.</p>
+
+</div>
+<textarea data-lang="cpp" id="functions_a4_editor" data-question_label="3.17.6" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+void logSubtraction (double a) {
+    // Create the variable difference and assign it to the difference mentioned in the instructions
+
+    cout << difference;
+}
+
+int main () {
+    // DO NOT MODIFY ANYTHING BELOW THIS LINE
+    cout << "Testing with a = 8..." << endl; cout << "    Your solution has difference = "; logSubtraction(8); cout << endl; cout << "    The correct solution has difference = -1.17635" << endl; cout << "Testing with a = -2..." << endl; cout << "    Your solution has difference = "; logSubtraction(-2); cout << endl; cout << "    The correct solution has difference = nan";
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Q5" >
+<div id='functions_a5' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=functions_a5q >
+<div id=functions_a5q_question class="ac_question col-md-12">
+<p>Finish the code below so that it prints “First Line”, a border, and “Second Line.” on three separate lines.</p>
+
+</div>
+<textarea data-lang="cpp" id="functions_a5q_editor" data-question_label="3.17.7" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+void border () {
+    cout << "------------" << endl;
+}
+
+int main () {
+    // Write some code below to call the function appropriately
+
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=functions_a5a >
+<div id=functions_a5a_question class="ac_question col-md-12">
+<p>Below is one way to complete the program.</p>
+
+</div>
+<textarea data-lang="cpp" id="functions_a5a_editor" data-question_label="3.17.8" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+void border () {
+    cout << "------------" << endl;
+}
+
+int main () {
+    cout << "First Line." << endl;
+    border();
+    cout << "Second Line." << endl;
+}
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</div><div data-component="tab" data-tabname="Q6" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=functions_a6 >
+<div id=functions_a6_question class="ac_question col-md-12">
+<p>Write a function called <code class="docutils literal notranslate"><span class="pre">doubleDiv</span></code> that takes two doubles as parameters and prints the quotient of the <strong>integer division</strong> of the first number divided by the second.  Be sure to include any necessary headers.</p>
+
+</div>
+<textarea data-lang="cpp" id="functions_a6_editor" data-question_label="3.17.9" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+void intDivision () {
+
+}
+
+int main () {
+    // DO NOT MODIFY ANYTHING BELOW THIS LINE
+    cout << "Testing with a = 2.4, b = 6.8..." << endl; cout << "    Your solution has a quotient of "; intDivision(2.4, 6.8); cout << endl; cout << "    The correct solution has a quotient of 0" << endl; cout << "Testing with a = -8.6, b = 4.2..." << endl; cout << "    Your solution has a quotient of "; intDivision(-8.6, 4.2); cout << endl; cout << "    The correct solution has a quotient of -2";
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Q7" >
+<div id='functions_a7' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=functions_a7q >
+<div id=functions_a7q_question class="ac_question col-md-12">
+<p>Write a function called gpaBoost that prints your GPA rounded up to the nearest point.  If your GPA is already at the nearest point, there is no rounding.  Be sure to include any necessary headers.</p>
+
+</div>
+<textarea data-lang="cpp" id="functions_a7q_editor" data-question_label="3.17.10" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+void gpaBoost () {
+
+}
+
+int main () {
+    // DO NOT MODIFY ANYTHING BELOW THIS LINE
+    cout << "Testing with GPA = 2.513..." << endl; cout << "    Your solution rounded the GPA to "; gpaBoost(2.513); cout << endl; cout << "    The correct solution rounds the GPA to 3.000" << endl; cout << "Testing with GPA = 4.000..." << endl; cout << "    Your solution rounded the GPA to "; gpaBoost(4.000); cout << endl; cout << "    The correct solution rounds the GPA to 4.000";
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=functions_a7a >
+<div id=functions_a7a_question class="ac_question col-md-12">
+<p>Below is one way to complete the program.  I used the <code class="docutils literal notranslate"><span class="pre">ceil</span></code> function from the <code class="docutils literal notranslate"><span class="pre">cmath</span></code> library, but you could have solved this problem without using any functions from <code class="docutils literal notranslate"><span class="pre">cmath</span></code>.</p>
+
+</div>
+<textarea data-lang="cpp" id="functions_a7a_editor" data-question_label="3.17.11" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void gpaBoost (double GPA) {
+    int betterGPA = ceil(GPA);
+    cout << betterGPA << ".000";
+}
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</div><div data-component="tab" data-tabname="Q8" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=functions_a8 >
+<div id=functions_a8_question class="ac_question col-md-12">
+<p>Write a function called <code class="docutils literal notranslate"><span class="pre">volumePrism</span></code> that takes three <code class="docutils literal notranslate"><span class="pre">double</span></code> sidelengths as parameters, and calculates and prints the volume of a the rectangular prism.  Be sure to include any necessary headers.</p>
+
+</div>
+<textarea data-lang="cpp" id="functions_a8_editor" data-question_label="3.17.12" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+void volumePrism () {
+
+}
+
+int main () {
+    // DO NOT MODIFY ANYTHING BELOW THIS LINE
+    cout << "Testing with a = 3, b = 4, c = 5..." << endl; cout << "    Your solution calculated a volume of "; volumePrism(3,4,5); cout << endl; cout << "    The correct solution calculates a volume of 60" << endl; cout << "Testing with a = 5.7, b = 3.9, c = 1.3..." << endl; cout << "    Your solution calculated a volume of "; volumePrism(5.7,3.9,1.3); cout << endl; cout << "    The correct solution calculates a volume of 28.899";
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Q9" >
+<div id='functions_a9' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=functions_a9q >
+<div id=functions_a9q_question class="ac_question col-md-12">
+<p>Write a function called <code class="docutils literal notranslate"><span class="pre">tanD</span></code> that prints the tangent of an angle given as a <code class="docutils literal notranslate"><span class="pre">double</span></code> in degrees. Use 3.14 for pi.  Be sure to include any necessary headers.</p>
+
+</div>
+<textarea data-lang="cpp" id="functions_a9q_editor" data-question_label="3.17.13" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+void tanDegrees () {
+
+}
+
+int main () {
+    // DO NOT MODIFY ANYTHING BELOW THIS LINE
+    cout << "Testing with degrees = 45..." << endl; cout << "    Your solution calculated a tangent of "; tanDegrees(45); cout << endl; cout << "    The correct solution calculates a tangent of 0.999204" << endl; cout << "Testing with degrees = 112.1..." << endl; cout << "    Your solution calculated a tangent of "; tanDegrees(112.1); cout << endl; cout << "    The correct solution calculates a tangent of -2.46973";
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=functions_a9a >
+<div id=functions_a9a_question class="ac_question col-md-12">
+<p>Below is one way to complete the program.  You need to make sure to convert your angle to radians before doing any calculations with sinusoidal functions.</p>
+
+</div>
+<textarea data-lang="cpp" id="functions_a9a_editor" data-question_label="3.17.14" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void tanDegrees (double degrees) {
+    double radians = degrees * (2 * 3.14) / 360.0;
+    double tangent = tan(radians);
+    cout << tangent;
+}
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</div><div data-component="tab" data-tabname="Q10" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=functions_a10 >
+<div id=functions_a10_question class="ac_question col-md-12">
+<p>Write a function called <code class="docutils literal notranslate"><span class="pre">volumeSphere</span></code> that takes a <code class="docutils literal notranslate"><span class="pre">double</span></code> radius as a parameter, and calculates and prints the volume of a sphere with that radius.  Use 3.14 for <code class="docutils literal notranslate"><span class="pre">pi</span></code>.  Be sure to include any necessary headers.</p>
+
+</div>
+<textarea data-lang="cpp" id="functions_a10_editor" data-question_label="3.17.15" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+void volumeSphere () {
+
+}
+
+int main() {
+    // DO NOT MODIFY ANYTHING BELOW THIS LINE
+    cout << "Testing with radius = 3..." << endl; cout << "    Your solution calculated a volume of "; volumeSphere(3); cout << endl; cout << "    The correct solution calculates a volume of 113.04" << endl; cout << "Testing with radius = 3.24..." << endl; cout << "    Your solution calculated a volume of "; volumeSphere(3.24); cout << endl; cout << "    The correct solution calculates a volume of 142.398";
+}
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</div>
+
+
+  <div id=scprogresscontainer>
+    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+  </div>
+  
+      
+<ul>
+  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 3.16. Mixed-Up Code Exercises' data-toggle="tooltip">
+    <a href="review-2.html" aria-label="3.16. Mixed-Up Code Exercises">
+        <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+            <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+        </div>
+    </a>
+  </li>
+</ul>
+
+  
+<ul>
+  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - 4. Conditionals and recursion' data-toggle="tooltip" >
+    <a href="../chapter4/index.html" aria-label="4. Conditionals and recursion">
+      <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+          <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+      </div>
+    </a>
+  </li>
+</ul>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+<script>
+	function mouseOverPrev() {
+		document.getElementById("relations-prev").style.opacity=1;
+	}
+
+	function mouseOutPrev() {
+		document.getElementById("relations-prev").style.opacity=0.4;
+	}
+	function mouseOverNext() {
+		document.getElementById("relations-next").style.opacity=1;
+	}
+
+	function mouseOutNext() {
+		document.getElementById("relations-next").style.opacity=0.4;
+	}
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020-2021 Dave Parillo.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.5.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> getSwitch(); </script>
+
+
+  </body>
+</html>

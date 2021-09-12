@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5.2. Program Development &#8212; CISC 192 Course Reader Overview</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.5.5" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/runestone.js?v=92D8BBF0"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../_static/theme.js?v=D899FB97"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5.3. Composition" href="composition.html" />
+    <link rel="prev" title="5.1. Return Values" href="return-values.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'https://daveparillo.github.io/cisc192-reader/' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/cisc192-reader';
+    eBookConfig.course = 'cisc192-reader';
+    eBookConfig.basecourse = 'cisc192-reader';
+    eBookConfig.isLoggedIn = false;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
+  eBookConfig.runestone_version = '5.5.5';
+  eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+          <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;'>&nbsp;<span aria-label="logo" class="visuallyhidden">Runestone Logo</span> </a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          cisc192-reader
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">5.1. </span>Return Values" data-toggle="tooltip">
+    <a href="return-values.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">5.3. </span>Composition' data-toggle="tooltip" >              
+    <a href="composition.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+      </div> <!-- navbar -->
+
+
+
+
+
+
+
+    </div> <!-- container -->
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="program-development">
+<h1><span class="section-number">5.2. </span>Program Development<a class="headerlink" href="#program-development" title="Permalink to this headline">¶</a></h1>
+<p id="index-0">At this point you should be able to look at complete C++ functions and
+tell what they do. But it may not be clear yet how to go about writing
+them. I am going to suggest one technique that I call <strong>incremental
+development</strong>.</p>
+<p>As an example, imagine you want to find the distance between two points,
+given by the coordinates <span class="math notranslate nohighlight">\((x_1, y_1)\)</span> and <span class="math notranslate nohighlight">\((x_2, y_2)\)</span>. By
+the usual definition,</p>
+<div class="math notranslate nohighlight">
+\[distance = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\]</div>
+<p>The first step is to consider what a distance function should look like
+in C++. In other words, what are the inputs (parameters) and what is the
+output (return value).</p>
+<p>In this case, the two points are the parameters, and it is natural to
+represent them using four doubles. The return value is the distance,
+which will have type double.</p>
+<p>Already we can write an outline of the function:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="nf">distance</span> <span class="p">(</span><span class="kt">double</span> <span class="n">x1</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y1</span><span class="p">,</span> <span class="kt">double</span> <span class="n">x2</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y2</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="mf">0.0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The return statement is a “stub” so that the function will compile
+and return something, even though it is not the right answer. At this
+stage the function doesn’t do anything useful, but it is worthwhile to
+try compiling it so we can identify any syntax errors before we make it
+more complicated.</p>
+<p>In order to test the new function, we have to call it with sample
+values. Somewhere in main I would add:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="n">dist</span> <span class="o">=</span> <span class="n">distance</span> <span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">6.0</span><span class="p">);</span>
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">dist</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>I chose these values so that the horizontal distance is 3 and the
+vertical distance is 4; that way, the result will be 5 (the hypotenuse
+of a 3-4-5 triangle). When you are testing a function, it is useful to
+know the right answer.</p>
+<p>Once we have checked the syntax of the function definition, we can start
+adding lines of code one at a time. After each incremental change, we
+recompile and run the program. That way, at any point we know exactly
+where the error must be—in the last line we added.</p>
+<p>The next step in the computation is to find the differences
+<span class="math notranslate nohighlight">\(x_2 - x_1\)</span> and <span class="math notranslate nohighlight">\(y_2 - y_1\)</span>. I will store those values in
+temporary variables named dx and dy.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="nf">distance</span> <span class="p">(</span><span class="kt">double</span> <span class="n">x1</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y1</span><span class="p">,</span> <span class="kt">double</span> <span class="n">x2</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y2</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">double</span> <span class="n">dx</span> <span class="o">=</span> <span class="n">x2</span> <span class="o">-</span> <span class="n">x1</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">dy</span> <span class="o">=</span> <span class="n">y2</span> <span class="o">-</span> <span class="n">y1</span><span class="p">;</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;dx is &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">dx</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;dy is &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">dy</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="k">return</span> <span class="mf">0.0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>I added output statements that will let me check the intermediate values
+before proceeding. As I mentioned, I already know that they should be
+3.0 and 4.0.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are ever unsure why a function isn’t returning what you
+expect it to, using <code class="docutils literal notranslate"><span class="pre">cout</span></code> statements at different steps in
+your function will help you figure it out.</p>
+</div>
+<p id="index-1">When the function is finished I will remove the output statements. Code
+like that is called <strong>scaffolding</strong>, because it is helpful for building
+the program, but it is not part of the final product. Sometimes it is a
+good idea to keep the scaffolding around, but comment it out, just in
+case you need it later.</p>
+<p>The next step in the development is to square dx and dy. We could use
+the pow function, but it is simpler and faster to just multiply each
+term by itself.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="nf">distance</span> <span class="p">(</span><span class="kt">double</span> <span class="n">x1</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y1</span><span class="p">,</span> <span class="kt">double</span> <span class="n">x2</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y2</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">double</span> <span class="n">dx</span> <span class="o">=</span> <span class="n">x2</span> <span class="o">-</span> <span class="n">x1</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">dy</span> <span class="o">=</span> <span class="n">y2</span> <span class="o">-</span> <span class="n">y1</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">dsquared</span> <span class="o">=</span> <span class="n">dx</span><span class="o">*</span><span class="n">dx</span> <span class="o">+</span> <span class="n">dy</span><span class="o">*</span><span class="n">dy</span><span class="p">;</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;dsquared is &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">dsquared</span><span class="p">;</span>
+  <span class="k">return</span> <span class="mf">0.0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Again, I would compile and run the program at this stage and check the
+intermediate value (which should be 25.0).</p>
+<p>Finally, we can use the sqrt function to compute and return the result.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="nf">distance</span> <span class="p">(</span><span class="kt">double</span> <span class="n">x1</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y1</span><span class="p">,</span> <span class="kt">double</span> <span class="n">x2</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y2</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">double</span> <span class="n">dx</span> <span class="o">=</span> <span class="n">x2</span> <span class="o">-</span> <span class="n">x1</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">dy</span> <span class="o">=</span> <span class="n">y2</span> <span class="o">-</span> <span class="n">y1</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">dsquared</span> <span class="o">=</span> <span class="n">dx</span><span class="o">*</span><span class="n">dx</span> <span class="o">+</span> <span class="n">dy</span><span class="o">*</span><span class="n">dy</span><span class="p">;</span>
+  <span class="k">return</span> <span class="n">sqrt</span> <span class="p">(</span><span class="n">dsquared</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Then in main, we should output and check the value of the result.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=program_dvlmt_AC_1 >
+<div id=program_dvlmt_AC_1_question class="ac_question col-md-12">
+<p>This program implements the distance function that we’ve been
+talking about and outputs the result.</p>
+
+</div>
+<textarea data-lang="cpp" id="program_dvlmt_AC_1_editor" data-question_label="5.2.1" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Program Development'  data-wasm=/_static
+    style="visibility: hidden;">
+#include <cmath>
+#include <iostream>
+
+double distance (double x1, double y1, double x2, double y2) {
+    double dx = x2 - x1;
+    double dy = y2 - y1;
+    double dsquared = dx*dx + dy*dy;
+    double result = std::sqrt (dsquared);
+    return std::sqrt (dsquared);
+}
+
+int main () {
+    double dist = distance (1.0, 2.0, 4.0, 6.0);
+    std::cout << dist << std::endl;
+    return 0;
+}
+</textarea>
+</div>
+</div>
+<p>As you gain more experience programming, you might find yourself writing
+and debugging more than one line at a time. Nevertheless, this
+incremental development process can save you a lot of debugging time.</p>
+<p>The key aspects of the process are:</p>
+<ul class="simple">
+<li><p>Start with a working program and make small, incremental changes. At
+any point, if there is an error, you will know exactly where it is.</p></li>
+<li><p>Use temporary variables to hold intermediate values so you can output
+and check them.</p></li>
+<li><p>Once the program is working, you might want to remove some of the
+scaffolding or consolidate multiple statements into compound
+expressions, but only if it does not make the program difficult to
+read.</p></li>
+</ul>
+<div id='self_check' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Q1" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="5.2.2" data-multipleanswers="false"  id="program_dvlmt_1"  style="visibility: hidden;">
+            <p>Q-2: When writing the implementation for a function, a good place to
+start is __________.</p>
+
+            <li data-component="answer"  id="program_dvlmt_1_opt_a">combining the parameters</li><li data-component="feedback">Unless the function requires you to do so, then this is unnecessary.</li>
+            
+            <li data-component="answer"  id="program_dvlmt_1_opt_b">printing out the parameters</li><li data-component="feedback">If you don't know the values of the parameters, this could be useful, but there is a better answer.</li>
+            
+            <li data-component="answer" data-correct id="program_dvlmt_1_opt_c">returning something</li><li data-component="feedback">This is called stubbing.  You don't have to return the correct answer, but you do need to return the correct data type.</li>
+            
+            <li data-component="answer"  id="program_dvlmt_1_opt_d">debugging</li><li data-component="feedback">You don't need to debug until after you've written the function.</li>
+            
+
+            </ul>
+            </div>
+            </div><div data-component="tab" data-tabname="Q2" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="5.2.3" data-multipleanswers="false"  id="program_dvlmt_2"  style="visibility: hidden;">
+            <p>Q-3: Which of the following is <strong>not</strong> a key aspect of the incremental development process?</p>
+
+            <li data-component="answer"  id="program_dvlmt_2_opt_a">Use temporary variables to hold intermediate values so you can output and check them.</li><li data-component="feedback">Temporary variables are very useful in understanding what is happening at each step.</li>
+            
+            <li data-component="answer"  id="program_dvlmt_2_opt_b">Start with a working program and make small, incremental changes. That way you know exactly where the error is if you have one.</li><li data-component="feedback">This is the definition of incremental development.</li>
+            
+            <li data-component="answer" data-correct id="program_dvlmt_2_opt_c">Writing a program from start to finish, and then debugging at the end in order to understand all of the errors at once.</li><li data-component="feedback">Incremental development uses step by step debugging in order to avoid the difficulty this would present.</li>
+            
+            <li data-component="answer"  id="program_dvlmt_2_opt_d">Once the program is working, you might want to consolidate some statements into compound expressions, or remove them entirely.</li><li data-component="feedback">This is good practice, as long as it doesn't make the program difficult to read.</li>
+            
+
+            </ul>
+            </div>
+            </div><div data-component="tab" data-tabname="Q3" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="5.2.4" data-multipleanswers="false"  id="program_dvlmt_3"  style="visibility: hidden;">
+            <p>Q-4: The print statements in the distance function will be removed after testing. What is this called, and what is its purpose?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="kt">double</span> <span class="nf">distance</span> <span class="p">(</span><span class="kt">double</span> <span class="n">x1</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y1</span><span class="p">,</span> <span class="kt">double</span> <span class="n">x2</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y2</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">double</span> <span class="n">dx</span> <span class="o">=</span> <span class="n">x2</span> <span class="o">-</span> <span class="n">x1</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">dy</span> <span class="o">=</span> <span class="n">y2</span> <span class="o">-</span> <span class="n">y1</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;dx is &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">dx</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;dy is &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">dy</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+  <span class="k">return</span> <span class="mf">0.0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="program_dvlmt_3_opt_a">scaffolding - allows the function to compile and return something</li><li data-component="feedback">This is not the correct definition of scaffolding.</li>
+            
+            <li data-component="answer"  id="program_dvlmt_3_opt_b">stubbing - allows the function to compile and return something</li><li data-component="feedback">This is the correct definition of stubbing but is not the correct answer.</li>
+            
+            <li data-component="answer" data-correct id="program_dvlmt_3_opt_c">scaffolding - used to test values of temporary variables, later removed</li><li data-component="feedback">Printing out the values allows you to observe whether the function is working or not.</li>
+            
+            <li data-component="answer"  id="program_dvlmt_3_opt_d">stubbing - used to test values of temporary variables, later removed</li><li data-component="feedback">This is not the correct definition of stubbing.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+    </div>
+
+</div>
+
+
+  <div id=scprogresscontainer>
+    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+  </div>
+  
+      
+<ul>
+  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 5.1. Return Values' data-toggle="tooltip">
+    <a href="return-values.html" aria-label="5.1. Return Values">
+        <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+            <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+        </div>
+    </a>
+  </li>
+</ul>
+
+  
+<ul>
+  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - 5.3. Composition' data-toggle="tooltip" >
+    <a href="composition.html" aria-label="5.3. Composition">
+      <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+          <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+      </div>
+    </a>
+  </li>
+</ul>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+<script>
+	function mouseOverPrev() {
+		document.getElementById("relations-prev").style.opacity=1;
+	}
+
+	function mouseOutPrev() {
+		document.getElementById("relations-prev").style.opacity=0.4;
+	}
+	function mouseOverNext() {
+		document.getElementById("relations-next").style.opacity=1;
+	}
+
+	function mouseOutNext() {
+		document.getElementById("relations-next").style.opacity=0.4;
+	}
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020-2021 Dave Parillo.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.5.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> getSwitch(); </script>
+
+
+  </body>
+</html>

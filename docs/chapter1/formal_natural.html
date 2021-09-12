@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.5. Formal and Natural Languages &#8212; CISC 192 Course Reader Overview</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.5.5" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/runestone.js?v=92D8BBF0"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../_static/theme.js?v=D899FB97"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1.6. The First Program" href="first_program.html" />
+    <link rel="prev" title="1.4. What is Debugging?" href="debugging.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'https://daveparillo.github.io/cisc192-reader/' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/cisc192-reader';
+    eBookConfig.course = 'cisc192-reader';
+    eBookConfig.basecourse = 'cisc192-reader';
+    eBookConfig.isLoggedIn = false;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
+  eBookConfig.runestone_version = '5.5.5';
+  eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+          <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;'>&nbsp;<span aria-label="logo" class="visuallyhidden">Runestone Logo</span> </a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          cisc192-reader
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">1.4. </span>What is Debugging?" data-toggle="tooltip">
+    <a href="debugging.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">1.6. </span>The First Program' data-toggle="tooltip" >              
+    <a href="first_program.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+      </div> <!-- navbar -->
+
+
+
+
+
+
+
+    </div> <!-- container -->
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="formal-and-natural-languages">
+<span id="formal"></span><h1><span class="section-number">1.5. </span>Formal and Natural Languages<a class="headerlink" href="#formal-and-natural-languages" title="Permalink to this headline">¶</a></h1>
+<p id="index-0"><strong>Natural languages</strong> are the languages that people speak, like English,
+Spanish, and French. They were not designed by people (although people
+try to impose some order on them); they evolved naturally.</p>
+<p id="index-1"><strong>Formal languages</strong> are languages that are designed by people for
+specific applications. For example, the notation that mathematicians use
+is a formal language that is particularly good at denoting relationships
+among numbers and symbols. Chemists use a formal language to represent
+the chemical structure of molecules. And most importantly:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Programming languages are <strong>formal languages</strong> that have been designed
+to express computations.</p>
+</div>
+<p>As I mentioned before, formal languages tend to have strict rules about
+syntax. For example, <span class="math notranslate nohighlight">\(3+3=6\)</span> is a syntactically correct
+mathematical statement, but <span class="math notranslate nohighlight">\(3=+6\$\)</span> is not. Also, <span class="math notranslate nohighlight">\(H_2O\)</span> is
+a syntactically correct chemical name, but <span class="math notranslate nohighlight">\(_2Zz\)</span> is not.</p>
+<p>Syntax rules come in two flavors, pertaining to tokens and structure.
+Tokens are the basic elements of the language, like words and numbers
+and chemical elements. One of the problems with 3=+6$ is that $ is not a
+legal token in mathematics (at least as far as I know). Similarly,
+<span class="math notranslate nohighlight">\(_2Zz\)</span> is not legal because there is no element with the
+abbreviation <span class="math notranslate nohighlight">\(Zz\)</span>.</p>
+<p>The second type of syntax error pertains to the structure of a
+statement; that is, the way the tokens are arranged. The statement 3=+6$
+is structurally illegal, because you can’t have a plus sign immediately
+after an equals sign. Similarly, molecular formulas have to have
+subscripts after the element name, not before.</p>
+<p>When you read a sentence in English or a statement in a formal language,
+you have to figure out what the structure of the sentence is (although
+in a natural language you do this unconsciously).</p>
+<div class="admonition note" id="index-2">
+<p class="admonition-title">Note</p>
+<p>The process of examining a program and analysing the syntactic structure
+is called <strong>parsing</strong>.</p>
+</div>
+<p>For example, when you hear the sentence, “The other shoe fell,” you
+understand that “the other shoe” is the subject and “fell” is the verb.
+Once you have parsed a sentence, you can figure out what it means, that
+is, the semantics of the sentence. Assuming that you know what a shoe
+is, and what it means to fall, you will understand the general
+implication of this sentence.</p>
+<p>Although formal and natural languages have many features in
+common—tokens, structure, syntax and semantics—there are many
+differences.</p>
+<dl class="simple">
+<dt>ambiguity:</dt><dd><p>Natural languages are full of ambiguity, which people deal with by
+using contextual clues and other information. Formal languages are
+designed to be nearly or completely unambiguous, which means that
+any statement has exactly one meaning, regardless of context.</p>
+</dd>
+<dt>redundancy:</dt><dd><p>In order to make up for ambiguity and reduce misunderstandings,
+natural languages employ lots of redundancy. As a result, they are
+often verbose. Formal languages are less redundant and more concise.</p>
+</dd>
+<dt>literalness:</dt><dd><p>Natural languages are full of idiom and metaphor. If I say, “The
+other shoe fell,” there is probably no shoe and nothing falling.
+Formal languages mean exactly what they say.</p>
+</dd>
+</dl>
+<p>People who grow up speaking a natural language (everyone) often have a
+hard time adjusting to formal languages. In some ways the difference
+between formal and natural language is like the difference between
+poetry and prose, but more so:</p>
+<dl class="simple">
+<dt>poetry:</dt><dd><p>Words are used for their sounds as well as for their meaning, and
+the whole poem together creates an effect or emotional response.
+Ambiguity is not only common but often deliberate.</p>
+</dd>
+<dt>prose:</dt><dd><p>The literal meaning of words is more important and the structure
+contributes more meaning. Prose is more amenable to analysis than
+poetry, but still often ambiguous.</p>
+</dd>
+<dt>programs:</dt><dd><p>The meaning of a computer program is unambiguous and literal, and
+can be understood entirely by analysis of the tokens and structure.</p>
+</dd>
+</dl>
+<p>Here are some suggestions for reading programs (and other formal
+languages). First, remember that formal languages are much more dense
+than natural languages, so it takes longer to read them. Also, the
+structure is very important, so it is usually not a good idea to read
+from top to bottom, left to right. Instead, learn to parse the program
+in your head, identifying the tokens and interpreting the structure.
+Finally, remember that the details matter. Little things like spelling
+errors and bad punctuation, which you can get away with in natural
+languages, can make a big difference in a formal language.</p>
+<div id='tab_check' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Q1" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="1.5.1" data-multipleanswers="true"  id="formal_natural_1"  style="visibility: hidden;">
+            <p>Q-1: <strong>Multiple Response</strong> Select all <strong>formal</strong> languages from the choices below.</p>
+
+            <li data-component="answer" data-correct id="formal_natural_1_opt_a">C++</li><li data-component="feedback">All programming languages are formal languages!</li>
+            
+            <li data-component="answer" data-correct id="formal_natural_1_opt_b">scientific notation</li><li data-component="feedback">Scientific notation is designed to denote large numbers.</li>
+            
+            <li data-component="answer"  id="formal_natural_1_opt_c">Mandarin</li><li data-component="feedback">Mandarin is a natural language.</li>
+            
+            <li data-component="answer"  id="formal_natural_1_opt_d">English</li><li data-component="feedback">English is a natural language.</li>
+            
+            <li data-component="answer" data-correct id="formal_natural_1_opt_e">chemical formulas</li><li data-component="feedback">Chemical formulas represent what elements a compound is made of! For example CO2 is is carbon dioxide!</li>
+            
+
+            </ul>
+            </div>
+            </div><div data-component="tab" data-tabname="Q2" >
+
+        <div class="runestone">
+        <div data-component="fillintheblank" data-question_label="1.5.2" id="formal_natural_2"  style="visibility: hidden;">
+            <p>Q-2: Analyzing the structure of a sentence or a program is called <input type="text">.</p>
+
+        <script type="application/json">
+            [[{"regex": "^\\s*[Pp][Aa][Rr][Ss][Ii][Nn][Gg]\\s*$", "regexFlags": "", "feedback": "<p>Correct!</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            </div><div data-component="tab" data-tabname="Q3" >
+
+<div class="runestone">
+<ul data-component="dragndrop" data-question_label="1.5.3" id="formal_natural_3"  style="visibility: hidden;">
+    <span data-component="question">Q-3: Match each term to an example of it!</span>
+	<span data-component=feedback>Try again!</span>
+
+    <li data-component="draggable" id="formal_natural_3_drag1">ambiguity</li>
+    <li data-component="dropzone" for="formal_natural_3_drag1">being unclear and open to interpretation</li>
+
+    <li data-component="draggable" id="formal_natural_3_drag2">redundancy</li>
+    <li data-component="dropzone" for="formal_natural_3_drag2">being repetetive to get the point across</li>
+
+    <li data-component="draggable" id="formal_natural_3_drag3">literalness</li>
+    <li data-component="dropzone" for="formal_natural_3_drag3">meaning exactly what is said, nothing more</li>
+</ul></div></div><div data-component="tab" data-tabname="Q4" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="1.5.4" data-multipleanswers="true"  id="formal_natural_4"  style="visibility: hidden;">
+            <p>Q-4: <strong>Multiple Response</strong> Formal languages are…</p>
+
+            <li data-component="answer"  id="formal_natural_4_opt_a">ambiguous</li><li data-component="feedback">Formal languages are designed to be unambiguous, so that each statement has only one meaning.</li>
+            
+            <li data-component="answer"  id="formal_natural_4_opt_b">redundant</li><li data-component="feedback">Formal language is straight to the point.</li>
+            
+            <li data-component="answer" data-correct id="formal_natural_4_opt_c">literal</li><li data-component="feedback">Formal languages mean exactly what they say.</li>
+            
+            <li data-component="answer"  id="formal_natural_4_opt_d">verbose</li><li data-component="feedback">Formal language is straight to the point.</li>
+            
+            <li data-component="answer" data-correct id="formal_natural_4_opt_e">concise</li><li data-component="feedback">Formal language is straight to the point.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+    </div>
+
+</div>
+
+
+  <div id=scprogresscontainer>
+    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+  </div>
+  
+      
+<ul>
+  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 1.4. What is Debugging?' data-toggle="tooltip">
+    <a href="debugging.html" aria-label="1.4. What is Debugging?">
+        <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+            <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+        </div>
+    </a>
+  </li>
+</ul>
+
+  
+<ul>
+  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - 1.6. The First Program' data-toggle="tooltip" >
+    <a href="first_program.html" aria-label="1.6. The First Program">
+      <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+          <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+      </div>
+    </a>
+  </li>
+</ul>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+<script>
+	function mouseOverPrev() {
+		document.getElementById("relations-prev").style.opacity=1;
+	}
+
+	function mouseOutPrev() {
+		document.getElementById("relations-prev").style.opacity=0.4;
+	}
+	function mouseOverNext() {
+		document.getElementById("relations-next").style.opacity=1;
+	}
+
+	function mouseOutNext() {
+		document.getElementById("relations-next").style.opacity=0.4;
+	}
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020-2021 Dave Parillo.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.5.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> getSwitch(); </script>
+
+
+  </body>
+</html>
