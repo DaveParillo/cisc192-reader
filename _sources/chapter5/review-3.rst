@@ -55,6 +55,7 @@ Coding Practice
 
               .. activecode:: cp_5_AC_1a
                  :language: cpp
+                 :datafile: catch.hpp
                  :optional:
 
                  double calculator (double first, double second, char operation) {
