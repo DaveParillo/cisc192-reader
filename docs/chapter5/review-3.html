@@ -233,6 +233,107 @@
   
   <div class="section" id="coding-practice">
 <h1><span class="section-number">5.16. </span>Coding Practice<a class="headerlink" href="#coding-practice" title="Permalink to this headline">¶</a></h1>
+<p>Write a function called <code class="docutils literal notranslate"><span class="pre">calculator</span></code> which takes two <code class="docutils literal notranslate"><span class="pre">double</span></code>s, <code class="docutils literal notranslate"><span class="pre">first</span></code> and
+<code class="docutils literal notranslate"><span class="pre">second</span></code>, and a <code class="docutils literal notranslate"><span class="pre">char</span> <span class="pre">operation</span></code> as parameters. <code class="docutils literal notranslate"><span class="pre">calculator</span></code> performs
+addition, subtraction, multiplication, or division with the two <code class="docutils literal notranslate"><span class="pre">double</span></code>s
+depending on what operation is passed in (<code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>).
+It then returns the result.
+Run and test your code!</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_5_AC_1q_xunit >
+<div id=cp_5_AC_1q_xunit_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="cp_5_AC_1q_xunit_editor" data-question_label="5.16.1" 
+      data-timelimit=25000     
+    data-audio=''  data-datafile='xunit.h'    
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <xunit.h>
+
+ static int foo = 0;
+ static int bar = 0;
+ static double dbar = 0.1;
+ static const char* foostring = "Thisstring";
+
+ void test_setup(void) {
+    foo = 7;
+    bar = 4;
+ }
+
+ MU_TEST(test_check) {
+    mu_check(foo == 7);
+ }
+
+ MU_TEST(test_check_fail) {
+    mu_check(foo != 7);
+ }
+
+ MU_TEST(test_assert) {
+    mu_assert(foo == 7, "foo should be 7");
+ }
+
+ MU_TEST(test_assert_fail) {
+    mu_assert(foo != 7, "foo should be <> 7");
+ }
+
+ MU_TEST(test_assert_int_eq) {
+    mu_assert_int_eq(4, bar);
+ }
+
+ MU_TEST(test_assert_int_eq_fail) {
+    mu_assert_int_eq(5, bar);
+ }
+
+ MU_TEST(test_assert_double_eq) {
+    mu_assert_double_eq(0.1, dbar);
+ }
+
+ MU_TEST(test_assert_double_eq_fail) {
+    mu_assert_double_eq(0.2, dbar);
+ }
+
+ MU_TEST(test_fail) {
+    mu_fail("Fail now!");
+ }
+
+ MU_TEST(test_string_eq){
+    mu_assert_string_eq("Thisstring", foostring);
+ }
+
+ MU_TEST(test_string_eq_fail){
+    mu_assert_string_eq("Thatstring", foostring);
+ }
+
+
+ MU_TEST_SUITE(test_suite) {
+    MU_SUITE_CONFIGURE(&test_setup, &test_teardown);
+
+    MU_RUN_TEST(test_check);
+    MU_RUN_TEST(test_assert);
+    MU_RUN_TEST(test_assert_int_eq);
+    MU_RUN_TEST(test_assert_double_eq);
+
+    MU_RUN_TEST(test_check_fail);
+    MU_RUN_TEST(test_assert_fail);
+    MU_RUN_TEST(test_assert_int_eq_fail);
+    MU_RUN_TEST(test_assert_double_eq_fail);
+
+    MU_RUN_TEST(test_string_eq);
+    MU_RUN_TEST(test_string_eq_fail);
+
+    MU_RUN_TEST(test_fail);
+ }
+
+ int main() {
+    MU_RUN_SUITE(test_suite);
+    MU_REPORT();
+    return MU_EXIT_CODE;
+ }
+</textarea>
+</div>
+</div>
 <div id='self_check' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Q1" >
 <div id='cp_5_1' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
 <p>Write a function called <code class="docutils literal notranslate"><span class="pre">calculator</span></code> which takes two <code class="docutils literal notranslate"><span class="pre">double</span></code>s, <code class="docutils literal notranslate"><span class="pre">first</span></code> and
@@ -247,7 +348,7 @@ Run and test your code!</p>
 <div id=cp_5_AC_1q_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="cpp" id="cp_5_AC_1q_editor" data-question_label="5.16.1" 
+<textarea data-lang="cpp" id="cp_5_AC_1q_editor" data-question_label="5.16.2" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''  data-datafile='catch.hpp'    
            data-wasm=/_static
@@ -290,7 +391,7 @@ we return the correct result depending on which operation was given.</p>
 <div id=cp_5_AC_1a_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="cpp" id="cp_5_AC_1a_editor" data-question_label="5.16.2" 
+<textarea data-lang="cpp" id="cp_5_AC_1a_editor" data-question_label="5.16.3" 
       data-timelimit=25000  data-codelens="true"   data-optional=true
     data-audio=''  data-datafile='catch.hpp'    
            data-wasm=/_static
@@ -348,7 +449,7 @@ it into a binary number, and returns the binary number. Test your function
 in <code class="docutils literal notranslate"><span class="pre">main</span></code>. Run and test your code!</p>
 
 </div>
-<textarea data-lang="cpp" id="cp_5_AC_2q_editor" data-question_label="5.16.3" 
+<textarea data-lang="cpp" id="cp_5_AC_2q_editor" data-question_label="5.16.4" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
            data-wasm=/_static
@@ -386,7 +487,7 @@ Run and test your code!</p>
 <div id=cp_5_AC_3q_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="cpp" id="cp_5_AC_3q_editor" data-question_label="5.16.4" 
+<textarea data-lang="cpp" id="cp_5_AC_3q_editor" data-question_label="5.16.5" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
            data-wasm=/_static
@@ -420,7 +521,7 @@ instead of 180 to avoid integer division.</p>
 <div id=cp_5_AC_3a_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="cpp" id="cp_5_AC_3a_editor" data-question_label="5.16.5" 
+<textarea data-lang="cpp" id="cp_5_AC_3a_editor" data-question_label="5.16.6" 
       data-timelimit=25000  data-codelens="true"   data-optional=true
     data-audio=''      
            data-wasm=/_static
@@ -460,7 +561,7 @@ For example, <code class="docutils literal notranslate"><span class="pre">birthS
 Run and test your code!</p>
 
 </div>
-<textarea data-lang="cpp" id="cp_5_AC_4q_editor" data-question_label="5.16.6" 
+<textarea data-lang="cpp" id="cp_5_AC_4q_editor" data-question_label="5.16.7" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
            data-wasm=/_static
@@ -514,7 +615,7 @@ Each year after the second year counts as 4 additional human years. For example,
 <div id=cp_5_AC_5q_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="cpp" id="cp_5_AC_5q_editor" data-question_label="5.16.7" 
+<textarea data-lang="cpp" id="cp_5_AC_5q_editor" data-question_label="5.16.8" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
            data-wasm=/_static
@@ -548,7 +649,7 @@ we can use the formula to return the correct age in human years.</p>
 <div id=cp_5_AC_5a_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="cpp" id="cp_5_AC_5a_editor" data-question_label="5.16.8" 
+<textarea data-lang="cpp" id="cp_5_AC_5a_editor" data-question_label="5.16.9" 
       data-timelimit=25000  data-codelens="true"   data-optional=true
     data-audio=''      
            data-wasm=/_static
@@ -590,7 +691,7 @@ other numbers. For example, 2 is a common factor of 4 and 18, because 2 goes eve
 factor of both <code class="docutils literal notranslate"><span class="pre">num1</span></code> and <code class="docutils literal notranslate"><span class="pre">num2</span></code>, and returns <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise. Run and test your code!</p>
 
 </div>
-<textarea data-lang="cpp" id="cp_5_AC_6q_editor" data-question_label="5.16.9" 
+<textarea data-lang="cpp" id="cp_5_AC_6q_editor" data-question_label="5.16.10" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
            data-wasm=/_static
@@ -627,7 +728,7 @@ if the year is a leap year and <code class="docutils literal notranslate"><span 
 <div id=cp_5_AC_7q_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="cpp" id="cp_5_AC_7q_editor" data-question_label="5.16.10" 
+<textarea data-lang="cpp" id="cp_5_AC_7q_editor" data-question_label="5.16.11" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
            data-wasm=/_static
@@ -670,7 +771,7 @@ order to efficiently determine whether or not a given year is a leap year.</p>
 <div id=cp_5_AC_7a_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="cpp" id="cp_5_AC_7a_editor" data-question_label="5.16.11" 
+<textarea data-lang="cpp" id="cp_5_AC_7a_editor" data-question_label="5.16.12" 
       data-timelimit=25000  data-codelens="true"   data-optional=true
     data-audio=''      
            data-wasm=/_static
@@ -732,7 +833,7 @@ it is poisonous. Otherwise, it is not. <code class="docutils literal notranslate
 the mushroom is poisonous and <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise. Run and test your code!</p>
 
 </div>
-<textarea data-lang="cpp" id="cp_5_AC_8q_editor" data-question_label="5.16.12" 
+<textarea data-lang="cpp" id="cp_5_AC_8q_editor" data-question_label="5.16.13" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
            data-wasm=/_static
@@ -772,7 +873,7 @@ the <code class="docutils literal notranslate"><span class="pre">n</span></code>
 <div id=cp_5_AC_9q_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="cpp" id="cp_5_AC_9q_editor" data-question_label="5.16.13" 
+<textarea data-lang="cpp" id="cp_5_AC_9q_editor" data-question_label="5.16.14" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
            data-wasm=/_static
@@ -804,7 +905,7 @@ call <code class="docutils literal notranslate"><span class="pre">triangularNum<
 <div id=cp_5_AC_9a_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="cpp" id="cp_5_AC_9a_editor" data-question_label="5.16.14" 
+<textarea data-lang="cpp" id="cp_5_AC_9a_editor" data-question_label="5.16.15" 
       data-timelimit=25000  data-codelens="true"   data-optional=true
     data-audio=''      
            data-wasm=/_static
@@ -841,7 +942,7 @@ and returns the sum of all its digits. For example, <code class="docutils litera
 would return 10. Use recursion. Run and test your code!</p>
 
 </div>
-<textarea data-lang="cpp" id="cp_5_AC_10q_editor" data-question_label="5.16.15" 
+<textarea data-lang="cpp" id="cp_5_AC_10q_editor" data-question_label="5.16.16" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
            data-wasm=/_static
