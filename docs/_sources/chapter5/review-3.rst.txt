@@ -11,7 +11,7 @@ Run and test your code!
 .. activecode:: cp_5_AC_1q_xunit
   :language: cpp
   :practice: T
-  :datafile: xunit.h
+  :include: xunit.h
   :nocodelens:
 
   #include <xunit.h>

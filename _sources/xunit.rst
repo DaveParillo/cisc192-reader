@@ -1,7 +1,7 @@
 :orphan:
 
-.. datafile:: xunit.h
-   :hide:
+.. activecode:: xunit.h
+   :language: cpp
 
    #ifndef MINUNIT_MINUNIT_H
    #define MINUNIT_MINUNIT_H
