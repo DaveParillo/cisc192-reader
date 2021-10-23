@@ -211,10 +211,10 @@ Run and test your code!
                    exit(1);
                  }
                  int main() {
-                   check("3 sides", interior_angle(1), 60);
-                   check("4 sides", interior_angle(5), 90);
-                   check("5 sides", interior_angle(16), 108);
-                   check("8 sides", interior_angle(31), 135);
+                   check("3 sides", interior_angle(1), 60.0);
+                   check("4 sides", interior_angle(5), 90.0);
+                   check("5 sides", interior_angle(16), 108.0);
+                   check("8 sides", interior_angle(31), 135.0);
                  }
 
 
@@ -255,10 +255,10 @@ Run and test your code!
                    exit(1);
                  }
                  int main() {
-                   check("3 sides", interior_angle(1), 60);
-                   check("4 sides", interior_angle(5), 90);
-                   check("5 sides", interior_angle(16), 108);
-                   check("8 sides", interior_angle(31), 135);
+                   check("3 sides", interior_angle(1), 60.0);
+                   check("4 sides", interior_angle(5), 90.0);
+                   check("5 sides", interior_angle(16), 108.0);
+                   check("8 sides", interior_angle(31), 135.0);
                  }
 
 
