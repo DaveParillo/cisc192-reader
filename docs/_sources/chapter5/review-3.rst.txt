@@ -8,95 +8,6 @@ depending on what operation is passed in (``+``, ``-``, ``*``, ``/``).
 It then returns the result.
 Run and test your code!
 
-.. activecode:: cp_5_AC_1q_xunit
-  :language: cpp
-  :practice: T
-  :include: xunit.h
-  :nocodelens:
-
-  #include <xunit.h>
-
-   static int foo = 0;
-   static int bar = 0;
-   static double dbar = 0.1;
-   static const char* foostring = "Thisstring";
-
-   void test_setup(void) {
-      foo = 7;
-      bar = 4;
-   }
-
-   MU_TEST(test_check) {
-      mu_check(foo == 7);
-   }
-
-   MU_TEST(test_check_fail) {
-      mu_check(foo != 7);
-   }
-
-   MU_TEST(test_assert) {
-      mu_assert(foo == 7, "foo should be 7");
-   }
-
-   MU_TEST(test_assert_fail) {
-      mu_assert(foo != 7, "foo should be <> 7");
-   }
-
-   MU_TEST(test_assert_int_eq) {
-      mu_assert_int_eq(4, bar);
-   }
-
-   MU_TEST(test_assert_int_eq_fail) {
-      mu_assert_int_eq(5, bar);
-   }
-
-   MU_TEST(test_assert_double_eq) {
-      mu_assert_double_eq(0.1, dbar);
-   }
-
-   MU_TEST(test_assert_double_eq_fail) {
-      mu_assert_double_eq(0.2, dbar);
-   }
-
-   MU_TEST(test_fail) {
-      mu_fail("Fail now!");
-   }
-
-   MU_TEST(test_string_eq){
-      mu_assert_string_eq("Thisstring", foostring);
-   }
-
-   MU_TEST(test_string_eq_fail){
-      mu_assert_string_eq("Thatstring", foostring);
-   }
-
-
-   MU_TEST_SUITE(test_suite) {
-      MU_SUITE_CONFIGURE(&test_setup, &test_teardown);
-
-      MU_RUN_TEST(test_check);
-      MU_RUN_TEST(test_assert);
-      MU_RUN_TEST(test_assert_int_eq);
-      MU_RUN_TEST(test_assert_double_eq);
-
-      MU_RUN_TEST(test_check_fail);
-      MU_RUN_TEST(test_assert_fail);
-      MU_RUN_TEST(test_assert_int_eq_fail);
-      MU_RUN_TEST(test_assert_double_eq_fail);
-      
-      MU_RUN_TEST(test_string_eq);
-      MU_RUN_TEST(test_string_eq_fail);
-
-      MU_RUN_TEST(test_fail);
-   }
-
-   int main() {
-      MU_RUN_SUITE(test_suite);
-      MU_REPORT();
-      return MU_EXIT_CODE;
-   }
-
-
 .. tabbed:: self_check
 
    .. tab:: Q1 
@@ -115,33 +26,41 @@ Run and test your code!
               .. activecode:: cp_5_AC_1q
                  :language: cpp
                  :practice: T
-                 :datafile: catch.hpp
 
                  double calculator (double first, double second, char operation) {
                      // Write your implementation here.
                  }
                  ====
-                 #define CATCH_CONFIG_MAIN
-                 #include <catch.hpp>
+                 #include <functional>
+                 #include <iomanip>
+                 #include <iostream>
+                 #include <string>
 
-                 TEST_CASE("calculator function: addition") {
-                     REQUIRE(calculator(3, 6, '+') == 9);
-                     REQUIRE(calculator(-2.6, 4, '+') == 1.4);
+                 template <class T, class Compare = std::equal_to<T>>
+                 void check (const std::string& name, const T& actual, 
+                             const T& expected, const Compare& op = Compare())
+                 {
+                   std::cout << std::left << std::setfill('.') 
+                             << std::setw(50) << name 
+                             << std::setw(7) <<  std::left;
+                   if(op(actual, expected)) {
+                     std::cout << " OK      \n";
+                     return;
+                   }
+                   std::cout << " FAILED\n";
+                   std::cout << "\treceived [" << actual
+                             << "], but expected [" << expected << "]\n";
+                   exit(1);
                  }
-
-                 TEST_CASE("calculator function: subtraction") {
-                     REQUIRE(calculator(19, 2, '-') == 17);
-                     REQUIRE(calculator(-2.3, 2, '-') == -4.3);
-                 }
-
-                 TEST_CASE("calculator function: multiplication") {
-                     REQUIRE(calculator(5, 8, '*') == 40);
-                     REQUIRE(calculator(0.5, -6, '*') == -3.0);
-                 }
-
-                 TEST_CASE("calculator function: division") {
-                     REQUIRE(calculator(16, 4, '/') == 4);
-                     REQUIRE(calculator(3, 8, '/') == 0.375);
+                 int main() {
+                   check("addition", calculator(3, 6, '+'),  9.);
+                   check("add negatives", calculator(-2.6, 4, '+'), 1.4);
+                   check("subtraction", calculator(19, 2, '-'), 17.0);
+                   check("subtract negatives", calculator(-2.3, 2, '-'), -4.3);
+                   check("multiplication", calculator(5, 8, '*'), 40.0);
+                   check("multiply negatives", calculator(0.5, -6, '*'), -3.0);
+                   check("division", calculator(16, 4, '/'), 4.0);
+                   check("divide result < 0", calculator(3, 8, '/'), 0.375);
                  }
 
           .. tab:: Answer
@@ -151,44 +70,53 @@ Run and test your code!
 
               .. activecode:: cp_5_AC_1a
                  :language: cpp
-                 :datafile: catch.hpp
                  :optional:
 
-                 double calculator (double first, double second, char operation) {
-                     if (operation == '+') {
-                         return first + second;
-                     }
-                     if (operation == '-') {
-                         return first - second;
-                     }
-                     if (operation == '*') {
-                         return first * second;
-                     }
-                     return first / second;
-                 }
-                 ====
-                 #define CATCH_CONFIG_MAIN
-                 #include <catch.hpp>
+                  double calculator (double first, double second, char operation) {
+                      if (operation == '+') {
+                          return first + second;
+                      }
+                      if (operation == '-') {
+                          return first - second;
+                      }
+                      if (operation == '*') {
+                          return first * second;
+                      }
+                      return first / second;
+                  }
 
-                 TEST_CASE("calculator function: addition") {
-                     REQUIRE(calculator(3, 6, '+') == 9);
-                     REQUIRE(calculator(-2.6, 4, '+') == 1.4);
-                 }
+                  ====
+                  #include <functional>
+                  #include <iomanip>
+                  #include <iostream>
+                  #include <string>
+                  template <class T, class Compare = std::equal_to<T>>
+                  void check (const std::string& name, const T& actual, 
+                              const T& expected, const Compare& op = Compare())
+                  {
+                    std::cout << std::left << std::setfill('.') 
+                              << std::setw(50) << name 
+                              << std::setw(7) <<  std::left;
+                     if(op(actual, expected)) {
+                      std::cout << " OK      \n";
+                      return;
+                    }
+                    std::cout << " FAILED\n";
+                    std::cout << "\treceived [" << actual
+                              << "], but expected [" << expected << "]\n";
+                    exit(1);
+                  }
+                  int main() {
+                    check("addition", calculator(3, 6, '+'),  9.);
+                    check("add negatives", calculator(-2.6, 4, '+'), 1.4);
+                    check("subtraction", calculator(19, 2, '-'), 17.0);
+                    check("subtract negatives", calculator(-2.3, 2, '-'), -4.3);
+                    check("multiplication", calculator(5, 8, '*'), 40.0);
+                    check("multiply negatives", calculator(0.5, -6, '*'), -3.0);
+                    check("division", calculator(16, 4, '/'), 4.0);
+                    check("divide result < 0", calculator(3, 8, '/'), 0.375);
+                  }
 
-                 TEST_CASE("calculator function: subtraction") {
-                     REQUIRE(calculator(19, 2, '-') == 17);
-                     REQUIRE(calculator(-2.3, 2, '-') == -4.3);
-                 }
-
-                 TEST_CASE("calculator function: multiplication") {
-                     REQUIRE(calculator(5, 8, '*') == 40);
-                     REQUIRE(calculator(0.5, -6, '*') == -3.0);
-                 }
-
-                 TEST_CASE("calculator function: division") {
-                     REQUIRE(calculator(16, 4, '/') == 4);
-                     REQUIRE(calculator(3, 8, '/') == 0.375);
-                 }
 
    .. tab:: Q2 
 
@@ -205,16 +133,37 @@ Run and test your code!
           int to_binary (int decimal) {
               // Write your implementation here.
           }
-          ====
-          #define CATCH_CONFIG_MAIN
-          #include <catch.hpp>
 
-          TEST_CASE("convertToBinary function") {
-              REQUIRE(to_binary (1) == 1);
-              REQUIRE(to_binary (5) == 101);
-              REQUIRE(to_binary (16) == 10000);
-              REQUIRE(to_binary (31) == 11111);
+          ====
+          #include <functional>
+          #include <iomanip>
+          #include <iostream>
+          #include <string>
+          template <class T, class Compare = std::equal_to<T>>
+          void check (const std::string& name, const T& actual, 
+                      const T& expected, const Compare& op = Compare())
+          {
+            std::cout << std::left << std::setfill('.') 
+                      << std::setw(50) << name 
+                      << std::setw(7) <<  std::left;
+             if(op(actual, expected)) {
+               std::cout << " OK      \n";
+               return;
+            }
+            std::cout << " FAILED\n";
+            std::cout << "\treceived [" << actual
+                      << "], but expected [" << expected << "]\n";
+            exit(1);
           }
+          int main() {
+            check("convert 1", to_binary(1), 1);
+            check("convert 5", to_binary(5), 101);
+            check("convert 16", to_binary(16), 10000);
+            check("convert 31", to_binary(31), 11111);
+          }
+
+
+
 
    .. tab:: Q3
 
@@ -226,9 +175,9 @@ Run and test your code!
               sides of the polygon. Each interior angle in an equilateral triangle
               measures 60 degree, each interior angle in a square measures 90 degrees,
               and in a regular pentagon, each interior angle measures 108 degrees.
-              Write the function ``calculateIntAngle``, which takes a ``numSides``
-              as a parameter and returns a ``double``. ``calculateIntAngle`` finds the 
-              interior angle of a regular polygon with ``numSides`` sides. The formula
+              Write the function ``interior_angle``, which takes a ``sides``
+              as a parameter and returns a ``double``. ``interior_angle`` finds the 
+              interior angle of a regular polygon with ``sides`` sides. The formula
               to find the interior angle of a regular ngon is (n - 2) x 180 / n.
               Run and test your code!
 
@@ -236,22 +185,39 @@ Run and test your code!
                  :language: cpp
                  :practice: T
 
-                 #include <iostream>
-                 using namespace std;
-
-                 double calculateIntAngle (int numSides) {
+                 double interior_angle (int sides) {
                      // Write your implementation here.
                  }
-                 ====
-                 #define CATCH_CONFIG_MAIN
-                 #include <catch.hpp>
 
-                 TEST_CASE("calculateIntAngle function") {
-                     REQUIRE(calculateIntAngle (3) == 60);
-                     REQUIRE(calculateIntAngle (4) == 90);
-                     REQUIRE(calculateIntAngle (5) == 108);
-                     REQUIRE(calculateIntAngle (8) == 135);
+                 ====
+                 #include <functional>
+                 #include <iomanip>
+                 #include <iostream>
+                 #include <string>
+                 template <class T, class Compare = std::equal_to<T>>
+                 void check (const std::string& name, const T& actual, 
+                             const T& expected, const Compare& op = Compare())
+                 {
+                   std::cout << std::left << std::setfill('.') 
+                             << std::setw(50) << name 
+                             << std::setw(7) <<  std::left;
+                    if(op(actual, expected)) {
+                      std::cout << " OK      \n";
+                      return;
+                   }
+                   std::cout << " FAILED\n";
+                   std::cout << "\treceived [" << actual
+                             << "], but expected [" << expected << "]\n";
+                   exit(1);
                  }
+                 int main() {
+                   check("3 sides", interior_angle(1), 60);
+                   check("4 sides", interior_angle(5), 90);
+                   check("5 sides", interior_angle(16), 108);
+                   check("8 sides", interior_angle(31), 135);
+                 }
+
+
 
 
           .. tab:: Answer
@@ -264,19 +230,37 @@ Run and test your code!
                  :language: cpp
                  :optional:
 
-                 double calculateIntAngle (int numSides) {
-                     return (numSides - 2) * 180.0 / numSides;
+                 double interior_angle (int sides) {
+                     return (sides - 2) * 180.0 / sides;
                  }
                  ====
-                 #define CATCH_CONFIG_MAIN
-                 #include <catch.hpp>
-
-                 TEST_CASE("calculateIntAngle function") {
-                     REQUIRE(calculateIntAngle (3) == 60);
-                     REQUIRE(calculateIntAngle (4) == 90);
-                     REQUIRE(calculateIntAngle (5) == 108);
-                     REQUIRE(calculateIntAngle (8) == 135);
+                 #include <functional>
+                 #include <iomanip>
+                 #include <iostream>
+                 #include <string>
+                 template <class T, class Compare = std::equal_to<T>>
+                 void check (const std::string& name, const T& actual, 
+                             const T& expected, const Compare& op = Compare())
+                 {
+                   std::cout << std::left << std::setfill('.') 
+                             << std::setw(50) << name 
+                             << std::setw(7) <<  std::left;
+                    if(op(actual, expected)) {
+                      std::cout << " OK      \n";
+                      return;
+                   }
+                   std::cout << " FAILED\n";
+                   std::cout << "\treceived [" << actual
+                             << "], but expected [" << expected << "]\n";
+                   exit(1);
                  }
+                 int main() {
+                   check("3 sides", interior_angle(1), 60);
+                   check("4 sides", interior_angle(5), 90);
+                   check("5 sides", interior_angle(16), 108);
+                   check("8 sides", interior_angle(31), 135);
+                 }
+
 
    .. tab:: Q4
 
@@ -284,46 +268,61 @@ Run and test your code!
           :language: cpp
           :practice: T
 
-          The astronomical start and end dates of the four seasons are based on the position of
-          the Earth relative to the Sun. As a result, it changes every year and can be difficult to
-          remember. However, the meteorological start and end dates are based on the Gregorian calendar
-          and is easier to remember. Spring starts on March 1, summer starts on June 1, fall starts on 
-          September 1, and winter starts on December 1. Write a function called ``birthSeason``, which takes
-          two parameters, ``month`` and ``day``. ``birthSeason`` calculates which season
-          the birthday falls in according to the meteorological start and returns a ``string`` with the correct season.
-          For example, ``birthSeason (7, 5)`` returns "summer" since July 5 is in the summer.
+          The astronomical start and end dates of the four seasons are based on
+          the position of the Earth relative to the Sun. As a result, it
+          changes every year and can be difficult to remember. However, the
+          meteorological start and end dates are based on the Gregorian
+          calendar and is easier to remember. Spring starts on March 1, summer
+          starts on June 1, fall starts on September 1, and winter starts on
+          December 1. Write a function called ``birthSeason``, which takes two
+          parameters, ``month`` and ``day``. ``birthSeason`` calculates which
+          season the birthday falls in according to the meteorological start
+          and returns a ``string`` with the correct season.  For example,
+          ``birthSeason (7, 5)`` returns "summer" since July 5 is in the
+          summer. 
+          
           Run and test your code!
           ~~~~
           string birthSeason (int month, int day) {
               // Write your implementation here.
           }
+
           ====
-          #define CATCH_CONFIG_MAIN
-          #include <catch.hpp>
-
-          TEST_CASE("birthSeason function: spring") {
-              REQUIRE(birthSeason (5, 3) == "spring");
-              REQUIRE(birthSeason (3, 1) == "spring");
-              REQUIRE(birthSeason (5, 31) == "spring");
+          #include <functional>
+          #include <iomanip>
+          #include <iostream>
+          #include <string>
+          template <class T, class Compare = std::equal_to<T>>
+          void check (const std::string& name, const T& actual, 
+                      const std::string& expected, const Compare& op = Compare())
+          {
+            std::cout << std::left << std::setfill('.') 
+                      << std::setw(50) << name 
+                      << std::setw(7) <<  std::left;
+             if(op(actual, expected)) {
+               std::cout << " OK      \n";
+               return;
+            }
+            std::cout << " FAILED\n";
+            std::cout << "\treceived [" << actual
+                      << "], but expected [" << expected << "]\n";
+            exit(1);
+          }
+          int main() {
+            check("May 3rd",   birthSeason(5, 3), "spring");
+            check("March 1st", birthSeason(3, 1), "spring");
+            check("May 31st",  birthSeason(5, 31), "spring");
+            check("July 5th",   birthSeason(7, 5), "summer");
+            check("June 1st", birthSeason(6, 1), "summer");
+            check("August 31st",  birthSeason(8, 31), "summer");
+            check("November 24th",   birthSeason(11, 24), "fall");
+            check("September 1st", birthSeason(9, 1), "fall");
+            check("November 30th",  birthSeason(11, 30), "fall");
+            check("February 20th",   birthSeason(2, 20), "winter");
+            check("December 1st", birthSeason(12, 1), "winter");
+            check("February 28th",  birthSeason(2, 28), "winter");
           }
 
-          TEST_CASE("birthSeason function: summer") {
-              REQUIRE(birthSeason (7, 5) == "summer");
-              REQUIRE(birthSeason (6, 1) == "summer");
-              REQUIRE(birthSeason (8, 31) == "summer");
-          }
-
-          TEST_CASE("birthSeason function: fall") {
-              REQUIRE(birthSeason (11, 24) == "fall");
-              REQUIRE(birthSeason (9, 1) == "fall");
-              REQUIRE(birthSeason (11, 30) == "fall");
-          }
-
-          TEST_CASE("birthSeason function: winter") {
-              REQUIRE(birthSeason (2, 20) == "winter");
-              REQUIRE(birthSeason (12, 1) == "winter");
-              REQUIRE(birthSeason (2, 28) == "winter");
-          }
 
    .. tab:: Q5
 
@@ -347,18 +346,39 @@ Run and test your code!
                  int dogToHumanYears (int dogAge) {
                      // Write your implementation here.
                  }
+
                  ====
-                 #define CATCH_CONFIG_MAIN
-                 #include <catch.hpp>
-
-                 TEST_CASE("dogToHumanYears function for 1 and under") {
-                     REQUIRE(dogToHumanYears (1) == 15);
+                 #include <functional>
+                 #include <iomanip>
+                 #include <iostream>
+                 #include <string>
+                 template <class T, class Compare = std::equal_to<T>>
+                 void check (const std::string& name, 
+                             const T& actual, 
+                             const T& expected,
+                             const Compare& op = Compare())
+                 {
+                   std::cout << std::left << std::setfill('.') 
+                             << std::setw(50) << name 
+                             << std::setw(7) <<  std::left;
+                    if(op(actual, expected)) {
+                      std::cout << " OK      \n";
+                      return;
+                   }
+                   std::cout << " FAILED\n";
+                   std::cout << "\treceived [" << actual
+                             << "], but expected [" << expected << "]\n";
+                   exit(1);
                  }
-
-                 TEST_CASE("dogToHumanYears function for >1") {
-                     REQUIRE(dogToHumanYears (2) == 24);
-                     REQUIRE(dogToHumanYears (3) == 28);
-                     REQUIRE(dogToHumanYears (5) == 36);
+                 int main() {
+                   check("age == 1", dogToHumanYears(1), 15);
+                   check("age == 2", dogToHumanYears(2), 24);
+                   check("age == 3", dogToHumanYears(3), 28);
+                   check("age == 5", dogToHumanYears(5), 36);
+                   std::cout << "Simple error handling\n";
+                   check("age == 0", dogToHumanYears(0), 0);
+                   check("age == -1", dogToHumanYears(-1), 0);
+                   check("age == -99", dogToHumanYears(-99), 0);
                  }
 
 
@@ -367,30 +387,56 @@ Run and test your code!
               Below is one way to implement the program. We can use a conditional to 
               check to see if the dog is one year old. If it is older than one, then 
               we can use the formula to return the correct age in human years.
+              We also don't try to convert negative dog years.
 
               .. activecode:: cp_5_AC_5a
                  :language: cpp
                  :optional:
 
                  int dogToHumanYears (int dogAge) {
+                     if (dogAge < 1) {
+                         return 0;
+                     }
                      if (dogAge == 1) {
                          return 15;
                      }
                      return 24 + (dogAge - 2) * 4;
                  }
+
                  ====
-                 #define CATCH_CONFIG_MAIN
-                 #include <catch.hpp>
-
-                 TEST_CASE("dogToHumanYears function for 1 and under") {
-                     REQUIRE(dogToHumanYears (1) == 15);
+                 #include <functional>
+                 #include <iomanip>
+                 #include <iostream>
+                 #include <string>
+                 template <class T, class Compare = std::equal_to<T>>
+                 void check (const std::string& name, 
+                             const T& actual, 
+                             const T& expected,
+                             const Compare& op = Compare())
+                 {
+                   std::cout << std::left << std::setfill('.') 
+                             << std::setw(50) << name 
+                             << std::setw(7) <<  std::left;
+                    if(op(actual, expected)) {
+                      std::cout << " OK      \n";
+                      return;
+                   }
+                   std::cout << " FAILED\n";
+                   std::cout << "\treceived [" << actual
+                             << "], but expected [" << expected << "]\n";
+                   exit(1);
+                 }
+                 int main() {
+                   check("age == 1", dogToHumanYears(1), 15);
+                   check("age == 2", dogToHumanYears(2), 24);
+                   check("age == 3", dogToHumanYears(3), 28);
+                   check("age == 5", dogToHumanYears(5), 36);
+                   std::cout << "Simple error handling\n";
+                   check("age == 0", dogToHumanYears(0), 0);
+                   check("age == -1", dogToHumanYears(-1), 0);
+                   check("age == -99", dogToHumanYears(-99), 0);
                  }
 
-                 TEST_CASE("dogToHumanYears function for >1") {
-                     REQUIRE(dogToHumanYears (2) == 24);
-                     REQUIRE(dogToHumanYears (3) == 28);
-                     REQUIRE(dogToHumanYears (5) == 36);
-                 }
 
    .. tab:: Q6
 
@@ -407,19 +453,37 @@ Run and test your code!
           bool isCommonFactor (int num1, int num2, int factor) {
               // Write your implementation here.
           }
+
           ====
-          #define CATCH_CONFIG_MAIN
-          #include <catch.hpp>
-
-          TEST_CASE("isCommonFactor function: true cases") {
-              REQUIRE(isCommonFactor (24, 8, 4) == 1); 
-              REQUIRE(isCommonFactor (75, 20, 5) == 1);
+          #include <functional>
+          #include <iomanip>
+          #include <iostream>
+          #include <string>
+          template <class T, class Compare = std::equal_to<T>>
+          void check (const std::string& name, 
+                      const T& actual, 
+                      const T& expected,
+                      const Compare& op = Compare())
+          {
+            std::cout << std::left << std::setfill('.') 
+                      << std::setw(50) << name 
+                      << std::setw(7) <<  std::left;
+             if(op(actual, expected)) {
+               std::cout << " OK      \n";
+               return;
+            }
+            std::cout << " FAILED\n";
+            std::cout << "\treceived [" << std::boolalpha << actual
+                      << "], but expected [" << expected << "]\n";
+            exit(1);
+          }
+          int main() {
+            check("4 is a factor of 24 and 8", isCommonFactor(24,8,4), true);
+            check("5 is a factor of 75 and 20", isCommonFactor(75,20,5), true);
+            check("11 is not a factor of 132 and 42", isCommonFactor(132,42,11), false);
+            check("3 is not a factor of 74 and 24", isCommonFactor(74,24,3), false);
           }
 
-          TEST_CASE("isCommonFactor function: false cases") {
-              REQUIRE(isCommonFactor (132, 42, 11) == 0); 
-              REQUIRE(isCommonFactor (74, 23, 3) == 0);
-          }
 
    .. tab:: Q7
 
@@ -441,27 +505,41 @@ Run and test your code!
                      // Write your implementation here.
                  }
                  ====
-                 #define CATCH_CONFIG_MAIN
-                 #include <catch.hpp>
-
-                 TEST_CASE("isLeapYear not divisible by 4") {
-                     REQUIRE(isLeapYear (2001) == 0);
-                     REQUIRE(isLeapYear (2005) == 0);
+                 #include <functional>
+                 #include <iomanip>
+                 #include <iostream>
+                 #include <string>
+                 template <class T, class Compare = std::equal_to<T>>
+                 void check (const std::string& name, 
+                             const T& actual, 
+                             const T& expected,
+                             std::string help,
+                             const Compare& op = Compare())
+                 {
+                   std::cout << std::left << std::setfill('.') 
+                             << std::setw(50) << name 
+                             << std::setw(7) <<  std::left;
+                    if(op(actual, expected)) {
+                      std::cout << " OK      \n";
+                      return;
+                   }
+                   std::cout << " FAILED\n";
+                   std::cout << "\treceived [" << std::boolalpha << actual
+                             << "], but expected [" << expected << "]\n";
+                   std::cout << '\t' << help << '\n';
+                   exit(1);
                  }
-
-                 TEST_CASE("isLeapYear divisible by 4") {
-                     REQUIRE(isLeapYear (2004) == 1);
-                     REQUIRE(isLeapYear (2008) == 1);
-                 }
-
-                 TEST_CASE("isLeapYear divisible by 100") {
-                     REQUIRE(isLeapYear (2100) == 0);
-                     REQUIRE(isLeapYear (1900) == 0);
-                 }
-
-                 TEST_CASE("isLeapYear divisible by 400") {
-                     REQUIRE(isLeapYear (2000) == 1);
-                     REQUIRE(isLeapYear (2400) == 1);
+                 int main() {
+                   check("is 2001?", isLeapYear(2001), false, "year is not divisible by 4");
+                   check("is 2005?", isLeapYear(2005), false, "year is not divisible by 4");
+                   check("is 1730?", isLeapYear(1730), false, "year is not divisible by 4");
+                   check("is 2004?", isLeapYear(2004), true, "year is divisible by 4");
+                   check("is 2020?", isLeapYear(2020), true, "year is divisible by 4");
+                   check("is 1776?", isLeapYear(1776), true, "year is divisible by 4");
+                   check("is 1900?", isLeapYear(1900), false, "year is divisible by 100");
+                   check("is 2100?", isLeapYear(2100), false, "year is divisible by 100");
+                   check("is 2000?", isLeapYear(2000), true, "year is divisible by 400");
+                   check("is 2400?", isLeapYear(2400), true, "year is divisible by 400");
                  }
 
 
@@ -487,28 +565,44 @@ Run and test your code!
                      return false;
                  }
                  ====
-                 #define CATCH_CONFIG_MAIN
-                 #include <catch.hpp>
 
-                 TEST_CASE("isLeapYear not divisible by 4") {
-                     REQUIRE(isLeapYear (2001) == 0);
-                     REQUIRE(isLeapYear (2005) == 0);
+                 #include <functional>
+                 #include <iomanip>
+                 #include <iostream>
+                 #include <string>
+                 template <class T, class Compare = std::equal_to<T>>
+                 void check (const std::string& name, 
+                             const T& actual, 
+                             const T& expected,
+                             const std::string& help,
+                             const Compare& op = Compare())
+                 {
+                   std::cout << std::left << std::setfill('.') 
+                             << std::setw(50) << name 
+                             << std::setw(7) <<  std::left;
+                    if(op(actual, expected)) {
+                      std::cout << " OK      \n";
+                      return;
+                   }
+                   std::cout << " FAILED\n";
+                   std::cout << "\treceived [" << std::boolalpha << actual
+                             << "], but expected [" << expected << "]\n";
+                   std::cout << '\t' << help << '\n';
+                   exit(1);
+                 }
+                 int main() {
+                   check("is 2001?", isLeapYear(2001), false, "year is not divisible by 4");
+                   check("is 2005?", isLeapYear(2005), false, "year is not divisible by 4");
+                   check("is 1730?", isLeapYear(1730), false, "year is not divisible by 4");
+                   check("is 2004?", isLeapYear(2004), true, "year is divisible by 4");
+                   check("is 2020?", isLeapYear(2020), true, "year is divisible by 4");
+                   check("is 1776?", isLeapYear(1776), true, "year is divisible by 4");
+                   check("is 1900?", isLeapYear(1900), false, "year is divisible by 100");
+                   check("is 2100?", isLeapYear(2100), false, "year is divisible by 100");
+                   check("is 2000?", isLeapYear(2000), true, "year is divisible by 400");
+                   check("is 2400?", isLeapYear(2400), true, "year is divisible by 400");
                  }
 
-                 TEST_CASE("isLeapYear divisible by 4") {
-                     REQUIRE(isLeapYear (2004) == 1);
-                     REQUIRE(isLeapYear (2008) == 1);
-                 }
-
-                 TEST_CASE("isLeapYear divisible by 100") {
-                     REQUIRE(isLeapYear (2100) == 0);
-                     REQUIRE(isLeapYear (1900) == 0);
-                 }
-
-                 TEST_CASE("isLeapYear divisible by 400") {
-                     REQUIRE(isLeapYear (2000) == 1);
-                     REQUIRE(isLeapYear (2400) == 1);
-                 }
 
    .. tab:: Q8
 
@@ -523,26 +617,53 @@ Run and test your code!
           ``int numSpots``, and ``bool isRed`` as parameters. If a mushroom is large
           ('L') and has fewer than 3 spots, it is poisonous. If a mushroom is small ('S')
           and is red, it is poisonous. If a mushroom has fewer than 3 spots or is not red,
-          it is poisonous. Otherwise, it is not. ``isPoisonous`` should return ``true`` if 
+          it is poisonous. Otherwise, it is not. ``poisonous`` should return ``true`` if 
           the mushroom is poisonous and ``false`` otherwise. Run and test your code!
           ~~~~
           bool poisonous (char size, int numSpots, bool isRed) {
               // Write your implementation here.
           }
+
           ====
-          #define CATCH_CONFIG_MAIN
-          #include <catch.hpp>
-
-          TEST_CASE("poisonous function: true cases") {
-              REQUIRE(poisonous ('S', 10, 0) == 1); 
-              REQUIRE(poisonous ('S', 10, 0) == 1);
-              REQUIRE(poisonous ('L', 1, 1) == 1);
+          #include <functional>
+          #include <iomanip>
+          #include <iostream>
+          #include <string>
+          template <class T, class Compare = std::equal_to<T>>
+          void check (const std::string& name, 
+                      const T& actual, 
+                      const T& expected,
+                      const std::string& help,
+                      const Compare& op = Compare())
+          {
+            std::cout << std::left << std::setfill('.') 
+                      << std::setw(50) << name 
+                      << std::setw(7) <<  std::left;
+             if(op(actual, expected)) {
+               std::cout << " OK      \n";
+               return;
+            }
+            std::cout << " FAILED\n";
+            std::cout << "\treceived [" << std::boolalpha << actual
+                      << "], but expected [" << expected << "]\n";
+            std::cout << '\t' << help << '\n';
+            exit(1);
+          }
+          int main() {
+            check("small and red", poisonous('S', 10, true), true,
+               "a small and red mushroom is poisonous");
+            check("large, 1, red", poisonous('L', 1, true), true,
+               "large and has fewer than 3 spots");
+            check("large, 2, not red", poisonous('L', 2, false), true,
+               "large and has fewer than 3 spots");
+            check("large, 3, not red", poisonous('L', 3, false), true,
+               "large and has fewer than 3 spots");
+            check("small and not red", poisonous('S', 10, false), false,
+               "small, not red, and has more than 3 spots");
+            check("large, 4, red", poisonous('L', 4, true), false,"");
+            check("large, 9, red", poisonous('L', 9, true), false,"");
           }
 
-          TEST_CASE("poisonous function: false cases") {
-              REQUIRE(poisonous ('L', 4, 1) == 0); 
-              REQUIRE(poisonous ('L', 9, 1) == 0);
-          }
 
    .. tab:: Q9
 
@@ -566,14 +687,34 @@ Run and test your code!
                      // Write your implementation here.
                  }
                  ====
-                 #define CATCH_CONFIG_MAIN
-                 #include <catch.hpp>
 
-                 TEST_CASE("triangularNum function") {
-                     REQUIRE(triangularNum (1) == 1); 
-                     REQUIRE(triangularNum (3) == 6); 
-                     REQUIRE(triangularNum (6) == 21); 
-                     REQUIRE(triangularNum (17) == 153); 
+                 #include <functional>
+                 #include <iomanip>
+                 #include <iostream>
+                 #include <string>
+                 template <class T, class Compare = std::equal_to<T>>
+                 void check (const std::string& name, 
+                             const T& actual, 
+                             const T& expected,
+                             const Compare& op = Compare())
+                 {
+                   std::cout << std::left << std::setfill('.') 
+                             << std::setw(50) << name 
+                             << std::setw(7) <<  std::left;
+                    if(op(actual, expected)) {
+                      std::cout << " OK      \n";
+                      return;
+                   }
+                   std::cout << " FAILED\n";
+                   std::cout << "\treceived [" << actual
+                             << "], but expected [" << expected << "]\n";
+                   exit(1);
+                 }
+                 int main() {
+                   check("num == 1", triangularNum(1), 1);
+                   check("num == 3", triangularNum(3), 6);
+                   check("num == 6", triangularNum(6), 21);
+                   check("num == 17", triangularNum(17), 153);
                  }
 
 
@@ -595,15 +736,37 @@ Run and test your code!
                      return n + triangularNum(n - 1);
                  }
                  ====
-                 #define CATCH_CONFIG_MAIN
-                 #include <catch.hpp>
 
-                 TEST_CASE("triangularNum function") {
-                     REQUIRE(triangularNum (1) == 1); 
-                     REQUIRE(triangularNum (3) == 6); 
-                     REQUIRE(triangularNum (6) == 21); 
-                     REQUIRE(triangularNum (17) == 153); 
+                 #include <functional>
+                 #include <iomanip>
+                 #include <iostream>
+                 #include <string>
+                 template <class T, class Compare = std::equal_to<T>>
+                 void check (const std::string& name, 
+                             const T& actual, 
+                             const T& expected,
+                             const Compare& op = Compare())
+                 {
+                   std::cout << std::left << std::setfill('.') 
+                             << std::setw(50) << name 
+                             << std::setw(7) <<  std::left;
+                    if(op(actual, expected)) {
+                      std::cout << " OK      \n";
+                      return;
+                   }
+                   std::cout << " FAILED\n";
+                   std::cout << "\treceived [" << actual
+                             << "], but expected [" << expected << "]\n";
+                   exit(1);
                  }
+                 int main() {
+                   check("num == 1", triangularNum(1), 1);
+                   check("num == 3", triangularNum(3), 6);
+                   check("num == 6", triangularNum(6), 21);
+                   check("num == 17", triangularNum(17), 153);
+                 }
+
+
 
    .. tab:: Q10
 
@@ -619,12 +782,38 @@ Run and test your code!
               // Write your implementation here.
           }
           ====
-          #define CATCH_CONFIG_MAIN
-          #include <catch.hpp>
-
-          TEST_CASE("digit_sum function") {
-              REQUIRE(digit_sum (123) == 6); 
-              REQUIRE(digit_sum (8739) == 27); 
-              REQUIRE(digit_sum (440) == 8); 
-              REQUIRE(digit_sum (2) == 2); 
+          #include <functional>
+          #include <iomanip>
+          #include <iostream>
+          #include <string>
+          template <class T, class Compare = std::equal_to<T>>
+          void check (const std::string& name, 
+                      const T& actual, 
+                      const T& expected,
+                      const Compare& op = Compare())
+          {
+            std::cout << std::left << std::setfill('.') 
+                      << std::setw(50) << name 
+                      << std::setw(7) <<  std::left;
+             if(op(actual, expected)) {
+               std::cout << " OK      \n";
+               return;
+            }
+            std::cout << " FAILED\n";
+            std::cout << "\treceived [" << actual
+                      << "], but expected [" << expected << "]\n";
+            exit(1);
           }
+          int main() {
+            check("num == 1", digit_sum(1), 1);
+            check("num == 12", digit_sum(12), 3);
+            check("num == 123", digit_sum(123), 6);
+            check("num == 1243", digit_sum(1243), 10);
+            check("num == 8739", digit_sum(8739), 27);
+            check("num == 202", digit_sum(202), 4);
+            check("num == 440", digit_sum(440), 8);
+            check("num == 4050", digit_sum(4050), 9);
+            check("num == 40005000", digit_sum(40005000), 9);
+            check("num == 0", digit_sum(0), 0);
+          }
+
