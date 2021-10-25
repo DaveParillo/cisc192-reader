@@ -57,6 +57,7 @@
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6.2. Iteration" href="iteration.html" />
     <link rel="prev" title="6. Iteration" href="index.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -193,8 +194,12 @@
     </a>
   </li>
   
-    <li class="divider-vertical"></li>
-  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">6.2. </span>Iteration' data-toggle="tooltip" >              
+    <a href="iteration.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
 
 <script type="text/javascript">
   opts = {'placement':'bottom',
@@ -290,14 +295,17 @@ int main () {
 the value of <code class="docutils literal notranslate"><span class="pre">fred</span></code> is just 7 when it is printed.</p>
 <p id="index-0">This kind of <strong>multiple assignment</strong> is the reason I described variables
 as a <em>container</em> for values. When you assign a value to a variable, you
-change the contents of the container, as shown in the codelens:</p>
+change the contents of the existing storage location,
+as shown in the codelens below.
+Step through the code one line at a time and notice how the value
+assigned to fred changes even when no output is created.</p>
 
 <div class="runestone" style="max-width: none;">
     <div class="alert alert-warning cd_section" data-question_label="6.1.3">
         <div class="pytutorVisualizer" id="multiple_assignment_CL"
            data-params='{"embeddedMode": true, "lang": "cpp", "jumpToEnd": false}'>
         </div>
-        <p class="runestone_caption"><span class="runestone_caption_text">Activity: CodeLens Reassigning a value to fred (multiple_assignment_CL)</span> </p>
+        <p class="runestone_caption"><span class="runestone_caption_text">Activity: CodeLens Reassigning values to fred (multiple_assignment_CL)</span> </p>
     </div>
 
 <script type="text/javascript">
@@ -307,7 +315,7 @@ if (allTraceData === undefined) {
    var allTraceData = {};
 }
 
-allTraceData["multiple_assignment_CL"] = {"code": "#include <iostream>\n\nint main () {\n    int fred = 5;\n    fred = 7;\n    std::cout << fred;\n    return 0;\n}", "trace": [{"event": "step_line", "func_name": "main", "globals": {}, "heap": {}, "line": 4, "ordered_globals": [], "stack_to_render": [{"encoded_locals": {"fred": ["C_DATA", "0xFFF000BDC", "int", "<UNINITIALIZED>"]}, "frame_id": "0xFFF000BE0", "func_name": "main", "is_highlighted": true, "is_parent": false, "is_zombie": false, "line": 4, "ordered_varnames": ["fred"], "parent_frame_id_list": [], "unique_hash": "main_0xFFF000BE0"}], "stdout": ""}, {"event": "step_line", "func_name": "main", "globals": {}, "heap": {}, "line": 5, "ordered_globals": [], "stack_to_render": [{"encoded_locals": {"fred": ["C_DATA", "0xFFF000BDC", "int", 5]}, "frame_id": "0xFFF000BE0", "func_name": "main", "is_highlighted": true, "is_parent": false, "is_zombie": false, "line": 5, "ordered_varnames": ["fred"], "parent_frame_id_list": [], "unique_hash": "main_0xFFF000BE0"}], "stdout": ""}, {"event": "step_line", "func_name": "main", "globals": {}, "heap": {}, "line": 6, "ordered_globals": [], "stack_to_render": [{"encoded_locals": {"fred": ["C_DATA", "0xFFF000BDC", "int", 7]}, "frame_id": "0xFFF000BE0", "func_name": "main", "is_highlighted": true, "is_parent": false, "is_zombie": false, "line": 6, "ordered_varnames": ["fred"], "parent_frame_id_list": [], "unique_hash": "main_0xFFF000BE0"}], "stdout": ""}, {"event": "step_line", "func_name": "main", "globals": {}, "heap": {}, "line": 7, "ordered_globals": [], "stack_to_render": [{"encoded_locals": {"fred": ["C_DATA", "0xFFF000BDC", "int", 7]}, "frame_id": "0xFFF000BE0", "func_name": "main", "is_highlighted": true, "is_parent": false, "is_zombie": false, "line": 7, "ordered_varnames": ["fred"], "parent_frame_id_list": [], "unique_hash": "main_0xFFF000BE0"}], "stdout": "7"}, {"event": "return", "func_name": "main", "globals": {}, "heap": {}, "line": 8, "ordered_globals": [], "stack_to_render": [{"encoded_locals": {}, "frame_id": "0xFFF000BE0", "func_name": "main", "is_highlighted": true, "is_parent": false, "is_zombie": false, "line": 8, "ordered_varnames": [], "parent_frame_id_list": [], "unique_hash": "main_0xFFF000BE0"}], "stdout": "7"}]}
+allTraceData["multiple_assignment_CL"] = {"code": "#include <iostream>\n\nint main () {\n    int fred = 5;\n    std::cout << fred << '\\n';\n    fred = 8;\n    fred = 13;\n    fred = 21;\n    fred = 34;\n    std::cout << fred << '\\n';\n    return 0;\n}", "trace": [{"event": "step_line", "func_name": "main", "globals": {}, "heap": {}, "line": 4, "ordered_globals": [], "stack_to_render": [{"encoded_locals": {"fred": ["C_DATA", "0xFFF000BDC", "int", "<UNINITIALIZED>"]}, "frame_id": "0xFFF000BE0", "func_name": "main", "is_highlighted": true, "is_parent": false, "is_zombie": false, "line": 4, "ordered_varnames": ["fred"], "parent_frame_id_list": [], "unique_hash": "main_0xFFF000BE0"}], "stdout": ""}, {"event": "step_line", "func_name": "main", "globals": {}, "heap": {}, "line": 5, "ordered_globals": [], "stack_to_render": [{"encoded_locals": {"fred": ["C_DATA", "0xFFF000BDC", "int", 5]}, "frame_id": "0xFFF000BE0", "func_name": "main", "is_highlighted": true, "is_parent": false, "is_zombie": false, "line": 5, "ordered_varnames": ["fred"], "parent_frame_id_list": [], "unique_hash": "main_0xFFF000BE0"}], "stdout": ""}, {"event": "step_line", "func_name": "main", "globals": {}, "heap": {}, "line": 6, "ordered_globals": [], "stack_to_render": [{"encoded_locals": {"fred": ["C_DATA", "0xFFF000BDC", "int", 5]}, "frame_id": "0xFFF000BE0", "func_name": "main", "is_highlighted": true, "is_parent": false, "is_zombie": false, "line": 6, "ordered_varnames": ["fred"], "parent_frame_id_list": [], "unique_hash": "main_0xFFF000BE0"}], "stdout": "5\n"}, {"event": "step_line", "func_name": "main", "globals": {}, "heap": {}, "line": 7, "ordered_globals": [], "stack_to_render": [{"encoded_locals": {"fred": ["C_DATA", "0xFFF000BDC", "int", 8]}, "frame_id": "0xFFF000BE0", "func_name": "main", "is_highlighted": true, "is_parent": false, "is_zombie": false, "line": 7, "ordered_varnames": ["fred"], "parent_frame_id_list": [], "unique_hash": "main_0xFFF000BE0"}], "stdout": "5\n"}, {"event": "step_line", "func_name": "main", "globals": {}, "heap": {}, "line": 8, "ordered_globals": [], "stack_to_render": [{"encoded_locals": {"fred": ["C_DATA", "0xFFF000BDC", "int", 13]}, "frame_id": "0xFFF000BE0", "func_name": "main", "is_highlighted": true, "is_parent": false, "is_zombie": false, "line": 8, "ordered_varnames": ["fred"], "parent_frame_id_list": [], "unique_hash": "main_0xFFF000BE0"}], "stdout": "5\n"}, {"event": "step_line", "func_name": "main", "globals": {}, "heap": {}, "line": 9, "ordered_globals": [], "stack_to_render": [{"encoded_locals": {"fred": ["C_DATA", "0xFFF000BDC", "int", 21]}, "frame_id": "0xFFF000BE0", "func_name": "main", "is_highlighted": true, "is_parent": false, "is_zombie": false, "line": 9, "ordered_varnames": ["fred"], "parent_frame_id_list": [], "unique_hash": "main_0xFFF000BE0"}], "stdout": "5\n"}, {"event": "step_line", "func_name": "main", "globals": {}, "heap": {}, "line": 10, "ordered_globals": [], "stack_to_render": [{"encoded_locals": {"fred": ["C_DATA", "0xFFF000BDC", "int", 34]}, "frame_id": "0xFFF000BE0", "func_name": "main", "is_highlighted": true, "is_parent": false, "is_zombie": false, "line": 10, "ordered_varnames": ["fred"], "parent_frame_id_list": [], "unique_hash": "main_0xFFF000BE0"}], "stdout": "5\n"}, {"event": "step_line", "func_name": "main", "globals": {}, "heap": {}, "line": 11, "ordered_globals": [], "stack_to_render": [{"encoded_locals": {"fred": ["C_DATA", "0xFFF000BDC", "int", 34]}, "frame_id": "0xFFF000BE0", "func_name": "main", "is_highlighted": true, "is_parent": false, "is_zombie": false, "line": 11, "ordered_varnames": ["fred"], "parent_frame_id_list": [], "unique_hash": "main_0xFFF000BE0"}], "stdout": "5\n34\n"}, {"event": "return", "func_name": "main", "globals": {}, "heap": {}, "line": 12, "ordered_globals": [], "stack_to_render": [{"encoded_locals": {}, "frame_id": "0xFFF000BE0", "func_name": "main", "is_highlighted": true, "is_parent": false, "is_zombie": false, "line": 12, "ordered_varnames": [], "parent_frame_id_list": [], "unique_hash": "main_0xFFF000BE0"}], "stdout": "5\n34\n"}]}
 
 ;
 </script>
@@ -323,6 +331,7 @@ equality. It is not!</p>
 assigns the value of 3 to the variable <code class="docutils literal notranslate"><span class="pre">x</span></code>. On the other hand, an equality
 statement uses two <code class="docutils literal notranslate"><span class="pre">=</span></code> symbols. For example, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">3</span></code> is a boolean that evaluates
 to true if <code class="docutils literal notranslate"><span class="pre">x</span></code> is equal to 3 and evaluates to false otherwise.</p>
+<p>This is a common source of error.</p>
 </div>
 <p>First of all, equality is commutative, and assignment is not. For
 example, in mathematics if <span class="math notranslate nohighlight">\(a = 7\)</span> then <span class="math notranslate nohighlight">\(7 = a\)</span>. But in C++
@@ -344,6 +353,7 @@ languages an alternate symbol is used for assignment, such as <code class="docut
 with caution. If the values of variables are changing constantly in
 different parts of the program, it can make the code difficult to read
 and debug.</p>
+<div id='self_check' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Q1" >
 
 <div class="runestone">
 <ul data-component="dragndrop" data-question_label="6.1.4" id="multiple_assignment_1"  style="visibility: hidden;">
@@ -361,18 +371,18 @@ and debug.</p>
 
     <li data-component="draggable" id="multiple_assignment_1_drag4">a=4</li>
     <li data-component="dropzone" for="multiple_assignment_1_drag4">Setting the value of a to 4</li>
-</ul></div>
+</ul></div></div><div data-component="tab" data-tabname="Q2" >
+
             <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-question_label="6.1.5" data-multipleanswers="false"  id="multiple_assignment_2"  style="visibility: hidden;">
             <p>Q-5: What will print?</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span> <span class="p">{</span>
   <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;!&quot;</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;!&quot;</span><span class="p">;</span>
   <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;!&quot;</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;!&quot;</span><span class="p">;</span>
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
@@ -389,12 +399,13 @@ and debug.</p>
 
             </ul>
             </div>
-            
+            </div><div data-component="tab" data-tabname="Q3" >
+
             <div class="runestone alert alert-warning">
             <ul data-component="multiplechoice" data-question_label="6.1.6" data-multipleanswers="false"  id="multiple_assignment_3"  style="visibility: hidden;">
             <p>Q-6: What is the correct output?</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="p">;</span>
 
 <span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span> <span class="p">{</span>
   <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
@@ -419,6 +430,9 @@ and debug.</p>
             </ul>
             </div>
             </div>
+    </div>
+
+</div>
 
 
   <div id=scprogresscontainer>
@@ -437,6 +451,15 @@ and debug.</p>
 </ul>
 
   
+<ul>
+  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - 6.2. Iteration' data-toggle="tooltip" >
+    <a href="iteration.html" aria-label="6.2. Iteration">
+      <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+          <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+      </div>
+    </a>
+  </li>
+</ul>
 
 <script type="text/javascript">
 

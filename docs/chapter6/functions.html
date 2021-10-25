@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>6. Iteration &#8212; CISC 192 Course Reader Overview</title>
+    <title>6.7. Functions &#8212; CISC 192 Course Reader Overview</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -57,8 +57,8 @@
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6.1. Multiple assignment" href="multiple_assignment.html" />
-    <link rel="prev" title="5.16. Coding Practice" href="../chapter5/review-3.html" />
+    <link rel="next" title="6.8. More encapsulation" href="more_encapsulation.html" />
+    <link rel="prev" title="6.6. Encapsulation and generalization" href="encapsulation_generalization.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -188,14 +188,14 @@
         
         <!-- 
           
-  <li id="relations-prev" title="Previous Chapter - <span class="section-number">5.16. </span>Coding Practice" data-toggle="tooltip">
-    <a href="../chapter5/review-3.html" >
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">6.6. </span>Encapsulation and generalization" data-toggle="tooltip">
+    <a href="encapsulation_generalization.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - <span class="section-number">6.1. </span>Multiple assignment' data-toggle="tooltip" >              
-    <a href="multiple_assignment.html" >
+  <li id="relations-next" title='Next Chapter - <span class="section-number">6.8. </span>More encapsulation' data-toggle="tooltip" >              
+    <a href="more_encapsulation.html" >
         <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -236,20 +236,191 @@
 
 
   
-  <div class="section" id="iteration">
-<h1><span class="section-number">6. </span>Iteration<a class="headerlink" href="#iteration" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="multiple_assignment.html">6.1. Multiple assignment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="iteration.html">6.2. Iteration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="the_while_statement.html">6.3. The while statement</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tables.html">6.4. Tables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="two_dimensional_tables.html">6.5. Two-dimensional tables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="encapsulation_generalization.html">6.6. Encapsulation and generalization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions.html">6.7. Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="more_encapsulation.html">6.8. More encapsulation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="local_variables.html">6.9. Local variables</a></li>
+  <div class="section" id="functions">
+<h1><span class="section-number">6.7. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h1>
+<p>In the last section I mentioned “all the things functions are good for.”
+About this time, you might be wondering what exactly those things are.
+Here are some of the reasons functions are useful:</p>
+<ul class="simple">
+<li><p>By giving a name to a sequence of statements, you make your program
+easier to read and debug.</p></li>
+<li><p>Dividing a long program into functions allows you to separate parts
+of the program, debug them in isolation, and then compose them into a
+whole.</p></li>
+<li><p>Functions facilitate both recursion and iteration.</p></li>
+<li><p>Well-designed functions are often useful for many programs. Once you
+write and debug one, you can reuse it.</p></li>
 </ul>
+<p>For example, instead of writing the 53 lines of code below…</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=functions_AC_1 >
+<div id=functions_AC_1_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="functions_AC_1_editor" data-question_label="6.7.1" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Two-dimensional tables'  data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using std::cout;
+
+int main() {
+   int x = 4;
+   x = x * 2;
+   x = x / 2;
+   x = x + 2;
+   x = x - 2;
+   cout << x << '\n';
+   x = 13;
+   x = x * 2;
+   x = x / 2;
+   x = x + 2;
+   x = x - 2;
+   cout << x << '\n';
+   x = 100;
+   x = x * 2;
+   x = x / 2;
+   x = x + 2;
+   x = x - 2;
+   cout << x << '\n';
+   x = 22;
+   x = x * 2;
+   x = x / 2;
+   x = x + 2;
+   x = x - 2;
+   cout << x << '\n';
+   x = 220;
+   x = x * 2;
+   x = x / 2;
+   x = x + 2;
+   x = x - 2;
+   cout << x << '\n';
+   x = 0;
+   x = x * 2;
+   x = x / 2;
+   x = x + 2;
+   x = x - 2;
+   cout << x << '\n';
+   x = 1000;
+   x = x * 2;
+   x = x / 2;
+   x = x + 2;
+   x = x - 2;
+   cout << x << '\n';
+   x = 254;
+   x = x * 2;
+   x = x / 2;
+   x = x + 2;
+   x = x - 2;
+   cout << x << '\n';
+}
+</textarea>
+</div>
+</div>
+<p>A function allows you to reduce it to the 21 lines of code below.
+The function makes it easier to read, debug, and use
+the function many times without rewriting it each time.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=functions_AC_2 >
+<div id=functions_AC_2_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="functions_AC_2_editor" data-question_label="6.7.2" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Two-dimensional tables'  data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+
+void all_operators(int x) {
+    x = x * 2;
+    x = x / 2;
+    x = x + 2;
+    x = x - 2;
+    std::cout << x << '\n';
+}
+
+int main() {
+    all_operators(4);
+    all_operators(13);
+    all_operators(100);
+    all_operators(22);
+    all_operators(220);
+    all_operators(0);
+    all_operators(1000);
+    all_operators(254);
+}
+
+
+.. tabbed:: self_check
+
+ .. tab:: Q1
+
+    .. mchoice:: functions_1
+       :practice: T
+       :answer_a: A named sequence/group of statements that perform a particular task.
+       :answer_b: Any sequence of statements.
+       :answer_c: A mathematical expression that calculates a value.
+       :answer_d: A statement of the form x = 5 + 4.
+       :correct: a
+       :feedback_a: Yes, a function is a named sequence of statements.
+       :feedback_b: While functions contain sequences of statements, not all sequences of statements are considered functions.
+       :feedback_c: While some functions do calculate values, the python idea of a function is slightly different from the mathematical idea of a function in that not all functions calculate values.  Consider, for example, the turtle functions in this section.   They made the turtle draw a specific shape, rather than calculating a value.
+       :feedback_d: This statement is called an assignment statement.  It assigns the value on the right (9), to the name on the left (x).
+
+       What is a function in C++?
+
+
+ .. tab:: Q2
+
+    .. parsonsprob:: functions_2
+       :numbered: left
+       :adaptive:
+
+       Create a function called ``absoluteValue``, which returns the absolute value of a parameter ``num``. Assume you do not have access to ``#include <cmath>``.
+       -----
+       int absoluteValue (int num) {
+       =====
+       void absoluteValue (int num) { #distractor
+       =====
+       int absoluteValue (int num) #distractor
+       =====
+       void absoluteValue (int num) #distractor
+       =====
+         if (num > 0) {
+       =====
+           return num;
+         }
+       =====
+         else {
+       =====
+           int absNum = -(num);
+       =====
+           return absNum;
+         }
+       }
+
+
+ .. tab:: Q3
+
+    .. mchoice:: functions_3
+       :practice: T
+       :answer_a: Once you write and debug a function, you can reuse it.
+       :answer_b: Makes your program easier to read and debug.
+       :answer_c: Functions facilitate both recursion and iteration.
+       :answer_d: None of the above.
+       :correct: d
+       :feedback_a: The reusability of functions is very useful.
+       :feedback_b: By abstracting blocks of code, functions make your code easier to read and understand.
+       :feedback_c: Recursive functions and iterative functions are useful.
+       :feedback_d: All of the choices above are reasons for why functions are useful.
+
+       What is of these is NOT a reason that functions are useful?
+</textarea>
+</div>
 </div>
 </div>
 
@@ -260,8 +431,8 @@
   
       
 <ul>
-  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 5.16. Coding Practice' data-toggle="tooltip">
-    <a href="../chapter5/review-3.html" aria-label="5.16. Coding Practice">
+  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 6.6. Encapsulation and generalization' data-toggle="tooltip">
+    <a href="encapsulation_generalization.html" aria-label="6.6. Encapsulation and generalization">
         <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
             <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
         </div>
@@ -271,8 +442,8 @@
 
   
 <ul>
-  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - 6.1. Multiple assignment' data-toggle="tooltip" >
-    <a href="multiple_assignment.html" aria-label="6.1. Multiple assignment">
+  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - 6.8. More encapsulation' data-toggle="tooltip" >
+    <a href="more_encapsulation.html" aria-label="6.8. More encapsulation">
       <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
           <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
       </div>

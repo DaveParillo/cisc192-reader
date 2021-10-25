@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>6. Iteration &#8212; CISC 192 Course Reader Overview</title>
+    <title>6.2. Iteration &#8212; CISC 192 Course Reader Overview</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -57,8 +57,8 @@
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6.1. Multiple assignment" href="multiple_assignment.html" />
-    <link rel="prev" title="5.16. Coding Practice" href="../chapter5/review-3.html" />
+    <link rel="next" title="6.3. The while statement" href="the_while_statement.html" />
+    <link rel="prev" title="6.1. Multiple assignment" href="multiple_assignment.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -188,14 +188,14 @@
         
         <!-- 
           
-  <li id="relations-prev" title="Previous Chapter - <span class="section-number">5.16. </span>Coding Practice" data-toggle="tooltip">
-    <a href="../chapter5/review-3.html" >
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">6.1. </span>Multiple assignment" data-toggle="tooltip">
+    <a href="multiple_assignment.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - <span class="section-number">6.1. </span>Multiple assignment' data-toggle="tooltip" >              
-    <a href="multiple_assignment.html" >
+  <li id="relations-next" title='Next Chapter - <span class="section-number">6.3. </span>The while statement' data-toggle="tooltip" >              
+    <a href="the_while_statement.html" >
         <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -237,20 +237,16 @@
 
   
   <div class="section" id="iteration">
-<h1><span class="section-number">6. </span>Iteration<a class="headerlink" href="#iteration" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="multiple_assignment.html">6.1. Multiple assignment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="iteration.html">6.2. Iteration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="the_while_statement.html">6.3. The while statement</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tables.html">6.4. Tables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="two_dimensional_tables.html">6.5. Two-dimensional tables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="encapsulation_generalization.html">6.6. Encapsulation and generalization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions.html">6.7. Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="more_encapsulation.html">6.8. More encapsulation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="local_variables.html">6.9. Local variables</a></li>
-</ul>
-</div>
+<h1><span class="section-number">6.2. </span>Iteration<a class="headerlink" href="#iteration" title="Permalink to this headline">¶</a></h1>
+<p>One of the things computers are often used for is the automation of
+repetitive tasks. Repeating identical or similar tasks without making
+errors is something that computers do well and people do poorly.</p>
+<p id="index-0">We have seen programs that use recursion to perform repetition, such as
+<code class="docutils literal notranslate"><span class="pre">repeat_lines</span></code> and <code class="docutils literal notranslate"><span class="pre">countdown</span></code>. This type of repetition is called
+<strong>iteration</strong>, and C++ provides several language features that make it
+easier to write iterative programs.</p>
+<p>The two features we are going to look at are the <code class="docutils literal notranslate"><span class="pre">while</span></code> statement and
+the <code class="docutils literal notranslate"><span class="pre">for</span></code> statement.</p>
 </div>
 
 
@@ -260,8 +256,8 @@
   
       
 <ul>
-  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 5.16. Coding Practice' data-toggle="tooltip">
-    <a href="../chapter5/review-3.html" aria-label="5.16. Coding Practice">
+  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 6.1. Multiple assignment' data-toggle="tooltip">
+    <a href="multiple_assignment.html" aria-label="6.1. Multiple assignment">
         <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
             <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
         </div>
@@ -271,8 +267,8 @@
 
   
 <ul>
-  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - 6.1. Multiple assignment' data-toggle="tooltip" >
-    <a href="multiple_assignment.html" aria-label="6.1. Multiple assignment">
+  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - 6.3. The while statement' data-toggle="tooltip" >
+    <a href="the_while_statement.html" aria-label="6.3. The while statement">
       <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
           <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
       </div>

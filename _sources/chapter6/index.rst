@@ -5,8 +5,6 @@ Iteration
    :maxdepth: 3
 
    multiple_assignment.rst
-
-..
    iteration.rst
    the_while_statement.rst
    tables.rst
@@ -15,6 +13,8 @@ Iteration
    functions.rst
    more_encapsulation.rst
    local_variables.rst
+
+..
    more_generalization.rst
    glossary.rst
    Exercises.rst

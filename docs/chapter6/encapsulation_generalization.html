@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>6. Iteration &#8212; CISC 192 Course Reader Overview</title>
+    <title>6.6. Encapsulation and generalization &#8212; CISC 192 Course Reader Overview</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -57,8 +57,7 @@
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6.1. Multiple assignment" href="multiple_assignment.html" />
-    <link rel="prev" title="5.16. Coding Practice" href="../chapter5/review-3.html" />
+    <link rel="prev" title="6.5. Two-dimensional tables" href="two_dimensional_tables.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -188,18 +187,14 @@
         
         <!-- 
           
-  <li id="relations-prev" title="Previous Chapter - <span class="section-number">5.16. </span>Coding Practice" data-toggle="tooltip">
-    <a href="../chapter5/review-3.html" >
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">6.5. </span>Two-dimensional tables" data-toggle="tooltip">
+    <a href="two_dimensional_tables.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - <span class="section-number">6.1. </span>Multiple assignment' data-toggle="tooltip" >              
-    <a href="multiple_assignment.html" >
-        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
-    </a>
-  </li>
-  <li class="divider-vertical"></li>
+    <li class="divider-vertical"></li>
+  
 
 <script type="text/javascript">
   opts = {'placement':'bottom',
@@ -236,20 +231,189 @@
 
 
   
-  <div class="section" id="iteration">
-<h1><span class="section-number">6. </span>Iteration<a class="headerlink" href="#iteration" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="multiple_assignment.html">6.1. Multiple assignment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="iteration.html">6.2. Iteration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="the_while_statement.html">6.3. The while statement</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tables.html">6.4. Tables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="two_dimensional_tables.html">6.5. Two-dimensional tables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="encapsulation_generalization.html">6.6. Encapsulation and generalization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions.html">6.7. Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="more_encapsulation.html">6.8. More encapsulation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="local_variables.html">6.9. Local variables</a></li>
-</ul>
+  <div class="section" id="encapsulation-and-generalization">
+<h1><span class="section-number">6.6. </span>Encapsulation and generalization<a class="headerlink" href="#encapsulation-and-generalization" title="Permalink to this headline">¶</a></h1>
+<p>Encapsulation usually means taking a piece of code and wrapping it up in
+a function, allowing you to take advantage of all the things functions
+are good for. We have seen two examples of encapsulation, when we wrote
+<code class="docutils literal notranslate"><span class="pre">print_parity</span></code> in Section <a class="reference external" href="#alternative">[alternative]</a> and
+<code class="docutils literal notranslate"><span class="pre">is_digit</span></code> in Section <a class="reference external" href="#bool">[bool]</a>.</p>
+<p>Generalization means taking something specific, like printing multiples
+of 2, and making it more general, like printing the multiples of any
+integer.</p>
+<p>Here’s a function that encapsulates the loop from the previous section
+and generalizes it to print multiples of <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">print_multiples</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">6</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">n</span><span class="o">*</span><span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;   &quot;</span><span class="p">;</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>To encapsulate, all I had to do was add the first line, which declares
+the name, parameter, and return type. To generalize, all I had to do was
+replace the value 2 with the parameter <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+<p>If we call this function with the argument 2, we get the same output as
+before. With argument 3, the output is:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span>   <span class="mi">6</span>   <span class="mi">9</span>   <span class="mi">12</span>   <span class="mi">15</span>   <span class="mi">18</span>
+</pre></div>
+</div>
+<p>and with argument 4, the output is</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span>   <span class="mi">8</span>   <span class="mi">12</span>   <span class="mi">16</span>   <span class="mi">20</span>   <span class="mi">24</span>
+</pre></div>
+</div>
+<p>By now you can probably guess how we are going to print a multiplication
+table: we’ll call <code class="docutils literal notranslate"><span class="pre">print_multiples</span></code> repeatedly with different
+arguments. In fact, we are going to use another loop to iterate through
+the rows.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">6</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">print_multiples</span> <span class="p">(</span><span class="n">i</span><span class="p">);</span>
+  <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>First of all, notice how similar this loop is to the one inside
+<code class="docutils literal notranslate"><span class="pre">print_multiples</span></code>. All I did was replace the print statement with a
+function call.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=encapsulation_generalization_AC_1 >
+<div id=encapsulation_generalization_AC_1_question class="ac_question col-md-12">
+<p>Try running the active code below, which uses <code class="docutils literal notranslate"><span class="pre">print_multiples</span></code>.</p>
+
+</div>
+<textarea data-lang="cpp" id="encapsulation_generalization_AC_1_editor" data-question_label="6.6.1" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Two-dimensional tables'  data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+
+void print_multiples (int n) {
+  int i = 1;
+  while (i <= 6) {
+    std::cout << n*i << "   ";
+    i = i + 1;
+  }
+  std::cout << '\n';
+}
+
+int main() {
+  int i = 1;
+  while (i <= 6) {
+    print_multiples (i);
+    i = i + 1;
+  }
+}
+</textarea>
+</div>
+</div>
+<p>Note the output is a (slightly sloppy) multiplication table.
+If the sloppiness bothers you,
+you can also use tab characters, like below.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=encapsulation_generalization_AC_2 >
+<div id=encapsulation_generalization_AC_2_question class="ac_question col-md-12">
+<p>The active code below uses tab characters to make the table neater.</p>
+
+</div>
+<textarea data-lang="cpp" id="encapsulation_generalization_AC_2_editor" data-question_label="6.6.2" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Two-dimensional tables'  data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+
+void print_multiples (int n) {
+  int i = 1;
+  while (i <= 6) {
+    std::cout << n*i << '\t';
+    i = i + 1;
+  }
+  std::cout << '\n';
+}
+
+int main() {
+  int i = 1;
+  while (i <= 6) {
+    print_multiples (i);
+    i = i + 1;
+  }
+}
+
+.. tabbed:: self_check
+
+.. tab:: Q1
+
+   .. mchoice:: encapsulation_generalization_1
+      :answer_a: Replacing integers with parameters.
+      :answer_b: Using a parameter that exists in several different functions.
+      :answer_c: Taking a very specific task and making it more applicable to other situations.
+      :answer_d: Creating two functions with the same purpose but different names.
+      :correct: c
+      :feedback_a: This may be a possible way to generalize, but not the purpose.
+      :feedback_b: This is not the purpose of generalization.
+      :feedback_c: This makes your code more versatile.
+      :feedback_d: This is not the purpose of generalization.
+
+      What is the purpose of generalization?
+
+.. tab:: Q2
+
+   .. parsonsprob:: encapsulation_generalization_2
+      :numbered: left
+      :adaptive:
+
+      Create a function called ``powers_of_two`` which prints out a table
+      with the powers of two up to :math:`2^{5}`.
+      -----
+      void powers_of_two () {
+      =====
+        int x = 1;
+      =====
+        while (x <= 5) {
+      =====
+          cout << x << "\t" << pow(2, x) << endl;
+      =====
+          cout << x << "\t" << pow(x, 2) << endl;  #paired
+      =====
+          x++;
+        }
+      }
+
+.. tab:: Q3
+
+   .. parsonsprob:: encapsulation_generalization_3
+      :numbered: left
+      :adaptive:
+
+      Now let's generalize the function to print out the powers of
+      a parameter n up to :math:`n^{5}`.
+      Create a function called ``powers_of_n``
+      which takes an int n as a parameter.
+      -----
+      void powers_of_n (int n) {
+      =====
+      void powers_of_n (string n) {  #paired
+      =====
+        int x = 1;
+      =====
+        while (x <= 5) {
+      =====
+          cout << x << "\t" << pow(n, x) << endl;
+      =====
+          cout << x << "\t" << pow(5, x) << endl;  #paired
+      =====
+          x++;
+        }
+      }
+</textarea>
+</div>
 </div>
 </div>
 
@@ -260,8 +424,8 @@
   
       
 <ul>
-  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 5.16. Coding Practice' data-toggle="tooltip">
-    <a href="../chapter5/review-3.html" aria-label="5.16. Coding Practice">
+  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 6.5. Two-dimensional tables' data-toggle="tooltip">
+    <a href="two_dimensional_tables.html" aria-label="6.5. Two-dimensional tables">
         <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
             <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
         </div>
@@ -270,15 +434,6 @@
 </ul>
 
   
-<ul>
-  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - 6.1. Multiple assignment' data-toggle="tooltip" >
-    <a href="multiple_assignment.html" aria-label="6.1. Multiple assignment">
-      <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
-          <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
-      </div>
-    </a>
-  </li>
-</ul>
 
 <script type="text/javascript">
 
