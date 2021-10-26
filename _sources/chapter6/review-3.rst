@@ -392,7 +392,7 @@ Coding Practice
                   check("1  is not prime", is_prime(1), false);
                   check("13 is prime", is_prime(13), true);
                   check("24 is not prime", is_prime(24), false);
-                  check("997 is prime", is_prime(24), true);
+                  check("997 is prime", is_prime(997), true);
                   check("0 is not prime", is_prime(0), false);
                 }
 
