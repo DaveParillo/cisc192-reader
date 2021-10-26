@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>6. Iteration &#8212; CISC 192 Course Reader Overview</title>
+    <title>6.11. Glossary &#8212; CISC 192 Course Reader Overview</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -57,8 +57,8 @@
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6.1. Multiple assignment" href="multiple_assignment.html" />
-    <link rel="prev" title="5.16. Coding Practice" href="../chapter5/review-3.html" />
+    <link rel="next" title="6.12. Multiple Choice Exercises" href="review-1.html" />
+    <link rel="prev" title="6.10. More generalization" href="more_generalization.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -188,14 +188,14 @@
         
         <!-- 
           
-  <li id="relations-prev" title="Previous Chapter - <span class="section-number">5.16. </span>Coding Practice" data-toggle="tooltip">
-    <a href="../chapter5/review-3.html" >
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">6.10. </span>More generalization" data-toggle="tooltip">
+    <a href="more_generalization.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - <span class="section-number">6.1. </span>Multiple assignment' data-toggle="tooltip" >              
-    <a href="multiple_assignment.html" >
+  <li id="relations-next" title='Next Chapter - <span class="section-number">6.12. </span>Multiple Choice Exercises' data-toggle="tooltip" >              
+    <a href="review-1.html" >
         <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -236,26 +236,84 @@
 
 
   
-  <div class="section" id="iteration">
-<h1><span class="section-number">6. </span>Iteration<a class="headerlink" href="#iteration" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="multiple_assignment.html">6.1. Multiple assignment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="iteration.html">6.2. Iteration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="the_while_statement.html">6.3. The while statement</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tables.html">6.4. Tables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="two_dimensional_tables.html">6.5. Two-dimensional tables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="encapsulation_generalization.html">6.6. Encapsulation and generalization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions.html">6.7. Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="more_encapsulation.html">6.8. More encapsulation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="local_variables.html">6.9. Local variables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="more_generalization.html">6.10. More generalization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="glossary.html">6.11. Glossary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="review-1.html">6.12. Multiple Choice Exercises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="review-2.html">6.13. Mixed Up Code Practice</a></li>
-<li class="toctree-l1"><a class="reference internal" href="review-3.html">6.14. Coding Practice</a></li>
-</ul>
-</div>
+  <div class="section" id="glossary">
+<h1><span class="section-number">6.11. </span>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h1>
+<dl class="simple">
+<dt>loop:</dt><dd><p>A statement that executes repeatedly while a condition is true or
+until some condition is satisfied.</p>
+</dd>
+<dt>infinite loop:</dt><dd><p>A loop whose condition is always true.</p>
+</dd>
+<dt>body:</dt><dd><p>The statements inside the loop.</p>
+</dd>
+<dt>iteration:</dt><dd><p>One pass through (execution of) the body of the loop, including the
+evaluation of the condition.</p>
+</dd>
+<dt>tab:</dt><dd><p>A special character, written as <code class="docutils literal notranslate"><span class="pre">\t</span></code> in C++, that causes the cursor
+to move to the next tab stop on the current line.</p>
+</dd>
+<dt>encapsulate:</dt><dd><p>To divide a large complex program into components (like functions)
+and isolate the components from each other (for example, by using
+local variables).</p>
+</dd>
+<dt>local variable:</dt><dd><p>A variable that is declared inside a function and that exists only
+within that function. Local variables cannot be accessed from outside
+their home function, and do not interfere with any other functions.</p>
+</dd>
+<dt>generalize:</dt><dd><p>To replace something unnecessarily specific (like a constant value)
+with something appropriately general (like a variable or parameter).
+Generalization makes code more versatile, more likely to be reused,
+and sometimes even easier to write.</p>
+</dd>
+<dt>development plan:</dt><dd><p>A process for developing a program. In this chapter, I demonstrated a
+style of development based on developing code to do simple, specific
+things, and then encapsulating and generalizing.</p>
+</dd>
+</dl>
+<div id='self_check' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Q1" >
+
+<div class="runestone">
+<ul data-component="dragndrop" data-question_label="6.11.1" id="chapter_six_glossary_one"  style="visibility: hidden;">
+    <span data-component="question">Q-1: 
+</span>
+	<span data-component=feedback>Try again!</span>
+
+    <li data-component="draggable" id="chapter_six_glossary_one_drag1">loop</li>
+    <li data-component="dropzone" for="chapter_six_glossary_one_drag1">A statement that executes repeatedly while a condition is true or some condition is satisfied.</li>
+
+    <li data-component="draggable" id="chapter_six_glossary_one_drag2">infinite loop</li>
+    <li data-component="dropzone" for="chapter_six_glossary_one_drag2">A loop whose condition is always true.</li>
+
+    <li data-component="draggable" id="chapter_six_glossary_one_drag3">body</li>
+    <li data-component="dropzone" for="chapter_six_glossary_one_drag3">The statements inside the loop.</li>
+
+    <li data-component="draggable" id="chapter_six_glossary_one_drag4">iteration</li>
+    <li data-component="dropzone" for="chapter_six_glossary_one_drag4">One pass through (execution of) the body of the loop, including the valuation of the condition.</li>
+
+    <li data-component="draggable" id="chapter_six_glossary_one_drag5">tab</li>
+    <li data-component="dropzone" for="chapter_six_glossary_one_drag5">A special character, written as \t in C++, that causes the cursor to move to the next tab stop on the current line.</li>
+</ul></div></div><div data-component="tab" data-tabname="Q2" >
+
+<div class="runestone">
+<ul data-component="dragndrop" data-question_label="6.11.2" id="chapter_six_glossary_two"  style="visibility: hidden;">
+    <span data-component="question">Q-2: 
+</span>
+	<span data-component=feedback>Try again!</span>
+
+    <li data-component="draggable" id="chapter_six_glossary_two_drag1">encapsulate</li>
+    <li data-component="dropzone" for="chapter_six_glossary_two_drag1">To divide a large complex program into components (like functions) and isolate the components from each other (for example, by using local variables).</li>
+
+    <li data-component="draggable" id="chapter_six_glossary_two_drag2">local variable</li>
+    <li data-component="dropzone" for="chapter_six_glossary_two_drag2">A variable that is declared inside a function and that exists only within that function. Local variables cannot be accessed from outside their home function, and do not interfere with any other functions.</li>
+
+    <li data-component="draggable" id="chapter_six_glossary_two_drag3">generalize</li>
+    <li data-component="dropzone" for="chapter_six_glossary_two_drag3">To replace something unnecessarily specific (like a constant value) with something appropriately general (like a variable or parameter).</li>
+
+    <li data-component="draggable" id="chapter_six_glossary_two_drag4">development plan</li>
+    <li data-component="dropzone" for="chapter_six_glossary_two_drag4">A process for developing a program.</li>
+</ul></div></div>
+    </div>
+
 </div>
 
 
@@ -265,8 +323,8 @@
   
       
 <ul>
-  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 5.16. Coding Practice' data-toggle="tooltip">
-    <a href="../chapter5/review-3.html" aria-label="5.16. Coding Practice">
+  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 6.10. More generalization' data-toggle="tooltip">
+    <a href="more_generalization.html" aria-label="6.10. More generalization">
         <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
             <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
         </div>
@@ -276,8 +334,8 @@
 
   
 <ul>
-  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - 6.1. Multiple assignment' data-toggle="tooltip" >
-    <a href="multiple_assignment.html" aria-label="6.1. Multiple assignment">
+  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - 6.12. Multiple Choice Exercises' data-toggle="tooltip" >
+    <a href="review-1.html" aria-label="6.12. Multiple Choice Exercises">
       <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
           <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
       </div>

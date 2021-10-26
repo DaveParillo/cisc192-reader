@@ -127,8 +127,8 @@ Run and test your code!
           A binary number is one that is expressed in the base-2 numeral system.
           Write a function ``convertToBinary`` which takes a ``decimal`` as
           a parameter. ``convertToBinary`` takes the number in decimal, converts
-          it into a binary number, and returns the binary number. Test your function
-          in ``main``. Run and test your code!
+          it into a binary number, and returns the binary number. 
+          Run and test your code!
           ~~~~
           int to_binary (int decimal) {
               // Write your implementation here.

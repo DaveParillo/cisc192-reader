@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>6. Iteration &#8212; CISC 192 Course Reader Overview</title>
+    <title>6.13. Mixed Up Code Practice &#8212; CISC 192 Course Reader Overview</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -57,8 +57,8 @@
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6.1. Multiple assignment" href="multiple_assignment.html" />
-    <link rel="prev" title="5.16. Coding Practice" href="../chapter5/review-3.html" />
+    <link rel="next" title="6.14. Coding Practice" href="review-3.html" />
+    <link rel="prev" title="6.12. Multiple Choice Exercises" href="review-1.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -188,14 +188,14 @@
         
         <!-- 
           
-  <li id="relations-prev" title="Previous Chapter - <span class="section-number">5.16. </span>Coding Practice" data-toggle="tooltip">
-    <a href="../chapter5/review-3.html" >
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">6.12. </span>Multiple Choice Exercises" data-toggle="tooltip">
+    <a href="review-1.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - <span class="section-number">6.1. </span>Multiple assignment' data-toggle="tooltip" >              
-    <a href="multiple_assignment.html" >
+  <li id="relations-next" title='Next Chapter - <span class="section-number">6.14. </span>Coding Practice' data-toggle="tooltip" >              
+    <a href="review-3.html" >
         <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -236,26 +236,327 @@
 
 
   
-  <div class="section" id="iteration">
-<h1><span class="section-number">6. </span>Iteration<a class="headerlink" href="#iteration" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="multiple_assignment.html">6.1. Multiple assignment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="iteration.html">6.2. Iteration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="the_while_statement.html">6.3. The while statement</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tables.html">6.4. Tables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="two_dimensional_tables.html">6.5. Two-dimensional tables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="encapsulation_generalization.html">6.6. Encapsulation and generalization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions.html">6.7. Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="more_encapsulation.html">6.8. More encapsulation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="local_variables.html">6.9. Local variables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="more_generalization.html">6.10. More generalization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="glossary.html">6.11. Glossary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="review-1.html">6.12. Multiple Choice Exercises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="review-2.html">6.13. Mixed Up Code Practice</a></li>
-<li class="toctree-l1"><a class="reference internal" href="review-3.html">6.14. Coding Practice</a></li>
-</ul>
-</div>
+  <div class="section" id="mixed-up-code-practice">
+<h1><span class="section-number">6.13. </span>Mixed Up Code Practice<a class="headerlink" href="#mixed-up-code-practice" title="Permalink to this headline">¶</a></h1>
+<div id='self_check' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Q1" >
+
+        <div class="runestone" style="max-width: none;">
+        <pre data-component="parsons" data-question_label="6.13.1" id="mucp_6_1"  data-adaptive="true"    data-noindent="true"   data-numbered="left"  style="visibility: hidden;">
+        <span data-question>Q-1 The program below should print out the even numbers between 20 and 40, inclusive,
+but the code is mixed up and contains extra blocks. Put the necessary blocks
+in the correct order.</span>int main() {
+---
+main(int) {                         #paired
+---
+   int n = 20;
+---
+   int n = 0; #distractor
+---
+   while (n <= 40) {
+---
+   while (n < 40) {                        #paired
+---
+      cout << n << endl;
+---
+      n = n + 2;
+---
+      n++;                 #distractor
+---
+      n = n * 2;                 #distractor
+---
+   }
+---
+}
+        </pre>
+        </div>
+    </div><div data-component="tab" data-tabname="Q2" >
+
+        <div class="runestone" style="max-width: none;">
+        <pre data-component="parsons" data-question_label="6.13.2" id="mucp_6_2"  data-adaptive="true"    data-noindent="true"   data-numbered="left"  style="visibility: hidden;">
+        <span data-question>Q-2 The program below should count down from 100 to 0 in decrements of
+10 but the code is mixed up and contains extra blocks. Put the necessary blocks
+in the correct order.</span>int main() {
+---
+   int n = 100;
+---
+   int n = 10; #distractor
+---
+   while (n >= 0) {
+---
+   while (n < 0) { #distractor
+---
+   while (n > 0) { #distractor
+---
+      cout << n << endl;
+---
+      n -= 10;
+---
+      n += 10;                 #distractor
+---
+   }
+---
+}
+        </pre>
+        </div>
+    </div><div data-component="tab" data-tabname="Q3" >
+
+        <div class="runestone" style="max-width: none;">
+        <pre data-component="parsons" data-question_label="6.13.3" id="mucp_6_3"  data-adaptive="true"    data-noindent="true"   data-numbered="left"  style="visibility: hidden;">
+        <span data-question>Q-3 The program below should find the sum of the first 10 natural numbers,
+but the code is mixed up and contains extra blocks. Put the necessary blocks
+in the correct order.</span>int main() {
+---
+   int n = 1;
+---
+   int n = 10; #distractor
+---
+   int sum = 0;
+---
+   int sum = n;  #distractor
+---
+   while (n <= 10) {
+---
+   while (n < 100) {  #distractor
+---
+   while (n <= 9) {  #distractor
+---
+      cout << n << endl;  #distractor
+---
+      sum = sum + n;
+---
+      n++;
+---
+   }
+---
+}
+        </pre>
+        </div>
+    </div><div data-component="tab" data-tabname="Q4" >
+
+        <div class="runestone" style="max-width: none;">
+        <pre data-component="parsons" data-question_label="6.13.4" id="mucp_6_4"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        <span data-question>Q-4 Let's write the code for the repeatHello function. repeatHello
+should be a void function that takes no arguments and uses a while
+loop to print out "hello" three times.</span>void repeatHello () {
+---
+repeatHello () {                         #paired
+---
+   int n = 0;
+---
+   int n = 0                        #paired
+---
+   while (n < 3) {
+---
+   while (n > 3) {                        #paired
+---
+      cout << "hello" << endl;
+---
+      n++;
+---
+   }
+---
+}
+        </pre>
+        </div>
+    </div><div data-component="tab" data-tabname="Q5" >
+
+        <div class="runestone" style="max-width: none;">
+        <pre data-component="parsons" data-question_label="6.13.5" id="mucp_6_5"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        <span data-question>Q-5 Now let's generalize the repeatHello function so that it repeats a given string three times.
+Let's write the code for the repeatString function, which takes
+input as a parameter and uses a while loop to print out the string three times.</span>void repeatString (string input) {
+---
+void repeatString () {                         #paired
+---
+   int n = 0;
+---
+   while (n < 3) {
+---
+   while (3 > n) {                        #paired
+---
+      cout << input << endl;
+---
+      cout << string << endl;                        #paired
+---
+      n++;
+---
+   }
+---
+}
+        </pre>
+        </div>
+    </div><div data-component="tab" data-tabname="Q6" >
+
+        <div class="runestone" style="max-width: none;">
+        <pre data-component="parsons" data-question_label="6.13.6" id="mucp_6_6"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        <span data-question>Q-6 We can further generalize repeatString so that it repeats a given string a given number of times.
+Let's write the code for the new repeatString function, which takes
+input and x as parameters and uses a while loop to print out the string x number of times.</span>void repeatString (string input, int x) {
+---
+void repeatString (string input, string x) {                         #paired
+---
+   int n = 0;
+---
+   int n = x;                       #paired
+---
+   while (n < x) {
+---
+   while (x < n) {                        #paired
+---
+      cout << input << endl;
+---
+      n++;
+---
+      x++;                       #paired
+---
+   }
+---
+}
+        </pre>
+        </div>
+    </div><div data-component="tab" data-tabname="Q7" >
+
+        <div class="runestone" style="max-width: none;">
+        <pre data-component="parsons" data-question_label="6.13.7" id="mucp_6_7"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        <span data-question>Q-7 On the last day of every year, we count down the seconds before the new year arrives.
+Write the function newYearCountdown, which prints out a countdown from 10 and then
+prints out "Happy New Year!".</span>void newYearCountdown () {
+---
+void newYearCountdown (string input) {                         #paired
+---
+   int n = 10;
+---
+   int n = 0;                       #paired
+---
+   while (n > 0) {
+---
+   while (n != 10) {                        #paired
+---
+      cout << n << " ";
+---
+      n--;
+---
+      n++;  #
+---
+   }
+---
+   cout << "Happy New Year!" << endl;
+}
+        </pre>
+        </div>
+    </div><div data-component="tab" data-tabname="Q8" >
+
+        <div class="runestone" style="max-width: none;">
+        <pre data-component="parsons" data-question_label="6.13.8" id="mucp_6_8"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        <span data-question>Q-8 Help Goku reach power levels of over 9000! Write the function
+powerUp which takes powerLevel as a parameter.
+powerUp checks to see if powerLevel is over 9000. If it
+isn't, it repeatedly prints "More power!" and increments powerLevel by
+1000 until powerLevel is over 9000. Then powerUp prints "It's over 9000!".
+Put the necessary blocks in the correct order.</span>void powerUp (int powerLevel) {
+---
+void powerUp () {                         #paired
+---
+   int n = 0;  #distractor
+---
+   while (powerLevel < 9000) {
+---
+   while (powerLevel > 9000) {  #paired
+---
+      cout << "More power!" << endl;
+---
+      powerLevel = powerLevel + 1000;
+---
+      powerLevel++;  #paired
+---
+      n++;  #distractor
+---
+   }
+---
+   if (powerLevel < 9000) {  #distractor
+---
+   cout << "It's over 9000!" << endl;
+}
+        </pre>
+        </div>
+    </div><div data-component="tab" data-tabname="Q9" >
+
+        <div class="runestone" style="max-width: none;">
+        <pre data-component="parsons" data-question_label="6.13.9" id="mucp_6_9"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        <span data-question>Q-9 Write the function summation which takes two
+parameters, start and end. summation adds
+all the integers from start to end, inclusive, together and returns
+the sum. Put the necessary blocks in the correct order.</span>int summation (int start, int end) {
+---
+void summation (int start, int end) {  #distractor
+---
+int summation () {  #distractor
+---
+   int n = start;
+---
+   int sum = 0;
+---
+   int sum = start;  #distractor
+---
+   while (n <= end) {
+---
+   while (n < end) {  #paired
+---
+      sum = sum + n;
+---
+      n++;
+---
+   }
+---
+   return sum;
+---
+   return n;  #distractor
+---
+}
+        </pre>
+        </div>
+    </div><div data-component="tab" data-tabname="Q10" >
+
+        <div class="runestone" style="max-width: none;">
+        <pre data-component="parsons" data-question_label="6.13.10" id="mucp_6_10"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        <span data-question>Q-10 Write the function reverseNumber which takes num
+as a parameter and returns num but with its digits reversed.
+For example, reverseNumber (1324) returns 4231.
+Put the necessary blocks in the correct order, with reverse
+declared first, then temp, and lastly remainder.</span>int reverseNumber (int num) {
+---
+void reverseNumber (int num) {  #distractor
+---
+   int reverse = 0;
+---
+   int reverse = 0  #distractor
+---
+   int temp = num;
+---
+   int remainder = 0;
+---
+   int remainder;  #distractor
+---
+   while (temp > 0) {
+---
+      remainder = temp % 10;
+---
+      reverse = reverse * 10 + remainder;
+---
+      temp = temp / 10;
+---
+   }
+---
+   return reverse;
+---
+   return temp;  #distractor
+---
+}
+        </pre>
+        </div>
+    </div>
+    </div>
+
 </div>
 
 
@@ -265,8 +566,8 @@
   
       
 <ul>
-  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 5.16. Coding Practice' data-toggle="tooltip">
-    <a href="../chapter5/review-3.html" aria-label="5.16. Coding Practice">
+  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 6.12. Multiple Choice Exercises' data-toggle="tooltip">
+    <a href="review-1.html" aria-label="6.12. Multiple Choice Exercises">
         <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
             <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
         </div>
@@ -276,8 +577,8 @@
 
   
 <ul>
-  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - 6.1. Multiple assignment' data-toggle="tooltip" >
-    <a href="multiple_assignment.html" aria-label="6.1. Multiple assignment">
+  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - 6.14. Coding Practice' data-toggle="tooltip" >
+    <a href="review-3.html" aria-label="6.14. Coding Practice">
       <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
           <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
       </div>

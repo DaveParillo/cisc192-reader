@@ -13,11 +13,10 @@ Iteration
    functions.rst
    more_encapsulation.rst
    local_variables.rst
-
-..
    more_generalization.rst
    glossary.rst
-   Exercises.rst
-   mixed_up_code.rst
-   coding_practice.rst
+   review-1.rst
+   review-2.rst
+   review-3.rst
+
 
