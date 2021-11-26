@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7.3. Extracting characters from a string &#8212; CISC 192 Course Reader Overview</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.5.5" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/runestone.js?v=92D8BBF0"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../_static/theme.js?v=D899FB97"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="7.4. String size" href="size.html" />
+    <link rel="prev" title="7.2. string variables" href="string_variables.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'https://daveparillo.github.io/cisc192-reader/' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/cisc192-reader';
+    eBookConfig.course = 'cisc192-reader';
+    eBookConfig.basecourse = 'cisc192-reader';
+    eBookConfig.isLoggedIn = false;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
+  eBookConfig.runestone_version = '5.5.5';
+  eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+          <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;'>&nbsp;<span aria-label="logo" class="visuallyhidden">Runestone Logo</span> </a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          cisc192-reader
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">7.2. </span><code class="docutils literal notranslate"><span class="pre">string</span></code> variables" data-toggle="tooltip">
+    <a href="string_variables.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">7.4. </span>String size' data-toggle="tooltip" >              
+    <a href="size.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+      </div> <!-- navbar -->
+
+
+
+
+
+
+
+    </div> <!-- container -->
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="extracting-characters-from-a-string">
+<h1><span class="section-number">7.3. </span>Extracting characters from a string<a class="headerlink" href="#extracting-characters-from-a-string" title="Permalink to this headline">¶</a></h1>
+<p id="index-0">Strings are called “strings” because they are made up of a sequence, or
+string, of characters.
+Imagine a string of beads, where each character is a bead in the string.</p>
+<div class="graphviz"><img src="../_images/graphviz-bc76f87c8147899f6ba142896c093a131f049ad4.png" alt="graph char_array {
+  fontname = &quot;Bitstream Vera Sans&quot;
+  label=&quot;Beads on a 'string'&quot;
+  node [
+     fontname = &quot;Bitstream Vera Sans&quot;
+     fontsize = 14
+     shape = &quot;circle&quot;
+     style=filled
+     fillcolor=lightblue
+  ]
+
+  a -- b -- c -- d -- e -- f -- h -- i -- j -- k [ constraint=false]
+}" class="graphviz" /></div>
+<p>The first operation we are going to perform on a
+string is to extract one of the characters. C++ uses square brackets
+(<code class="docutils literal notranslate"><span class="pre">[</span></code> and <code class="docutils literal notranslate"><span class="pre">]</span></code>) for this operation.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=extracting_characters_AC_1 >
+<div id=extracting_characters_AC_1_question class="ac_question col-md-12">
+<p>Take a look at the active code below. We extract the character
+at index 1 from string <code class="docutils literal notranslate"><span class="pre">fruit</span></code> using <code class="docutils literal notranslate"><span class="pre">[</span></code> and <code class="docutils literal notranslate"><span class="pre">]</span></code>.</p>
+
+</div>
+<textarea data-lang="cpp" id="extracting_characters_AC_1_editor" data-question_label="7.3.1" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Accessing a string character'  data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string fruit = "orange";
+    char letter = fruit[1];
+    std::cout << letter;
+}
+</textarea>
+</div>
+</div>
+<p>The expression <code class="docutils literal notranslate"><span class="pre">fruit[1]</span></code> indicates that I want character number 1
+from the string named <code class="docutils literal notranslate"><span class="pre">fruit</span></code>. The result is stored in a <code class="docutils literal notranslate"><span class="pre">char</span></code>
+named <code class="docutils literal notranslate"><span class="pre">letter</span></code>.
+When I output the value of <code class="docutils literal notranslate"><span class="pre">letter</span></code>, I get a surprise:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">r</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">r</span></code> is not the first letter of <code class="docutils literal notranslate"><span class="pre">&quot;orange&quot;</span></code>.
+Unless you are a computer scientist.
+Programmers (and most programming languages) always start
+counting from zero.
+The 0th letter (“zeroeth”) of <code class="docutils literal notranslate"><span class="pre">&quot;orange&quot;</span></code> is <code class="docutils literal notranslate"><span class="pre">o</span></code>.
+The 1th letter (“oneth”) is <code class="docutils literal notranslate"><span class="pre">r</span></code> and the 2th (“twoeth”) letter is
+<code class="docutils literal notranslate"><span class="pre">a</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In C++, indexing begins at 0!</p>
+</div>
+<p>If you want the zereoth letter of a string,
+then you have to put zero in the square brackets.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=extracting_characters_AC_2 >
+<div id=extracting_characters_AC_2_question class="ac_question col-md-12">
+<p>The active code below accesses the first character in string <code class="docutils literal notranslate"><span class="pre">fruit</span></code>.</p>
+
+</div>
+<textarea data-lang="cpp" id="extracting_characters_AC_2_editor" data-question_label="7.3.2" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Accessing a string character'  data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+#include <string>
+
+int main() {
+    string fruit = "orange";
+    char letter = fruit[0];
+    cout << letter << endl;
+}
+</textarea>
+</div>
+</div>
+<div id='self_check' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Q1" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="7.3.3" data-multipleanswers="false"  id="extracting_characters_1"  style="visibility: hidden;">
+            <p>Q-3: What would replace the “?” in order to access the letter ‘b’ in the string below?</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">bake</span> <span class="o">=</span> <span class="s">&quot;bake a cake!&quot;</span><span class="p">;</span>
+  <span class="kt">char</span> <span class="n">letter</span> <span class="o">=</span> <span class="n">bake</span><span class="p">[</span><span class="o">?</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+
+            <li data-component="answer"  id="extracting_characters_1_opt_a">1</li><li data-component="feedback">Don't forget that computer scientists do not start counting at 1!</li>
+            
+            <li data-component="answer" data-correct id="extracting_characters_1_opt_b">0</li><li data-component="feedback">Yes, this would access the letter 'b'.</li>
+            
+            <li data-component="answer"  id="extracting_characters_1_opt_c">2</li><li data-component="feedback">This would access the letter 'k'.</li>
+            
+
+            </ul>
+            </div>
+            </div><div data-component="tab" data-tabname="Q2" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="7.3.4" data-multipleanswers="false"  id="extracting_characters_2"  style="visibility: hidden;">
+            <p>Q-4: What is printed when the code below is run?</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">lunch</span> <span class="o">=</span> <span class="s">&quot;hello&quot;</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">person</span> <span class="o">=</span> <span class="s">&quot;deejay&quot;</span><span class="p">;</span>
+  <span class="n">lunch</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">lunch</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">lunch</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+
+            <li data-component="answer"  id="extracting_characters_2_opt_a">lunch</li><li data-component="feedback">When we <code>cout</code> a <code>string</code> we print its content not its name.</li>
+            
+            <li data-component="answer"  id="extracting_characters_2_opt_b">jello</li><li data-component="feedback">Carefully check which string(s) we are indexing into.</li>
+            
+            <li data-component="answer" data-correct id="extracting_characters_2_opt_c">lello</li><li data-component="feedback">Correct! We copy the 'l' from position 3 of "hello" to position 0.</li>
+            
+            <li data-component="answer"  id="extracting_characters_2_opt_d">heljo</li><li data-component="feedback">Consider which string(s) we are indexing into.</li>
+            
+
+            </ul>
+            </div>
+            </div><div data-component="tab" data-tabname="Q3" >
+
+<div class="runestone">
+<div data-component="clickablearea" class="runestone alert alert-warning" id="extracting_characters_3" data-question_label="7.3.5"     style="visibility: hidden;">
+<span data-question>Q-5: Click on each spot where a character in a string is accessed.</span><span data-feedback>Remember, square brackets [] are used to access a character in a string.</span><pre><span data-incorrect>int main() {</span>
+    <span data-incorrect>string fruit = "apple";</span>
+    char letter = <span data-correct>fruit[2];</span>
+    <span data-incorrect>cout << fruit << endl;</span>
+    cout <<  <span data-correct>fruit[4]</span>  << endl;
+}</pre>
+
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Q4" >
+
+        <div class="runestone" style="max-width: none;">
+        <pre data-component="parsons" data-question_label="7.3.6" id="extracting_characters_4"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        <span data-question>Q-6 Construct a block of code that correctly prints the letter "a".</span>string x;
+
+x = "It is warm outside!";
+
+x = "It is warm outside" #paired
+
+cout << x[7] << endl;
+
+cout << x[8] << endl; #distractor
+        </pre>
+        </div>
+    </div>
+    </div>
+
+</div>
+
+
+  <div id=scprogresscontainer>
+    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+  </div>
+  
+      
+<ul>
+  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 7.2.  string  variables' data-toggle="tooltip">
+    <a href="string_variables.html" aria-label="7.2.  string  variables">
+        <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+            <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+        </div>
+    </a>
+  </li>
+</ul>
+
+  
+<ul>
+  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - 7.4. String size' data-toggle="tooltip" >
+    <a href="size.html" aria-label="7.4. String size">
+      <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+          <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+      </div>
+    </a>
+  </li>
+</ul>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+<script>
+	function mouseOverPrev() {
+		document.getElementById("relations-prev").style.opacity=1;
+	}
+
+	function mouseOutPrev() {
+		document.getElementById("relations-prev").style.opacity=0.4;
+	}
+	function mouseOverNext() {
+		document.getElementById("relations-next").style.opacity=1;
+	}
+
+	function mouseOutNext() {
+		document.getElementById("relations-next").style.opacity=0.4;
+	}
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020-2021 Dave Parillo.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.5.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> getSwitch(); </script>
+
+
+  </body>
+</html>

@@ -506,7 +506,7 @@ Coding Practice
          int main() {
            check("factorial 4", factorial(4), 24);
            check("factorial 6", factorial(6), 720);
-           check("factorial 8", factorial(6), 40320);
+           check("factorial 8", factorial(8), 40320);
            check("factorial 9", factorial(9), 362880);
            check("factorial 11", factorial(11), 39916800);
          }

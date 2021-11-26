@@ -106,7 +106,7 @@ the function many times without rewriting it each time.
   }
 
 
-  .. tabbed:: self_check
+.. tabbed:: self_check
 
    .. tab:: Q1
 

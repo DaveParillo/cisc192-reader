@@ -28,13 +28,13 @@ good example of iteration.
    :language: cpp
    :caption: Tables
 
-  The active code below outputs a sequence of values in the left column 
-  and their logarithms in the right column.
-  ~~~~
-  #include <cmath>
-  #include <iostream>
+   The active code below outputs a sequence of values in the left column 
+   and their logarithms in the right column.
+   ~~~~
+   #include <cmath>
+   #include <iostream>
 
-  int main() {
+   int main() {
       int x = 1;
       while (x < 10) {
           std::cout << x << '\t'
@@ -42,7 +42,7 @@ good example of iteration.
           x = x + 1;
       }
       return 0;
-  }
+   }
 
 .. index::
    single: tab

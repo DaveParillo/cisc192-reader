@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7.13. strings are comparable &#8212; CISC 192 Course Reader Overview</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.5.5" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/runestone.js?v=92D8BBF0"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../_static/theme.js?v=D899FB97"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="7.14. Character classification" href="character_classification.html" />
+    <link rel="prev" title="7.12. strings are mutable" href="strings_are_mutable.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'https://daveparillo.github.io/cisc192-reader/' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/cisc192-reader';
+    eBookConfig.course = 'cisc192-reader';
+    eBookConfig.basecourse = 'cisc192-reader';
+    eBookConfig.isLoggedIn = false;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
+  eBookConfig.runestone_version = '5.5.5';
+  eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+          <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;'>&nbsp;<span aria-label="logo" class="visuallyhidden">Runestone Logo</span> </a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          cisc192-reader
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">7.12. </span><code class="docutils literal notranslate"><span class="pre">string</span></code>s are mutable" data-toggle="tooltip">
+    <a href="strings_are_mutable.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">7.14. </span>Character classification' data-toggle="tooltip" >              
+    <a href="character_classification.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+      </div> <!-- navbar -->
+
+
+
+
+
+
+
+    </div> <!-- container -->
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="strings-are-comparable">
+<h1><span class="section-number">7.13. </span><code class="docutils literal notranslate"><span class="pre">string</span></code>s are comparable<a class="headerlink" href="#strings-are-comparable" title="Permalink to this headline">¶</a></h1>
+<p>All the comparison operators that work on <code class="docutils literal notranslate"><span class="pre">int</span></code>s and <code class="docutils literal notranslate"><span class="pre">double</span></code>s
+also work on <code class="docutils literal notranslate"><span class="pre">strings</span></code>.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=strings_comparable_AC_1 >
+<div id=strings_comparable_AC_1_question class="ac_question col-md-12">
+<p>Take a look at the active code below, which checks to see if <code class="docutils literal notranslate"><span class="pre">word</span></code> is
+equal to <code class="docutils literal notranslate"><span class="pre">&quot;banana&quot;</span></code>.</p>
+
+</div>
+<textarea data-lang="cpp" id="strings_comparable_AC_1_editor" data-question_label="7.13.1" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Strings are comparable'  data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string word = "banana";
+    if (word == "banana") {
+        std::cout << "Yes, we have no bananas!\n";
+    }
+}
+</textarea>
+</div>
+</div>
+<p>The same rules and limitations that apply to the <code class="docutils literal notranslate"><span class="pre">+</span></code> operator
+apply to the relational comparison operators.
+In order to work correctly, at least one of the operands must
+be a <code class="docutils literal notranslate"><span class="pre">std::string</span></code>.
+C strings by themselves are not comparable.
+These comparisons work because one of the operands is a <code class="docutils literal notranslate"><span class="pre">std::string</span></code>.</p>
+<p>The other comparison operations are useful for putting words in
+alphabetical order.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=strings_comparable_AC_2 >
+<div id=strings_comparable_AC_2_question class="ac_question col-md-12">
+<p>The active code below uses comparison operators to determine the ordering
+of <code class="docutils literal notranslate"><span class="pre">word</span></code> relative to <code class="docutils literal notranslate"><span class="pre">&quot;banana&quot;</span></code>.</p>
+
+</div>
+<textarea data-lang="cpp" id="strings_comparable_AC_2_editor" data-question_label="7.13.2" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='Strings are comparable'  data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+#include <string>
+
+int main() {
+
+  std::string word = "Zebra";
+  using std::cout;
+
+  if (word < "banana") {
+    cout << "Your word, " << word << ", comes before banana.\n";
+  } else if (word > "banana") {
+    cout << "Your word, " << word << ", comes after banana.\n";
+  } else {
+    cout << "Yes, we have no bananas!\n";
+  }
+}
+</textarea>
+</div>
+</div>
+<p>You should be aware, though, that the <code class="docutils literal notranslate"><span class="pre">string</span></code> class does not handle
+upper and lower case letters the same way that people do. All the upper
+case letters come before all the lower case letters. As a result,</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Your</span> <span class="n">word</span><span class="p">,</span> <span class="n">Zebra</span><span class="p">,</span> <span class="n">comes</span> <span class="n">before</span> <span class="n">banana</span><span class="p">.</span>
+</pre></div>
+</div>
+<p>A common way to address this problem is to convert strings to a standard
+format, like all lower-case, before performing the comparison. The next
+sections explains how. I will not address the more difficult problem,
+which is making the program realize that zebras are not fruit.</p>
+<p>Sometimes we want to print the result of a comparison operation.
+When we use <code class="docutils literal notranslate"><span class="pre">cout</span></code> to print the value, we don’t get what we expect.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=strings_comparable_AC_3 >
+<div id=strings_comparable_AC_3_question class="ac_question col-md-12">
+<p>Print a simple boolean value resulting from a string comparison.</p>
+
+</div>
+<textarea data-lang="cpp" id="strings_comparable_AC_3_editor" data-question_label="7.13.3" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='String comparisons print 0 and 1 by default'  data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+#include <string>
+
+int main() {
+  std::string word = "Zebra";
+  bool compare = word < "banana";
+  std::cout << "Comparison: " << compare;
+}
+</textarea>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">bool</span></code> value is actually getting converted to an integer
+when processed by the <code class="docutils literal notranslate"><span class="pre">cout</span></code> class.</p>
+<p>In order to get the results we expect, we need to use the
+<em>input / output manipulation</em> library: <code class="docutils literal notranslate"><span class="pre">iomanip</span></code>.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=strings_comparable_AC_4 >
+<div id=strings_comparable_AC_4_question class="ac_question col-md-12">
+<p>The I/O manipluator <code class="docutils literal notranslate"><span class="pre">boolalpha</span></code> can display the boolean
+values as the words <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+
+</div>
+<textarea data-lang="cpp" id="strings_comparable_AC_4_editor" data-question_label="7.13.4" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+         data-caption='iomanip can change what iostream displays'  data-wasm=/_static
+    style="visibility: hidden;">
+#include <iomanip>
+#include <iostream>
+#include <string>
+
+int main() {
+  std::string word = "Zebra";
+  bool compare = word < "banana";
+  std::cout << std::boolalpha << "Comparison: " << compare;
+}
+</textarea>
+</div>
+</div>
+<div id='self_check' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Q1" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="7.13.5" data-multipleanswers="false"  id="strings_comparable_1"  style="visibility: hidden;">
+            <p>Q-5: What would the result of the following comparison be?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">a</span> <span class="o">=</span> <span class="s">&quot;Dog&quot;</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">b</span> <span class="o">=</span> <span class="s">&quot;Doghouse&quot;</span><span class="p">;</span>
+<span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">;</span>
+</pre></div>
+</div>
+
+            <li data-component="answer" data-correct id="strings_comparable_1_opt_a">true</li><li data-component="feedback">Both match up to the g but Dog is shorter than Doghouse so it comes first in the dictionary.</li>
+            
+            <li data-component="answer"  id="strings_comparable_1_opt_b">false</li><li data-component="feedback">Strings are compared character by character.</li>
+            
+
+            </ul>
+            </div>
+            </div><div data-component="tab" data-tabname="Q2" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="7.13.6" data-multipleanswers="false"  id="strings_comparable_2"  style="visibility: hidden;">
+            <p>Q-6: What would the result of the following comparison be?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">a</span> <span class="o">=</span> <span class="s">&quot;dog&quot;</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">b</span> <span class="o">=</span> <span class="s">&quot;Dog&quot;</span><span class="p">;</span>
+<span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">;</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="strings_comparable_2_opt_a">true</li><li data-component="feedback">d is greater than D</li>
+            
+            <li data-component="answer" data-correct id="strings_comparable_2_opt_b">false</li><li data-component="feedback">Yes, upper case is less than lower case according to the ordinal values of the characters.</li>
+            
+            <li data-component="answer"  id="strings_comparable_2_opt_c">They are the same word</li><li data-component="feedback">C++ is case sensitive meaning that upper case and lower case characters are different.</li>
+            
+
+            </ul>
+            </div>
+            </div><div data-component="tab" data-tabname="Q3" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="7.13.7" data-multipleanswers="false"  id="strings_comparable_3"  style="visibility: hidden;">
+            <p>Q-7: What would the result of the following comparison be?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">a</span> <span class="o">=</span> <span class="s">&quot;dog&quot;</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">b</span> <span class="o">=</span> <span class="s">&quot;Doghouse&quot;</span><span class="p">;</span>
+<span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">;</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="strings_comparable_3_opt_a">true</li><li data-component="feedback">d is greater than D.</li>
+            
+            <li data-component="answer" data-correct id="strings_comparable_3_opt_b">false</li><li data-component="feedback">The length does not matter.  Lower case d is greater than upper case D.</li>
+            
+
+            </ul>
+            </div>
+            </div><div data-component="tab" data-tabname="Q4" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="7.13.8" data-multipleanswers="false"  id="strings_comparable_4"  style="visibility: hidden;">
+            <p>Q-8: What would the result of the following comparison be?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">a</span> <span class="o">=</span> <span class="s">&quot;bread&quot;</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">b</span> <span class="o">=</span> <span class="s">&quot;bread&quot;</span><span class="p">;</span>
+<span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">;</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="strings_comparable_4_opt_a">true</li><li data-component="feedback">They are equal so one can't be greater than the other.</li>
+            
+            <li data-component="answer" data-correct id="strings_comparable_4_opt_b">false</li><li data-component="feedback">Correct! because they are equal. They are equal because all characters match.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+    </div>
+
+</div>
+
+
+  <div id=scprogresscontainer>
+    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+  </div>
+  
+      
+<ul>
+  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 7.12.  string s are mutable' data-toggle="tooltip">
+    <a href="strings_are_mutable.html" aria-label="7.12.  string s are mutable">
+        <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+            <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+        </div>
+    </a>
+  </li>
+</ul>
+
+  
+<ul>
+  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - 7.14. Character classification' data-toggle="tooltip" >
+    <a href="character_classification.html" aria-label="7.14. Character classification">
+      <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+          <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+      </div>
+    </a>
+  </li>
+</ul>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+<script>
+	function mouseOverPrev() {
+		document.getElementById("relations-prev").style.opacity=1;
+	}
+
+	function mouseOutPrev() {
+		document.getElementById("relations-prev").style.opacity=0.4;
+	}
+	function mouseOverNext() {
+		document.getElementById("relations-next").style.opacity=1;
+	}
+
+	function mouseOutNext() {
+		document.getElementById("relations-next").style.opacity=0.4;
+	}
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020-2021 Dave Parillo.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.5.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> getSwitch(); </script>
+
+
+  </body>
+</html>
