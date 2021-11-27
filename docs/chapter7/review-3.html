@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7.19. Coding Practice &#8212; CISC 192 Course Reader Overview</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.5.5" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/runestone.js?v=92D8BBF0"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../_static/theme.js?v=D899FB97"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="7.18. Mixed Up Code Practice" href="review-2.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'https://daveparillo.github.io/cisc192-reader/' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/cisc192-reader';
+    eBookConfig.course = 'cisc192-reader';
+    eBookConfig.basecourse = 'cisc192-reader';
+    eBookConfig.isLoggedIn = false;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
+  eBookConfig.runestone_version = '5.5.5';
+  eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+          <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;'>&nbsp;<span aria-label="logo" class="visuallyhidden">Runestone Logo</span> </a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          cisc192-reader
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">7.18. </span>Mixed Up Code Practice" data-toggle="tooltip">
+    <a href="review-2.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+    <li class="divider-vertical"></li>
+  
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+      </div> <!-- navbar -->
+
+
+
+
+
+
+
+    </div> <!-- container -->
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="coding-practice">
+<h1><span class="section-number">7.19. </span>Coding Practice<a class="headerlink" href="#coding-practice" title="Permalink to this headline">¶</a></h1>
+<div id='self_check' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Q1" >
+<div id='cp_7_1' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+<p>A palindrome is a word, phrase, or sentence that reads the same forwards and backwards.
+Write a function <code class="docutils literal notranslate"><span class="pre">is_palindrome</span></code> that takes a <code class="docutils literal notranslate"><span class="pre">string</span> <span class="pre">input</span></code> as a parameter and returns
+a boolean that is true if the input is a palindrome and false otherwise.
+The tests skip non-alphanumeric characters (space, puncuation, etc).</p>
+<p>Run and test your code!</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_7_AC_1q >
+<div id=cp_7_AC_1q_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="cp_7_AC_1q_editor" data-question_label="7.19.1" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <cctype>
+#include <iostream>
+#include <string>
+
+
+bool is_palindrome (std::string input) {
+    // Write your implementation here.
+}
+====
+
+#include <functional>
+#include <iomanip>
+#include <iostream>
+#include <string>
+template <class T, class Compare = std::equal_to<T>>
+void check (const std::string& name,
+            const T& actual,
+            const T& expected,
+            const Compare& op = Compare())
+{
+  std::cout << std::left << std::setfill('.')
+            << std::setw(50) << name
+            << std::setw(7) <<  std::left;
+   if(op(actual, expected)) {
+     std::cout << " OK      \n";
+     return;
+  }
+  std::cout << " FAILED\n";
+  std::cout << "\treceived [" << std::boolalpha << actual
+            << "], but expected [" << expected << "]\n";
+  exit(1);
+}
+int main() {
+   check("is racecar?", is_palindrome("racecar"), true);
+   check("is kangaroo?", is_palindrome("kangaroo"), false);
+   check("is this phrase?", is_palindrome("able was I ere I saw elba"), true);
+   check("is this phrase?", is_palindrome("no lemon, no melon"), true);
+ }
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+<p>Below is one way to implement the program. We use the <code class="docutils literal notranslate"><span class="pre">isalpha</span></code> function
+to ignore the non alphabetical characters. Then we continuously check to see
+if the letters in the front are equal to the ones in the back until we reach the
+middle of the string.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_7_AC_1a >
+<div id=cp_7_AC_1a_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="cp_7_AC_1a_editor" data-question_label="7.19.2" 
+      data-timelimit=25000  data-codelens="true"   data-optional=true
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <cctype>
+#include <iostream>
+#include <string>
+
+bool is_palindrome (std::string input) {
+    int front = 0;
+    int back = input.size() - 1;
+    while (front < back) {
+        while (!std::isalpha(input[front])) {
+            ++front;
+        }
+        while (!std::isalpha(input[back])) {
+            --back;
+        }
+        if (input[front] != input[back]) {
+            return false;
+        }
+        ++front;
+        --back;
+    }
+    return true;
+}
+====
+#include <functional>
+#include <iomanip>
+#include <iostream>
+#include <string>
+template <class T, class Compare = std::equal_to<T>>
+void check (const std::string& name,
+            const T& actual,
+            const T& expected,
+            const Compare& op = Compare())
+{
+  std::cout << std::left << std::setfill('.')
+            << std::setw(50) << name
+            << std::setw(7) <<  std::left;
+   if(op(actual, expected)) {
+     std::cout << " OK      \n";
+     return;
+  }
+  std::cout << " FAILED\n";
+  std::cout << "\treceived [" << std::boolalpha << actual
+            << "], but expected [" << expected << "]\n";
+  exit(1);
+}
+int main() {
+   check("is racecar?", is_palindrome("racecar"), true);
+   check("is kangaroo?", is_palindrome("kangaroo"), false);
+   check("is this phrase?", is_palindrome("able was I ere I saw elba"), true);
+   check("is this phrase?", is_palindrome("no lemon, no melon"), true);
+}
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</div><div data-component="tab" data-tabname="Q2" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_7_AC_2q >
+<div id=cp_7_AC_2q_question class="ac_question col-md-12">
+<p>How much does Bubba love shrimp? Probably a lot. But how many times does the word “shrimp” come
+up in his monologue? Write a function <code class="docutils literal notranslate"><span class="pre">count_word</span></code> that counts the number of times a given word
+appears in a given string. <code class="docutils literal notranslate"><span class="pre">count_word</span></code> should take two strings <code class="docutils literal notranslate"><span class="pre">input</span></code> and <code class="docutils literal notranslate"><span class="pre">word</span></code> as parameters and return an <code class="docutils literal notranslate"><span class="pre">int</span></code>.
+Feel free to use the <code class="docutils literal notranslate"><span class="pre">stringToLower</span></code> function we wrote earlier.</p>
+
+</div>
+<textarea data-lang="cpp" id="cp_7_AC_2q_editor" data-question_label="7.19.3" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <cctype>
+#include <iostream>
+#include <string>
+
+
+void stringToLower (string &input) {
+   int i = 0;
+   while (i < input.size()) {
+       if (std::isalpha(input[i]) != 0 && std::isupper(input[i]) != 0) {
+           input[i] = std::tolower(input[i]);
+       }
+       ++i;
+   }
+}
+
+int count_word (string input, string word) {
+    // Write your implementation here.
+}
+
+int main() {
+    string quote =
+        "Anyway, like I was sayin', shrimp is the fruit of the sea. You can "
+        "barbecue it, boil it, broil it, bake it, saute it. Dey's uh, "
+        "shrimp-kabobs, shrimp creole, shrimp gumbo. Pan fried, deep fried, "
+        "stir-fried. There's pineapple shrimp, lemon shrimp, coconut shrimp, "
+        "pepper shrimp, shrimp soup, shrimp stew, shrimp salad, shrimp and "
+        "potatoes, shrimp burger, shrimp sandwich. That- that's about "
+        "it.";
+    cout << "Your output: " << count_word(quote, "shrimp") << ", Correct output: 14" << endl;
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Q3" >
+<div id='cp_7_3' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+<p>Write a void function <code class="docutils literal notranslate"><span class="pre">censor_word</span></code> that censors a given word from a given string and prints
+out the new string. <code class="docutils literal notranslate"><span class="pre">censor_word</span></code> should take two strings <code class="docutils literal notranslate"><span class="pre">input</span></code> and <code class="docutils literal notranslate"><span class="pre">word</span></code> as parameters
+and prints out <code class="docutils literal notranslate"><span class="pre">input</span></code> with every occurence of <code class="docutils literal notranslate"><span class="pre">word</span></code> censored with asterisks. For example,
+<code class="docutils literal notranslate"><span class="pre">censor_word</span> <span class="pre">(&quot;I</span> <span class="pre">really,</span> <span class="pre">really,</span> <span class="pre">really,</span> <span class="pre">really,</span> <span class="pre">really,</span> <span class="pre">really</span> <span class="pre">like</span> <span class="pre">you&quot;,</span> <span class="pre">&quot;really&quot;)</span></code> results in
+the following output:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">I</span> <span class="o">******</span><span class="p">,</span> <span class="o">******</span><span class="p">,</span> <span class="o">******</span><span class="p">,</span> <span class="o">******</span><span class="p">,</span> <span class="o">******</span><span class="p">,</span> <span class="o">******</span> <span class="n">like</span> <span class="n">you</span>
+</pre></div>
+</div>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_7_AC_3q >
+<div id=cp_7_AC_3q_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="cp_7_AC_3q_editor" data-question_label="7.19.4" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+#include <string>
+using std::string;
+
+void censor_word (string input, string word) {
+    // Write your implementation here.
+}
+
+int main() {
+    censor_word ("I really, really, really, really, really, really like you", "really");
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+<p>Below is one way to implement the program. We use a while loop to
+repeatedly search for instances of word in input. Once found, we replace
+the length of the word with asterisks.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_7_AC_3a >
+<div id=cp_7_AC_3a_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="cp_7_AC_3a_editor" data-question_label="7.19.5" 
+      data-timelimit=25000  data-codelens="true"   data-optional=true
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+#include <string>
+using std::string;
+
+void censor_word(string input, string word) {
+    int length = word.size();
+    while (input.find(word) != std::string::npos) {
+        int index = input.find(word);
+        int i = 0;
+        while (i < length) {
+            input[index + i] = '*';
+            ++i;
+        }
+    }
+    std::cout << input;
+}
+
+int main() {
+    censor_word ("I really, really, really, really, really, really like you", "really");
+}
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</div><div data-component="tab" data-tabname="Q4" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_7_AC_4q >
+<div id=cp_7_AC_4q_question class="ac_question col-md-12">
+<p>Write a void function <code class="docutils literal notranslate"><span class="pre">remove_word</span></code> that removes a given word from a given string and prints
+out the new string. <code class="docutils literal notranslate"><span class="pre">remove_word</span></code> should take two strings <code class="docutils literal notranslate"><span class="pre">input</span></code> and <code class="docutils literal notranslate"><span class="pre">word</span></code> as parameters
+and prints out <code class="docutils literal notranslate"><span class="pre">input</span></code> with every occurence of <code class="docutils literal notranslate"><span class="pre">word</span></code> removed. Use string concatenation and the C++
+string function <code class="docutils literal notranslate"><span class="pre">substr</span></code>. <code class="docutils literal notranslate"><span class="pre">substr</span></code> takes two parameters, a starting index and a length. For example,
+if <code class="docutils literal notranslate"><span class="pre">string</span> <span class="pre">greeting</span> <span class="pre">=</span> <span class="pre">&quot;hello</span> <span class="pre">world&quot;</span></code>, then <code class="docutils literal notranslate"><span class="pre">greeting.substr(6,</span> <span class="pre">5)</span></code> returns the string <code class="docutils literal notranslate"><span class="pre">&quot;world&quot;</span></code>.
+Test your function in main. The output should be:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Gucci</span> <span class="p">,</span> <span class="n">Gucci</span> <span class="p">,</span> <span class="n">Gucci</span> <span class="p">,</span> <span class="n">Gucci</span>
+</pre></div>
+</div>
+
+</div>
+<textarea data-lang="cpp" id="cp_7_AC_4q_editor" data-question_label="7.19.6" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+#include <string>
+
+void remove_word (std::string input, std::string word) {
+    // Write your implementation here.
+}
+
+int main() {
+    remove_word ("Gucci gang, Gucci gang, Gucci gang, Gucci gang", "gang");
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Q5" >
+<div id='cp_7_5' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+<p>ROT13 is a simple letter substitution cipher that shifts every letter forward by 13,
+looping around if necessary. For example, the letter ‘a’, 1st in the alphabet, becomes
+the letter ‘n’, 14th in the alphabet. The letter ‘r’, 18th in the alphabet, becomes the
+letter ‘e’, 5th in the alphabet. Since the alphabet has 26 letters and 13 is exactly half,
+a message encrypted using ROT13 can be decrypted by calling ROT13 on the encrypted message.
+Write the function <code class="docutils literal notranslate"><span class="pre">rotate13</span></code>, which takes a <code class="docutils literal notranslate"><span class="pre">string</span> <span class="pre">input</span></code> as a parameter and returns
+an encrypted <code class="docutils literal notranslate"><span class="pre">string</span></code>. Test your function in <code class="docutils literal notranslate"><span class="pre">main</span></code>.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_7_AC_5q >
+<div id=cp_7_AC_5q_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="cp_7_AC_5q_editor" data-question_label="7.19.7" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <cctype>
+#include <iostream>
+#include <string>
+
+std::string rotate13 (std::string message) {
+    // Write your implementation here.
+}
+
+int main() {
+    using std::cout;
+    string original = "Encrypt me then decrypt me!";
+    string encrypted = rotate13 (original);
+    string decrypted = rotate13 (encrypted);
+    cout << "Original string: " << original << '\n';
+    cout << "Encrypted string: " << encrypted << '\n';
+    cout << "Decrypted string: " << decrypted << '\n';
+
+    // Uncomment and run the code below once your function works!
+    // string secretMessage = "Pbatenghyngvbaf! Lbh'ir fhpprffshyyl vzcyrzragrq EBG13 naq qrpbqrq gur frperg zrffntr :)";
+    // cout << rotate13 (secretMessage) << '\n';
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+<p>Below is one way to implement the <code class="docutils literal notranslate"><span class="pre">rotate13</span></code> function. We use a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop to
+go through all the letters in the <code class="docutils literal notranslate"><span class="pre">string</span></code>. If the letter is between ‘a’ and ‘n’ or
+‘A’ and ‘N’, we use character operations to add 13 to each letter. Otherwise,
+we subtract 13 from each letter. We return the encrypted message at the end.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_7_AC_5a >
+<div id=cp_7_AC_5a_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="cp_7_AC_5a_editor" data-question_label="7.19.8" 
+      data-timelimit=25000  data-codelens="true"   data-optional=true
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <cctype>
+#include <iostream>
+#include <string>
+using std::string;
+
+string rotate13(string message) {
+    size_t pos = 0;
+    while (pos < input.size()) {
+       char& letter = message[pos];
+        if (std::isalpha(letter) != 0) {
+           if ((std::islower(letter) != 0 && letter < 'n') ||
+               (std::isupper(letter) != 0 && letter < 'N')) {
+             letter = letter + 13;
+           } else {
+             letter = letter - 13;
+           }
+        }
+        ++pos;
+    }
+    return message;
+}
+
+int main() {
+    using std::cout;
+    string original = "Encrypt me then decrypt me!";
+    string encrypted = rotate13 (original);
+    string decrypted = rotate13 (encrypted);
+    cout << "Original string: " << original << '\n';
+    cout << "Encrypted string: " << encrypted << '\n';
+    cout << "Decrypted string: " << decrypted << '\n';
+
+    string secret = "Pbatenghyngvbaf! Lbh'ir fhpprffshyyl vzcyrzragrq EBG13 naq qrpbqrq gur frperg zrffntr :)";
+    cout << rotate13 (secret) << '\n';
+}
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</div><div data-component="tab" data-tabname="Q6" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_7_AC_6q >
+<div id=cp_7_AC_6q_question class="ac_question col-md-12">
+<p>Write the function <code class="docutils literal notranslate"><span class="pre">reverse_word</span></code> which takes a <code class="docutils literal notranslate"><span class="pre">string</span> <span class="pre">input</span></code>, reverses it,
+and returns the reversed <code class="docutils literal notranslate"><span class="pre">string</span></code>. Run and test your code!</p>
+
+</div>
+<textarea data-lang="cpp" id="cp_7_AC_6q_editor" data-question_label="7.19.9" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <string>
+
+std::string reverse_word (std::string input) {
+    // Write your implementation here.
+}
+
+====
+#include <functional>
+#include <iomanip>
+#include <iostream>
+#include <string>
+template <class T, class Compare = std::equal_to<T>>
+void check (const std::string& name,
+            const T& actual,
+            const T& expected,
+            const Compare& op = Compare())
+{
+  std::cout << std::left << std::setfill('.')
+            << std::setw(50) << name
+            << std::setw(7) <<  std::left;
+  if(op(actual, expected)) {
+     std::cout << " OK      \n";
+     return;
+  }
+  std::cout << " FAILED\n";
+  std::cout << "\treceived [" << std::boolalpha << actual
+            << "], but expected [" << expected << "]\n";
+  exit(1);
+}
+int main() {
+  check("reverse 'hello'", reverse_word("hello"), "olleh");
+  check("reverse 'world!'", reverse_word("world!"), "!dlrow");
+  check("reverse 'racecar'", reverse_word("racecar"), "racecar");
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Q7" >
+<div id='cp_7_7' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+<p>Write the function <code class="docutils literal notranslate"><span class="pre">capitalize</span></code>, which takes a <code class="docutils literal notranslate"><span class="pre">string</span> <span class="pre">input</span></code> as a parameter.
+<code class="docutils literal notranslate"><span class="pre">capitalize</span></code> capitalizes the first letter of every word, and returns the new <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_7_AC_7q >
+<div id=cp_7_AC_7q_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="cp_7_AC_7q_editor" data-question_label="7.19.10" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <cctype>
+#include <iostream>
+#include <string>
+
+std::string capitalize (std::string input) {
+    // Write your implementation here.
+}
+
+int main() {
+    std::cout << capitalize ("every word in this string should be capitalized!\n");
+    std::cout << capitalize ("this String As well\n");
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+<p>Below is one way to implement the <code class="docutils literal notranslate"><span class="pre">capitalize</span></code> function. We use a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop to
+go through all the <code class="docutils literal notranslate"><span class="pre">char</span></code>s in the <code class="docutils literal notranslate"><span class="pre">string</span></code>. We capitalize the first character
+and all characters following a space using <code class="docutils literal notranslate"><span class="pre">toupper</span></code>. At the end, we return the <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_7_AC_7a >
+<div id=cp_7_AC_7a_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="cp_7_AC_7a_editor" data-question_label="7.19.11" 
+      data-timelimit=25000  data-codelens="true"   data-optional=true
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <cctype>
+#include <iostream>
+#include <string>
+
+std::string capitalize (std::string input) {
+    size_t pos = 0;
+    while (pos < input.size()) {
+        if (pos == 0) {
+            input[pos] = std::toupper(input[pos]);
+        }
+        else if (input[pos-1] == ' ') {
+            input[pos] = std::toupper(input[pos]);
+        }
+        ++pos;
+    }
+    return input;
+}
+
+int main() {
+    std::cout << capitalize ("every word in this string should be capitalized!\n");
+    std::cout << capitalize ("this String As well\n");
+}
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</div><div data-component="tab" data-tabname="Q8" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_7_AC_8q >
+<div id=cp_7_AC_8q_question class="ac_question col-md-12">
+<p>Write the function <code class="docutils literal notranslate"><span class="pre">count_vowels</span></code> which takes a <code class="docutils literal notranslate"><span class="pre">string</span> <span class="pre">input</span></code> and returns
+the number of vowels in the <code class="docutils literal notranslate"><span class="pre">string</span></code>.
+For this exercvise, ‘a’, ‘e’, ‘i’, ‘o’, and ‘u’ are vowels.
+Run and test your code!</p>
+
+</div>
+<textarea data-lang="cpp" id="cp_7_AC_8q_editor" data-question_label="7.19.12" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <string>
+
+int count_vowels (std::string input) {
+   // Write your implementation here.
+}
+====
+#include <functional>
+#include <iomanip>
+#include <iostream>
+#include <string>
+template <class T, class Compare = std::equal_to<T>>
+void check (const std::string& name,
+            const T& actual,
+            const T& expected,
+            const Compare& op = Compare())
+{
+  std::cout << std::left << std::setfill('.')
+            << std::setw(50) << name
+            << std::setw(7) <<  std::left;
+  if(op(actual, expected)) {
+     std::cout << " OK      \n";
+     return;
+  }
+  std::cout << " FAILED\n";
+  std::cout << "\treceived [" << std::boolalpha << actual
+            << "], but expected [" << expected << "]\n";
+  exit(1);
+}
+int main() {
+  check("count 'onomatopoeia'", count_vowels("onomatopoeia"), 8);
+  check("count 'cycsts!'", count_vowels("cycsts"), 0);
+  check("count 'vowels'", count_vowels("vowels"), 2);
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Q9" >
+<div id='cp_7_9' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+<p>Write the function <code class="docutils literal notranslate"><span class="pre">longest_word</span></code>, which takes a <code class="docutils literal notranslate"><span class="pre">string</span> <span class="pre">input</span></code> as a parameter.
+<code class="docutils literal notranslate"><span class="pre">longest_word</span></code> returns the words with the most letters in <code class="docutils literal notranslate"><span class="pre">input</span></code>. If there’s a tie,
+return the first word. Use the <code class="docutils literal notranslate"><span class="pre">substr</span></code> function. Run and test your code!</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_7_AC_9q >
+<div id=cp_7_AC_9q_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="cp_7_AC_9q_editor" data-question_label="7.19.13" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <string>
+
+std::string longest_word (std::string input) {
+    // Write your implementation here.
+}
+====
+#include <functional>
+#include <iomanip>
+#include <iostream>
+#include <string>
+template <class T, class Compare = std::equal_to<T>>
+void check (const std::string& name,
+            const T& actual,
+            const T& expected,
+            const Compare& op = Compare())
+{
+  std::cout << std::left << std::setfill('.')
+            << std::setw(50) << name
+            << std::setw(7) <<  std::left;
+   if(op(actual, expected)) {
+     std::cout << " OK      \n";
+     return;
+  }
+  std::cout << " FAILED\n";
+  std::cout << "\treceived [" << std::boolalpha << actual
+            << "], but expected [" << expected << "]\n";
+  exit(1);
+}
+int main() {
+   using std::string;
+   check("Test 1", longest_word("what is the longest word in this string"), string("longest"));
+   check("Test 2", longest_word("these words are very close in size"), string("these"));
+   check("Test 3", longest_word("vowels"), string("vowels"));
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+<p>Below is one way to implement the <code class="docutils literal notranslate"><span class="pre">longest_word</span></code> function. We use a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop to
+go through all the <code class="docutils literal notranslate"><span class="pre">char</span></code>s in the <code class="docutils literal notranslate"><span class="pre">string</span></code>. We use variables to keep track of the
+longest word, the longest amount of letters, and the length of the current word. We
+can determine the length of a word by counting the number of <code class="docutils literal notranslate"><span class="pre">char</span></code>s between spaces.
+If the length is greater than the max, length becomes the new max and we update the longest word.
+This keeps repeating until we reach the end of the string, and the longest word is returned.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_7_AC_9a >
+<div id=cp_7_AC_9a_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="cp_7_AC_9a_editor" data-question_label="7.19.14" 
+      data-timelimit=25000  data-codelens="true"   data-optional=true
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <string>
+
+std::string longest_word (std::string input) {
+    size_t pos = 0;
+    std::string longest;
+    int max_length = 0;
+    while (pos < input.size()) {
+        int word_length = 0;
+        while (input[pos] != ' ' && pos < input.size()) {
+            ++word_length;
+            ++pos;
+        }
+        if (word_length > max_length) {
+            max_length = word_length;
+            longest = input.substr(pos - max_length, max_length);
+        }
+        ++pos;
+    }
+    return longest;
+}
+====
+#include <functional>
+#include <iomanip>
+#include <iostream>
+#include <string>
+template <class T, class Compare = std::equal_to<T>>
+void check (const std::string& name,
+            const T& actual,
+            const T& expected,
+            const Compare& op = Compare())
+{
+  std::cout << std::left << std::setfill('.')
+            << std::setw(50) << name
+            << std::setw(7) <<  std::left;
+   if(op(actual, expected)) {
+     std::cout << " OK      \n";
+     return;
+  }
+  std::cout << " FAILED\n";
+  std::cout << "\treceived [" << std::boolalpha << actual
+            << "], but expected [" << expected << "]\n";
+  exit(1);
+}
+int main() {
+   using std::string;
+   check("Test 1", longest_word("what is the longest word in this string"), string("longest"));
+   check("Test 2", longest_word("these words are very close in size"), string("these"));
+   check("Test 3", longest_word("vowels"), string("vowels"));
+}
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</div><div data-component="tab" data-tabname="Q10" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_7_AC_10q >
+<div id=cp_7_AC_10q_question class="ac_question col-md-12">
+<p>Camel case is the practice of writing phrases without spaces or punctuation,
+indicating the separation of words using capital letter. For example, “camel case”
+in camel case is “camelCase”. Snake case is the practice of writing phrases
+where each space is replaced by an underscore. For example, “snake case”
+in snake case is “snake_case”. Write the functions <code class="docutils literal notranslate"><span class="pre">snake_to_camel</span></code> and <code class="docutils literal notranslate"><span class="pre">camel_to_snake</span></code>.
+Each function takes a <code class="docutils literal notranslate"><span class="pre">string</span> <span class="pre">input</span></code> and returns the input using the other stylization.
+Feel free to use any <code class="docutils literal notranslate"><span class="pre">string</span></code> functions you’d like. Run and test your code!</p>
+
+</div>
+<textarea data-lang="cpp" id="cp_7_AC_10q_editor" data-question_label="7.19.15" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <string>
+using std::string;
+
+string snake_to_camel (string input) {
+     // Write your implementation here.
+}
+
+string camel_to_snake (string input) {
+     // Write your implementation here.
+}
+
+====
+#include <functional>
+#include <iomanip>
+#include <iostream>
+#include <string>
+template <class T, class Compare = std::equal_to<T>>
+void check (const std::string& name,
+            const T& actual,
+            const T& expected,
+            const Compare& op = Compare())
+{
+  std::cout << std::left << std::setfill('.')
+            << std::setw(50) << name
+            << std::setw(7) <<  std::left;
+  if(op(actual, expected)) {
+     std::cout << " OK      \n";
+     return;
+  }
+  std::cout << " FAILED\n";
+  std::cout << "\treceived [" << std::boolalpha << actual
+            << "], but expected [" << expected << "]\n";
+  exit(1);
+}
+int main() {
+  using std::string;
+  check("Snake to Camel case 1", snake_to_camel("turn_this_into_camel_case"), string("turnThisIntoCamelCase"));
+  check("Snake to Camel case 2", snake_to_camel("hello_world"), string("helloWorld"));
+  check("Snake to Camel case 3", snake_to_camel("code"), string("code"));
+
+  check("Camel to Snake case 1", camel_to_snake("turnThisIntoSnakeCase"), string("turn_this_into_snake_case"));
+  check("Camel to Snake case 2", camel_to_snake("helloWorld"), string("hello_world"));
+  check("Camel to Snake case 3", camel_to_snake("code"), string("code"));
+}
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</div>
+
+
+  <div id=scprogresscontainer>
+    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+  </div>
+  
+      
+<ul>
+  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 7.18. Mixed Up Code Practice' data-toggle="tooltip">
+    <a href="review-2.html" aria-label="7.18. Mixed Up Code Practice">
+        <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+            <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+        </div>
+    </a>
+  </li>
+</ul>
+
+  
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+<script>
+	function mouseOverPrev() {
+		document.getElementById("relations-prev").style.opacity=1;
+	}
+
+	function mouseOutPrev() {
+		document.getElementById("relations-prev").style.opacity=0.4;
+	}
+	function mouseOverNext() {
+		document.getElementById("relations-next").style.opacity=1;
+	}
+
+	function mouseOutNext() {
+		document.getElementById("relations-next").style.opacity=0.4;
+	}
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020-2021 Dave Parillo.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.5.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> getSwitch(); </script>
+
+
+  </body>
+</html>

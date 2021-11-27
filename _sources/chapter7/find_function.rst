@@ -48,7 +48,6 @@ appears in the string.
   ~~~~
   #include <iostream>
   #include <string>
-  using namespace std;
 
   int main() {
       std::string fruit = "banana";

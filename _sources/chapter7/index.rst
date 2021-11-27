@@ -21,8 +21,6 @@ Strings and things
    other_string_functions.rst
    glossary.rst
    review-1.rst
-
-..
-   mixed_up_code.rst
-   coding_practice.rst
+   review-2.rst
+   review-3.rst
 
