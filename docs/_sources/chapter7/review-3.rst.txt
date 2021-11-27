@@ -316,7 +316,7 @@ Coding Practice
 
                string rotate13(string message) {
                    size_t pos = 0;
-                   while (pos < input.size()) {
+                   while (pos < message.size()) {
                       char& letter = message[pos];
                        if (std::isalpha(letter) != 0) {
                           if ((std::islower(letter) != 0 && letter < 'n') ||
