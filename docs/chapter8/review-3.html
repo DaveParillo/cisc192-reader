@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8.15. Coding Practice &#8212; CISC 192 Course Reader Overview</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.5.5" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/runestone.js?v=92D8BBF0"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../_static/theme.js?v=D899FB97"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="8.14. Mixed Up Code Practice" href="review-2.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'https://daveparillo.github.io/cisc192-reader/' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/cisc192-reader';
+    eBookConfig.course = 'cisc192-reader';
+    eBookConfig.basecourse = 'cisc192-reader';
+    eBookConfig.isLoggedIn = false;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
+  eBookConfig.runestone_version = '5.5.5';
+  eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+          <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;'>&nbsp;<span aria-label="logo" class="visuallyhidden">Runestone Logo</span> </a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          cisc192-reader
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">8.14. </span>Mixed Up Code Practice" data-toggle="tooltip">
+    <a href="review-2.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+    <li class="divider-vertical"></li>
+  
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+      </div> <!-- navbar -->
+
+
+
+
+
+
+
+    </div> <!-- container -->
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="coding-practice">
+<h1><span class="section-number">8.15. </span>Coding Practice<a class="headerlink" href="#coding-practice" title="Permalink to this headline">¶</a></h1>
+<div id='self_check' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Q1" >
+<div id='cp_8_1' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+<p>Write the function <code class="docutils literal notranslate"><span class="pre">rectangleInfo</span></code> which prompts the user for the width
+and height of a rectangle. Then <code class="docutils literal notranslate"><span class="pre">rectangleInfo</span></code> prints out the area and
+perimeter of the rectangle.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_8_AC_1q >
+<div id=cp_8_AC_1q_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="cp_8_AC_1q_editor" data-question_label="8.15.1" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''   data-stdin='4, 6'   
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+void rectangleInfo () {
+    // Write your implementation here.
+}
+
+int main() {
+    rectangleInfo ();
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+<p>Below is one way to implement the program. We prompt the user for input
+using <code class="docutils literal notranslate"><span class="pre">cin</span></code> before printing the area and perimeter.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_8_AC_1a >
+<div id=cp_8_AC_1a_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="cp_8_AC_1a_editor" data-question_label="8.15.2" 
+      data-timelimit=25000  data-codelens="true"   data-optional=true
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+
+void rectangleInfo () {
+    int height, width;
+    std::cout << "Please enter the height and width of a rectangle separated by spaces: ";
+    std::cin >> height >> width;
+    std::cout << "The area of the rectangle is " << height * width << '\n';
+    std::cout << "The perimeter of the rectangle is " << 2 * (height + width) << '\n';
+}
+
+int main() {
+    rectangleInfo ();
+}
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</div><div data-component="tab" data-tabname="Q2" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_8_AC_2q >
+<div id=cp_8_AC_2q_question class="ac_question col-md-12">
+<p>Write a simple function called <code class="docutils literal notranslate"><span class="pre">greetUser</span></code> which prompts the user
+for their full name. Then the function outputs “Hello <code class="docutils literal notranslate"><span class="pre">fullName</span></code>!”.</p>
+
+</div>
+<textarea data-lang="cpp" id="cp_8_AC_2q_editor" data-question_label="8.15.3" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''   data-stdin='Captain America'   
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+
+void greetUser () {
+    // Write your implementation here.
+}
+
+int main() {
+    greetUser ();
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Q3" >
+<div id='cp_8_3' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+<p>In the not so distant future, robots have replaced humans to do any kind of imaginable
+work or chore. Define the <code class="docutils literal notranslate"><span class="pre">Robot</span></code> structure, which has instance variables <code class="docutils literal notranslate"><span class="pre">string</span> <span class="pre">name</span></code>,
+<code class="docutils literal notranslate"><span class="pre">string</span> <span class="pre">model</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">serialNumber</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">batteryLevelPercentage</span></code>,
+and <code class="docutils literal notranslate"><span class="pre">string</span> <span class="pre">task</span></code> in that order. Then write the <code class="docutils literal notranslate"><span class="pre">printRobotData</span></code> function, which
+takes a <code class="docutils literal notranslate"><span class="pre">Robot</span></code> as a parameter and prints out the robot’s data in the following format:
+<code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">model</span></code> <code class="docutils literal notranslate"><span class="pre">serialNumber</span></code>) has <code class="docutils literal notranslate"><span class="pre">batteryLevelPercentage</span></code>
+percent battery and is currently executing the task “<code class="docutils literal notranslate"><span class="pre">task</span></code>”.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_8_AC_3q >
+<div id=cp_8_AC_3q_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="cp_8_AC_3q_editor" data-question_label="8.15.4" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+
+// Write your code for the struct Robot here.
+
+// Write your code for the function printRobotData here.
+
+int main() {
+    Robot rob = { "Rob", "XLV", 9800, 45, "washing dishes" };
+    std::cout << "Your output:\n";
+    printRobotData (rob);
+    std::cout << "Correct output:\n";
+    std::cout << "Rob (XLV 9800) has 45 percent battery and is currently executing the task \"washing dishes\"";
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+<p>Below is one way to implement the program. First we declare the instance variables
+in the <code class="docutils literal notranslate"><span class="pre">struct</span></code> definition. Next, we use dot notation to access
+the instance variables and output them using <code class="docutils literal notranslate"><span class="pre">cout</span></code>.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_8_AC_3a >
+<div id=cp_8_AC_3a_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="cp_8_AC_3a_editor" data-question_label="8.15.5" 
+      data-timelimit=25000  data-codelens="true"   data-optional=true
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+struct Robot {
+    string name;
+    string model;
+    int serialNumber;
+    int batteryLevelPercentage;
+    string task;
+};
+
+void printRobotData (Robot r) {
+     cout << r.name << " (" << r.model << " " << r.serialNumber
+          << ") has " << r.batteryLevelPercentage
+          << " percent battery and is currently executing the task \""
+          << r.task << "\"" << endl;
+}
+
+int main() {
+    Robot rob = { "Rob", "XLV", 9800, 45, "washing dishes" };
+    cout << "Your output:" << endl;
+    printRobotData (rob);
+    cout << "Correct output:" << endl;
+    cout << "Rob (XLV 9800) has 45 percent battery and is currently executing the task \"washing dishes\"";
+}
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</div><div data-component="tab" data-tabname="Q4" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_8_AC_4q >
+<div id=cp_8_AC_4q_question class="ac_question col-md-12">
+<p>Robots will naturally deplete their charge as they carry out tasks.
+Write a function called <code class="docutils literal notranslate"><span class="pre">chargeRobot</span></code> which takes a <code class="docutils literal notranslate"><span class="pre">Robot</span></code> as
+a parameter and charges the robot to 100 percent. Then output the statement
+“Robot <code class="docutils literal notranslate"><span class="pre">name</span></code> is fully charged!”.</p>
+
+</div>
+<textarea data-lang="cpp" id="cp_8_AC_4q_editor" data-question_label="8.15.6" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+struct Robot {
+    string name;
+    string model;
+    int serialNumber;
+    int batteryLevelPercentage;
+    string task;
+};
+
+void printRobotData (Robot r);
+
+// Write your code for the function chargeRobot here.
+
+int main() {
+    Robot bob = { "Bob", "MKZ", 143, 65, "sweeping floors" };
+    chargeRobot (bob);
+    cout << "Your output:" << endl;
+    printRobotData (bob);
+    cout << "Correct output:" << endl;
+    cout << "Bob (MKZ 143) has 100 percent battery and is currently executing the task \"sweeping floors\"";
+}
+====
+void printRobotData (Robot r) {
+    cout << r.name << " (" << r.model << " " << r.serialNumber
+            << ") has " << r.batteryLevelPercentage
+            << " percent battery and is currently executing the task \""
+            << r.task << "\"" << endl;
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Q5" >
+<div id='cp_8_5' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+<p>In case a robot malfunctions, let’s write the function <code class="docutils literal notranslate"><span class="pre">resetRobot</span></code>. <code class="docutils literal notranslate"><span class="pre">resetRobot</span></code>
+takes a <code class="docutils literal notranslate"><span class="pre">Robot</span></code> as a parameter and resets its name to “EnterAName”,
+recharges the battery to 100 percent, and resets the task to “Idle”.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_8_AC_5q >
+<div id=cp_8_AC_5q_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="cp_8_AC_5q_editor" data-question_label="8.15.7" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+struct Robot {
+    string name;
+    string model;
+    int serialNumber;
+    int batteryLevelPercentage;
+    string task;
+};
+
+void printRobotData (Robot r);
+
+// Write your code for the function resetRobot here.
+
+int main() {
+    Robot a = { "Bot", "RSO", 1985, 32, "gardening" };
+    resetRobot (a);
+    cout << "Your output:" << endl;
+    printRobotData (a);
+    cout << "Correct output:" << endl;
+    cout << "EnterAName (RSO 1985) has 100 percent battery and is currently executing the task \"Idle\"";
+}
+====
+void printRobotData (Robot r) {
+     cout << r.name << " (" << r.model << " " << r.serialNumber
+          << ") has " << r.batteryLevelPercentage
+          << " percent battery and is currently executing the task \""
+          << r.task << "\"" << endl;
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+<p>Below is one way to implement the program. We can create another <code class="docutils literal notranslate"><span class="pre">Robot</span></code>
+with the settings after being reset. Then we set <code class="docutils literal notranslate"><span class="pre">r</span></code> equal to the new
+<code class="docutils literal notranslate"><span class="pre">Robot</span></code> we created. Notice we use dot notation to ensure that the
+<code class="docutils literal notranslate"><span class="pre">model</span></code> and <code class="docutils literal notranslate"><span class="pre">serialNumber</span></code> are the same.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_8_AC_5a >
+<div id=cp_8_AC_5a_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="cp_8_AC_5a_editor" data-question_label="8.15.8" 
+      data-timelimit=25000  data-codelens="true"   data-optional=true
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+struct Robot {
+    string name;
+    string model;
+    int serialNumber;
+    int batteryLevelPercentage;
+    string task;
+};
+
+void printRobotData (Robot r);
+
+void resetRobot(Robot& r) {
+    Robot reset = { "EnterAName", r.model, r.serialNumber, 100, "Idle" };
+    r = reset;
+}
+
+int main() {
+    Robot a = { "Bot", "RSO", 1985, 32, "gardening" };
+    resetRobot (a);
+    cout << "Your output:" << endl;
+    printRobotData (a);
+    cout << "Correct output:" << endl;
+    cout << "EnterAName (RSO 1985) has 100 percent battery and is currently executing the task \"Idle\"";
+}
+====
+void printRobotData (Robot r) {
+     cout << r.name << " (" << r.model << " " << r.serialNumber
+          << ") has " << r.batteryLevelPercentage
+          << " percent battery and is currently executing the task \""
+          << r.task << "\"" << endl;
+}
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</div><div data-component="tab" data-tabname="Q6" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_8_AC_6q >
+<div id=cp_8_AC_6q_question class="ac_question col-md-12">
+<p>Write the <code class="docutils literal notranslate"><span class="pre">Pokemon</span></code> structure, which has instance variables <code class="docutils literal notranslate"><span class="pre">string</span> <span class="pre">pokeName</span></code>,
+<code class="docutils literal notranslate"><span class="pre">string</span> <span class="pre">type</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">level</span></code>, and <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">healthPercentage</span></code> in that order.
+Next, write the function <code class="docutils literal notranslate"><span class="pre">printPokeInfo</span></code>, which takes a <code class="docutils literal notranslate"><span class="pre">Pokemon</span></code> as a parameter and outputs the
+Pokemon’s info in the following format: <code class="docutils literal notranslate"><span class="pre">pokeName</span></code> (Lv. <code class="docutils literal notranslate"><span class="pre">level</span></code>, <code class="docutils literal notranslate"><span class="pre">healthPercentage</span></code>% HP).</p>
+
+</div>
+<textarea data-lang="cpp" id="cp_8_AC_6q_editor" data-question_label="8.15.9" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+// Write your code for the struct Pokemon here.
+
+// Write your code for the function printPokeInfo here.
+
+int main() {
+    Pokemon magikarp = { "Magikarp", "Water", 12, 100 };
+    cout << "Your output:" << endl;
+    printPokeInfo (magikarp);
+    cout << "Correct output:" << endl;
+    cout << "Magikarp (Lv. 12, 100% HP)";
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Q7" >
+<div id='cp_8_7' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+<p>Now write the <code class="docutils literal notranslate"><span class="pre">Trainer</span></code> structure, which has instance variables
+<code class="docutils literal notranslate"><span class="pre">string</span> <span class="pre">trainerName</span></code>, <code class="docutils literal notranslate"><span class="pre">char</span> <span class="pre">gender</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">numBadges</span></code>, and six <code class="docutils literal notranslate"><span class="pre">Pokemon</span></code> objects
+named <code class="docutils literal notranslate"><span class="pre">first</span></code>, <code class="docutils literal notranslate"><span class="pre">second</span></code>, etc., in that order. Then, write the function
+<code class="docutils literal notranslate"><span class="pre">printTrainerInfo</span></code>, which takes a <code class="docutils literal notranslate"><span class="pre">Trainer</span></code> as a parameter and outputs the
+trainer’s info. For example, the code below should print:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Trainer Red has 8 badges and Red&#39;s team consists of
+Pikachu (Lv. 81, 100% HP)
+Espeon (Lv. 72, 100% HP)
+Snorlax (Lv. 75, 100% HP)
+Venusaur (Lv. 77, 100% HP)
+Charizard (Lv. 77, 100% HP)
+Blastoise (Lv. 77, 100% HP)
+</pre></div>
+</div>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_8_AC_7q >
+<div id=cp_8_AC_7q_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="cp_8_AC_7q_editor" data-question_label="8.15.10" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+struct Pokemon {
+    string pokeName;
+    string type;
+    int level;
+    int healthPercentage;
+};
+
+// Write your code for the struct Trainer here.
+
+void printPokeInfo(Pokemon p);
+
+// Write your code for the function printTrainerInfo here.
+
+int main() {
+    Pokemon pikachu = { "Pikachu", "Electric", 81, 100 };
+    Pokemon espeon = { "Espeon", "Psychic", 72, 100 };
+    Pokemon snorlax = { "Snorlax", "Normal", 75, 100 };
+    Pokemon venusaur = { "Venusaur", "Grass & Poison", 77, 100 };
+    Pokemon charizard = { "Charizard", "Fire & Flying", 77, 100 };
+    Pokemon blastoise = { "Blastoise", "Water", 77, 100 };
+    Trainer red = { "Red", 'M', 8, pikachu, espeon, snorlax, venusaur, charizard, blastoise };
+    printTrainerInfo (red);
+}
+====
+void printPokeInfo(Pokemon p) {
+    cout << p.pokeName << " (Lv. " << p.level << ", " << p.healthPercentage << "% HP)" << endl;
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+<p>Below is one way to implement the program. First we declare the instance variables
+in the <code class="docutils literal notranslate"><span class="pre">struct</span></code> definition. Next, we call <code class="docutils literal notranslate"><span class="pre">printPokeInfo</span></code> on each <code class="docutils literal notranslate"><span class="pre">Pokemon</span></code>
+in <code class="docutils literal notranslate"><span class="pre">Trainer</span></code> and output the trainer’s info in the correct format.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_8_AC_7a >
+<div id=cp_8_AC_7a_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="cp_8_AC_7a_editor" data-question_label="8.15.11" 
+      data-timelimit=25000  data-codelens="true"   data-optional=true
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+struct Pokemon {
+    string pokeName;
+    string type;
+    int level;
+    int healthPercentage;
+};
+
+struct Trainer {
+    string trainerName;
+    char gender;
+    int numBadges;
+    Pokemon first, second, third, fourth, fifth, sixth;
+};
+
+void printPokeInfo(Pokemon p);
+
+void printTrainerInfo(Trainer t) {
+    cout << "Trainer " << t.trainerName << " has " << t.numBadges
+         << " badges and " << t.trainerName << "'s team consists of " << endl;
+    printPokeInfo(t.first);
+    printPokeInfo(t.second);
+    printPokeInfo(t.third);
+    printPokeInfo(t.fourth);
+    printPokeInfo(t.fifth);
+    printPokeInfo(t.sixth);
+}
+
+int main() {
+    Pokemon pikachu = { "Pikachu", "Electric", 81, 100 };
+    Pokemon espeon = { "Espeon", "Psychic", 72, 100 };
+    Pokemon snorlax = { "Snorlax", "Normal", 75, 100 };
+    Pokemon venusaur = { "Venusaur", "Grass & Poison", 77, 100 };
+    Pokemon charizard = { "Charizard", "Fire & Flying", 77, 100 };
+    Pokemon blastoise = { "Blastoise", "Water", 77, 100 };
+    Trainer red = { "Red", 'M', 8, pikachu, espeon, snorlax, venusaur, charizard, blastoise };
+    printTrainerInfo (red);
+}
+====
+void printPokeInfo(Pokemon p) {
+    cout << p.pokeName << " (Lv. " << p.level << ", " << p.healthPercentage << "% HP)" << endl;
+}
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</div><div data-component="tab" data-tabname="Q8" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_8_AC_8q >
+<div id=cp_8_AC_8q_question class="ac_question col-md-12">
+<p>When Pokemon are injured, they can be healed up at the Pokemon Center.
+Write the function <code class="docutils literal notranslate"><span class="pre">healPokemon</span></code>, which takes a <code class="docutils literal notranslate"><span class="pre">Trainer</span></code> as a parameter
+and heals the Trainer’s Pokemon to 100 percent health.</p>
+
+</div>
+<textarea data-lang="cpp" id="cp_8_AC_8q_editor" data-question_label="8.15.12" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+struct Pokemon {
+    string pokeName;
+    string type;
+    int level;
+    int healthPercentage;
+};
+
+struct Trainer {
+    string trainerName;
+    char gender;
+    int numBadges;
+    Pokemon first, second, third, fourth, fifth, sixth;
+};
+
+void printPokeInfo(Pokemon p);
+void printTrainerInfo(Trainer t);
+
+// Write your code for the function healPokemon here.
+
+int main() {
+    Pokemon exeggutor = {"Exeggutor", "Grass & Psychic", 58, 78};
+    Pokemon alakazam = {"Alakazam", "Psychic", 54, 0};
+    Pokemon arcanine = {"Arcanine", "Fire", 58, 24};
+    Pokemon rhydon = {"Rhydon", "Ground & Rock", 56, 55};
+    Pokemon gyarados = {"Gyarados", "Water & Flying", 58, 100};
+    Pokemon pidgeot = {"Pidgeot", "Normal & Flying", 56, 35};
+    Trainer blue = {"Blue", 'M', 8, exeggutor, alakazam, arcanine, rhydon, gyarados, pidgeot};
+    printTrainerInfo(blue);
+    healPokemon(blue);
+    printTrainerInfo(blue);  // Pokemon should now all be healed to 100% health
+}
+====
+void printPokeInfo(Pokemon p) {
+    cout << p.pokeName << " (Lv. " << p.level << ", " << p.healthPercentage << "% HP)" << endl;
+}
+
+void printTrainerInfo(Trainer t) {
+    cout << "Trainer " << t.trainerName << " has " << t.numBadges
+        << " badges and " << t.trainerName << "'s team consists of " << endl;
+    printPokeInfo(t.first);
+    printPokeInfo(t.second);
+    printPokeInfo(t.third);
+    printPokeInfo(t.fourth);
+    printPokeInfo(t.fifth);
+    printPokeInfo(t.sixth);
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Q9" >
+<div id='cp_8_9' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+<p>Now write the function <code class="docutils literal notranslate"><span class="pre">pokeCenter</span></code> which takes a <code class="docutils literal notranslate"><span class="pre">Trainer</span></code> as a parameter and
+prompts the user if they’d like to heal their Pokemon. Below are the
+possible outputs (y, n, or an invalid input). If user inputs ‘y’, call <code class="docutils literal notranslate"><span class="pre">healPokemon</span></code>
+and output the correct dialogue. If user inputs ‘n’, don’t call <code class="docutils literal notranslate"><span class="pre">healPokemon</span></code>
+and output the correct dialogue. If user inputs an invalid character, output the error message.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Welcome to the Pokémon Center. Would you like me to take your Pokémon? (y/n) y
+Okay, I&#39;ll take your Pokémon for a few seconds.
+Your Pokémon are now healed. We hope to see you again.
+
+or
+
+Welcome to the Pokémon Center. Would you like me to take your Pokémon? (y/n) n
+We hope to see you again.
+
+or
+
+Welcome to the Pokémon Center. Would you like me to take your Pokémon? (y/n) h
+Sorry, not a valid input.
+</pre></div>
+</div>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_8_AC_9q >
+<div id=cp_8_AC_9q_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="cp_8_AC_9q_editor" data-question_label="8.15.13" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''   data-stdin='y'   
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+struct Pokemon {
+    string pokeName;
+    string type;
+    int level;
+    int healthPercentage;
+};
+
+struct Trainer {
+    string trainerName;
+    char gender;
+    int numBadges;
+    Pokemon first, second, third, fourth, fifth, sixth;
+};
+
+void printPokeInfo(Pokemon p);
+void printTrainerInfo(Trainer t);
+void healPokemon(Trainer& t);
+
+// Write your code for the function pokeCenter here.
+
+int main() {
+    Pokemon exeggutor = {"Exeggutor", "Grass & Psychic", 58, 78};
+    Pokemon alakazam = {"Alakazam", "Psychic", 54, 0};
+    Pokemon arcanine = {"Arcanine", "Fire", 58, 24};
+    Pokemon rhydon = {"Rhydon", "Ground & Rock", 56, 55};
+    Pokemon gyarados = {"Gyarados", "Water & Flying", 58, 100};
+    Pokemon pidgeot = {"Pidgeot", "Normal & Flying", 56, 35};
+    Trainer blue = {"Blue", 'M', 8, exeggutor, alakazam, arcanine, rhydon, gyarados, pidgeot};
+    printTrainerInfo(blue);
+    pokeCenter(blue);
+    printTrainerInfo(blue);  // Pokemon should now all be healed to 100% health
+}
+====
+void printPokeInfo(Pokemon p) {
+    cout << p.pokeName << " (Lv. " << p.level << ", " << p.healthPercentage << "% HP)" << endl;
+}
+
+void printTrainerInfo(Trainer t) {
+    cout << "Trainer " << t.trainerName << " has " << t.numBadges
+         << " badges and " << t.trainerName << "'s team consists of " << endl;
+    printPokeInfo(t.first);
+    printPokeInfo(t.second);
+    printPokeInfo(t.third);
+    printPokeInfo(t.fourth);
+    printPokeInfo(t.fifth);
+    printPokeInfo(t.sixth);
+}
+
+void healPokemon(Trainer& t) {
+    t.first.healthPercentage = 100;
+    t.second.healthPercentage = 100;
+    t.third.healthPercentage = 100;
+    t.fourth.healthPercentage = 100;
+    t.fifth.healthPercentage = 100;
+    t.sixth.healthPercentage = 100;
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+<p>Below is one way to implement the program. We use conditionals to perform
+the correct output and operation depending on the user’s input.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_8_AC_9a >
+<div id=cp_8_AC_9a_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="cp_8_AC_9a_editor" data-question_label="8.15.14" 
+      data-timelimit=25000  data-codelens="true"   data-optional=true
+    data-audio=''   data-stdin='y'   
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+struct Pokemon {
+    string pokeName;
+    string type;
+    int level;
+    int healthPercentage;
+};
+
+struct Trainer {
+    string trainerName;
+    char gender;
+    int numBadges;
+    Pokemon first, second, third, fourth, fifth, sixth;
+};
+
+void printPokeInfo(Pokemon p);
+void printTrainerInfo(Trainer t);
+void healPokemon(Trainer& t);
+
+void pokeCenter(Trainer& t) {
+    char response;
+    cout << "Welcome to the Pokémon Center. Would you like me to take your Pokémon? (y/n) ";
+    cin >> response;
+    if (response == 'y') {
+        cout << "Okay, I'll take your Pokémon for a few seconds." << endl;
+        healPokemon(t);
+        cout << "Your Pokémon are now healed. We hope to see you again." << endl;
+    }
+    else if (response == 'n') {
+        cout << "We hope to see you again." << endl;
+    }
+    else {
+        cout << "Sorry, not a valid input." << endl;
+    }
+}
+
+int main() {
+    Pokemon exeggutor = {"Exeggutor", "Grass & Psychic", 58, 78};
+    Pokemon alakazam = {"Alakazam", "Psychic", 54, 0};
+    Pokemon arcanine = {"Arcanine", "Fire", 58, 24};
+    Pokemon rhydon = {"Rhydon", "Ground & Rock", 56, 55};
+    Pokemon gyarados = {"Gyarados", "Water & Flying", 58, 100};
+    Pokemon pidgeot = {"Pidgeot", "Normal & Flying", 56, 35};
+    Trainer blue = {"Blue", 'M', 8, exeggutor, alakazam, arcanine, rhydon, gyarados, pidgeot};
+    printTrainerInfo(blue);
+    pokeCenter(blue);
+    printTrainerInfo(blue);  // Pokemon should now all be healed to 100% health
+}
+====
+void printPokeInfo(Pokemon p) {
+    cout << p.pokeName << " (Lv. " << p.level << ", " << p.healthPercentage << "% HP)" << endl;
+}
+
+void printTrainerInfo(Trainer t) {
+    cout << "Trainer " << t.trainerName << " has " << t.numBadges
+         << " badges and " << t.trainerName << "'s team consists of " << endl;
+    printPokeInfo(t.first);
+    printPokeInfo(t.second);
+    printPokeInfo(t.third);
+    printPokeInfo(t.fourth);
+    printPokeInfo(t.fifth);
+    printPokeInfo(t.sixth);
+}
+
+void healPokemon(Trainer& t) {
+    t.first.healthPercentage = 100;
+    t.second.healthPercentage = 100;
+    t.third.healthPercentage = 100;
+    t.fourth.healthPercentage = 100;
+    t.fifth.healthPercentage = 100;
+    t.sixth.healthPercentage = 100;
+}
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</div><div data-component="tab" data-tabname="Q10" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_8_AC_10q >
+<div id=cp_8_AC_10q_question class="ac_question col-md-12">
+<p>Ever wanted to know how much you’d weigh on each planet? Write the <code class="docutils literal notranslate"><span class="pre">convertWeight</span></code>
+function, which takes a <code class="docutils literal notranslate"><span class="pre">double</span> <span class="pre">earthWeight</span></code> and <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">planet</span></code> as parameters. First,
+in <code class="docutils literal notranslate"><span class="pre">main</span></code>, prompt the user to enter their weight in pounds and a number corresponding to
+a planet (Mercury is 1, Venus is 2, etc.). Next, call the <code class="docutils literal notranslate"><span class="pre">convertWeight</span></code> function using
+the user’s input. Finally, print out their weight on that planet.
+If the user inputs an invalid planet, print out an error message.
+The weight conversion are as follows (multiply the number by <code class="docutils literal notranslate"><span class="pre">earthWeight</span></code> to get the weight on that planet):
+Mercury - 0.38, Venus - 0.91, Earth - 1.00, Mars - 0.38, Jupiter - 2.34, Saturn - 1.06, Uranus - 0.92, and Neptune - 1.19.
+Below are some examples.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Please</span> <span class="n">enter</span> <span class="n">your</span> <span class="n">weight</span> <span class="n">in</span> <span class="nl">pounds</span><span class="p">:</span> <span class="mf">145.6</span>
+<span class="n">Please</span> <span class="n">select</span> <span class="n">a</span> <span class="nl">planet</span><span class="p">:</span> <span class="mi">3</span>
+<span class="n">Your</span> <span class="n">weight</span> <span class="n">on</span> <span class="n">Earth</span> <span class="n">is</span> <span class="mf">145.6</span> <span class="n">pounds</span><span class="p">.</span>
+
+<span class="n">or</span>
+
+<span class="n">Please</span> <span class="n">enter</span> <span class="n">your</span> <span class="n">weight</span> <span class="n">in</span> <span class="nl">pounds</span><span class="p">:</span> <span class="mi">170</span>
+<span class="n">Please</span> <span class="n">select</span> <span class="n">a</span> <span class="nl">planet</span><span class="p">:</span> <span class="mi">1</span>
+<span class="n">Your</span> <span class="n">weight</span> <span class="n">on</span> <span class="n">Mercury</span> <span class="n">is</span> <span class="mf">64.6</span> <span class="n">pounds</span><span class="p">.</span>
+
+<span class="n">or</span>
+
+<span class="n">Please</span> <span class="n">enter</span> <span class="n">your</span> <span class="n">weight</span> <span class="n">in</span> <span class="nl">pounds</span><span class="p">:</span> <span class="mi">170</span>
+<span class="n">Please</span> <span class="n">select</span> <span class="n">a</span> <span class="nl">planet</span><span class="p">:</span> <span class="mi">23</span>
+<span class="n">Error</span><span class="p">,</span> <span class="n">not</span> <span class="n">a</span> <span class="n">valid</span> <span class="n">planet</span><span class="p">.</span>
+</pre></div>
+</div>
+
+</div>
+<textarea data-lang="cpp" id="cp_8_AC_10q_editor" data-question_label="8.15.15" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''   data-stdin='145, 2'   
+           data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+// Write your code for the function convertWeight here.
+
+int main() {
+    // Write your implementation here.
+}
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</div>
+
+
+  <div id=scprogresscontainer>
+    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+  </div>
+  
+      
+<ul>
+  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 8.14. Mixed Up Code Practice' data-toggle="tooltip">
+    <a href="review-2.html" aria-label="8.14. Mixed Up Code Practice">
+        <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+            <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+        </div>
+    </a>
+  </li>
+</ul>
+
+  
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+<script>
+	function mouseOverPrev() {
+		document.getElementById("relations-prev").style.opacity=1;
+	}
+
+	function mouseOutPrev() {
+		document.getElementById("relations-prev").style.opacity=0.4;
+	}
+	function mouseOverNext() {
+		document.getElementById("relations-next").style.opacity=1;
+	}
+
+	function mouseOutNext() {
+		document.getElementById("relations-next").style.opacity=0.4;
+	}
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020-2021 Dave Parillo.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.5.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> getSwitch(); </script>
+
+
+  </body>
+</html>
