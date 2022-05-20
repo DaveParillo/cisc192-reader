@@ -14,6 +14,7 @@ assess what you have learned in this chapter.
 
             .. activecode:: functions_a1q
                :language: cpp
+               :compileargs: ['-Wall', '-std=c++11']
                :nocodelens:
 
                Fix the errors in the code below so that it prints the area of a circle with radius 5.  Use cmath functions to get an accurate value for pi.
@@ -36,6 +37,7 @@ assess what you have learned in this chapter.
 
             .. activecode:: functions_a1a
                :language: cpp
+               :compileargs: ['-Wall', '-std=c++11']
                :nocodelens:
 
                Below is one way to fix the program.  C++ doesn't use the ``^`` operator for exponents.  We can get the square of ``r`` by multiplying it by itself.  We call the function with an argument of ``5``.
@@ -55,6 +57,7 @@ assess what you have learned in this chapter.
 
       .. activecode:: functions_a2
          :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
          :nocodelens:
 
          Fix the code below so that it prints "2 elephants".
@@ -80,6 +83,7 @@ assess what you have learned in this chapter.
 
             .. activecode:: functions_a3q
                :language: cpp
+               :compileargs: ['-Wall', '-std=c++11']
                :nocodelens:
 
                Fix the code below so that it prints ``12 / 8 = 1.5.``
@@ -103,6 +107,7 @@ assess what you have learned in this chapter.
 
             .. activecode:: functions_a3a
                :language: cpp
+               :compileargs: ['-Wall', '-std=c++11']
                :nocodelens:
 
                Below is one way to fix the program.  It's crucial that you input your arguments in the correct order so as to avoid a semantic error.  Also, it's important that you understand that when you divide two integers... you will get an integer as a result.
@@ -125,6 +130,7 @@ assess what you have learned in this chapter.
 
       .. activecode:: functions_a4
          :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
          :nocodelens:
 
          Finish the code below so that it calculates the common log of ``a`` minus the *natural* log of ``a`` and prints the difference. You will need to use cmath functions.
@@ -152,6 +158,7 @@ assess what you have learned in this chapter.
 
             .. activecode:: functions_a5q
                :language: cpp
+               :compileargs: ['-Wall', '-std=c++11']
                :nocodelens:
 
                Finish the code below so that it prints "First Line", a border, and "Second Line." on three separate lines.
@@ -172,6 +179,7 @@ assess what you have learned in this chapter.
 
             .. activecode:: functions_a5a
                :language: cpp
+               :compileargs: ['-Wall', '-std=c++11']
                :nocodelens:
 
                Below is one way to complete the program.
@@ -194,6 +202,7 @@ assess what you have learned in this chapter.
 
       .. activecode:: functions_a6
          :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
          :nocodelens:
 
          Write a function called ``doubleDiv`` that takes two doubles as parameters and prints the quotient of the **integer division** of the first number divided by the second.  Be sure to include any necessary headers.
@@ -216,6 +225,7 @@ assess what you have learned in this chapter.
 
             .. activecode:: functions_a7q
                :language: cpp
+               :compileargs: ['-Wall', '-std=c++11']
                :nocodelens:
 
                Write a function called gpaBoost that prints your GPA rounded up to the nearest point.  If your GPA is already at the nearest point, there is no rounding.  Be sure to include any necessary headers.
@@ -233,6 +243,7 @@ assess what you have learned in this chapter.
 
             .. activecode:: functions_a7a
                :language: cpp
+               :compileargs: ['-Wall', '-std=c++11']
                :nocodelens:
 
                Below is one way to complete the program.  I used the ``ceil`` function from the ``cmath`` library, but you could have solved this problem without using any functions from ``cmath``.
@@ -251,6 +262,7 @@ assess what you have learned in this chapter.
 
       .. activecode:: functions_a8
          :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
          :nocodelens:
 
          Write a function called ``volumePrism`` that takes three ``double`` sidelengths as parameters, and calculates and prints the volume of a the rectangular prism.  Be sure to include any necessary headers.
@@ -273,6 +285,7 @@ assess what you have learned in this chapter.
 
             .. activecode:: functions_a9q
                :language: cpp
+               :compileargs: ['-Wall', '-std=c++11']
                :nocodelens:
 
                Write a function called ``tanD`` that prints the tangent of an angle given as a ``double`` in degrees. Use 3.14 for pi.  Be sure to include any necessary headers.
@@ -291,6 +304,7 @@ assess what you have learned in this chapter.
 
             .. activecode:: functions_a9a
                :language: cpp
+               :compileargs: ['-Wall', '-std=c++11']
                :nocodelens:
 
                Below is one way to complete the program.  You need to make sure to convert your angle to radians before doing any calculations with sinusoidal functions.
@@ -310,6 +324,7 @@ assess what you have learned in this chapter.
 
       .. activecode:: functions_a10
          :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
          :nocodelens:
 
          Write a function called ``volumeSphere`` that takes a ``double`` radius as a parameter, and calculates and prints the volume of a sphere with that radius.  Use 3.14 for ``pi``.  Be sure to include any necessary headers.

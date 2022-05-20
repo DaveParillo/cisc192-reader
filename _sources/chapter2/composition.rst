@@ -17,6 +17,8 @@ turns out we can do both at the same time:
 
 .. activecode:: composition_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Multiplication Output
 
    This program performs multiplication and prints the result simultaneously.
@@ -37,6 +39,8 @@ used inside an output statement. We've already seen one example:
 
 .. activecode:: composition_AC_2
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Variable Output
 
    This program performs a calculation involving variables and prints the result at the same time.
@@ -57,6 +61,8 @@ assignment statement:
 
 .. activecode:: composition_AC_3
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Performing Calculations Before Assignment
 
    This program performs a calculation involving variables and simultaneously
@@ -142,17 +148,46 @@ values. So the following is illegal: ``minute + 1 = hour;``.
 
       .. activecode:: compos_4
          :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
+         :nocodelens:
 
-         Finish the code below so that the velocity is calculated and returned on the same line.  Hint: the current velocity results from 1) the initial velocity and 2) the acceleration over a window of time.  Use ``v0`` for initial velocity, ``a`` for acceleration, and ``t`` for time.
+         Finish the code below so that the velocity is calculated and 
+         returned on the same line.  
+         
+         Hint: the current velocity results from 
+         1) the initial velocity and 2) the acceleration over a window of time.
          ~~~~
-         int velocity(int v0, int a, int t) {
-             // You may only use the next line for your code.
+         int velocity(int initial_velocity, int acceleration, int time) {
+             // Modify the return statement to pass the tests
              return ;
          }
-         int main () {
-            cout << "Testing..." << endl;
-            cout << "Yours = " << velocity(5,3,4) << endl;;
-            cout << "Correct = 17";
+         ====
+
+         #include <functional>
+         #include <iomanip>
+         #include <iostream>
+         #include <string>
+
+         template <class T, class Compare = std::equal_to<T>>
+         void check (const std::string& name, const T& actual, 
+                     const T& expected, const Compare& op = Compare())
+         {
+           std::cout << std::left << std::setfill('.') 
+                     << std::setw(50) << name 
+                     << std::setw(7) <<  std::left;
+           if(op(actual, expected)) {
+             std::cout << " OK      \n";
+             return;
+           }
+           std::cout << " Try again!\n";
+           std::cout << "\treceived [" << actual
+                     << "], but expected [" << expected << "]\n";
+           exit(1);
+         }
+         int main() {
+             check("velocity(5,3,4)", velocity(5,3,4),  17);
+             check("velocity(3,5,8)", velocity(3,5,8),  43);
+             check("velocity(8,13,21)", velocity(8,13,21),  281);
          }
 
 
@@ -160,16 +195,49 @@ values. So the following is illegal: ``minute + 1 = hour;``.
 
       .. activecode:: compos_5
          :language: cpp
-         :autograde: unittest
+         :compileargs: ['-Wall', '-std=c++11']
+         :nocodelens:
 
-         Finish the code below so that the volume of a cylinder with radius ``r`` and height ``h`` is calculated and returned on the same line.  Use 3.14 for ``pi``.
+         Finish the code below so that the volume of a cylinder with radius ``r`` and height ``h`` is calculated and returned on the same line. 
          ~~~~
          double volume(int r, int h) {
-             // You may only use the next line for your code.
+             // Modify the return statement to pass the tests
              return ;
          }
-         int main () {
-            cout << "Testing..." << endl;
-            cout << "Yours = " << volume(3,4) << endl;;
-            cout << "Correct = 113.04";
+
+         ====
+
+         #include <cmath>
+         #include <functional>
+         #include <iomanip>
+         #include <iostream>
+         #include <string>
+
+         template <class T, class Compare = std::equal_to<T>>
+         void check (const std::string& name, const T& actual, 
+                     const T& expected, const Compare& op = Compare())
+         {
+           std::cout << std::left << std::setfill('.') 
+                     << std::setw(50) << name 
+                     << std::setw(7) <<  std::left;
+           if(op(actual, expected)) {
+             std::cout << " OK      \n";
+             return;
+           }
+           std::cout << " Try again!\n";
+           std::cout << "\treceived [" << actual
+                     << "], but expected [" << expected << "]\n";
+           exit(1);
          }
+         bool close_to(double x, double y)
+         {
+             return std::abs(x-y) < 0.001;
+         }
+         int main() {
+             check("volume(3,4)", volume(3, 4),  113.097, close_to);
+             check("volume(2,6)", volume(2, 6),  75.3982, close_to);
+             check("volume(5,4)", volume(5, 4),  314.159, close_to);
+         }
+
+
+

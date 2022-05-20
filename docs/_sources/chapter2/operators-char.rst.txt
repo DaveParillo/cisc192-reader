@@ -6,6 +6,8 @@ also work on characters. For example, observe the following output.
 
 .. activecode:: char_operations_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Adding to Characters
 
    This program performs character addition.  It works by converting
@@ -30,6 +32,8 @@ types. For example, the following is legal.
 
 .. activecode:: char_operations_AC_2
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Automatic Type Conversion
 
    This program performs automatic type converstion.  It converts 'a' 

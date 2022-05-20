@@ -96,6 +96,8 @@ More on scope and namespaces in the next chapter.
       .. activecode:: keywords_4
          :language: cpp
          :autograde: unittest
+         :compileargs: ['-Wall', '-std=c++11']
+         :nocodelens:
 
          Fix the code below so that it runs without errors.  Hint: you might need to change the names of some variables.
          ~~~~

@@ -25,6 +25,8 @@ using a syntax that is similar to mathematical notation:
 
 .. activecode:: math_functions_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Using the cmath Library
 
    This program performs calculations using some of the built-in functions 
@@ -63,6 +65,8 @@ it using the ``acos`` function. The arccosine (or inverse cosine) of -1 is
 
 .. activecode:: math_functions_AC_2
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Working with Angles
 
    This program also uses built-in functions from the cmath library,

@@ -44,6 +44,7 @@ Chapters
    chapter6/index.rst
    chapter7/index.rst
    chapter8/index.rst
+   chapter9/index.rst
 
 * :ref:`search`
 * :ref:`genindex`

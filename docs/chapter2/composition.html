@@ -253,9 +253,9 @@ turns out we can do both at the same time:</p>
 
 </div>
 <textarea data-lang="cpp" id="composition_AC_1_editor" data-question_label="2.11.1" 
-      data-timelimit=25000  data-codelens="true"   
+      data-timelimit=25000     
     data-audio=''      
-         data-caption='Multiplication Output'  data-wasm=/_static
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"     data-caption='Multiplication Output'  data-wasm=/_static
     style="visibility: hidden;">
 #include <iostream>
 using namespace std;
@@ -278,9 +278,9 @@ used inside an output statement. We’ve already seen one example:</p>
 
 </div>
 <textarea data-lang="cpp" id="composition_AC_2_editor" data-question_label="2.11.2" 
-      data-timelimit=25000  data-codelens="true"   
+      data-timelimit=25000     
     data-audio=''      
-         data-caption='Variable Output'  data-wasm=/_static
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"     data-caption='Variable Output'  data-wasm=/_static
     style="visibility: hidden;">
 #include <iostream>
 using namespace std;
@@ -304,9 +304,9 @@ assigns the result as the variable initial value.</p>
 
 </div>
 <textarea data-lang="cpp" id="composition_AC_3_editor" data-question_label="2.11.3" 
-      data-timelimit=25000  data-codelens="true"   
+      data-timelimit=25000     
     data-audio=''      
-         data-caption='Performing Calculations Before Assignment'  data-wasm=/_static
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"     data-caption='Performing Calculations Before Assignment'  data-wasm=/_static
     style="visibility: hidden;">
 #include <iostream>
 using namespace std;
@@ -396,22 +396,48 @@ values. So the following is illegal: <code class="docutils literal notranslate">
 <div class="runestone explainer ac_section alert alert-warning">
 <div data-component="activecode" id=compos_4 >
 <div id=compos_4_question class="ac_question col-md-12">
-<p>Finish the code below so that the velocity is calculated and returned on the same line.  Hint: the current velocity results from 1) the initial velocity and 2) the acceleration over a window of time.  Use <code class="docutils literal notranslate"><span class="pre">v0</span></code> for initial velocity, <code class="docutils literal notranslate"><span class="pre">a</span></code> for acceleration, and <code class="docutils literal notranslate"><span class="pre">t</span></code> for time.</p>
+<p>Finish the code below so that the velocity is calculated and
+returned on the same line.</p>
+<p>Hint: the current velocity results from
+1) the initial velocity and 2) the acceleration over a window of time.</p>
 
 </div>
 <textarea data-lang="cpp" id="compos_4_editor" data-question_label="2.11.7" 
-      data-timelimit=25000  data-codelens="true"   
+      data-timelimit=25000     
     data-audio=''      
-           data-wasm=/_static
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
     style="visibility: hidden;">
-int velocity(int v0, int a, int t) {
-    // You may only use the next line for your code.
+int velocity(int initial_velocity, int acceleration, int time) {
+    // Modify the return statement to pass the tests
     return ;
 }
-int main () {
-   cout << "Testing..." << endl;
-   cout << "Yours = " << velocity(5,3,4) << endl;;
-   cout << "Correct = 17";
+====
+
+#include <functional>
+#include <iomanip>
+#include <iostream>
+#include <string>
+
+template <class T, class Compare = std::equal_to<T>>
+void check (const std::string& name, const T& actual,
+            const T& expected, const Compare& op = Compare())
+{
+  std::cout << std::left << std::setfill('.')
+            << std::setw(50) << name
+            << std::setw(7) <<  std::left;
+  if(op(actual, expected)) {
+    std::cout << " OK      \n";
+    return;
+  }
+  std::cout << " Try again!\n";
+  std::cout << "\treceived [" << actual
+            << "], but expected [" << expected << "]\n";
+  exit(1);
+}
+int main() {
+    check("velocity(5,3,4)", velocity(5,3,4),  17);
+    check("velocity(3,5,8)", velocity(3,5,8),  43);
+    check("velocity(8,13,21)", velocity(8,13,21),  281);
 }
 </textarea>
 </div>
@@ -421,22 +447,51 @@ int main () {
 <div class="runestone explainer ac_section alert alert-warning">
 <div data-component="activecode" id=compos_5 >
 <div id=compos_5_question class="ac_question col-md-12">
-<p>Finish the code below so that the volume of a cylinder with radius <code class="docutils literal notranslate"><span class="pre">r</span></code> and height <code class="docutils literal notranslate"><span class="pre">h</span></code> is calculated and returned on the same line.  Use 3.14 for <code class="docutils literal notranslate"><span class="pre">pi</span></code>.</p>
+<p>Finish the code below so that the volume of a cylinder with radius <code class="docutils literal notranslate"><span class="pre">r</span></code> and height <code class="docutils literal notranslate"><span class="pre">h</span></code> is calculated and returned on the same line.</p>
 
 </div>
 <textarea data-lang="cpp" id="compos_5_editor" data-question_label="2.11.8" 
-      data-timelimit=25000  data-codelens="true"   
+      data-timelimit=25000     
     data-audio=''      
-           data-wasm=/_static
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
     style="visibility: hidden;">
 double volume(int r, int h) {
-    // You may only use the next line for your code.
+    // Modify the return statement to pass the tests
     return ;
 }
-int main () {
-   cout << "Testing..." << endl;
-   cout << "Yours = " << volume(3,4) << endl;;
-   cout << "Correct = 113.04";
+
+====
+
+#include <cmath>
+#include <functional>
+#include <iomanip>
+#include <iostream>
+#include <string>
+
+template <class T, class Compare = std::equal_to<T>>
+void check (const std::string& name, const T& actual,
+            const T& expected, const Compare& op = Compare())
+{
+  std::cout << std::left << std::setfill('.')
+            << std::setw(50) << name
+            << std::setw(7) <<  std::left;
+  if(op(actual, expected)) {
+    std::cout << " OK      \n";
+    return;
+  }
+  std::cout << " Try again!\n";
+  std::cout << "\treceived [" << actual
+            << "], but expected [" << expected << "]\n";
+  exit(1);
+}
+bool close_to(double x, double y)
+{
+    return std::abs(x-y) < 0.001;
+}
+int main() {
+    check("volume(3,4)", volume(3, 4),  113.097, close_to);
+    check("volume(2,6)", volume(2, 6),  75.3982, close_to);
+    check("volume(5,4)", volume(5, 4),  314.159, close_to);
 }
 </textarea>
 </div>

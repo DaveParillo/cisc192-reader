@@ -7,6 +7,8 @@ you want in ``main``. For example, to output more than one line:
 
 .. activecode:: more_output_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Two Lines of Output
 
    This program prints two different statements on two different lines
@@ -44,6 +46,8 @@ all on one line. You can do this by leaving out the first ``endl``:
 
 .. activecode:: more_output_AC_2
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Two Statements, One Line of Output
 
    This program prints two different statements on the same line.
@@ -68,6 +72,8 @@ the behavior of the program. For example, I could have written:
 
 .. activecode:: more_output_AC_3
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Spaces Removed (messy)
 
    This program accomplishes the same thing as the one above.  The
@@ -90,6 +96,8 @@ behavior either, so I could have written:
 
 .. activecode:: more_output_AC_4
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Spaces removed, One Line (very messy)
 
    This program accomplishes the same thing as the two above, but

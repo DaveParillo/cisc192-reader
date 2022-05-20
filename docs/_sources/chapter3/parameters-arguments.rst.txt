@@ -87,6 +87,8 @@ exceptions later.
 
       .. activecode:: params_args_AC_1
          :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
+         :nocodelens:
          :caption: Parameter Practice
 
          The following code will show the output of the print_twice function.

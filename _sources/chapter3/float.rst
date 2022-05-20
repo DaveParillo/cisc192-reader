@@ -175,6 +175,8 @@ performing floating-point operations.
 
       .. activecode:: floating_point_a1
          :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
+         :nocodelens:
 
          Run the code below to see what type of division occurs each time.
          ~~~~

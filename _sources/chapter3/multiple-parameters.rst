@@ -36,6 +36,8 @@ The correct syntax is ``print_time (hour, minute)``.
 
 .. activecode:: multiple_params_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Understanding Multiple Parameters
 
    This program shows how the dollar_amount and cent_amount arguments

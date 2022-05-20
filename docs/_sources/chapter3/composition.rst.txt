@@ -22,6 +22,8 @@ to another:
 
 .. activecode:: function_comp_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Composition of Math Functions
 
    This program finds the log base e of 10 and raises e to that power.  The

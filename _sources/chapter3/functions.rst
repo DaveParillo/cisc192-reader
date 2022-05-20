@@ -75,6 +75,8 @@ lines:
 
 .. activecode:: new_functions_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: The three_line Function
 
    Here we define the three_line function, which calls the new_line function

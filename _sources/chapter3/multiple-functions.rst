@@ -36,6 +36,8 @@ and eventually gets back to ``main`` so the program can terminate.
 
 .. activecode:: multiple_functions_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Multiply / Add Two
 
    This program calls the multiplyTwo and addTwo functions in the

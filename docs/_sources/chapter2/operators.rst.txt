@@ -33,6 +33,8 @@ observe the output.
 
 .. activecode:: operators_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Integer Division
 
    This program is supposed to print the fraction of the hour that has

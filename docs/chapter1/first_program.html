@@ -250,15 +250,14 @@ language.  Observe the program structure below.</p>
 
 </div>
 <textarea data-lang="cpp" id="first_program_AC_editor" data-question_label="1.6.1" 
-      data-timelimit=25000  data-codelens="true"   
+      data-timelimit=25000     
     data-audio=''      
          data-caption='Hello World'  data-wasm=/_static
     style="visibility: hidden;">
 #include <iostream>
-using namespace std;
 // main: generate some simple output
 int main () {
-    cout << "Hello, World." << endl;
+    std::cout << "Hello, World." << std::endl;
     return 0;
 }
 </textarea>
@@ -268,12 +267,12 @@ int main () {
 simplicity of the “Hello, World.” program. By this standard, C++ does
 reasonably well. Even so, this simple program contains several features
 that are hard to explain to beginning programmers. For now, we will
-ignore some of them, like the first two lines.</p>
-<p id="index-0">The third line begins with <code class="docutils literal notranslate"><span class="pre">//</span></code>, which indicates that it is a <strong>comment</strong>.
+ignore some of them, like the first line.</p>
+<p id="index-0">The second line begins with <code class="docutils literal notranslate"><span class="pre">//</span></code>, which indicates that it is a <strong>comment</strong>.
 A comment is a bit of English text that you can put in the middle of a
 program, usually to explain what the program does. When the compiler
 sees a <code class="docutils literal notranslate"><span class="pre">//</span></code>, it ignores everything from there until the end of the line.</p>
-<p>In the fourth line, you can ignore the word <code class="docutils literal notranslate"><span class="pre">int</span></code> for now, but notice the
+<p>In the third line, you can ignore the word <code class="docutils literal notranslate"><span class="pre">int</span></code> for now, but notice the
 word <code class="docutils literal notranslate"><span class="pre">main</span></code>.  <code class="docutils literal notranslate"><span class="pre">main</span></code> is a special name that indicates the place in the
 program where execution begins. When the program runs, it starts by
 executing the first statement in <code class="docutils literal notranslate"><span class="pre">main</span></code> and it continues, in order, until
@@ -281,10 +280,13 @@ it gets to the last statement, and then it quits.</p>
 <p id="index-1">There is no limit to the number of statements that can be in <code class="docutils literal notranslate"><span class="pre">main</span></code>, but
 the example contains only one. It is a basic <strong>output</strong> statement,
 meaning that it outputs or displays a message on the screen.</p>
-<p><code class="docutils literal notranslate"><span class="pre">cout</span></code> is a special object provided by the system to allow you to send
-output to the screen. The symbol <code class="docutils literal notranslate"><span class="pre">&lt;&lt;</span></code> is an operator that you apply to
+<p><code class="docutils literal notranslate"><span class="pre">cout</span></code> is an object available from the C++ Standard Library
+which allows you to send output to the screen.
+The <code class="docutils literal notranslate"><span class="pre">std::</span></code> prefix means the facility we are using is part of
+the standard library.
+The symbol <code class="docutils literal notranslate"><span class="pre">&lt;&lt;</span></code> is an operator that you apply to
 <code class="docutils literal notranslate"><span class="pre">cout</span></code> and a string, and that causes the string to be displayed.</p>
-<p><code class="docutils literal notranslate"><span class="pre">endl</span></code> is a special symbol that represents the end of a line. When you
+<p><code class="docutils literal notranslate"><span class="pre">endl</span></code> is an object that represents the end of a line. When you
 send an <code class="docutils literal notranslate"><span class="pre">endl</span></code> to <code class="docutils literal notranslate"><span class="pre">cout</span></code>, it causes the cursor to move to the next line of
 the display. The next time you output something, the new text appears on
 the next line.</p>

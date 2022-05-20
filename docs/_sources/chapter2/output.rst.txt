@@ -7,6 +7,8 @@ to output simple values. After observing the output, try inputting your own time
 
 .. activecode:: output_vars_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Time Output
    
    This program outputs the current time, according to the values you
@@ -54,6 +56,8 @@ output statement, which can make the previous program more concise:
 
 .. activecode:: output_vars_AC_2
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Condensing The Code
 
    This program does the same thing as the previous, but the print

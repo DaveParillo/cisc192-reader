@@ -11,34 +11,34 @@ In C++, this program looks like this:
 .. activecode:: first_program_AC
    :language: cpp
    :caption: Hello World
+   :nocodelens:
 
    The "Hello, World." program is a great place to start learning a new
    language.  Observe the program structure below.
    ~~~~
    #include <iostream>
-   using namespace std;
    // main: generate some simple output
    int main () {
-       cout << "Hello, World." << endl;
+       std::cout << "Hello, World." << std::endl;
        return 0;
    }
 
 
 Some people judge the quality of a programming language by the
-simplicity of the “Hello, World.” program. By this standard, C++ does
+simplicity of the "Hello, World." program. By this standard, C++ does
 reasonably well. Even so, this simple program contains several features
 that are hard to explain to beginning programmers. For now, we will
-ignore some of them, like the first two lines.
+ignore some of them, like the first line.
 
 .. index::
    single: comment
 
-The third line begins with ``//``, which indicates that it is a **comment**.
+The second line begins with ``//``, which indicates that it is a **comment**.
 A comment is a bit of English text that you can put in the middle of a
 program, usually to explain what the program does. When the compiler
 sees a ``//``, it ignores everything from there until the end of the line.
 
-In the fourth line, you can ignore the word ``int`` for now, but notice the
+In the third line, you can ignore the word ``int`` for now, but notice the
 word ``main``.  ``main`` is a special name that indicates the place in the
 program where execution begins. When the program runs, it starts by
 executing the first statement in ``main`` and it continues, in order, until
@@ -52,11 +52,14 @@ There is no limit to the number of statements that can be in ``main``, but
 the example contains only one. It is a basic **output** statement,
 meaning that it outputs or displays a message on the screen.
 
-``cout`` is a special object provided by the system to allow you to send
-output to the screen. The symbol ``<<`` is an operator that you apply to
+``cout`` is an object available from the C++ Standard Library
+which allows you to send output to the screen.
+The ``std::`` prefix means the facility we are using is part of
+the standard library.
+The symbol ``<<`` is an operator that you apply to
 ``cout`` and a string, and that causes the string to be displayed.
 
-``endl`` is a special symbol that represents the end of a line. When you
+``endl`` is an object that represents the end of a line. When you
 send an ``endl`` to ``cout``, it causes the cursor to move to the next line of
 the display. The next time you output something, the new text appears on
 the next line.

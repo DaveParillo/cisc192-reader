@@ -28,6 +28,8 @@ started:
 
 .. activecode:: order_of_operations_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: The Role of Parentheses
   
    Observe the output of the code below to see how the placement of parentheses can change the result of a calculation.

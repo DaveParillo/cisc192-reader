@@ -10,6 +10,8 @@ when print_twice is called.
 
 .. activecode:: locals_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Understanding Parameters
 
    The following code will show the output of the print_twice function.
