@@ -11,6 +11,8 @@ of 2, all on one line.
 
 .. activecode:: 2D_tables_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Two-dimensional tables
 
    Run the active code below, which uses a simple loop that prints the multiples

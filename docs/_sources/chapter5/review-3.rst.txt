@@ -25,6 +25,8 @@ Run and test your code!
 
               .. activecode:: cp_5_AC_1q
                  :language: cpp
+                 :compileargs: ['-Wall', '-std=c++11']
+                 :nocodelens:
                  :practice: T
 
                  double calculator (double first, double second, char operation) {
@@ -70,6 +72,8 @@ Run and test your code!
 
               .. activecode:: cp_5_AC_1a
                  :language: cpp
+                 :compileargs: ['-Wall', '-std=c++11']
+                 :nocodelens:
                  :optional:
 
                   double calculator (double first, double second, char operation) {
@@ -121,46 +125,48 @@ Run and test your code!
    .. tab:: Q2 
 
       .. activecode:: cp_5_AC_2q
-          :language: cpp
-          :practice: T
+         :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
+         :nocodelens:
+         :practice: T
 
-          A binary number is one that is expressed in the base-2 numeral system.
-          Write a function ``convertToBinary`` which takes a ``decimal`` as
-          a parameter. ``convertToBinary`` takes the number in decimal, converts
-          it into a binary number, and returns the binary number. 
-          Run and test your code!
-          ~~~~
-          int to_binary (int decimal) {
-              // Write your implementation here.
-          }
+         A binary number is one that is expressed in the base-2 numeral system.
+         Write a function ``convertToBinary`` which takes a ``decimal`` as
+         a parameter. ``convertToBinary`` takes the number in decimal, converts
+         it into a binary number, and returns the binary number. 
+         Run and test your code!
+         ~~~~
+         int to_binary (int decimal) {
+             // Write your implementation here.
+         }
 
-          ====
-          #include <functional>
-          #include <iomanip>
-          #include <iostream>
-          #include <string>
-          template <class T, class Compare = std::equal_to<T>>
-          void check (const std::string& name, const T& actual, 
-                      const T& expected, const Compare& op = Compare())
-          {
-            std::cout << std::left << std::setfill('.') 
-                      << std::setw(50) << name 
-                      << std::setw(7) <<  std::left;
+         ====
+         #include <functional>
+         #include <iomanip>
+         #include <iostream>
+         #include <string>
+         template <class T, class Compare = std::equal_to<T>>
+         void check (const std::string& name, const T& actual, 
+                     const T& expected, const Compare& op = Compare())
+         {
+           std::cout << std::left << std::setfill('.') 
+                     << std::setw(50) << name 
+                     << std::setw(7) <<  std::left;
              if(op(actual, expected)) {
-               std::cout << " OK      \n";
-               return;
-            }
-            std::cout << " FAILED\n";
-            std::cout << "\treceived [" << actual
-                      << "], but expected [" << expected << "]\n";
-            exit(1);
-          }
-          int main() {
-            check("convert 1", to_binary(1), 1);
-            check("convert 5", to_binary(5), 101);
-            check("convert 16", to_binary(16), 10000);
-            check("convert 31", to_binary(31), 11111);
-          }
+              std::cout << " OK      \n";
+              return;
+           }
+           std::cout << " FAILED\n";
+           std::cout << "\treceived [" << actual
+                     << "], but expected [" << expected << "]\n";
+           exit(1);
+         }
+         int main() {
+           check("convert 1", to_binary(1), 1);
+           check("convert 5", to_binary(5), 101);
+           check("convert 16", to_binary(16), 10000);
+           check("convert 31", to_binary(31), 11111);
+         }
 
 
 
@@ -183,6 +189,8 @@ Run and test your code!
 
               .. activecode:: cp_5_AC_3q
                  :language: cpp
+                 :compileargs: ['-Wall', '-std=c++11']
+                 :nocodelens:
                  :practice: T
 
                  double interior_angle (int sides) {
@@ -228,6 +236,8 @@ Run and test your code!
 
               .. activecode:: cp_5_AC_3a
                  :language: cpp
+                 :compileargs: ['-Wall', '-std=c++11']
+                 :nocodelens:
                  :optional:
 
                  double interior_angle (int sides) {
@@ -265,63 +275,65 @@ Run and test your code!
    .. tab:: Q4
 
       .. activecode:: cp_5_AC_4q
-          :language: cpp
-          :practice: T
+         :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
+         :nocodelens:
+         :practice: T
 
-          The astronomical start and end dates of the four seasons are based on
-          the position of the Earth relative to the Sun. As a result, it
-          changes every year and can be difficult to remember. However, the
-          meteorological start and end dates are based on the Gregorian
-          calendar and is easier to remember. Spring starts on March 1, summer
-          starts on June 1, fall starts on September 1, and winter starts on
-          December 1. Write a function called ``birthSeason``, which takes two
-          parameters, ``month`` and ``day``. ``birthSeason`` calculates which
-          season the birthday falls in according to the meteorological start
-          and returns a ``string`` with the correct season.  For example,
-          ``birthSeason (7, 5)`` returns "summer" since July 5 is in the
-          summer. 
-          
-          Run and test your code!
-          ~~~~
-          string birthSeason (int month, int day) {
-              // Write your implementation here.
-          }
+         The astronomical start and end dates of the four seasons are based on
+         the position of the Earth relative to the Sun. As a result, it
+         changes every year and can be difficult to remember. However, the
+         meteorological start and end dates are based on the Gregorian
+         calendar and is easier to remember. Spring starts on March 1, summer
+         starts on June 1, fall starts on September 1, and winter starts on
+         December 1. Write a function called ``birthSeason``, which takes two
+         parameters, ``month`` and ``day``. ``birthSeason`` calculates which
+         season the birthday falls in according to the meteorological start
+         and returns a ``string`` with the correct season.  For example,
+         ``birthSeason (7, 5)`` returns "summer" since July 5 is in the
+         summer. 
+         
+         Run and test your code!
+         ~~~~
+         string birthSeason (int month, int day) {
+             // Write your implementation here.
+         }
 
-          ====
-          #include <functional>
-          #include <iomanip>
-          #include <iostream>
-          #include <string>
-          template <class T, class Compare = std::equal_to<T>>
-          void check (const std::string& name, const T& actual, 
-                      const std::string& expected, const Compare& op = Compare())
-          {
-            std::cout << std::left << std::setfill('.') 
-                      << std::setw(50) << name 
-                      << std::setw(7) <<  std::left;
-             if(op(actual, expected)) {
-               std::cout << " OK      \n";
-               return;
-            }
-            std::cout << " FAILED\n";
-            std::cout << "\treceived [" << actual
-                      << "], but expected [" << expected << "]\n";
-            exit(1);
-          }
-          int main() {
-            check("May 3rd",   birthSeason(5, 3), "spring");
-            check("March 1st", birthSeason(3, 1), "spring");
-            check("May 31st",  birthSeason(5, 31), "spring");
-            check("July 5th",   birthSeason(7, 5), "summer");
-            check("June 1st", birthSeason(6, 1), "summer");
-            check("August 31st",  birthSeason(8, 31), "summer");
-            check("November 24th",   birthSeason(11, 24), "fall");
-            check("September 1st", birthSeason(9, 1), "fall");
-            check("November 30th",  birthSeason(11, 30), "fall");
-            check("February 20th",   birthSeason(2, 20), "winter");
-            check("December 1st", birthSeason(12, 1), "winter");
-            check("February 28th",  birthSeason(2, 28), "winter");
-          }
+         ====
+         #include <functional>
+         #include <iomanip>
+         #include <iostream>
+         #include <string>
+         template <class T, class Compare = std::equal_to<T>>
+         void check (const std::string& name, const T& actual, 
+                     const std::string& expected, const Compare& op = Compare())
+         {
+           std::cout << std::left << std::setfill('.') 
+                     << std::setw(50) << name 
+                     << std::setw(7) <<  std::left;
+            if(op(actual, expected)) {
+              std::cout << " OK      \n";
+              return;
+           }
+           std::cout << " FAILED\n";
+           std::cout << "\treceived [" << actual
+                     << "], but expected [" << expected << "]\n";
+           exit(1);
+         }
+         int main() {
+           check("May 3rd",   birthSeason(5, 3), "spring");
+           check("March 1st", birthSeason(3, 1), "spring");
+           check("May 31st",  birthSeason(5, 31), "spring");
+           check("July 5th",   birthSeason(7, 5), "summer");
+           check("June 1st", birthSeason(6, 1), "summer");
+           check("August 31st",  birthSeason(8, 31), "summer");
+           check("November 24th",   birthSeason(11, 24), "fall");
+           check("September 1st", birthSeason(9, 1), "fall");
+           check("November 30th",  birthSeason(11, 30), "fall");
+           check("February 20th",   birthSeason(2, 20), "winter");
+           check("December 1st", birthSeason(12, 1), "winter");
+           check("February 28th",  birthSeason(2, 28), "winter");
+         }
 
 
    .. tab:: Q5
@@ -341,6 +353,8 @@ Run and test your code!
 
               .. activecode:: cp_5_AC_5q
                  :language: cpp
+                 :compileargs: ['-Wall', '-std=c++11']
+                 :nocodelens:
                  :practice: T
 
                  int dogToHumanYears (int dogAge) {
@@ -391,6 +405,8 @@ Run and test your code!
 
               .. activecode:: cp_5_AC_5a
                  :language: cpp
+                 :compileargs: ['-Wall', '-std=c++11']
+                 :nocodelens:
                  :optional:
 
                  int dogToHumanYears (int dogAge) {
@@ -441,48 +457,50 @@ Run and test your code!
    .. tab:: Q6
 
       .. activecode:: cp_5_AC_6q
-          :language: cpp
-          :practice: T
+         :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
+         :nocodelens:
+         :practice: T
 
-          A number is a common factor of two other numbers if it divides evenly into both of the
-          other numbers. For example, 2 is a common factor of 4 and 18, because 2 goes evenly into 
-          4 and 18. Write the function ``isCommonFactor``, which takes three parameters,
-          ``num1``, ``num2``, and ``factor``. ``isCommonFactor`` returns ``true`` if ``factor`` is a
-          factor of both ``num1`` and ``num2``, and returns ``false`` otherwise. Run and test your code!
-          ~~~~
-          bool isCommonFactor (int num1, int num2, int factor) {
-              // Write your implementation here.
-          }
+         A number is a common factor of two other numbers if it divides evenly into both of the
+         other numbers. For example, 2 is a common factor of 4 and 18, because 2 goes evenly into 
+         4 and 18. Write the function ``isCommonFactor``, which takes three parameters,
+         ``num1``, ``num2``, and ``factor``. ``isCommonFactor`` returns ``true`` if ``factor`` is a
+         factor of both ``num1`` and ``num2``, and returns ``false`` otherwise. Run and test your code!
+         ~~~~
+         bool isCommonFactor (int num1, int num2, int factor) {
+             // Write your implementation here.
+         }
 
-          ====
-          #include <functional>
-          #include <iomanip>
-          #include <iostream>
-          #include <string>
-          template <class T, class Compare = std::equal_to<T>>
-          void check (const std::string& name, 
-                      const T& actual, 
-                      const T& expected,
-                      const Compare& op = Compare())
-          {
-            std::cout << std::left << std::setfill('.') 
-                      << std::setw(50) << name 
-                      << std::setw(7) <<  std::left;
-             if(op(actual, expected)) {
-               std::cout << " OK      \n";
-               return;
-            }
-            std::cout << " FAILED\n";
-            std::cout << "\treceived [" << std::boolalpha << actual
-                      << "], but expected [" << expected << "]\n";
-            exit(1);
-          }
-          int main() {
-            check("4 is a factor of 24 and 8", isCommonFactor(24,8,4), true);
-            check("5 is a factor of 75 and 20", isCommonFactor(75,20,5), true);
-            check("11 is not a factor of 132 and 42", isCommonFactor(132,42,11), false);
-            check("3 is not a factor of 74 and 24", isCommonFactor(74,24,3), false);
-          }
+         ====
+         #include <functional>
+         #include <iomanip>
+         #include <iostream>
+         #include <string>
+         template <class T, class Compare = std::equal_to<T>>
+         void check (const std::string& name, 
+                     const T& actual, 
+                     const T& expected,
+                     const Compare& op = Compare())
+         {
+           std::cout << std::left << std::setfill('.') 
+                     << std::setw(50) << name 
+                     << std::setw(7) <<  std::left;
+            if(op(actual, expected)) {
+              std::cout << " OK      \n";
+              return;
+           }
+           std::cout << " FAILED\n";
+           std::cout << "\treceived [" << std::boolalpha << actual
+                     << "], but expected [" << expected << "]\n";
+           exit(1);
+         }
+         int main() {
+           check("4 is a factor of 24 and 8", isCommonFactor(24,8,4), true);
+           check("5 is a factor of 75 and 20", isCommonFactor(75,20,5), true);
+           check("11 is not a factor of 132 and 42", isCommonFactor(132,42,11), false);
+           check("3 is not a factor of 74 and 24", isCommonFactor(74,24,3), false);
+         }
 
 
    .. tab:: Q7
@@ -491,56 +509,58 @@ Run and test your code!
 
           .. tab:: Question
 
-              If a year is divisible by 4, then it is a leap year. However, if it is also divisible by 100,
-              then it is not a leap year. However, if it is also divisible by 400, then it is a leap year.
-              Thus, 2001 is not a leap year, 2004 is a leap year, 2100 is not a leap year, and 2000 is a leap year.
-              Write the boolean function ``isLeapYear``, which takes a ``year`` as a parameter and returns ``true`` 
-              if the year is a leap year and ``false`` otherwise. Run and test your code!
+             If a year is divisible by 4, then it is a leap year. However, if it is also divisible by 100,
+             then it is not a leap year. However, if it is also divisible by 400, then it is a leap year.
+             Thus, 2001 is not a leap year, 2004 is a leap year, 2100 is not a leap year, and 2000 is a leap year.
+             Write the boolean function ``isLeapYear``, which takes a ``year`` as a parameter and returns ``true`` 
+             if the year is a leap year and ``false`` otherwise. Run and test your code!
 
-              .. activecode:: cp_5_AC_7q
-                 :language: cpp
-                 :practice: T
+             .. activecode:: cp_5_AC_7q
+                :language: cpp
+                :compileargs: ['-Wall', '-std=c++11']
+                :nocodelens:
+                :practice: T
 
-                 bool isLeapYear (int year) {
-                     // Write your implementation here.
-                 }
-                 ====
-                 #include <functional>
-                 #include <iomanip>
-                 #include <iostream>
-                 #include <string>
-                 template <class T, class Compare = std::equal_to<T>>
-                 void check (const std::string& name, 
-                             const T& actual, 
-                             const T& expected,
-                             std::string help,
-                             const Compare& op = Compare())
-                 {
-                   std::cout << std::left << std::setfill('.') 
-                             << std::setw(50) << name 
-                             << std::setw(7) <<  std::left;
-                    if(op(actual, expected)) {
-                      std::cout << " OK      \n";
-                      return;
-                   }
-                   std::cout << " FAILED\n";
-                   std::cout << "\treceived [" << std::boolalpha << actual
-                             << "], but expected [" << expected << "]\n";
-                   std::cout << '\t' << help << '\n';
-                   exit(1);
-                 }
-                 int main() {
-                   check("is 2001?", isLeapYear(2001), false, "year is not divisible by 4");
-                   check("is 2005?", isLeapYear(2005), false, "year is not divisible by 4");
-                   check("is 1730?", isLeapYear(1730), false, "year is not divisible by 4");
-                   check("is 2004?", isLeapYear(2004), true, "year is divisible by 4");
-                   check("is 2020?", isLeapYear(2020), true, "year is divisible by 4");
-                   check("is 1776?", isLeapYear(1776), true, "year is divisible by 4");
-                   check("is 1900?", isLeapYear(1900), false, "year is divisible by 100");
-                   check("is 2100?", isLeapYear(2100), false, "year is divisible by 100");
-                   check("is 2000?", isLeapYear(2000), true, "year is divisible by 400");
-                   check("is 2400?", isLeapYear(2400), true, "year is divisible by 400");
-                 }
+                bool isLeapYear (int year) {
+                    // Write your implementation here.
+                }
+                ====
+                #include <functional>
+                #include <iomanip>
+                #include <iostream>
+                #include <string>
+                template <class T, class Compare = std::equal_to<T>>
+                void check (const std::string& name, 
+                            const T& actual, 
+                            const T& expected,
+                            std::string help,
+                            const Compare& op = Compare())
+                {
+                  std::cout << std::left << std::setfill('.') 
+                            << std::setw(50) << name 
+                            << std::setw(7) <<  std::left;
+                   if(op(actual, expected)) {
+                     std::cout << " OK      \n";
+                     return;
+                  }
+                  std::cout << " FAILED\n";
+                  std::cout << "\treceived [" << std::boolalpha << actual
+                            << "], but expected [" << expected << "]\n";
+                  std::cout << '\t' << help << '\n';
+                  exit(1);
+                }
+                int main() {
+                  check("is 2001?", isLeapYear(2001), false, "year is not divisible by 4");
+                  check("is 2005?", isLeapYear(2005), false, "year is not divisible by 4");
+                  check("is 1730?", isLeapYear(1730), false, "year is not divisible by 4");
+                  check("is 2004?", isLeapYear(2004), true, "year is divisible by 4");
+                  check("is 2020?", isLeapYear(2020), true, "year is divisible by 4");
+                  check("is 1776?", isLeapYear(1776), true, "year is divisible by 4");
+                  check("is 1900?", isLeapYear(1900), false, "year is divisible by 100");
+                  check("is 2100?", isLeapYear(2100), false, "year is divisible by 100");
+                  check("is 2000?", isLeapYear(2000), true, "year is divisible by 400");
+                  check("is 2400?", isLeapYear(2400), true, "year is divisible by 400");
+                }
 
 
           .. tab:: Answer
@@ -550,6 +570,8 @@ Run and test your code!
 
               .. activecode:: cp_5_AC_7a
                  :language: cpp
+                 :compileargs: ['-Wall', '-std=c++11']
+                 :nocodelens:
                  :optional:
 
                  bool isLeapYear (int year) {
@@ -607,62 +629,64 @@ Run and test your code!
    .. tab:: Q8
 
       .. activecode:: cp_5_AC_8q
-          :language: cpp
-          :practice: T
+         :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
+         :nocodelens:
+         :practice: T
 
-          In the enchanted Mushroom Forest, there are many different types of 
-          mushrooms as far as the eye can see. Most of these mushrooms
-          can make delicious stews and dishes, but some of them are poisonous.
-          Write the function ``poisonous``, which takes an ``char size``,
-          ``int numSpots``, and ``bool isRed`` as parameters. If a mushroom is large
-          ('L') and has fewer than 3 spots, it is poisonous. If a mushroom is small ('S')
-          and is red, it is poisonous. If a mushroom has fewer than 3 spots or is not red,
-          it is poisonous. Otherwise, it is not. ``poisonous`` should return ``true`` if 
-          the mushroom is poisonous and ``false`` otherwise. Run and test your code!
-          ~~~~
-          bool poisonous (char size, int numSpots, bool isRed) {
-              // Write your implementation here.
-          }
+         In the enchanted Mushroom Forest, there are many different types of 
+         mushrooms as far as the eye can see. Most of these mushrooms
+         can make delicious stews and dishes, but some of them are poisonous.
+         Write the function ``poisonous``, which takes an ``char size``,
+         ``int numSpots``, and ``bool isRed`` as parameters. If a mushroom is large
+         ('L') and has fewer than 3 spots, it is poisonous. If a mushroom is small ('S')
+         and is red, it is poisonous. If a mushroom has fewer than 3 spots or is not red,
+         it is poisonous. Otherwise, it is not. ``poisonous`` should return ``true`` if 
+         the mushroom is poisonous and ``false`` otherwise. Run and test your code!
+         ~~~~
+         bool poisonous (char size, int numSpots, bool isRed) {
+             // Write your implementation here.
+         }
 
-          ====
-          #include <functional>
-          #include <iomanip>
-          #include <iostream>
-          #include <string>
-          template <class T, class Compare = std::equal_to<T>>
-          void check (const std::string& name, 
-                      const T& actual, 
-                      const T& expected,
-                      const std::string& help,
-                      const Compare& op = Compare())
-          {
-            std::cout << std::left << std::setfill('.') 
-                      << std::setw(50) << name 
-                      << std::setw(7) <<  std::left;
-             if(op(actual, expected)) {
-               std::cout << " OK      \n";
-               return;
-            }
-            std::cout << " FAILED\n";
-            std::cout << "\treceived [" << std::boolalpha << actual
-                      << "], but expected [" << expected << "]\n";
-            std::cout << '\t' << help << '\n';
-            exit(1);
-          }
-          int main() {
-            check("small and red", poisonous('S', 10, true), true,
-               "a small and red mushroom is poisonous");
-            check("large, 1, red", poisonous('L', 1, true), true,
-               "large and has fewer than 3 spots");
-            check("large, 2, not red", poisonous('L', 2, false), true,
-               "large and has fewer than 3 spots");
-            check("large, 3, not red", poisonous('L', 3, false), true,
-               "large and has fewer than 3 spots");
-            check("small and not red", poisonous('S', 10, false), false,
-               "small, not red, and has more than 3 spots");
-            check("large, 4, red", poisonous('L', 4, true), false,"");
-            check("large, 9, red", poisonous('L', 9, true), false,"");
-          }
+         ====
+         #include <functional>
+         #include <iomanip>
+         #include <iostream>
+         #include <string>
+         template <class T, class Compare = std::equal_to<T>>
+         void check (const std::string& name, 
+                     const T& actual, 
+                     const T& expected,
+                     const std::string& help,
+                     const Compare& op = Compare())
+         {
+           std::cout << std::left << std::setfill('.') 
+                     << std::setw(50) << name 
+                     << std::setw(7) <<  std::left;
+            if(op(actual, expected)) {
+              std::cout << " OK      \n";
+              return;
+           }
+           std::cout << " FAILED\n";
+           std::cout << "\treceived [" << std::boolalpha << actual
+                     << "], but expected [" << expected << "]\n";
+           std::cout << '\t' << help << '\n';
+           exit(1);
+         }
+         int main() {
+           check("small and red", poisonous('S', 10, true), true,
+              "a small and red mushroom is poisonous");
+           check("large, 1, red", poisonous('L', 1, true), true,
+              "large and has fewer than 3 spots");
+           check("large, 2, not red", poisonous('L', 2, false), true,
+              "large and has fewer than 3 spots");
+           check("large, 3, not red", poisonous('L', 3, false), true,
+              "large and has fewer than 3 spots");
+           check("small and not red", poisonous('S', 10, false), false,
+              "small, not red, and has more than 3 spots");
+           check("large, 4, red", poisonous('L', 4, true), false,"");
+           check("large, 9, red", poisonous('L', 9, true), false,"");
+         }
 
 
    .. tab:: Q9
@@ -681,6 +705,8 @@ Run and test your code!
 
               .. activecode:: cp_5_AC_9q
                  :language: cpp
+                 :compileargs: ['-Wall', '-std=c++11']
+                 :nocodelens:
                  :practice: T
 
                  int triangularNum (int n) {
@@ -727,6 +753,8 @@ Run and test your code!
 
               .. activecode:: cp_5_AC_9a
                  :language: cpp
+                 :compileargs: ['-Wall', '-std=c++11']
+                 :nocodelens:
                  :optional:
 
                  int triangularNum (int n) {
@@ -771,49 +799,51 @@ Run and test your code!
    .. tab:: Q10
 
       .. activecode:: cp_5_AC_10q
-          :language: cpp
-          :practice: T
+         :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
+         :nocodelens:
+         :practice: T
 
-          Write the function ``digit_sum`` which takes an ``int num`` as a parameter
-          and returns the sum of all its digits. For example, ``digit_sum (1423)``
-          would return 10. Use recursion. Run and test your code!
-          ~~~~
-          int digit_sum (int num) {
-              // Write your implementation here.
-          }
-          ====
-          #include <functional>
-          #include <iomanip>
-          #include <iostream>
-          #include <string>
-          template <class T, class Compare = std::equal_to<T>>
-          void check (const std::string& name, 
-                      const T& actual, 
-                      const T& expected,
-                      const Compare& op = Compare())
-          {
-            std::cout << std::left << std::setfill('.') 
-                      << std::setw(50) << name 
-                      << std::setw(7) <<  std::left;
-             if(op(actual, expected)) {
-               std::cout << " OK      \n";
-               return;
-            }
-            std::cout << " FAILED\n";
-            std::cout << "\treceived [" << actual
-                      << "], but expected [" << expected << "]\n";
-            exit(1);
-          }
-          int main() {
-            check("num == 1", digit_sum(1), 1);
-            check("num == 12", digit_sum(12), 3);
-            check("num == 123", digit_sum(123), 6);
-            check("num == 1243", digit_sum(1243), 10);
-            check("num == 8739", digit_sum(8739), 27);
-            check("num == 202", digit_sum(202), 4);
-            check("num == 440", digit_sum(440), 8);
-            check("num == 4050", digit_sum(4050), 9);
-            check("num == 40005000", digit_sum(40005000), 9);
-            check("num == 0", digit_sum(0), 0);
-          }
+         Write the function ``digit_sum`` which takes an ``int num`` as a parameter
+         and returns the sum of all its digits. For example, ``digit_sum (1423)``
+         would return 10. Use recursion. Run and test your code!
+         ~~~~
+         int digit_sum (int num) {
+             // Write your implementation here.
+         }
+         ====
+         #include <functional>
+         #include <iomanip>
+         #include <iostream>
+         #include <string>
+         template <class T, class Compare = std::equal_to<T>>
+         void check (const std::string& name, 
+                     const T& actual, 
+                     const T& expected,
+                     const Compare& op = Compare())
+         {
+           std::cout << std::left << std::setfill('.') 
+                     << std::setw(50) << name 
+                     << std::setw(7) <<  std::left;
+            if(op(actual, expected)) {
+              std::cout << " OK      \n";
+              return;
+           }
+           std::cout << " FAILED\n";
+           std::cout << "\treceived [" << actual
+                     << "], but expected [" << expected << "]\n";
+           exit(1);
+         }
+         int main() {
+           check("num == 1", digit_sum(1), 1);
+           check("num == 12", digit_sum(12), 3);
+           check("num == 123", digit_sum(123), 6);
+           check("num == 1243", digit_sum(1243), 10);
+           check("num == 8739", digit_sum(8739), 27);
+           check("num == 202", digit_sum(202), 4);
+           check("num == 440", digit_sum(440), 8);
+           check("num == 4050", digit_sum(4050), 9);
+           check("num == 40005000", digit_sum(40005000), 9);
+           check("num == 0", digit_sum(0), 0);
+         }
 

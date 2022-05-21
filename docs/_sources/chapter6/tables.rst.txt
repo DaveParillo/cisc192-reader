@@ -26,6 +26,8 @@ good example of iteration.
 
 .. activecode:: tables_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Tables
 
    The active code below outputs a sequence of values in the left column 
@@ -118,6 +120,8 @@ logarithms base 2 are round numbers.
 
 .. activecode:: tables_AC_2
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Tables
 
    If we wanted to find the logarithms of other powers of two, 
@@ -167,6 +171,8 @@ Print it out and memorize it.
 
       .. activecode:: tables_AC_3
          :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
+         :nocodelens:
          :caption: Tables
 
          Modify the active code below so that it outputs the power of two

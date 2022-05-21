@@ -7,6 +7,8 @@ different from what we've seen before.
 
 .. activecode:: length_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Finding the size of a string
 
    The active code below outputs the size of string ``fruit``.
@@ -59,6 +61,8 @@ from 0 to 5. To get the last character, you have to subtract 1 from
 
 .. activecode:: length_AC_2
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Finding the size of a string and outputting it
 
    The active code below outputs the last character in string ``fruit``

@@ -61,6 +61,8 @@ function call.
 
 .. activecode:: encapsulation_generalization_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Two-dimensional tables
 
    Try running the active code below, which uses ``print_multiples``.

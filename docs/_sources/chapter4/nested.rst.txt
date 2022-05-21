@@ -10,6 +10,8 @@ another. We could have written the previous example as:
 
 .. activecode:: nested_conditionals_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Classifying an Integer
 
    This program classifies a number (x) as positive, negative, or zero,

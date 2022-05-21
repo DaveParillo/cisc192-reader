@@ -35,6 +35,8 @@ that refer to the ``string`` type.
 
 .. activecode:: string_variables_AC_2
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Outputting a string variable
 
    Run the active code below!

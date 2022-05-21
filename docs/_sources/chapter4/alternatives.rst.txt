@@ -60,6 +60,8 @@ type they are. You should resist the temptation to write things like:
 
 .. activecode:: alt_execution_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Even or Odd?
 
    This program shows you how the print parity function works.

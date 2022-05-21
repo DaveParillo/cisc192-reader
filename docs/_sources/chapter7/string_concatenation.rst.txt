@@ -8,21 +8,23 @@ string **concatenation**. To concatenate means to join the two operands
 end to end. 
 
 .. activecode:: string_concatenation_AC_1
-  :language: cpp
-  :caption: String concatenation
+   :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
+   :caption: String concatenation
 
-  In the active code below, we use the ``+`` operator to concatenate ``fruit`` with
-  ``bakedGood`` to create ``dessert``.
-  ~~~~
-  #include <iostream>
-  using namespace std;
+   In the active code below, we use the ``+`` operator to concatenate ``fruit`` with
+   ``bakedGood`` to create ``dessert``.
+   ~~~~
+   #include <iostream>
+   using namespace std;
 
-  int main() {
-      string fruit = "banana";
-      string bakedGood = " nut bread";
-      string dessert = fruit + bakedGood;
-      cout << dessert << endl;
-  }
+   int main() {
+       string fruit = "banana";
+       string bakedGood = " nut bread";
+       string dessert = fruit + bakedGood;
+       cout << dessert << endl;
+   }
 
 The output of this program is ``banana nut bread``.
 
@@ -49,22 +51,24 @@ Nack, Ouack, Pack and Quack. Here is a loop that outputs these names in
 order:
 
 .. activecode:: string_concatenation_AC_2
-  :language: cpp
-  :caption: String concatenation
+   :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
+   :caption: String concatenation
 
-  The active code below outputs the ducklings names in alphabetical order.
-  ~~~~
-  #include <iostream>
-  #include <string>
-
-  int main() {
-      std::string suffix = "ack";
-      char letter = 'J';
-      while (letter <= 'Q') {
-          std::cout << letter + suffix << '\n';
-          ++letter;
-      }
-  }
+   The active code below outputs the ducklings names in alphabetical order.
+   ~~~~
+   #include <iostream>
+   #include <string>
+ 
+   int main() {
+       std::string suffix = "ack";
+       char letter = 'J';
+       while (letter <= 'Q') {
+           std::cout << letter + suffix << '\n';
+           ++letter;
+       }
+   }
 
 Again, be careful to use string concatenation only with ``string``\ s
 and not with native C strings. Unfortunately, an expression like

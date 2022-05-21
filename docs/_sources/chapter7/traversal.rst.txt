@@ -10,6 +10,8 @@ encode a traversal is with a ``while`` statement.
 
 .. activecode:: traversal_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Accessing a string character
 
    The active code below outputs each letter of string ``fruit``
@@ -49,6 +51,8 @@ and that outputs the letters backwards, all on one line.
 
 .. activecode:: traversal_AC_2 
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
 
    Try writing the ``reverse_word`` function in the commented section
    of the active code below. If done correctly, the program outputs "olleh".

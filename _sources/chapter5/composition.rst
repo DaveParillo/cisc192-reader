@@ -50,6 +50,8 @@ by composing the function calls:
 
 .. activecode:: fun_comp_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Function Composition
 
    This program shows you how the distance and area functions are
@@ -126,12 +128,15 @@ by composing the function calls:
                cout << "Hello " << name << "!" <<  endl;
              }
 
+
 Function composition is not limited to a fixed number of calls.
 Multiple calls can be made to the same function as well as to a number of
 different functions.
 
 .. activecode:: multi_comp_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Function Composition
 
    This program shows how mutliple calls are made to one function and it

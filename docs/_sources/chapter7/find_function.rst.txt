@@ -9,23 +9,25 @@ Instead of taking an index and extracting the character at that index,
 
 
 .. activecode:: find_function_AC_1
-  :language: cpp
-  :caption: The find function
+   :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
+   :caption: The find function
 
-  Take a look at the active code below, which uses the ``find`` function to find
-  the character ``'a'`` in string ``fruit`` and string ``dessert``.
-  ~~~~
-  #include <iostream>
-  #include <string>
-
-  int main() {
-      std::string fruit = "banana";
-      int index = fruit.find('a');
-      std::cout << index << '\n';
-      std::string dessert = "pudding";
-      int another_index = fruit.find('a');
-      std::cout << another_index << '\n';
-  }
+   Take a look at the active code below, which uses the ``find`` function to find
+   the character ``'a'`` in string ``fruit`` and string ``dessert``.
+   ~~~~
+   #include <iostream>
+   #include <string>
+ 
+   int main() {
+       std::string fruit = "banana";
+       int index = fruit.find('a');
+       std::cout << index << '\n';
+       std::string dessert = "pudding";
+       int another_index = fruit.find('a');
+       std::cout << another_index << '\n';
+   }
 
 This example finds the index of the letter ``'a'`` in the string. In
 this case, the letter appears three times, so it is not obvious what
@@ -41,19 +43,21 @@ In addition, there is a version of ``find`` that takes another
 appears in the string. 
 
 .. activecode:: find_function_AC_2
-  :language: cpp
-  :caption: The find function
+   :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
+   :caption: The find function
 
-  The active code below finds the starting index of ``"nan"`` in ``fruit``.
-  ~~~~
-  #include <iostream>
-  #include <string>
-
-  int main() {
-      std::string fruit = "banana";
-      int index = fruit.find("nan");
-      std::cout << index;
-  }
+   The active code below finds the starting index of ``"nan"`` in ``fruit``.
+   ~~~~
+   #include <iostream>
+   #include <string>
+ 
+   int main() {
+       std::string fruit = "banana";
+       int index = fruit.find("nan");
+       std::cout << index;
+   }
 
 This example returns the value 2.
 

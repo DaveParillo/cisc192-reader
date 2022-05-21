@@ -5,22 +5,24 @@ You can change the letters in an ``string`` one at a time using the
 ``[]`` operator on the left side of an assignment.
 
 .. activecode:: strings_are_mutable_AC_1
-  :language: cpp
-  :caption: String are mutable
+   :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
+   :caption: String are mutable
 
-  The active code below changes the first letter in ``greeting`` to be
-  ``'J'``.
-  ~~~~
-  #include <iostream>
-  #include <string>
-
-  int main() {
-      std::string greeting = "Hello, world!";
-      std::cout << greeting << '\n';
-      std::cout << "First letter: " << greeting[0] << '\n';
-      greeting[0] = 'J';
-      std::cout << greeting << '\n';
-  }
+   The active code below changes the first letter in ``greeting`` to be
+   ``'J'``.
+   ~~~~
+   #include <iostream>
+   #include <string>
+ 
+   int main() {
+       std::string greeting = "Hello, world!";
+       std::cout << greeting << '\n';
+       std::cout << "First letter: " << greeting[0] << '\n';
+       greeting[0] = 'J';
+       std::cout << greeting << '\n';
+   }
 
 
 Notice we are using the same operator (``[]``) to either

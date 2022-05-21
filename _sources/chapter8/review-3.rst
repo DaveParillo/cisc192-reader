@@ -16,6 +16,8 @@ Coding Practice
 
               .. activecode:: cp_8_AC_1q
                  :language: cpp
+                 :compileargs: ['-Wall', '-std=c++11']
+                 :nocodelens:
                  :practice: T
                  :stdin: 4, 6
 
@@ -37,6 +39,8 @@ Coding Practice
               using ``cin`` before printing the area and perimeter.
 
               .. activecode:: cp_8_AC_1a
+                 :compileargs: ['-Wall', '-std=c++11']
+                 :nocodelens:
                  :language: cpp
                  :optional:
 
@@ -58,6 +62,8 @@ Coding Practice
 
       .. activecode:: cp_8_AC_2q
           :language: cpp
+          :compileargs: ['-Wall', '-std=c++11']
+          :nocodelens:
           :stdin: Captain America
 
           Write a simple function called ``greetUser`` which prompts the user 
@@ -89,6 +95,8 @@ Coding Practice
 
               .. activecode:: cp_8_AC_3q
                  :language: cpp
+                 :compileargs: ['-Wall', '-std=c++11']
+                 :nocodelens:
                  :practice: T
 
                  #include <iostream>
@@ -114,6 +122,8 @@ Coding Practice
 
               .. activecode:: cp_8_AC_3a
                  :language: cpp
+                 :compileargs: ['-Wall', '-std=c++11']
+                 :nocodelens:
                  :optional:
 
                  #include <iostream>
@@ -146,6 +156,8 @@ Coding Practice
 
       .. activecode:: cp_8_AC_4q
           :language: cpp
+          :compileargs: ['-Wall', '-std=c++11']
+          :nocodelens:
 
           Robots will naturally deplete their charge as they carry out tasks.
           Write a function called ``chargeRobot`` which takes a ``Robot`` as 
@@ -195,6 +207,8 @@ Coding Practice
 
               .. activecode:: cp_8_AC_5q
                  :language: cpp
+                 :compileargs: ['-Wall', '-std=c++11']
+                 :nocodelens:
 
                  #include <iostream>
                  using namespace std;
@@ -237,6 +251,8 @@ Coding Practice
 
               .. activecode:: cp_8_AC_5a
                  :language: cpp
+                 :compileargs: ['-Wall', '-std=c++11']
+                 :nocodelens:
                  :optional:
 
                  #include <iostream>
@@ -277,6 +293,8 @@ Coding Practice
 
       .. activecode:: cp_8_AC_6q
           :language: cpp
+          :compileargs: ['-Wall', '-std=c++11']
+          :nocodelens:
           :practice: T
 
           Write the ``Pokemon`` structure, which has instance variables ``string pokeName``,
@@ -323,6 +341,8 @@ Coding Practice
 
               .. activecode:: cp_8_AC_7q
                  :language: cpp
+                 :compileargs: ['-Wall', '-std=c++11']
+                 :nocodelens:
 
                  #include <iostream>
                  using namespace std;
@@ -364,6 +384,8 @@ Coding Practice
 
               .. activecode:: cp_8_AC_7a
                  :language: cpp
+                 :compileargs: ['-Wall', '-std=c++11']
+                 :nocodelens:
                  :optional:
 
                  #include <iostream>
@@ -415,6 +437,8 @@ Coding Practice
 
       .. activecode:: cp_8_AC_8q
           :language: cpp
+          :compileargs: ['-Wall', '-std=c++11']
+          :nocodelens:
 
           When Pokemon are injured, they can be healed up at the Pokemon Center.
           Write the function ``healPokemon``, which takes a ``Trainer`` as a parameter
@@ -500,6 +524,8 @@ Coding Practice
 
               .. activecode:: cp_8_AC_9q
                  :language: cpp
+                 :compileargs: ['-Wall', '-std=c++11']
+                 :nocodelens:
                  :stdin: y
 
                  #include <iostream>
@@ -569,6 +595,8 @@ Coding Practice
 
               .. activecode:: cp_8_AC_9a
                  :language: cpp
+                 :compileargs: ['-Wall', '-std=c++11']
+                 :nocodelens:
                  :stdin: y
                  :optional:
 
@@ -651,6 +679,8 @@ Coding Practice
 
       .. activecode:: cp_8_AC_10q
           :language: cpp
+          :compileargs: ['-Wall', '-std=c++11']
+          :nocodelens:
           :stdin: 145, 2
           :practice: T
 

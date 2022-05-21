@@ -118,6 +118,8 @@ Then in main, we should output and check the value of the result.
 
 .. activecode:: program_dvlmt_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Program Development
 
    This program implements the distance function that we've been 

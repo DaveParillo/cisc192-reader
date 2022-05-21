@@ -14,26 +14,28 @@ standard format. If you call ``print_point (blank)``, it will output
 ``(3, 4)``.
 
 .. activecode:: structures_parameters_AC_1
-  :language: cpp
+   :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
 
-  The active code below uses the ``print_point`` function. Run the code to 
-  see the output!
-  ~~~~
-  #include <iostream>
-  using namespace std;
-
-  struct point {
-      double x, y;
-  };
-
-  void print_point (point p) {
-      cout << "(" << p.x << ", " << p.y << ")" << endl;
-  }
-
-  int main() {
-      point blank = { 3.0, 4.0 };
-      print_point (blank);
-  }
+   The active code below uses the ``print_point`` function. Run the code to 
+   see the output!
+   ~~~~
+   #include <iostream>
+   using namespace std;
+ 
+   struct point {
+       double x, y;
+   };
+ 
+   void print_point (point p) {
+       cout << "(" << p.x << ", " << p.y << ")" << endl;
+   }
+ 
+   int main() {
+       point blank = { 3.0, 4.0 };
+       print_point (blank);
+   }
 
 As a second example, we can rewrite the ``distance`` function from
 Section `[distance] <#distance>`__ so that it takes two ``point``\ s as
@@ -52,30 +54,32 @@ parameters instead of four ``double``\ s.
    .. tab:: Q1
 
       .. activecode:: structures_parameters_AC_2
-        :language: cpp
+         :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
+         :nocodelens:
 
-        The active code below uses the updated version of the ``distance`` function.
-        Feel free to modify the code!
-        ~~~~
-        #include <iostream>
-        #include <cmath>
-        using namespace std;
-
-        struct point {
-            double x, y;
-        };
-
-        double distance (point p1, point p2) {
-            double dx = p2.x - p1.x;
-            double dy = p2.y - p1.y;
-            return sqrt (dx*dx + dy*dy);
-        }
-
-        int main() {
-            point origin = { 0.0, 0.0 };
-            point point = { 3.0, 4.0 };
-            cout << "The distance from the point to the origin is " << distance (origin, point) << endl;
-        }
+         The active code below uses the updated version of the ``distance`` function.
+         Feel free to modify the code!
+         ~~~~
+         #include <iostream>
+         #include <cmath>
+         using namespace std;
+ 
+         struct point {
+             double x, y;
+         };
+ 
+         double distance (point p1, point p2) {
+             double dx = p2.x - p1.x;
+             double dy = p2.y - p1.y;
+             return sqrt (dx*dx + dy*dy);
+         }
+ 
+         int main() {
+             point origin = { 0.0, 0.0 };
+             point point = { 3.0, 4.0 };
+             cout << "The distance from the point to the origin is " << distance (origin, point) << endl;
+         }
 
    .. tab:: Q2
 

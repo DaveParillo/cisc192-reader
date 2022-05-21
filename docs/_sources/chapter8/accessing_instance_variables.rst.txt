@@ -25,6 +25,8 @@ so the following are legal.
 
 .. activecode:: accessing_instance_variables_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
 
    In the active code below, we access the instance variables of ``point`` object 
    ``blank`` and output their values.

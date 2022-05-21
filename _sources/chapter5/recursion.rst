@@ -77,6 +77,8 @@ call to find the factorial of :math:`n-1`, and then multiply it by
 
 .. activecode:: more_recursion_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Factorial Recursion
 
    This program uses recursion to calculate the factorial of

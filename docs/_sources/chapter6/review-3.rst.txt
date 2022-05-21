@@ -22,6 +22,8 @@ Coding Practice
 
               .. activecode:: cp_6_AC_1q
                  :language: cpp
+                 :compileargs: ['-Wall', '-std=c++11']
+                 :nocodelens:
                  :practice: T
 
                  #include <iostream>
@@ -39,6 +41,8 @@ Coding Practice
 
               .. activecode:: cp_6_AC_1a
                  :language: cpp
+                 :compileargs: ['-Wall', '-std=c++11']
+                 :nocodelens:
                  :optional:
 
                  #include <iostream>
@@ -61,6 +65,8 @@ Coding Practice
 
       .. activecode:: cp_6_AC_2q
          :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
+         :nocodelens:
 
          Encapsulate the triangle printing program into a function called
          ``print_triangle``. Generalize it so that it takes a parameter
@@ -103,6 +109,8 @@ Coding Practice
 
              .. activecode:: cp_6_AC_3q
                 :language: cpp
+                :compileargs: ['-Wall', '-std=c++11']
+                :nocodelens:
                 :practice: T
 
                 #include <iostream>
@@ -125,6 +133,8 @@ Coding Practice
 
              .. activecode:: cp_6_AC_3a
                 :language: cpp
+                :compileargs: ['-Wall', '-std=c++11']
+                :nocodelens:
                 :optional:
 
                 #include <iostream>
@@ -156,6 +166,8 @@ Coding Practice
 
       .. activecode:: cp_6_AC_4q
          :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
+         :nocodelens:
          :practice: T
 
          Write a function called ``number_pyramid`` that prints out an ``n`` x ``n`` number pyramid. 
@@ -210,6 +222,8 @@ Coding Practice
 
              .. activecode:: cp_6_AC_5q
                 :language: cpp
+                :compileargs: ['-Wall', '-std=c++11']
+                :nocodelens:
                 :practice: T
 
                 #include <iostream>
@@ -228,6 +242,8 @@ Coding Practice
 
              .. activecode:: cp_6_AC_5a
                 :language: cpp
+                :compileargs: ['-Wall', '-std=c++11']
+                :nocodelens:
                 :optional:
 
                 #include <iostream>
@@ -256,6 +272,8 @@ Coding Practice
 
       .. activecode:: cp_6_AC_6q
          :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
+         :nocodelens:
          :practice: T
 
          Write the function ``addition_table`` which takes an ``int n`` as a parameter
@@ -299,6 +317,8 @@ Coding Practice
 
              .. activecode:: cp_6_AC_7q
                 :language: cpp
+                :compileargs: ['-Wall', '-std=c++11']
+                :nocodelens:
                 :practice: T
 
                 bool is_prime (int num) {
@@ -348,6 +368,8 @@ Coding Practice
 
              .. activecode:: cp_6_AC_7a
                 :language: cpp
+                :compileargs: ['-Wall', '-std=c++11']
+                :nocodelens:
                 :optional:
 
                 #include <iostream>
@@ -400,6 +422,8 @@ Coding Practice
 
       .. activecode:: cp_6_AC_8q
          :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
+         :nocodelens:
          :practice: T
 
          Write a program that uses a ``while`` loop to print out the alphabet from 'a' to 'z'.
@@ -424,6 +448,8 @@ Coding Practice
 
              .. activecode:: cp_6_AC_9q
                 :language: cpp
+                :compileargs: ['-Wall', '-std=c++11']
+                :nocodelens:
                 :practice: T
 
                 #include <iostream>
@@ -445,6 +471,8 @@ Coding Practice
 
              .. activecode:: cp_6_AC_9a
                 :language: cpp
+                :compileargs: ['-Wall', '-std=c++11']
+                :nocodelens:
                 :optional:
 
                  #include <iostream>
@@ -468,6 +496,8 @@ Coding Practice
 
       .. activecode:: cp_6_AC_10q
          :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
+         :nocodelens:
          :practice: T
 
          Write a function called ``factorial`` which takes an ``int n`` as a parameter

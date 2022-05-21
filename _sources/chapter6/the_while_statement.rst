@@ -5,6 +5,8 @@ Using a ``while`` statement, we can rewrite ``countdown``:
 
 .. activecode:: the_while_statement_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Multiple assignment
 
    Try running the active code below! Afterwards, try changing 9 to a different

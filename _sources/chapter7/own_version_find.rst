@@ -23,34 +23,36 @@ argument. The other arguments are the character we are looking for and
 the index where we should start.
 
 .. activecode:: own_version_find_AC_1
-  :language: cpp
-  :caption: Our own find function
+   :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
+   :caption: Our own find function
 
-  In the active code below, we are finding the number of ``'e'`` characters in 
-  the "Shepard" part of "German Shepard" using our function. 
-  Then we use the built-in ``find`` function to demonstrate how they work differently.
-  ~~~~
-  #include <iostream>
-  #include <string>
-
-  int find (std::string s, char c, int i) {
-      int length = s.length();
-      while (i < length) {
-          if (s[i] == c) {
-              return i;
-          }
-          i = i + 1;
-      }
-      return -1;
-  }
-
-  int main() {
-      std::string dog = "German Shepard";
-      int start_shepard = 7;
-      std::cout << find(dog, 'e', start_shepard) << '\n';
-      std::cout << dog.find('e') << '\n';
-  }
-
+   In the active code below, we are finding the number of ``'e'`` characters in 
+   the "Shepard" part of "German Shepard" using our function. 
+   Then we use the built-in ``find`` function to demonstrate how they work differently.
+   ~~~~
+   #include <iostream>
+   #include <string>
+ 
+   int find (std::string s, char c, int i) {
+       int length = s.length();
+       while (i < length) {
+           if (s[i] == c) {
+               return i;
+           }
+           i = i + 1;
+       }
+       return -1;
+   }
+ 
+   int main() {
+       std::string dog = "German Shepard";
+       int start_shepard = 7;
+       std::cout << find(dog, 'e', start_shepard) << '\n';
+       std::cout << dog.find('e') << '\n';
+   }
+ 
 .. tabbed:: self_check
 
    .. tab:: Q1

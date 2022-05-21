@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9.14. Coding Practice &#8212; CISC 192 Course Reader Overview</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.5.5" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/runestone.js?v=92D8BBF0"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../_static/theme.js?v=D899FB97"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="9.13. Mixed Up Code Practice" href="review-2.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'https://daveparillo.github.io/cisc192-reader/' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/cisc192-reader';
+    eBookConfig.course = 'cisc192-reader';
+    eBookConfig.basecourse = 'cisc192-reader';
+    eBookConfig.isLoggedIn = false;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
+  eBookConfig.runestone_version = '5.5.5';
+  eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+          <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;'>&nbsp;<span aria-label="logo" class="visuallyhidden">Runestone Logo</span> </a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          cisc192-reader
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">9.13. </span>Mixed Up Code Practice" data-toggle="tooltip">
+    <a href="review-2.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+    <li class="divider-vertical"></li>
+  
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+      </div> <!-- navbar -->
+
+
+
+
+
+
+
+    </div> <!-- container -->
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="coding-practice">
+<h1><span class="section-number">9.14. </span>Coding Practice<a class="headerlink" href="#coding-practice" title="Permalink to this headline">¶</a></h1>
+<div id='self_check' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Q1" >
+<div id='cp_9_1' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+<p>Write the <code class="docutils literal notranslate"><span class="pre">Cake</span></code> structure, which has instance variables name, color, diameter, and has_icing.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_9_AC_1q >
+<div id=cp_9_AC_1q_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="cp_9_AC_1q_editor" data-question_label="9.14.1" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+// Write your code for the struct Cake here.
+
+int main() {
+    Cake c = { "Mary", "blue", 3.5, false };
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+<p>Below is one way to implement the program. We declare the <code class="docutils literal notranslate"><span class="pre">Cake</span></code> struct and list the instance
+variables in order.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_9_AC_1a >
+<div id=cp_9_AC_1a_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="cp_9_AC_1a_editor" data-question_label="9.14.2" 
+      data-timelimit=25000     data-optional=true
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+struct Cake {
+    string name;
+    string color;
+    double diameter;
+    bool has_icing;
+};
+
+int main() {
+    Cake c = { "Mary", "blue", 3.5, false };
+}
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</div><div data-component="tab" data-tabname="Q2" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_9_AC_2q >
+<div id=cp_9_AC_2q_question class="ac_question col-md-12">
+<p>Write the function <code class="docutils literal notranslate"><span class="pre">printCakeInfo</span></code>, which prints the cake’s information in the format
+“This is a <code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">diameter</span></code> inch diameter cake with/without icing.” If <code class="docutils literal notranslate"><span class="pre">name</span></code> does not
+have the value “n/a”, <code class="docutils literal notranslate"><span class="pre">printCakeInfo</span></code> prints out “Happy birthdday <code class="docutils literal notranslate"><span class="pre">name</span></code>! Your cake is <code class="docutils literal notranslate"><span class="pre">color</span></code>,
+has a <code class="docutils literal notranslate"><span class="pre">diameter</span></code> inch diameter, and comes with/without icing.”</p>
+
+</div>
+<textarea data-lang="cpp" id="cp_9_AC_2q_editor" data-question_label="9.14.3" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+struct Cake {
+    string name;
+    string color;
+    double diameter;
+    bool has_icing;
+};
+
+// Write your code for the printCakeInfo function here.
+
+int main() {
+    Cake c1 = { "n/a", "red", 12.5, true };
+    printCakeInfo (c1);
+    Cake c2 = { "Tom", "white", 10, false };
+    printCakeInfo (c2);
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Q3" >
+<div id='cp_9_3' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+<p>Write the <code class="docutils literal notranslate"><span class="pre">makeCake</span></code> function, which prompts the user for a name,
+color, diameter, and whether or not they want icing. The function then
+returns the cake.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_9_AC_3q >
+<div id=cp_9_AC_3q_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="cp_9_AC_3q_editor" data-question_label="9.14.4" 
+      data-timelimit=25000     
+    data-audio=''   data-stdin='test'   
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+struct Cake {
+    string name;
+    string color;
+    double diameter;
+    bool has_icing;
+};
+
+void printCakeInfo (Cake c);
+
+// Write your code for the makeCake function here.
+
+int main() {
+    Cake input = makeCake ();
+    printCakeInfo (input);
+}
+====
+void printCakeInfo (Cake c) {
+    if (c.name == "n/a") {
+        if (c.has_icing) {
+            cout << "This is a " << c.color << "," << c.diameter << " inch diameter cake with icing." << endl;
+        }
+        else {
+            cout << "This is a " << c.color << "," << c.diameter << " inch diameter cake without icing." << endl;
+        }
+    }
+    else {
+        if (c.has_icing) {
+            cout << "Happy birthday " << c.name << "! Your cake is " << c.color << ", has a " << c.diameter << " inch diameter, and comes with icing." << endl;
+        }
+        else {
+            cout << "Happy birthday " << c.name << "! Your cake is " << c.color << ", has a " << c.diameter << " inch diameter, and comes without icing." << endl;
+        }
+    }
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+<p>Below is one way to implement the program. We create a <code class="docutils literal notranslate"><span class="pre">Cake</span></code> for the user, read in the user’s input using cin, and return the <code class="docutils literal notranslate"><span class="pre">Cake</span></code>.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_9_AC_3a >
+<div id=cp_9_AC_3a_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="cp_9_AC_3a_editor" data-question_label="9.14.5" 
+      data-timelimit=25000     data-optional=true
+    data-audio=''   data-stdin='test'   
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+struct Cake {
+    string name;
+    string color;
+    double diameter;
+    bool has_icing;
+};
+
+void printCakeInfo (Cake c);
+
+Cake makeCake () {
+    Cake input;
+    string name, color;
+    double diameter;
+    char icing;
+    cout << "Name: ";
+    cin >> name;
+    input.name = name;
+    cout << "Color: ";
+    cin >> color;
+    input.color = color;
+    cout << "Diameter: ";
+    cin >> diameter;
+    input.diameter = diameter;
+    cout << "Icing? (y/n) ";
+    cin >> icing;
+    if (icing == 'y') {
+        input.has_icing = true;
+    }
+    else {
+        input.has_icing = false;
+    }
+    return input;
+}
+
+int main() {
+    Cake input = makeCake ();
+    printCakeInfo (input);
+}
+====
+void printCakeInfo (Cake c) {
+    if (c.name == "n/a") {
+        if (c.has_icing) {
+            cout << "This is a " << c.color << "," << c.diameter << " inch diameter cake with icing." << endl;
+        }
+        else {
+            cout << "This is a " << c.color << "," << c.diameter << " inch diameter cake without icing." << endl;
+        }
+    }
+    else {
+        if (c.has_icing) {
+            cout << "Happy birthday " << c.name << "! Your cake is " << c.color << ", has a " << c.diameter << " inch diameter, and comes with icing." << endl;
+        }
+        else {
+            cout << "Happy birthday " << c.name << "! Your cake is " << c.color << ", has a " << c.diameter << " inch diameter, and comes without icing." << endl;
+        }
+    }
+}
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</div><div data-component="tab" data-tabname="Q4" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_9_AC_4q >
+<div id=cp_9_AC_4q_question class="ac_question col-md-12">
+<p>Write the function <code class="docutils literal notranslate"><span class="pre">changeCakeDiameter</span></code>, which takes a <code class="docutils literal notranslate"><span class="pre">Cake</span></code> and a <code class="docutils literal notranslate"><span class="pre">double</span></code> as a parameter.
+<code class="docutils literal notranslate"><span class="pre">changeCakeDiameter</span></code> then multiplies the original diameter by the double and modifies the cake
+to have this new diameter.</p>
+
+</div>
+<textarea data-lang="cpp" id="cp_9_AC_4q_editor" data-question_label="9.14.6" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+struct Cake {
+    string name;
+    string color;
+    double diameter;
+    bool has_icing;
+};
+
+void printCakeInfo (Cake c);
+Cake makeCake ();
+
+// Write your code for the changeCakeDiameter function here.
+
+int main() {
+    Cake original = { "John", "green", 8.5, true };
+    changeCakeDiameter (original, 2);
+    printCakeInfo (original);
+}
+====
+void printCakeInfo (Cake c) {
+    if (c.name == "n/a") {
+        if (c.has_icing) {
+            cout << "This is a " << c.color << "," << c.diameter << " inch diameter cake with icing." << endl;
+        }
+        else {
+            cout << "This is a " << c.color << "," << c.diameter << " inch diameter cake without icing." << endl;
+        }
+    }
+    else {
+        if (c.has_icing) {
+            cout << "Happy birthday " << c.name << "! Your cake is " << c.color << ", has a " << c.diameter << " inch diameter, and comes with icing." << endl;
+        }
+        else {
+            cout << "Happy birthday " << c.name << "! Your cake is " << c.color << ", has a " << c.diameter << " inch diameter, and comes without icing." << endl;
+        }
+    }
+}
+
+Cake makeCake () {
+    Cake input;
+    string name, color;
+    double diameter;
+    char icing;
+    cout << "Name: ";
+    cin >> name;
+    input.name = name;
+    cout << "Color: ";
+    cin >> color;
+    input.color = color;
+    cout << "Diameter: ";
+    cin >> diameter;
+    input.diameter = diameter;
+    cout << "Icing? (y/n) ";
+    cin >> icing;
+    if (icing == 'y') {
+        input.has_icing = true;
+    }
+    else {
+        input.has_icing = false;
+    }
+    return input;
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Q5" >
+<div id='cp_9_5' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+<p>Write the <code class="docutils literal notranslate"><span class="pre">editCake</span></code> function, which prompts the user for a new name,
+color, diameter, and whether or not they want icing. The function modifies
+the original cake that is passed in as a parameter. Use the makeCake function
+in your implementation to avoid duplicate code!</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_9_AC_5q >
+<div id=cp_9_AC_5q_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="cp_9_AC_5q_editor" data-question_label="9.14.7" 
+      data-timelimit=25000     
+    data-audio=''   data-stdin='test'   
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+struct Cake {
+    string name;
+    string color;
+    double diameter;
+    bool has_icing;
+};
+
+void printCakeInfo (Cake c);
+Cake makeCake ();
+
+// Write your code for the editCake function here.
+
+int main() {
+    Cake original = { "Oops", "orange", 185, true };
+    editCake (original);
+    printCakeInfo (original);
+}
+====
+ void printCakeInfo (Cake c) {
+     if (c.name == "n/a") {
+         if (c.has_icing) {
+             cout << "This is a " << c.color << "," << c.diameter << " inch diameter cake with icing." << endl;
+         }
+         else {
+             cout << "This is a " << c.color << "," << c.diameter << " inch diameter cake without icing." << endl;
+         }
+     }
+     else {
+         if (c.has_icing) {
+             cout << "Happy birthday " << c.name << "! Your cake is " << c.color << ", has a " << c.diameter << " inch diameter, and comes with icing." << endl;
+         }
+         else {
+             cout << "Happy birthday " << c.name << "! Your cake is " << c.color << ", has a " << c.diameter << " inch diameter, and comes without icing." << endl;
+         }
+     }
+ }
+
+ Cake makeCake () {
+     Cake input;
+     string name, color;
+     double diameter;
+     char icing;
+     cout << "Name: ";
+     cin >> name;
+     input.name = name;
+     cout << "Color: ";
+     cin >> color;
+     input.color = color;
+     cout << "Diameter: ";
+     cin >> diameter;
+     input.diameter = diameter;
+     cout << "Icing? (y/n) ";
+     cin >> icing;
+     if (icing == 'y') {
+         input.has_icing = true;
+     }
+     else {
+         input.has_icing = false;
+     }
+     return input;
+ }
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+<p>Below is one way to implement the program. We call <code class="docutils literal notranslate"><span class="pre">makeCake</span></code> in <code class="docutils literal notranslate"><span class="pre">editCake</span></code> and then set the original cake
+equal to the new one.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_9_AC_5a >
+<div id=cp_9_AC_5a_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="cp_9_AC_5a_editor" data-question_label="9.14.8" 
+      data-timelimit=25000     data-optional=true
+    data-audio=''   data-stdin='test'   
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+struct Cake {
+    string name;
+    string color;
+    double diameter;
+    bool has_icing;
+};
+
+void printCakeInfo (Cake c);
+Cake makeCake ();
+
+void editCake (Cake& c) {
+    Cake newCake = makeCake ();
+    c = newCake;
+}
+
+int main() {
+    Cake original = { "Oops", "orange", 185, true };
+    editCake (original);
+    printCakeInfo (original);
+}
+====
+ void printCakeInfo (Cake c) {
+     if (c.name == "n/a") {
+         if (c.has_icing) {
+             cout << "This is a " << c.color << "," << c.diameter << " inch diameter cake with icing." << endl;
+         }
+         else {
+             cout << "This is a " << c.color << "," << c.diameter << " inch diameter cake without icing." << endl;
+         }
+     }
+     else {
+         if (c.has_icing) {
+             cout << "Happy birthday " << c.name << "! Your cake is " << c.color << ", has a " << c.diameter << " inch diameter, and comes with icing." << endl;
+         }
+         else {
+             cout << "Happy birthday " << c.name << "! Your cake is " << c.color << ", has a " << c.diameter << " inch diameter, and comes without icing." << endl;
+         }
+     }
+ }
+
+ Cake makeCake () {
+     Cake input;
+     string name, color;
+     double diameter;
+     char icing;
+     cout << "Name: ";
+     cin >> name;
+     input.name = name;
+     cout << "Color: ";
+     cin >> color;
+     input.color = color;
+     cout << "Diameter: ";
+     cin >> diameter;
+     input.diameter = diameter;
+     cout << "Icing? (y/n) ";
+     cin >> icing;
+     if (icing == 'y') {
+         input.has_icing = true;
+     }
+     else {
+         input.has_icing = false;
+     }
+     return input;
+ }
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</div><div data-component="tab" data-tabname="Q6" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_9_AC_6q >
+<div id=cp_9_AC_6q_question class="ac_question col-md-12">
+<p>Write the struct <code class="docutils literal notranslate"><span class="pre">Shirt</span></code>, which has the instance variables color and size.</p>
+
+</div>
+<textarea data-lang="cpp" id="cp_9_AC_6q_editor" data-question_label="9.14.9" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+// Write your code for the struct Shirt here.
+
+int main () {
+    Shirt t = { "blue", 'L' };
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Q7" >
+<div id='cp_9_7' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+<p>Write the <code class="docutils literal notranslate"><span class="pre">Pants</span></code> structure, which has instance variables size and material.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_9_AC_7q >
+<div id=cp_9_AC_7q_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="cp_9_AC_7q_editor" data-question_label="9.14.10" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+// Write your code for the struct Pants here.
+
+int main() {
+    Pants p = { 'S', "denim" };
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+<p>Below is one way to implement the program. We declare the <code class="docutils literal notranslate"><span class="pre">Pants</span></code> struct and list the instance
+variables in order.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_9_AC_7a >
+<div id=cp_9_AC_7a_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="cp_9_AC_7a_editor" data-question_label="9.14.11" 
+      data-timelimit=25000     data-optional=true
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+struct Pants {
+    char size;
+    string material;
+};
+
+int main() {
+    Pants p = { 'S', "denim" };
+}
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</div><div data-component="tab" data-tabname="Q8" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_9_AC_8q >
+<div id=cp_9_AC_8q_question class="ac_question col-md-12">
+<p>Write the struct <code class="docutils literal notranslate"><span class="pre">Outfit</span></code>, which is a nested structure that has a <code class="docutils literal notranslate"><span class="pre">Shirt</span></code>, <code class="docutils literal notranslate"><span class="pre">Pants</span></code>, and has_hat.</p>
+
+</div>
+<textarea data-lang="cpp" id="cp_9_AC_8q_editor" data-question_label="9.14.12" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+// Write your code for the struct Outfit here.
+
+int main () {
+    Shirt t = { "blue", 'L' };
+    Pants p = { 'S', "denim" };
+    Outfit o = { t, p, true };
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Q9" >
+<div id='cp_9_AC_9q' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+<p>Write the <code class="docutils literal notranslate"><span class="pre">printOutfit</span></code> function, which prints out details of the outfit.
+The output below should be “Shirt: blue and L; Pants: S and denim; has hat”.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_9_AC_9q >
+<div id=cp_9_AC_9q_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="cp_9_AC_9q_editor" data-question_label="9.14.13" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+struct Shirt {
+    string color;
+    char size;
+};
+
+struct Pants {
+    char size;
+    string material;
+};
+
+struct Outfit {
+    Shirt s;
+    Pants p;
+    bool has_hat;
+}
+
+// Write your code for the printOutfit function here.
+
+int main() {
+    Shirt t = { "blue", 'L' };
+    Pants p = { 'S', "denim" };
+    Outfit o = { t, p, true };
+    printOutfit (o);
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+<p>Below is one way to implement the program. We declare the <code class="docutils literal notranslate"><span class="pre">Cake</span></code> struct and list the instance
+variables in order.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_9_AC_9a >
+<div id=cp_9_AC_9a_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="cp_9_AC_9a_editor" data-question_label="9.14.14" 
+      data-timelimit=25000     data-optional=true
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+struct Shirt {
+    string color;
+    char size;
+};
+
+struct Pants {
+    char size;
+    string material;
+};
+
+struct Outfit {
+    Shirt s;
+    Pants p;
+    bool has_hat;
+}
+
+void printOutfit (Outfit o) {
+"Shirt: blue and L; Pants: S and denim; has hat"
+    cout << "Shirt: " << o.s.color << " and " << o.s.size << "; Pants:" << o.p.size << " and " << o.p.material << "; ";
+    if (o.has_hat) {
+        cout << "has hat" << endl;
+    }
+    else {
+        cout << "does not have hat" << endl;
+    }
+}
+
+int main() {
+    Shirt t = { "blue", 'L' };
+    Pants p = { 'S', "denim" };
+    Outfit o = { t, p, true };
+    printOutfit (o);
+}
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</div><div data-component="tab" data-tabname="Q10" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=cp_9_AC_10q >
+<div id=cp_9_AC_10q_question class="ac_question col-md-12">
+<p>Write the <code class="docutils literal notranslate"><span class="pre">changeShirts</span></code> and <code class="docutils literal notranslate"><span class="pre">changePants</span></code> functions, which both take an <code class="docutils literal notranslate"><span class="pre">Outfit</span></code> as a parameter. <code class="docutils literal notranslate"><span class="pre">changeShirts</span></code> also
+takes a <code class="docutils literal notranslate"><span class="pre">Shirt</span></code> as a parameter and <code class="docutils literal notranslate"><span class="pre">changePants</span></code> also takes a <code class="docutils literal notranslate"><span class="pre">Pants</span></code> as a parameter. Each function modifies the <code class="docutils literal notranslate"><span class="pre">Outfit</span></code>
+and changes the shirt or pants to the new input.</p>
+
+</div>
+<textarea data-lang="cpp" id="cp_9_AC_10q_editor" data-question_label="9.14.15" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+struct Shirt {
+    string color;
+    char size;
+};
+
+struct Pants {
+    char size;
+    string material;
+};
+
+struct Outfit {
+    Shirt s;
+    Pants p;
+    bool has_hat;
+}
+
+// Write your code for the changeShirts function here.
+
+// Write your code for the changePants function here.
+
+int main() {
+    Shirt t = { "blue", 'L' };
+    Pants p = { 'S', "denim" };
+    Outfit o = { t, p, true };
+    printOutfit (o);
+    Shirt newShirt = { "red", 'M' };
+    Pants newPants = { 'M', "khakis" };
+    changeShirts (o, newShirt);
+    changePants (o, newPants);
+    printOutfit (o);
+}
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</div>
+
+
+  <div id=scprogresscontainer>
+    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+  </div>
+  
+      
+<ul>
+  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 9.13. Mixed Up Code Practice' data-toggle="tooltip">
+    <a href="review-2.html" aria-label="9.13. Mixed Up Code Practice">
+        <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+            <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+        </div>
+    </a>
+  </li>
+</ul>
+
+  
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+<script>
+	function mouseOverPrev() {
+		document.getElementById("relations-prev").style.opacity=1;
+	}
+
+	function mouseOutPrev() {
+		document.getElementById("relations-prev").style.opacity=0.4;
+	}
+	function mouseOverNext() {
+		document.getElementById("relations-next").style.opacity=1;
+	}
+
+	function mouseOutNext() {
+		document.getElementById("relations-next").style.opacity=0.4;
+	}
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020-2021 Dave Parillo.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.5.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> getSwitch(); </script>
+
+
+  </body>
+</html>

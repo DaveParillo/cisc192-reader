@@ -11,6 +11,8 @@ series of ifs and elses:
 
 .. activecode:: chained_conditionals_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Classifying a Number as +, -, or 0.
 
    The following program classifies a number (x) as positive,

@@ -25,6 +25,8 @@ is. If you really want to know, you can try it.
 
 .. activecode:: increment_decrement_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Looping and counting
 
    The active code demonstrates how using increment operators

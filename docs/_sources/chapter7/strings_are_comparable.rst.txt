@@ -6,6 +6,8 @@ also work on ``strings``.
 
 .. activecode:: strings_comparable_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Strings are comparable
  
    Take a look at the active code below, which checks to see if ``word`` is 
@@ -33,6 +35,8 @@ alphabetical order.
 
 .. activecode:: strings_comparable_AC_2
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Strings are comparable
  
    The active code below uses comparison operators to determine the ordering
@@ -74,6 +78,8 @@ When we use ``cout`` to print the value, we don't get what we expect.
 
 .. activecode:: strings_comparable_AC_3
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: String comparisons print 0 and 1 by default
  
    Print a simple boolean value resulting from a string comparison.
@@ -96,6 +102,8 @@ In order to get the results we expect, we need to use the
 
 .. activecode:: strings_comparable_AC_4
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: iomanip can change what iostream displays
  
    The I/O manipluator ``boolalpha`` can display the boolean

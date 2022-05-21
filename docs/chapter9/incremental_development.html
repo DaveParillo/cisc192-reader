@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9.8. Incremental development versus planning &#8212; CISC 192 Course Reader Overview</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.5.5" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/runestone.js?v=92D8BBF0"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../_static/theme.js?v=D899FB97"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="9.9. Generalization" href="generalization.html" />
+    <link rel="prev" title="9.7. Which is best?" href="which_is_best.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'https://daveparillo.github.io/cisc192-reader/' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/cisc192-reader';
+    eBookConfig.course = 'cisc192-reader';
+    eBookConfig.basecourse = 'cisc192-reader';
+    eBookConfig.isLoggedIn = false;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
+  eBookConfig.runestone_version = '5.5.5';
+  eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+          <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;'>&nbsp;<span aria-label="logo" class="visuallyhidden">Runestone Logo</span> </a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          cisc192-reader
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">9.7. </span>Which is best?" data-toggle="tooltip">
+    <a href="which_is_best.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">9.9. </span>Generalization' data-toggle="tooltip" >              
+    <a href="generalization.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+      </div> <!-- navbar -->
+
+
+
+
+
+
+
+    </div> <!-- container -->
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="incremental-development-versus-planning">
+<h1><span class="section-number">9.8. </span>Incremental development versus planning<a class="headerlink" href="#incremental-development-versus-planning" title="Permalink to this headline">¶</a></h1>
+<p id="index-0">In this chapter I have demonstrated an approach to program development I
+refer to as <strong>rapid prototyping with iterative improvement</strong>. In each
+case, I wrote a rough draft (or prototype) that performed the basic
+calculation, and then tested it on a few cases, correcting flaws as I
+found them.</p>
+<p>Although this approach can be effective, it can lead to code that is
+unnecessarily complicated—since it deals with many special cases—and
+unreliable—since it is hard to know if you have found all the errors.</p>
+<p>An alternative is high-level planning, in which a little insight into
+the problem can make the programming much easier. In this case the
+insight is that a <code class="docutils literal notranslate"><span class="pre">Time</span></code> is really a three-digit number in base 60!
+The <code class="docutils literal notranslate"><span class="pre">second</span></code> is the “ones column,” the <code class="docutils literal notranslate"><span class="pre">minute</span></code> is the “60’s
+column”, and the <code class="docutils literal notranslate"><span class="pre">hour</span></code> is the “3600’s column.”</p>
+<p>When we wrote <code class="docutils literal notranslate"><span class="pre">addTime</span></code> and <code class="docutils literal notranslate"><span class="pre">increment</span></code>, we were effectively doing
+addition in base 60, which is why we had to “carry” from one column to
+the next.</p>
+<p>Thus an alternate approach to the whole problem is to convert
+<code class="docutils literal notranslate"><span class="pre">Time</span></code>s into <code class="docutils literal notranslate"><span class="pre">double</span></code>s and take advantage of the fact that the
+computer already knows how to do arithmetic with <code class="docutils literal notranslate"><span class="pre">double</span></code>s. Here is
+a function that converts a <code class="docutils literal notranslate"><span class="pre">Time</span></code> into a <code class="docutils literal notranslate"><span class="pre">double</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="nf">convertToSeconds</span> <span class="p">(</span><span class="k">const</span> <span class="n">Time</span><span class="o">&amp;</span> <span class="n">t</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">minutes</span> <span class="o">=</span> <span class="n">t</span><span class="p">.</span><span class="n">hour</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">+</span> <span class="n">t</span><span class="p">.</span><span class="n">minute</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">seconds</span> <span class="o">=</span> <span class="n">minutes</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">+</span> <span class="n">t</span><span class="p">.</span><span class="n">second</span><span class="p">;</span>
+  <span class="k">return</span> <span class="n">seconds</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Now all we need is a way to convert from a <code class="docutils literal notranslate"><span class="pre">double</span></code> to a <code class="docutils literal notranslate"><span class="pre">Time</span></code>
+object:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Time</span> <span class="nf">makeTime</span> <span class="p">(</span><span class="kt">double</span> <span class="n">secs</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">Time</span> <span class="n">time</span><span class="p">;</span>
+  <span class="n">time</span><span class="p">.</span><span class="n">hour</span> <span class="o">=</span> <span class="kt">int</span> <span class="p">(</span><span class="n">secs</span> <span class="o">/</span> <span class="mf">3600.0</span><span class="p">);</span>
+  <span class="n">secs</span> <span class="o">-=</span> <span class="n">time</span><span class="p">.</span><span class="n">hour</span> <span class="o">*</span> <span class="mf">3600.0</span><span class="p">;</span>
+  <span class="n">time</span><span class="p">.</span><span class="n">minute</span> <span class="o">=</span> <span class="kt">int</span> <span class="p">(</span><span class="n">secs</span> <span class="o">/</span> <span class="mf">60.0</span><span class="p">);</span>
+  <span class="n">secs</span> <span class="o">-=</span> <span class="n">time</span><span class="p">.</span><span class="n">minute</span> <span class="o">*</span> <span class="mi">60</span><span class="p">;</span>
+  <span class="n">time</span><span class="p">.</span><span class="n">second</span> <span class="o">=</span> <span class="n">secs</span><span class="p">;</span>
+  <span class="k">return</span> <span class="n">time</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>You might have to think a bit to convince yourself that the technique I
+am using to convert from one base to another is correct. Assuming you
+are convinced, we can use these functions to rewrite <code class="docutils literal notranslate"><span class="pre">addTime</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Time</span> <span class="nf">addTime</span> <span class="p">(</span><span class="k">const</span> <span class="n">Time</span><span class="o">&amp;</span> <span class="n">t1</span><span class="p">,</span> <span class="k">const</span> <span class="n">Time</span><span class="o">&amp;</span> <span class="n">t2</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">double</span> <span class="n">seconds</span> <span class="o">=</span> <span class="n">convertToSeconds</span> <span class="p">(</span><span class="n">t1</span><span class="p">)</span> <span class="o">+</span> <span class="n">convertToSeconds</span> <span class="p">(</span><span class="n">t2</span><span class="p">);</span>
+  <span class="k">return</span> <span class="n">makeTime</span> <span class="p">(</span><span class="n">seconds</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=incremental_development_AC_1 >
+<div id=incremental_development_AC_1_question class="ac_question col-md-12">
+<p>The active code below uses the <code class="docutils literal notranslate"><span class="pre">convertToSeconds</span></code> and <code class="docutils literal notranslate"><span class="pre">makeTime</span></code> functions.</p>
+
+</div>
+<textarea data-lang="cpp" id="incremental_development_AC_1_editor" data-question_label="9.8.1" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+struct Time {
+    int hour, minute;
+    double second;
+};
+
+void printTime (Time& t) {
+    cout << t.hour << ":" << t.minute << ":" << t.second << endl;
+}
+
+double convertToSeconds (const Time& t) {
+    int minutes = t.hour * 60 + t.minute;
+    double seconds = minutes * 60 + t.second;
+    return seconds;
+}
+
+Time makeTime (double secs) {
+   Time time;
+   time.hour = int (secs / 3600.0);
+   secs -= time.hour * 3600.0;
+   time.minute = int (secs / 60.0);
+   secs -= time.minute * 60;
+   time.second = secs;
+   return time;
+}
+
+Time addTime (const Time& t1, const Time& t2) {
+   double seconds = convertToSeconds (t1) + convertToSeconds (t2);
+   return makeTime (seconds);
+}
+
+int main() {
+   Time currentTime = { 9, 14, 30.0 };
+   Time otherTime = { 10, 32, 15.2 };
+   Time doneTime = addTime(currentTime, otherTime);
+   printTime (doneTime);
+}
+</textarea>
+</div>
+</div>
+<p>This is much shorter than the original version, and it is much easier to
+demonstrate that it is correct (assuming, as usual, that the functions
+it calls are correct). As an exercise, rewrite <code class="docutils literal notranslate"><span class="pre">increment</span></code> the same
+way.</p>
+<div id='self_check' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Q1" >
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=incremental_development_AC_2 >
+<div id=incremental_development_AC_2_question class="ac_question col-md-12">
+<p>Write your implementation of <code class="docutils literal notranslate"><span class="pre">increment</span></code> in the commented area of the active
+code below. If you get stuck, you can reveal the extra problem at the end for help.</p>
+
+</div>
+<textarea data-lang="cpp" id="incremental_development_AC_2_editor" data-question_label="9.8.2" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+    style="visibility: hidden;">
+#include <iostream>
+using namespace std;
+
+struct Time {
+    int hour, minute;
+    double second;
+};
+
+void printTime (Time& t) {
+    cout << t.hour << ":" << t.minute << ":" << t.second << endl;
+}
+
+double convertToSeconds (const Time& t) {
+    int minutes = t.hour * 60 + t.minute;
+    double seconds = minutes * 60 + t.second;
+    return seconds;
+}
+
+Time makeTime (double secs) {
+    Time time;
+    time.hour = int (secs / 3600.0);
+    secs -= time.hour * 3600.0;
+    time.minute = int (secs / 60.0);
+    secs -= time.minute * 60;
+    time.second = secs;
+    return time;
+}
+
+Time addTime (const Time& t1, const Time& t2) {
+    double seconds = convertToSeconds (t1) + convertToSeconds (t2);
+    return makeTime (seconds);
+}
+
+void increment (Time& time, double secs) {
+    // This version of ``increment`` should use ``convertToSeconds``
+    // and ``makeTime``. Write your implementation here.
+}
+
+int main() {
+    Time t1 = { 9, 14, 30.0 };
+    increment(t1, 60.0);
+    // Should output "9:15:30"
+    printTime (t1);
+
+    Time t2 = { 9, 59, 45.0 };
+    increment(t2, 120.0);
+    // Should output "10:1:45"
+    printTime (t2);
+}
+</textarea>
+</div>
+</div>
+
+    <div data-component="reveal" id="9_9_1"   data-showtitle="Reveal Problem" data-hidetitle="Hide Problem"  style="visibility: hidden;">
+    
+        <div class="runestone" style="max-width: none;">
+        <pre data-component="parsons" data-question_label="9.8.3" id="incremental_development_1"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
+        <span data-question>Q-3 Let's write the code for the updated version of the ``increment`` function. ``increment``
+adds a number of seconds to a ``Time`` object and updates the values
+of the object. This version should use ``convertToSeconds`` and ``makeTime``.</span>void increment (Time& time, double secs) {
+---
+Time increment (Time& time, double secs) {                         #paired
+---
+   double seconds = convertToSeconds (time) + secs;
+---
+   double seconds = convertToSeconds (time);                        #paired
+---
+   time = makeTime (seconds);
+}
+---
+   return makeTime (seconds)                        #paired
+}
+        </pre>
+        </div>
+    
+    </div>
+    </div>
+    </div>
+
+</div>
+
+
+  <div id=scprogresscontainer>
+    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+  </div>
+  
+      
+<ul>
+  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 9.7. Which is best?' data-toggle="tooltip">
+    <a href="which_is_best.html" aria-label="9.7. Which is best?">
+        <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+            <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+        </div>
+    </a>
+  </li>
+</ul>
+
+  
+<ul>
+  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - 9.9. Generalization' data-toggle="tooltip" >
+    <a href="generalization.html" aria-label="9.9. Generalization">
+      <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+          <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+      </div>
+    </a>
+  </li>
+</ul>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+<script>
+	function mouseOverPrev() {
+		document.getElementById("relations-prev").style.opacity=1;
+	}
+
+	function mouseOutPrev() {
+		document.getElementById("relations-prev").style.opacity=0.4;
+	}
+	function mouseOverNext() {
+		document.getElementById("relations-next").style.opacity=1;
+	}
+
+	function mouseOutNext() {
+		document.getElementById("relations-next").style.opacity=0.4;
+	}
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020-2021 Dave Parillo.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.5.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> getSwitch(); </script>
+
+
+  </body>
+</html>

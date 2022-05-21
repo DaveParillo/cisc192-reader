@@ -52,42 +52,44 @@ converting all the letters to upper or lower case. The return type
 should be ``void``.
 
 .. activecode:: character_classification_AC_1
-  :language: cpp
+   :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
 
-  Try writing the ``stringToUpper`` and ``stringToLower`` functions in the 
-  commented sections of the active code below.
-  Both functions take a single ``string``
-  as a parameter and have return type ``void``. 
-  ``stringToUpper`` should convert the string to uppercase, and 
-  ``stringToLower`` should convert the string to lowercase.
-  Some functions that you might find useful include 
-  ``isalpha``, ``isupper``, ``islower``, ``toupper``, and ``tolower``.
-  If you get stuck, you can reveal the extra problems at the end for help. 
-  ~~~~
-  #include <cctype>
-  #include <iostream>
-  #include <string>
-  using std::cout;
-  using std::string;
-
-  void stringToUpper (string &input) {
-      // ``stringToUpper`` should convert a string to uppercase. 
-      // Write your implementation here.
-  }
-
-  void stringToLower (string &input) {
-      // ``stringToLower`` should convert a string to lowercase.   
-      // Write your implementation here.
-  }
-
-  int main() {
-      string upper = "This String Should Be Converted To Uppercase!";
-      stringToUpper (upper);
-      cout << upper << '\n';
-      string lower = "This String Should Be Converted To Lowercase!";
-      stringToLower (lower);
-      cout << lower << '\n';
-  }
+   Try writing the ``stringToUpper`` and ``stringToLower`` functions in the 
+   commented sections of the active code below.
+   Both functions take a single ``string``
+   as a parameter and have return type ``void``. 
+   ``stringToUpper`` should convert the string to uppercase, and 
+   ``stringToLower`` should convert the string to lowercase.
+   Some functions that you might find useful include 
+   ``isalpha``, ``isupper``, ``islower``, ``toupper``, and ``tolower``.
+   If you get stuck, you can reveal the extra problems at the end for help. 
+   ~~~~
+   #include <cctype>
+   #include <iostream>
+   #include <string>
+   using std::cout;
+   using std::string;
+ 
+   void stringToUpper (string &input) {
+       // ``stringToUpper`` should convert a string to uppercase. 
+       // Write your implementation here.
+   }
+ 
+   void stringToLower (string &input) {
+       // ``stringToLower`` should convert a string to lowercase.   
+       // Write your implementation here.
+   }
+ 
+   int main() {
+       string upper = "This String Should Be Converted To Uppercase!";
+       stringToUpper (upper);
+       cout << upper << '\n';
+       string lower = "This String Should Be Converted To Lowercase!";
+       stringToLower (lower);
+       cout << lower << '\n';
+   }
 
 .. reveal:: 7_14_1
    :showtitle: Reveal Problem

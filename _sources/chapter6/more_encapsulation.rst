@@ -24,6 +24,8 @@ approach lets you design as you go along.
 
 .. activecode:: more_encapsulation_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Two-dimensional tables
 
    The active code below uses the ``multiples_table`` function.

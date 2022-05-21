@@ -7,6 +7,8 @@ few lines:
 
 .. activecode:: recursion_ex_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Factorial Recursion
 
    This program uses recursion to calculate the factorial of
@@ -46,6 +48,8 @@ Translated into C++, this is:
 
 .. activecode:: recursion_ex_AC_2
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Fibonacci Recursion
 
    This program uses recursion to calculate the nth number in the

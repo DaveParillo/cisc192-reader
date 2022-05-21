@@ -20,6 +20,8 @@ For example, instead of writing the 53 lines of code below...
 
 .. activecode:: functions_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Two-dimensional tables
 
    #include <iostream>
@@ -81,31 +83,33 @@ The function makes it easier to read, debug, and use
 the function many times without rewriting it each time.
 
 .. activecode:: functions_AC_2
-  :language: cpp
-  :caption: Two-dimensional tables
+   :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
+   :caption: Two-dimensional tables
 
-  #include <iostream>
-
-  void all_operators(int x) {
-      x = x * 2;
-      x = x / 2;
-      x = x + 2;
-      x = x - 2;
-      std::cout << x << '\n';
-  }
-
-  int main() {
-      all_operators(4);
-      all_operators(13);
-      all_operators(100);
-      all_operators(22);
-      all_operators(220);
-      all_operators(0);
-      all_operators(1000);
-      all_operators(254);
-  }
-
-
+   #include <iostream>
+ 
+   void all_operators(int x) {
+       x = x * 2;
+       x = x / 2;
+       x = x + 2;
+       x = x - 2;
+       std::cout << x << '\n';
+   }
+ 
+   int main() {
+       all_operators(4);
+       all_operators(13);
+       all_operators(100);
+       all_operators(22);
+       all_operators(220);
+       all_operators(0);
+       all_operators(1000);
+       all_operators(254);
+   }
+ 
+ 
 .. tabbed:: self_check
 
    .. tab:: Q1

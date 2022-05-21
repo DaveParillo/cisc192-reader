@@ -102,6 +102,8 @@ if part of your code is dead.
 
 .. activecode:: return_vals_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Return Values
 
    Notice that there are two return statements in the code below.
@@ -153,6 +155,8 @@ implementation below would fix the error in the code.
 
 .. activecode:: return_vals_AC_2
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Return Values
 
    This code fixes the error in the previoius implementation of

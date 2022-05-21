@@ -109,30 +109,32 @@ This statement is an example of a **nested structure**.
    .. tab:: Q1
 
       .. activecode:: rectangles_AC_1
-        :language: cpp
+         :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
+         :nocodelens:
 
-        The active code below uses the ``rectangle`` structure. Feel free to
-        modify the code and experiment around!
-        ~~~~
-        #include <iostream>
-
-        struct point {
-            double x, y;
-        };
-
-        struct rectangle {
-            point corner;
-            double width, height;
-        };
-
-        int main() {
-            using std::cout;
-            using std::endl;
-            rectangle box = { { 0.0, 0.0 }, 100.0, 200.0 };
-            box.width += 50.0;
-            cout << box.height << endl;
-            cout << box.width << endl;
-        }
+         The active code below uses the ``rectangle`` structure. Feel free to
+         modify the code and experiment around!
+         ~~~~
+         #include <iostream>
+ 
+         struct point {
+             double x, y;
+         };
+ 
+         struct rectangle {
+             point corner;
+             double width, height;
+         };
+ 
+         int main() {
+             using std::cout;
+             using std::endl;
+             rectangle box = { { 0.0, 0.0 }, 100.0, 200.0 };
+             box.width += 50.0;
+             cout << box.height << endl;
+             cout << box.width << endl;
+         }
 
    .. tab:: Q2
 

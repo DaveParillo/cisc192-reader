@@ -5,39 +5,43 @@ the same variable more than once. The effect of the second assignment
 is to replace the old value of the variable with a new value.
 
 .. activecode:: multiple_assignment_AC_1
-  :language: cpp
-  :caption: Multiple assignment
+   :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
+   :caption: Multiple assignment
 
-  The code below reassigns ``fred`` from 5 to 7 and prints both values out.
-  ~~~~
-  #include <iostream>
-
-  int main () {
-      int fred = 5;
-      std::cout << fred;
-      fred = 7;
-      std::cout << fred;
-      return 0;
-  }
+   The code below reassigns ``fred`` from 5 to 7 and prints both values out.
+   ~~~~
+   #include <iostream>
+ 
+   int main () {
+       int fred = 5;
+       std::cout << fred;
+       fred = 7;
+       std::cout << fred;
+       return 0;
+   }
 
 The output of this program is ``57``, because the first time we print
 ``fred`` his value is 5, and the second time his value is 7.
 
 .. activecode:: multiple_assignment_AC_2
-  :language: cpp
-  :caption: Multiple assignment
+   :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
+   :caption: Multiple assignment
 
-  The active code below reassigns ``fred`` from 5 to 7 without printing out the initial
-  value.
-  ~~~~
-  #include <iostream>
-
-  int main () {
-      int fred = 5;
-      fred = 7;
-      std::cout << fred;
-      return 0;
-  }
+   The active code below reassigns ``fred`` from 5 to 7 without printing out the initial
+   value.
+   ~~~~
+   #include <iostream>
+ 
+   int main () {
+       int fred = 5;
+       fred = 7;
+       std::cout << fred;
+       return 0;
+   }
 
 However, if we do not print ``fred`` the first time, the output is only 7 because
 the value of ``fred`` is just 7 when it is printed.

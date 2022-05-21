@@ -73,6 +73,8 @@ expected, this program generates a square 7x7 table:
 
 .. activecode:: more_generalization_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Two-dimensional tables
 
    The active code below uses the updated ``multiples_table`` function.
@@ -137,6 +139,8 @@ I’ll leave it up to you to figure out how it works.
 
 .. activecode:: more_generalization_AC_2
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Two-dimensional tables
 
    Modify the previous program so that it only prints

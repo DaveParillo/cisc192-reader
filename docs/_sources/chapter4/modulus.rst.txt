@@ -11,6 +11,8 @@ the same as for other operators:
 
 .. activecode:: mod_operator_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Modulus Operations
 
    This program shows the difference between the division operator

@@ -43,6 +43,8 @@ Thus, getting input from the user might look like this:
 
 .. activecode:: getting_user_input_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :stdin: 42
 
    The active code below is an example of what getting input from the
@@ -107,6 +109,8 @@ This is useful for inputting strings that contain spaces.
 
 .. activecode:: getting_user_input_AC_2
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :stdin: Harry Potter
 
    The active code below is an example of what getting input from the

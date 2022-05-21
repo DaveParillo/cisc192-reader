@@ -10,6 +10,8 @@ condition:
 
 .. activecode:: return_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Terminating a Function with a Return
 
    This program will terminate with a return statement if the argument

@@ -19,6 +19,8 @@ Coding Practice
 
               .. activecode:: cp_7_AC_1q
                  :language: cpp
+                 :compileargs: ['-Wall', '-std=c++11']
+                 :nocodelens:
                  :practice: T
 
                  #include <cctype>
@@ -69,6 +71,8 @@ Coding Practice
 
               .. activecode:: cp_7_AC_1a
                  :language: cpp
+                 :compileargs: ['-Wall', '-std=c++11']
+                 :nocodelens:
                  :optional:
 
                  #include <cctype>
@@ -127,6 +131,8 @@ Coding Practice
 
       .. activecode:: cp_7_AC_2q
          :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
+         :nocodelens:
          :practice: T
 
          How much does Bubba love shrimp? Probably a lot. But how many times does the word "shrimp" come
@@ -183,6 +189,8 @@ Coding Practice
 
             .. activecode:: cp_7_AC_3q
                :language: cpp
+               :compileargs: ['-Wall', '-std=c++11']
+               :nocodelens:
                :practice: T
 
                #include <iostream>
@@ -206,6 +214,8 @@ Coding Practice
 
             .. activecode:: cp_7_AC_3a
                :language: cpp
+               :compileargs: ['-Wall', '-std=c++11']
+               :nocodelens:
                :optional:
 
                #include <iostream>
@@ -233,6 +243,8 @@ Coding Practice
 
       .. activecode:: cp_7_AC_4q
          :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
+         :nocodelens:
          :practice: T
 
          Write a void function ``remove_word`` that removes a given word from a given string and prints
@@ -273,6 +285,8 @@ Coding Practice
 
             .. activecode:: cp_7_AC_5q
                :language: cpp
+               :compileargs: ['-Wall', '-std=c++11']
+               :nocodelens:
                :practice: T
 
                #include <cctype>
@@ -307,6 +321,8 @@ Coding Practice
 
             .. activecode:: cp_7_AC_5a
                :language: cpp
+               :compileargs: ['-Wall', '-std=c++11']
+               :nocodelens:
                :optional:
 
                #include <cctype>
@@ -348,6 +364,8 @@ Coding Practice
 
       .. activecode:: cp_7_AC_6q
          :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
+         :nocodelens:
          :practice: T
 
          Write the function ``reverse_word`` which takes a ``string input``, reverses it,
@@ -400,6 +418,8 @@ Coding Practice
 
               .. activecode:: cp_7_AC_7q
                  :language: cpp
+                 :compileargs: ['-Wall', '-std=c++11']
+                 :nocodelens:
                  :practice: T
 
                  #include <cctype>
@@ -424,6 +444,8 @@ Coding Practice
 
               .. activecode:: cp_7_AC_7a
                  :language: cpp
+                 :compileargs: ['-Wall', '-std=c++11']
+                 :nocodelens:
                  :optional:
 
                  #include <cctype>
@@ -455,6 +477,8 @@ Coding Practice
 
       .. activecode:: cp_7_AC_8q
          :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
+         :nocodelens:
          :practice: T
 
          Write the function ``count_vowels`` which takes a ``string input`` and returns
@@ -510,6 +534,8 @@ Coding Practice
 
               .. activecode:: cp_7_AC_9q
                  :language: cpp
+                 :compileargs: ['-Wall', '-std=c++11']
+                 :nocodelens:
                  :practice: T
 
                  #include <string>
@@ -559,6 +585,8 @@ Coding Practice
 
               .. activecode:: cp_7_AC_9a
                  :language: cpp
+                 :compileargs: ['-Wall', '-std=c++11']
+                 :nocodelens:
                  :optional:
 
                  #include <string>
@@ -616,6 +644,8 @@ Coding Practice
 
       .. activecode:: cp_7_AC_10q
          :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
+         :nocodelens:
          :practice: T
 
          Camel case is the practice of writing phrases without spaces or punctuation,

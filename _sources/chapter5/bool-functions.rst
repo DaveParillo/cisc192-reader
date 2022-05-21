@@ -41,6 +41,8 @@ In main you can call this function in the usual ways:
 
 .. activecode:: bool_fun_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Bool Functions
 
    #include <cmath>

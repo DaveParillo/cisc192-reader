@@ -2,29 +2,31 @@ Looping and counting
 --------------------
 
 .. activecode:: looping_and_counting_AC_1
-  :language: cpp
-  :caption: Looping and counting
+   :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
+   :caption: Looping and counting
 
-  The active code below counts the number of times the letter ``'a'``
-  appears in a string ``fruit``.
-  ~~~~
-  #include <iostream>
-  #include <string>
+   The active code below counts the number of times the letter ``'a'``
+   appears in a string ``fruit``.
+   ~~~~
+   #include <iostream>
+   #include <string>
 
-  int main() {
-      std::string fruit = "banana";
-      int length = fruit.length();
-      int count = 0;
-
-      int index = 0;
-      while (index < length) {
-          if (fruit[index] == 'a') {
-              count = count + 1;
-          }
-          index = index + 1;
-      }
-      std::cout << count;
-  }
+   int main() {
+       std::string fruit = "banana";
+       int length = fruit.length();
+       int count = 0;
+ 
+       int index = 0;
+       while (index < length) {
+           if (fruit[index] == 'a') {
+               count = count + 1;
+           }
+           index = index + 1;
+       }
+       std::cout << count;
+   }
 
 .. index:: 
    single: counter

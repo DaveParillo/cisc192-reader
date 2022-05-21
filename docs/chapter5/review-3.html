@@ -259,9 +259,9 @@ Run and test your code!</p>
 
 </div>
 <textarea data-lang="cpp" id="cp_5_AC_1q_editor" data-question_label="5.16.1" 
-      data-timelimit=25000  data-codelens="true"   
+      data-timelimit=25000     
     data-audio=''      
-           data-wasm=/_static
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
     style="visibility: hidden;">
 double calculator (double first, double second, char operation) {
     // Write your implementation here.
@@ -311,9 +311,9 @@ we return the correct result depending on which operation was given.</p>
 
 </div>
 <textarea data-lang="cpp" id="cp_5_AC_1a_editor" data-question_label="5.16.2" 
-      data-timelimit=25000  data-codelens="true"   data-optional=true
+      data-timelimit=25000     data-optional=true
     data-audio=''      
-           data-wasm=/_static
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
     style="visibility: hidden;">
  double calculator (double first, double second, char operation) {
      if (operation == '+') {
@@ -378,9 +378,9 @@ Run and test your code!</p>
 
 </div>
 <textarea data-lang="cpp" id="cp_5_AC_2q_editor" data-question_label="5.16.3" 
-      data-timelimit=25000  data-codelens="true"   
+      data-timelimit=25000     
     data-audio=''      
-           data-wasm=/_static
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
     style="visibility: hidden;">
 int to_binary (int decimal) {
     // Write your implementation here.
@@ -398,7 +398,7 @@ void check (const std::string& name, const T& actual,
   std::cout << std::left << std::setfill('.')
             << std::setw(50) << name
             << std::setw(7) <<  std::left;
-   if(op(actual, expected)) {
+    if(op(actual, expected)) {
      std::cout << " OK      \n";
      return;
   }
@@ -434,9 +434,9 @@ Run and test your code!</p>
 
 </div>
 <textarea data-lang="cpp" id="cp_5_AC_3q_editor" data-question_label="5.16.4" 
-      data-timelimit=25000  data-codelens="true"   
+      data-timelimit=25000     
     data-audio=''      
-           data-wasm=/_static
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
     style="visibility: hidden;">
 double interior_angle (int sides) {
     // Write your implementation here.
@@ -483,9 +483,9 @@ instead of 180 to avoid integer division.</p>
 
 </div>
 <textarea data-lang="cpp" id="cp_5_AC_3a_editor" data-question_label="5.16.5" 
-      data-timelimit=25000  data-codelens="true"   data-optional=true
+      data-timelimit=25000     data-optional=true
     data-audio=''      
-           data-wasm=/_static
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
     style="visibility: hidden;">
 double interior_angle (int sides) {
     return (sides - 2) * 180.0 / sides;
@@ -544,9 +544,9 @@ summer.</p>
 
 </div>
 <textarea data-lang="cpp" id="cp_5_AC_4q_editor" data-question_label="5.16.6" 
-      data-timelimit=25000  data-codelens="true"   
+      data-timelimit=25000     
     data-audio=''      
-           data-wasm=/_static
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
     style="visibility: hidden;">
 string birthSeason (int month, int day) {
     // Write your implementation here.
@@ -607,9 +607,9 @@ Each year after the second year counts as 4 additional human years. For example,
 
 </div>
 <textarea data-lang="cpp" id="cp_5_AC_5q_editor" data-question_label="5.16.7" 
-      data-timelimit=25000  data-codelens="true"   
+      data-timelimit=25000     
     data-audio=''      
-           data-wasm=/_static
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
     style="visibility: hidden;">
 int dogToHumanYears (int dogAge) {
     // Write your implementation here.
@@ -663,9 +663,9 @@ We also don’t try to convert negative dog years.</p>
 
 </div>
 <textarea data-lang="cpp" id="cp_5_AC_5a_editor" data-question_label="5.16.8" 
-      data-timelimit=25000  data-codelens="true"   data-optional=true
+      data-timelimit=25000     data-optional=true
     data-audio=''      
-           data-wasm=/_static
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
     style="visibility: hidden;">
 int dogToHumanYears (int dogAge) {
     if (dogAge < 1) {
@@ -729,9 +729,9 @@ factor of both <code class="docutils literal notranslate"><span class="pre">num1
 
 </div>
 <textarea data-lang="cpp" id="cp_5_AC_6q_editor" data-question_label="5.16.9" 
-      data-timelimit=25000  data-codelens="true"   
+      data-timelimit=25000     
     data-audio=''      
-           data-wasm=/_static
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
     style="visibility: hidden;">
 bool isCommonFactor (int num1, int num2, int factor) {
     // Write your implementation here.
@@ -783,9 +783,9 @@ if the year is a leap year and <code class="docutils literal notranslate"><span 
 
 </div>
 <textarea data-lang="cpp" id="cp_5_AC_7q_editor" data-question_label="5.16.10" 
-      data-timelimit=25000  data-codelens="true"   
+      data-timelimit=25000     
     data-audio=''      
-           data-wasm=/_static
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
     style="visibility: hidden;">
 bool isLeapYear (int year) {
     // Write your implementation here.
@@ -840,9 +840,9 @@ order to efficiently determine whether or not a given year is a leap year.</p>
 
 </div>
 <textarea data-lang="cpp" id="cp_5_AC_7a_editor" data-question_label="5.16.11" 
-      data-timelimit=25000  data-codelens="true"   data-optional=true
+      data-timelimit=25000     data-optional=true
     data-audio=''      
-           data-wasm=/_static
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
     style="visibility: hidden;">
 bool isLeapYear (int year) {
     if (year % 400 == 0) {
@@ -917,9 +917,9 @@ the mushroom is poisonous and <code class="docutils literal notranslate"><span c
 
 </div>
 <textarea data-lang="cpp" id="cp_5_AC_8q_editor" data-question_label="5.16.12" 
-      data-timelimit=25000  data-codelens="true"   
+      data-timelimit=25000     
     data-audio=''      
-           data-wasm=/_static
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
     style="visibility: hidden;">
 bool poisonous (char size, int numSpots, bool isRed) {
     // Write your implementation here.
@@ -983,9 +983,9 @@ the <code class="docutils literal notranslate"><span class="pre">n</span></code>
 
 </div>
 <textarea data-lang="cpp" id="cp_5_AC_9q_editor" data-question_label="5.16.13" 
-      data-timelimit=25000  data-codelens="true"   
+      data-timelimit=25000     
     data-audio=''      
-           data-wasm=/_static
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
     style="visibility: hidden;">
 int triangularNum (int n) {
     // Write your implementation here.
@@ -1035,9 +1035,9 @@ call <code class="docutils literal notranslate"><span class="pre">triangularNum<
 
 </div>
 <textarea data-lang="cpp" id="cp_5_AC_9a_editor" data-question_label="5.16.14" 
-      data-timelimit=25000  data-codelens="true"   data-optional=true
+      data-timelimit=25000     data-optional=true
     data-audio=''      
-           data-wasm=/_static
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
     style="visibility: hidden;">
 int triangularNum (int n) {
     if (n == 1) {
@@ -1092,9 +1092,9 @@ would return 10. Use recursion. Run and test your code!</p>
 
 </div>
 <textarea data-lang="cpp" id="cp_5_AC_10q_editor" data-question_label="5.16.15" 
-      data-timelimit=25000  data-codelens="true"   
+      data-timelimit=25000     
     data-audio=''      
-           data-wasm=/_static
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"       data-wasm=/_static
     style="visibility: hidden;">
 int digit_sum (int num) {
     // Write your implementation here.

@@ -14,6 +14,8 @@ assess what you have learned in this chapter.
 
             .. activecode:: cond_rec_a1q
                :language: cpp
+               :compileargs: ['-Wall', '-std=c++11']
+               :nocodelens:
 
                Fix the code below so that it prints "THE TEAM" "THE TEAM" 
                "THE TEAM" on three separate lines.
@@ -35,6 +37,8 @@ assess what you have learned in this chapter.
 
             .. activecode:: cond_rec_a1_a
                :language: cpp
+               :compileargs: ['-Wall', '-std=c++11']
+               :nocodelens:
 
                Below is one way to fix the program.  Since we want "THE TEAM"
                to print three times, we must check all three conditons.  this
@@ -59,28 +63,30 @@ assess what you have learned in this chapter.
    .. tab:: Q2
 
       .. activecode:: cond_rec_a2
-          :language: cpp
+         :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
+         :nocodelens:
 
-          You are part of a class where everyone passes, but it's very hard
-          to pass with an A.  Fix the function so it prints your letter grade 
-          according to this scheme.  [0, 50) = C, [50, 85) = B, and [85, 100] = A.
-          ~~~~
-          #include <iostream>
-          #include <string>
+         You are part of a class where everyone passes, but it's very hard
+         to pass with an A.  Fix the function so it prints your letter grade 
+         according to this scheme.  [0, 50) = C, [50, 85) = B, and [85, 100] = A.
+         ~~~~
+         #include <iostream>
+         #include <string>
 
-          std::string whichDoor (double grade) {
-              s = "";
-              if (grade < 50) {
-                  s = "C";
-              }
-              if (grade < 85) {
-                  s = "B";
-              }
-              if (grade >= 85) {
-                  s = "A";
-              }
-              std::cout << s;
-          }
+         std::string whichDoor (double grade) {
+             s = "";
+             if (grade < 50) {
+                 s = "C";
+             }
+             if (grade < 85) {
+                 s = "B";
+             }
+             if (grade >= 85) {
+                 s = "A";
+             }
+             std::cout << s;
+         }
 
 
    .. tab:: Q3
@@ -91,6 +97,8 @@ assess what you have learned in this chapter.
 
             .. activecode:: cond_rec_a3q
                :language: cpp
+               :compileargs: ['-Wall', '-std=c++11']
+               :nocodelens:
 
                Fix the infinite recursion in the code below.  The function
                should not count any numbers after 10 (the highest numbers
@@ -119,6 +127,8 @@ assess what you have learned in this chapter.
 
             .. activecode:: cond_rec_a3_a
                :language: cpp
+               :compileargs: ['-Wall', '-std=c++11']
+               :nocodelens:
 
                Below is one way to fix the program.  The infinite recursion
                happens when we use an odd number as an argument.  By checking
@@ -153,18 +163,20 @@ assess what you have learned in this chapter.
       expressions witht he word true.
 
       .. activecode:: cond_rec_4
-          :language: cpp
+         :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
+         :nocodelens:
 
-          Finish the code below so that it prints true if ``x`` is even
-          and false if ``x`` is odd.
-          ~~~~
-          #include <iostream>
+         Finish the code below so that it prints true if ``x`` is even
+         and false if ``x`` is odd.
+         ~~~~
+         #include <iostream>
 
-          void is_even (int num) {
-              if (num % 2 == 0) {
-                  std::cout << std::boolalpha << true;
-              }
-          }
+         void is_even (int num) {
+             if (num % 2 == 0) {
+                 std::cout << std::boolalpha << true;
+             }
+         }
 
 
    .. tab:: Q5
@@ -175,6 +187,8 @@ assess what you have learned in this chapter.
 
             .. activecode:: cond_rec_a5q
                :language: cpp
+               :compileargs: ['-Wall', '-std=c++11']
+               :nocodelens:
 
                Finish the code below so that the function will continue to
                ask for input until the user guesses the word correctly.
@@ -197,6 +211,8 @@ assess what you have learned in this chapter.
 
             .. activecode:: cond_rec_a5a
                :language: cpp
+               :compileargs: ['-Wall', '-std=c++11']
+               :nocodelens:
 
                Below is one way to complete the program.
                ~~~~
@@ -220,16 +236,18 @@ assess what you have learned in this chapter.
    .. tab:: Q6
 
       .. activecode:: cond_rec_a6
-          :language: cpp
+         :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
+         :nocodelens:
 
-          Write the function ``greater`` that prints true
-          if the first ``double`` argument is greater than the 
-          second ``double`` argument.  Be sure to include any
-          necessary headers.
-          ~~~~
-          void greater () {
+         Write the function ``greater`` that prints true
+         if the first ``double`` argument is greater than the 
+         second ``double`` argument.  Be sure to include any
+         necessary headers.
+         ~~~~
+         void greater () {
               
-          }
+         }
 
    .. tab:: Q7
 
@@ -239,6 +257,8 @@ assess what you have learned in this chapter.
 
             .. activecode:: cond_rec_a7q
                :language: cpp
+               :compileargs: ['-Wall', '-std=c++11']
+               :nocodelens:
 
                Write the function ``good_vibes`` that prints "I'm having a ``mood`` day!"
                depending on the value of ``mood``.  If ``mood`` is "bad", then the function
@@ -253,6 +273,8 @@ assess what you have learned in this chapter.
 
             .. activecode:: cond_rec_a7a
                :language: cpp
+               :compileargs: ['-Wall', '-std=c++11']
+               :nocodelens:
 
                Below is one way to write the program.  The return allows the
                function to exit if there are bad vibes in the room.  Otherise,
@@ -269,15 +291,17 @@ assess what you have learned in this chapter.
    .. tab:: Q8
 
       .. activecode:: cond_rec_8
-          :language: cpp
+         :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
+         :nocodelens:
 
-          Write the function ``exclusive_or`` that prints true If
-          either ``a`` OR ``b`` is true, and prints false otherwise.
-          Be sure to include any necessary headers.
-          ~~~~
-          void exclusive_or (bool a, bool b) {
+         Write the function ``exclusive_or`` that prints true If
+         either ``a`` OR ``b`` is true, and prints false otherwise.
+         Be sure to include any necessary headers.
+         ~~~~
+         void exclusive_or (bool a, bool b) {
 
-          }
+         }
 
 
    .. tab:: Q9
@@ -288,6 +312,8 @@ assess what you have learned in this chapter.
 
             .. activecode:: cond_rec_a9q
                :language: cpp
+               :compileargs: ['-Wall', '-std=c++11']
+               :nocodelens:
 
                Write the function ``countdown`` that takes a positive integer
                and decrements it until eaching zero, printing the number at each 
@@ -301,6 +327,8 @@ assess what you have learned in this chapter.
 
             .. activecode:: cond_rec_a9a
                :language: cpp
+               :compileargs: ['-Wall', '-std=c++11']
+               :nocodelens:
 
                Below is one way to write the program.
                ~~~~
@@ -319,14 +347,16 @@ assess what you have learned in this chapter.
    .. tab:: Q10
 
       .. activecode:: cond_rec_a10
-          :language: cpp
+         :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
+         :nocodelens:
 
-          Write the function ``print_negative`` that asks the user
-          for a negative number.  If the user does not provide a negative
-          number, it should contine asking until the user provides one.
-          It should then print the negative number.
-          ~~~~
-          void print_negative () {
+         Write the function ``print_negative`` that asks the user
+         for a negative number.  If the user does not provide a negative
+         number, it should contine asking until the user provides one.
+         It should then print the negative number.
+         ~~~~
+         void print_negative () {
               
-          }
+         }
 

@@ -30,6 +30,8 @@ effect on ``i`` and ``j``.
 
 .. activecode:: pass_others_reference_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
  
    The active code below uses the ``swap`` function. Run the active code
    for the output!

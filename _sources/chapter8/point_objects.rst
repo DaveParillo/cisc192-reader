@@ -121,19 +121,19 @@ object with two named instance variables.
          -----
          struct point {
 
-      double x;
-      double y;
+            double x;
+            double y;
 
-   };
+         };
 
-   int main() {
+         int main() {
 
-      point blue;
+            point blue;
 
-      blue.x = 3.0;
+            blue.x = 3.0;
 
-      point.x = 3.0; #distractor
-   }
+            point.x = 3.0; #distractor
+         }
 
    .. tab:: Q3
 

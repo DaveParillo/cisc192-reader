@@ -31,6 +31,8 @@ it is being passed by reference), and assign the return value to a
 
       .. activecode:: structures_return_types_AC_1
          :language: cpp
+         :compileargs: ['-Wall', '-std=c++11']
+         :nocodelens:
 
          The active code below uses the ``find_center`` function. Run the code
          to see what the output is!

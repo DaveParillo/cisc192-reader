@@ -51,6 +51,8 @@ Observe the conditional statement below.
 
 .. activecode:: conditional_execution_AC_1
    :language: cpp
+   :compileargs: ['-Wall', '-std=c++11']
+   :nocodelens:
    :caption: Testing Values of x
 
    This program shows how you can use conditional statements to
