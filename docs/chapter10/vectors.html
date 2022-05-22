@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10.1. Vectors &#8212; CISC 192 Course Reader Overview</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.5.5" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/runestone.js?v=92D8BBF0"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../_static/theme.js?v=D899FB97"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="10.2. Accessing elements" href="accessing_elements.html" />
+    <link rel="prev" title="10. Vectors" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'https://daveparillo.github.io/cisc192-reader/' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/cisc192-reader';
+    eBookConfig.course = 'cisc192-reader';
+    eBookConfig.basecourse = 'cisc192-reader';
+    eBookConfig.isLoggedIn = false;
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
+  eBookConfig.runestone_version = '5.5.5';
+  eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+          <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;'>&nbsp;<span aria-label="logo" class="visuallyhidden">Runestone Logo</span> </a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          cisc192-reader
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">10. </span>Vectors" data-toggle="tooltip">
+    <a href="index.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">10.2. </span>Accessing elements' data-toggle="tooltip" >              
+    <a href="accessing_elements.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+      </div> <!-- navbar -->
+
+
+
+
+
+
+
+    </div> <!-- container -->
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="vectors">
+<h1><span class="section-number">10.1. </span>Vectors<a class="headerlink" href="#vectors" title="Permalink to this headline">¶</a></h1>
+<p id="index-0">A <a class="reference external" href="https://en.cppreference.com/w/cpp/container/vector">vector</a> is a set of values where each value is identified by a
+number (called an index). A <code class="docutils literal notranslate"><span class="pre">string</span></code> is similar to a vector, since it
+is made up of an indexed set of characters. The nice thing about vectors
+is that they can be made up of any type of element, including basic
+types like <code class="docutils literal notranslate"><span class="pre">int</span></code>s and <code class="docutils literal notranslate"><span class="pre">double</span></code>s, and user-defined types like
+<code class="docutils literal notranslate"><span class="pre">Point</span></code> and <code class="docutils literal notranslate"><span class="pre">Time</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All elements of a vector must have the same type.</p>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">vector</span></code> type is defined in the C++ Standard Template Library
+(STL). In order to use it, you have to include the header file
+<code class="docutils literal notranslate"><span class="pre">vector</span></code>; again, the details of how to do that depend on your
+programming environment.</p>
+<p>You can create a vector the same way you create other variable types:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">count</span><span class="p">;</span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">doubleVector</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The type that makes up the vector appears in angle brackets (<code class="docutils literal notranslate"><span class="pre">&lt;</span></code> and
+<code class="docutils literal notranslate"><span class="pre">&gt;</span></code>). The first line creates a vector of integers named <code class="docutils literal notranslate"><span class="pre">count</span></code>; the
+second creates a vector of <code class="docutils literal notranslate"><span class="pre">double</span></code>s.
+Each of these statements create empty vectors (their size is zero).
+It is common to specify the size of the vector in parentheses:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">count</span> <span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+</pre></div>
+</div>
+<p id="index-1">The syntax here is a little odd; it looks like a combination of a
+variable declarations and a function call.
+In fact, that’s exactly what it is.
+The function we are invoking is a <code class="docutils literal notranslate"><span class="pre">vector</span></code> constructor.
+A <strong>constructor</strong> is a special function that creates new objects and
+initializes their instance variables.
+In this case, the constructor takes a single argument,
+which is the size of the new vector.</p>
+<p>The following figure shows how <code class="docutils literal notranslate"><span class="pre">count</span></code> could be represented in a state
+diagram:</p>
+<div align="center" class="align-center"><div class="graphviz"><img src="../_images/graphviz-e2a83aba60301d004824fbe848ef26150e431893.png" alt="Vector state diagram" class="graphviz" /></div>
+</div>
+<p id="index-2">The numbers inside the shaded boxes are the <strong>elements</strong> of the vector.
+The numbers below the boxes are the indices used to identify each box.
+When you allocate a new vector this way,
+the elements are “default initialized”.
+That is, each element is assigned the default value for whatever type
+of data the vector stores.</p>
+<p>There is another constructor for <code class="docutils literal notranslate"><span class="pre">vector</span></code>s that takes two parameters.
+The second parameter is a “fill value” – the value that will be
+assigned to each of the elements.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">count</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>This statement creates a vector of five elements and initializes all of
+them to three.</p>
+<div align="center" class="align-center"><div class="graphviz"><img src="../_images/graphviz-c0b655cb1da0d5e9ab1681972aed8be6e3566f19.png" alt="Vector filled with 3" class="graphviz" /></div>
+</div>
+<div id='self_check' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Q1" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="10.1.1" data-multipleanswers="false"  id="vectors_1"  style="visibility: hidden;">
+            <p>Q-1: How would you create a vector of five words and initialize all of them to empty strings?</p>
+<li data-component="answer"  id="vectors_1_opt_a"><p><code class="docutils literal notranslate"><span class="pre">vector&lt;string&gt;</span> <span class="pre">words</span> <span class="pre">(&quot;&quot;,</span> <span class="pre">5);</span></code></p>
+</li><li data-component="feedback" id="vectors_1_opt_a">
+<p>Incorrect! Vector parameters are in the wrong order.</p></li><li data-component="answer" data-correct id="vectors_1_opt_b"><p><code class="docutils literal notranslate"><span class="pre">vector&lt;string&gt;</span> <span class="pre">words</span> <span class="pre">(5);</span></code></p>
+</li><li data-component="feedback" id="vectors_1_opt_b">
+<p>Correct! Vector elements are initialized to default values.</p></li><li data-component="answer"  id="vectors_1_opt_c"><p><code class="docutils literal notranslate"><span class="pre">vector&lt;string&gt;</span> <span class="pre">words</span> <span class="pre">(5,</span> <span class="pre">&quot;&quot;);</span></code></p>
+</li><li data-component="feedback" id="vectors_1_opt_c">
+<p>Partly correct! This works, but there is a simpler way that does not create redunadant strings</p></li><li data-component="answer"  id="vectors_1_opt_d"><p><code class="docutils literal notranslate"><span class="pre">vector&lt;char&gt;</span> <span class="pre">words</span> <span class="pre">(5,</span> <span class="pre">'');</span></code></p>
+</li><li data-component="feedback" id="vectors_1_opt_d">
+<p>Incorrect! words should be a vector of strings. A char is not a string.</p></li>
+
+            </ul>
+            </div>
+            </div><div data-component="tab" data-tabname="Q2" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="10.1.2" data-multipleanswers="true"  id="vectors_2"  style="visibility: hidden;">
+            <p>Q-2: <strong>Multiple Response</strong> Which of the following could be an element of
+<code class="docutils literal notranslate"><span class="pre">vector&lt;string&gt;</span> <span class="pre">words</span></code>?</p>
+
+            <li data-component="answer"  id="vectors_2_opt_a">1</li><li data-component="feedback">Incorrect! This is an integer, not a string.</li>
+            
+            <li data-component="answer" data-correct id="vectors_2_opt_b">"a"</li><li data-component="feedback">Correct!</li>
+            
+            <li data-component="answer"  id="vectors_2_opt_c">'a'</li><li data-component="feedback">Incorrect! This is a character, not a string.</li>
+            
+            <li data-component="answer" data-correct id="vectors_2_opt_d">"word"</li><li data-component="feedback">Correct!</li>
+            
+            <li data-component="answer" data-correct id="vectors_2_opt_e">"1"</li><li data-component="feedback">Correct!</li>
+            
+
+            </ul>
+            </div>
+            </div><div data-component="tab" data-tabname="Q3" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="10.1.3" data-multipleanswers="false"  id="vectors_3"  style="visibility: hidden;">
+            <p>Q-3: What do you call a function that creates an instance of a new object and initializes its instance variables?</p>
+
+            <li data-component="answer"  id="vectors_3_opt_a">initializer</li><li data-component="feedback">Incorrect! Go back and read to find the answer!</li>
+            
+            <li data-component="answer" data-correct id="vectors_3_opt_b">constructor</li><li data-component="feedback">Correct!</li>
+            
+            <li data-component="answer"  id="vectors_3_opt_c">creator</li><li data-component="feedback">Incorrect! Go back and read to find the answer!</li>
+            
+            <li data-component="answer"  id="vectors_3_opt_d">instance function</li><li data-component="feedback">Incorrect! Go back and read to find the answer!</li>
+            
+
+            </ul>
+            </div>
+            </div><div data-component="tab" data-tabname="Q4" >
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="10.1.4" data-multipleanswers="false"  id="vectors_4"  style="visibility: hidden;">
+            <p>Q-4: What are the values of <code class="docutils literal notranslate"><span class="pre">number</span></code>’s elements after this declaration?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">numbers</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span>
+</pre></div>
+</div>
+<li data-component="answer"  id="vectors_4_opt_a"><p>undefined (we don’t know the values)</p>
+</li><li data-component="feedback" id="vectors_4_opt_a">
+<p>These elements do have values</p></li><li data-component="answer" data-correct id="vectors_4_opt_b"><p>0</p>
+</li><li data-component="feedback" id="vectors_4_opt_b">
+<p>Yes, we have 6 default initialized integers.</p></li><li data-component="answer"  id="vectors_4_opt_c"><p>6</p>
+</li><li data-component="feedback" id="vectors_4_opt_c">
+<p>6 is the size of the vector, not the values.</p></li><li data-component="answer"  id="vectors_4_opt_d"><p>0,1,2,3,4,5</p>
+</li><li data-component="feedback" id="vectors_4_opt_d">
+<p>These are the indices, not the values.</p></li>
+
+            </ul>
+            </div>
+            </div>
+    </div>
+
+</div>
+
+
+  <div id=scprogresscontainer>
+    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+  </div>
+  
+      
+<ul>
+  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 10. Vectors' data-toggle="tooltip">
+    <a href="index.html" aria-label="10. Vectors">
+        <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+            <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+        </div>
+    </a>
+  </li>
+</ul>
+
+  
+<ul>
+  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - 10.2. Accessing elements' data-toggle="tooltip" >
+    <a href="accessing_elements.html" aria-label="10.2. Accessing elements">
+      <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+          <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+      </div>
+    </a>
+  </li>
+</ul>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+<script>
+	function mouseOverPrev() {
+		document.getElementById("relations-prev").style.opacity=1;
+	}
+
+	function mouseOutPrev() {
+		document.getElementById("relations-prev").style.opacity=0.4;
+	}
+	function mouseOverNext() {
+		document.getElementById("relations-next").style.opacity=1;
+	}
+
+	function mouseOutNext() {
+		document.getElementById("relations-next").style.opacity=0.4;
+	}
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020-2021 Dave Parillo.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.5.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script> getSwitch(); </script>
+
+
+  </body>
+</html>

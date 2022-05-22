@@ -565,7 +565,7 @@ Coding Practice
                      Shirt s;
                      Pants p;
                      bool has_hat;
-                 }   
+                 };
 
                  // Write your code for the printOutfit function here.
 
@@ -579,8 +579,7 @@ Coding Practice
 
           .. tab:: Answer
 
-              Below is one way to implement the program. We declare the ``Cake`` struct and list the instance 
-              variables in order.
+              Below is one way to implement the program. 
 
               .. activecode:: cp_9_AC_9a
                  :language: cpp
@@ -605,10 +604,10 @@ Coding Practice
                      Shirt s;
                      Pants p;
                      bool has_hat;
-                 }   
+                 };
 
                  void printOutfit (Outfit o) {
-                 "Shirt: blue and L; Pants: S and denim; has hat"
+                 // "Shirt: blue and L; Pants: S and denim; has hat"
                      cout << "Shirt: " << o.s.color << " and " << o.s.size << "; Pants:" << o.p.size << " and " << o.p.material << "; ";
                      if (o.has_hat) {
                          cout << "has hat" << endl;
@@ -632,9 +631,15 @@ Coding Practice
           :compileargs: ['-Wall', '-std=c++11']
           :nocodelens:
 
-          Write the ``changeShirts`` and ``changePants`` functions, which both take an ``Outfit`` as a parameter. ``changeShirts`` also
-          takes a ``Shirt`` as a parameter and ``changePants`` also takes a ``Pants`` as a parameter. Each function modifies the ``Outfit``
+          Write the ``changeShirts`` and ``changePants`` functions, 
+          which both take an ``Outfit`` as a parameter. 
+          ``changeShirts`` also takes a ``Shirt`` as a parameter and 
+          ``changePants`` also takes a ``Pants`` as a parameter. 
+          Each function modifies the ``Outfit``
           and changes the shirt or pants to the new input.
+
+          If you did Q9, then feel free to copy the ``printOutfit`` function
+          from there into this program.
           ~~~~
           #include <iostream>
           using namespace std;
@@ -653,7 +658,7 @@ Coding Practice
               Shirt s;
               Pants p;
               bool has_hat;
-          }   
+          };
 
           // Write your code for the changeShirts function here.
 

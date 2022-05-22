@@ -57,6 +57,7 @@
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="10. Vectors" href="../chapter10/index.html" />
     <link rel="prev" title="9.13. Mixed Up Code Practice" href="review-2.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -193,8 +194,12 @@
     </a>
   </li>
   
-    <li class="divider-vertical"></li>
-  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">10. </span>Vectors' data-toggle="tooltip" >              
+    <a href="../chapter10/index.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
 
 <script type="text/javascript">
   opts = {'placement':'bottom',
@@ -854,7 +859,7 @@ struct Outfit {
     Shirt s;
     Pants p;
     bool has_hat;
-}
+};
 
 // Write your code for the printOutfit function here.
 
@@ -868,8 +873,7 @@ int main() {
 </div>
 </div>
 </div><div data-component="tab" data-tabname="Answer" >
-<p>Below is one way to implement the program. We declare the <code class="docutils literal notranslate"><span class="pre">Cake</span></code> struct and list the instance
-variables in order.</p>
+<p>Below is one way to implement the program.</p>
 
 <div class="runestone explainer ac_section alert alert-warning">
 <div data-component="activecode" id=cp_9_AC_9a >
@@ -898,10 +902,10 @@ struct Outfit {
     Shirt s;
     Pants p;
     bool has_hat;
-}
+};
 
 void printOutfit (Outfit o) {
-"Shirt: blue and L; Pants: S and denim; has hat"
+// "Shirt: blue and L; Pants: S and denim; has hat"
     cout << "Shirt: " << o.s.color << " and " << o.s.size << "; Pants:" << o.p.size << " and " << o.p.material << "; ";
     if (o.has_hat) {
         cout << "has hat" << endl;
@@ -928,9 +932,14 @@ int main() {
 <div class="runestone explainer ac_section alert alert-warning">
 <div data-component="activecode" id=cp_9_AC_10q >
 <div id=cp_9_AC_10q_question class="ac_question col-md-12">
-<p>Write the <code class="docutils literal notranslate"><span class="pre">changeShirts</span></code> and <code class="docutils literal notranslate"><span class="pre">changePants</span></code> functions, which both take an <code class="docutils literal notranslate"><span class="pre">Outfit</span></code> as a parameter. <code class="docutils literal notranslate"><span class="pre">changeShirts</span></code> also
-takes a <code class="docutils literal notranslate"><span class="pre">Shirt</span></code> as a parameter and <code class="docutils literal notranslate"><span class="pre">changePants</span></code> also takes a <code class="docutils literal notranslate"><span class="pre">Pants</span></code> as a parameter. Each function modifies the <code class="docutils literal notranslate"><span class="pre">Outfit</span></code>
+<p>Write the <code class="docutils literal notranslate"><span class="pre">changeShirts</span></code> and <code class="docutils literal notranslate"><span class="pre">changePants</span></code> functions,
+which both take an <code class="docutils literal notranslate"><span class="pre">Outfit</span></code> as a parameter.
+<code class="docutils literal notranslate"><span class="pre">changeShirts</span></code> also takes a <code class="docutils literal notranslate"><span class="pre">Shirt</span></code> as a parameter and
+<code class="docutils literal notranslate"><span class="pre">changePants</span></code> also takes a <code class="docutils literal notranslate"><span class="pre">Pants</span></code> as a parameter.
+Each function modifies the <code class="docutils literal notranslate"><span class="pre">Outfit</span></code>
 and changes the shirt or pants to the new input.</p>
+<p>If you did Q9, then feel free to copy the <code class="docutils literal notranslate"><span class="pre">printOutfit</span></code> function
+from there into this program.</p>
 
 </div>
 <textarea data-lang="cpp" id="cp_9_AC_10q_editor" data-question_label="9.14.15" 
@@ -955,7 +964,7 @@ struct Outfit {
     Shirt s;
     Pants p;
     bool has_hat;
-}
+};
 
 // Write your code for the changeShirts function here.
 
@@ -997,6 +1006,15 @@ int main() {
 </ul>
 
   
+<ul>
+  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - 10. Vectors' data-toggle="tooltip" >
+    <a href="../chapter10/index.html" aria-label="10. Vectors">
+      <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+          <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+      </div>
+    </a>
+  </li>
+</ul>
 
 <script type="text/javascript">
 
