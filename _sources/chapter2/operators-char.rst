@@ -59,9 +59,11 @@ from one to the other if there is a good reason.
    single: ASCII
 
 .. note::
-   Characters in C++ hold **ASCII** values, which range from 0 to 128.  Uppercase
-   'A' has an ASCII value of 65, lowercase 'a' has a value of 97, and a space
-   has a value of 32.  C++ converts characters to their ASCII values to 
+   Characters in C++ hold :lang:`ASCII <ascii>` values,
+   which range from 0 to 127.
+   Uppercase 'A' has an ASCII value of 65, lowercase 'a' has a value of 97,
+   and a space has a value of 32.
+   C++ converts characters to their ASCII values to 
    perform automatic type conversion and character arithmetic.
 
 
@@ -116,3 +118,14 @@ exceptions.
           cout << "r"; #distractor
          =====
          }
+
+-----
+
+.. admonition:: More to Explore
+
+   - From cppreference.com
+
+     - C++ :lang:`identifiers` and :lang:`type`
+     - :lang:`ASCII <ascii>` character chart
+
+
