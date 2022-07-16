@@ -19,7 +19,7 @@ Front Matter
    :titlesonly:
 
    front-matter/copyright.rst
-   front-matter/fdl-1.3.rst
+   front-matter/license.rst
    front-matter/foreword.rst
    front-matter/preface.rst
 
@@ -46,6 +46,7 @@ Chapters
    chapter8/index.rst
    chapter9/index.rst
    chapter10/index.rst
+   chapter11/index.rst
 
 * :ref:`search`
 * :ref:`genindex`
