@@ -35,7 +35,7 @@ statements in one place, it is easier to read. For example:
 ::
 
      vector<int> count = {1,2,3,4};
-     for (size_t i = 0; i < count.size(); ++i) {
+     for (size_t i = 0; i < 4U; ++i) {
        cout << count[i] << endl;
      }
 
@@ -44,7 +44,7 @@ is equivalent to
 ::
 
      size_t i = 0;
-     while (i < count.size()) {
+     while (i < 4U) {
        cout << count[i] << endl;
        ++i;
      }
@@ -73,7 +73,7 @@ The previous looping example is
          int main() {
              std::vector<int> count = {1,2,3,4};
              size_t i = 0;
-             while (i < count.size()) {
+             while (i < 4U) {
                  std::cout << count[i] << '\n';
                  ++i;
              }
@@ -92,7 +92,7 @@ The previous looping example is
 
          int main() {
              std::vector<int> count = {1,2,3,4};
-             for (size_t i = 0; i < count.size(); ++i) {
+             for (size_t i = 0; i < 4U; ++i) {
                  std::cout << count[i] << '\n';
              }
          }
