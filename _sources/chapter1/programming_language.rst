@@ -76,14 +76,8 @@ line-by-line, alternately reading lines and carrying out commands.
 .. index::
    single: compiler
    single: compile
-
-.. index::
    single: source code
-
-.. index::
    single: object code
-
-.. index::
    single: executable
 
 A **compiler** is a program that reads a high-level program and translates
@@ -96,9 +90,11 @@ code**, and the translated program is called the **object code** or the
 As an example, suppose you write a program in C++. You might use a text
 editor to write the program (a text editor is a simple word processor).
 When the program is finished, you might save it in a file named
-program.cpp, where “program” is an arbitrary name you make up, and the
-suffix .cpp is a convention that indicates that the file contains C++
-source code.
+``program.cpp``, where "program" is an arbitrary name you make up, and the
+suffix ``.cpp`` is a convention that indicates that the file contains C++
+source code. The ``cpp`` suffix is not universal.
+Others you might encounter include ``cc``, ``cxx``, or others.
+In this text, I will use ``cpp``.
 
 Then, depending on what your programming environment is like, you might
 leave the text editor and run the compiler. The compiler would read your
@@ -219,3 +215,14 @@ figure out what it is.
          :match_2: object code|||translated version of our program that the computer can understand and execute
 
          Match each term to an example of it!
+
+-----
+
+.. admonition:: More to Explore
+
+   - From cppreference.com
+
+     - :lang:`Phases of translation <translation_phases>`
+
+   - :wiki:`Compiler` and :wiki:`linker <Linker_(computing)>` on Wikipedia
+

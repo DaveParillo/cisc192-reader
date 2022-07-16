@@ -42,15 +42,15 @@ observe the output.
    you expect.  Read on to find out why!
    ~~~~
    #include <iostream>
-   using namespace std;
+   using std::cout;
 
    int main () {
        int int hour = 12;
        minute = 59;
        cout << "Number of minutes since midnight: ";
-       cout << hour * 60 + minute << endl;
+       cout << hour * 60 + minute << '\n';
        cout << "Fraction of the hour that has passed: ";
-       cout << minute / 60 << endl;
+       cout << minute / 60 << '\n';
        return 0;
    }
 
@@ -78,7 +78,7 @@ than a fraction:
 ::
 
     cout << "Percentage of the hour that has passed: ";
-    cout << minute * 100 / 60 << endl;
+    cout << minute * 100 / 60 << '\n';
 
 The result is:
 
@@ -127,7 +127,7 @@ capable of storing fractional values.
 
    .. tab:: Q3
 
-      .. fillintheblank:: operators_3.1
+      .. fillintheblank:: operators_3_1
 
          ::
 
@@ -144,7 +144,7 @@ capable of storing fractional values.
 
    .. tab:: Q4
 
-      .. fillintheblank:: operators_3.2
+      .. fillintheblank:: operators_3_2
 
          ::
 
@@ -161,7 +161,7 @@ capable of storing fractional values.
 
    .. tab:: Q5
 
-      .. fillintheblank:: operators_3.3
+      .. fillintheblank:: operators_3_3
 
          ::
 
@@ -182,7 +182,15 @@ capable of storing fractional values.
          :numbered: left
          :adaptive:
          
-         Construct a code block that prints the total cost of your meal, including the 6.0% sales tax, after you purchase two orders of fries, three burgers, and a milkshake.  Start by initializing the value of sales tax, then the prices of the food.  Once you have initialized the variables, you can perform your calculations and save the result in the price variable.  At the very end, you will print out the total price.
+         Construct a code block that prints the total cost of your meal, 
+         including the 6.0% sales tax, after you purchase two orders of fries,
+         three burgers, and a milkshake.
+         Start by initializing the value of sales tax,
+         then the prices of the food.
+         Once you have initialized the variables,
+         you can perform your calculations and save the result
+         in the price variable.
+         At the very end, you will print out the total price.
          -----
          int main () {
          =====
@@ -198,15 +206,24 @@ capable of storing fractional values.
          =====
           double price = 2 * fries + 3 * burger + milkshake;
          =====
-          double priceWithTax = price + price * tax;
+          double price_with_tax = price + price * tax;
          =====
-          double priceWithTax = price * tax; #paired
+          double price_with_tax = price * tax; #paired
          =====
           cout << "The total cost of your meal is $"; 
-          cout << priceWithTax << "." << endl;
+          cout << price_with_tax << ".\n";
          =====
           cout << "The total cost of your meal is $"; #paired
-          cout << price << "." << endl;
+          cout << price << ".\n";
          =====
          }
-         
+        
+
+-----
+
+.. admonition:: More to Explore
+
+   - From cppreference.com
+
+     - :lang:`Arithmetic operators <operator_arithmetic>`
+     - :lang:`Assignment operators <operator_assignment>`

@@ -230,7 +230,7 @@ Answer the following **Multiple Choice** questions to assess what you have learn
              :linenos:
               
              int main() {
-               string Tom = "Tom";
+               string tom = "Tom";
                string friend = "Jerry";
                cout << tom;
                cout << "is friends with"; cout << friend;

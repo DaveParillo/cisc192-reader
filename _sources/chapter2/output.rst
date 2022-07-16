@@ -15,18 +15,19 @@ to output simple values. After observing the output, try inputting your own time
    provide for hour and minute.
    ~~~~
    #include <iostream>
-   using namespace std;
 
    int main () {
+       using std::cout;
+
        int hour = 11;
        int minute = 59;
        char colon = ':';
 
-       cout << "The current time is ";
-       cout << hour;
-       cout << colon;
-       cout << minute;
-       cout << endl;
+       cout << "The current time is "
+       cout << hour
+       cout << colon
+       cout << minute
+       cout << '\n';
 
        return 0;
    }
@@ -64,22 +65,21 @@ output statement, which can make the previous program more concise:
    statements have been condensed to one line.  This is better style.
    ~~~~
    #include <iostream>
-   using namespace std;
 
    int main () {
        int hour = 11;
        int minute = 59;
        char colon = ':';
 
-       cout << "The current time is " 
-            << hour << colon << minute << endl;
+       std::cout << "The current time is " 
+                 << hour << colon << minute << '\n';
 
        return 0;
    }
 
 
 On one line, this program outputs a string, two integers, a character,
-and the special value ``endl``. Very impressive!
+and the special end of line character. Very impressive!
 
 .. tabbed:: tab_check
 
@@ -189,9 +189,13 @@ and the special value ``endl``. Very impressive!
          
          Construct a main function that assigns "Hello" to the variable h, then prints out h's value.
          -----
+         #include <iostream>
+         =====
+         #include <string>
+         =====
          int main () {
          =====
-          string h;
+          std::string h;
          =====
           char h; #paired
          =====
@@ -199,11 +203,19 @@ and the special value ``endl``. Very impressive!
          =====
           h = Hello; #paired
          =====
-          cout << h;
+          std::cout << h;
          =====
-          cout << "Hello"; #paired
+          std::cout << "Hello"; #paired
          =====
-          cout << "h"; #paired
+          std::cout << "h"; #paired
          =====
          }
+
+.. admonition:: More to Explore
+
+   - From cppreference.com
+
+     - :io:`cout` and
+       :lang:`escape sequences <escape>`
+
 

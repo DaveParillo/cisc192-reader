@@ -24,14 +24,13 @@ turns out we can do both at the same time:
    This program performs multiplication and prints the result simultaneously.
    ~~~~
    #include <iostream>
-   using namespace std;
 
    int main () {
-       cout << 17 * 3;
+       std::cout << 17 * 3;
    }
 
 
-Actually, I shouldn't say “at the same time,” since in reality the
+Actually, I shouldn't say "at the same time", since in reality the
 multiplication has to happen before the output, but the point is that
 any expression, involving numbers, characters, and variables, can be
 used inside an output statement. We've already seen one example:
@@ -43,15 +42,15 @@ used inside an output statement. We've already seen one example:
    :nocodelens:
    :caption: Variable Output
 
-   This program performs a calculation involving variables and prints the result at the same time.
+   This program performs a calculation involving variables and
+   prints the result at the same time.
    ~~~~
    #include <iostream>
-   using namespace std;
 
    int main () {
        int hour = 7;
        int minute = 1;
-       cout << hour * 60 + minute << endl;
+       std::cout << hour * 60 + minute << '\n';
    }
 
 
@@ -69,12 +68,11 @@ assignment statement:
    assigns the result as the variable initial value.
    ~~~~
    #include <iostream>
-   using namespace std;
 
    int main () {
        int minute = 3;
        int percentage = (minute * 100) / 60;
-       cout << percentage;
+       std::cout << percentage;
    }
 
 
@@ -241,3 +239,10 @@ values. So the following is illegal: ``minute + 1 = hour;``.
 
 
 
+-----
+
+.. admonition:: More to Explore
+
+   - From cppreference.com
+
+     - C++ :lang:`expressions` and :lang:`function declarations <function>`

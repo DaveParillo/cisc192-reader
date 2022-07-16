@@ -39,8 +39,8 @@ end with a period. this sentence contains a syntax error. So does this
 one
 
 For most readers, a few syntax errors are not a significant problem,
-which is why we can read the poetry of e e cummings without spewing
-error messages.
+which is why we can read the poetry of :wiki:`e e cummings <E._E._Cummings>`
+without spewing error messages.
 
 Compilers are not so forgiving. If there is a single syntax error
 anywhere in your program, the compiler will print an error message and
@@ -163,3 +163,16 @@ programming practices.
           
          - :[Ss][Yy][Nn][Tt][Aa][Xx]: Correct!
            :.*: Try again!
+
+-----
+
+.. admonition:: More to Explore
+
+  - From: cppreference.com: 
+    :cpp:`assert <error/assert>` and
+    :lang:`static_assert`. 
+  - `GDB tips <http://heather.cs.ucdavis.edu/~matloff/UnixAndC/CLanguage/Debug.html>`_
+  - `GDB tutorial <https://www.cprogramming.com/gdb.html>`_
+  - `DDD <http://www.gnu.org/software/ddd/>`_
+  - Don't forget to learn how to use your own debugger in your IDE!
+

@@ -17,4 +17,4 @@ The single most important skill for a computer scientist is
 think creatively about solutions, and express a solution clearly and
 accurately. As it turns out, the process of learning to program is an
 excellent opportunity to practice problem-solving skills. That’s why
-this chapter is called “The way of the program.”
+this chapter is called "The way of the program."

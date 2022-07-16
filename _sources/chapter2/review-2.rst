@@ -221,17 +221,17 @@ Answer the following **Mixed-Up Code** questions to assess what you have learned
          -----
          int main() {
          =====
-          string favClass = "MATH";
+          string favorite = "MATH";
          =====
-          string favClass = 'MATH'; #paired
+          string favorite = 'MATH'; #paired
          =====
           cout << "My favorite class is ";
-          cout << favClass;
+          cout << favorite;
          =====
           cout << "My favorite class is " << endl; #paired
-          cout << favClass;
+          cout << favorite;
          =====
-          cout << "My favorite class is" << favClass; #paired
+          cout << "My favorite class is" << favorite; #paired
          =====
          }
 
@@ -241,7 +241,10 @@ Answer the following **Mixed-Up Code** questions to assess what you have learned
          :numbered: left
          :adaptive:
 
-         It's Black Friday and the Nintendo Switch you'be been saving up for is marked down to 60% of its original price!  Construct a block of code that calculates how much money you'd be saving if the system originally costed $359.99?
+         It's Black Friday and the Nintendo Switch you've been saving up for
+         is marked down to 60% of its original price!
+         Construct a block of code that calculates how much money you'd
+         be saving if the system originally cost $359.99?
 
          -----
          int main() {
@@ -254,11 +257,11 @@ Answer the following **Mixed-Up Code** questions to assess what you have learned
          =====
           double discount = game - (0.60 * game); #paired
          =====
-          double moneySaved = game - discount;
+          double saved = game - discount;
          =====
-          double moneySaved = discount; #paired
+          double saved = discount; #paired
          =====
-          double moneySaved = game + discount; #paired
+          double saved = game + discount; #paired
          =====
          }
 
@@ -269,7 +272,11 @@ Answer the following **Mixed-Up Code** questions to assess what you have learned
          :numbered: left
          :adaptive:
 
-         Your family just bought a dog and everyone has been fighting over what to name it.  It went from Champ to Copper to Higgins, and after a few days of being Higgins, everyone agreed on Buddy.  Construct a block of code that illustrates this concept.
+         Your family just bought a dog and everyone has been 
+         fighting over what to name it.
+         It went from Champ to Copper to Higgins,
+         and after a few days of being Higgins, everyone agreed on Buddy.
+         Construct a block of code that illustrates this concept.
 
          -----
          int main() {
@@ -282,8 +289,8 @@ Answer the following **Mixed-Up Code** questions to assess what you have learned
          =====
           string name = "Copper"; #paired
          =====
-          string newName = "Higgins";
-          name = newName;
+          string new_name = "Higgins";
+          name = new_name;
          =====
           string name = "Higgins"; #paired
          =====

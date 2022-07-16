@@ -15,18 +15,18 @@ Answer the following **Activecode** questions to assess what you have learned in
                :language: cpp
                :nocodelens:
 
-               Fix the code below so that it runs without errors.  Hint: you might need to change the names of some variables.
+               Fix the code below so that it runs without errors.
+               Hint: you might need to change the names of some variables.
                ~~~~
                #include <iostream>
-               using namespace std;
 
                int main () {
                    char true = 'T';
                    char false = 'F';
 
                    // DO NOT MODIFY ANYTHING BELOW THIS LINE.
-                   cout << true << " is short for true. ";
-                   cout << false << " is short for false." << endl;
+                   std::cout << true << " is short for true. ";
+                   std::cout << false << " is short for false.\n";
                }
 
          .. tab:: Answer
@@ -38,13 +38,12 @@ Answer the following **Activecode** questions to assess what you have learned in
                Below is one way to fix the program.  ``true`` and ``false`` are keywords, so they cannot be used as variable names.
                ~~~~
                #include <iostream>
-               using namespace std;
 
                int main () {
                    char t = 'T';
                    char f = 'F';
-                   cout << t << " is short for true. ";
-                   cout << f << " is short for false." << endl;
+                   std::cout << t << " is short for true. ";
+                   std::cout << f << " is short for false.\n";
                }    
 
    .. tab:: Q2
@@ -56,6 +55,7 @@ Answer the following **Activecode** questions to assess what you have learned in
          Finish the code below so that it prints "I drive a 2014 Buick Regal".
          ~~~~
          #include <iostream>
+         #include <string>
          using namespace std;
 
          int main () {
@@ -67,7 +67,7 @@ Answer the following **Activecode** questions to assess what you have learned in
 
              // DO NOT MODIFY ANYTHING BELOW THIS LINE.
              cout << "I drive a " << year << " " << make << " ";
-             cout << model << endl.
+             cout << model << '\n'.
          }
 
 
@@ -117,10 +117,10 @@ Answer the following **Activecode** questions to assess what you have learned in
          :language: cpp
          :nocodelens:
 
-         Finish the code below so that it returns the correct volume of a sphere.  Hint: think about what happens when you use integer division.
+         Finish the code below so that it shows the correct volume of a sphere.
+         Hint: think about what happens when you use integer division.
          ~~~~
          #include <iostream>
-         using namespace std;
 
          int main () {
              int radius = 5;
@@ -130,7 +130,8 @@ Answer the following **Activecode** questions to assess what you have learned in
              volume = 
 
              // DO NOT MODIFY ANYTHING BELOW THIS LINE.
-             cout << "Your solution had volume = " << volume << endl;  cout << "The correct solution has volume = 104.667";
+             std::cout << "Your solution had volume = " << volume;
+             std::cout << "\nThe correct solution has volume = 104.667";
          }
 
 
@@ -144,10 +145,10 @@ Answer the following **Activecode** questions to assess what you have learned in
                :language: cpp
                :nocodelens:
 
-               Fix the code below so that assigns ``a`` its correct value of ``'a'``.  Hint: use character operations!
+               Fix the code below so that assigns ``a`` its correct value of ``'a'``.
+               Hint: use character operations!
                ~~~~
                #include <iostream>
-               using namespace std;
 
                int main () {
                   char a = 's';
@@ -157,7 +158,7 @@ Answer the following **Activecode** questions to assess what you have learned in
                   a = a - 3 * 4 + (1 + 3);
 
                   // DO NOT MODIFY ANYTHING BELOW THIS LINE.
-                  cout << a;
+                  std::cout << a;
                }
 
          .. tab:: Answer
@@ -169,12 +170,11 @@ Answer the following **Activecode** questions to assess what you have learned in
                Below is one way to complete the program.  There are many creative ways that you could use the order of operations to come up with a complex expression that will bring you to ``'a'``, here is one way.
                ~~~~
                #include <iostream>
-               using namespace std;
             
                int main () {
                   char a = 's';
                   a = a - (3 * (4 + 1) + 3);
-                  cout << a;
+                  std::cout << a;
                }
 
 
@@ -184,12 +184,19 @@ Answer the following **Activecode** questions to assess what you have learned in
          :language: cpp
          :nocodelens:
 
-         Write code that assigns "apples" to the variable oranges, and "oranges" to the variable apples, then swaps their values.  Be sure to inclue any necessary headers.  YOU MAY NOT HARDCODE YOUR SOLUTION.
+         Finish this program so that it assigns
+         "apples" to the variable oranges,
+         and "oranges" to the variable apples, then swaps their values.
+         Be sure to inclue any necessary headers.
+
+         Avoid 'hardcoding' your solution.
          ~~~~
          int main () {
              
              // DO NOT MODIFY ANYTHING BELOW THIS LINE.
-             cout << "Your solution had apples = " << apples << "and oranges = " << oranges << "." << endl; cout << "The correct solution has apples = apples, and oranges = oranges.";
+             cout << "Your solution had apples = " << apples 
+                  << " and oranges = " << oranges << ".\n"; 
+             cout << "The correct solution has apples = apples, and oranges = oranges.";
          }
 
 
@@ -203,7 +210,9 @@ Answer the following **Activecode** questions to assess what you have learned in
                :language: cpp
                :nocodelens:
 
-               Write code that prints "Eat", "More", and "Chicken" on 3 consecutive lines. Be sure to inclue any necessary headers.
+               Write code that prints "Eat", "More", and "Chicken" on
+               3 consecutive lines.
+               Be sure to inclue any necessary headers.
                ~~~~
                int main () {
 
@@ -218,12 +227,9 @@ Answer the following **Activecode** questions to assess what you have learned in
                Below is one way to implement the solution.
                ~~~~
                #include <iostream>
-               using namespace std;
 
                int main () {
-                   cout << "Eat" << endl;
-                   cout << "More" << endl;
-                   cout << "Chicken" << endl;
+                   std::cout << "Eat\nMore\nChicken";
                } 
 
 
@@ -233,12 +239,16 @@ Answer the following **Activecode** questions to assess what you have learned in
          :language: cpp
          :nocodelens:
 
-         Write code that calculates how much you you will spend after tipping 20% on your $36.25 dinner.  Save the result of this calculation in ``plusTip``.  Be sure to include any necessary headers.
+         Write code that calculates how much you you will spend after 
+         tipping 20% on your $36.25 dinner.
+         Save the result of this calculation in ``plusTip``.
+         Be sure to include any necessary headers.
          ~~~~
          int main () {
 
              // DO NOT MODIFY ANYTHING BELOW THIS LINE.
-             cout << "Your solution had plusTip = " << plusTip << endl; cout << "The correct solution has plusTip = 43.5";
+             std::cout << "Your solution had plusTip = " << plusTip;
+             std::cout << "\nThe correct solution has plusTip = 43.5";
          }
 
 
@@ -257,7 +267,8 @@ Answer the following **Activecode** questions to assess what you have learned in
                int main () {
 
                    // DO NOT MODIFY ANYTHING BELOW THIS LINE.
-                   cout << "Your solution had seconds = " << seconds << endl;  cout << "The correct solution has seconds = 11700";
+                   std::cout << "Your solution had seconds = " << seconds;
+                   std::cout << "\nThe correct solution has seconds = 11700";
                }
 
          .. tab:: Answer
@@ -269,13 +280,16 @@ Answer the following **Activecode** questions to assess what you have learned in
                Below is one way to implement the solution.
                ~~~~
                #include <iostream>
-               using namespace std;
 
                int main () {
                    int hours = 3;
                    int minutes = 15;
-                   int totalMinutes = minutes + 60 * hours;
-                   int seconds = totalMinutes * 60;
+                   int total_minutes = minutes + 60 * hours;
+                   int seconds = total_minutes * 60;
+
+                   // DO NOT MODIFY ANYTHING BELOW THIS LINE.
+                   std::cout << "Your solution had seconds = " << seconds;
+                   std::cout << "\nThe correct solution has seconds = 11700";
                }
 
 
@@ -290,5 +304,6 @@ Answer the following **Activecode** questions to assess what you have learned in
          int main () {
 
              // DO NOT MODIFY ANYTHING BELOW THIS LINE.
-             cout << endl;  cout << "Your program should have printed 2.365";
+             std::cout << "\nYour program should have printed 2.365\n";
          }
+

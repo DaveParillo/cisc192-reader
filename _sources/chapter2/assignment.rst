@@ -10,7 +10,7 @@ in them. We do that with an **assignment statement**.
 
 ::
 
-    firstLetter = 'a';   // give firstLetter the value 'a'
+    first_letter = 'a';  // give first_letter the value 'a'
     hour = 11;           // assign the value 11 to hour
     minute = 59;         // set minute to 59
 
@@ -24,15 +24,29 @@ vocabulary can be confusing here, but the idea is straightforward:
 
 .. note::
 
-   Using unitialized variables is a commonn source of error.
-   That's why in C++ it is considered a best practice to
-   always initialize a new variable with a value, if possible.
+   We could have created these 3 variables llike this:
 
    ::
 
-      char firstLetter = 'a';   // give firstLetter the value 'a'
+      // These storage locations are defined,
+      // but there is no value stored yet!
+
+      char first_letter;
+      int hour;
+      int minute;
+
+      // perhaps we try to read a value from one of our
+      // three variables here?
+      int next_hour = hour + 1;  // This is an error
+
+
+      char first_letter = 'a';  // give first_letter the value 'a'
       int hour = 11;            // assign the value 11 to hour
       int minute = 59;          // set minute to 59
+
+   Using unitialized variables is a commonn source of error.
+   That's why in C++ it is considered a best practice to
+   always initialize a new variable with a value, if possible.
 
 .. index::
    single: state diagram
@@ -41,7 +55,7 @@ A common way to represent variables on paper is to draw a box with the
 name of the variable on the outside and the value of the variable on the
 inside. This kind of figure is called a **state diagram** because is
 shows what state each of the variables is in (you can think of it as the
-variable’s “state of mind”). This diagram shows the effect of the three
+variable’s "state of mind"). This diagram shows the effect of the three
 assignment statements:
 
 .. digraph:: state
@@ -69,7 +83,7 @@ assignment statements:
        style=none
    ]
    edge [constraint=true]
-   t1 [label="firstLetter"];
+   t1 [label="first_letter"];
    t2 [label="hour"];
    t3 [label="minute"];
    letter -> t1;
@@ -133,14 +147,12 @@ assignment is illegal:
          :feedback_a: Yes, but take a look at variable p.
          :feedback_b: Both variables are a character surrounded by single quotes, so they should be type char.
          :feedback_c: Yes, but take a look at variable q.
-         :feedback_d: No! There will be a compile error.
+         :feedback_d: This compiles and runs, but the code is not quite right.
 
          What must be changed in order for this code block to work?
 
          ::
 
-             #include <iostream>
-             using namespace std;
              // main: generate some simple output
 
              int main () {
@@ -180,5 +192,14 @@ assignment is illegal:
          =====
          int year; #paired
          year = 2001
+
+-----
+
+.. admonition:: More to Explore
+
+   - From cppreference.com
+
+     - C++ :lang:`identifiers` and :lang:`type`
+     - :cpp:`std::string <string>`
 
 

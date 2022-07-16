@@ -10,16 +10,22 @@ also work on characters. For example, observe the following output.
    :nocodelens:
    :caption: Adding to Characters
 
-   This program performs character addition.  It works by converting
-   the character 'a' to ASCII, adding 1 to this value, then converting the 
-   result from ASCIIs back to a character.
+   This program performs character addition.  It works because the
+   character ``a`` is actually stored as the number ``97``!
+   The value '97' is the way 'a' is represented in the ASCII
+   character set.
+   ASCII is common, but there are many others.
+
+   ``cout`` 'knows' that when the type is ``char``, it should
+   print the character representation and not the actual
+   numeric value.
+
    ~~~~
    #include <iostream>
-   using namespace std;
 
    int main () {
        char letter = 'a' + 1;
-       cout << letter << endl;
+       std::cout << letter;
    }
 
 Although it is syntactically legal to multiply characters, it is almost never
@@ -39,13 +45,13 @@ types. For example, the following is legal.
    This program performs automatic type converstion.  It converts 'a' 
    to its ASCII value.
    ~~~~
+   #include <iostream>
    int main () {
        int number = 'a';
-       return number;
+       std::cout << number;
    }
 
-The result is 97, which is the number that is used internally by C++ to
-represent the letter ’a’. However, it is generally a good idea to treat
+It is generally a good idea to treat
 characters as characters, and integers as integers, and only convert
 from one to the other if there is a good reason.
 
