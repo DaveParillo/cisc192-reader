@@ -27,7 +27,7 @@ infinite recursion:
     error.
 
 
-.. tabbed:: self_check::
+.. tabbed:: self_check
 
    .. tab:: Q1
 

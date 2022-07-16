@@ -9,7 +9,7 @@ values from 1 to 6.
 A good way to start is to write a simple loop that prints the multiples
 of 2, all on one line.
 
-.. activecode:: 2D_tables_AC_1
+.. activecode:: twoD_tables_AC_1
    :language: cpp
    :compileargs: ['-Wall', '-std=c++11']
    :nocodelens:
@@ -56,7 +56,7 @@ So far, so good. The next step is to **encapsulate** and **generalize**.
 
    .. tab:: Q1
 
-      .. mchoice:: 2D_tables_1
+      .. mchoice:: twoD_tables_1
          :answer_a: counter
          :answer_b: loop variable
          :answer_c: Both a and b
@@ -85,7 +85,7 @@ So far, so good. The next step is to **encapsulate** and **generalize**.
 
    .. tab:: Q2
 
-      .. mchoice:: 2D_tables_2
+      .. mchoice:: twoD_tables_2
          :answer_a: Change the first output statement to say cout << 3*x << endl;
          :answer_b: Change the first output statement to say cout << 3*x << \n;
          :answer_c: Change the second output statement to say cout << endl << endl;

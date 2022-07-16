@@ -66,6 +66,7 @@ extlinks = {
         'utility': ('https://en.cppreference.com/w/cpp/utility/%s', ''),
         'vector': ('https://en.cppreference.com/w/cpp/container/vector/%s', ''),
         'types': ('https://en.cppreference.com/w/cpp/types/%s', ''),
+        'wiki': ('https://en.wikipedia.org/wiki/%s', ''),
         'issue': ('https://github.com/sphinx-doc/sphinx/issues/%s', 'issue ')
         }
 # normal use cas iss :issue:`123`
@@ -100,7 +101,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'CISC 192 Course Reader'
-copyright = '2020-2021 Dave Parillo'
+copyright = '2020-2022 Dave Parillo, Barbara Ericson, and Allen B. Downey.'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
