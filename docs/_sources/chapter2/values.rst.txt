@@ -8,7 +8,7 @@ A **value** is one of the fundamental things—like a letter or a number—that
 a program manipulates. The only values we have manipulated so far are
 the string values we have been outputting, like "Hello, world.". You
 (and the compiler) can identify ``string`` values because they are enclosed
-in quotation marks.
+in double-quotation marks.
 
 .. index::
    single: type
@@ -17,13 +17,14 @@ in quotation marks.
    single: integer
    single: int
 
-There many different kinds of values, called **types**.  This includes integers and characters. An
-**integer** is a whole number like 1 or 17. You can output integer values
-the same way you output strings:
+There many different kinds of values, called :lang:`types <type>`.
+This includes integers and characters.
+An **integer** is a whole number like 1 or 17.
+You can output integer values the same way you output strings:
 
 ::
 
-    cout << 17 << endl;
+    cout << 17 << '\n';
 
 .. index::
    single: character
@@ -59,7 +60,7 @@ soon.
 
    .. tab:: Q2
 
-      .. clickablearea:: values2.0
+      .. clickablearea:: values2_0
           :question: Click on all integer VALUES.
           :iscode:
           :feedback: Try again!
@@ -79,7 +80,7 @@ soon.
 
    .. tab:: Q3
 
-      .. clickablearea:: values2.1
+      .. clickablearea:: values2_1
           :question: Click on all string VALUES.
           :iscode:
           :feedback: Try again!
@@ -104,3 +105,13 @@ soon.
          :match_3: '1'|||character
 
          Match the value to its data type.
+
+-----
+
+.. admonition:: More to Explore
+
+   - From cppreference.com
+
+     - The :lang:`type` property
+     - :c:`Complete list of all punctuation <language/punctuators>`
+

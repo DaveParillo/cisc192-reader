@@ -14,7 +14,7 @@ Constants
 =========
 As useful as variables are, sometimes we need to ensure
 a values does **not** change after initialization.
-We use :cref:`const` to instruct the compiler to hold something constant.
+We use :lang:`const <cv>` to instruct the compiler to hold something constant.
 
 Programs typically use a lot of constants.
 Mathematical constants like :math:`\pi`, or :math:`e`, and unit conversions are common.
@@ -47,12 +47,9 @@ There are two restrictions when using constants:
       const double pi;               // this is a compile error
       pi = 3.14159265359;
 
-.. index::
-   pair: parameter passing; const reference
-
 .. index:: const vs define
 
-**Prefer ``const`` to ``#define``**
+**Prefer 'const' to '#define'**
 
 Before C++ created the ``const`` keyword, a feature in the
 C pre-processor: ``#define`` was used instead:
@@ -81,16 +78,28 @@ So given:
 
    #define ASPECT_RATIO 1.653
 
-the pre-processor literally copies the value '1.653' every place in the source code
-it encounters the string 'ASPECT_RATIO'.
-Then the program is compiled.
+The C pre-processor literally copies the **text** '1.653' every place 
+in the source code it finds the string 'ASPECT_RATIO'.
+*Then* the program is compiled.
+
+.. index::
+   pair: keyword; constexpr
 
 
 Prefer this instead:
 
 .. code-block:: cpp
 
-   const double ASPECT_RATIO = 1.653;
+   const double aspect_ratio = 1.653;
+
+Or even better this:
+
+.. code-block:: cpp
+
+   constexpr double aspect_ratio = 1.653;
+
+While ``const`` forces a variable to be immutable,
+``constexpr`` defines an expression that can be evaluated at compile time.
 
 -----
 
@@ -99,9 +108,10 @@ Prefer this instead:
   - From: cppreference.com: 
     :lang:`const qualifier <cv>` and 
     :lang:`constexpr <constant_expression>` 
-  - `C++ Core Guidelines for constexpr 
-    <https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rconst-constexpr>`_
+    
+    - The C :cpp:`preprocessor`
 
+  - C++ Core Guidelines for :core:`constexpr <#Rconst-constexpr>`
 
 
 

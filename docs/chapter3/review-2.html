@@ -1,70 +1,51 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
 <!DOCTYPE html>
 
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>3.16. Mixed-Up Code Exercises &#8212; CISC 192 Course Reader Overview</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
     <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
-    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
-    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
-    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.5.5" />
-    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
     <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
     <script src="../_static/animationbase.js?v=A043C3A7"></script>
     <script src="../_static/html4css1.css?v=4533ACD3"></script>
-    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
-    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
-    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
     <script src="../_static/webglinteractive.js?v=2B768384"></script>
     <script src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script src="../_static/Blob.js?v=AEC2447"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script src="../_static/runestone.js?v=92D8BBF0"></script>
-    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
-    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
-    <script src="../_static/jquery-fix.js?v=1226591B"></script>
-    <script src="../_static/bootstrap-sphinx.js"></script>
-    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
-    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
-    <script src="../_static/theme.js?v=D899FB97"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/runtime.b0f8547c48f16a9f.bundle.js?v=2731F567"></script>
+    <script src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script src="../_static/runestone.0e9550fe42760516.bundle.js?v=71AD37BA"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="3.17. Activecode Exercises" href="review-3.html" />
     <link rel="prev" title="3.15. Multiple Choice Exercises" href="review-1.html" />
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+
+
 <link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
 
-<script type="text/javascript">
+
+<script>
   eBookConfig = {};
   
     eBookConfig.useRunestoneServices = false;
@@ -73,6 +54,8 @@
     eBookConfig.course = 'cisc192-reader';
     eBookConfig.basecourse = 'cisc192-reader';
     eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
   
   eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
   eBookConfig.logLevel = 0;
@@ -80,18 +63,16 @@
   eBookConfig.build_info = "unknown";
   eBookConfig.python3 = true;
   eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
-  eBookConfig.runestone_version = '5.5.5';
+  eBookConfig.runestone_version = '6.2.1';
   eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
   eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
   eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
   eBookConfig.enable_chatcodes = false ? false : false;
-
+  eBookConfig.enableScratchAC = true;
 
 </script>
 
 <!-- Ad Serving Headers Only serve ads to Anonymous Users -->
-
-
 
 
 
@@ -105,15 +86,16 @@
 
     <div class="navbar-header">
       <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
-        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
 
       <div>
         
-          <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;'>&nbsp;<span aria-label="logo" class="visuallyhidden">Runestone Logo</span> </a>
+        
+          <div class="brand-logo"><img src="../_static/img/RAIcon.png" alt=""></div>
         
         <a class="navbar-brand" href="../index.html" aria-label="index-page">
           
@@ -128,17 +110,16 @@
       <ul class="nav navbar-nav navbar-right" >
 
         <li class="divider-vertical"></li>
-
+        <li><span id="browsing_warning"></span></li>
 
         <!-- social media dropdown -->
         <!-- end social media dropdown -->
 
         <li class="divider-vertical"></li>
-
         <!-- search dropdown -->
         <li class="dropdown">
           <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
           </a>
           <ul class='dropdown-menu'>
             
@@ -171,8 +152,8 @@
         <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
 
         <!-- <li class="dropdown">             -->
-          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
-              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
         <!-- </li> -->
 
         <li class="divider-vertical"></li>
@@ -201,53 +182,51 @@
   </li>
   <li class="divider-vertical"></li>
 
-<script type="text/javascript">
+<script>
   opts = {'placement':'bottom',
           'selector': '',
           'delay': { show: 100, hide: 50}
          };
 
-  $('#relations-prev').tooltip(opts);
-  $('#relations-next').tooltip(opts);
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
 </script>
         -->
         
           <li></li>
         
       </ul>
-
-      </div> <!-- navbar -->
-
-
-
-
-
-
-
-    </div> <!-- container -->
-  </div>
-</div>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
 
 
 <div class="container" id="continue-reading"></div>
 
 <div class="container" id="main-content" role="main">
+
 <!-- Ad Serving for Runestone Campaign -->
 
 
   
-  <div class="section" id="mixed-up-code-exercises">
+  <section id="mixed-up-code-exercises">
 <h1><span class="section-number">3.16. </span>Mixed-Up Code Exercises<a class="headerlink" href="#mixed-up-code-exercises" title="Permalink to this headline">¶</a></h1>
 <p>Answer the following <strong>Mixed-Up Code</strong> questions to
 assess what you have learned in this chapter.</p>
-<div id='tab_check' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Q1" >
+<div id='tab_check' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Q1" >
 
-        <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" data-question_label="3.16.1" id="functions_p9"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
-        <span data-question>Q-1 Construct a function that correctly prints the integer conversion of the passed double.
-</span>void printInteger (double d) {
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="functions_p9" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Construct a function that correctly prints the integer conversion of the passed double.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="3.16.1"   data-adaptive="true"       data-numbered="left"  style="visibility: hidden;">
+        void print_integer (double d) {
 ---
-printInteger (double d); #paired
+print_integer (double d); #paired
 ---
  d = int(d);
 ---
@@ -260,90 +239,116 @@ printInteger (double d); #paired
 }
         </pre>
         </div>
+        </div>
     </div><div data-component="tab" data-tabname="Q2" >
 
-        <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" data-question_label="3.16.2" id="functions_p0"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
-        <span data-question>Q-2 Construct a function called newLine that takes no arguments and prints a blank line.  Then construct another function called divider that prints two blank lines separated by a line of ". . . . . . . . . . . ."</span>void newLine () {
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="functions_p0" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Construct a function called newLine that takes no arguments and prints a blank line.  Then construct another function called divider that prints two blank lines separated by a line of “… … … …”</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="3.16.2"   data-adaptive="true"       data-numbered="left"  style="visibility: hidden;">
+        void new_line () {
 ---
  cout << endl;
 ---
-}  //newLine
+}  //new_line
 ---
 void divider () {
 ---
  void divider (newLine) { #paired
 ---
- newLine ();  //first call
+ new_line ();  //first call
 ---
- cout << newLine ();  //first call #paired
+ cout << new_line ();  //first call #paired
 ---
  cout << ". . . . . . . . . . . . " << endl;
 ---
- newline ();  //second call
+ new_line ();  //second call
 ---
- cout << newLine ();  //second call #paired
+ cout << new_line ();  //second call #paired
 ---
 }  //divider
         </pre>
         </div>
+        </div>
     </div><div data-component="tab" data-tabname="Q1" >
 
-        <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" data-question_label="3.16.3" id="functions_p1"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
-        <span data-question>Q-3 Construct a function that correctly calculates the volume of a cone with as much precision as possible and prints the value to the terminal.  Use 3.14 for pi.
-</span>void volumeCone (double r, double h) {
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="functions_p1" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Construct a function that correctly calculates the volume of a cone with as much precision as possible and prints the value to the terminal.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="3.16.3"   data-adaptive="true"       data-numbered="left"  style="visibility: hidden;">
+        void volume_cone (double r, double h) {
 ---
-double volumeCone (double r, double h) { #paired
+double volume_cone (double r, double h) { #paired
 ---
- double vol = 1/3.0 * 3.14 * r * r * h;
+ constexpr double pi = 3.1415926;
 ---
- double vol = 1/3 * 3.14 * r * r * h; #paired
+ double vol = 1/3.0 * pi * r * r * h;
 ---
- int vol = 1/3 * 3.14 * r * r * h; #paired
+ double vol = 1/3 * pi * r * r * h; #paired
 ---
- int vol = 1/3.0 * 3.14 * r * r * h; #paired
+ int vol = 1/3 * pi * r * r * h; #paired
+---
+ int vol = 1/3.0 * pi * r * r * h; #paired
 ---
  cout << vol;
 ---
 }
         </pre>
         </div>
+        </div>
     </div><div data-component="tab" data-tabname="Q4" >
 
-        <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" data-question_label="3.16.4" id="functions_p3"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
-        <span data-question>Q-4 Construct a function that prints the sin of an angle given in degrees. Use 3.14 for pi.</span>#include &#60;cmath&#62;
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="functions_p3" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Construct a function that prints the sin of an angle given in degrees.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="3.16.4"   data-adaptive="true"       data-numbered="left"  style="visibility: hidden;">
+        #include &#60;cmath&#62;
 ---
 #include &#60;iostream&#62;
 using namespace std;
 ---
-void sineDegrees (double d) {
+void sine_degrees (double d) {
 ---
-void sineDegrees () { #paired
+void sine_degrees () { #paired
 ---
- double r = d * (2 * 3.14) / 360.0;
+ constexpr double pi = 3.1415926;
 ---
- double r = d * 360.0 / (2 * 3.14); #paired
+ double r = d * (2 * pi) / 360.0;
 ---
- double sine = sin(r);
+ double r = d * 360.0 / (2 * pi); #paired
 ---
- double sine = sin(d); #paired
+ cout <<  sin(r);
 ---
- cout << sine;
+ cout <<  sin(d); #paired
 ---
 }
 ---
  #include &#60;math&#62; #distractor
         </pre>
         </div>
+        </div>
     </div><div data-component="tab" data-tabname="Q5" >
 
-        <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" data-question_label="3.16.5" id="functions_p4.0"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
-        <span data-question>Q-5 Construct a function that prints the price (with 8% sales tax) of an item with after using a 30% off coupon.</span>void finalPrice (double item) {
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="functions_p4_0" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Construct a function that prints the price (with 8% sales tax) of
+an item with after using a 30% off coupon.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="3.16.5"   data-adaptive="true"       data-numbered="left"  style="visibility: hidden;">
+        void final_price (double item) {
 ---
-void finalPrice (string item) { #paired
+void final_price (string item) { #paired
 ---
  double discount = item * 0.30;
 ---
@@ -358,11 +363,21 @@ void finalPrice (string item) { #paired
 }
         </pre>
         </div>
+        </div>
     </div><div data-component="tab" data-tabname="Q6" >
 
-        <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" data-question_label="3.16.6" id="functions_p5"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
-        <span data-question>Q-6 Suppose you have already defined a function called sumOfSquares which returns the sum of the squares of two numbers and root which returns the square root of a number.  Construct a function that calculates the hypotenuse of the right triangle and prints the three sidelengths.</span>int main () {
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="functions_p5" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Suppose you have already defined a function called <code class="docutils literal notranslate"><span class="pre">sum_of_squares</span></code>
+which returns the sum of the squares of two numbers and <code class="docutils literal notranslate"><span class="pre">sqrt</span></code> which
+returns the square root of a number.
+Construct a function that calculates the hypotenuse of the right
+triangle and prints the three sidelengths.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="3.16.6"   data-adaptive="true"       data-numbered="left"  style="visibility: hidden;">
+        int main () {
 ---
  double s1 = 4.8;
  double s2 = 3.8;
@@ -370,28 +385,37 @@ void finalPrice (string item) { #paired
  int s1 = 4.8; #paired
  int s2 = 3.6;
 ---
- double sqSum = sumOfSquares(s2, s1);
+ double sum = sum_of_squares(s2, s1);
 ---
- sqSum = sumOfSquares(s1, s2); #paired
+ sum = sum_of_squares(s1, s2); #paired
 ---
- double hyp = root(sqSum);
+ double hypot = sqrt(sum);
 ---
- double hyp = root(s1, s2); #paired
+ double hypot = sqrt(s1, s2); #paired
 ---
- cout << "The sides of the triangle are: " << s1 << ", " << s2 << ", " << hyp;
+ cout << "The sides of the triangle are: " << s1 << ", " << s2 << ", " << hypot;
 ---
  cout << "The sides of the triangle are: " << s1 << ", " << s2 << ", " << s3; #paired
 ---
 }
         </pre>
         </div>
+        </div>
     </div><div data-component="tab" data-tabname="Q7" >
 
-        <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" data-question_label="3.16.7" id="functions_p6"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
-        <span data-question>Q-7 The chickens from the previous chapter are infuriated.  Construct a function that prints "Eat" on the first line, "More" on the second line, and the name of the passed animal on the fourth line, followed by an exclamation point.</span>void eatMore (string animal) {
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="functions_p6" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>The chickens from the previous chapter are infuriated.
+Construct a function that prints “Eat” on the first line,
+“More” on the second line, and the name of the passed animal
+on the fourth line, followed by an exclamation point.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="3.16.7"   data-adaptive="true"       data-numbered="left"  style="visibility: hidden;">
+        void eat_more (string animal) {
 ---
-void eatMore () { #paired
+void eat_more () { #paired
 ---
  cout << "Eat";
 ---
@@ -408,36 +432,56 @@ void eatMore () { #paired
 }
         </pre>
         </div>
+        </div>
     </div><div data-component="tab" data-tabname="Q8" >
 
-        <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" data-question_label="3.16.8" id="functions_p7"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
-        <span data-question>Q-8 Construct a function that takes a dollar amount and cent amount and prints the total amount of money that you have. Hint: the mod operator '%' returns the remainder of a division.</span>void printAmount (int dollars, int cents) {
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="functions_p7" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Construct a function that takes a dollar amount and cent amount and
+prints the total amount of money that you have.
+Hint: the mod operator (<code class="docutils literal notranslate"><span class="pre">%</span></code>) returns the remainder of a division.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="3.16.8"   data-adaptive="true"       data-numbered="left"  style="visibility: hidden;">
+        void print (int dollars, int cents) {
 ---
- int dollarTotal = dollars + cents / 100;
+ int dollar_total = dollars + cents / 100;
 ---
- double dollarTotal = dollars + cents / 100.0; #paired
+ double dollar_total = dollars + cents / 100.0; #paired
 ---
- double centTotal = cents % 100;
+ double cent_total = cents % 100;
 ---
- double centTotal = cents / 100; #paired
+ double cent_total = cents / 100; #paired
 ---
- cout << "$" << dollarTotal << "." << centTotal;
+ cout << '$' << dollarTotal << '.' << centTotal;
 ---
- cout << "$" << dollarTotal << centTotal; #paired
+ cout << '$' << dollarTotal << centTotal; #paired
 ---
 }
         </pre>
         </div>
+        </div>
     </div><div data-component="tab" data-tabname="Q9" >
 
-        <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" data-question_label="3.16.9" id="functions_p8"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
-        <span data-question>Q-9 In Michigan, the probability that it snows on any given day in the winter is about 14%.  The probability of having a snow day on any given day in the winter is about 4%.  The probability that is snows and you have a snow day is 8%.
-Construct and call a function that calculates the probability of a having a snow day, given the fact that it will snow tonight.
-For reference, the formula for conditional probability is: P(A|B) = P(B and A) / P(B).</span>void conditionalProb (double B, double both) {
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="functions_p8" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>In Michigan, the probability that it snows on any given day
+in the winter is about 14%.
+The probability of having a snow day on any given day
+in the winter is about 4%.
+The probability that is snows and you have a snow day is 8%.
+Construct and call a function that calculates the probability of
+having a snow day, given the fact that it will snow tonight.
+For reference, the formula for conditional probability is:
+<code class="docutils literal notranslate"><span class="pre">P(A|B)</span> <span class="pre">=</span> <span class="pre">P(B</span> <span class="pre">and</span> <span class="pre">A)</span> <span class="pre">/</span> <span class="pre">P(B)</span></code>.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="3.16.9"   data-adaptive="true"       data-numbered="left"  style="visibility: hidden;">
+        void conditional_probability (double B, double both) {
 ---
-void conditionalProb (double B, both) { #paired
+void conditional_probability (double B, both) { #paired
 ---
  double prob = both / B;
 ---
@@ -445,7 +489,7 @@ void conditionalProb (double B, both) { #paired
 ---
  cout << prob;
 ---
-} //conditionalProb
+} //conditional_probability
 ---
 int main () {
 ---
@@ -453,24 +497,36 @@ int main () {
  double pSnowday = 0.04;
  double pBoth = 0.08;
 ---
- conditionalProb(pSnow, pBoth);
+ conditional_probability(pSnow, pBoth);
 ---
- conditionalProb(pSnowday, pBoth); #paired
+ conditional_probability(pSnowday, pBoth); #paired
 ---
- conditionalProb(pSnowday, pSnow); #paired
+ conditional_probability(pSnowday, pSnow); #paired
 ---
 } //main
         </pre>
         </div>
+        </div>
     </div><div data-component="tab" data-tabname="Q10" >
 
-        <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" data-question_label="3.16.10" id="functions_p2"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
-        <span data-question>Q-10 Your final grade is determined by a midterm component (each midterm is worth 20% of the grade) and a final component. In order to avoid any discrepancies with students who's grades are on the fence, your teacher follows this strict grading scale:
-[0%,60%) = F, [60%, 70%) = D, [70%, 80%) = C, [80%, 90%) = B and [90%, 100%] = A. He does not round until the very end.
-Construct a function that determines a student's final grade percentage according to this grading scheme and prints the result.</span>void finalGrade (double m1, double m2, double f) {
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="functions_p2" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Your final grade is determined by a midterm component
+(each midterm is worth 20% of the grade) and a final component.
+In order to avoid any discrepancies with students who’s grades are
+on the fence, your teacher follows this strict grading scale:
+[0%,60%) = F, [60%, 70%) = D, [70%, 80%) = C,
+[80%, 90%) = B and [90%, 100%] = A.
+They do not truncate until the very end.
+Construct a function that determines your final grade percentage
+according to this grading scheme and prints the result.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="3.16.10"   data-adaptive="true"       data-numbered="left"  style="visibility: hidden;">
+        void final_grade (double m1, double m2, double f) {
 ---
-void finalGrade (double m1, m2, f) { #paired
+void final_grade (double m1, m2, f) { #paired
 ---
  double m_comp = m1 * 0.2 + m2 * 0.2;
  double f_comp = f * 0.06;
@@ -478,73 +534,49 @@ void finalGrade (double m1, m2, f) { #paired
  int m_comp = m1 * 0.2 + m2 * 0.2; #paired
  int f_comp = f * 0.06;
 ---
- double final_grade = m_comp + f_comp;
+ double grade = m_comp + f_comp;
 ---
- cout << int(final_grade);
+ cout << int(grade);
 ---
- cout << int(final_grade) + 1; #paired
+ cout << int(grade) + 1; #paired
 ---
- cout << final_grade; #paired
+ cout << grade; #paired
 ---
 }
         </pre>
         </div>
-    </div>
-    </div>
-
-</div>
-
-
-  <div id=scprogresscontainer>
-    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
-  </div>
-  
-      
-<ul>
-  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 3.15. Multiple Choice Exercises' data-toggle="tooltip">
-    <a href="review-1.html" aria-label="3.15. Multiple Choice Exercises">
-        <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
-            <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
         </div>
+    </div>
+    </div>
+
+</section>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 3.15. Multiple Choice Exercises' data-toggle="tooltip">
+  <a href="review-1.html" aria-label="Previous - 3.15. Multiple Choice Exercises">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 3.17. Activecode Exercises' data-toggle="tooltip" >
+    <a href="review-3.html" aria-label="Next - 3.17. Activecode Exercises">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
     </a>
   </li>
 </ul>
-
-  
-<ul>
-  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - 3.17. Activecode Exercises' data-toggle="tooltip" >
-    <a href="review-3.html" aria-label="3.17. Activecode Exercises">
-      <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
-          <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
-      </div>
-    </a>
-  </li>
-</ul>
-
-<script type="text/javascript">
-
-  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
-  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
-
-</script>
 
 <script>
-	function mouseOverPrev() {
-		document.getElementById("relations-prev").style.opacity=1;
-	}
-
-	function mouseOutPrev() {
-		document.getElementById("relations-prev").style.opacity=0.4;
-	}
-	function mouseOverNext() {
-		document.getElementById("relations-next").style.opacity=1;
-	}
-
-	function mouseOutNext() {
-		document.getElementById("relations-next").style.opacity=0.4;
-	}
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
 </script>
-  
+
 </div>
 <footer class="footer">
   <div class="container">
@@ -554,8 +586,8 @@ void finalGrade (double m1, m2, f) { #paired
       
     </p>
     <p>
-        &copy; Copyright 2020-2021 Dave Parillo.
-      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.5.
+        &copy; Copyright 2020-2022 Dave Parillo, Barbara Ericson, and Allen B. Downey..
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.2.1.
     </p>
   </div>
 </footer>
@@ -563,7 +595,11 @@ void finalGrade (double m1, m2, f) { #paired
 
 
 
-<script> getSwitch(); </script>
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
 
 
   </body>

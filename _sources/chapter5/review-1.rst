@@ -5,398 +5,362 @@ Multiple Choice Exercises
 
    .. tab:: Q1
 
-      .. mchoice:: mce_5_1
+      .. mchoice:: mce_6_1
           :practice: T
 
-          What should be the return type of the function ``convertToCelsius``?
+          What is the output of the code below?
 
           .. code-block:: cpp
 
-            ______ convertToCelsius (double fahrenheit) {
-              double celsius;
-              celsius = (fahrenheit - 32) * 5 / 9;
-              return celsius;
-            }
-              
-          - ``int``
+             int main() {
+               int x = 0;
+               int i = 1;
+               while (i < 10) {
+                 x = i;
+                 i++;
+               }
+               cout << x;
+             }
 
-            - What variable are we returning in the function, and what is the variable's type? 
+          - 0
 
-          - ``double``
-
-            + The function returns ``celsius``, which is a ``double``.
-
-          - ``string``
-
-            - What variable are we returning in the function, and what is the variable's type? 
-
-          - ``void``
-
-            - Since we are returning something in the function, the function is not ``void``.
+            - ``x`` is initialized to 0, but it's value is reassigned in the while loop. Can you figure out what the final value assigned to ``x`` is?
+          
+          - 1
+          
+            - When ``i`` is 1, ``x`` is assigned the value of ``i``, so ``x`` is 1. However, the while loop continuously increments i, so the final value of ``x`` is not 1. 
+          
+          - 9
+          
+            + ``x`` is assigned the value of 9 during the last iteration of the while loop, and thus 9 is the output of the program.
+          
+          - 10
+          
+            - ``i`` is incremented to a value of 10, but since ``i < 10`` is false, the contents of the while loop is not executed, so ``x`` is never assigned the value of 10.
 
    .. tab:: Q2
 
-      .. mchoice:: mce_5_2
+      .. mchoice:: mce_6_2
           :practice: T
 
-          What would be returned by ``secretFunction`` if the input was 14?
+          What is the final value of ``i`` when the code is finished running?
 
           .. code-block:: cpp
 
-            int secretFunction (int input) {
-              if (input % 2 == 0) {
-                return 3 * input - 2;
-              }
-              else {
-                if (input % 7 == 0) {
-                  return input;
-                }
-                return 2 * input + 9;
-              }
-              return input + 4;
-            }  
+             int main() {
+               int x = 0;
+               int i = 1;
+               while (i < 10) {
+                 x = i;
+                 i++;
+               }
+               cout << x;
+             }
 
-          - 14
-
-            - Although 14 is divisible by 7, take another look at the conditionals. 
-
-          - 18
-
-            - The flow of code would never reach the last return statement.
-
-          - 36
-
-            - Check your order of operations! 
-
-          - 37
-
-            - Take a closer look at the conditional statements. 
-
-          - 40
-
-            + Since 14 is divisible by 2, the function returns two less than three times 14.
+          - 0
+          
+            - ``i`` is initialized with a value of 1 and is incremented, so it will never have a value of 0.
+          
+          - 1
+          
+            - ``i`` is initialized with a value of 1 but it is incremented during the while loop.
+          
+          - 9
+          
+            - This is the final value of ``x`` when the code is finished running.
+          
+          - 10
+          
+            + In order for the while loop to terminate, the condition ``i < 10`` must be false, and this is achieved when ``i`` is incremented to 10.
 
    .. tab:: Q3
 
-      .. mchoice:: mce_5_3
-                :practice: T
+      .. mchoice:: mce_6_3
+          :practice: T
 
-          If we wanted to create a boolean function called ``isPrime``, which takes an ``int input``
-          as a parameter, which of the following would be the correct function header?
+          How many times does the following while loop run?
 
-          - ``boolean isPrime (int input) {``
+          .. code-block:: cpp
 
-            - In C++, use the ``bool`` keyword for a boolean. 
+             int main() {
+               int i = 6;
+               while (i > 2) {
+                 i = i + 4;
+                 if (i > 8) {
+                   i = i - 5;
+                 }
+               }
+             }
 
-          - ``bool isPrime (input) {``
-
-            - In a function header, the type of each variable must be specified in the parameter list.
-
-          - ``bool isPrime (int input) {`` 
-
-            + This is the correct function header for the function.
-
-          - ``int isPrime (bool input) {``
-
-            - Take a closer look at what the return type is.
+          - 1
+          
+            - Take a closer look at the while loop and conditional.
+          
+          - 3
+          
+            - Take a closer look at the while loop and conditional.
+          
+          - 5
+          
+            - Take a closer look at the while loop and conditional.
+          
+          - The loop will run infinitely.
+          
+            + The value of ``i`` will always be greater than 2, resulting in an infinite loop.
 
    .. tab:: Q4
 
-      .. mchoice:: mce_5_4
+      .. mchoice:: mce_6_4
           :practice: T
 
-          If we wrote the following function, which of the other functions below can we also legally write
-          and add to the program?
+          What is the output of the code below?
 
           .. code-block:: cpp
 
-            int func (double x, bool y);
+             int main() {
+               int n = 10;
+               // cout << "Da ";
+               cout << "na ";
+               while (n != 3) {
+                 cout << "na ";
+                 n--;
+               }
+               cout << "Batman!";
+             }
 
-          - ``int func (double a, bool b);``
-
-            - Since this function has the same name and parameter types as the given function, it is not allowed.
-
-          - ``int foo (double x, bool y);``
-
-            + This function has a different name from the given function, so it is allowed.
-
-          - ``int func (double x);``
-
-            + Although this function has the same name as the given function, it has a different number of parameters, so it is allowed.
-
-          - ``void func (double x, bool y);``
-
-            - Although this function has a different return type, its parameter list is the same as the given function, so it is not allowed.
-
-          - ``int func (bool y, double x);``
-
-            + Although this function has the same name as the given function, its parameter list is in a different order, so it is allowed.
+          - na na na na na na na na Batman!
+          
+            + The code prints out eight "na"s before printing out "Batman!"
+          
+          - na na na na na na na Batman!
+          
+            - Look over the code carefully. There are output statements before the while loop.
+          
+          - Da na na na na na na na na Batman!
+          
+            - Will "Da" ever be printed?
+          
+          - It will result in an infinite loop.
+          
+            - Since we repeatedly decrement ``n`` inside the while loop, it will eventually be equal to 3 and the while loop will terminate.
 
    .. tab:: Q5
 
-      .. mchoice:: mce_5_5
+      .. mchoice:: mce_6_5
           :practice: T
 
           What is the output of the code below?
 
           .. code-block:: cpp
 
-            int main() {
-              bool x = 2 < 3;
-              cout << x;
-              cout << false;
-              cout << ((1 + 4) * 4 > 24);
-              cout << (23 == (32 + 2 - 11));
-            }
+             int main() {
+               int n = 10;
+               cout << "Da ";
+               cout << "na ";
+               while (n != 3) {
+                 cout << "na ";
+               }
+               cout << "Batman!";
+             }
 
-          - 1001
-
-            + Since the first and last statements are true and the middle two are false, this is the correct output.
-
-          - truefalsefalsetrue
-
-            - In C++, boolean values are outputted as 0 or 1.
-
-          - 1false01
-
-            - Since the second ``cout`` statement doesn't have quotes around the word "false", the value of 0 is outputted.
-
-          - 0110
-
-            - Remember that if a boolean expression is true, it has a value of 1.
+          - Batman!
+          
+            - Take a closer look at the while loop.
+          
+          - Da Batman!
+          
+            - Take a closer look at the while loop.
+          
+          - Da na na na na na na na na Batman!
+          
+            - Take a closer look at the while loop.
+          
+          - It will result in an infinite loop.
+          
+            + Since we never change the value of ``n``, 10 will never equal 3 so the code will run forever.
 
    .. tab:: Q6
 
-      .. mchoice:: mce_5_6
+      .. mchoice:: mce_6_6
           :practice: T
 
           What is the output of the code below?
 
           .. code-block:: cpp
 
-            int main() {
-              bool w = !(2 * 3 == 6 || 4 - 3 > 8);
-              bool x = true || 4 > 6;
-              bool y = 3 != 6 - 3 && 23 >= 23;
-              bool z = (4 + 9 < 15 && 3 != 4) || 2 + 5 == 7;  
-              cout << w << x << y << z;
-            }
+             int main() {
+               int x = 1;
+               while (x < 6) {
+                 cout << x << "\t" << pow (x, 5) / pow (x, 3) << endl;
+                 x++;
+               }
+             }
 
-          - 0101
+          - The first six perfect fifths.
 
-            + Since the expressions are false, true, false, and true, the output is 0101.
+            - Take a closer look at the while loop and what ``x`` was initialized to.
+          
+          - The first six perfect squares.
 
-          - 1010
+            - Take a closer look at the while loop and what ``x`` was initialized to.
+          
+          - The first five perfect squares.
 
-            - Remember that ``true`` outputs to 1 and ``false`` outputs to 0.
-
-          - 1101
-
-            - Remember the NOT operator (!) inverts the value of a boolean.
-
-          - 0100
-
-            - Take a closer look at the order of operations.
-
-          - 0110
-
-            - Take a closer look at the expressions.
+            + Dividing ``x`` to the power of 5 by ``x`` to the power of 3 effectively results in perfect squares.
+          
+          - The first five perfect cubes.
+          
+            - Take a closer look at the mathematical expression inside the while loop.
 
    .. tab:: Q7
 
-      .. mchoice:: mce_5_7
+      .. mchoice:: mce_6_7
           :practice: T
 
-          Are there any issues with the code below?
+          Why are we allowed to use the variable ``x`` in both ``main`` and in the function definition of ``superSecretFunction``?
 
           .. code-block:: cpp
+         
+             int superSecretFunction (int n) {
+               int x = 0;
+               return (2 + (n * n) - 5 * n / 7) * x;
+             }
 
-            bool isEven (int num) {
-              if (num % 2 == 0) {
-                return true;
-              }
-            }
+             int main() {
+               int x = 1;
+               cout << "After using the super secret function, we get " << superSecretFunction (x);
+             }
 
-          - Yes, we have to return either 0 or 1.
+          - We're using the same variable, but just reassigning the value from 0 to 1.
 
-            - Returning a 0 or 1 would be returning an ``int``, even though booleans evaluate to 0 or 1.
+            - We are actually using two different variables that happen to have the same name.
 
-          - Yes, we cannot pass an ``int`` into a ``bool`` function.
+          - Although the name of both variables is ``x``, they represent different locations in memory, and thus are different variables.
+          
+            + One ``x`` is a local variable of ``superSecretFunction`` while the other is a local variable of ``main``.
 
-            - The type of variables in the parameter list do not affect the return type.
+          - We can assign them different values but not the same value. Thus, if both were initialized to 0, then we'd get an error.
 
-          - Yes, there is no case for odd numbers.
+            - Since they are not in the same storage location, they can store any value, including the same value.
 
-            + Since we never established an else clause, if the input was an odd number, the function would not return anything despite not being a void function.
+          - We're not allowed to do this. The code will result in an error.
 
-          - There are no issues with the code.
-
-            - There is an issue with the code. Can you find it?
+            - The code does not produce an error.
 
    .. tab:: Q8
 
-      .. mchoice:: mce_5_8
+      .. mchoice:: mce_6_8
           :practice: T
 
-          Are there any issues with the code below?
+          What is the output of the code below?
 
           .. code-block:: cpp
+         
+             int loopFive (int n) {
+               while (n % 5 != 0) {
+                 n = n + 3;
+               }
+               return n;
+             }
+ 
+             int main() {
+               cout << loopFive (2);
+               cout << loopFive (3);
+               cout << loopFive (4);
+             }
 
-            double Free_time (int day) {
-              if (day==1||day==2||day==3||day==4) {
-                cout<<"Better study on weekday!"<<endl;
-                return day*0.25;
-              }
-              else{
-                cout<<"Happy weekend"<<endl;
-                return day;
-              }
-            }
+          - 51510
 
-          - Yes, we might not return anything.
+            + ``n`` is repeatedly incremented by 3 until it is divisible by 5, and this happens when ``n`` is 5, 15, and 10 for the inputs of 2, 3, and 4 respectively.
 
-            - We have an else clause in which we return a value. 
+          - 234
+          
+            - Although the function returns ``n``, ``n`` might not be its original value.
 
-          - Yes, we cannot return an entire expression like ``day*0.25``.
+          - 5 15 10
 
-            - If the result of the expression is compatible with the return type we can return it.
+            - Take a closer look at the output statements.
 
-          - Yes, we are returning an ``int`` (in the ``else`` block) where as the return type is ``double``.
+          - 567
 
-            - Implicit conversion from an int to double is ok in c++!
-
-          - There are no issues with the code.
-
-            + Correct! implicit conversion from int to double are ok!
+            - Take a closer look at the ``while`` loop in the function.
 
    .. tab:: Q9
 
-      .. mchoice:: mce_5_9
+      .. mchoice:: mce_6_9
           :practice: T
 
-          Are there any issues with the code below?
+          The super evil villian RePete wants to annoy the city by
+          hacking into the city's helper robots and making them repeat
+          everything they say 5 times. However, there's an error in his 
+          code and now the robots won't stop repeating! Can you find the
+          error?
 
           .. code-block:: cpp
+         
+             void repeat_bot (string input) {
+               int n = 0;
+               while (n < 5) {
+                 cout << input << ' ';
+                 n--;
+               }
+             }
 
-            void moonWeight (double earth) {
-              double moon = 0.165 * earth;
-              cout << "You would weigh " << moon << " pounds on the moon." << endl;
-              return moon;
-            }
+             int main() {
+               repeat_bot ("Hello, how may I help you?");
+             }
 
-          - Yes, we cannot have ``cout`` statements in a function.
+          - ``repeat_bot`` can only take one word as an argument.
 
-            - We are allowed to use ``cout`` statements in a function.
+            - A ``string`` is any number of characters or words surrounded by double quotes, not just one word.
 
-          - Yes, we cannot return anything.
+          - ``n`` is declared to be 0 and 0 is always less than 5.
+          
+            - The code doesn't loop infinitely because of the value ``n`` was declared to be.
 
-            + ``void`` functions do not have return values, so we cannot return ``moon``.
+          - Every time the ``while`` loop runs, ``n`` is reset to 0, so it will always be less than 5.
 
-          - Yes, we need to return the output statement.
+            - The initialization of ``n`` occurs outside the ``while`` loop, so the value of ``n`` does not get reset to 0.
 
-            - ``void`` functions do not have return values.
+          - ``n`` is declared to be 0 and we continuously decrement ``n`` so it will always be less than 5.
 
-          - There are no issues with the code.
-
-            - There is an issue with the code. Can you find it?
+            + Since ``n`` starts at 0 and gets smaller, the conditional for the ``while`` loop will always be true, and thus the code runs forever.
 
    .. tab:: Q10
 
-      .. mchoice:: mce_5_10
-          :practice: T
+      .. mchoice:: mce_6_10
 
-          What is the return type of main?
-
-          - ``void``
-
-            - What keyword do we use before ``main()`` in every program?
-
-          - ``bool``
-
-            - What keyword do we use before ``main()`` in every program?
-
-          - ``double``
-
-            - What keyword do we use before ``main()`` in every program?
-
-          - ``int``
-
-            + Yes, ``main`` is supposed to return an integer, which is why programmers often return 0 at the end of ``main``.
-
-   .. tab:: Q11
-
-      .. mchoice:: mce_5_11
-          :practice: T
-
-          What is the base case of the ``factorial`` recursive function?
+          After making some changes to his code, RePete tries again.
+          This time, however, the robots don't repeat anything!
+          Can you find the new error?
 
           .. code-block:: cpp
+         
+           void repeat_bot (string input) {
+             int n = 0;
+             while (n > 5) {
+               cout << input << ' ';
+               n++;
+             }
+           }
 
-            int factorial (int n) {
-              if (n == 0) {
-                return 1;
-              }
-              else {
-                int recurse = factorial (n-1);
-                int result = n * recurse;
-                return result;
-              }
-            }
+           int main() {
+             repeat_bot ("Hello, how may I help you?");
+           }
 
-          - ``n = 0``
+          - ``n > 5`` is not a valid conditional, so the ``while`` loop doesn't execute.
 
-            + When ``n`` is 0, the function returns the value 1 without making a recursive call.
+            - ``n > 5`` is a boolean statement and thus is a valid conditional.
 
-          - ``n = 1``
+          - The value of ``n`` never gets modified in the ``while`` loop.
+          
+            - ``n`` is incremented in the ``while`` loop after the ``cout`` statement.
 
-            - When ``n`` is 1, the function makes a recursive call in the else statement.
+          - In the ``cout`` statement, only spaces are printed.
 
-          - ``n = -1``
+            - ``input`` is also printed.
 
-            - ``n`` never becomes -1.
+          - The conditional for the ``while`` loop is not met.
 
-          - There is no base case.
+            + Since ``n`` is declared to be 0, 0 is not greater than 5, so the ``while`` loop does not execute.
 
-            - If there was no base case, the function would recurse infinitely.
-
-   .. tab:: Q12
-
-      .. mchoice:: mce_5_12
-          :practice: T
-
-          What is printed?
-
-          .. code-block:: cpp
-
-            void print_sequence (int n) {
-              if (n == 0) {
-                 cout<<1;
-                 return;
-                 //we can have an empty return to a void function
-              }
-              else {
-                cout<<n<<" ";
-                print_sequence(n-1);
-              }
-            }
-
-            int main(){
-                int val=6;
-                print_sequence(val);
-            }
-
-          - 6 5 4 3 2 1 0
-
-            - Check what the base case prints.
-
-          - 6 6 6 6 6 6 1
-
-            - What value do we give the recursive call?
-
-          - 6 5 4 3 2 1
-
-            - The base case prints something!
-
-          - 6 5 4 3 2 1 1
-
-            + We print a number and decrement it till we reach 0 then we print 1.

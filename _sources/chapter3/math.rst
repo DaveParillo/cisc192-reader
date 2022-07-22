@@ -1,8 +1,12 @@
+.. index::
+   pair: log; math
+   pair: sin; math
+
 Math Functions
 --------------
 
-In mathematics, you have probably seen functions like :math:`\sin` and
-:math:`\log`, and you have learned to evaluate expressions like
+In mathematics, you have probably seen functions like :numeric:`sin <math/sin>` and
+:numeric:`log <math/log>`, and you have learned to evaluate expressions like
 :math:`\sin(\pi/2)` and :math:`\log(1/x)`. First, you evaluate the
 expression in parentheses, which is called the argument of the
 function. For example, :math:`\pi/2` is approximately 1.571, and
@@ -34,33 +38,42 @@ using a syntax that is similar to mathematical notation:
    ~~~~
    #include <cmath>
    #include <iostream>
-   using namespace std;
 
    int main () {
-       double result = log (17.0);
-       double angle = 1.5;
-       double height = sin (angle);
-       cout << result << endl;
-       cout << angle << endl;
-       cout << height << endl;
+       constexpr double result = log (17.0);
+       constexpr double radians = 1.5;
+       constexpr double height = sin (radians);
+       std::cout << result << '\t'
+                 << radians  << '\t'
+                 << height << '\n';
        return 0;
    }
 
 
-The first example sets log to the logarithm of 17, base :math:`e`. There
-is also a function called ``log10`` that takes logarithms base 10.
+The first example sets log to the logarithm of 17, base :math:`e`.
+There is also a function called :numeric:`log10 <math/log10>` that
+takes logarithms base 10.
 
-The second example finds the sine of the value of the variable angle.
-C++ assumes that the values you use with ``sin`` and the other trigonometric
-functions (``cos``, ``tan``) are in *radians*. 
+.. index::
+   pair: cos; math
+   pair: tan; math
+   pair: atan; math
+   pair: radian; math
+   pair: atan; pi
+
+The second example finds the sine of the value of the variable radians.
+C++ assumes that the values you use with :numeric:`sin <math/sin>`
+and the other trigonometric
+functions (:numeric:`cos <math/cos>`, :numeric:`tan <math/tan>`)
+are in *radians*. 
 
 .. note::
-   To convert from degrees to radians, you can divide by 360 and multiply
-   by 2 * pi.
+   To convert from degrees to radians, you can multiply by :math:`\pi/180`.
 
 If you don’t happen to know :math:`\pi` to 15 digits, you can calculate
-it using the ``acos`` function. The arccosine (or inverse cosine) of -1 is
-:math:`\pi`, because the cosine of :math:`\pi` is -1.
+it using the :numeric:`atan <math/atan>` function.
+The arctangent (or inverse tangent) of 1 is
+:math:`\pi/4`, and multiplying by ``4`` evaluates to :math:`\pi`.
 
 
 .. activecode:: math_functions_AC_2
@@ -76,17 +89,52 @@ it using the ``acos`` function. The arccosine (or inverse cosine) of -1 is
    ~~~~
    #include <cmath>
    #include <iostream>
-   using namespace std;
 
    int main () {
-       double pi = acos(-1.0);
-       double degrees = 90;
-       double angle = degrees * 2 * pi / 360.0;
-       cout << pi << endl;
-       cout << degrees << endl;
-       cout << angle << endl;
+       const double pi = 4*atan(1);
+       constexpr double degrees = 90;
+       const double radians = degrees * pi / 180.0;
+       std::cout << pi << '\t'
+                 << degrees  << '\t'
+                 << radians << '\n';
        return 0;
    }
+
+The value ``pi`` can't be declared :lang:`constexpr` here, because
+the functions in the math library are not ``constexpr``.
+We can only use constant expressions to initialize something as
+``constexpr``.
+This is a part of the language that is actively changing!
+Starting in C++17, many more parts of the standard library
+have started to include ``constexpr`` versions of types and functions.
+
+Note that some compilers do return ``constexpr`` values for the math
+library functions, but this is generally considered a bug and
+should not be counted on.
+
+.. note::
+   Constants introduced in C++20.
+
+   C++20 defines several numeric constants useful in engineering and
+   math. The :numeric:`full list of constants <constants>` is available
+   on cppreference.com and are located in the header ``numbers``.
+   For example:
+
+   ::
+
+      #include <numbers>
+
+      int main() {
+         double radians = 90 * std::numbers::pi / 180.0;
+      }
+
+Prior to the official inclusion of these constants, programmers needed to
+either define their own, or use a third party library such as
+https::boost.org/.
+Some compilers define a macro ``M_PI``, but it is not universal and
+should not be relied on.
+
+   
 
 .. index::
    single: header file
@@ -106,6 +154,7 @@ iostream using an **include** statement:
     #include <iostream>
     using namespace std;
 
+We have been using header files since chapter 1.
 iostream contains information about input and output (I/O) streams,
 including the object named ``cout``. 
 C++ has a powerful feature called namespaces,
@@ -134,7 +183,29 @@ with iostream:
 
 Such header files have an initial ‘c’ to signify that these header files
 have been derived from the **C** language.
+The original C version of this header is ``math.h``
 
+.. admonition:: Use C++ headers in C++
+
+   Use the C++ versions of C header files when writing C++.
+   Although the language allows you to use either,
+   it is considered a best practice to use the C++ headers
+   when writing C++ code.
+
+   There are some subtle differences in the guarantees that the
+   different headers support.
+
+For compatibility reasons, the functions in ``cmath`` are also in the ``std``
+namespace, however, they are also in the *global namespace*.
+For this reason, you often see math functions used without the 
+``std::`` namespace prefix.
+
+.. note::
+   Fun fact!
+
+   All of the original C headers, such as ``math.h`` have been deprecated
+   since the first ISO standard, C++98.
+   However, they are now slated to be 'undeprecated' as of C++23.
 
 .. tabbed:: tab_check
 
@@ -176,7 +247,7 @@ have been derived from the **C** language.
 
           -   ``log10``
 
-              +   This function computes the common logarithm.
+              +   This function computes the 'common' logarithm.
 
           -   ``pow``
 
@@ -185,3 +256,19 @@ have been derived from the **C** language.
           -   ``ln``
 
               -   The natural log function is actually called ``log``.
+
+-----
+
+.. admonition:: More to Explore
+
+   - From cppreference.com
+
+     - C++ math: :numeric:`sin <math/sin>`,
+       :numeric:`cos <math/cos>`,
+       :numeric:`tan <math/tan>`,
+       :numeric:`atan <math/atan>`,
+       :numeric:`log <math/log>`
+     - :numeric:`constants` (such as :math:`\pi`)
+     - :cpp:`C++ Standard Library headers <header>`
+
+

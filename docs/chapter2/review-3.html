@@ -1,70 +1,51 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
 <!DOCTYPE html>
 
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2.15. Activecode Exercises &#8212; CISC 192 Course Reader Overview</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>2.16. Activecode Exercises &#8212; CISC 192 Course Reader Overview</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
     <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
-    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
-    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
-    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.5.5" />
-    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
     <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
     <script src="../_static/animationbase.js?v=A043C3A7"></script>
     <script src="../_static/html4css1.css?v=4533ACD3"></script>
-    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
-    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
-    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
     <script src="../_static/webglinteractive.js?v=2B768384"></script>
     <script src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script src="../_static/Blob.js?v=AEC2447"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script src="../_static/runestone.js?v=92D8BBF0"></script>
-    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
-    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
-    <script src="../_static/jquery-fix.js?v=1226591B"></script>
-    <script src="../_static/bootstrap-sphinx.js"></script>
-    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
-    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
-    <script src="../_static/theme.js?v=D899FB97"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/runtime.b0f8547c48f16a9f.bundle.js?v=2731F567"></script>
+    <script src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script src="../_static/runestone.0e9550fe42760516.bundle.js?v=71AD37BA"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="3. Functions" href="../chapter3/index.html" />
-    <link rel="prev" title="2.14. Mixed-Up Code Exercises" href="review-2.html" />
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="prev" title="2.15. Mixed-Up Code Exercises" href="review-2.html" />
+
+
 <link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
 
-<script type="text/javascript">
+
+<script>
   eBookConfig = {};
   
     eBookConfig.useRunestoneServices = false;
@@ -73,6 +54,8 @@
     eBookConfig.course = 'cisc192-reader';
     eBookConfig.basecourse = 'cisc192-reader';
     eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
   
   eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
   eBookConfig.logLevel = 0;
@@ -80,18 +63,16 @@
   eBookConfig.build_info = "unknown";
   eBookConfig.python3 = true;
   eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
-  eBookConfig.runestone_version = '5.5.5';
+  eBookConfig.runestone_version = '6.2.1';
   eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
   eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
   eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
   eBookConfig.enable_chatcodes = false ? false : false;
-
+  eBookConfig.enableScratchAC = true;
 
 </script>
 
 <!-- Ad Serving Headers Only serve ads to Anonymous Users -->
-
-
 
 
 
@@ -105,15 +86,16 @@
 
     <div class="navbar-header">
       <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
-        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
 
       <div>
         
-          <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;'>&nbsp;<span aria-label="logo" class="visuallyhidden">Runestone Logo</span> </a>
+        
+          <div class="brand-logo"><img src="../_static/img/RAIcon.png" alt=""></div>
         
         <a class="navbar-brand" href="../index.html" aria-label="index-page">
           
@@ -128,17 +110,16 @@
       <ul class="nav navbar-nav navbar-right" >
 
         <li class="divider-vertical"></li>
-
+        <li><span id="browsing_warning"></span></li>
 
         <!-- social media dropdown -->
         <!-- end social media dropdown -->
 
         <li class="divider-vertical"></li>
-
         <!-- search dropdown -->
         <li class="dropdown">
           <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
           </a>
           <ul class='dropdown-menu'>
             
@@ -171,8 +152,8 @@
         <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
 
         <!-- <li class="dropdown">             -->
-          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
-              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
         <!-- </li> -->
 
         <li class="divider-vertical"></li>
@@ -188,7 +169,7 @@
         
         <!-- 
           
-  <li id="relations-prev" title="Previous Chapter - <span class="section-number">2.14. </span>Mixed-Up Code Exercises" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">2.15. </span>Mixed-Up Code Exercises" data-toggle="tooltip">
     <a href="review-2.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
@@ -201,93 +182,83 @@
   </li>
   <li class="divider-vertical"></li>
 
-<script type="text/javascript">
+<script>
   opts = {'placement':'bottom',
           'selector': '',
           'delay': { show: 100, hide: 50}
          };
 
-  $('#relations-prev').tooltip(opts);
-  $('#relations-next').tooltip(opts);
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
 </script>
         -->
         
           <li></li>
         
       </ul>
-
-      </div> <!-- navbar -->
-
-
-
-
-
-
-
-    </div> <!-- container -->
-  </div>
-</div>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
 
 
 <div class="container" id="continue-reading"></div>
 
 <div class="container" id="main-content" role="main">
+
 <!-- Ad Serving for Runestone Campaign -->
 
 
   
-  <div class="section" id="activecode-exercises">
-<h1><span class="section-number">2.15. </span>Activecode Exercises<a class="headerlink" href="#activecode-exercises" title="Permalink to this headline">¶</a></h1>
+  <section id="activecode-exercises">
+<h1><span class="section-number">2.16. </span>Activecode Exercises<a class="headerlink" href="#activecode-exercises" title="Permalink to this headline">¶</a></h1>
 <p>Answer the following <strong>Activecode</strong> questions to assess what you have learned in this chapter.</p>
-<div id='tab_check' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Q1" >
-<div id='VARS_a1' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+<div id='tab_check' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Q1" >
+<div id='VARS_a1' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Question" >
 
-<div class="runestone explainer ac_section alert alert-warning">
-<div data-component="activecode" id=VARS_a1q >
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=VARS_a1q data-question_label="2.16.1">
 <div id=VARS_a1q_question class="ac_question col-md-12">
-<p>Fix the code below so that it runs without errors.  Hint: you might need to change the names of some variables.</p>
+<p>Fix the code below so that it compiles and runs without errors.
+Hint: you might need to change the names of some variables.</p>
 
 </div>
-<textarea data-lang="cpp" id="VARS_a1q_editor" data-question_label="2.15.1" 
+<textarea data-lang="cpp" id="VARS_a1q_editor" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
-    style="visibility: hidden;">
+     style="visibility: hidden;">
 #include <iostream>
-using namespace std;
 
 int main () {
     char true = 'T';
     char false = 'F';
-
-    // DO NOT MODIFY ANYTHING BELOW THIS LINE.
-    cout << true << " is short for true. ";
-    cout << false << " is short for false." << endl;
+    std::cout << "Program complete.\n";
 }
 </textarea>
 </div>
 </div>
 </div><div data-component="tab" data-tabname="Answer" >
 
-<div class="runestone explainer ac_section alert alert-warning">
-<div data-component="activecode" id=VARS_a1a >
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=VARS_a1a data-question_label="2.16.2">
 <div id=VARS_a1a_question class="ac_question col-md-12">
-<p>Below is one way to fix the program.  <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code> are keywords, so they cannot be used as variable names.</p>
+<p>Below is one way to fix the program.  <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>
+are keywords, so they cannot be used as variable names.</p>
 
 </div>
-<textarea data-lang="cpp" id="VARS_a1a_editor" data-question_label="2.15.2" 
+<textarea data-lang="cpp" id="VARS_a1a_editor" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
-    style="visibility: hidden;">
+     style="visibility: hidden;">
 #include <iostream>
-using namespace std;
 
 int main () {
     char t = 'T';
     char f = 'F';
-    cout << t << " is short for true. ";
-    cout << f << " is short for false." << endl;
+    std::cout << "Program complete.\n";
 }
 </textarea>
 </div>
@@ -297,80 +268,100 @@ int main () {
 
 </div><div data-component="tab" data-tabname="Q2" >
 
-<div class="runestone explainer ac_section alert alert-warning">
-<div data-component="activecode" id=VARS_a2 >
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=VARS_a2 data-question_label="2.16.3">
 <div id=VARS_a2_question class="ac_question col-md-12">
 <p>Finish the code below so that it prints “I drive a 2014 Buick Regal”.</p>
+<p>This code does not need to include a main.
+It is already provided as part of the test.</p>
 
 </div>
-<textarea data-lang="cpp" id="VARS_a2_editor" data-question_label="2.15.3" 
+<textarea data-lang="cpp" id="VARS_a2_editor" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
-    style="visibility: hidden;">
+     style="visibility: hidden;">
+#include <string>
+
+std::string my_car;
+my_car = "Buick"
+
+====
+#include <functional>
+#include <iomanip>
 #include <iostream>
-using namespace std;
-
-int main () {
-    string make;
-    make = "Buick"
-
-    // Finish the rest of the assignment statements by assigning
-    // 2014 and Regal to their respective variables.
-
-    // DO NOT MODIFY ANYTHING BELOW THIS LINE.
-    cout << "I drive a " << year << " " << make << " ";
-    cout << model << endl.
+#include <string>
+template <class T, class Compare = std::equal_to<T>>
+void check (const std::string& name,
+            const T& actual,
+            const T& expected,
+            const Compare& op = Compare())
+{
+  std::cout << std::left << std::setfill('.')
+            << std::setw(50) << name
+            << std::setw(7) <<  std::left;
+   if(op(actual, expected)) {
+     std::cout << " OK      \n";
+     return;
+  }
+  std::cout << " FAILED\n";
+  std::cout << "\treceived [" << std::boolalpha << actual
+            << "], but expected [" << expected << "]\n";
+  exit(1);
+}
+int main() {
+    std::string expected = "I drive a 2014 Buick Regal";
+    check("test expected string", my_car,  expected);
 }
 </textarea>
 </div>
 </div>
 </div><div data-component="tab" data-tabname="Q3" >
-<div id='VARS_a3' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+<div id='VARS_a3' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Question" >
 
-<div class="runestone explainer ac_section alert alert-warning">
-<div data-component="activecode" id=VARS_a3q >
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=VARS_a3q data-question_label="2.16.4">
 <div id=VARS_a3q_question class="ac_question col-md-12">
 <p>Fix the code below so that it prints “Cady scored 90% on the exam.”</p>
 
 </div>
-<textarea data-lang="cpp" id="VARS_a3q_editor" data-question_label="2.15.4" 
+<textarea data-lang="cpp" id="VARS_a3q_editor" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
-    style="visibility: hidden;">
+     style="visibility: hidden;">
 #include <iostream>
-using namespace std;
 
 int main() {
     // Modify the next line so that Cady = 0.9.
     int Cady = 3 * 5 * (6 / 100);
 
     // DO NOT MODIFY ANYTHING BELOW THIS LINE.
-    cout << "Cady scored " << Cady * 100 << "% on the exam.";
+    std::cout << "Cady scored " << Cady * 100 << "% on the exam.";
 }
 </textarea>
 </div>
 </div>
 </div><div data-component="tab" data-tabname="Answer" >
 
-<div class="runestone explainer ac_section alert alert-warning">
-<div data-component="activecode" id=VARS_a3a >
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=VARS_a3a data-question_label="2.16.5">
 <div id=VARS_a3a_question class="ac_question col-md-12">
-<p>Below is one way to fix the program.  We want to use doubles so that our result isn’t rounded down to 0 through integer division.</p>
+<p>Below is one way to fix the program.
+We want to use doubles so that our result isn’t truncated
+to 0 through integer division.</p>
 
 </div>
-<textarea data-lang="cpp" id="VARS_a3a_editor" data-question_label="2.15.5" 
+<textarea data-lang="cpp" id="VARS_a3a_editor" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
-    style="visibility: hidden;">
+     style="visibility: hidden;">
 #include <iostream>
-using namespace std;
 
 int main() {
     double Cady = (3 * 5) * 6 / 100.0;
-    cout << "Cady scored " << Cady * 100 << "% on the exam.";
+    std::cout << "Cady scored " << Cady * 100 << "% on the exam.";
 }
 </textarea>
 </div>
@@ -380,49 +371,75 @@ int main() {
 
 </div><div data-component="tab" data-tabname="Q4" >
 
-<div class="runestone explainer ac_section alert alert-warning">
-<div data-component="activecode" id=VARS_a4 >
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=VARS_a4 data-question_label="2.16.6">
 <div id=VARS_a4_question class="ac_question col-md-12">
-<p>Finish the code below so that it returns the correct volume of a sphere.  Hint: think about what happens when you use integer division.</p>
+<p>Finish the code below so that it shows the correct volume of a sphere.
+Hint: watch out for integer division.</p>
+<p>This code does not need to include a main.
+It is already provided as part of the test.</p>
 
 </div>
-<textarea data-lang="cpp" id="VARS_a4_editor" data-question_label="2.15.6" 
+<textarea data-lang="cpp" id="VARS_a4_editor" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
-    style="visibility: hidden;">
+     style="visibility: hidden;">
+int radius = 5;
+double pi = 3.14159;
+
+// Use these variables and the formula for volume to complete the next line.
+volume =
+
+====
+#include <functional>
+#include <iomanip>
 #include <iostream>
-using namespace std;
-
-int main () {
-    int radius = 5;
-    double pi = 3.14;
-
-    // Use these variables and the formula for volume to complete the next line.
-    volume =
-
-    // DO NOT MODIFY ANYTHING BELOW THIS LINE.
-    cout << "Your solution had volume = " << volume << endl;  cout << "The correct solution has volume = 104.667";
+#include <string>
+template <class T, class Compare = std::equal_to<T>>
+void check (const std::string& name,
+            const T& actual,
+            const T& expected,
+            const Compare& op = Compare())
+{
+  std::cout << std::left << std::setfill('.')
+            << std::setw(50) << name
+            << std::setw(7) <<  std::left;
+   if(op(actual, expected)) {
+     std::cout << " OK      \n";
+     return;
+  }
+  std::cout << " FAILED\n";
+  std::cout << "\treceived [" << std::boolalpha << actual
+            << "], but expected [" << expected << "]\n";
+  exit(1);
+}
+bool close_to(double x, double y)
+{
+    return std::abs(x-y) < 0.001;
+}
+int main() {
+    check("test radius of 5...", volume,  523.598, close_to);
 }
 </textarea>
 </div>
 </div>
 </div><div data-component="tab" data-tabname="Q5" >
-<div id='VARS_a5' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+<div id='VARS_a5' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Question" >
 
-<div class="runestone explainer ac_section alert alert-warning">
-<div data-component="activecode" id=VARS_a5q >
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=VARS_a5q data-question_label="2.16.7">
 <div id=VARS_a5q_question class="ac_question col-md-12">
-<p>Fix the code below so that assigns <code class="docutils literal notranslate"><span class="pre">a</span></code> its correct value of <code class="docutils literal notranslate"><span class="pre">'a'</span></code>.  Hint: use character operations!</p>
+<p>Fix the code below so that assigns <code class="docutils literal notranslate"><span class="pre">a</span></code> its correct value of <code class="docutils literal notranslate"><span class="pre">'a'</span></code>.
+Hint: use character operations!</p>
 
 </div>
-<textarea data-lang="cpp" id="VARS_a5q_editor" data-question_label="2.15.7" 
+<textarea data-lang="cpp" id="VARS_a5q_editor" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
-    style="visibility: hidden;">
+     style="visibility: hidden;">
 #include <iostream>
-using namespace std;
 
 int main () {
    char a = 's';
@@ -432,31 +449,33 @@ int main () {
    a = a - 3 * 4 + (1 + 3);
 
    // DO NOT MODIFY ANYTHING BELOW THIS LINE.
-   cout << a;
+   std::cout << a;
 }
 </textarea>
 </div>
 </div>
 </div><div data-component="tab" data-tabname="Answer" >
 
-<div class="runestone explainer ac_section alert alert-warning">
-<div data-component="activecode" id=VARS_a5a >
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=VARS_a5a data-question_label="2.16.8">
 <div id=VARS_a5a_question class="ac_question col-md-12">
-<p>Below is one way to complete the program.  There are many creative ways that you could use the order of operations to come up with a complex expression that will bring you to <code class="docutils literal notranslate"><span class="pre">'a'</span></code>, here is one way.</p>
+<p>Below is one way to complete the program.
+There are many creative ways that you could use the
+order of operations to come up with a complex expression that
+will bring you to <code class="docutils literal notranslate"><span class="pre">'a'</span></code>, here is one way.</p>
 
 </div>
-<textarea data-lang="cpp" id="VARS_a5a_editor" data-question_label="2.15.8" 
+<textarea data-lang="cpp" id="VARS_a5a_editor" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
-    style="visibility: hidden;">
+     style="visibility: hidden;">
 #include <iostream>
-using namespace std;
 
 int main () {
    char a = 's';
    a = a - (3 * (4 + 1) + 3);
-   cout << a;
+   std::cout << a;
 }
 </textarea>
 </div>
@@ -466,39 +485,47 @@ int main () {
 
 </div><div data-component="tab" data-tabname="Q6" >
 
-<div class="runestone explainer ac_section alert alert-warning">
-<div data-component="activecode" id=VARS_a6 >
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=VARS_a6 data-question_label="2.16.9">
 <div id=VARS_a6_question class="ac_question col-md-12">
-<p>Write code that assigns “apples” to the variable oranges, and “oranges” to the variable apples, then swaps their values.  Be sure to inclue any necessary headers.  YOU MAY NOT HARDCODE YOUR SOLUTION.</p>
+<p>Finish this program so that it assigns
+“apples” to the variable oranges,
+and “oranges” to the variable apples, then swaps their values.
+Be sure to inclue any necessary headers.</p>
+<p>Avoid ‘hardcoding’ your solution.</p>
 
 </div>
-<textarea data-lang="cpp" id="VARS_a6_editor" data-question_label="2.15.9" 
+<textarea data-lang="cpp" id="VARS_a6_editor" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
-    style="visibility: hidden;">
+     style="visibility: hidden;">
 int main () {
 
     // DO NOT MODIFY ANYTHING BELOW THIS LINE.
-    cout << "Your solution had apples = " << apples << "and oranges = " << oranges << "." << endl; cout << "The correct solution has apples = apples, and oranges = oranges.";
+    cout << "Your solution had apples = " << apples
+         << " and oranges = " << oranges << ".\n";
+    cout << "The correct solution has apples = apples, and oranges = oranges.";
 }
 </textarea>
 </div>
 </div>
 </div><div data-component="tab" data-tabname="Q7" >
-<div id='VARS_a7' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+<div id='VARS_a7' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Question" >
 
-<div class="runestone explainer ac_section alert alert-warning">
-<div data-component="activecode" id=VARS_a7q >
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=VARS_a7q data-question_label="2.16.10">
 <div id=VARS_a7q_question class="ac_question col-md-12">
-<p>Write code that prints “Eat”, “More”, and “Chicken” on 3 consecutive lines. Be sure to inclue any necessary headers.</p>
+<p>Write code that prints “Live”, “Laugh”, and “Love” on
+3 consecutive lines.
+Be sure to inclue any necessary headers.</p>
 
 </div>
-<textarea data-lang="cpp" id="VARS_a7q_editor" data-question_label="2.15.10" 
+<textarea data-lang="cpp" id="VARS_a7q_editor" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
-    style="visibility: hidden;">
+     style="visibility: hidden;">
 int main () {
 
 }
@@ -507,24 +534,21 @@ int main () {
 </div>
 </div><div data-component="tab" data-tabname="Answer" >
 
-<div class="runestone explainer ac_section alert alert-warning">
-<div data-component="activecode" id=VARS_a7a >
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=VARS_a7a data-question_label="2.16.11">
 <div id=VARS_a7a_question class="ac_question col-md-12">
 <p>Below is one way to implement the solution.</p>
 
 </div>
-<textarea data-lang="cpp" id="VARS_a7a_editor" data-question_label="2.15.11" 
+<textarea data-lang="cpp" id="VARS_a7a_editor" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
-    style="visibility: hidden;">
+     style="visibility: hidden;">
 #include <iostream>
-using namespace std;
 
 int main () {
-    cout << "Eat" << endl;
-    cout << "More" << endl;
-    cout << "Chicken" << endl;
+    std::cout << "Live\nLaugh\nLove";
 }
 </textarea>
 </div>
@@ -534,68 +558,154 @@ int main () {
 
 </div><div data-component="tab" data-tabname="Q8" >
 
-<div class="runestone explainer ac_section alert alert-warning">
-<div data-component="activecode" id=VARS_a8 >
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=VARS_a8 data-question_label="2.16.12">
 <div id=VARS_a8_question class="ac_question col-md-12">
-<p>Write code that calculates how much you you will spend after tipping 20% on your $36.25 dinner.  Save the result of this calculation in <code class="docutils literal notranslate"><span class="pre">plusTip</span></code>.  Be sure to include any necessary headers.</p>
+<p>Write code that calculates how much you you will spend after
+tipping 20% on your $36.25 dinner.
+Store the tip in a variable <code class="docutils literal notranslate"><span class="pre">tip</span></code>.
+Save the final result of this calculation in <code class="docutils literal notranslate"><span class="pre">plus_tip</span></code>.</p>
+<p>This code does not need to include a main.
+It is already provided as part of the test.</p>
 
 </div>
-<textarea data-lang="cpp" id="VARS_a8_editor" data-question_label="2.15.12" 
+<textarea data-lang="cpp" id="VARS_a8_editor" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
-    style="visibility: hidden;">
-int main () {
+     style="visibility: hidden;">
+tip = 0;
+plus_tip = 0;
 
-    // DO NOT MODIFY ANYTHING BELOW THIS LINE.
-    cout << "Your solution had plusTip = " << plusTip << endl; cout << "The correct solution has plusTip = 43.5";
+====
+#include <functional>
+#include <iomanip>
+#include <iostream>
+#include <string>
+template <class T, class Compare = std::equal_to<T>>
+void check (const std::string& name,
+            const T& actual,
+            const T& expected,
+            const Compare& op = Compare())
+{
+  std::cout << std::left << std::setfill('.')
+            << std::setw(50) << name
+            << std::setw(7) <<  std::left;
+   if(op(actual, expected)) {
+     std::cout << " OK      \n";
+     return;
+  }
+  std::cout << " FAILED\n";
+  std::cout << "\treceived [" << std::boolalpha << actual
+            << "], but expected [" << expected << "]\n";
+  exit(1);
+}
+bool close_to(double x, double y)
+{
+    return std::abs(x-y) < 0.001;
+}
+int main() {
+    check("test 20% tip on $36.25", tip,  7.25, close_to);
+    check("test $36.25 plus tip ", plus_tip,  43.5, close_to);
 }
 </textarea>
 </div>
 </div>
 </div><div data-component="tab" data-tabname="Q9" >
-<div id='VARS_a9' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Question" >
+<div id='VARS_a9' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Question" >
 
-<div class="runestone explainer ac_section alert alert-warning">
-<div data-component="activecode" id=VARS_a9q >
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=VARS_a9q data-question_label="2.16.13">
 <div id=VARS_a9q_question class="ac_question col-md-12">
-<p>You have about three hours and fifteen minutes of homework to do today.  Rather than starting it right away, you choose to procrastinate by calculating how many seconds you’ll be spending on your work.  Convert the time to seconds and store the result in <code class="docutils literal notranslate"><span class="pre">seconds</span></code>.  Be sure to inclue any necessary headers.</p>
+<p>You have about three hours and fifteen minutes of homework to do today.
+Rather than starting it right away, you choose to procrastinate
+by calculating how many seconds you’ll be spending on your work.
+Convert the time to seconds and store the result in <code class="docutils literal notranslate"><span class="pre">seconds</span></code>.</p>
+<p>This code does not need to include a main.
+It is already provided as part of the test.</p>
 
 </div>
-<textarea data-lang="cpp" id="VARS_a9q_editor" data-question_label="2.15.13" 
+<textarea data-lang="cpp" id="VARS_a9q_editor" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
-    style="visibility: hidden;">
-int main () {
+     style="visibility: hidden;">
 
-    // DO NOT MODIFY ANYTHING BELOW THIS LINE.
-    cout << "Your solution had seconds = " << seconds << endl;  cout << "The correct solution has seconds = 11700";
+seconds = 0;
+
+====
+#include <functional>
+#include <iomanip>
+#include <iostream>
+#include <string>
+template <class T, class Compare = std::equal_to<T>>
+void check (const std::string& name,
+            const T& actual,
+            const T& expected,
+            const Compare& op = Compare())
+{
+  std::cout << std::left << std::setfill('.')
+            << std::setw(50) << name
+            << std::setw(7) <<  std::left;
+   if(op(actual, expected)) {
+     std::cout << " OK      \n";
+     return;
+  }
+  std::cout << " FAILED\n";
+  std::cout << "\treceived [" << std::boolalpha << actual
+            << "], but expected [" << expected << "]\n";
+  exit(1);
+}
+int main() {
+    check("test 3 hrs 15 min in seconds", seconds,  11700);
 }
 </textarea>
 </div>
 </div>
 </div><div data-component="tab" data-tabname="Answer" >
 
-<div class="runestone explainer ac_section alert alert-warning">
-<div data-component="activecode" id=VARS_a9a >
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=VARS_a9a data-question_label="2.16.14">
 <div id=VARS_a9a_question class="ac_question col-md-12">
 <p>Below is one way to implement the solution.</p>
 
 </div>
-<textarea data-lang="cpp" id="VARS_a9a_editor" data-question_label="2.15.14" 
+<textarea data-lang="cpp" id="VARS_a9a_editor" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
-    style="visibility: hidden;">
-#include <iostream>
-using namespace std;
+     style="visibility: hidden;">
 
-int main () {
-    int hours = 3;
-    int minutes = 15;
-    int totalMinutes = minutes + 60 * hours;
-    int seconds = totalMinutes * 60;
+int hours = 3;
+int minutes = 15;
+int total_minutes = minutes + 60 * hours;
+int seconds = total_minutes * 60;
+
+====
+#include <functional>
+#include <iomanip>
+#include <iostream>
+#include <string>
+template <class T, class Compare = std::equal_to<T>>
+void check (const std::string& name,
+            const T& actual,
+            const T& expected,
+            const Compare& op = Compare())
+{
+  std::cout << std::left << std::setfill('.')
+            << std::setw(50) << name
+            << std::setw(7) <<  std::left;
+   if(op(actual, expected)) {
+     std::cout << " OK      \n";
+     return;
+  }
+  std::cout << " FAILED\n";
+  std::cout << "\treceived [" << std::boolalpha << actual
+            << "], but expected [" << expected << "]\n";
+  exit(1);
+}
+int main() {
+    check("test 3 hrs 15 min in seconds", seconds,  11700);
 }
 </textarea>
 </div>
@@ -605,21 +715,24 @@ int main () {
 
 </div><div data-component="tab" data-tabname="Q10" >
 
-<div class="runestone explainer ac_section alert alert-warning">
-<div data-component="activecode" id=VARS_a10 >
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=VARS_a10 data-question_label="2.16.15">
 <div id=VARS_a10_question class="ac_question col-md-12">
-<p>Write code that calculates and prints the average of a and b if a = 3.14, and b = 1.59.  You may only use one line of code.  Be sure to inclue any necessary headers.</p>
+<p>Write code that calculates and prints the average of a and b if
+a = 3.14, and b = 1.59.
+You may only use one line of code.
+Be sure to inclue any necessary headers.</p>
 
 </div>
-<textarea data-lang="cpp" id="VARS_a10_editor" data-question_label="2.15.15" 
+<textarea data-lang="cpp" id="VARS_a10_editor" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
-    style="visibility: hidden;">
+     style="visibility: hidden;">
 int main () {
 
     // DO NOT MODIFY ANYTHING BELOW THIS LINE.
-    cout << endl;  cout << "Your program should have printed 2.365";
+    std::cout << "\nYour program should have printed 2.365\n";
 }
 </textarea>
 </div>
@@ -627,59 +740,34 @@ int main () {
 </div>
     </div>
 
-</div>
+</section>
 
 
-  <div id=scprogresscontainer>
-    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
   </div>
-  
-      
-<ul>
-  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 2.14. Mixed-Up Code Exercises' data-toggle="tooltip">
-    <a href="review-2.html" aria-label="2.14. Mixed-Up Code Exercises">
-        <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
-            <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
-        </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 2.15. Mixed-Up Code Exercises' data-toggle="tooltip">
+  <a href="review-2.html" aria-label="Previous - 2.15. Mixed-Up Code Exercises">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 3. Functions' data-toggle="tooltip" >
+    <a href="../chapter3/index.html" aria-label="Next - 3. Functions">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
     </a>
   </li>
 </ul>
-
-  
-<ul>
-  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - 3. Functions' data-toggle="tooltip" >
-    <a href="../chapter3/index.html" aria-label="3. Functions">
-      <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
-          <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
-      </div>
-    </a>
-  </li>
-</ul>
-
-<script type="text/javascript">
-
-  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
-  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
-
-</script>
 
 <script>
-	function mouseOverPrev() {
-		document.getElementById("relations-prev").style.opacity=1;
-	}
-
-	function mouseOutPrev() {
-		document.getElementById("relations-prev").style.opacity=0.4;
-	}
-	function mouseOverNext() {
-		document.getElementById("relations-next").style.opacity=1;
-	}
-
-	function mouseOutNext() {
-		document.getElementById("relations-next").style.opacity=0.4;
-	}
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
 </script>
-  
+
 </div>
 <footer class="footer">
   <div class="container">
@@ -689,8 +777,8 @@ int main () {
       
     </p>
     <p>
-        &copy; Copyright 2020-2021 Dave Parillo.
-      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.5.
+        &copy; Copyright 2020-2022 Dave Parillo, Barbara Ericson, and Allen B. Downey..
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.2.1.
     </p>
   </div>
 </footer>
@@ -698,7 +786,11 @@ int main () {
 
 
 
-<script> getSwitch(); </script>
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
 
 
   </body>

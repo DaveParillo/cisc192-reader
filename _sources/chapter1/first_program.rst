@@ -20,7 +20,6 @@ In C++, this program looks like this:
    // main: generate some simple output
    int main () {
        std::cout << "Hello, World!" << std::endl;
-       return 0;
    }
 
 
@@ -98,10 +97,10 @@ There is a lot of information on this line, but it is presented in a
 dense format that is not easy to interpret. A more friendly compiler
 might say something like:
 
-    “On line 1 of the source code file named hello.cpp, you tried to
-    include a header file named ``oistream``. I didn’t find anything with
+    "On line 1 of the source code file named ``hello.cpp``, you tried to
+    include a header file named ``oistream``. I didn't find anything with
     that name, but I did find something named ``iostream``. Is that what you
-    meant, by any chance?”
+    meant, by any chance?"
 
 Unfortunately, few compilers are so accommodating. The compiler is not
 actually smart, and in most cases the error message you get will be
@@ -124,7 +123,7 @@ rules of a language.
 
       .. fillintheblank:: first_program_1
 
-         How do you indicate a comment in C++?
+         How do you indicate a single line comment in C++?
           
          - :[//][//]: Correct!
            :.*: Try again!

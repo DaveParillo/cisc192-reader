@@ -15,9 +15,9 @@ assess what you have learned in this chapter.
          Construct a function that correctly prints the integer conversion of the passed double.
         
          -----
-         void printInteger (double d) {
+         void print_integer (double d) {
          =====
-         printInteger (double d); #paired
+         print_integer (double d); #paired
          =====
           d = int(d);
          =====
@@ -38,25 +38,25 @@ assess what you have learned in this chapter.
 
          Construct a function called newLine that takes no arguments and prints a blank line.  Then construct another function called divider that prints two blank lines separated by a line of ". . . . . . . . . . . ."
          -----
-         void newLine () {
+         void new_line () {
          =====
           cout << endl;
          =====
-         }  //newLine
+         }  //new_line
          =====
          void divider () {
          =====
           void divider (newLine) { #paired
          =====
-          newLine ();  //first call
+          new_line ();  //first call
          =====
-          cout << newLine ();  //first call #paired
+          cout << new_line ();  //first call #paired
          =====
           cout << ". . . . . . . . . . . . " << endl;
          =====
-          newline ();  //second call
+          new_line ();  //second call
          =====
-          cout << newLine ();  //second call #paired
+          cout << new_line ();  //second call #paired
          =====
          }  //divider
 
@@ -67,20 +67,22 @@ assess what you have learned in this chapter.
          :numbered: left
          :adaptive:
 
-         Construct a function that correctly calculates the volume of a cone with as much precision as possible and prints the value to the terminal.  Use 3.14 for pi.
+         Construct a function that correctly calculates the volume of a cone with as much precision as possible and prints the value to the terminal.
 
          -----
-         void volumeCone (double r, double h) {
+         void volume_cone (double r, double h) {
          =====
-         double volumeCone (double r, double h) { #paired
+         double volume_cone (double r, double h) { #paired
          =====
-          double vol = 1/3.0 * 3.14 * r * r * h;
+          constexpr double pi = 3.1415926;
          =====
-          double vol = 1/3 * 3.14 * r * r * h; #paired
+          double vol = 1/3.0 * pi * r * r * h;
          =====
-          int vol = 1/3 * 3.14 * r * r * h; #paired
+          double vol = 1/3 * pi * r * r * h; #paired
          =====
-          int vol = 1/3.0 * 3.14 * r * r * h; #paired
+          int vol = 1/3 * pi * r * r * h; #paired
+         =====
+          int vol = 1/3.0 * pi * r * r * h; #paired
          =====
           cout << vol;
          =====
@@ -93,26 +95,26 @@ assess what you have learned in this chapter.
          :numbered: left
          :adaptive:
 
-         Construct a function that prints the sin of an angle given in degrees. Use 3.14 for pi.
+         Construct a function that prints the sin of an angle given in degrees.
          -----
          #include &#60;cmath&#62;
          =====
          #include &#60;iostream&#62;
          using namespace std;
          =====
-         void sineDegrees (double d) {
+         void sine_degrees (double d) {
          =====
-         void sineDegrees () { #paired
+         void sine_degrees () { #paired
          =====
-          double r = d * (2 * 3.14) / 360.0;
+          constexpr double pi = 3.1415926;
          =====
-          double r = d * 360.0 / (2 * 3.14); #paired
+          double r = d * (2 * pi) / 360.0;
          =====
-          double sine = sin(r);
+          double r = d * 360.0 / (2 * pi); #paired
          =====
-          double sine = sin(d); #paired
+          cout <<  sin(r);
          =====
-          cout << sine;
+          cout <<  sin(d); #paired
          =====
          }
          =====
@@ -121,15 +123,16 @@ assess what you have learned in this chapter.
 
    .. tab:: Q5
 
-      .. parsonsprob:: functions_p4.0
+      .. parsonsprob:: functions_p4_0
          :numbered: left
          :adaptive:
 
-         Construct a function that prints the price (with 8% sales tax) of an item with after using a 30% off coupon.
+         Construct a function that prints the price (with 8% sales tax) of
+         an item with after using a 30% off coupon.
          -----
-         void finalPrice (double item) {
+         void final_price (double item) {
          =====
-         void finalPrice (string item) { #paired
+         void final_price (string item) { #paired
          =====
           double discount = item * 0.30;
          =====
@@ -150,7 +153,11 @@ assess what you have learned in this chapter.
          :numbered: left
          :adaptive:
 
-         Suppose you have already defined a function called sumOfSquares which returns the sum of the squares of two numbers and root which returns the square root of a number.  Construct a function that calculates the hypotenuse of the right triangle and prints the three sidelengths.
+         Suppose you have already defined a function called ``sum_of_squares``
+         which returns the sum of the squares of two numbers and ``sqrt`` which
+         returns the square root of a number.
+         Construct a function that calculates the hypotenuse of the right
+         triangle and prints the three sidelengths.
          -----
          int main () {
          =====
@@ -160,15 +167,15 @@ assess what you have learned in this chapter.
           int s1 = 4.8; #paired
           int s2 = 3.6;
          =====
-          double sqSum = sumOfSquares(s2, s1);
+          double sum = sum_of_squares(s2, s1);
          =====
-          sqSum = sumOfSquares(s1, s2); #paired
+          sum = sum_of_squares(s1, s2); #paired
          =====
-          double hyp = root(sqSum);
+          double hypot = sqrt(sum);
          =====
-          double hyp = root(s1, s2); #paired
+          double hypot = sqrt(s1, s2); #paired
          =====
-          cout << "The sides of the triangle are: " << s1 << ", " << s2 << ", " << hyp;
+          cout << "The sides of the triangle are: " << s1 << ", " << s2 << ", " << hypot;
          =====
           cout << "The sides of the triangle are: " << s1 << ", " << s2 << ", " << s3; #paired
          =====
@@ -181,11 +188,14 @@ assess what you have learned in this chapter.
          :numbered: left
          :adaptive:
 
-         The chickens from the previous chapter are infuriated.  Construct a function that prints "Eat" on the first line, "More" on the second line, and the name of the passed animal on the fourth line, followed by an exclamation point.  
+         The chickens from the previous chapter are infuriated.
+         Construct a function that prints "Eat" on the first line,
+         "More" on the second line, and the name of the passed animal
+         on the fourth line, followed by an exclamation point.  
          -----
-         void eatMore (string animal) {
+         void eat_more (string animal) {
          =====
-         void eatMore () { #paired
+         void eat_more () { #paired
          =====
           cout << "Eat";
          =====
@@ -208,21 +218,23 @@ assess what you have learned in this chapter.
          :numbered: left
          :adaptive:
 
-         Construct a function that takes a dollar amount and cent amount and prints the total amount of money that you have. Hint: the mod operator '%' returns the remainder of a division.
+         Construct a function that takes a dollar amount and cent amount and
+         prints the total amount of money that you have.
+         Hint: the mod operator (``%``) returns the remainder of a division.
          -----
-         void printAmount (int dollars, int cents) {
+         void print (int dollars, int cents) {
          =====
-          int dollarTotal = dollars + cents / 100;
+          int dollar_total = dollars + cents / 100;
          ===== 
-          double dollarTotal = dollars + cents / 100.0; #paired
+          double dollar_total = dollars + cents / 100.0; #paired
          =====
-          double centTotal = cents % 100;
+          double cent_total = cents % 100;
          =====
-          double centTotal = cents / 100; #paired
+          double cent_total = cents / 100; #paired
          =====
-          cout << "$" << dollarTotal << "." << centTotal;
+          cout << '$' << dollarTotal << '.' << centTotal;
          =====
-          cout << "$" << dollarTotal << centTotal; #paired
+          cout << '$' << dollarTotal << centTotal; #paired
          =====
          }
 
@@ -233,13 +245,19 @@ assess what you have learned in this chapter.
          :numbered: left
          :adaptive:
 
-         In Michigan, the probability that it snows on any given day in the winter is about 14%.  The probability of having a snow day on any given day in the winter is about 4%.  The probability that is snows and you have a snow day is 8%.  
-         Construct and call a function that calculates the probability of a having a snow day, given the fact that it will snow tonight.  
-         For reference, the formula for conditional probability is: P(A|B) = P(B and A) / P(B).
+         In Michigan, the probability that it snows on any given day
+         in the winter is about 14%.
+         The probability of having a snow day on any given day
+         in the winter is about 4%.
+         The probability that is snows and you have a snow day is 8%.  
+         Construct and call a function that calculates the probability of
+         having a snow day, given the fact that it will snow tonight.  
+         For reference, the formula for conditional probability is: 
+         ``P(A|B) = P(B and A) / P(B)``.
          -----
-         void conditionalProb (double B, double both) {
+         void conditional_probability (double B, double both) {
          =====
-         void conditionalProb (double B, both) { #paired
+         void conditional_probability (double B, both) { #paired
          =====
           double prob = both / B;
          =====
@@ -247,7 +265,7 @@ assess what you have learned in this chapter.
          =====
           cout << prob;
          =====
-         } //conditionalProb
+         } //conditional_probability
          =====
          int main () {
          =====
@@ -255,11 +273,11 @@ assess what you have learned in this chapter.
           double pSnowday = 0.04;
           double pBoth = 0.08;
          =====
-          conditionalProb(pSnow, pBoth);
+          conditional_probability(pSnow, pBoth);
          =====
-          conditionalProb(pSnowday, pBoth); #paired
+          conditional_probability(pSnowday, pBoth); #paired
          =====
-          conditionalProb(pSnowday, pSnow); #paired
+          conditional_probability(pSnowday, pSnow); #paired
          =====
          } //main
 
@@ -270,13 +288,19 @@ assess what you have learned in this chapter.
          :numbered: left
          :adaptive:
 
-         Your final grade is determined by a midterm component (each midterm is worth 20% of the grade) and a final component. In order to avoid any discrepancies with students who's grades are on the fence, your teacher follows this strict grading scale: 
-         [0%,60%) = F, [60%, 70%) = D, [70%, 80%) = C, [80%, 90%) = B and [90%, 100%] = A. He does not round until the very end.  
-         Construct a function that determines a student's final grade percentage according to this grading scheme and prints the result.
+         Your final grade is determined by a midterm component
+         (each midterm is worth 20% of the grade) and a final component.
+         In order to avoid any discrepancies with students who's grades are
+         on the fence, your teacher follows this strict grading scale: 
+         [0%,60%) = F, [60%, 70%) = D, [70%, 80%) = C,
+         [80%, 90%) = B and [90%, 100%] = A.
+         They do not truncate until the very end.  
+         Construct a function that determines your final grade percentage
+         according to this grading scheme and prints the result.
          -----
-         void finalGrade (double m1, double m2, double f) {
+         void final_grade (double m1, double m2, double f) {
          =====
-         void finalGrade (double m1, m2, f) { #paired
+         void final_grade (double m1, m2, f) { #paired
          =====
           double m_comp = m1 * 0.2 + m2 * 0.2;
           double f_comp = f * 0.06;
@@ -284,12 +308,12 @@ assess what you have learned in this chapter.
           int m_comp = m1 * 0.2 + m2 * 0.2; #paired
           int f_comp = f * 0.06;
          =====
-          double final_grade = m_comp + f_comp;
+          double grade = m_comp + f_comp;
          =====
-          cout << int(final_grade);
+          cout << int(grade);
          =====
-          cout << int(final_grade) + 1; #paired
+          cout << int(grade) + 1; #paired
          =====
-          cout << final_grade; #paired
+          cout << grade; #paired
          =====
          }

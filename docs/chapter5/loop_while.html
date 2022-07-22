@@ -1,0 +1,503 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>5.3. The while statement &#8212; CISC 192 Course Reader Overview</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/runtime.b0f8547c48f16a9f.bundle.js?v=2731F567"></script>
+    <script src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script src="../_static/runestone.0e9550fe42760516.bundle.js?v=71AD37BA"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5.4. Tables" href="tables.html" />
+    <link rel="prev" title="5.2. Iteration" href="iteration.html" />
+
+
+<link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'https://daveparillo.github.io/cisc192-reader/' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/cisc192-reader';
+    eBookConfig.course = 'cisc192-reader';
+    eBookConfig.basecourse = 'cisc192-reader';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
+  eBookConfig.runestone_version = '6.2.1';
+  eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <div class="brand-logo"><img src="../_static/img/RAIcon.png" alt=""></div>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          cisc192-reader
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <!-- social media dropdown -->
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">5.2. </span>Iteration" data-toggle="tooltip">
+    <a href="iteration.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">5.4. </span>Tables' data-toggle="tooltip" >              
+    <a href="tables.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <section id="the-while-statement">
+<h1><span class="section-number">5.3. </span>The <code class="docutils literal notranslate"><span class="pre">while</span></code> statement<a class="headerlink" href="#the-while-statement" title="Permalink to this headline">¶</a></h1>
+<p id="index-0">Using a <a class="reference external" href="https://en.cppreference.com/w/cpp/language/while">while</a> statement, we can rewrite <code class="docutils literal notranslate"><span class="pre">countdown</span></code>:</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=the_while_statement_AC_1 data-question_label="5.3.1">
+<div id=the_while_statement_AC_1_question class="ac_question col-md-12">
+<p>Try running the active code below!
+Afterwards, try changing 9 to a different
+integer to see how the function works!</p>
+
+</div>
+<textarea data-lang="cpp" id="the_while_statement_AC_1_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"     data-caption='Multiple assignment'  data-wasm=/_static
+     style="visibility: hidden;">
+#include <iostream>
+using std::cout;
+
+void countdown (int n) {
+  while (n > 0) {
+    cout << n << '\n';
+    --n;
+  }
+  cout << "Blastoff!\n";
+}
+
+int main() {
+  countdown (9);
+}
+</textarea>
+</div>
+</div>
+<p>You can almost read a <code class="docutils literal notranslate"><span class="pre">while</span></code> statement as if it were English. What
+this means is,</p>
+<blockquote>
+<div><p>“While <code class="docutils literal notranslate"><span class="pre">n</span></code> is greater than zero,
+display the value of <code class="docutils literal notranslate"><span class="pre">n</span></code> and then reduce the value of <code class="docutils literal notranslate"><span class="pre">n</span></code> by 1.
+When you get to zero, output the word ‘Blastoff!’”</p>
+</div></blockquote>
+<p>More formally, the flow of execution for a <code class="docutils literal notranslate"><span class="pre">while</span></code> statement is as
+follows:</p>
+<ol class="arabic simple">
+<li><p>Evaluate the condition in parentheses, yielding <code class="docutils literal notranslate"><span class="pre">true</span></code> or
+<code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p>If the condition is false, exit the <code class="docutils literal notranslate"><span class="pre">while</span></code> statement and continue
+execution at the next statement following the while block.</p></li>
+<li><p>If the condition is true, execute each of the statements between the
+braces, and then go back to step 1.</p></li>
+</ol>
+<p>The general form for a while loop is:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">CONDITION</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">BODY</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p id="index-1">This type of flow is called a <strong>loop</strong> because the third step loops back
+around to the top. Notice that if the condition is false the first time
+through the loop, the statements inside the loop are never executed. The
+statements inside the loop are called the <strong>body</strong> of the loop.</p>
+<p>The body of the loop should change the value of one or more variables so
+that, eventually, the condition becomes false and the loop terminates.
+Otherwise the loop will repeat forever, which is called an <strong>infinite
+loop</strong>. An endless source of amusement for computer scientists is the
+observation that the directions on shampoo, “Lather, rinse, repeat,” are
+an infinite loop.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Make sure your while loops don’t loop forever! If they are
+meant to terminate, make sure to change the value of a variable, like
+incrementing or decrementing a counter.</p>
+<p>New programmers often mistake unintended infinite loops for a program
+“hang” – the program appears to be doing nothing, yet not reposnding
+to user input.
+In fact, your program is very busy running your loop!</p>
+</div>
+<p id="index-2">In the case of <code class="docutils literal notranslate"><span class="pre">countdown</span></code>, we can prove that the loop will terminate
+because we know that the value of <code class="docutils literal notranslate"><span class="pre">n</span></code> is finite, and we can see that
+the value of <code class="docutils literal notranslate"><span class="pre">n</span></code> gets smaller each time through the loop (each
+<strong>iteration</strong>), so eventually we have to get to zero. In other cases it
+is not so easy to tell:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">sequence</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="o">%</span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">           </span><span class="c1">// n is even</span>
+<span class="w">      </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">                  </span><span class="c1">// n is odd</span>
+<span class="w">      </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="o">*</span><span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The condition for this loop is <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">!=</span> <span class="pre">1</span></code>, so the loop will continue
+until <code class="docutils literal notranslate"><span class="pre">n</span></code> is 1, which will make the condition false.</p>
+<p>At each iteration, the program outputs the value of <code class="docutils literal notranslate"><span class="pre">n</span></code> and then
+checks whether it is even or odd. If it is even, the value of <code class="docutils literal notranslate"><span class="pre">n</span></code> is
+divided by two. If it is odd, the value is replaced by <span class="math notranslate nohighlight">\(3n+1\)</span>. For
+example, if the starting value (the argument passed to <code class="docutils literal notranslate"><span class="pre">sequence</span></code>) is
+3, the resulting sequence is 3, 10, 5, 16, 8, 4, 2, 1.</p>
+<p>Since <code class="docutils literal notranslate"><span class="pre">n</span></code> sometimes increases and sometimes decreases, there is no
+obvious proof that <code class="docutils literal notranslate"><span class="pre">n</span></code> will ever reach 1, or that the program will
+terminate. For some particular values of <code class="docutils literal notranslate"><span class="pre">n</span></code>, we can prove
+termination. For example, if the starting value is a power of two, then
+the value of <code class="docutils literal notranslate"><span class="pre">n</span></code> will be even every time through the loop, until we
+get to 1. The previous example ends with such a sequence, starting with
+16.</p>
+<p>Particular values aside, the interesting question is whether we can
+prove that this program terminates for <em>all</em> values of n. So far, no one
+has been able to prove it <em>or</em> disprove it!</p>
+<p>Sometimes you want an ironclad guarantee that a while loop body will execute
+at least once.
+In that case, C++ provides an alternate while statement,
+the <a class="reference external" href="https://en.cppreference.com/w/cpp/language/do">do-while</a> loop.
+The general form for a <code class="docutils literal notranslate"><span class="pre">do-while</span></code> loop is:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">do</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">BODY</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">CONDITION</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Notice the <code class="docutils literal notranslate"><span class="pre">do-while</span></code> loop ends in a semi-colon (<code class="docutils literal notranslate"><span class="pre">;</span></code>),
+while the first form does not.</p>
+<p>This is a common ommission and is a compile error.</p>
+</div>
+<div id='self_check' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Q1" >
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="5.3.2" data-multipleanswers="false"  id="while_statement_1"  style="visibility: hidden;">
+    <p>Q-2: Which of the following is NOT a valid condition for a while statement?</p>
+
+    <li data-component="answer" data-correct='yes' id="while_statement_1_opt_a">n = 2</li><li data-component="feedback">A single equal sign is the assignment operator, not comparison.</li>
+    
+    <li data-component="answer"  id="while_statement_1_opt_b">n != 0</li><li data-component="feedback">This would be valid because it means the loop would run while n is not equal to 0.</li>
+    
+    <li data-component="answer"  id="while_statement_1_opt_c">n % 2 == 1</li><li data-component="feedback">This would be valid because it mean the loop would run until n was an even number.</li>
+    
+
+    </ul>
+    </div>
+    </div><div data-component="tab" data-tabname="Q2" >
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="5.3.3" data-multipleanswers="false"  id="while_statement_2"  style="visibility: hidden;">
+    <p>Q-3: The following code contains an infinite loop.  Which is the best explanation for why the loop does not terminate?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">answer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">answer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">answer</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">answer</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+
+    <li data-component="answer" data-correct='yes' id="while_statement_2_opt_a">n starts at 10 and is incremented by 1 each time through the loop, so it will always be positive.</li><li data-component="feedback">The loop will run as long as n is positive. In this case, we can see that n will never become non-positive as the while statement condition will never be met.</li>
+    
+    <li data-component="answer"  id="while_statement_2_opt_b">The answer starts at 1 and is incremented by n each time, so it will always be positive.</li><li data-component="feedback">While it is true that answer will always be positive, answer is not considered in the loop condition.</li>
+    
+    <li data-component="answer"  id="while_statement_2_opt_c">You cannot compare n to 0 in while loop.  You must compare it to another variable.</li><li data-component="feedback">It is perfectly valid to compare n to 0. Though indirectly, this is what causes the infinite loop.</li>
+    
+    <li data-component="answer"  id="while_statement_2_opt_d">In the while loop body, we must set n to False, and this code does not do that.</li><li data-component="feedback">The loop condition must become False for the loop to terminate, but n by itself is not the condition in this case.</li>
+    
+
+    </ul>
+    </div>
+    </div><div data-component="tab" data-tabname="Q3" >
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="5.3.4" data-multipleanswers="false"  id="while_statement_3"  style="visibility: hidden;">
+    <p>Q-4: The following code is a program to print the <strong>even numbers from 0 to 20</strong>. The code contains blanks. What is the correct while statement condition and iteration needed in order for the code to run successfully.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">_____</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// while statement condition</span>
+<span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">_______</span><span class="p">;</span><span class="w"> </span><span class="c1">// iteration of the variable</span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+
+    <li data-component="answer"  id="while_statement_3_opt_a">n % 2 = 0 && n = n + 1</li><li data-component="feedback">A single equal sign is the assignment operator, not comparison.</li>
+    
+    <li data-component="answer"  id="while_statement_3_opt_b">n % 2 != 0 && ++n</li><li data-component="feedback">The code is meant to print the **even** numbers from 0-20</li>
+    
+    <li data-component="answer" data-correct='yes' id="while_statement_3_opt_c">n % 2 == 0 && n++</li><li data-component="feedback">The condition checks whether a number is even and increments the variable n</li>
+    
+    <li data-component="answer"  id="while_statement_3_opt_d">n == "even" && n = n + 2</li><li data-component="feedback">n is an int and here you are comparing it to a string.</li>
+    
+
+    </ul>
+    </div>
+    </div><div data-component="tab" data-tabname="Q4" >
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="5.3.5" data-multipleanswers="false"  id="while_statement_4"  style="visibility: hidden;">
+    <p>Q-5: What is printed by this code?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<span class="k">do</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w"></span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"></span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+
+    <li data-component="answer"  id="while_statement_4_opt_a">4 7</li><li data-component="feedback">Setting a variable so the loop condition would be false in the middle of the loop body does not keep the variable from actually being set.</li>
+    
+    <li data-component="answer"  id="while_statement_4_opt_b">5 7</li><li data-component="feedback">Setting a variable so the loop condition would be false in the middle of the loop body does not stop execution of statements in the rest of the loop body.</li>
+    
+    <li data-component="answer" data-correct='yes' id="while_statement_4_opt_c">7 15</li><li data-component="feedback">After n becomes 5 and the test would be False, but the test does not actually come until after the end of the loop - only then stopping execution of the repetition of the loop.</li>
+    
+
+    </ul>
+    </div>
+    </div>
+    </div>
+
+<hr class="docutils" />
+<div class="admonition-more-to-explore admonition">
+<p class="admonition-title">More to Explore</p>
+<ul class="simple">
+<li><p>From cppreference.com</p>
+<ul>
+<li><p><a class="reference external" href="https://en.cppreference.com/w/cpp/language/while">while</a> and <a class="reference external" href="https://en.cppreference.com/w/cpp/language/do">do-while</a> loops.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 5.2. Iteration' data-toggle="tooltip">
+  <a href="iteration.html" aria-label="Previous - 5.2. Iteration">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 5.4. Tables' data-toggle="tooltip" >
+    <a href="tables.html" aria-label="Next - 5.4. Tables">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020-2022 Dave Parillo, Barbara Ericson, and Allen B. Downey..
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.2.1.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

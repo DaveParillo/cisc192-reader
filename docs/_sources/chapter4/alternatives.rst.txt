@@ -85,9 +85,8 @@ type they are. You should resist the temptation to write things like:
    int main () {
        int number = 17;
        print_parity(number);
-       int other = 18;
-       print_parity(other);
-       return 0;
+       number = 18;
+       print_parity(number);
    }
 
 .. tabbed:: self-check
@@ -110,7 +109,7 @@ type they are. You should resist the temptation to write things like:
          ::
 
              void weather(int temp) {
-               if temp < 52
+               if (temp < 52)
                {
                  cout << "It is cold!";
                }
@@ -157,3 +156,10 @@ type they are. You should resist the temptation to write things like:
 
          } //"else" bracket
 
+
+-----
+
+.. admonition:: More to Explore
+
+   - :lang:`if` and :lang:`comparison operators <operator_comparison>`
+     from cppreference.com

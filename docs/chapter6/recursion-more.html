@@ -1,0 +1,468 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>6.4. More recursion &#8212; CISC 192 Course Reader Overview</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/runtime.b0f8547c48f16a9f.bundle.js?v=2731F567"></script>
+    <script src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script src="../_static/runestone.0e9550fe42760516.bundle.js?v=71AD37BA"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6.5. One more example" href="one-more-example.html" />
+    <link rel="prev" title="6.3. Stack Diagrams for Recursive Functions" href="stack-diagrams.html" />
+
+
+<link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'https://daveparillo.github.io/cisc192-reader/' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/cisc192-reader';
+    eBookConfig.course = 'cisc192-reader';
+    eBookConfig.basecourse = 'cisc192-reader';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
+  eBookConfig.runestone_version = '6.2.1';
+  eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <div class="brand-logo"><img src="../_static/img/RAIcon.png" alt=""></div>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          cisc192-reader
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <!-- social media dropdown -->
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">6.3. </span>Stack Diagrams for Recursive Functions" data-toggle="tooltip">
+    <a href="stack-diagrams.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">6.5. </span>One more example' data-toggle="tooltip" >              
+    <a href="one-more-example.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <section id="more-recursion">
+<h1><span class="section-number">6.4. </span>More recursion<a class="headerlink" href="#more-recursion" title="Permalink to this headline">¶</a></h1>
+<p id="index-0">So far we have only learned a small subset of C++, but you might be
+interested to know that this subset is now a <strong>complete</strong> programming
+language, by which I mean that anything that can be computed can be
+expressed in this language. Any program ever written could be rewritten
+using only the language features we have used so far (actually, we would
+need a few commands to control devices like the keyboard, mouse, disks,
+etc., but that’s all).</p>
+<p>Proving that claim is a non-trivial exercise first accomplished by Alan
+Turing, one of the first computer scientists (well, some would argue
+that he was a mathematician, but a lot of the early computer scientists
+started as mathematicians). Accordingly, it is known as the Turing
+thesis. If you take a course on the Theory of Computation, you will have
+a chance to see the proof.</p>
+<p>To give you an idea of what you can do with the tools we have learned so
+far, we’ll evaluate a few recursively-defined mathematical functions. A
+recursive definition is similar to a circular definition, in the sense
+that the definition contains a reference to the thing being defined. A
+truly circular definition is typically not very useful:</p>
+<dl class="simple">
+<dt>frabjuous:</dt><dd><p>an adjective used to describe something that is frabjuous.</p>
+</dd>
+</dl>
+<p id="index-1">If you saw that definition in the dictionary, you might be annoyed. On
+the other hand, if you looked up the definition of the mathematical
+function <strong>factorial</strong>, you might get something like:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+&amp;&amp;  0! = 1 \\
+&amp;&amp;  n! = n \cdot (n-1)!\end{aligned}\end{split}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Factorial is usually denoted with the symbol <span class="math notranslate nohighlight">\(!\)</span>, which is not to
+be confused with the C++ logical operator ! which means NOT.</p>
+</div>
+<p>This definition says that the factorial of 0 is 1, and the factorial of any
+other value, <span class="math notranslate nohighlight">\(n\)</span>, is <span class="math notranslate nohighlight">\(n\)</span> multiplied by the factorial of
+<span class="math notranslate nohighlight">\(n-1\)</span>. So <span class="math notranslate nohighlight">\(3!\)</span> is 3 times <span class="math notranslate nohighlight">\(2!\)</span>, which is 2 times
+<span class="math notranslate nohighlight">\(1!\)</span>, which is 1 times 0!. Putting it all together, we get
+<span class="math notranslate nohighlight">\(3!\)</span> equal to 3 times 2 times 1 times 1, which is 6.</p>
+<p>If you can write a recursive definition of something, you can usually
+write a C++ program to evaluate it. The first step is to decide what the
+parameters are for this function, and what the return type is. With a
+little thought, you should conclude that factorial takes an integer as a
+parameter and returns an integer:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">factorial</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>If the argument happens to be zero, all we have to do is return 1:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">factorial</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Otherwise, and this is the interesting part, we have to make a recursive
+call to find the factorial of <span class="math notranslate nohighlight">\(n-1\)</span>, and then multiply it by
+<span class="math notranslate nohighlight">\(n\)</span>.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=more_recursion_AC_1 data-question_label="6.4.1">
+<div id=more_recursion_AC_1_question class="ac_question col-md-12">
+<p>This program uses recursion to calculate the factorial of
+the passed argument.</p>
+
+</div>
+<textarea data-lang="cpp" id="more_recursion_AC_1_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"     data-caption='Factorial Recursion'  data-wasm=/_static
+     style="visibility: hidden;">
+#include <iostream>
+
+int factorial (int n) {
+    if (n == 0) {
+        return 1;
+    }
+    int recurse = factorial (n-1);
+    int result = n * recurse;
+    return result;
+}
+
+int main () {
+    std::cout << factorial(3) << std::endl;
+}
+</textarea>
+</div>
+</div>
+<p>If we look at the flow of execution for this program, it is similar to
+<code class="docutils literal notranslate"><span class="pre">repeat_lines</span></code> from the previous chapter.
+If we call factorial with the value 3:</p>
+<p>Since 3 is not zero, we continue branch and calculate the
+factorial of <span class="math notranslate nohighlight">\(n-1\)</span>…</p>
+<blockquote>
+<div><p>Since 2 is not zero, we continue branch and calculate the
+factorial of <span class="math notranslate nohighlight">\(n-1\)</span>…</p>
+<blockquote>
+<div><p>Since 1 is not zero, we continue branch and calculate the
+factorial of <span class="math notranslate nohighlight">\(n-1\)</span>…</p>
+<blockquote>
+<div><p>Since 0 <em>is</em> zero, we take the first branch and return the
+value 1 immediately without making any more recursive calls.</p>
+</div></blockquote>
+<p>The return value (1) gets multiplied by n, which is 1, and the
+result is returned.</p>
+</div></blockquote>
+<p>The return value (1) gets multiplied by n, which is 2, and the
+result is returned.</p>
+</div></blockquote>
+<p>The return value (2) gets multiplied by n, which is 3, and the result,
+6, is returned to main, or whoever called factorial (3).</p>
+<p>Here is what the stack diagram looks like for this sequence of function
+calls:</p>
+<p>The return values are shown being passed back as the stack unwinds.</p>
+<div align="center" class="align-center"><div class="graphviz"><img src="../_images/graphviz-9b251bb00287ecc0e05cd6fd50c19f12d864e771.png" alt="Stack diagram for factorial" class="graphviz" /></div>
+</div>
+<p>Notice that in the last instance of factorial, the local variables
+recurse and result do not exist because when n=0 the branch that creates
+them does not execute.</p>
+<div id='self_check' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Q1" >
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="6.4.2" data-multipleanswers="false"  id="more_recursion_1"  style="visibility: hidden;">
+    <p>Q-2: In the example above, how many times was the <code class="docutils literal notranslate"><span class="pre">factorial</span></code> function
+called?</p>
+
+    <li data-component="answer"  id="more_recursion_1_opt_a">1</li><li data-component="feedback">As the programmer, we explicitly call this function one time... but remember, recursive functions call themselves!</li>
+    
+    <li data-component="answer"  id="more_recursion_1_opt_b">2</li><li data-component="feedback">Not quite! Maybe you were thinking of the two possible branches of the function call.</li>
+    
+    <li data-component="answer"  id="more_recursion_1_opt_c">3</li><li data-component="feedback">You're close! But what happens when n = 0?</li>
+    
+    <li data-component="answer" data-correct='yes' id="more_recursion_1_opt_d">4</li><li data-component="feedback">The function is called four times total.  Three of those times, the function recurses.  The last time, the function reaches its base case and returns 1.</li>
+    
+
+    </ul>
+    </div>
+    </div><div data-component="tab" data-tabname="Q2" >
+
+        <div class="runestone ">
+        <div data-component="fillintheblank" data-question_label="6.4.3" id="more_recursion_2"  style="visibility: hidden;">
+            <p>Q-3: <strong>Complete the circular definition:</strong> unreal - a word used to describe
+something that is <input type="text">.</p>
+
+        <script type="application/json">
+            [[{"regex": "^\\s*[Uu][Nn][Rr][Ee][Aa][Ll]\\s*$", "regexFlags": "", "feedback": "<p>Correct! Circular defintions are a great example of recursion.</p>\n"}, {"regex": "^\\s*x\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            </div><div data-component="tab" data-tabname="Q3" >
+
+        <div class="runestone ">
+        <div data-component="fillintheblank" data-question_label="6.4.4" id="more_recursion_3"  style="visibility: hidden;">
+            <p>Q-4: The factorial of 13 is <input type="text">.</p>
+
+        <script type="application/json">
+            [[{"number": [1932053504, 1932053504], "feedback": "<p>Correct!</p>\n"}, {"regex": "^\\s*x\\s*$", "regexFlags": "", "feedback": "<p>Try plugging this into the active code!</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            </div><div data-component="tab" data-tabname="Q4" >
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="6.4.5" data-multipleanswers="true"  id="more_recursion_4"  style="visibility: hidden;">
+    <p>Q-5: what gets printed?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">print_descend</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">){</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span><span class="w"></span>
+<span class="w">     </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">a</span><span class="o">&lt;&lt;</span><span class="s">&quot; &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">a</span><span class="o">=</span><span class="n">a</span><span class="mi">-1</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">print_descend</span><span class="p">(</span><span class="n">a</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span><span class="w"></span>
+<span class="w">  </span><span class="n">print_descend</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+
+    <li data-component="answer"  id="more_recursion_4_opt_a">"5 4 3 2 1 0"</li><li data-component="feedback">Consider what the base case is.</li>
+    
+    <li data-component="answer"  id="more_recursion_4_opt_b">"5 5 5 5 5"</li><li data-component="feedback">Does the value of a stay the same after every function call?</li>
+    
+    <li data-component="answer"  id="more_recursion_4_opt_c">"5 4 3 2 1 0 -1 -2 -3 ...."</li><li data-component="feedback">Consider what the base case is.</li>
+    
+    <li data-component="answer" data-correct='yes' id="more_recursion_4_opt_d">"5 4 3 2 1"</li><li data-component="feedback">Correct! we recursively print every value of a till we reach 0.</li>
+    
+
+    </ul>
+    </div>
+    </div>
+    </div>
+
+</section>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 6.3. Stack Diagrams for Recursive Functions' data-toggle="tooltip">
+  <a href="stack-diagrams.html" aria-label="Previous - 6.3. Stack Diagrams for Recursive Functions">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 6.5. One more example' data-toggle="tooltip" >
+    <a href="one-more-example.html" aria-label="Next - 6.5. One more example">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020-2022 Dave Parillo, Barbara Ericson, and Allen B. Downey..
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.2.1.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

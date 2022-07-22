@@ -63,3 +63,9 @@ performed with one of these simple functions.
          Match each term to an example of it.
 
 
+-----
+
+.. admonition:: More to Explore
+
+   - :wiki:`Systems programming <Systems_programming>`
+

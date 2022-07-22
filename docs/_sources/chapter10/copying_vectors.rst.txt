@@ -42,7 +42,7 @@ would expect.
 
        cout << "copy_1 = "; print_vec(copy_1);
        cout << "copy_2 = "; print_vec(copy_2);
-       cout << "We just made two copies of count."
+       cout << "We just made two copies of count.\n"
             << "As you can see, both methods work the same!\n";
    }
 

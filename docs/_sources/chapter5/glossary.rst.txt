@@ -1,73 +1,63 @@
 Glossary
 --------
 
-return type:
-    The type of value a function returns.
+loop:
+   A statement that executes repeatedly while a condition is true or
+   until some condition is satisfied.
 
-return value:
-    The value provided as the result of a function call.
+infinite loop:
+   A loop whose condition is always true.
 
-dead code:
-    Part of a program that can never be executed, often because it
-    appears after a return statement.
+body:
+   The statements inside the loop.
 
-scaffolding:
-    Code that is used during program development but is not part of the
-    final version.
+iteration:
+   One pass through (execution of) the body of the loop, including the
+   evaluation of the condition.
 
-void:
-    A special return type that indicates a void function; that is, one
-    that does not return a value.
+tab:
+   A special character, written as ``\t`` in C++, that causes the cursor
+   to move to the next tab stop on the current line.
 
-overloading:
-    Having more than one function with the same name but different
-    parameters. When you call an overloaded function, C++ knows which
-    version to use by looking at the arguments you provide.
+encapsulate:
+   To divide a large complex program into components (like functions)
+   and isolate the components from each other (for example, by using
+   local variables).
 
-boolean:
-    A value or variable that can take on one of two states, often called
-    :math:`true` and :math:`false`. In C++, boolean values can be stored
-    in a variable type called bool.
+local variable:
+   A variable that is declared inside a function and that exists only
+   within that function. Local variables cannot be accessed from outside
+   their home function, and do not interfere with any other functions.
 
-flag:
-    A variable (usually type bool) that records a condition or status
-    information.
+generalize:
+   To replace something unnecessarily specific (like a constant value)
+   with something appropriately general (like a variable or parameter).
+   Generalization makes code more versatile, more likely to be reused,
+   and sometimes even easier to write.
 
-comparison operator:
-    An operator that compares two values and produces a boolean that
-    indicates the relationship between the operands.
-
-logical operator:
-    An operator that combines boolean values in order to test compound
-    conditions.
+development plan:
+   A process for developing a program. In this chapter, I demonstrated a
+   style of development based on developing code to do simple, specific
+   things, and then encapsulating and generalizing.
 
 .. tabbed:: self_check
 
    .. tab:: Q1
 
-      .. dragndrop:: chapter_five_glossary_1
-         :feedback: Try again!
-         :match_1: return type|||The type of value a function returns.
-         :match_2: return value|||The value provided as the result of a function call.
-         :match_3: comparison operator|||An operator that compares two values and produces a boolean.
-         :match_4: logical operator|||An operator that combines boolean values in order to test compound conditions.
+      .. dragndrop:: chapter_six_glossary_one
+          :feedback: Try again!
+          :match_1:  loop|||A statement that executes repeatedly while a condition is true or some condition is satisfied.
+          :match_2: infinite loop|||A loop whose condition is always true.
+          :match_3: body|||The statements inside the loop.
+          :match_4: iteration|||One pass through (execution of) the body of the loop, including the valuation of the condition.
+          :match_5: tab|||A special character, written as \t in C++, that causes the cursor to move to the next tab stop on the current line.
 
    .. tab:: Q2
 
-
-      .. dragndrop:: chapter_five_glossary_2
-         :feedback: Try again!
-         :match_1: dead code|||Part of a program that can never be executed.
-         :match_2: scaffolding|||Codemused during program development but not part of the final version.
-         :match_3: overloading|||Having more than one function with the same name but different parameters.
-
-
-   .. tab:: Q3
-
-      .. dragndrop:: chapter_five_glossary_3
-         :feedback: Try again!
-         :match_1: boolean|||A value or variable that can take on one of two states, often called true and false.
-         :match_2: flag|||A variable that records a condition or status information.
-         :match_3: void|||A special return type that does not return a value.
-          
+      .. dragndrop:: chapter_six_glossary_two
+          :feedback: Try again!
+          :match_1:  encapsulate|||To divide a large complex program into components (like functions) and isolate the components from each other (for example, by using local variables).
+          :match_2: local variable|||A variable that is declared inside a function and that exists only within that function. Local variables cannot be accessed from outside their home function, and do not interfere with any other functions.
+          :match_3: generalize|||To replace something unnecessarily specific (like a constant value) with something appropriately general (like a variable or parameter).
+          :match_4: development plan|||A process for developing a program.
 

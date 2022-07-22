@@ -1,362 +1,291 @@
-Mixed Up Code Practice
-----------------------
+Mixed-Up Code Exercises
+-----------------------
+
+Answer the following **Mixed-Up Code** questions to
+assess what you have learned in this chapter.
 
 .. tabbed:: self_check
 
-   .. tab:: Q1
-
-      .. parsonsprob:: mucp_6_1
-         :numbered: left
-         :adaptive:
-         :noindent:
-         :practice: T
-
-         The program below should print out the even numbers between 20 and 40, inclusive, 
-         but the code is mixed up and contains extra blocks. Put the necessary blocks
-         in the correct order.
-         -----
-         int main() {
-         =====
-         main(int) {                         #paired
-         =====
-            int n = 20;
-         =====
-            int n = 0; #distractor 
-         =====
-            while (n <= 40) {
-         =====
-            while (n < 40) {                        #paired 
-         =====
-               cout << n << endl;
-         =====
-               n = n + 2;
-         =====
-               n++;                 #distractor
-         =====
-               n = n * 2;                 #distractor
-         =====
-            }
-         =====
-         }
-
    .. tab:: Q2
 
-      .. parsonsprob:: mucp_6_2
+      .. parsonsprob:: cond_recc_p2
          :numbered: left
          :adaptive:
-         :noindent:
-         :practice: T
 
-         The program below should count down from 100 to 0 in decrements of 
-         10 but the code is mixed up and contains extra blocks. Put the necessary blocks
-         in the correct order.
+         Construct a function that prints whether a number
+         is true.
          -----
-         int main() {
+         void is_true (int number) {
          =====
-            int n = 100;
+         bool is_true (int number) { #paired
          =====
-            int n = 10; #distractor 
+          if (number % 2 == 0) {
          =====
-            while (n >= 0) {
+           cout << true;
+          }
          =====
-            while (n < 0) { #distractor
+          else {
          =====
-            while (n > 0) { #distractor
-         =====
-               cout << n << endl;
-         =====
-               n -= 10;
-         =====
-               n += 10;                 #distractor
-         =====
-            }
+           cout << false;
+          }
          =====
          }
+
 
    .. tab:: Q3
 
-      .. parsonsprob:: mucp_6_3
+      .. parsonsprob:: cond_recc_p3
          :numbered: left
          :adaptive:
-         :noindent:
-         :practice: T
 
-         The program below should find the sum of the first 10 natural numbers,
-         but the code is mixed up and contains extra blocks. Put the necessary blocks
-         in the correct order.
+         Construct a function that prints the difference of a and b if the result
+         would result in a positive number.  Otherwise, prints -1.
          -----
-         int main() {
+         void difference (int a, int b) {
          =====
-            int n = 1;
+         int difference (int a, int b) { #paired
          =====
-            int n = 10; #distractor 
+          if (a - b > 0) {
          =====
-            int sum = 0;
+          if (a - b < 0) { #paired
          =====
-            int sum = n;  #distractor
+           cout << a - b;
+          }
          =====
-            while (n <= 10) {
+          else {
          =====
-            while (n < 100) {  #distractor
-         =====
-            while (n <= 9) {  #distractor
-         =====
-               cout << n << endl;  #distractor
-         =====
-               sum = sum + n;
-         =====
-               n++;
-         =====
-            }
+           cout << -1;
+          }
          =====
          }
+
 
    .. tab:: Q4
 
-      .. parsonsprob:: mucp_6_4
+      .. parsonsprob:: cond_recc_p4
          :numbered: left
          :adaptive:
-         :practice: T
 
-         Let's write the code for the repeatHello function. repeatHello 
-         should be a void function that takes no arguments and uses a while
-         loop to print out "hello" three times.  
+         Construct a block of code that prints "automatic" if x is
+         an odd number, "systematic" if x is greater than y, AND
+         "hydromatic" if y is not equal to x.  Check all 3 conditions.
          -----
-         void repeatHello () {
+         if (x % 2 == 1) {
          =====
-         repeatHello () {                         #paired
+         if (x % 2 == 0) { #paired
          =====
-            int n = 0;
+          cout << "automatic"; }
          =====
-            int n = 0                        #paired 
+         if (x > y) {
          =====
-            while (n < 3) {
+         else if (x > y) { #paired
          =====
-            while (n > 3) {                        #paired 
+          cout << "systematic"; }
          =====
-               cout << "hello" << endl;
+         if (y != x) {
          =====
-               n++;
+         else { #paired
          =====
-            }
-         =====
-         }
+          cout << "hydromatic"; }
+         
 
    .. tab:: Q5
 
-      .. parsonsprob:: mucp_6_5
+      .. parsonsprob:: cond_recc_p5
          :numbered: left
          :adaptive:
 
-         Now let's generalize the repeatHello function so that it repeats a given string three times.
-         Let's write the code for the repeatString function, which takes 
-         input as a parameter and uses a while loop to print out the string three times.  
+         Construct a block of code that prints "Pick me!" if x is
+         equal to y, "Choose me!" if x is less than y, OR "Love me!" 
+         if x + y is even.
          -----
-         void repeatString (string input) {
+         if (x == y) {
          =====
-         void repeatString () {                         #paired
+         if (x = y) { #paired
          =====
-            int n = 0;
+          cout << "Pick me!"; }
          =====
-            while (n < 3) {
+         else if (y > x) {
          =====
-            while (3 > n) {                        #paired 
+         if (x < y) { #paired
          =====
-               cout << input << endl;
+          cout << "Choose me!"; } 
          =====
-               cout << string << endl;                        #paired 
+         else if ((x + y) % 2 == 0) {
          =====
-               n++;
+         else (x + y % 2 == 0) { #paired
          =====
-            }
+         else if (x + y % 2 == 0) { #paired
          =====
-         }
+          cout << "Love me!"; } 
+
 
    .. tab:: Q6
 
-      .. parsonsprob:: mucp_6_6
+      .. parsonsprob:: cond_recc_p6
          :numbered: left
          :adaptive:
 
-         We can further generalize repeatString so that it repeats a given string a given number of times. 
-         Let's write the code for the new repeatString function, which takes 
-         input and x as parameters and uses a while loop to print out the string x number of times.  
+         Construct a function that prints your letter grade according to this scheme.
+         [0, 70) = F, [70, 80) = C, [80, 90) = B, and [90, 100] = A.
          -----
-         void repeatString (string input, int x) {
+         void printLetterGrade (double grade) {
          =====
-         void repeatString (string input, string x) {                         #paired
+          if (grade < 70) {
          =====
-            int n = 0;
+           cout << "F"; }
          =====
-            int n = x;                       #paired
+          else if (grade < 80) {
          =====
-            while (n < x) {
+          if (grade < 80) { #paired
          =====
-            while (x < n) {                        #paired 
+           cout << "C"; }
          =====
-               cout << input << endl;
+          else if (grade < 90) {
          =====
-               n++; 
+          if (grade < 90) { #paired
          =====
-               x++;                       #paired
+           cout << "B"; }
          =====
-            }
+          else {
+         =====
+          else if (grade < 100) { #paired
+         =====
+          if (grade < 100) { #paired
+         =====
+           cout << "A"; }
          =====
          }
+
 
    .. tab:: Q7
 
-      .. parsonsprob:: mucp_6_7
+      .. parsonsprob:: cond_recc_p7
          :numbered: left
          :adaptive:
-         :practice: T
 
-         On the last day of every year, we count down the seconds before the new year arrives.
-         Write the function newYearCountdown, which prints out a countdown from 10 and then
-         prints out "Happy New Year!".
+         According to a logic game, a knight is someone who cannot tell a lie,
+         and a knave is someone who cannot tell the truth.  Construct a function
+         that takes two booleans: the truth value of the story, and the truth value
+         told by the person.  The function should print whether the person was a
+         knight or a knave.
          -----
-         void newYearCountdown () {
+         void knightKnave (bool truth, bool told) {
          =====
-         void newYearCountdown (string input) {                         #paired
+          if (truth == true) {
          =====
-            int n = 10;
+           if (told == true) {
+            cout << "Knight";
+           }
          =====
-            int n = 0;                       #paired
+           else {
+            cout << "Knave";
+           } }
          =====
-            while (n > 0) {
+          else {
          =====
-            while (n != 10) {                        #paired 
+           if (told == true) {
+            cout << "Knave";
+           }
          =====
-               cout << n << " ";
+           else {
+            cout << "Knive";
+           } }
          =====
-               n--; 
-         =====
-               n++;  #
-         =====
-            }
-         =====
-            cout << "Happy New Year!" << endl;
          }
+         
 
    .. tab:: Q8
 
-      .. parsonsprob:: mucp_6_8
+      .. parsonsprob:: cond_recc_p8
          :numbered: left
          :adaptive:
-         :practice: T
 
-         Help Goku reach power levels of over 9000! Write the function
-         powerUp which takes powerLevel as a parameter.
-         powerUp checks to see if powerLevel is over 9000. If it 
-         isn't, it repeatedly prints "More power!" and increments powerLevel by 
-         1000 until powerLevel is over 9000. Then powerUp prints "It's over 9000!".
-         Put the necessary blocks in the correct order.
+         If a cat is in a good mood, it purrs; when it's in a bad mood, it
+         meows.  If a doog is in a good mood, it barks; when it's in a bad
+         mood it woofs.  Construct a function that accomplishes this.
          -----
-         void powerUp (int powerLevel) {
+         void makeVocals (string animal, string mood) {
          =====
-         void powerUp () {                         #paired
+          if (mood == "bad") {
          =====
-            int n = 0;  #distractor
+           if (animal == "dog") {
+            cout << "Woof!";
+           }
          =====
-            while (powerLevel < 9000) {
+           else {
+            cout << "Meow!";
+           }
          =====
-            while (powerLevel > 9000) {  #paired
+          else {
          =====
-               cout << "More power!" << endl; 
+           if (animal == "dog") {
+            cout << "Bark!";
+           }
          =====
-               powerLevel = powerLevel + 1000;
+           else {
+            cout << "Purr!";
+           }
          =====
-               powerLevel++;  #paired
-         =====
-               n++;  #distractor
-         =====
-            }
-         =====
-            if (powerLevel < 9000) {  #distractor
-         =====
-            cout << "It's over 9000!" << endl;
          }
+
 
    .. tab:: Q9
 
-      .. parsonsprob:: mucp_6_9
+      .. parsonsprob:: cond_recc_p9
          :numbered: left
          :adaptive:
-         :practice: T
 
-         Write the function summation which takes two 
-         parameters, start and end. summation adds
-         all the integers from start to end, inclusive, together and returns
-         the sum. Put the necessary blocks in the correct order.
+         Construct a recursive function that tells the user to enter a positive
+         number.  It should then output that number to the terminal.  If the user
+         enters a negative number or zero, prompt the user again.
          -----
-         int summation (int start, int end) {
+         void takeSum () {
          =====
-         void summation (int start, int end) {  #distractor
+          cout << "Input a positive number!";
          =====
-         int summation () {  #distractor
+          int num;
+          cin >> num;
          =====
-            int n = start;
+          if (num < 0) {
          =====
-            int sum = 0;
+           takesum ();
          =====
-            int sum = start;  #distractor
+          } // END "if"
          =====
-            while (n <= end) {
+          cout << num;
          =====
-            while (n < end) {  #paired
-         =====
-               sum = sum + n; 
-         =====
-               n++;
-         =====
-            }
-         =====
-            return sum;
-         =====
-            return n;  #distractor
-         =====
-         }
+         } // END function
+
 
    .. tab:: Q10
 
-      .. parsonsprob:: mucp_6_10
+      .. parsonsprob:: cond_recc_p10
          :numbered: left
          :adaptive:
-         :practice: T
 
-         Write the function reverseNumber which takes num
-         as a parameter and returns num but with its digits reversed.
-         For example, reverseNumber (1324) returns 4231. 
-         Put the necessary blocks in the correct order, with reverse
-         declared first, then temp, and lastly remainder.
+         In the table of ASCII characters, the lowercase alphabet consists
+         of characters 97-122.  The uppercase alphabet consists of characters
+         65-90, which is a 32 character shift back from the lowercase.  Construct
+         a recursive function that asks the user to input a LOWERCASE character,
+         converts that character to UPPERCASE character and prints it.  If the user
+         enters a character outside of the range of the LOWERCASE alphabet, prompt
+         the user again.  Hint:  "||" means "or" when used between two conditional
+         statements.
          -----
-         int reverseNumber (int num) {
+         void capitalize () {
          =====
-         void reverseNumber (int num) {  #distractor
+          cout << "Input a lowercase character!";
          =====
-            int reverse = 0;
+          char let;
+          cin >> let;
          =====
-            int reverse = 0  #distractor
+          if (int(let) < 97 || int(let) > 122) {
          =====
-            int temp = num;
+           capitalize (); }
          =====
-            int remainder = 0;
+          let = let - 32;
          =====
-            int remainder;  #distractor
-         =====
-            while (temp > 0) {
-         =====
-               remainder = temp % 10;
-         =====
-               reverse = reverse * 10 + remainder;
-         =====
-               temp = temp / 10;
-         =====
-            }
-         =====
-            return reverse;
-         =====
-            return temp;  #distractor
+          cout << char(let);
          =====
          }
-

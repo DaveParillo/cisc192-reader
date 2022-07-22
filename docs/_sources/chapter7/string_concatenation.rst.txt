@@ -107,7 +107,7 @@ Try it for yourself and see what happens.
          :numbered: left
          :adaptive:
 
-         As an exercise, put together the code below so that it prints ``C++ is so fun!""
+         As an exercise, put together the code below so that it prints "C++ is so fun!"
          -----
          int main() {
          =====

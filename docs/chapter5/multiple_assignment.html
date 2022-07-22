@@ -1,0 +1,465 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>5.1. Multiple assignment &#8212; CISC 192 Course Reader Overview</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/runtime.b0f8547c48f16a9f.bundle.js?v=2731F567"></script>
+    <script src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script src="../_static/runestone.0e9550fe42760516.bundle.js?v=71AD37BA"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5.2. Iteration" href="iteration.html" />
+    <link rel="prev" title="5. Iteration" href="index.html" />
+
+
+<link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'https://daveparillo.github.io/cisc192-reader/' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/cisc192-reader';
+    eBookConfig.course = 'cisc192-reader';
+    eBookConfig.basecourse = 'cisc192-reader';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
+  eBookConfig.runestone_version = '6.2.1';
+  eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <div class="brand-logo"><img src="../_static/img/RAIcon.png" alt=""></div>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          cisc192-reader
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <!-- social media dropdown -->
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">5. </span>Iteration" data-toggle="tooltip">
+    <a href="index.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">5.2. </span>Iteration' data-toggle="tooltip" >              
+    <a href="iteration.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <section id="multiple-assignment">
+<h1><span class="section-number">5.1. </span>Multiple assignment<a class="headerlink" href="#multiple-assignment" title="Permalink to this headline">¶</a></h1>
+<p>I haven’t said much about it, but it is legal in C++ to assign to
+the same variable more than once. The effect of the second assignment
+is to replace the old value of the variable with a new value.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=multiple_assignment_AC_1 data-question_label="5.1.1">
+<div id=multiple_assignment_AC_1_question class="ac_question col-md-12">
+<p>The code below reassigns <code class="docutils literal notranslate"><span class="pre">fred</span></code> from 5 to 7 and prints both values out.</p>
+
+</div>
+<textarea data-lang="cpp" id="multiple_assignment_AC_1_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"     data-caption='Multiple assignment'  data-wasm=/_static
+     style="visibility: hidden;">
+#include <iostream>
+
+int main () {
+    int fred = 5;
+    std::cout << fred;
+    fred = 7;
+    std::cout << fred;
+    return 0;
+}
+</textarea>
+</div>
+</div>
+<p>The output of this program is <code class="docutils literal notranslate"><span class="pre">57</span></code>, because the first time we print
+<code class="docutils literal notranslate"><span class="pre">fred</span></code> his value is 5, and the second time his value is 7.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=multiple_assignment_AC_2 data-question_label="5.1.2">
+<div id=multiple_assignment_AC_2_question class="ac_question col-md-12">
+<p>The active code below reassigns <code class="docutils literal notranslate"><span class="pre">fred</span></code> from 5 to 7 without printing out the initial
+value.</p>
+
+</div>
+<textarea data-lang="cpp" id="multiple_assignment_AC_2_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"     data-caption='Multiple assignment'  data-wasm=/_static
+     style="visibility: hidden;">
+#include <iostream>
+
+int main () {
+    int fred = 5;
+    fred = 7;
+    std::cout << fred;
+    return 0;
+}
+</textarea>
+</div>
+</div>
+<p>However, if we do not print <code class="docutils literal notranslate"><span class="pre">fred</span></code> the first time, the output is only 7 because
+the value of <code class="docutils literal notranslate"><span class="pre">fred</span></code> is just 7 when it is printed.</p>
+<p id="index-0">This kind of <strong>multiple assignment</strong> is the reason I described variables
+as a <em>container</em> for values. When you assign a value to a variable, you
+change the contents of the existing storage location,
+as shown in the codelens below.
+Step through the code one line at a time and notice how the value
+assigned to fred changes even when no output is created.</p>
+
+<div class="runestone codelens ">
+    <div class="cd_section" data-component="codelens" data-question_label="5.1.3">
+        <div class="pytutorVisualizer" id="multiple_assignment_CL"
+           data-params='{"embeddedMode": true, "lang": "cpp", "jumpToEnd": false}'>
+        </div>
+        <p class="runestone_caption"><span class="runestone_caption_text">Activity: CodeLens Reassigning values to fred (multiple_assignment_CL)</span> </p>
+    </div>
+
+<script>
+var multiple_assignment_CL_vis;
+
+if (allTraceData === undefined) {
+   var allTraceData = {};
+}
+
+allTraceData["multiple_assignment_CL"] = {"code": "#include <iostream>\n\nint main () {\n    int fred = 5;\n    std::cout << fred << '\\n';\n    fred = 8;\n    fred = 13;\n    fred = 21;\n    fred = 34;\n    std::cout << fred << '\\n';\n    return 0;\n}", "trace": [{"event": "step_line", "func_name": "main", "globals": {}, "heap": {}, "line": 4, "ordered_globals": [], "stack_to_render": [{"encoded_locals": {"fred": ["C_DATA", "0xFFF000BDC", "int", "<UNINITIALIZED>"]}, "frame_id": "0xFFF000BE0", "func_name": "main", "is_highlighted": true, "is_parent": false, "is_zombie": false, "line": 4, "ordered_varnames": ["fred"], "parent_frame_id_list": [], "unique_hash": "main_0xFFF000BE0"}], "stdout": ""}, {"event": "step_line", "func_name": "main", "globals": {}, "heap": {}, "line": 5, "ordered_globals": [], "stack_to_render": [{"encoded_locals": {"fred": ["C_DATA", "0xFFF000BDC", "int", 5]}, "frame_id": "0xFFF000BE0", "func_name": "main", "is_highlighted": true, "is_parent": false, "is_zombie": false, "line": 5, "ordered_varnames": ["fred"], "parent_frame_id_list": [], "unique_hash": "main_0xFFF000BE0"}], "stdout": ""}, {"event": "step_line", "func_name": "main", "globals": {}, "heap": {}, "line": 6, "ordered_globals": [], "stack_to_render": [{"encoded_locals": {"fred": ["C_DATA", "0xFFF000BDC", "int", 5]}, "frame_id": "0xFFF000BE0", "func_name": "main", "is_highlighted": true, "is_parent": false, "is_zombie": false, "line": 6, "ordered_varnames": ["fred"], "parent_frame_id_list": [], "unique_hash": "main_0xFFF000BE0"}], "stdout": "5\n"}, {"event": "step_line", "func_name": "main", "globals": {}, "heap": {}, "line": 7, "ordered_globals": [], "stack_to_render": [{"encoded_locals": {"fred": ["C_DATA", "0xFFF000BDC", "int", 8]}, "frame_id": "0xFFF000BE0", "func_name": "main", "is_highlighted": true, "is_parent": false, "is_zombie": false, "line": 7, "ordered_varnames": ["fred"], "parent_frame_id_list": [], "unique_hash": "main_0xFFF000BE0"}], "stdout": "5\n"}, {"event": "step_line", "func_name": "main", "globals": {}, "heap": {}, "line": 8, "ordered_globals": [], "stack_to_render": [{"encoded_locals": {"fred": ["C_DATA", "0xFFF000BDC", "int", 13]}, "frame_id": "0xFFF000BE0", "func_name": "main", "is_highlighted": true, "is_parent": false, "is_zombie": false, "line": 8, "ordered_varnames": ["fred"], "parent_frame_id_list": [], "unique_hash": "main_0xFFF000BE0"}], "stdout": "5\n"}, {"event": "step_line", "func_name": "main", "globals": {}, "heap": {}, "line": 9, "ordered_globals": [], "stack_to_render": [{"encoded_locals": {"fred": ["C_DATA", "0xFFF000BDC", "int", 21]}, "frame_id": "0xFFF000BE0", "func_name": "main", "is_highlighted": true, "is_parent": false, "is_zombie": false, "line": 9, "ordered_varnames": ["fred"], "parent_frame_id_list": [], "unique_hash": "main_0xFFF000BE0"}], "stdout": "5\n"}, {"event": "step_line", "func_name": "main", "globals": {}, "heap": {}, "line": 10, "ordered_globals": [], "stack_to_render": [{"encoded_locals": {"fred": ["C_DATA", "0xFFF000BDC", "int", 34]}, "frame_id": "0xFFF000BE0", "func_name": "main", "is_highlighted": true, "is_parent": false, "is_zombie": false, "line": 10, "ordered_varnames": ["fred"], "parent_frame_id_list": [], "unique_hash": "main_0xFFF000BE0"}], "stdout": "5\n"}, {"event": "step_line", "func_name": "main", "globals": {}, "heap": {}, "line": 11, "ordered_globals": [], "stack_to_render": [{"encoded_locals": {"fred": ["C_DATA", "0xFFF000BDC", "int", 34]}, "frame_id": "0xFFF000BE0", "func_name": "main", "is_highlighted": true, "is_parent": false, "is_zombie": false, "line": 11, "ordered_varnames": ["fred"], "parent_frame_id_list": [], "unique_hash": "main_0xFFF000BE0"}], "stdout": "5\n34\n"}, {"event": "return", "func_name": "main", "globals": {}, "heap": {}, "line": 12, "ordered_globals": [], "stack_to_render": [{"encoded_locals": {}, "frame_id": "0xFFF000BE0", "func_name": "main", "is_highlighted": true, "is_parent": false, "is_zombie": false, "line": 12, "ordered_varnames": [], "parent_frame_id_list": [], "unique_hash": "main_0xFFF000BE0"}], "stdout": "5\n34\n"}]}
+
+;
+</script>
+</div>
+<p>When there are multiple assignments to a variable, it is especially
+important to distinguish between an assignment statement and a statement
+of equality. Because C++ uses the <code class="docutils literal notranslate"><span class="pre">=</span></code> symbol for assignment, it is
+tempting to interpret a statement like <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">b</span></code> as a statement of
+equality. It is not!</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>An assignment statement uses a single <code class="docutils literal notranslate"><span class="pre">=</span></code> symbol. For example, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">3</span></code>
+assigns the value of 3 to the variable <code class="docutils literal notranslate"><span class="pre">x</span></code>. On the other hand, an equality
+statement uses two <code class="docutils literal notranslate"><span class="pre">=</span></code> symbols. For example, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">3</span></code> is a boolean that evaluates
+to true if <code class="docutils literal notranslate"><span class="pre">x</span></code> is equal to 3 and evaluates to false otherwise.</p>
+<p>This is a common source of error.</p>
+</div>
+<p>First of all, equality is commutative, and assignment is not. For
+example, in mathematics if <span class="math notranslate nohighlight">\(a = 7\)</span> then <span class="math notranslate nohighlight">\(7 = a\)</span>. But in C++
+the statement <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">7;</span></code> is legal, and <code class="docutils literal notranslate"><span class="pre">7</span> <span class="pre">=</span> <span class="pre">a;</span></code> is not.</p>
+<p>Furthermore, in mathematics, a statement of equality is true for all
+time. If <span class="math notranslate nohighlight">\(a = b\)</span> now, then <span class="math notranslate nohighlight">\(a\)</span> will always equal <span class="math notranslate nohighlight">\(b\)</span>.
+In C++, an assignment statement can make two variables equal, but they
+don’t have to stay that way!</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w">     </span><span class="c1">// a and b are now equal</span>
+<span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">         </span><span class="c1">// a and b are no longer equal</span>
+</pre></div>
+</div>
+<p>The third line changes the value of <code class="docutils literal notranslate"><span class="pre">a</span></code> but it does not change the
+value of <code class="docutils literal notranslate"><span class="pre">b</span></code>, and so they are no longer equal. In many programming
+languages an alternate symbol is used for assignment, such as <code class="docutils literal notranslate"><span class="pre">&lt;-</span></code> or
+<code class="docutils literal notranslate"><span class="pre">:=</span></code>, in order to avoid confusion.</p>
+<p>Although multiple assignment is frequently useful, you should use it
+with caution. If the values of variables are changing constantly in
+different parts of the program, it can make the code difficult to read
+and debug.</p>
+<div id='self_check' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Q1" >
+
+<div class="runestone  ">
+<ul data-component="dragndrop" data-question_label="5.1.4" id="multiple_assignment_1"  style="visibility: hidden;">
+    <span data-subcomponent="question">Q-4: Match the expression to the statement that best describes it.</span>
+	<span data-subcomponent=feedback>Try again!</span>
+
+    <li data-subcomponent="draggable" id="multiple_assignment_1_drag1">4=a</li>
+    <li data-subcomponent="dropzone" for="multiple_assignment_1_drag1">Illegal</li>
+
+    <li data-subcomponent="draggable" id="multiple_assignment_1_drag2">a==b</li>
+    <li data-subcomponent="dropzone" for="multiple_assignment_1_drag2">Checking if a is equal to b</li>
+
+    <li data-subcomponent="draggable" id="multiple_assignment_1_drag3">a=b</li>
+    <li data-subcomponent="dropzone" for="multiple_assignment_1_drag3">Assigning a to the value of b</li>
+
+    <li data-subcomponent="draggable" id="multiple_assignment_1_drag4">a=4</li>
+    <li data-subcomponent="dropzone" for="multiple_assignment_1_drag4">Setting the value of a to 4</li>
+</ul></div></div><div data-component="tab" data-tabname="Q2" >
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="5.1.5" data-multipleanswers="false"  id="multiple_assignment_2"  style="visibility: hidden;">
+    <p>Q-5: What will print?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;!&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;!&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+
+    <li data-component="answer" data-correct='yes' id="multiple_assignment_2_opt_a">10!1!</li><li data-component="feedback">There are no spaces between the numbers.</li>
+    
+    <li data-component="answer"  id="multiple_assignment_2_opt_b">10 ! 1 !</li><li data-component="feedback">Remember, in C++ spaces must be printed.</li>
+    
+    <li data-component="answer"  id="multiple_assignment_2_opt_c">10 ! 10 !</li><li data-component="feedback">Carefully look at the values being assigned.</li>
+    
+    <li data-component="answer"  id="multiple_assignment_2_opt_d">1!1!</li><li data-component="feedback">Carefully look at the values being assigned.</li>
+    
+
+    </ul>
+    </div>
+    </div><div data-component="tab" data-tabname="Q3" >
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="5.1.6" data-multipleanswers="false"  id="multiple_assignment_3"  style="visibility: hidden;">
+    <p>Q-6: What is the correct output?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="k">using</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="p">;</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">z</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+
+    <li data-component="answer"  id="multiple_assignment_3_opt_a">True</li><li data-component="feedback">Remember that printing a boolean results in either 0 or 1.</li>
+    
+    <li data-component="answer"  id="multiple_assignment_3_opt_b">False</li><li data-component="feedback">Remember that printing a boolean results in either 0 or 1.</li>
+    
+    <li data-component="answer"  id="multiple_assignment_3_opt_c">0</li><li data-component="feedback">Is x equal to y?</li>
+    
+    <li data-component="answer" data-correct='yes' id="multiple_assignment_3_opt_d">1</li><li data-component="feedback">x is equal to y, so the output is 1.</li>
+    
+
+    </ul>
+    </div>
+    </div>
+    </div>
+
+</section>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 5. Iteration' data-toggle="tooltip">
+  <a href="index.html" aria-label="Previous - 5. Iteration">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 5.2. Iteration' data-toggle="tooltip" >
+    <a href="iteration.html" aria-label="Next - 5.2. Iteration">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020-2022 Dave Parillo, Barbara Ericson, and Allen B. Downey..
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.2.1.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

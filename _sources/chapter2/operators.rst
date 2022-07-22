@@ -51,7 +51,6 @@ observe the output.
        cout << hour * 60 + minute << '\n';
        cout << "Fraction of the hour that has passed: ";
        cout << minute / 60 << '\n';
-       return 0;
    }
 
 .. index::
@@ -86,7 +85,7 @@ The result is:
 
     Percentage of the hour that has passed: 98
 
-Again the result is rounded down, but at least now the answer is
+Again the result is truncated, but at least now the answer is
 approximately correct. In order to get an even more accurate answer, we
 could use a different type of variable, called floating-point, that is
 capable of storing fractional values. 
@@ -117,12 +116,10 @@ capable of storing fractional values.
 
       .. fillintheblank:: operators_3
 
-         Integer division always rounds |blank| to the nearest |blank|.
+         Integer division always |blank|.
 
-         - :[Dd][Oo][Ww][Nn]: Correct!
+         - :[Tt][Rr][Uu][Nn][Cc][Aa][Tt][Ee][Ss]: Correct!
            :x: Try again!
-         - :[Ii][Nn][Tt][Ee][Gg][Ee][Rr]: Correct!
-           :.*: Try again!
 
 
    .. tab:: Q3

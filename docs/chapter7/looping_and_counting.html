@@ -1,70 +1,51 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
 <!DOCTYPE html>
 
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>7.9. Looping and counting &#8212; CISC 192 Course Reader Overview</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
     <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
-    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
-    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
-    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.5.5" />
-    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
     <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
     <script src="../_static/animationbase.js?v=A043C3A7"></script>
     <script src="../_static/html4css1.css?v=4533ACD3"></script>
-    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
-    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
-    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
     <script src="../_static/webglinteractive.js?v=2B768384"></script>
     <script src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script src="../_static/Blob.js?v=AEC2447"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script src="../_static/runestone.js?v=92D8BBF0"></script>
-    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
-    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
-    <script src="../_static/jquery-fix.js?v=1226591B"></script>
-    <script src="../_static/bootstrap-sphinx.js"></script>
-    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
-    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
-    <script src="../_static/theme.js?v=D899FB97"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/runtime.b0f8547c48f16a9f.bundle.js?v=2731F567"></script>
+    <script src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script src="../_static/runestone.0e9550fe42760516.bundle.js?v=71AD37BA"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="7.10. Increment and decrement operators" href="increment_decrement.html" />
     <link rel="prev" title="7.8. Our own version of find" href="own_version_find.html" />
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+
+
 <link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
 
-<script type="text/javascript">
+
+<script>
   eBookConfig = {};
   
     eBookConfig.useRunestoneServices = false;
@@ -73,6 +54,8 @@
     eBookConfig.course = 'cisc192-reader';
     eBookConfig.basecourse = 'cisc192-reader';
     eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
   
   eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
   eBookConfig.logLevel = 0;
@@ -80,18 +63,16 @@
   eBookConfig.build_info = "unknown";
   eBookConfig.python3 = true;
   eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
-  eBookConfig.runestone_version = '5.5.5';
+  eBookConfig.runestone_version = '6.2.1';
   eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
   eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
   eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
   eBookConfig.enable_chatcodes = false ? false : false;
-
+  eBookConfig.enableScratchAC = true;
 
 </script>
 
 <!-- Ad Serving Headers Only serve ads to Anonymous Users -->
-
-
 
 
 
@@ -105,15 +86,16 @@
 
     <div class="navbar-header">
       <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
-        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
 
       <div>
         
-          <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;'>&nbsp;<span aria-label="logo" class="visuallyhidden">Runestone Logo</span> </a>
+        
+          <div class="brand-logo"><img src="../_static/img/RAIcon.png" alt=""></div>
         
         <a class="navbar-brand" href="../index.html" aria-label="index-page">
           
@@ -128,17 +110,16 @@
       <ul class="nav navbar-nav navbar-right" >
 
         <li class="divider-vertical"></li>
-
+        <li><span id="browsing_warning"></span></li>
 
         <!-- social media dropdown -->
         <!-- end social media dropdown -->
 
         <li class="divider-vertical"></li>
-
         <!-- search dropdown -->
         <li class="dropdown">
           <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
           </a>
           <ul class='dropdown-menu'>
             
@@ -171,8 +152,8 @@
         <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
 
         <!-- <li class="dropdown">             -->
-          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
-              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
         <!-- </li> -->
 
         <li class="divider-vertical"></li>
@@ -201,56 +182,50 @@
   </li>
   <li class="divider-vertical"></li>
 
-<script type="text/javascript">
+<script>
   opts = {'placement':'bottom',
           'selector': '',
           'delay': { show: 100, hide: 50}
          };
 
-  $('#relations-prev').tooltip(opts);
-  $('#relations-next').tooltip(opts);
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
 </script>
         -->
         
           <li></li>
         
       </ul>
-
-      </div> <!-- navbar -->
-
-
-
-
-
-
-
-    </div> <!-- container -->
-  </div>
-</div>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
 
 
 <div class="container" id="continue-reading"></div>
 
 <div class="container" id="main-content" role="main">
+
 <!-- Ad Serving for Runestone Campaign -->
 
 
   
-  <div class="section" id="looping-and-counting">
+  <section id="looping-and-counting">
 <h1><span class="section-number">7.9. </span>Looping and counting<a class="headerlink" href="#looping-and-counting" title="Permalink to this headline">¶</a></h1>
 
-<div class="runestone explainer ac_section alert alert-warning">
-<div data-component="activecode" id=looping_and_counting_AC_1 >
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=looping_and_counting_AC_1 data-question_label="7.9.1">
 <div id=looping_and_counting_AC_1_question class="ac_question col-md-12">
 <p>The active code below counts the number of times the letter <code class="docutils literal notranslate"><span class="pre">'a'</span></code>
 appears in a string <code class="docutils literal notranslate"><span class="pre">fruit</span></code>.</p>
 
 </div>
-<textarea data-lang="cpp" id="looping_and_counting_AC_1_editor" data-question_label="7.9.1" 
+<textarea data-lang="cpp" id="looping_and_counting_AC_1_editor" 
       data-timelimit=25000     
     data-audio=''      
     data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"     data-caption='Looping and counting'  data-wasm=/_static
-    style="visibility: hidden;">
+     style="visibility: hidden;">
 #include <iostream>
 #include <string>
 
@@ -277,40 +252,41 @@ we find an <code class="docutils literal notranslate"><span class="pre">’a’<
 opposite of <strong>decrement</strong>, and unrelated to <strong>excrement</strong>, which is a
 noun.) When we exit the loop, <code class="docutils literal notranslate"><span class="pre">count</span></code> contains the result: the total
 number of a’s.</p>
-<div id='self_check' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Q1" >
+<div id='self_check' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Q1" >
 
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="7.9.2" data-multipleanswers="false"  id="looping_counting_1"  style="visibility: hidden;">
-            <p>Q-2: What does the following code print?</p>
-<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">-5</span><span class="p">;</span>
-<span class="k">while</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span><span class="p">;</span>
-<span class="p">}</span>
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="7.9.2" data-multipleanswers="false"  id="looping_counting_1"  style="visibility: hidden;">
+    <p>Q-2: What does the following code print?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-5</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">2</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">  </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">4</span><span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">5</span><span class="p">}</span><span class="w"></span>
 </pre></div>
-</td></tr></table></div>
+</div>
 
-            <li data-component="answer"  id="looping_counting_1_opt_a">5 4 3 2 1</li><li data-component="feedback">Notice that x is negative.</li>
-            
-            <li data-component="answer"  id="looping_counting_1_opt_b">-5 -4 -3 -2 -1</li><li data-component="feedback">Notice that the value of x is incremented before it is printed.</li>
-            
-            <li data-component="answer" data-correct id="looping_counting_1_opt_c">-4 -3 -2 -1 0</li><li data-component="feedback">The value of x is incremented before it is printed so the first value printed is -4.</li>
-            
+    <li data-component="answer"  id="looping_counting_1_opt_a">5 4 3 2 1</li><li data-component="feedback">Notice that x is negative.</li>
+    
+    <li data-component="answer"  id="looping_counting_1_opt_b">-5 -4 -3 -2 -1</li><li data-component="feedback">Notice that the value of x is incremented before it is printed.</li>
+    
+    <li data-component="answer" data-correct='yes' id="looping_counting_1_opt_c">-4 -3 -2 -1 0</li><li data-component="feedback">The value of x is incremented before it is printed so the first value printed is -4.</li>
+    
 
-            </ul>
-            </div>
-            </div><div data-component="tab" data-tabname="Q2" >
+    </ul>
+    </div>
+    </div><div data-component="tab" data-tabname="Q2" >
 
-        <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" data-question_label="7.9.3" id="looping_counting_2"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
-        <span data-question>Q-3 As an exercise, encapsulate this code in a function named
-``countLetters``, and generalize it so that it accepts the string and
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="looping_counting_2" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>As an exercise, encapsulate this code in a function named
+<code class="docutils literal notranslate"><span class="pre">countLetters</span></code>, and generalize it so that it accepts the string and
 the letter as arguments. In the function, declare length, count, and index in that order.
-Within the main function, declare city and letter in that order.</span>int countLetter(string s, char letter) {
+Within the main function, declare city and letter in that order.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="7.9.3"   data-adaptive="true"       data-numbered="left"  style="visibility: hidden;">
+        int countLetter(string s, char letter) {
 ---
    int length = s.length();
 ---
@@ -341,11 +317,17 @@ int main() {
 }
         </pre>
         </div>
+        </div>
     </div><div data-component="tab" data-tabname="Q3" >
 
-        <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" data-question_label="7.9.4" id="looping_counting_3"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
-        <span data-question>Q-4 The following is the correct code for printing the even numbers from 0 to 10, but it also includes some extra code that you won't need. Drag the needed blocks from the left and put them in the correct order on the right.</span>x = x + 1; #distractor
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="looping_counting_3" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>The following is the correct code for printing the even numbers from 0 to 10, but it also includes some extra code that you won’t need. Drag the needed blocks from the left and put them in the correct order on the right.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="7.9.4"   data-adaptive="true"       data-numbered="left"  style="visibility: hidden;">
+        x = x + 1; #distractor
 ---
 x = 0;
 ---
@@ -359,128 +341,81 @@ while (x < 10) { #distractor
 }
         </pre>
         </div>
+        </div>
     </div><div data-component="tab" data-tabname="Q4" >
 
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="7.9.5" data-multipleanswers="false"  id="looping_counting_4"  style="visibility: hidden;">
-            <p>Q-5: What is the value of <code class="docutils literal notranslate"><span class="pre">counter</span></code> right before main returns 0?</p>
-<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">string</span> <span class="n">word_1</span> <span class="o">=</span> <span class="s">&quot;understand&quot;</span>
-<span class="n">string</span> <span class="n">word_2</span> <span class="o">=</span> <span class="s">&quot;underwaa&quot;</span>
-
-<span class="kt">int</span> <span class="n">end_1</span> <span class="o">=</span> <span class="n">word_1</span><span class="p">.</span><span class="n">length</span><span class="p">();</span>
-<span class="kt">int</span> <span class="n">end_2</span> <span class="o">=</span> <span class="n">word_2</span><span class="p">.</span><span class="n">length</span><span class="p">();</span>
-
-<span class="k">if</span> <span class="p">(</span> <span class="n">end_2</span> <span class="o">&amp;</span><span class="n">lt</span> <span class="n">end_1</span> <span class="p">){</span>
-   <span class="n">end_1</span> <span class="o">=</span> <span class="n">end_2</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-
-<span class="k">while</span> <span class="p">(</span> <span class="n">index</span> <span class="o">&amp;</span><span class="n">lt</span> <span class="n">end_1</span> <span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span> <span class="n">word_1</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">==</span> <span class="n">word_2</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="p">){</span>
-     <span class="n">counter</span> <span class="o">=</span> <span class="n">counter</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-  <span class="p">}</span>
-
-  <span class="k">else</span><span class="p">{</span>
-     <span class="n">counter</span> <span class="o">=</span> <span class="n">counter</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="7.9.5" data-multipleanswers="false"  id="looping_counting_4"  style="visibility: hidden;">
+    <p>Q-5: What is the value of <code class="docutils literal notranslate"><span class="pre">counter</span></code> right before main returns 0?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">string</span><span class="w"> </span><span class="n">word_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;understand&quot;</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="n">string</span><span class="w"> </span><span class="n">word_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;underwaa&quot;</span><span class="w"></span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="kt">int</span><span class="w"> </span><span class="n">end_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">word_1</span><span class="p">.</span><span class="n">length</span><span class="p">();</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="kt">int</span><span class="w"> </span><span class="n">end_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">word_2</span><span class="p">.</span><span class="n">length</span><span class="p">();</span><span class="w"></span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">end_2</span><span class="w"> </span><span class="o">&amp;</span><span class="n">lt</span><span class="w"> </span><span class="n">end_1</span><span class="w"> </span><span class="p">){</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">   </span><span class="n">end_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">end_2</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">12</span><span class="kt">int</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">&amp;</span><span class="n">lt</span><span class="w"> </span><span class="n">end_1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">word_1</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">word_2</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="w"> </span><span class="p">){</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">     </span><span class="n">counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="w">  </span><span class="k">else</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">     </span><span class="n">counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">22</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">23</span>
+<span class="linenos">24</span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
 </pre></div>
-</td></tr></table></div>
-
-            <li data-component="answer"  id="looping_counting_4_opt_a">The code dosen't reach <code>return 0</code> becuase we index out of bounds in <code>word_2</code>.</li><li data-component="feedback">We set <code>end_1</code> to be the smaller of the two lengths so we don't index out of bounds.</li>
-            
-            <li data-component="answer"  id="looping_counting_4_opt_b">2</li><li data-component="feedback">Not all the letters after index 4 differ in the two words.</li>
-            
-            <li data-component="answer"  id="looping_counting_4_opt_c">3</li><li data-component="feedback">We decrement the value of counter when we don't have matching letters.</li>
-            
-            <li data-component="answer" data-correct id="looping_counting_4_opt_d">4</li><li data-component="feedback">Correct! we have 6 matching letters and 2 differing letters upto the length of <code>word_2</code>.</li>
-            
-
-            </ul>
-            </div>
-            </div>
-    </div>
-
 </div>
 
+    <li data-component="answer"  id="looping_counting_4_opt_a">The code dosen't reach <code>return 0</code> becuase we index out of bounds in <code>word_2</code>.</li><li data-component="feedback">We set <code>end_1</code> to be the smaller of the two lengths so we don't index out of bounds.</li>
+    
+    <li data-component="answer"  id="looping_counting_4_opt_b">2</li><li data-component="feedback">Not all the letters after index 4 differ in the two words.</li>
+    
+    <li data-component="answer"  id="looping_counting_4_opt_c">3</li><li data-component="feedback">We decrement the value of counter when we don't have matching letters.</li>
+    
+    <li data-component="answer" data-correct='yes' id="looping_counting_4_opt_d">4</li><li data-component="feedback">Correct! we have 6 matching letters and 2 differing letters upto the length of <code>word_2</code>.</li>
+    
 
-  <div id=scprogresscontainer>
-    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+    </ul>
+    </div>
+    </div>
+    </div>
+
+</section>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
   </div>
-  
-      
-<ul>
-  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 7.8. Our own version of  find ' data-toggle="tooltip">
-    <a href="own_version_find.html" aria-label="7.8. Our own version of  find ">
-        <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
-            <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
-        </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 7.8. Our own version of  find ' data-toggle="tooltip">
+  <a href="own_version_find.html" aria-label="Previous - 7.8. Our own version of  find ">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 7.10. Increment and decrement operators' data-toggle="tooltip" >
+    <a href="increment_decrement.html" aria-label="Next - 7.10. Increment and decrement operators">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
     </a>
   </li>
 </ul>
-
-  
-<ul>
-  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - 7.10. Increment and decrement operators' data-toggle="tooltip" >
-    <a href="increment_decrement.html" aria-label="7.10. Increment and decrement operators">
-      <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
-          <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
-      </div>
-    </a>
-  </li>
-</ul>
-
-<script type="text/javascript">
-
-  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
-  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
-
-</script>
 
 <script>
-	function mouseOverPrev() {
-		document.getElementById("relations-prev").style.opacity=1;
-	}
-
-	function mouseOutPrev() {
-		document.getElementById("relations-prev").style.opacity=0.4;
-	}
-	function mouseOverNext() {
-		document.getElementById("relations-next").style.opacity=1;
-	}
-
-	function mouseOutNext() {
-		document.getElementById("relations-next").style.opacity=0.4;
-	}
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
 </script>
-  
+
 </div>
 <footer class="footer">
   <div class="container">
@@ -490,8 +425,8 @@ while (x < 10) { #distractor
       
     </p>
     <p>
-        &copy; Copyright 2020-2021 Dave Parillo.
-      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.5.
+        &copy; Copyright 2020-2022 Dave Parillo, Barbara Ericson, and Allen B. Downey..
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.2.1.
     </p>
   </div>
 </footer>
@@ -499,7 +434,11 @@ while (x < 10) { #distractor
 
 
 
-<script> getSwitch(); </script>
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
 
 
   </body>

@@ -5,115 +5,107 @@ Mixed Up Code Practice
 
    .. tab:: Q1
 
-      .. parsonsprob:: mucp_5_1
+      .. parsonsprob:: mucp_6_1
          :numbered: left
          :adaptive:
          :noindent:
          :practice: T
 
-         Vacation time! But before you go, you need to convert your currency.
-         Let's write the code for the dollarToYen function. dollarToYen
-         takes dollar as a parameter and returns the equivalent amount of Japanese yen.
-         The conversion rate is 1 USD equals 105.42 Japanese yen.
-         Put the necessary blocks of code in the correct order.
+         The program below should print out the even numbers between 20 and 40, inclusive, 
+         but the code is mixed up and contains extra blocks. Put the necessary blocks
+         in the correct order.
          -----
-         double dollarToYen (double dollar) {
+         int main() {
          =====
-         int dollarToYen (double dollar) {  #distractor
+         main(int) {                         #paired
          =====
-         void dollarToYen (double dollar) {  #distractor
+            int n = 20;
          =====
-         double dollarToYen () {  #distractor
+            int n = 0; #distractor 
          =====
-            double yen;  #distractor
+            while (n <= 40) {
          =====
-            return 105.42 * dollar;
+            while (n < 40) {                        #paired 
          =====
-            return 105.42 * yen;  #distractor
+               cout << n << endl;
+         =====
+               n = n + 2;
+         =====
+               n++;                 #distractor
+         =====
+               n = n * 2;                 #distractor
+         =====
+            }
          =====
          }
 
    .. tab:: Q2
 
-      .. parsonsprob:: mucp_5_2
+      .. parsonsprob:: mucp_6_2
          :numbered: left
          :adaptive:
          :noindent:
          :practice: T
 
-         When you buy something, you also need to pay sales tax. For example,
-         a nice shirt could be labeled with a price of exactly $20, but when 
-         you pay, you actually need to pay $21.20 in a state with 6% sales tax.
-         However, different states have different tax rates. Write the function
-         priceWithTax, which takes price and percentTax as parameters.
-         priceWithTax calculates the price after tax and returns it.
-         For example, priceWithTax (20, 6) returns 21.2.
-         Put the necessary blocks of code in the correct order.
+         The program below should count down from 100 to 0 in decrements of 
+         10 but the code is mixed up and contains extra blocks. Put the necessary blocks
+         in the correct order.
          -----
-         double priceWithTax (double price, double percentTax) {
+         int main() {
          =====
-         int priceWithTax (double price, int percentTax) {  #distractor
+            int n = 100;
          =====
-         double priceWithTax (price, percentTax) {  #distractor
+            int n = 10; #distractor 
          =====
-            return (1 + percentTax / 100) * price;
+            while (n >= 0) {
          =====
-            return (1 + percentTax) * price;  #distractor
+            while (n < 0) { #distractor
          =====
-            return percentTax * price;  #distractor
+            while (n > 0) { #distractor
+         =====
+               cout << n << endl;
+         =====
+               n -= 10;
+         =====
+               n += 10;                 #distractor
+         =====
+            }
          =====
          }
 
    .. tab:: Q3
 
-      .. parsonsprob:: mucp_5_3
+      .. parsonsprob:: mucp_6_3
          :numbered: left
          :adaptive:
          :noindent:
          :practice: T
 
-         Most assignments and tests are graded as a percentage, but final
-         grades are letters. Let's write the code for the percentToLetter function. 
-         percentToLetter takes a percentage and returns the corresponding
-         letter grade. A 90 and above is an 'A', an 80 and above is a 'B', a 70 and above
-         is a 'C', and anything under a 70 is an 'F'.
-         Put the necessary blocks of code in the correct order.
+         The program below should find the sum of the first 10 natural numbers,
+         but the code is mixed up and contains extra blocks. Put the necessary blocks
+         in the correct order.
          -----
-         char percentToLetter (double percentage) {
+         int main() {
          =====
-         void percentToLetter (double percentage) {  #distractor
+            int n = 1;
          =====
-         void percentToLetter (int percentage) {  #distractor
+            int n = 10; #distractor 
          =====
-         char percentToLetter (percentage) {  #distractor
+            int sum = 0;
          =====
-            if (percentage >= 90) {
+            int sum = n;  #distractor
          =====
-               return 'A';
+            while (n <= 10) {
          =====
-               return A;  #paired
+            while (n < 100) {  #distractor
          =====
-            }
+            while (n <= 9) {  #distractor
          =====
-            else if (percentage >= 80) {
+               cout << n << endl;  #distractor
          =====
-               return 'B';
+               sum = sum + n;
          =====
-               return 'B'  #paired
-         =====
-            }
-         =====
-            else if (percentage >= 70) {
-         =====
-            else if (percentage > 70) {  #paired
-         =====
-               return 'C';
-         =====
-            }
-         =====
-            else {
-         =====
-               return 'F';
+               n++;
          =====
             }
          =====
@@ -121,99 +113,92 @@ Mixed Up Code Practice
 
    .. tab:: Q4
 
-      .. parsonsprob:: mucp_5_4
+      .. parsonsprob:: mucp_6_4
          :numbered: left
          :adaptive:
-         :noindent:
          :practice: T
 
-         Let's write the code for the triangleArea function. triangleArea
-         takes two parameters, base and height. It returns the 
-         area of the triangle using the formula 1/2 * base * height.
-         Put the necessary blocks of code in the correct order.
+         Let's write the code for the repeatHello function. repeatHello 
+         should be a void function that takes no arguments and uses a while
+         loop to print out "hello" three times.  
          -----
-         double triangleArea (double base, double height) {
+         void repeatHello () {
          =====
-         int triangleArea (double base, double height) {  #distractor
+         repeatHello () {                         #paired
          =====
-         void triangleArea (double base, double height) {  #distractor
+            int n = 0;
          =====
-         double triangleArea (base, height) {  #distractor
+            int n = 0                        #paired 
          =====
-            double area;  #distractor
+            while (n < 3) {
          =====
-            return 0.5 * base * height;
+            while (n > 3) {                        #paired 
          =====
-            cout << 0.5 * base * height << endl;  #distractor
+               cout << "hello" << endl;
+         =====
+               n++;
+         =====
+            }
          =====
          }
 
    .. tab:: Q5
 
-      .. parsonsprob:: mucp_5_5
+      .. parsonsprob:: mucp_6_5
          :numbered: left
          :adaptive:
-         :practice: T
 
-         Let's write the code for the cylinderVolume function. cylinderVolume
-         takes two parameters, radius and height. It returns the 
-         volume of the cylinder using the formula pi * radius * radius * height.
-         Put the necessary blocks of code in the correct order.
+         Now let's generalize the repeatHello function so that it repeats a given string three times.
+         Let's write the code for the repeatString function, which takes 
+         input as a parameter and uses a while loop to print out the string three times.  
          -----
-         double cylinderVolume (double radius, double height) {
+         void repeatString (string input) {
          =====
-         void cylinderVolume (double radius, double height) {  #distractor
+         void repeatString () {                         #paired
          =====
-         double cylinderVolume (radius, height) {  #distractor
+            int n = 0;
          =====
-            double pi = 3.14;
+            while (n < 3) {
          =====
-            return pi * radius * radius * height;
+            while (3 > n) {                        #paired 
+         =====
+               cout << input << endl;
+         =====
+               cout << string << endl;                        #paired 
+         =====
+               n++;
+         =====
+            }
          =====
          }
 
    .. tab:: Q6
 
-      .. parsonsprob:: mucp_5_6
+      .. parsonsprob:: mucp_6_6
          :numbered: left
          :adaptive:
-         :practice: T
 
-         On a distant planet, depending on the characteristics of an egg, a kenchic,
-         an ooseg, or a guinpen might hatch from it. Let's write the function 
-         birdType which returns an int corresponding to each type of bird
-         (1 for kenchic, 2 for ooseg, and 3 for guinpen). If the egg is round, then it is a 
-         guinpen. Otherwise, if the egg is round and it isn't gray, then it is a kenchic. If 
-         it isn't a guinpen and it isn't a kenchic, then it's an ooseg. 
-         Put the necessary blocks of code in the correct order.
+         We can further generalize repeatString so that it repeats a given string a given number of times. 
+         Let's write the code for the new repeatString function, which takes 
+         input and x as parameters and uses a while loop to print out the string x number of times.  
          -----
-         int birdType (bool isRound, bool isGray) {
+         void repeatString (string input, int x) {
          =====
-         void birdType (bool isRound, bool isGray) {  #distractor
+         void repeatString (string input, string x) {                         #paired
          =====
-         double birdType (int isRound, char isGray) {  #distractor
+            int n = 0;
          =====
-            if (isRound && !isGray) {
+            int n = x;                       #paired
          =====
-            if (!isRound && !isGray) {  #paired
+            while (n < x) {
          =====
-               return 1;
+            while (x < n) {                        #paired 
          =====
-            }
+               cout << input << endl;
          =====
-            else if (!isRound || isGray) {
+               n++; 
          =====
-            else if (!(isRound || isGray)) {  #paired
-         =====
-               return 2;
-         =====
-            }
-         =====
-            else {
-         =====
-               return 3;
-         =====
-               return 0;  #distractor
+               x++;                       #paired
          =====
             }
          =====
@@ -221,197 +206,157 @@ Mixed Up Code Practice
 
    .. tab:: Q7
 
-      .. parsonsprob:: mucp_5_7
+      .. parsonsprob:: mucp_6_7
          :numbered: left
          :adaptive:
          :practice: T
 
-         Let's write the code for the isDoubleDigit function. isDoubleDigit
-         takes num as a parameter. isDoubleDigit returns true if 
-         num is a double digit number and returns false otherwise.
-         Put the necessary blocks of code in the correct order.
+         On the last day of every year, we count down the seconds before the new year arrives.
+         Write the function newYearCountdown, which prints out a countdown from 10 and then
+         prints out "Happy New Year!".
          -----
-         bool isDoubleDigit (int num) {
+         void newYearCountdown () {
          =====
-         isDoubleDigit (int num) {  #paired
+         void newYearCountdown (string input) {                         #paired
          =====
-            if (num >= 10 && num < 100) {
+            int n = 10;
          =====
-            if (10 <= num <= 99) {  #distractor
+            int n = 0;                       #paired
          =====
-            if (num > 10 && num < 100) {  #distractor
+            while (n > 0) {
          =====
-            if (num > 10 && num <= 100) {  #distractor
+            while (n != 10) {                        #paired 
          =====
-               return true;
+               cout << n << " ";
          =====
-            }
+               n--; 
          =====
-            else {
-         =====
-               return false;
+               n++;  #
          =====
             }
          =====
+            cout << "Happy New Year!" << endl;
          }
 
    .. tab:: Q8
 
-      .. parsonsprob:: mucp_5_8
+      .. parsonsprob:: mucp_6_8
          :numbered: left
          :adaptive:
          :practice: T
 
-         Let's write the code for the Compare function. Compare
-         takes two integers a, b. Compare returns 1 if 
-         a is greater than b, -1 if a is less than b and 0 if they are equal.
-         Put the necessary blocks of code in the correct order.
+         Help Goku reach power levels of over 9000! Write the function
+         powerUp which takes powerLevel as a parameter.
+         powerUp checks to see if powerLevel is over 9000. If it 
+         isn't, it repeatedly prints "More power!" and increments powerLevel by 
+         1000 until powerLevel is over 9000. Then powerUp prints "It's over 9000!".
+         Put the necessary blocks in the correct order.
          -----
-         int Compare (int a, int b) {
+         void powerUp (int powerLevel) {
          =====
-         bool Compare (int a, int b) {   #paired
+         void powerUp () {                         #paired
          =====
-            if (a > b) {
+            int n = 0;  #distractor
          =====
-            if (a > b && a &lt b) {  #distractor
+            while (powerLevel < 9000) {
          =====
-               return 1;
+            while (powerLevel > 9000) {  #paired
          =====
-            }
+               cout << "More power!" << endl; 
          =====
-            else if (a &lt b) {  
+               powerLevel = powerLevel + 1000;
          =====
-            else if (a!=b) {  #distractor
+               powerLevel++;  #paired
          =====
-               return -1;
-         =====
-            }
-         =====
-            else if (a > 0){ #distractor
-         =====
-            else {
-         =====
-               return 0;
+               n++;  #distractor
          =====
             }
          =====
+            if (powerLevel < 9000) {  #distractor
+         =====
+            cout << "It's over 9000!" << endl;
          }
 
    .. tab:: Q9
 
-      .. parsonsprob:: mucp_5_9
+      .. parsonsprob:: mucp_6_9
          :numbered: left
          :adaptive:
          :practice: T
 
-         Let's write the code for the isFactor function. isFactor
-         takes two parameters, num and factor.
-         isFactor returns true if factor is a factor of num 
-         and returns false otherwise.
-         Put the necessary blocks of code in the correct order.
+         Write the function summation which takes two 
+         parameters, start and end. summation adds
+         all the integers from start to end, inclusive, together and returns
+         the sum. Put the necessary blocks in the correct order.
          -----
-         bool isFactor (int num, int factor) {
+         int summation (int start, int end) {
          =====
-         void isFactor (int num, int factor) {  #paired
+         void summation (int start, int end) {  #distractor
          =====
-            if (num % factor == 0) {
+         int summation () {  #distractor
          =====
-            if (num / factor == 0) {  #distractor
+            int n = start;
          =====
-            if (num % factor) {  #distractor
+            int sum = 0;
          =====
-            if (factor % num == 0) {  #distractor
+            int sum = start;  #distractor
          =====
-               return true;
+            while (n <= end) {
+         =====
+            while (n < end) {  #paired
+         =====
+               sum = sum + n; 
+         =====
+               n++;
          =====
             }
          =====
-            else {
+            return sum;
          =====
-               return false;
-         =====
-            }
+            return n;  #distractor
          =====
          }
 
    .. tab:: Q10
 
-      .. parsonsprob:: mucp_5_10
+      .. parsonsprob:: mucp_6_10
          :numbered: left
          :adaptive:
          :practice: T
 
-         Let's write the code for the isPerfectSquare function. isPerfectSquare
-         takes input as a parameter and returns true if input is a 
-         perfect square and returns false otherwise.
-         Put the necessary blocks of code in the correct order.
+         Write the function reverseNumber which takes num
+         as a parameter and returns num but with its digits reversed.
+         For example, reverseNumber (1324) returns 4231. 
+         Put the necessary blocks in the correct order, with reverse
+         declared first, then temp, and lastly remainder.
          -----
-         bool isPerfectSquare (int input) {
+         int reverseNumber (int num) {
          =====
-         bool isPerfectSquare (int input) #distractor
+         void reverseNumber (int num) {  #distractor
          =====
-         int isPerfectSquare (int input) {  #distractor
+            int reverse = 0;
          =====
-            int root = sqrt (input);
+            int reverse = 0  #distractor
          =====
-            double root = sqrt (input);  #distractor
+            int temp = num;
          =====
-            if (pow (root, 2) == input) {
+            int remainder = 0;
          =====
-            if (sqrt (input)) {  #distractor
+            int remainder;  #distractor
          =====
-               return true;
+            while (temp > 0) {
+         =====
+               remainder = temp % 10;
+         =====
+               reverse = reverse * 10 + remainder;
+         =====
+               temp = temp / 10;
          =====
             }
          =====
-            else {
+            return reverse;
          =====
-               return false;
-         =====
-            }
+            return temp;  #distractor
          =====
          }
 
-   .. tab:: Q11
-
-      .. parsonsprob:: mucp_5_11
-         :numbered: left
-         :adaptive:
-         :practice: T
-
-         Most bacteria cultures grow exponentially. For this problem,
-         assume the number of cells in a bacterial culture doubles every hour.
-         Let's write the code for the countBacteria function. countBacteria 
-         takes hour as a parameter and returns the number of bacteria cells
-         after hour hours. Assume when hour is 0, there is one cell. When 
-         hour is one, the number of cells doubles to two. When hour is two, 
-         the number of cells doubles to four. Use recursion. 
-         Put the necessary blocks of code in the correct order.
-         -----
-         int countBacteria (int hour) {
-         =====
-         void countBacteria (int hour) {  #distractor
-         =====
-         bool countBacteria (int hour) {  #distractor
-         =====
-            if (hour == 0) {
-         =====
-            if (hour == 1) {  #paired
-         =====
-               return 1;
-         =====
-               return 2 * hour;  #distractor
-         =====
-            }
-         =====
-            else {
-         =====
-               return 2 * countBacteria (hour - 1);
-         =====
-               return 2 + countBacteria (hour - 1);  #distractor
-         =====
-               return 2 * countBacteria (hour);  #distractor
-         =====
-            }
-         =====
-         }

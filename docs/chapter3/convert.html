@@ -1,70 +1,51 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
 <!DOCTYPE html>
 
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>3.2. Converting from double to int &#8212; CISC 192 Course Reader Overview</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
     <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
-    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
-    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
-    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.5.5" />
-    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
     <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
     <script src="../_static/animationbase.js?v=A043C3A7"></script>
     <script src="../_static/html4css1.css?v=4533ACD3"></script>
-    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
-    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
-    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
     <script src="../_static/webglinteractive.js?v=2B768384"></script>
     <script src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script src="../_static/Blob.js?v=AEC2447"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script src="../_static/runestone.js?v=92D8BBF0"></script>
-    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
-    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
-    <script src="../_static/jquery-fix.js?v=1226591B"></script>
-    <script src="../_static/bootstrap-sphinx.js"></script>
-    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
-    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
-    <script src="../_static/theme.js?v=D899FB97"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/runtime.b0f8547c48f16a9f.bundle.js?v=2731F567"></script>
+    <script src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script src="../_static/runestone.0e9550fe42760516.bundle.js?v=71AD37BA"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="3.3. Math Functions" href="math.html" />
     <link rel="prev" title="3.1. Floating-point" href="float.html" />
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+
+
 <link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
 
-<script type="text/javascript">
+
+<script>
   eBookConfig = {};
   
     eBookConfig.useRunestoneServices = false;
@@ -73,6 +54,8 @@
     eBookConfig.course = 'cisc192-reader';
     eBookConfig.basecourse = 'cisc192-reader';
     eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
   
   eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
   eBookConfig.logLevel = 0;
@@ -80,18 +63,16 @@
   eBookConfig.build_info = "unknown";
   eBookConfig.python3 = true;
   eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
-  eBookConfig.runestone_version = '5.5.5';
+  eBookConfig.runestone_version = '6.2.1';
   eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
   eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
   eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
   eBookConfig.enable_chatcodes = false ? false : false;
-
+  eBookConfig.enableScratchAC = true;
 
 </script>
 
 <!-- Ad Serving Headers Only serve ads to Anonymous Users -->
-
-
 
 
 
@@ -105,15 +86,16 @@
 
     <div class="navbar-header">
       <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
-        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
 
       <div>
         
-          <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;'>&nbsp;<span aria-label="logo" class="visuallyhidden">Runestone Logo</span> </a>
+        
+          <div class="brand-logo"><img src="../_static/img/RAIcon.png" alt=""></div>
         
         <a class="navbar-brand" href="../index.html" aria-label="index-page">
           
@@ -128,17 +110,16 @@
       <ul class="nav navbar-nav navbar-right" >
 
         <li class="divider-vertical"></li>
-
+        <li><span id="browsing_warning"></span></li>
 
         <!-- social media dropdown -->
         <!-- end social media dropdown -->
 
         <li class="divider-vertical"></li>
-
         <!-- search dropdown -->
         <li class="dropdown">
           <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
           </a>
           <ul class='dropdown-menu'>
             
@@ -171,8 +152,8 @@
         <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
 
         <!-- <li class="dropdown">             -->
-          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
-              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
         <!-- </li> -->
 
         <li class="divider-vertical"></li>
@@ -201,118 +182,299 @@
   </li>
   <li class="divider-vertical"></li>
 
-<script type="text/javascript">
+<script>
   opts = {'placement':'bottom',
           'selector': '',
           'delay': { show: 100, hide: 50}
          };
 
-  $('#relations-prev').tooltip(opts);
-  $('#relations-next').tooltip(opts);
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
 </script>
         -->
         
           <li></li>
         
       </ul>
-
-      </div> <!-- navbar -->
-
-
-
-
-
-
-
-    </div> <!-- container -->
-  </div>
-</div>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
 
 
 <div class="container" id="continue-reading"></div>
 
 <div class="container" id="main-content" role="main">
+
 <!-- Ad Serving for Runestone Campaign -->
 
 
   
-  <div class="section" id="converting-from-double-to-int">
-<h1><span class="section-number">3.2. </span>Converting from <code class="docutils literal notranslate"><span class="pre">double</span></code> to <code class="docutils literal notranslate"><span class="pre">int</span></code><a class="headerlink" href="#converting-from-double-to-int" title="Permalink to this headline">¶</a></h1>
+  <section id="converting-from-double-to-int">
+<span id="index-0"></span><h1><span class="section-number">3.2. </span>Converting from <code class="docutils literal notranslate"><span class="pre">double</span></code> to <code class="docutils literal notranslate"><span class="pre">int</span></code><a class="headerlink" href="#converting-from-double-to-int" title="Permalink to this headline">¶</a></h1>
 <p>As I mentioned, C++ converts <code class="docutils literal notranslate"><span class="pre">int</span></code> to <code class="docutils literal notranslate"><span class="pre">double</span></code> automatically if necessary,
 because no information is lost in the translation.
 This is called a <strong>widening conversion</strong>.</p>
 <p>On the other hand,
-going from a <code class="docutils literal notranslate"><span class="pre">double</span></code> to an <code class="docutils literal notranslate"><span class="pre">int</span></code> requires truncation. C++ doesn’t perform
-this operation automatically, in order to make sure that you, as the
-programmer, are aware of the loss of the fractional part of the number.
-This is called a <strong>narrowing conversion</strong>.
-does this mean that once you have an <code class="docutils literal notranslate"><span class="pre">int</span></code>, it can never be assigned
-to a <code class="docutils literal notranslate"><span class="pre">double</span></code>?</p>
+going from a <code class="docutils literal notranslate"><span class="pre">double</span></code> to an <code class="docutils literal notranslate"><span class="pre">int</span></code> <strong>truncates</strong> the result.
+When a floating point value is <em>truncated</em>, all of the information
+after the decimal place is lost – as if it never existed.
+The number is <strong>not</strong> rounded up, even if the fractional part is <code class="docutils literal notranslate"><span class="pre">.9</span></code>.
+C++ (usually) warns, but does not prevent this loss of information.
+This loss is called a <strong>narrowing conversion</strong>.
+Does this mean that once you have an <code class="docutils literal notranslate"><span class="pre">double</span></code>, it can never be assigned
+to a <code class="docutils literal notranslate"><span class="pre">int</span></code>?</p>
 <p>Of course not.</p>
 <p>You can explicitly perform these kinds of assignments by using a <em>typecast</em>.</p>
-<p id="index-0">The simplest way to convert a floating-point value to an integer is to
+<p id="index-1">The simplest way to convert a floating-point value to an integer is to
 use a <strong>typecast</strong>. Typecasting is so called because it allows you to
 take a value that belongs to one type and “cast” it into another type
 (in the sense of molding or reforming, not throwing).</p>
-<p>The syntax for typecasting is like the syntax for a function call. For
-example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14159</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="kt">int</span> <span class="p">(</span><span class="n">pi</span><span class="p">);</span>
+<p>There are 2 general forms for a cast in C++.</p>
+<p>The first syntax for typecasting is like the syntax for a function call.
+For example:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">constexpr</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="n">pi</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The int function returns an integer, so x gets the value 3. Converting
 to an integer always truncates, even if the fraction part is
 0.99999999.</p>
+<p>The second syntax, called a <em>named cast</em> is a bit more verbose.
+For example:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">constexpr</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="n">pi</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Other than the syntax that appears more like a vector than a function call,
+the behavior is identical to the functional form.
+One advantage of the named cast is that the entire type name is a parameter,
+so:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="n">pi</span><span class="p">);</span><span class="w">   </span><span class="c1">// this works</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="p">(</span><span class="n">pi</span><span class="p">);</span><span class="w">                </span><span class="c1">// this does not: error!</span>
+</pre></div>
+</div>
 <p>For every built-in type in C++, there is a corresponding function that casts
 its argument to the appropriate type.</p>
-<div id='tab_check' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Q1" >
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>With great power comes great responibility.</p>
+<p>Casts are commonly misused.
+Use them with caution, or even better – not at all.</p>
+</div>
+<p>C++ also inherits from C an older C-style cast syntax.
+Unfortunately, this type of cast is even more willing to bypass
+narrowing conversions. The C-style syntax places the <code class="docutils literal notranslate"><span class="pre">()</span></code> around the type
+rather than the value:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">constexpr</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">pi</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Casts like this can result in unexpected or implementation defined behavior.
+For example:</p>
 
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="3.2.1" data-multipleanswers="false"  id="double_to_int_1"  style="visibility: hidden;">
-            <p>Q-1: In the lab, we measured a temperature of 7.99999999 degrees C, using
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=convert_AC_1 data-question_label="3.2.1">
+<div id=convert_AC_1_question class="ac_question col-md-12">
+<p>What does this program produce?</p>
+
+</div>
+<textarea data-lang="cpp" id="convert_AC_1_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"     data-caption='Bad type conversion'  data-wasm=/_static
+     style="visibility: hidden;">
+#include <iostream>
+
+int main () {
+  double d = 2;
+  auto p = (long*)&d;
+  std::cout << d << ' ' << *p << '\n';  //*
+
+     *p = 666;
+     std::cout << d << ' ' << *p << '\n';  //*
+   }
+</textarea>
+</div>
+</div>
+<p>Unfortunately, a simple internet search will commonly find C++ code
+that still uses the old C-style cast syntax.</p>
+<p>Although the language allows us to write this kind of code, you almost never should.</p>
+<p>As a general rule, you should avoid casting if possible.
+Often a cast is performed when initializing a new variable from an old one.
+This is exactly the place where errors can creep in.</p>
+<p>If you know that you do not want to allow any narrowing conversions,
+then there is a simple remedy, starting with C++11:
+Use explicit type construction instead of a cast.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">constexpr</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="n">pi</span><span class="p">);</span><span class="w">     </span><span class="c1">// compiles. Narrows pi to 3</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">{</span><span class="n">pi</span><span class="p">};</span><span class="w">     </span><span class="c1">// Error. narrowing conversion from &#39;double&#39; to &#39;int&#39;</span>
+</pre></div>
+</div>
+<p>The explicit type construction will never implicitly allow a
+type conversion that results in data loss.</p>
+<p>Run the examples on each tab to see the results.
+In each case, the code is (mostly) the same, but the results may be different.</p>
+<div id='convert_examples' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Explicit type construction" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=convert_summary_AC_1 data-question_label="3.2.2">
+<div id=convert_summary_AC_1_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="convert_summary_AC_1_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-Wextra&#x27;, &#x27;-Werror&#x27;, &#x27;-std=c++11&#x27;]"     data-caption='Explicit construction'  data-wasm=/_static
+     style="visibility: hidden;">
+ #include <iostream>
+ int main () {
+     char p = int{104.5};
+     std::cout << p;
+ }
+</textarea>
+</div>
+</div>
+<p>Try changing <code class="docutils literal notranslate"><span class="pre">char</span> <span class="pre">p</span></code> to <code class="docutils literal notranslate"><span class="pre">auto</span> <span class="pre">p</span></code> and see what happens.</p>
+</div><div data-component="tab" data-tabname="Named cast" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=convert_summary_AC_2 data-question_label="3.2.3">
+<div id=convert_summary_AC_2_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="convert_summary_AC_2_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-Wextra&#x27;, &#x27;-Werror&#x27;, &#x27;-std=c++11&#x27;]"     data-caption='Named cast'  data-wasm=/_static
+     style="visibility: hidden;">
+ #include <iostream>
+ int main () {
+     char p = static_cast<int>(104.5);
+     std::cout << p;
+ }
+</textarea>
+</div>
+</div>
+<p>Try changing <code class="docutils literal notranslate"><span class="pre">char</span> <span class="pre">p</span></code> to <code class="docutils literal notranslate"><span class="pre">auto</span> <span class="pre">p</span></code> and see what happens.</p>
+</div><div data-component="tab" data-tabname="Functional cast" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=convert_summary_AC_3 data-question_label="3.2.4">
+<div id=convert_summary_AC_3_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="convert_summary_AC_3_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-Wextra&#x27;, &#x27;-Werror&#x27;, &#x27;-std=c++11&#x27;]"     data-caption='Functional cast'  data-wasm=/_static
+     style="visibility: hidden;">
+ #include <iostream>
+ int main () {
+     char p = int(104.5);
+     std::cout << p;
+ }
+</textarea>
+</div>
+</div>
+<p>Try changing <code class="docutils literal notranslate"><span class="pre">char</span> <span class="pre">p</span></code> to <code class="docutils literal notranslate"><span class="pre">auto</span> <span class="pre">p</span></code> and see what happens.</p>
+</div><div data-component="tab" data-tabname="C-style cast" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=convert_summary_AC_4 data-question_label="3.2.5">
+<div id=convert_summary_AC_4_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="cpp" id="convert_summary_AC_4_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-Wextra&#x27;, &#x27;-Werror&#x27;, &#x27;-std=c++11&#x27;]"     data-caption='Bad type conversion'  data-wasm=/_static
+     style="visibility: hidden;">
+ #include <iostream>
+ int main () {
+     char p = (int)104.5;
+     std::cout << p;
+ }
+</textarea>
+</div>
+</div>
+<p>Try changing <code class="docutils literal notranslate"><span class="pre">char</span> <span class="pre">p</span></code> to <code class="docutils literal notranslate"><span class="pre">auto</span> <span class="pre">p</span></code> and see what happens.</p>
+</div>
+    </div>
+
+<p>To summarize, casting to some type <code class="docutils literal notranslate"><span class="pre">T</span></code> ordered from worst to best:</p>
+<dl>
+<dt>C-style cast</dt><dd><p><code class="docutils literal notranslate"><span class="pre">new_value</span> <span class="pre">=</span> <span class="pre">(T)</span> <span class="pre">value;</span></code></p>
+<p>Never protects against inappropriate conversions. Avoid.</p>
+</dd>
+<dt>Functional cast</dt><dd><p><code class="docutils literal notranslate"><span class="pre">new_value</span> <span class="pre">=</span> <span class="pre">T</span> <span class="pre">(value);</span></code></p>
+<p>Protects against inappropriate conversions.
+Allows narrowing conversions.</p>
+<p>Can’t be used on types with spaces in the type name,
+such as <code class="docutils literal notranslate"><span class="pre">long</span> <span class="pre">long</span></code> and <code class="docutils literal notranslate"><span class="pre">unsigned</span> <span class="pre">int</span></code>.</p>
+</dd>
+<dt>Named cast</dt><dd><p><code class="docutils literal notranslate"><span class="pre">new_value</span> <span class="pre">=</span> <span class="pre">static_cast&lt;T&gt;</span> <span class="pre">(value);</span></code></p>
+<p>Protects against inappropriate conversions.
+Allows narrowing conversions.</p>
+<p>Allows converting to types with spaces in the type name,
+such as <code class="docutils literal notranslate"><span class="pre">long</span> <span class="pre">long</span></code> and <code class="docutils literal notranslate"><span class="pre">unsigned</span> <span class="pre">int</span></code>.</p>
+</dd>
+<dt>Explicit type construction</dt><dd><p><code class="docutils literal notranslate"><span class="pre">new_value</span> <span class="pre">=</span> <span class="pre">T</span> <span class="pre">{value};</span></code></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">T{value}</span></code> construction syntax makes it explicit that construction is desired.
+The <code class="docutils literal notranslate"><span class="pre">T{value}</span></code> construction syntax doesn’t allow narrowing.
+It is the <strong>only safe and general expression</strong> for constructing a value of
+type <code class="docutils literal notranslate"><span class="pre">T</span></code> from a value or an expression.</p>
+</dd>
+</dl>
+<div id='tab_check' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Q1" >
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="3.2.6" data-multipleanswers="false"  id="double_to_int_1"  style="visibility: hidden;">
+    <p>Q-6: In the lab, we measured a temperature of 7.99999999 degrees C, using
 an extremely precise measuring device.  Now we are writing a program
 to perform some calculations with our data.  Consider the following C++
 code.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="kt">double</span> <span class="n">temp</span> <span class="o">=</span> <span class="mf">7.99999999</span><span class="p">;</span>
-  <span class="kt">int</span> <span class="n">approx_temp</span> <span class="o">=</span> <span class="kt">int</span> <span class="p">(</span><span class="n">temp</span><span class="p">);</span>
-  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">approx_temp</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">7.99999999</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">approx_temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="n">temp</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">approx_temp</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>What is the value of <code class="docutils literal notranslate"><span class="pre">approx_temp</span></code>?</p>
 
-            <li data-component="answer"  id="double_to_int_1_opt_a">temp</li><li data-component="feedback">This is the name of a variable. Only the value of a variable will print with cout.</li>
-            
-            <li data-component="answer"  id="double_to_int_1_opt_b">8</li><li data-component="feedback">Remember that converting to an integer always truncates.</li>
-            
-            <li data-component="answer" data-correct id="double_to_int_1_opt_c">7</li><li data-component="feedback">Correct!</li>
-            
-            <li data-component="answer"  id="double_to_int_1_opt_d">8.0</li><li data-component="feedback">This is not an integer data type, and it's not the right number.</li>
-            
-            <li data-component="answer"  id="double_to_int_1_opt_e">7.0</li><li data-component="feedback">This is not an integer data type.</li>
-            
+    <li data-component="answer"  id="double_to_int_1_opt_a">temp</li><li data-component="feedback">This is the name of a variable. Only the value of a variable will print with cout.</li>
+    
+    <li data-component="answer"  id="double_to_int_1_opt_b">8</li><li data-component="feedback">Remember that converting to an integer always truncates.</li>
+    
+    <li data-component="answer" data-correct='yes' id="double_to_int_1_opt_c">7</li><li data-component="feedback">Correct!</li>
+    
+    <li data-component="answer"  id="double_to_int_1_opt_d">8.0</li><li data-component="feedback">This is not an integer data type, and it's not the right number.</li>
+    
+    <li data-component="answer"  id="double_to_int_1_opt_e">7.0</li><li data-component="feedback">This is not an integer data type.</li>
+    
 
-            </ul>
-            </div>
-            </div><div data-component="tab" data-tabname="Q2" >
+    </ul>
+    </div>
+    </div><div data-component="tab" data-tabname="Q2" >
 
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="3.2.2" data-multipleanswers="false"  id="double_to_int_2"  style="visibility: hidden;">
-            <p>Q-2: Your final grade consists of your average performance on exam 1 and exam 2.
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="3.2.7" data-multipleanswers="false"  id="double_to_int_2"  style="visibility: hidden;">
+    <p>Q-7: Your final grade consists of your average performance on exam 1 and exam 2.
 Your professor is using C++ to grade the exams and allows you to choose which
 method you’d like your exam to be graded.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="n">exam1</span> <span class="o">=</span> <span class="mf">88.8</span><span class="p">;</span>
-<span class="kt">double</span> <span class="n">exam2</span> <span class="o">=</span> <span class="mf">72.7</span><span class="p">;</span>
-<span class="kt">double</span> <span class="n">exam2</span> <span class="o">=</span> <span class="mf">97.9</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">exam1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">88.8</span><span class="p">;</span><span class="w"></span>
+<span class="kt">double</span><span class="w"> </span><span class="n">exam2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">72.7</span><span class="p">;</span><span class="w"></span>
+<span class="kt">double</span><span class="w"> </span><span class="n">exam2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">97.9</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
 <p><strong>Method 1:</strong></p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="k">final</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">(</span><span class="n">exam1</span><span class="p">)</span> <span class="o">+</span> <span class="kt">int</span><span class="p">(</span><span class="n">exam2</span><span class="p">)</span> <span class="o">+</span> <span class="kt">int</span><span class="p">(</span><span class="n">exam3</span><span class="p">))</span> <span class="o">/</span> <span class="mi">3</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="k">final</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">(</span><span class="n">exam1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="n">exam2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="n">exam3</span><span class="p">))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
 <p><strong>Method 2:</strong></p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="k">final</span> <span class="o">=</span> <span class="kt">int</span><span class="p">((</span><span class="n">exam1</span> <span class="o">+</span> <span class="n">exam2</span> <span class="o">+</span> <span class="n">exam3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="k">final</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="p">((</span><span class="n">exam1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">exam2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">exam3</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Which method would you choose and why?</p>
@@ -333,64 +495,54 @@ close to the next integer.</p></li><li data-component="answer" data-correct id="
 </li><li data-component="feedback" id="double_to_int_2_opt_d">
 <p>Always save your rounding until the end!</p></li>
 
-            </ul>
-            </div>
-            </div>
+    </ul>
+    </div>
+    </div>
     </div>
 
+<hr class="docutils" />
+<div class="admonition-more-to-explore admonition">
+<p class="admonition-title">More to Explore</p>
+<ul class="simple">
+<li><p>From C++ Core Guidelines</p>
+<ul>
+<li><p>Principle P.4 <a class="reference external" href="https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#p4-ideally-a-program-should-be-statically-type-safe">Ideally, a program should be statically type safe</a></p></li>
+<li><p>Guideline ES.48 <a class="reference external" href="https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#es48-avoid-casts">Avoid casts</a></p></li>
+<li><p>Guideline ES.46 <a class="reference external" href="https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#es46-avoid-lossy-narrowing-truncating-arithmetic-conversions">Avoid narrowing conversions</a></p></li>
+<li><p>Guideline ES.64 <a class="reference external" href="https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#es64-use-the-tenotation-for-construction">Use the T{e} notation for construction</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://en.cppreference.com/w/cpp/language/explicit_cast">Explicit casting</a> from cppreference.com</p></li>
+</ul>
 </div>
+</section>
 
 
-  <div id=scprogresscontainer>
-    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
   </div>
-  
-      
-<ul>
-  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 3.1. Floating-point' data-toggle="tooltip">
-    <a href="float.html" aria-label="3.1. Floating-point">
-        <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
-            <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
-        </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 3.1. Floating-point' data-toggle="tooltip">
+  <a href="float.html" aria-label="Previous - 3.1. Floating-point">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 3.3. Math Functions' data-toggle="tooltip" >
+    <a href="math.html" aria-label="Next - 3.3. Math Functions">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
     </a>
   </li>
 </ul>
-
-  
-<ul>
-  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - 3.3. Math Functions' data-toggle="tooltip" >
-    <a href="math.html" aria-label="3.3. Math Functions">
-      <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
-          <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
-      </div>
-    </a>
-  </li>
-</ul>
-
-<script type="text/javascript">
-
-  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
-  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
-
-</script>
 
 <script>
-	function mouseOverPrev() {
-		document.getElementById("relations-prev").style.opacity=1;
-	}
-
-	function mouseOutPrev() {
-		document.getElementById("relations-prev").style.opacity=0.4;
-	}
-	function mouseOverNext() {
-		document.getElementById("relations-next").style.opacity=1;
-	}
-
-	function mouseOutNext() {
-		document.getElementById("relations-next").style.opacity=0.4;
-	}
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
 </script>
-  
+
 </div>
 <footer class="footer">
   <div class="container">
@@ -400,8 +552,8 @@ close to the next integer.</p></li><li data-component="answer" data-correct id="
       
     </p>
     <p>
-        &copy; Copyright 2020-2021 Dave Parillo.
-      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.5.
+        &copy; Copyright 2020-2022 Dave Parillo, Barbara Ericson, and Allen B. Downey..
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.2.1.
     </p>
   </div>
 </footer>
@@ -409,7 +561,11 @@ close to the next integer.</p></li><li data-component="answer" data-correct id="
 
 
 
-<script> getSwitch(); </script>
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
 
 
   </body>

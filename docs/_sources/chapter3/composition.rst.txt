@@ -3,6 +3,7 @@ Composition
 
 .. index::
    single: composition
+   single: function composition
 
 Just as with mathematical functions, C++ functions can be **composed**,
 meaning that you use one expression as part of another. For example, you
@@ -15,6 +16,9 @@ can use expressions as an argument to a function:
 This statement takes the value of pi, divides it by two and adds the
 result to the value of angle. The sum is then passed as an argument to
 the ``cos`` function.
+Note that the order of operations that apply to expressions
+also apply when used in composition.
+Composition does not change the nature of an expression.
 
 You can also take the result of one function and pass it as an argument
 to another:
@@ -88,3 +92,14 @@ to another:
           -   ``y = tan(330 * 2 * pi / 360);``
 
               -   ``tan`` is not the proper function to use here.
+
+-----
+
+.. admonition:: More to Explore
+
+   - From cppreference.com
+
+     - C++ math: :numeric:`cos <math/cos>`,
+       :numeric:`exp <math/exp>`,
+       :numeric:`log <math/log>`
+     - :numeric:`constants` (such as :math:`\pi`)

@@ -1,0 +1,436 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>4.10. Function Composition &#8212; CISC 192 Course Reader Overview</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/runtime.b0f8547c48f16a9f.bundle.js?v=2731F567"></script>
+    <script src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script src="../_static/runestone.0e9550fe42760516.bundle.js?v=71AD37BA"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4.11. Overloading" href="overloading.html" />
+    <link rel="prev" title="4.9. Program Development" href="program-development.html" />
+
+
+<link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'https://daveparillo.github.io/cisc192-reader/' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/cisc192-reader';
+    eBookConfig.course = 'cisc192-reader';
+    eBookConfig.basecourse = 'cisc192-reader';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
+  eBookConfig.runestone_version = '6.2.1';
+  eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <div class="brand-logo"><img src="../_static/img/RAIcon.png" alt=""></div>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          cisc192-reader
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <!-- social media dropdown -->
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">4.9. </span>Program Development" data-toggle="tooltip">
+    <a href="program-development.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">4.11. </span>Overloading' data-toggle="tooltip" >              
+    <a href="overloading.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <section id="function-composition">
+<span id="index-0"></span><h1><span class="section-number">4.10. </span>Function Composition<a class="headerlink" href="#function-composition" title="Permalink to this headline">¶</a></h1>
+<p>As you should expect by now, once you define a new function, you can use
+it as part of an expression, and you can build new functions using
+existing functions. For example, what if someone gave you two points,
+the center of the circle and a point on the perimeter, and asked for the
+area of the circle?</p>
+<p>Let’s say the center point is stored in the variables <code class="docutils literal notranslate"><span class="pre">xc</span></code> and <code class="docutils literal notranslate"><span class="pre">yc</span></code>, and the
+perimeter point is in <code class="docutils literal notranslate"><span class="pre">xp</span></code> and <code class="docutils literal notranslate"><span class="pre">yp</span></code>. The first step is to find the radius of
+the circle, which is the distance between the two points. Fortunately,
+we have a function, <code class="docutils literal notranslate"><span class="pre">distance</span></code>, that does that.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="p">(</span><span class="n">xc</span><span class="p">,</span><span class="w"> </span><span class="n">yc</span><span class="p">,</span><span class="w"> </span><span class="n">xp</span><span class="p">,</span><span class="w"> </span><span class="n">yp</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The second step is to find the area of a circle with that radius, and
+return it.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">area</span><span class="w"> </span><span class="p">(</span><span class="n">radius</span><span class="p">);</span><span class="w"></span>
+<span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Wrapping that all up in a function, we get:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="nf">fred</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">xc</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">yc</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">xp</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">yp</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="p">(</span><span class="n">xc</span><span class="p">,</span><span class="w"> </span><span class="n">yc</span><span class="p">,</span><span class="w"> </span><span class="n">xp</span><span class="p">,</span><span class="w"> </span><span class="n">yp</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">area</span><span class="w"> </span><span class="p">(</span><span class="n">radius</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The name of this function is <code class="docutils literal notranslate"><span class="pre">fred</span></code>, which may seem odd. I will explain
+why in the next section.</p>
+<p>The temporary variables radius and area are useful for development and
+debugging, but once the program is working we can make it more concise
+by composing the function calls:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="nf">fred</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">xc</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">yc</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">xp</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">yp</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">area</span><span class="w"> </span><span class="p">(</span><span class="n">distance</span><span class="w"> </span><span class="p">(</span><span class="n">xc</span><span class="p">,</span><span class="w"> </span><span class="n">yc</span><span class="p">,</span><span class="w"> </span><span class="n">xp</span><span class="p">,</span><span class="w"> </span><span class="n">yp</span><span class="p">));</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=fun_comp_AC_1 data-question_label="4.10.1">
+<div id=fun_comp_AC_1_question class="ac_question col-md-12">
+<p>This program shows you how the distance and area functions are
+composed in the fred function to calculate the area of a circle
+if we only know the coordinates of the center, and one other point
+of the circle.</p>
+
+</div>
+<textarea data-lang="cpp" id="fun_comp_AC_1_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"     data-caption='Function Composition'  data-wasm=/_static
+     style="visibility: hidden;">
+#include <cmath>
+#include <iostream>
+
+double distance (double x1, double y1, double x2, double y2) {
+    double dx = x2 - x1;
+    double dy = y2 - y1;
+    double dsquared = dx * dx + dy * dy;
+    double result = sqrt (dsquared);
+    return result;
+}
+
+double area (double radius) {
+    double area = 3.14 * (radius * radius);
+    return area;
+}
+
+double fred (double xc, double yc, double xp, double yp) {
+    return area (distance (xc, yc, xp, yp));
+}
+
+int main () {
+    double circle_area = fred (1.0, 2.0, 4.0, 6.0);
+    cout << circle_area << endl;
+    return 0;
+}
+</textarea>
+</div>
+</div>
+<div id='self_check' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Q1" >
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="4.10.2" data-multipleanswers="false"  id="fun_comp_1"  style="visibility: hidden;">
+    <p>Q-2: What is function composition?</p>
+
+    <li data-component="answer"  id="fun_comp_1_opt_a">the types and quantities of variables that make up the function</li><li data-component="feedback">This would tell us what variables the function is composed of, but this is not what function composition means.</li>
+    
+    <li data-component="answer" data-correct='yes' id="fun_comp_1_opt_b">the process of combining one or more functions into more complicated ones</li><li data-component="feedback">This is what we did inside of the fred function.</li>
+    
+    <li data-component="answer"  id="fun_comp_1_opt_c">the process of creating a function using incremental development</li><li data-component="feedback">Incremental development is useful in function composition, but does not define it.</li>
+    
+    <li data-component="answer"  id="fun_comp_1_opt_d">all of the above</li><li data-component="feedback">There is only one correct answer here!</li>
+    
+
+    </ul>
+    </div>
+    </div><div data-component="tab" data-tabname="Q2" >
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="4.10.3" data-multipleanswers="false"  id="fun_comp_2"  style="visibility: hidden;">
+    <p>Q-3: It turns out you already have a function called <code class="docutils literal notranslate"><span class="pre">printHelloName</span></code>
+so you must rename this one.  Which of the following could be the
+new name for your function?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">printHelloName</span><span class="w"> </span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w">  </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+
+    <li data-component="answer"  id="fun_comp_2_opt_a">print_hello_name</li><li data-component="feedback">This function name isn't much of a change from our original, and would be a good choice, but what about the other options?</li>
+    
+    <li data-component="answer"  id="fun_comp_2_opt_b">fluffy_cat</li><li data-component="feedback">Although unconventional, there is nothing wrong about this name, but what about eat_pizza?</li>
+    
+    <li data-component="answer"  id="fun_comp_2_opt_c">eat_pizza</li><li data-component="feedback">Although unconventional, there is nothing wrong about this name, but what about fluffy_cat?</li>
+    
+    <li data-component="answer" data-correct='yes' id="fun_comp_2_opt_d">all of the above</li><li data-component="feedback">All of these function names are technically legal, but in general, it's good practice to name your functions something that describes what they do.</li>
+    
+    <li data-component="answer"  id="fun_comp_2_opt_e">none of the above</li><li data-component="feedback">There's nothing wrong with any of these function names, although some of them are weird.</li>
+    
+
+    </ul>
+    </div>
+    </div>
+    </div>
+
+<p>Function composition is not limited to a fixed number of calls.
+Multiple calls can be made to the same function as well as to a number of
+different functions.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=multi_comp_1 data-question_label="4.10.4">
+<div id=multi_comp_1_question class="ac_question col-md-12">
+<p>This program shows how mutliple calls are made to one function and it
+also shows that calling two or more different functions is valid.</p>
+
+</div>
+<textarea data-lang="cpp" id="multi_comp_1_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"     data-caption='Function Composition'  data-wasm=/_static
+     style="visibility: hidden;">
+#include <iostream>
+
+int increase_population (int population) {
+    return population*2;
+}
+
+void print_population (int population) {
+    std::cout << "The current population is "
+              << population << std::endl;
+}
+
+void grow_4(int start_size){
+    int new_size = increase_population(start_size);
+    // increase population again by doubling new_size
+    new_size = increase_population(new_size);
+    print_population(new_size);
+}
+
+int main () {
+    int begin_population = 3;
+    grow_4(begin_population);
+}
+</textarea>
+</div>
+</div>
+</section>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 4.9. Program Development' data-toggle="tooltip">
+  <a href="program-development.html" aria-label="Previous - 4.9. Program Development">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 4.11. Overloading' data-toggle="tooltip" >
+    <a href="overloading.html" aria-label="Next - 4.11. Overloading">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020-2022 Dave Parillo, Barbara Ericson, and Allen B. Downey..
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.2.1.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

@@ -21,7 +21,7 @@ when print_twice is called.
    #include <iostream>
 
    void print_twice (char phil) {
-       std::cout << phil << phil << std::endl;
+       std::cout << phil << phil << '\n';
    }
 
    int main () {
@@ -29,6 +29,16 @@ when print_twice is called.
        print_twice (argument);
        return 0;
    }
+
+.. admonition:: Try This!
+
+   Make the following changes to the previous program:
+   
+   - Change the value of 'phil' before printing.
+   - Print the value of 'argument' after ``print_twice`` is called.
+
+   Are the results what you expect?
+
 
 .. index::
    single: local
@@ -64,12 +74,15 @@ For example, the stack diagram for ``print_twice`` looks like this:
    func [label="{print_twice|{ phil: 'b'}}"]
    main -> func [style=invis]
 
+Keeping similar names separated from eachother in C++ is called
+:lang:`scope` -- and is one of the most important and powerful concepts
+in C++ (or any programming language).
 
 .. index::
    pair: function; instance
 
 Whenever a function is called, it creates a new **instance** of that
-function and places it on top of the function call stack.
+function (a new scope) and places it on top of the function call stack.
 Each instance of a function contains the parameters and local
 variables for that function. In the diagram an instance of a function is
 represented by a box with the name of the function in the first section and
@@ -100,15 +113,15 @@ phil.
 
          ::
 
-             void prit_hello_name (string name) {
-               cout << "Hello " << name << "!";
+             void print_hello_name (string name) {
+               cout << "Hello " << name << "!\n";
              }
 
              int main () {
                string name1 = "Phil";
-               prit_hello_name(name1);
+               print_hello_name(name1);
                string name2 = "Joe";
-               prit_hello_name(name2);
+               print_hello_name(name2);
                return 0;
              }
 
@@ -126,19 +139,19 @@ phil.
          :feedback_c: A local variable exists when a variable is declared within a function.
          :feedback_d: A local variable exists when a variable is declared within a function.
 
-         How many local variables and parameters does ``prit_hello_name`` have?
+         How many local variables and parameters does ``print_hello_name`` have?
 
          ::
 
-             void prit_hello_name (string name) {
-               cout << "Hello " << name << "!";
+             void print_hello_name (string name) {
+               cout << "Hello " << name << "!\n";
              }
 
              int main () {
                string name1 = "Phil";
-               prit_hello_name(name1);
+               print_hello_name(name1);
                string name2 = "Joe";
-               prit_hello_name(name2);
+               print_hello_name(name2);
                return 0;
              }
 
@@ -171,12 +184,12 @@ phil.
          ::
 
              void hi() {
-               cout << "hiii !"<<endl;
+               cout << "hiii !\n";
              }
             
              void print_greeting(){
                hi();
-               cout<<"how are you doing today. "<<endl;
+               cout<<"how are you doing today. \n";
                hi();
              }
 
@@ -186,4 +199,11 @@ phil.
                hi();
                return 0;
              }
+
+-----
+
+.. admonition:: More to Explore
+
+   - :lang:`Scope <scope>` from cppreference.com
+   - :wiki:`Call statck <Call_stack>` from Wikipedia
 

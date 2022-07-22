@@ -17,34 +17,33 @@ assess what you have learned in this chapter.
           ::
 
               #include <iostream>
-              using namespace std;
 
               int main() {
-                double GPA = 3.52;
-                int updatedGPA = int(GPA);
-                cout << "GPA: " << updatedGPA;
+                double gpa = 3.52;
+                int updated_gpa = int(gpa);
+                std::cout << "GPA: " << updated_gpa;
               }
 
           -   ``3.0``
 
-              -   Its correct to think that your GPA will be rounded down, but what 
+              -   Its correct to think that your GPA will be truncated, but what 
                   else happens when you convert from ``int`` to ``double``?
 
           -   ``3``
 
-              +   Converting to an ``int`` always rounds down to the nearest integer, so I do not 
+              +   Converting to an ``int`` always truncates, so I do not 
                   recommend using type conversions to build your resume... especially if you're 
                   close to ``4.0``.
 
           -   ``4.0``
 
-              -   Converting to an int *will* round your GPA, but not in the direction
+              -   Converting to an int *will* change your GPA, but not in the direction
                   that you were hoping for... what else happens when you convert from
                   ``int`` to ``double``?
 
           -   ``4``
 
-              -   Converting to an int *will* round yor GPA, but not in the direction
+              -   Converting to an int *will* change yor GPA, but not in the direction
                   that you were hoping for.
 
           -   Error!
@@ -60,7 +59,6 @@ assess what you have learned in this chapter.
           ::
 
               #include <iostream>
-              using namespace std;
 
               int main() {
                 int x = acos(-1);
@@ -100,9 +98,6 @@ assess what you have learned in this chapter.
 
           ::
 
-              #include <iostream>
-              using namespace std;
-
               int main() {
                 int a = 1.5;
                 double b = a + 1.5;
@@ -114,8 +109,7 @@ assess what you have learned in this chapter.
 
           -   ``a``
 
-              -   C++ performs automatic type conversion to round 1.5 down to the 
-                  nearest integer.
+              -   C++ performs automatic type conversion to truncate 1.5 to 1. 
 
           -   ``b``
 
@@ -127,29 +121,29 @@ assess what you have learned in this chapter.
 
           -   ``d``
 
-              -   C++ performs integer division to round ``1/5`` down to the nearest
-                  integer.  The value will be stored as ``0``, not ``0.2``.
+              -   C++ performs integer division which truncates ``1/5``.
+                  The value will be stored as ``0``, not ``0.2``.
 
           -   ``e``
 
-              -   ``c`` squared may have a non-zero decimal, but automatic type conversion
-                  will round it down to the nearest integer before storing the value in ``e``.
+              -   ``c`` squared may have a non-zero decimal,
+                  but automatic type conversion will truncate it before
+                  storing the value in ``e``.
           
           -   ``f``
 
-              -   ``int(c)`` rounds ``c`` down to the nearest integer before storing the 
-                  value in ``f``. 
+              -   ``int(c)`` truncates ``c`` before storing the value in ``f``.
 
    .. tab:: Q4
 
       .. mchoice:: functions_mc4
 
-          **Multiple Response** Which of the following would work as a function header
-          (first line of a function).
+          **Multiple Response** Which of the following would work as the
+          first line of a function definition?
 
-          -   ``printHelloWorld () {``
+          -   ``print_hellow_world () {``
 
-              -   This function header is missing a type.
+              -   This declaration is missing a type.
 
           -   ``string palindrome (word) {``
 
@@ -157,17 +151,17 @@ assess what you have learned in this chapter.
 
           -   ``int mult (int a, int b) {``
 
-              +   Correct! The function header has a type, empty parentheses, and
-                  a squiggly bracket.
+              +   Correct! The declaration has a type, empty parentheses, and
+                  an open curly brace.
 
-          -   ``char shiftThree (char letter)``
+          -   ``char shift_three (char letter)``
 
-              -   This function header is missing a squiggly bracket ``{``.
+              -   This declaration is missing an open curly brace ``{``.
 
-          -   ``void giveCompliment () {``
+          -   ``void give_compliment () {``
 
-              +   Correct! The function header has a type, empty parentheses, and
-                  a squiggly bracket.
+              +   Correct! The declaration has a type, empty parentheses, and
+                  an open curly brace.
           
           -   ``string friend (string name) {``
 
@@ -185,29 +179,29 @@ assess what you have learned in this chapter.
               #include <iostream>
               using namespace std;
 
-              void giveCompliment () {
+              void give_compliment () {
                   cout << "You are awesome!";
               }
 
-              void giveInsult () {
+              void give_insult () {
                   insult = "You suck!";
               }
 
               int main () {
-                  giveInsult ();
+                  give_insult ();
               }
 
           -   ``"You are awesome!"``
 
-              -   The ``giveCompliment`` function is not called in ``main``.
+              -   The ``give_compliment`` function is not called in ``main``.
 
           -   ``"You suck!"``
 
-              -   The ``giveInsult`` function doesn't ``cout`` anything.
+              -   The ``give_insult`` function doesn't ``cout`` anything.
 
           -   Nothing is printed.
 
-              +   Correct!  ``giveInsult`` doesn't ``cout`` anything.
+              +   Correct!  ``give_insult`` doesn't ``cout`` anything.
 
           -   Error!
 
@@ -219,23 +213,23 @@ assess what you have learned in this chapter.
       .. mchoice:: functions_mc6
 
           Rachel and Monica are best friends.  They write a function
-          called ``bestFriends`` so that they announce this fact to the 
+          called ``best_friends`` so that they announce this fact to the 
           rest of their friends.  What is printed when they run the code 
           below? Are there any errors?
 
           ::
 
               #include <iostream>
-              using namespace std;
+              #include <string>
 
-              void bestFriends (string a, string b) {
-                  cout << a << " is best friends with " << b;
+              void best_friends (string a, string b) {
+                  std::cout << a << " is best friends with " << b;
               }
 
               int main () {
-                  string a = "Rachel";
-                  string b = "Monica";
-                  bestFriends(b, a);
+                  std::string a = "Rachel";
+                  std::string b = "Monica";
+                  best_friends(b, a);
               }
 
           -   ``"Monica is best friends with Rachel"``
@@ -272,21 +266,21 @@ assess what you have learned in this chapter.
           ::
 
               #include <iostream>
-              using namespace std;
+              #include <string>
 
               void greeting (string name) {
-                  cout << "hello, " << name << "!";
+                  std::cout << "hello, " << name << "!";
               }
 
               void goodbye (string name) {
                   greeting (name);
-                  cout << "!!";
+                  std::cout << "!!";
               }
 
               int main () {
-                  string hannah = "Hannah";
-                  string anna = "Anna";
-                  string louise = hannah;
+                  std::string hannah = "Hannah";
+                  std::string anna = "Anna";
+                  std::string louise = hannah;
                   hannah = anna;
                   anna = louise;
                   goodbye (anna);
@@ -326,14 +320,15 @@ assess what you have learned in this chapter.
       .. mchoice:: functions_mc8
 
           **Multiple Response** Which of the following are legal function
-          calls of ``orderFood``?
+          calls of ``order_food``?
 
           ::
 
               #include <iostream>
+              #include <string>
               using namespace std;
 
-              void orderFood (string food, int quantity) {
+              void order_food (string food, int quantity) {
                   cout << "I'll have " << quantity << " " << food;
               }
 
@@ -345,25 +340,25 @@ assess what you have learned in this chapter.
                   char e = 'p';
               }
 
-          -   ``orderFood(a, c);``
+          -   ``order_food(a, c);``
 
               +   Correct! ``a`` is a string and ``c`` is an int.
 
-          -   ``orderFood(b, d);``
+          -   ``order_food(b, d);``
 
               +   Correct!  Automatic type conversion will convert d to
                   an ``int``.
 
-          -   ``orderFood(e, c);``
+          -   ``order_food(e, c);``
 
               -   ``e`` has a character value, and this function takes a *string*.
 
-          -   ``orderfood(a, d);``
+          -   ``order_food(a, d);``
 
               +   Correct! Automatic type conversion will convert d to
                   an ``int``.
 
-          -   ``orderFood(c, a);``
+          -   ``order_food(c, a);``
 
               -   You have to input your arguments in the correct order.
 
@@ -377,15 +372,16 @@ assess what you have learned in this chapter.
           ::
 
               #include <iostream>
+              #include <string>
               using namespace std;
 
-              void printWord (string w) {
+              void print (string w) {
                   cout << w << w;
               }
 
               int main () {
                   char a = 'a' + 5;
-                  printWord (a);
+                  print (a);
               }
 
           -   ``a``
@@ -409,7 +405,7 @@ assess what you have learned in this chapter.
 
           -   Error!
 
-              +   ``printWord`` takes a string, not a character, as an argument.
+              +   ``print`` takes a string, not a character, as an argument.
 
 
    .. tab:: Q10
@@ -461,12 +457,10 @@ assess what you have learned in this chapter.
               }
 
               void weekend(bool available){
-                  if(available==true){
+                  if(available) {
                      party(21,"Big house"); party(22,"CCTC");
-                  }
-
-                  else{
-                     cout<<"sorry I have to study for ENGR101!"<<endl;
+                  } else {
+                     cout<<"sorry I have to study for ENGR101!\n";
                   }
               }
 

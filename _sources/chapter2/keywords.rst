@@ -78,7 +78,9 @@ More on scope and namespaces in the next chapter.
          :feedback_d: string should not be used as a variable name.
          :feedback_e: char is a keyword and cannot be used as a variable name.
 
-         Multiple Response: Which of the following are keywords or will otherwise generate some error from the compiler if used as a variable name?
+         Multiple Response: Which of the following are keywords or
+         may generate some error from the compiler if used as a variable name
+         and should be avoided?
 
 
    .. tab:: Q3
@@ -92,11 +94,11 @@ More on scope and namespaces in the next chapter.
               :click-correct:double:endclick: :click-incorrect:x:endclick: = 1.0;
               :click-correct:int:endclick: :click-incorrect:y:endclick: = :click-incorrect:x:endclick: + 5;
               :click-correct:bool:endclick: :click-incorrect:Bool:endclick:;
-              :click-correct:string:endclick: :click-incorrect:s:endclick: = :click-incorrect:"void":endclick:;
+              :click-incorrect:string:endclick: :click-incorrect:s:endclick: = :click-incorrect:"void":endclick:;
               :click-correct:if:endclick: (:click-incorrect:y:endclick: > :click-incorrect:x:endclick:) {
                  :click-incorrect:Bool:endclick: = :click-correct:true:endclick:;
               }
-              :click-incorrect:cout:endclick: << :click-incorrect:Bool:endclick: << :click-correct:endl:endclick:;
+              :click-incorrect:cout:endclick: << :click-incorrect:Bool:endclick: << :click-incorrect:endl:endclick:;
           }
 
 

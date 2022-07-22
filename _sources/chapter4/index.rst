@@ -1,19 +1,28 @@
-Conditionals and recursion
-==========================
+Fruitful functions
+==================
 
 .. toctree::
    :maxdepth: 3
 
-   modulus.rst
+   fruitful.rst
    conditionals.rst
    alternatives.rst
    chained.rst
    nested.rst
+
    return.rst
-   recursion.rst
-   infinite-recursion.rst
-   stack-diagrams.rst
-   glossary.rst 
+   return-early.rst
+   returning-from-main.rst
+   program-development.rst
+   composition.rst
+   overloading.rst 
+
+   bool-values.rst
+   bool-variables.rst
+   logical-operators.rst
+   bool-functions.rst
+
+   glossary.rst
    review-1.rst
    review-2.rst
    review-3.rst

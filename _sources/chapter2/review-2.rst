@@ -299,3 +299,25 @@ Answer the following **Mixed-Up Code** questions to assess what you have learned
           name = "Buddy" #paired
          =====
          }
+
+   .. tab:: Q11
+
+      .. parsonsprob:: VARS_p11
+         :numbered: left
+         :adaptive:
+
+         Construct a block of code that prints the remainder of 18 when
+         divided by 13.
+         -----
+         int main () {
+         =====
+          int x = 18;
+          int y = 13; 
+         =====
+          cout << x % y;
+         =====
+          cout << y % x; #paired
+         =====
+          cout << y / x; #paired
+         =====
+         }

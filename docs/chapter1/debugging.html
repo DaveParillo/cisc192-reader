@@ -1,70 +1,51 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
 <!DOCTYPE html>
 
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>1.4. What is Debugging? &#8212; CISC 192 Course Reader Overview</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
     <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
-    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
-    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
-    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.5.5" />
-    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
     <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
     <script src="../_static/animationbase.js?v=A043C3A7"></script>
     <script src="../_static/html4css1.css?v=4533ACD3"></script>
-    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
-    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
-    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
     <script src="../_static/webglinteractive.js?v=2B768384"></script>
     <script src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script src="../_static/Blob.js?v=AEC2447"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script src="../_static/runestone.js?v=92D8BBF0"></script>
-    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
-    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
-    <script src="../_static/jquery-fix.js?v=1226591B"></script>
-    <script src="../_static/bootstrap-sphinx.js"></script>
-    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
-    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
-    <script src="../_static/theme.js?v=D899FB97"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/runtime.b0f8547c48f16a9f.bundle.js?v=2731F567"></script>
+    <script src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script src="../_static/runestone.0e9550fe42760516.bundle.js?v=71AD37BA"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="1.5. Formal and Natural Languages" href="formal_natural.html" />
     <link rel="prev" title="1.3. What is a Program?" href="program.html" />
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+
+
 <link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
 
-<script type="text/javascript">
+
+<script>
   eBookConfig = {};
   
     eBookConfig.useRunestoneServices = false;
@@ -73,6 +54,8 @@
     eBookConfig.course = 'cisc192-reader';
     eBookConfig.basecourse = 'cisc192-reader';
     eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
   
   eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
   eBookConfig.logLevel = 0;
@@ -80,18 +63,16 @@
   eBookConfig.build_info = "unknown";
   eBookConfig.python3 = true;
   eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
-  eBookConfig.runestone_version = '5.5.5';
+  eBookConfig.runestone_version = '6.2.1';
   eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
   eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
   eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
   eBookConfig.enable_chatcodes = false ? false : false;
-
+  eBookConfig.enableScratchAC = true;
 
 </script>
 
 <!-- Ad Serving Headers Only serve ads to Anonymous Users -->
-
-
 
 
 
@@ -105,15 +86,16 @@
 
     <div class="navbar-header">
       <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
-        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
 
       <div>
         
-          <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;'>&nbsp;<span aria-label="logo" class="visuallyhidden">Runestone Logo</span> </a>
+        
+          <div class="brand-logo"><img src="../_static/img/RAIcon.png" alt=""></div>
         
         <a class="navbar-brand" href="../index.html" aria-label="index-page">
           
@@ -128,17 +110,16 @@
       <ul class="nav navbar-nav navbar-right" >
 
         <li class="divider-vertical"></li>
-
+        <li><span id="browsing_warning"></span></li>
 
         <!-- social media dropdown -->
         <!-- end social media dropdown -->
 
         <li class="divider-vertical"></li>
-
         <!-- search dropdown -->
         <li class="dropdown">
           <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
           </a>
           <ul class='dropdown-menu'>
             
@@ -171,8 +152,8 @@
         <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
 
         <!-- <li class="dropdown">             -->
-          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
-              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
         <!-- </li> -->
 
         <li class="divider-vertical"></li>
@@ -201,42 +182,36 @@
   </li>
   <li class="divider-vertical"></li>
 
-<script type="text/javascript">
+<script>
   opts = {'placement':'bottom',
           'selector': '',
           'delay': { show: 100, hide: 50}
          };
 
-  $('#relations-prev').tooltip(opts);
-  $('#relations-next').tooltip(opts);
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
 </script>
         -->
         
           <li></li>
         
       </ul>
-
-      </div> <!-- navbar -->
-
-
-
-
-
-
-
-    </div> <!-- container -->
-  </div>
-</div>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
 
 
 <div class="container" id="continue-reading"></div>
 
 <div class="container" id="main-content" role="main">
+
 <!-- Ad Serving for Runestone Campaign -->
 
 
   
-  <div class="section" id="what-is-debugging">
+  <section id="what-is-debugging">
 <h1><span class="section-number">1.4. </span>What is Debugging?<a class="headerlink" href="#what-is-debugging" title="Permalink to this headline">¶</a></h1>
 <span class="target" id="index-0"></span><p id="index-1">Programming is a complex process, and since it is done by human beings,
 it often leads to errors. For whimsical reasons, programming errors are
@@ -245,7 +220,7 @@ them is called <strong>debugging</strong>.</p>
 <p>There are a few different kinds of errors that can occur in a program,
 and it is useful to distinguish between them in order to track them down
 more quickly.</p>
-<div class="section" id="compile-time-errors">
+<section id="compile-time-errors">
 <h2><span class="section-number">1.4.1. </span>Compile-time errors<a class="headerlink" href="#compile-time-errors" title="Permalink to this headline">¶</a></h2>
 <p id="index-2">The compiler can only translate a program if the program is
 syntactically correct; otherwise, the compilation fails and you will not
@@ -259,8 +234,8 @@ that structure.</p>
 end with a period. this sentence contains a syntax error. So does this
 one</p>
 <p>For most readers, a few syntax errors are not a significant problem,
-which is why we can read the poetry of e e cummings without spewing
-error messages.</p>
+which is why we can read the poetry of <a class="reference external" href="https://en.wikipedia.org/wiki/E._E._Cummings">e e cummings</a>
+without spewing error messages.</p>
 <p>Compilers are not so forgiving. If there is a single syntax error
 anywhere in your program, the compiler will print an error message and
 quit, and you will not be able to run your program.</p>
@@ -270,16 +245,16 @@ not very helpful. During the first few weeks of your programming career,
 you will probably spend a lot of time tracking down syntax errors. As
 you gain experience, though, you will make fewer errors and find them
 faster.</p>
-</div>
-<div class="section" id="run-time-errors">
+</section>
+<section id="run-time-errors">
 <span id="run-time"></span><h2><span class="section-number">1.4.2. </span>Run-time errors<a class="headerlink" href="#run-time-errors" title="Permalink to this headline">¶</a></h2>
 <p id="index-4">The second type of error is a <strong>run-time error</strong>, so-called because the
 error does not appear until you run the program.</p>
 <p>For the simple sorts of programs we will be writing for the next few
 weeks, run-time errors are rare, so it might be a little while before
 you encounter one.</p>
-</div>
-<div class="section" id="logic-errors-and-semantics">
+</section>
+<section id="logic-errors-and-semantics">
 <h2><span class="section-number">1.4.3. </span>Logic errors and semantics<a class="headerlink" href="#logic-errors-and-semantics" title="Permalink to this headline">¶</a></h2>
 <p id="index-5">The third type of error is the <strong>logical</strong> or <strong>semantic</strong> error.</p>
 <div class="admonition note" id="index-6">
@@ -294,8 +269,8 @@ messages, but it will not do the right thing. It will do something else.
 to write. The meaning of the program is wrong. Identifying semantic errors
 can be tricky, since it requires you to work backwards by looking at the
 output of the program and trying to figure out what it is doing.</p>
-</div>
-<div class="section" id="experimental-debugging">
+</section>
+<section id="experimental-debugging">
 <h2><span class="section-number">1.4.4. </span>Experimental debugging<a class="headerlink" href="#experimental-debugging" title="Permalink to this headline">¶</a></h2>
 <p>One of the most important skills you should acquire from working with
 this book is debugging. Although it can be frustrating, debugging is one
@@ -325,9 +300,9 @@ printing AAAA and BBBB. This later evolved to Linux” (from <em>The Linux
 Users’ Guide</em> Beta Version 1).</p>
 <p>In later chapters I will make more suggestions about debugging and other
 programming practices.</p>
-<div id='tab_check' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Q1" >
+<div id='tab_check' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Q1" >
 
-        <div class="runestone">
+        <div class="runestone ">
         <div data-component="fillintheblank" data-question_label="1.4.4.1" id="debugging_1"  style="visibility: hidden;">
             <p>Q-1: Another word for an error is a(n) <input type="text">.  The process of finding
 and fixing errors is called <input type="text">.</p>
@@ -340,22 +315,22 @@ and fixing errors is called <input type="text">.</p>
         </div>
             </div><div data-component="tab" data-tabname="Q2" >
 
-<div class="runestone">
+<div class="runestone  ">
 <ul data-component="dragndrop" data-question_label="1.4.4.2" id="debugging_2"  style="visibility: hidden;">
-    <span data-component="question">Q-2: Match each term to its definition!</span>
-	<span data-component=feedback>Try again!</span>
+    <span data-subcomponent="question">Q-2: Match each term to its definition!</span>
+	<span data-subcomponent=feedback>Try again!</span>
 
-    <li data-component="draggable" id="debugging_2_drag1">syntax (compile-time) error</li>
-    <li data-component="dropzone" for="debugging_2_drag1">an error that surfaces when something is wrong with the structure of your program</li>
+    <li data-subcomponent="draggable" id="debugging_2_drag1">syntax (compile-time) error</li>
+    <li data-subcomponent="dropzone" for="debugging_2_drag1">an error that surfaces when something is wrong with the structure of your program</li>
 
-    <li data-component="draggable" id="debugging_2_drag2">run-time error</li>
-    <li data-component="dropzone" for="debugging_2_drag2">an error that comes up when your program is executed</li>
+    <li data-subcomponent="draggable" id="debugging_2_drag2">run-time error</li>
+    <li data-subcomponent="dropzone" for="debugging_2_drag2">an error that comes up when your program is executed</li>
 
-    <li data-component="draggable" id="debugging_2_drag3">semantic error</li>
-    <li data-component="dropzone" for="debugging_2_drag3">your program does what you told it to do, not what you intended for it to do</li>
+    <li data-subcomponent="draggable" id="debugging_2_drag3">semantic error</li>
+    <li data-subcomponent="dropzone" for="debugging_2_drag3">your program does what you told it to do, not what you intended for it to do</li>
 </ul></div></div><div data-component="tab" data-tabname="Q3" >
 
-        <div class="runestone">
+        <div class="runestone ">
         <div data-component="fillintheblank" data-question_label="1.4.4.3" id="debugging_3"  style="visibility: hidden;">
             <p>Q-3: The structure of your program and the rules it must follow are called the <input type="text">.</p>
 
@@ -368,60 +343,48 @@ and fixing errors is called <input type="text">.</p>
             </div>
     </div>
 
+<hr class="docutils" />
+<div class="admonition-more-to-explore admonition">
+<p class="admonition-title">More to Explore</p>
+<ul class="simple">
+<li><p>From: cppreference.com:
+<a class="reference external" href="https://en.cppreference.com/w/cpp/error/assert">assert</a> and
+<a class="reference external" href="https://en.cppreference.com/w/cpp/language/static_assert">static_assert</a>.</p></li>
+<li><p><a class="reference external" href="http://heather.cs.ucdavis.edu/~matloff/UnixAndC/CLanguage/Debug.html">GDB tips</a></p></li>
+<li><p><a class="reference external" href="https://www.cprogramming.com/gdb.html">GDB tutorial</a></p></li>
+<li><p><a class="reference external" href="http://www.gnu.org/software/ddd/">DDD</a></p></li>
+<li><p>Don’t forget to learn how to use your own debugger in your IDE!</p></li>
+</ul>
 </div>
-</div>
+</section>
+</section>
 
 
-  <div id=scprogresscontainer>
-    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
   </div>
-  
-      
-<ul>
-  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 1.3. What is a Program?' data-toggle="tooltip">
-    <a href="program.html" aria-label="1.3. What is a Program?">
-        <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
-            <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
-        </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 1.3. What is a Program?' data-toggle="tooltip">
+  <a href="program.html" aria-label="Previous - 1.3. What is a Program?">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 1.5. Formal and Natural Languages' data-toggle="tooltip" >
+    <a href="formal_natural.html" aria-label="Next - 1.5. Formal and Natural Languages">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
     </a>
   </li>
 </ul>
-
-  
-<ul>
-  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - 1.5. Formal and Natural Languages' data-toggle="tooltip" >
-    <a href="formal_natural.html" aria-label="1.5. Formal and Natural Languages">
-      <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
-          <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
-      </div>
-    </a>
-  </li>
-</ul>
-
-<script type="text/javascript">
-
-  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
-  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
-
-</script>
 
 <script>
-	function mouseOverPrev() {
-		document.getElementById("relations-prev").style.opacity=1;
-	}
-
-	function mouseOutPrev() {
-		document.getElementById("relations-prev").style.opacity=0.4;
-	}
-	function mouseOverNext() {
-		document.getElementById("relations-next").style.opacity=1;
-	}
-
-	function mouseOutNext() {
-		document.getElementById("relations-next").style.opacity=0.4;
-	}
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
 </script>
-  
+
 </div>
 <footer class="footer">
   <div class="container">
@@ -431,8 +394,8 @@ and fixing errors is called <input type="text">.</p>
       
     </p>
     <p>
-        &copy; Copyright 2020-2021 Dave Parillo.
-      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.5.
+        &copy; Copyright 2020-2022 Dave Parillo, Barbara Ericson, and Allen B. Downey..
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.2.1.
     </p>
   </div>
 </footer>
@@ -440,7 +403,11 @@ and fixing errors is called <input type="text">.</p>
 
 
 
-<script> getSwitch(); </script>
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
 
 
   </body>

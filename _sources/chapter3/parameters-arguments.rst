@@ -20,11 +20,11 @@ indicates the type of each parameter. For example:
 ::
 
     void print_twice (char phil) {
-      cout << phil << phil << endl;
+      cout << phil << phil << '\n';
     }
 
 This function takes a single parameter, named 'phil', that has type ``char``.
-Whatever that parameter is (and at this point we have no idea what it
+Whatever that value is (and at this point we have no idea what it
 is), it gets printed twice, followed by a new line. I chose the name phil
 to suggest that the name you give a parameter is up to you, but in
 general you want to choose something more illustrative than phil.
@@ -73,12 +73,14 @@ realize that they are not the same thing, except that they happen to
 have the same value (in this case, the character ’b’).
 
 .. caution::
-   The value you provide as an argument must have the same type as the
+   The value you provide as an argument must have the same **type** as the
    parameter of the function you call.
 
 This rule is important, but it is sometimes confusing because C++ 
 sometimes converts arguments from one type to another automatically. 
-For now you should learn the general rule, and we will deal with 
+Recall the section :doc:`convert`.
+What is true in expressions is also true for function arguments.
+For now focus on the general rule, and we will deal with 
 exceptions later.
 
 .. tabbed:: tab_check
@@ -97,7 +99,7 @@ exceptions later.
          #include <iostream>
 
          void print_twice (char phil) {
-             std::cout << phil << phil << std::endl;
+             std::cout << phil << phil << '\n';
          }
 
          int main () {
@@ -116,7 +118,7 @@ exceptions later.
              #include <iostream>
 
              void print_twice (char phil) {
-               std::cout << phil << phil << std::endl;
+               std::cout << phil << phil << '\n';
              }
 
              int main () {
@@ -163,9 +165,20 @@ exceptions later.
 
       .. dragndrop:: params_args_4
           :feedback: Try again!
-          :match_1: int timesTwo(int x, int y);|||timesTwo(4, 7);
-          :match_2: int timesTwo(string y, int x);|||timesTwo("hello", 10);
-          :match_3: int timesTwo(double x, string y);|||timesTwo(4.5, "hello");
-          :match_4: int timesTwo(string x, string y);|||timesTwo("hello", "hi");
+          :match_1: int times_two(int x, int y);|||times_two(4, 7);
+          :match_2: int times_two(string y, int x);|||times_two("hello", 10);
+          :match_3: int times_two(double x, string y);|||times_two(4.5, "hello");
+          :match_4: int times_two(string x, string y);|||times_two("hello", "hi");
 
           Match the function declaration to an example of its function call.
+
+-----
+
+.. admonition:: More to Explore
+
+   - From cppreference.com
+
+     - :lang:`Function definitions <definition>` and
+       :lang:`declarations`
+     - :lang:`Functions <functions>`
+

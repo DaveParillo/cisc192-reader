@@ -1,134 +1,135 @@
-The Return Statement
---------------------
-
 .. index::
-   single: return statement
+   pair: keyword; return
 
-The ``return`` statement allows you to terminate the execution of a function
-before you reach the end. One reason to use it is if you detect an error
-condition:
+The ``return`` keyword
+----------------------
+The :lang:`return` keyword immediately returns from a function.
+If the function returns a value, then an expression or value
+may follow the return keyword.
 
-.. activecode:: return_AC_1
-   :language: cpp
-   :compileargs: ['-Wall', '-std=c++11']
-   :nocodelens:
-   :caption: Terminating a Function with a Return
+The first example is area, which takes a double as a parameter,
+and returns the area of a circle with the given radius:
 
-   This program will terminate with a return statement if the argument
-   provided is not positive.  Try running the code as is.  If you get
-   an error message, try changing the value of x.
-   ~~~~
-   #include <iostream>
-   #include <cmath>
+::
 
-   void print_logarithm (double x) {
-       if (x <= 0.0) {
-           std::cout << "Positive numbers only, please.\n";
-           return;
-       }
-       double result = log (x);
-       std::cout << "The log of " << x << " is " << result;
-   }
-
-    int main() {
-        double y = -9.8;
-        print_logarithm(y);
-        return 0;
+    double area (double radius) {
+      const double pi = 4*atan (1.0);
+      double area = pi * radius * radius;
+      return area;
     }
 
-This defines a function named ``print_logarithm`` that takes a ``double`` 
-named ``x`` as a parameter.
-The first thing it does is check whether x is less than
-or equal to zero, in which case it displays an error message and then
-uses ``return`` to exit the function. The flow of execution immediately
-returns to the caller and the remaining lines of the function are not
-executed.
+The first thing you should notice is that the beginning of the function
+definition is different. Instead of ``void``, which indicates a ``void``
+function, we see ``double``, which indicates that the return value from this
+function will have type ``double``.
 
-I used a floating-point value on the right side of the condition because
-there is a floating-point variable on the left.
+Void functions do not need a return statement, but all functions that declare
+a return value **must** have at least one return statement, or the
+program will crash when the function is called.
 
-Remember that any time you want to use one a function from the math
-library, you have to include the header file ``<cmath>``.
+.. note::
+   Functions can have any return type in C++.  The return type is always
+   specified before the name of the function.
 
-Putting ``return 0;`` in your code ends your program.
-Let's look back at a program from section 4.3.
-How would your answer change?
+Also, notice that the last line is an alternate form of the return
+statement that includes a return value. This statement means, “return
+immediately from this function and use the following expression as a
+return value.” The expression you provide can be arbitrarily
+complicated, so we could have written this function more concisely:
+
+::
+
+    double area (double radius) {
+      return 4*atan(1.0) * radius * radius;
+    }
+
+..	index::
+	  pair: variables; temporary variables
+
+On the other hand, **temporary** variables like ``area`` often make
+debugging easier. In either case, the type of the expression in the
+return statement must match the return type of the function. In other
+words, when you declare that the return type is ``double``, you are making a
+promise that this function will eventually produce a ``double``. If you try
+to return with no expression, or an expression with the wrong type, the
+compiler will take you to task.
+
 
 .. tabbed:: self_check
 
    .. tab:: Q1
 
-      .. mchoice:: return_1
-         :answer_a: One! Two! Three!
-         :answer_b: Two! Three!
-         :answer_c: Three!
-         :answer_d: Two!
-         :answer_e: One!
-         :correct: d
-         :feedback_a: Try again! Remember the function of return 0.
-         :feedback_b: Try again! Remember the function of return 0.
-         :feedback_c: Try again! Remember the function of return 0.
-         :feedback_d: 8 is not greater than 8, so the first condition will not be met.
-         :feedback_e: Take a look at the first conditional statement more closely.
+      .. mchoice:: return_vals_1
+         :answer_a: double
+         :answer_b: int
+         :answer_c: string
+         :answer_d: char
+         :correct: c
+         :feedback_a: There are no doubles used in this function.
+         :feedback_b: The parameter does not have to be the same type as the return type.
+         :feedback_c: The variable "outside" is being returned, which is of string type.
+         :feedback_d: The return type is actually a string of chars.
 
-         What will print?
+         What should the return type of the below function be?
 
          ::
 
-             #include <iostream>
-             using std::cout;
-
-             int main () {
-               int x = 8;
-               if (x > 8) {
-                 cout << "One! ";
-                 return 0;
-               }
-               if (x > 6) {
-                 cout << "Two! ";
-                 return 0;
-               }
-               if (x > 3) {
-                 cout << "Three!\n";
-                 return 0;
-               }
-               return 0;
+             ________ weather (int temp) {
+              string outside = "";
+              if (temp < 50) {
+                outside = "cold";
+              }
+              else {
+                outside = "warm"
+              }
+              return outside;
              }
+
 
    .. tab:: Q2
 
-      .. mchoice:: return_2
-         :answer_a: One! Two! Three!
-         :answer_b: Two! Three!
-         :answer_c: Three!
-         :answer_d: Two!
-         :answer_e: One!
+      .. mchoice:: return_vals_2
+         :answer_a: 4
+         :answer_b: 2
+         :answer_c: 16
+         :answer_d: The function does not return.
          :correct: b
-         :feedback_a: Take a look at the first conditional statement more closely.
-         :feedback_b: 8 is not greater than 8, so it doesn't meet the first condition.
-         :feedback_c: All of the following are "if" statements, with no return. There are no "else" statements.
-         :feedback_d: All of the following are "if" statements, with no return. There are no "else" statements.
-         :feedback_e: Take a look at the first conditional statement more closely.
+         :feedback_a: The function returns y before reaching the line where y is doubled.
+         :feedback_b: Because the return statement in the timesTwo function returns prior to the modification of y, 2 is returned and then printed.
+         :feedback_c: The function returns y before reaching the line where y is doubled.
+         :feedback_d: The function has an integer return type, so it WILL return an int.
 
          What will print?
 
          ::
 
              #include <iostream>
-             using namespace std;
+
+             int timesTwo(int x) {
+               int y = x;
+               return y;
+               y = y * 2;
+             }
 
              int main () {
-               int x = 8;
-               if (x > 8) {
-                 cout << "One! ";
-               }
-               if (x > 6) {
-                 cout << "Two! ";
-               }
-               if (x > 3) {
-                 cout << "Three!" << endl;
-               }
+               int i = 2;
+               std::cout << timesTwo(i);
                return 0;
              }
 
+   .. tab:: Q3
+
+      .. fillintheblank:: return_vals_3
+
+         A variable that exists only inside a function, is called a |blank| variable.
+
+         - :[Tt][Ee][Mm][Pp][Oo][Rr][Aa][Rr][Yy]: Temporary variables are useful for calculating and returning values inside functions since they are short-lived.
+           :.*: Try again!
+        
+
+-----
+
+.. admonition:: More to Explore
+
+   - The :lang:`return` keyword from cppreference.com
 

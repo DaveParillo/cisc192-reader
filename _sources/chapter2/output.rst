@@ -28,8 +28,6 @@ to output simple values. After observing the output, try inputting your own time
        cout << colon
        cout << minute
        cout << '\n';
-
-       return 0;
    }
 
 
@@ -73,8 +71,6 @@ output statement, which can make the previous program more concise:
 
        std::cout << "The current time is " 
                  << hour << colon << minute << '\n';
-
-       return 0;
    }
 
 

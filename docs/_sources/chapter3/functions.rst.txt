@@ -1,3 +1,6 @@
+.. index::
+   pair: function; declaration and definition
+
 Adding New Functions
 --------------------
 
@@ -13,12 +16,31 @@ syntax for ``main`` is the same as for any other function definition:
       STATEMENTS
     }
 
+The first line of this definition is called the 
+:lang:`declaration <declarations>`.
+A declaration introduces a new name into the program.
+For functions, the function name and all of the parameter types must unique.
+In the previous example, the declaration also included the
+:lang:`definition`, however, the declaration can appear as a 
+separate statement:
+
+::
+
+    RETURN_TYPE NAME ( LIST OF PARAMETERS );
+
+Note the semicolon ``;`` at the end of the statement, just like any other
+legal statement in C++.
+
 .. index::
    single: function call
 
 You can make up any name you want for your function, except that you
-can’t call it ``main`` or any other C++ keyword. The list of parameters
-specifies what information -- if any -- you have to provide in order to use, 
+can’t call it ``main`` or any other C++ keyword. 
+It should also not begin with an underscore ``_`` --
+variables and function that start with an underscore are reserved
+for the C++ implementation.
+The list of parameters specifies what information -- 
+if any -- you have to provide in order to use, 
 or **call**, the new function.
 
 ``main`` doesn't take any parameters, as indicated by the empty parentheses
@@ -28,12 +50,12 @@ write also have no parameters, so the syntax looks like this:
 ::
 
     void new_line () {
-      cout << endl;
+      cout << '\n';
     }
 
 This function is named ``new_line``; it contains only a single statement,
-which outputs a new line character, represented by the special value
-``endl``.
+which outputs a new line character, represented by the special character
+``'\n'``.
 
 In ``main`` we can call this new function using syntax that is similar to
 the way we call the built-in C++ commands:
@@ -41,9 +63,9 @@ the way we call the built-in C++ commands:
 ::
 
     int main () {
-      cout << "First Line." << endl;
+      cout << "First Line.\n";
       new_line ();
-      cout << "Second Line." << endl;
+      cout << "Second Line.\n";
       return 0;
     }
 
@@ -61,11 +83,11 @@ space between the lines? We could call the same function repeatedly:
 ::
 
     int main () {
-      cout << "First Line." << endl;
+      cout << "First Line.\n";
       new_line ();
       new_line ();
       new_line ();
-      cout << "Second Line." << endl;
+      cout << "Second Line.\n";
       return 0;
     }
 
@@ -84,11 +106,9 @@ lines:
    is called.
    ~~~~
    #include <iostream>
-   using std::cout;
-   using std::endl;
 
    void new_line () {
-       cout << endl;
+       std::cout << '\n';
    }
 
    void three_line () {
@@ -96,9 +116,9 @@ lines:
    }
 
    int main () {
-       cout << "First Line." << endl;
+       std::cout << "First Line.\n";
        three_line ();
-       cout << "Second Line." << endl;
+       std::cout << "Second Line.\n";
        return 0;
    }
 
@@ -111,6 +131,10 @@ You should notice a few things about this program:
 -  You can have one function call another function. In this case, ``main``
    calls ``three_line`` and three_line calls ``new_line``.
    Again, this is common and useful.
+
+-  The space between the function name and the function parentheses ``()``
+   is not required. These space is included here to make it easier to see,
+   but in most book examples, you will see no space after the function name.
 
 -  In ``three_line`` I wrote three statements all on the same line, which is
    syntactically legal (remember that spaces and new lines usually don’t
@@ -132,7 +156,7 @@ example only demonstrates two:
    group of statements. Functions can simplify a program by hiding a
    complex computation behind a single command, and by using English
    words in place of arcane code. Which is clearer, ``new_line`` or ``cout <<
-   endl``?
+   '\n'``?
 
 #. Creating a new function can make a program smaller by eliminating
    repetitive code. For example, a short way to print nine consecutive
@@ -152,7 +176,7 @@ example only demonstrates two:
 
               +   You can't name a function the same name as a reserved keyword.
 
-          -   You can have a fucntion with several parameters or a function with none.
+          -   You can have a function with several parameters or a function with none.
 
               -   This is true! However, you must always use parentheses.
 
@@ -167,28 +191,28 @@ example only demonstrates two:
    .. tab:: Q2
 
       .. clickablearea:: new_functions_2
-         :question: Click on all function HEADERS.
+         :question: Click on all function DECLARATIONS.
          :iscode:
          :feedback: Remember, the operator '=' is used for assignment.
 
-         :click-correct:void printX() {:endclick:
+         :click-correct:void print_x() {:endclick:
              :click-incorrect:cout << "X";:endclick:
          }
 
-         :click-correct:void printVar(int a) {:endclick:
+         :click-correct:void print_var(int a) {:endclick:
              :click-incorrect:cout << a;:endclick:
          }  
 
          :click-correct:int main() {:endclick:
              :click-incorrect:int x = 7;:endclick:
-             :click-incorrect:printVar(x);:endclick: 
+             :click-incorrect:print_var(x);:endclick: 
              :click-incorrect:if (x < 10) {:endclick:
                  :click-incorrect:x = x - 1;:endclick:
              }
-             :click-incorrect:printX();:endclick:
+             :click-incorrect:print_x();:endclick:
              :click-incorrect:int y = 3;:endclick:
              :click-incorrect:double result = x / y;:endclick:
-             :click-incorrect:printVar(result);:endclick:
+             :click-incorrect:print_var(result);:endclick:
              return 0;
          }
 
@@ -200,24 +224,24 @@ example only demonstrates two:
          :iscode:
          :feedback: Remember, the operator '=' is used for assignment.
 
-         :click-incorrect:void printX() {:endclick:
+         :click-incorrect:void print_x() {:endclick:
              :click-incorrect:cout << "X";:endclick:
          }
 
-         :click-incorrect:void printVar(int a) {:endclick:
+         :click-incorrect:void print_var(int a) {:endclick:
              :click-incorrect:cout << a;:endclick:
          }  
 
          :click-incorrect:int main() {:endclick:
              :click-incorrect:int x = 7;:endclick:
-             :click-correct:printVar(x);:endclick:  
+             :click-correct:print_var(x);:endclick:  
              :click-incorrect:if (x < 10) {:endclick:
                  :click-incorrect:x = x - 1;:endclick:
              }
-             :click-correct:printX();:endclick:     
+             :click-correct:print_x();:endclick:     
              :click-incorrect:int y = 3;:endclick:
              :click-incorrect:double result = x / y;:endclick:
-             :click-correct:printVar(result);:endclick:
+             :click-correct:print_var(result);:endclick:
              return 0;
          }
 
@@ -238,9 +262,19 @@ example only demonstrates two:
          =====
          int perimeter_value = twice_length + twice_width;
          =====
-         cout << perimeter_value<<endl;
+         cout << perimeter_value<<'\n';
          =====
          return parameter_value; #distractor
          =====
          }
+
+-----
+
+.. admonition:: More to Explore
+
+   - From cppreference.com
+
+     - :lang:`Function definitions <definition>` and
+       :lang:`declarations`
+     - :lang:`Functions <functions>`
 

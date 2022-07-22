@@ -1,3 +1,9 @@
+.. index::
+   single: float
+   single: double
+   single: floating point numbers
+
+
 Floating-point
 --------------
 
@@ -7,6 +13,8 @@ instead of fractions, but a more general solution is to use
 **floating-point** numbers, which can represent fractions as well as
 integers. In C++, there are two floating-point types, called ``float`` and
 ``double``. In this book we will use doubles exclusively.
+The ``double`` type is the default type for floating-point literals
+such as ``3.14``.
 
 You can create floating-point variables and assign values to them using
 the same syntax we used for the other types. For example:
@@ -23,7 +31,7 @@ same time:
 
     int x = 1;
     string empty = "";
-    double pi = 3.14159;
+    constexpr double pi = 3.14159;
 
 .. index::
    single: initialize
@@ -161,7 +169,7 @@ performing floating-point operations.
 
              double e = 2.71828;
              int e_int = e;
-             double e_double = eInt;
+             double e_double = e_int;
              cout << e_double;
 
          What is the value of ``e_double`` that is printed to the terminal?
@@ -181,19 +189,29 @@ performing floating-point operations.
          Run the code below to see what type of division occurs each time.
          ~~~~
          #include <iostream>
-         using namespace std;
 
          int main () {
              double value = 5.0/2; //(a)
-             cout<<"current value (a) is "<<value<<endl;
+             std::cout<<"current value (a) is "<<value<<'\n';
 
              value = 5/2.0; //(b)
-             cout<<"current value (b) is "<<value<<endl;
+             cout<<"current value (b) is "<<value<<'\n';
 
              value = 5/2; //(c)
-             cout<<"current value (c) is "<<value<<endl;
+             cout<<"current value (c) is "<<value<<'\n';
 
              value = 5.0/2.0; //(d)
-             cout<<"current value (d) is "<<value<<endl;
+             cout<<"current value (d) is "<<value<<'\n';
              return 0;
          }
+
+-----
+
+.. admonition:: More to Explore
+
+   - From cppreference.com
+
+     - C++ :lang:`types` and :types:`numeric_limits`
+     - :types:`is_floating_point`
+
+

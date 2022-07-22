@@ -1,0 +1,594 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>4.7. Returning early &#8212; CISC 192 Course Reader Overview</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/runtime.b0f8547c48f16a9f.bundle.js?v=2731F567"></script>
+    <script src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script src="../_static/runestone.0e9550fe42760516.bundle.js?v=71AD37BA"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4.8. Returning from main" href="returning-from-main.html" />
+    <link rel="prev" title="4.6. The return keyword" href="return.html" />
+
+
+<link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'https://daveparillo.github.io/cisc192-reader/' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/cisc192-reader';
+    eBookConfig.course = 'cisc192-reader';
+    eBookConfig.basecourse = 'cisc192-reader';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
+  eBookConfig.runestone_version = '6.2.1';
+  eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <div class="brand-logo"><img src="../_static/img/RAIcon.png" alt=""></div>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          cisc192-reader
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <!-- social media dropdown -->
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">4.6. </span>The <code class="docutils literal notranslate"><span class="pre">return</span></code> keyword" data-toggle="tooltip">
+    <a href="return.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">4.8. </span>Returning from main' data-toggle="tooltip" >              
+    <a href="returning-from-main.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <section id="returning-early">
+<span id="return-early"></span><h1><span class="section-number">4.7. </span>Returning early<a class="headerlink" href="#returning-early" title="Permalink to this headline">¶</a></h1>
+<p id="index-0">The <code class="docutils literal notranslate"><span class="pre">return</span></code> statement allows you to terminate the execution of a function
+before you reach the end. One reason to use it is if you detect an error
+condition:</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=return_AC_1 data-question_label="4.7.1">
+<div id=return_AC_1_question class="ac_question col-md-12">
+<p>This program will terminate with a return statement if the argument
+provided is not positive.  Try running the code as is.  If you get
+an error message, try changing the value of x.</p>
+
+</div>
+<textarea data-lang="cpp" id="return_AC_1_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"     data-caption='Terminating a Function with a Return'  data-wasm=/_static
+     style="visibility: hidden;">
+#include <iostream>
+#include <cmath>
+
+void print_logarithm (double x) {
+    if (x <= 0.0) {
+        std::cout << "Positive numbers only, please.\n";
+        return;
+    }
+    double result = log (x);
+    std::cout << "The log of " << x << " is " << result;
+}
+
+ int main() {
+     double y = -9.8;
+     print_logarithm(y);
+     return 0;
+ }
+</textarea>
+</div>
+</div>
+<p>This defines a function named <code class="docutils literal notranslate"><span class="pre">print_logarithm</span></code> that takes a <code class="docutils literal notranslate"><span class="pre">double</span></code>
+named <code class="docutils literal notranslate"><span class="pre">x</span></code> as a parameter.
+The first thing it does is check whether x is less than
+or equal to zero, in which case it displays an error message and then
+uses <code class="docutils literal notranslate"><span class="pre">return</span></code> to exit the function. The flow of execution immediately
+returns to the caller and the remaining lines of the function are not
+executed.</p>
+<p>I used a floating-point value on the right side of the condition because
+there is a floating-point variable on the left.</p>
+<p>Remember that any time you want to use one a function from the math
+library, you have to include the header file <code class="docutils literal notranslate"><span class="pre">&lt;cmath&gt;</span></code>.</p>
+<p>Since main is the first function on the call stack,
+putting <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">0;</span></code> in your main ends your program.</p>
+<div id='return_early_tabbed' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Q1" >
+<p>Let’s look back at a program from the <a class="reference internal" href="chained.html#chained-conditional"><span class="std std-ref">Chained Conditionals</span></a> section.
+How would your answer change?</p>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="4.7.2" data-multipleanswers="false"  id="return_1"  style="visibility: hidden;">
+    <p>Q-2: What will print?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="k">using</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="p">;</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;One! &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">6</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Two! &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Three!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+
+    <li data-component="answer"  id="return_1_opt_a">One! Two! Three!</li><li data-component="feedback">Try again! Remember the function of return 0.</li>
+    
+    <li data-component="answer"  id="return_1_opt_b">Two! Three!</li><li data-component="feedback">Try again! Remember the function of return 0.</li>
+    
+    <li data-component="answer"  id="return_1_opt_c">Three!</li><li data-component="feedback">Try again! Remember the function of return 0.</li>
+    
+    <li data-component="answer" data-correct='yes' id="return_1_opt_d">Two!</li><li data-component="feedback">8 is not greater than 8, so the first condition will not be met.</li>
+    
+    <li data-component="answer"  id="return_1_opt_e">One!</li><li data-component="feedback">Take a look at the first conditional statement more closely.</li>
+    
+
+    </ul>
+    </div>
+    </div><div data-component="tab" data-tabname="Q2" >
+<p>Compare Q1 to this example.
+Look it over carefully.
+At first glance it looks the same, but the logic is different.</p>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="4.7.3" data-multipleanswers="false"  id="return_2"  style="visibility: hidden;">
+    <p>Q-3: What will print?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;One! &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">6</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Two! &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Three!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+
+    <li data-component="answer"  id="return_2_opt_a">One! Two! Three!</li><li data-component="feedback">Take a look at the first conditional statement more closely.</li>
+    
+    <li data-component="answer" data-correct='yes' id="return_2_opt_b">Two! Three!</li><li data-component="feedback">8 is not greater than 8, so it doesn't meet the first condition.</li>
+    
+    <li data-component="answer"  id="return_2_opt_c">Three!</li><li data-component="feedback">All of the following are "if" statements, with no return. There are no "else" statements.</li>
+    
+    <li data-component="answer"  id="return_2_opt_d">Two!</li><li data-component="feedback">All of the following are "if" statements, with no return. There are no "else" statements.</li>
+    
+    <li data-component="answer"  id="return_2_opt_e">One!</li><li data-component="feedback">Take a look at the first conditional statement more closely.</li>
+    
+
+    </ul>
+    </div>
+    </div>
+    </div>
+
+<p>Sometimes it is tempting to have multiple return statements,
+one in each branch of a conditional:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="nf">absolute_value</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">-</span><span class="n">x</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Since these returns statements are in an alternative conditional, only
+one will be executed. Although it is legal to have more than one return
+statement in a function, you should keep in mind that as soon as one is
+executed, the function terminates without executing any subsequent
+statements.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you put return statements inside of a chain of conditionals, then
+you have to guarantee that <em>every possible path</em> through the program
+hits a return statement.  If you forget, your program will crash.</p>
+</div>
+<p id="index-1">Code that appears after a return statement, or any place else where it
+can never be executed, is called <strong>dead code</strong>. Some compilers warn you
+if part of your code is dead.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=return_vals_AC_1 data-question_label="4.7.4">
+<div id=return_vals_AC_1_question class="ac_question col-md-12">
+<p>Notice that there are two return statements in the code below.
+What if we pass zero as an argument, and neither conditional
+returns true?</p>
+
+</div>
+<textarea data-lang="cpp" id="return_vals_AC_1_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"     data-caption='Return Values'  data-wasm=/_static
+     style="visibility: hidden;">
+#include <iostream>
+
+double absolute_value (double x) {
+    if (x < 0) {
+        return -x;
+    }
+    else if (x > 0) {
+        return x;
+    }                          // WRONG!!
+}
+
+int main () {
+    std::cout << absolute_value(0);
+    return 0;
+}
+</textarea>
+</div>
+</div>
+<p>This program is not correct because if x happens to be 0, then neither
+condition will be true and the function will end without hitting a
+return statement. Unfortunately, the program compiles and runs,
+but the return value when <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">0</span></code> could be anything,
+and will probably be different in
+different environments.</p>
+<p>By now you are probably sick of seeing compiler errors, but as you gain
+more experience, you will realize that the only thing worse than getting
+a compiler error is <em>not</em> getting a compiler error when your program is
+wrong.</p>
+<p>Here’s the kind of thing that’s likely to happen: you test <code class="docutils literal notranslate"><span class="pre">absolute_value</span></code>
+with several values of x and it seems to work correctly. Then you give
+your program to someone else and they run it in another environment. It
+fails in some mysterious way, and it takes days of debugging to discover
+that the problem is an incorrect implementation of <code class="docutils literal notranslate"><span class="pre">absolute_value</span></code>. If
+only the compiler had warned you!</p>
+<p>From now on, if the compiler points out an error in your program, you
+should not blame the compiler. Rather, you should <em>thank</em> the compiler for
+finding your error and sparing you days of debugging. Some compilers
+have an option that tells them to be extra strict and report all the
+errors they can find. You should turn this option on all the time. The
+implementation below would fix the error in the code.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=return_vals_AC_2 data-question_label="4.7.5">
+<div id=return_vals_AC_2_question class="ac_question col-md-12">
+<p>This code fixes the error in the previoius implementation of
+absolute_value.  If we pass 0 as an argument, the function will
+return 0.  Thus, every route through the conditonal is satisfied.</p>
+<p>In almost all cases, when you see an <code class="docutils literal notranslate"><span class="pre">else</span></code> after a <code class="docutils literal notranslate"><span class="pre">return</span></code> the code
+can be simplified to eliminate the else block entirely:</p>
+
+</div>
+<textarea data-lang="cpp" id="return_vals_AC_2_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"     data-caption='Return Values'  data-wasm=/_static
+     style="visibility: hidden;">
+#include <iostream>
+
+double absolute_value (double x) {
+    if (x < 0) {
+        return -x;
+    }
+    return x;
+}
+
+int main () {
+   std::cout << absolute_value(0);
+   return 0;
+}
+</textarea>
+</div>
+</div>
+<p id="index-2">The basic <code class="docutils literal notranslate"><span class="pre">if-else</span></code> construct appears so often in programming
+that C defines an operator for it – the <em>ternary operator</em>.
+The basic form is:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CONDITION</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">TRUE_VALUE</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">FALSE_VALUE</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>It is called a ternary, because it is the only operator that is
+split into 3 parts.
+The ternary operator simplifies our function even further.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="kt">double</span><span class="w"> </span><span class="nf">absolute_value</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="o">?</span><span class="w"> </span><span class="o">-</span><span class="n">x</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">absolute_value</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>As an aside, you should know that there is a function in the math
+library called <a class="reference external" href="https://en.cppreference.com/w/cpp/numeric/math/fabs">fabs</a> that calculates the absolute value of a
+double correctly.</p>
+<div id='self_check' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Q1" >
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="4.7.6" data-multipleanswers="false"  id="dead_code_printing_1"  style="visibility: hidden;">
+    <p>Q-6: What will print?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="kt">double</span><span class="w"> </span><span class="nf">ticket_price</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="k">if</span><span class="p">(</span><span class="n">age</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="mf">5.50</span><span class="p">;</span><span class="w"></span>
+<span class="w">       </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; You get a child discount yay!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">   </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="mf">9.50</span><span class="p">;</span><span class="w"></span>
+<span class="w">       </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; Sorry you have to pay full price.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">   </span><span class="p">}</span><span class="w"></span>
+<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span><span class="w"> </span><span class="c1">//to avoid compiler error</span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">years</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ticket_price</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+
+    <li data-component="answer"  id="dead_code_printing_1_opt_a">You get a child discount yay!</li><li data-component="feedback">The function returns goes to the else block as age is not less than 5.</li>
+    
+    <li data-component="answer"  id="dead_code_printing_1_opt_b">Sorry you have to pay full price.</li><li data-component="feedback">The function returns 9.50 before reaching the output statment.</li>
+    
+    <li data-component="answer" data-correct='yes' id="dead_code_printing_1_opt_c">nothing gets printed</li><li data-component="feedback">The return statement is encountered before the cout statement.</li>
+    
+    <li data-component="answer"  id="dead_code_printing_1_opt_d">9.50</li><li data-component="feedback">Although 9.50 is returned there is no printing of this value.</li>
+    
+
+    </ul>
+    </div>
+    </div>
+    </div>
+
+<hr class="docutils" />
+<div class="admonition-more-to-explore admonition">
+<p class="admonition-title">More to Explore</p>
+<ul class="simple">
+<li><p>From cppreference.com</p>
+<ul>
+<li><p>C++ math: <a class="reference external" href="https://en.cppreference.com/w/cpp/numeric/math/abs">abs</a> and <a class="reference external" href="https://en.cppreference.com/w/cpp/numeric/math/fabs">fabs</a></p></li>
+<li><p>The <a class="reference external" href="https://en.cppreference.com/w/cpp/language/operator_other">ternary operator</a></p></li>
+</ul>
+</li>
+<li><p>Clang-tidy rule <a class="reference external" href="https://releases.llvm.org/14.0.0/tools/clang/tools/extra/docs/clang-tidy/checks/readability-else-after-return.html">avoid else after return</a></p></li>
+</ul>
+</div>
+</section>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 4.6. The  return  keyword' data-toggle="tooltip">
+  <a href="return.html" aria-label="Previous - 4.6. The  return  keyword">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 4.8. Returning from main' data-toggle="tooltip" >
+    <a href="returning-from-main.html" aria-label="Next - 4.8. Returning from main">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020-2022 Dave Parillo, Barbara Ericson, and Allen B. Downey..
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.2.1.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

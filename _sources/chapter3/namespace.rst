@@ -12,7 +12,7 @@
 
 Namespaces
 ----------
-When we introduced functions, we noted that all functions are *by default* global.
+All functions in C++ are *by default* global.
 Another way of saying this is that they are by default in the *global namespace*.
 The ``namespace`` keyword provides a mechanism
 to avoid polluting the global namespace with too many names.
@@ -37,21 +37,21 @@ All declarations within those blocks are declared in the named scope.
    }
 
    void mesa::details (char c) { // define the function declared earlier
-     // do something
+     std::cout << int{c};
    }
 
    //void mesa::oops () {       // error: oops not yet declared in mesa namespace
    //}
 
-   namespace mesa {  // a separate mesa namespace block
-     void oops ();
+   namespace mesa {      // a separate mesa namespace block
+     void oops ();       // a declaration with no definition is allowed
      namespace cisc {
-       double pi = 3.14159265358979;  // not the same variable as mesa::pi
+       double pi = 3.141592653;  // not the same variable as mesa::pi
      }
    }
 
    int main () {
-     using mesa::cisc::pi;
+     using mesa::cisc::pi;  // we can specify a name to treat as if it was global
      pi = 3.f;
      mesa::details('a');
    }
@@ -87,6 +87,6 @@ It is an error to have a namespace variable with the same name as a global varia
 
 .. admonition:: More to Explore
 
-  - From: cppreference.com: 
+  - From cppreference.com: 
     :lang:`namespace declarations <namespace>`
 

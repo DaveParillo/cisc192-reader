@@ -24,14 +24,22 @@ The following is wrong!
     int minute = 59;
     print_time (int hour, int minute);   // WRONG!
 
-In this case, the compiler can tell the type of hour and minute by
-looking at their declarations. 
-
 .. caution::
    It is unnecessary and illegal to include the type when you pass 
    variables as arguments! The type is only needed for declaration.
    
-The correct syntax is ``print_time (hour, minute)``.
+In this case, the compiler is getting mixed information and won't know
+what to do. What is meant by ``print_time(int hour, int minute);``
+
+- Is this a function call with the types included?
+  The compiler does not need types included, it knows the
+  types by looking at their declarations. 
+- Is this a malformed declaration -- missing the return type?
+
+Because the compiler can't tell what is intended, it stops
+and reports an error instead.
+
+The correct syntax is ``print_time (hour, minute);``.
 
 
 .. activecode:: multiple_params_AC_1
@@ -46,9 +54,9 @@ The correct syntax is ``print_time (hour, minute)``.
    #include <iostream>
 
    void print_price (int dollars, int cents) {
-       std::cout << "Price is " 
-                 << dollars << " dollars and " 
-                 << cents << " cents.\n";
+       std::cout << "The price is $" 
+                 << dollars << '.'
+                 << cents << "\n.";
    }
 
    int main () {
@@ -65,24 +73,23 @@ The correct syntax is ``print_time (hour, minute)``.
 
       .. mchoice::  multiple_params_1
 
-          Which of the following is a correct function header (first line of 
-          a function definition)?
+          Which of the following is a correct function declaration?
 
-          -   ``totalcost (double cost, tax, discount)``
+          -   ``total_cost (double cost, tax, discount);``
 
-              -   ``totalcost`` needs a return type, and each parameter needs a data type.
+              -   ``total_cost`` needs a return type, and each parameter needs a data type.
 
-          -   ``totalCost (double cost, double tax) {``
+          -   ``total_cost (double cost, double tax) {``
 
-              -   ``totalcost`` needs a return type.
+              -   ``total_cost`` needs a return type.
 
-          -   ``void totalCost (double cost, double tax, double discount) {``
+          -   ``void total_cost (double cost, double tax, double discount);``
 
               +   Correct!
 
-          -   ``void totalCost (double cost, double tax)``
+          -   ``void total_cost (double cost, tax);``
 
-              -   This function header is missing a ``{``, which is needed to begin defining the function.
+              -   This declaration needs types for each parameter.
 
 
    .. tab:: Q2
@@ -118,3 +125,14 @@ The correct syntax is ``print_time (hour, minute)``.
           -   ``void multiply_two (int x, string phil);``
 
               -   Data types are not needed when calling a function.
+
+-----
+
+.. admonition:: More to Explore
+
+   - From cppreference.com
+
+     - :lang:`Function definitions <definition>` and
+       :lang:`declarations`
+     - :lang:`Functions <functions>`
+

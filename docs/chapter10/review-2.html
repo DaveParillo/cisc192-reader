@@ -1,0 +1,586 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>10.8. Mixed-Up Code Exercises &#8212; CISC 192 Course Reader Overview</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/runtime.b0f8547c48f16a9f.bundle.js?v=2731F567"></script>
+    <script src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script src="../_static/runestone.0e9550fe42760516.bundle.js?v=71AD37BA"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="10.9. Activecode Exercises" href="review-3.html" />
+    <link rel="prev" title="10.7. Multiple Choice Exercises" href="review-1.html" />
+
+
+<link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'https://daveparillo.github.io/cisc192-reader/' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/cisc192-reader';
+    eBookConfig.course = 'cisc192-reader';
+    eBookConfig.basecourse = 'cisc192-reader';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
+  eBookConfig.runestone_version = '6.2.1';
+  eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <div class="brand-logo"><img src="../_static/img/RAIcon.png" alt=""></div>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          cisc192-reader
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <!-- social media dropdown -->
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">10.7. </span>Multiple Choice Exercises" data-toggle="tooltip">
+    <a href="review-1.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">10.9. </span>Activecode Exercises' data-toggle="tooltip" >              
+    <a href="review-3.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <section id="mixed-up-code-exercises">
+<h1><span class="section-number">10.8. </span>Mixed-Up Code Exercises<a class="headerlink" href="#mixed-up-code-exercises" title="Permalink to this headline">¶</a></h1>
+<p>Answer the following <strong>Mixed-Up Code</strong> questions to assess what you have learned in this chapter.</p>
+<div id='self_check' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Q1" >
+
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="vectors_p1" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Construct a block of code that changes the first element of &lt;code&gt;vec&lt;/code&gt; to a 6,
+multiplies the third element of &lt;code&gt;vec&lt;/code&gt; by 2, and increments the last element
+of &lt;code&gt;vec&lt;/code&gt; by 1 (in that order).  This should work no matter what &lt;code&gt;vec&lt;/code&gt; is.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="10.8.1"   data-adaptive="true"    data-noindent="true"    data-numbered="left"  style="visibility: hidden;">
+        vec[0] = 6;
+---
+vec[2] = vec[2] * 2;
+---
+last = vec.size() - 1;
+vec[last]++;
+---
+vec[1] = 6; #distractor
+---
+vec[0] == 6; #distractor
+---
+vec[3] = vec[3] * 2; #distractor
+---
+last = vec.size(); #distractor
+vec[last]++;
+        </pre>
+        </div>
+        </div>
+    
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="vectors_p2" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Construct a block of code that creates a vector called &lt;code&gt;digs&lt;/code&gt; whose elements are
+7, 8, 7, 8.  Then access elements to change the &lt;code&gt;digs&lt;/code&gt; to contain the elements
+7, 4, 7, 4.  &lt;b&gt;Important&lt;/b&gt;: Change the &lt;code&gt;8&lt;/code&gt;’s to &lt;code&gt;4&lt;/code&gt;’s in order of
+increasing index.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="10.8.2"   data-adaptive="true"    data-noindent="true"    data-numbered="left"  style="visibility: hidden;">
+        vector<int> digs = {7, 8, 7, 8};
+---
+digs[1] = 4;
+---
+digs.pop_back();
+---
+digs.push_back(4);
+---
+vector digs = {7, 8, 7, 8}; #distractor
+---
+vector<int> digs = [7, 8, 7, 8]; #distractor
+---
+digs[2] = 4; #distractor
+---
+digs.pop_back(4); #distractor
+        </pre>
+        </div>
+        </div>
+    
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="vectors_p3" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Construct a block of code that creates a vector called &lt;code&gt;nums&lt;/code&gt; whose elements are five &lt;code&gt;1&lt;/code&gt;’s.
+Then make a copy of this vector called &lt;code&gt;digits&lt;/code&gt;, and use vector operations to change
+digits to &lt;code&gt;{1, 2, 3}&lt;/code&gt;.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="10.8.3"   data-adaptive="true"    data-noindent="true"    data-numbered="left"  style="visibility: hidden;">
+        vector<int> nums (5, 1);
+---
+vector<int> digits = nums;
+---
+digits.pop_back();
+digits.pop_back();
+---
+digits[1]++;
+digits[2] = digits[2] * 3;
+---
+vector nums = {1, 1, 1, 1, 1}; #distractor
+---
+vector<int> nums = digits; #distractor
+---
+digits.push_back(); #distractor
+digits.push_back();
+---
+digits[2]++; #distractor
+digits[3] = digits[3] * 3;
+        </pre>
+        </div>
+        </div>
+    
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="vectors_p4" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Construct a block of code that loops over a vector called &lt;code&gt;numbers&lt;/code&gt;
+and transforms the vector so each element is doubled.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="10.8.4"   data-adaptive="true"    data-noindent="true"    data-numbered="left"  style="visibility: hidden;">
+        vector<int> numbers = {1, 2, 3, 4, 5};
+---
+for (size_t i = 0; i < numbers.size(); i++) {
+---
+ numbers[i] = numbers[i] * 2;
+---
+}
+---
+vector numbers = {1, 2, 3, 4, 5}; #distractor
+---
+for (size_t i = 1; i <= numbers.size(); ++i) { #distractor
+---
+for (int i = 0; i < numbers.size(); i++) { #distractor
+---
+numbers[i] * 2; #distractor
+        </pre>
+        </div>
+        </div>
+    
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="vectors_p5" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Suppose you have the vector</p>
+<p>&lt;pre&gt; &lt;code&gt;</p>
+<blockquote>
+<div><p>vector&lt;string&gt; words = {“car”, “cat”, “switch”, “princess”};</p>
+</div></blockquote>
+<p>&lt;/code&gt; &lt;/pre&gt;</p>
+<p>Construct a block of code that transforms the vector to</p>
+<p>&lt;pre&gt; &lt;code&gt;</p>
+<blockquote>
+<div><p>vector&lt;string&gt; words = {“cAr”, “cAt”, “switch”, “mArio”}</p>
+</div></blockquote>
+<p>&lt;/code&gt; &lt;/pre&gt;</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="10.8.5"   data-adaptive="true"    data-noindent="true"    data-numbered="left"  style="visibility: hidden;">
+        words.pop_back();
+---
+words.push_back("mario");
+---
+for (size_t i = 0; i < words.size(); ++i) {
+---
+ for (size_t c = 0; c < words[i].size(); ++c) {
+---
+  if (words[i][c] == 'a') {
+---
+      words[i][c] = 'A';
+---
+  }
+ }
+}
+---
+words.pop_back("mario"); #distractor
+---
+for (int i = 0; i < words.size(); ++i) { #distractor
+---
+for (int c = 0; c < words[i].size(); ++c) { #distractor
+---
+words[i][c] == 'A'; #distractor
+        </pre>
+        </div>
+        </div>
+    
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="vectors_p7" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Suppose &lt;code&gt;album&lt;/code&gt; has already been defined as</p>
+<p>&lt;pre&gt; &lt;code&gt;</p>
+<blockquote>
+<div><p>vector&lt;string&gt; album = {“imagine”, “needy”, “NASA”, “bloodline”, “fake smile”, “bad idea”, “make up”, “ghostin”, “in my head”, “7 rings”, “thank u, next”, “break up with your girlfriend, i’m bored”}</p>
+</div></blockquote>
+<p>&lt;/code&gt; &lt;/pre&gt;</p>
+<p>Construct a block of code that counts how many songs in &lt;code&gt;album&lt;/code&gt; start with b.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="10.8.6"   data-adaptive="true"    data-noindent="true"    data-numbered="left"  style="visibility: hidden;">
+        count = 0
+---
+for (size_t i = 0; i < album.size(); i++) {
+---
+ if (album[i][0] == 'b') {
+---
+  ++count;
+---
+ }
+}
+---
+for (int i = 0; i < album.size(); i++) { #distractor
+---
+if (album[i] == 'b') { #distractor
+---
+if (album[i][1] == 'b') { #distractor
+---
+count++ #distractor
+        </pre>
+        </div>
+        </div>
+    
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="vectors_p8" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Suppose you have the following two vectors to describe the weekly forecast</p>
+<p>&lt;pre&gt; &lt;code&gt;</p>
+<blockquote>
+<div><p>vector&lt;double&gt; temps = {82.0, 76.8, 74.3, 58.8, 79.2, 73.4, 80.1}
+vector&lt;double&gt; precip = {0.00, 0.30, 0.60, 0.90, 0.10, 0.20, 0.80}</p>
+</div></blockquote>
+<p>&lt;/code&gt; &lt;/pre&gt;</p>
+<p>Your family will go to the beach if the temperature at least 75 degrees and the chance
+of precipitation is less than 50%.  Construct a block of code that counts how many days
+your family can hit the beach on your vacation.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="10.8.7"   data-adaptive="true"    data-noindent="true"    data-numbered="left"  style="visibility: hidden;">
+        count = 0;
+---
+for (int i = 0; i < 7; ++i) {
+---
+ if (temps[i] >= 75.0 && precip[i] < 0.50) {
+---
+  ++count;
+---
+ }
+}
+---
+for (size_t i = 1; i <= 7; ++i) { #distractor
+---
+if (temps[i] > 75.0 && precip[i] <= 0.50) { #distractor
+---
+count++ #distractor
+        </pre>
+        </div>
+        </div>
+    
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="vectors_p9" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Suppose you have the following vector &lt;code&gt;nouns&lt;/code&gt;</p>
+<p>&lt;pre&gt; &lt;code&gt;</p>
+<blockquote>
+<div><p>vector&lt;string&gt; nouns = {“cereal”, “Cocoa Puffs”, “Mario”, “luigi”, “Aerosmith”};</p>
+</div></blockquote>
+<p>&lt;/code&gt; &lt;/pre&gt;</p>
+<p>Construct a block of code that creates a vector of the &lt;b&gt;proper&lt;/b&gt; nouns in &lt;code&gt;nouns&lt;/code&gt;.
+Use the &lt;code&gt;isupper&lt;/code&gt; function to check if a letter is uppercase.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="10.8.8"   data-adaptive="true"    data-noindent="true"    data-numbered="left"  style="visibility: hidden;">
+        vector<string> proper = {};
+---
+for (size_t i = 0; i < nouns.size(); ++i) {
+---
+ if (isupper(nouns[i][0])) {
+---
+  proper.push_back(nouns[i]);
+---
+ }
+}
+---
+if (isupper(nouns[i][1])) { #distractor
+---
+proper.push_back(nouns[i][0]); #distractor
+---
+proper.pop_back(nouns[i]); #distractor
+---
+vector proper = {}; #distractor
+        </pre>
+        </div>
+        </div>
+    
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="vectors_p10" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Suppose you have the following function &lt;code&gt;howMany&lt;/code&gt; and vector &lt;code&gt;exclamations&lt;/code&gt;</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">howMany</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">vec</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">let</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">vec</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">vec</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">c</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">vec</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">c</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">let</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">count</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">excl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;what?!&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;how???&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;fine!&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;STOP.&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;yay!!!!!&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ugh...!&quot;</span><span class="p">};</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Construct a block of code that counts how many times “.”, “!”, and “?” occur in &lt;code&gt;exclamations&lt;/code&gt;.
+Save the counts to a vector with “.” count as the first element, “!” count as the second, and “?” count as the third.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="10.8.9"   data-adaptive="true"    data-noindent="true"    data-numbered="left"  style="visibility: hidden;">
+        vector<char> punc = {'.', '!', '?'};
+vector<int> counts = {};
+---
+for (int i = 0; i < punc.size(); ++i) {
+---
+ counts.push_back(howMany(excl, punc[i]));
+---
+}
+---
+vector<string> punc = {".", "!", "?"}; #distractor
+vector<int> counts = {};
+---
+for (int i = 0; i < excl.size(); ++i) { #distractor
+---
+counts.push_back(howMany(excl, i)); #distractor
+        </pre>
+        </div>
+        </div>
+    </div>
+    </div>
+
+</section>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 10.7. Multiple Choice Exercises' data-toggle="tooltip">
+  <a href="review-1.html" aria-label="Previous - 10.7. Multiple Choice Exercises">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 10.9. Activecode Exercises' data-toggle="tooltip" >
+    <a href="review-3.html" aria-label="Next - 10.9. Activecode Exercises">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020-2022 Dave Parillo, Barbara Ericson, and Allen B. Downey..
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.2.1.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

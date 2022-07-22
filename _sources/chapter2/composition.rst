@@ -1,5 +1,5 @@
-Composition
------------
+Compound Expressions
+--------------------
 
 .. index::
    single: composition

@@ -16,7 +16,7 @@ perform an action but don’t return a value. That raises some questions:
    things like new_line and print_twice?
 
 The answer to the third question is “yes, you can write functions that
-return values,” and we’ll do it in a couple of chapters. I will leave it
+return values,” and we’ll do it next chapter. I will leave it
 up to you to answer the other two questions by trying them out. 
 
 .. note::

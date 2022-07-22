@@ -40,31 +40,32 @@ and eventually gets back to ``main`` so the program can terminate.
    :nocodelens:
    :caption: Multiply / Add Two
 
-   This program calls the multiplyTwo and addTwo functions in the
+   This program calls the multiply_two and add_two functions in the
    main.  See if you can follow the order of execution.
    ~~~~
    #include <iostream>
 
-   void printTotal (int x) {
-       std::cout << x << std::endl;
+   void print_total (int x) {
+       std::cout << x << '\n';
    }
 
-   int multiplyTwo (int x) {
+   int multiply_two (int x) {
        int total = x * 2;
-       printTotal(total);
+       print_total(total);
        return total;
    }
 
-   int addTwo (int x) {
+   int add_two (int x) {
        int total = x + 2;
+       print_total(total);
        return total;
    }
 
    int main () {
-       int num = 2;
-       int newNum = multiplyTwo(num);
-       int newerNum = addTwo(newNum);
-       return 0;
+       int value = 2;
+       int product = multiply_two(value);
+       int sum = add_two(product);
+       return sum;
    }
 
 
@@ -77,10 +78,10 @@ read from top to bottom. Instead, **follow the flow of execution**.
 
       .. dragndrop:: multiple_fun_1
           :feedback: Try again!
-          :match_1: multiplyTwo ||| executes second
-          :match_2: printTotal ||| executes third
+          :match_1: multiply_two ||| executes second
+          :match_2: print_total ||| executes third
           :match_3: main ||| executes first
-          :match_4: addTwo ||| executes last
+          :match_4: add_two ||| executes last
 
           Match the function to the order it is executed in the program above.
 
@@ -96,10 +97,9 @@ read from top to bottom. Instead, **follow the flow of execution**.
              :linenos:
 
              #include <iostream>
-             using namespace std;
 
              void new_line () {
-               cout << endl;
+               std::cout << '\n';
              }
 
              void three_line () {
@@ -107,9 +107,9 @@ read from top to bottom. Instead, **follow the flow of execution**.
              }
 
              int main () {
-               cout << "First Line." << endl;
+               std::cout << "First Line.\n";
                three_line ();
-               cout << "Second Line." << endl;
+               std::cout << "Second Line.\n";
                return 0;
              }
 
@@ -142,7 +142,7 @@ read from top to bottom. Instead, **follow the flow of execution**.
              :linenos:
 
              #include <iostream>
-             using namespace std;
+             using std::cout;
              
              void yo () {
                cout << "yo, ";
@@ -182,3 +182,12 @@ read from top to bottom. Instead, **follow the flow of execution**.
 
               -   Note that the ``main`` also prints something directly.
 
+-----
+
+.. admonition:: More to Explore
+
+   - From cppreference.com
+
+     - :lang:`Function definitions <definition>` and
+       :lang:`declarations`
+     - :lang:`Functions <functions>`

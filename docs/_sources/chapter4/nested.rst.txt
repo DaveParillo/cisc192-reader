@@ -21,17 +21,23 @@ another. We could have written the previous example as:
    #include <iostream>
    using std::cout;
 
+   void classify (int value) {
+       if (value == 0) {
+           cout << "value is zero\n";
+       } else {
+           if (value > 0) {
+               cout << "value is positive\n";
+           } else {
+               cout << "value is negative\n";
+           }
+      }
+   }
+
    int main () {
        int x = 9;
-       if (x == 0) {
-           cout << "x is zero\n";
-       } else {
-           if (x > 0) {
-               cout << "x is positive\n";
-           } else {
-               cout << "x is negative\n";
-           }
-       return 0;
+       classify (x);
+       x = x * -1;
+       classify (x);
    }
 
 There is now an outer conditional that contains two branches. The first
@@ -51,8 +57,9 @@ Notice again that indentation helps make the structure apparent, but
 nevertheless, nested conditionals get difficult to read very quickly. In
 general, it is a good idea to avoid them when you can.
 
-On the other hand, this kind of **nested structure** is common, and we
-will see it again, so you better get used to it.
+On the other hand, this kind of **nested structure** is common, so
+it is important to be able read nested code, regardless of whether it
+is a best practice or not.
 
 
 .. tabbed:: self_check
@@ -87,7 +94,6 @@ will see it again, so you better get used to it.
                    std::cout << "Hello!\n";
                  }
                }
-               return 0;
              }
 
    .. tab:: Q2
@@ -120,7 +126,6 @@ will see it again, so you better get used to it.
                    std::cout << "Hello!\n";
                  }
                }
-               return 0;
              }
 
    .. tab:: Q3
@@ -145,18 +150,32 @@ will see it again, so you better get used to it.
          ::
 
              string seating_arrangement(char first, char last) {
-               if (last > m) {
-                 if (first > m) {
+               constexpr char center = 'm';
+               if (last > center) {
+                 if (first > center) {
                    return "Back Left!";
                  } else {
                    return "Back Right!";
                  }
                } else {
-                 if (first > m) {
+                 if (first > .) {
                    return "Front Left!";
                  } else {
                    return "Front Right!";
                  }
                }
              }
+
+
+
+
+-----
+
+.. admonition:: More to Explore
+
+   - :lang:`if` from cppreference.com
+   - `The 'Arrow anti-pattern' <http://wiki.c2.com/?ArrowAntiPattern>`__ from
+     the Portland Pattern Repository (the very first wiki!)
+   - `Flattening arrow code <https://blog.codinghorror.com/flattening-arrow-code/>`__
+     from Jeff Atwood's blog.
 

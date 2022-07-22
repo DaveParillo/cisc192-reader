@@ -1,314 +1,417 @@
-Mixed-Up Code Exercises
------------------------
-
-Answer the following **Mixed-Up Code** questions to
-assess what you have learned in this chapter.
+Mixed Up Code Practice
+----------------------
 
 .. tabbed:: self_check
 
    .. tab:: Q1
 
-      .. parsonsprob:: cond_recc_p1
+      .. parsonsprob:: mucp_5_1
          :numbered: left
          :adaptive:
+         :noindent:
+         :practice: T
 
-         Construct a block of code that prints the remainder of 18 when
-         divided by 13.
+         Vacation time! But before you go, you need to convert your currency.
+         Let's write the code for the dollarToYen function. dollarToYen
+         takes dollar as a parameter and returns the equivalent amount of Japanese yen.
+         The conversion rate is 1 USD equals 105.42 Japanese yen.
+         Put the necessary blocks of code in the correct order.
          -----
-         int main () {
+         double dollarToYen (double dollar) {
          =====
-          int x = 18;
-          int y = 13; 
+         int dollarToYen (double dollar) {  #distractor
          =====
-          cout << x % y;
+         void dollarToYen (double dollar) {  #distractor
          =====
-          cout << y % x; #paired
+         double dollarToYen () {  #distractor
          =====
-          cout << y / x; #paired
+            double yen;  #distractor
+         =====
+            return 105.42 * dollar;
+         =====
+            return 105.42 * yen;  #distractor
          =====
          }
-
 
    .. tab:: Q2
 
-      .. parsonsprob:: cond_recc_p2
+      .. parsonsprob:: mucp_5_2
          :numbered: left
          :adaptive:
+         :noindent:
+         :practice: T
 
-         Construct a function that prints whether a number
-         is true.
+         When you buy something, you also need to pay sales tax. For example,
+         a nice shirt could be labeled with a price of exactly $20, but when 
+         you pay, you actually need to pay $21.20 in a state with 6% sales tax.
+         However, different states have different tax rates. Write the function
+         priceWithTax, which takes price and percentTax as parameters.
+         priceWithTax calculates the price after tax and returns it.
+         For example, priceWithTax (20, 6) returns 21.2.
+         Put the necessary blocks of code in the correct order.
          -----
-         void is_true (int number) {
+         double priceWithTax (double price, double percentTax) {
          =====
-         bool is_true (int number) { #paired
+         int priceWithTax (double price, int percentTax) {  #distractor
          =====
-          if (number % 2 == 0) {
+         double priceWithTax (price, percentTax) {  #distractor
          =====
-           cout << true;
-          }
+            return (1 + percentTax / 100) * price;
          =====
-          else {
+            return (1 + percentTax) * price;  #distractor
          =====
-           cout << false;
-          }
+            return percentTax * price;  #distractor
          =====
          }
-
 
    .. tab:: Q3
 
-      .. parsonsprob:: cond_recc_p3
+      .. parsonsprob:: mucp_5_3
          :numbered: left
          :adaptive:
+         :noindent:
+         :practice: T
 
-         Construct a function that prints the difference of a and b if the result
-         would result in a positive number.  Otherwise, prints -1.
+         Most assignments and tests are graded as a percentage, but final
+         grades are letters. Let's write the code for the percentToLetter function. 
+         percentToLetter takes a percentage and returns the corresponding
+         letter grade. A 90 and above is an 'A', an 80 and above is a 'B', a 70 and above
+         is a 'C', and anything under a 70 is an 'F'.
+         Put the necessary blocks of code in the correct order.
          -----
-         void difference (int a, int b) {
+         char percentToLetter (double percentage) {
          =====
-         int difference (int a, int b) { #paired
+         void percentToLetter (double percentage) {  #distractor
          =====
-          if (a - b > 0) {
+         void percentToLetter (int percentage) {  #distractor
          =====
-          if (a - b < 0) { #paired
+         char percentToLetter (percentage) {  #distractor
          =====
-           cout << a - b;
-          }
+            if (percentage >= 90) {
          =====
-          else {
+               return 'A';
          =====
-           cout << -1;
-          }
+               return A;  #paired
+         =====
+            }
+         =====
+            else if (percentage >= 80) {
+         =====
+               return 'B';
+         =====
+               return 'B'  #paired
+         =====
+            }
+         =====
+            else if (percentage >= 70) {
+         =====
+            else if (percentage > 70) {  #paired
+         =====
+               return 'C';
+         =====
+            }
+         =====
+            else {
+         =====
+               return 'F';
+         =====
+            }
          =====
          }
-
 
    .. tab:: Q4
 
-      .. parsonsprob:: cond_recc_p4
+      .. parsonsprob:: mucp_5_4
          :numbered: left
          :adaptive:
+         :noindent:
+         :practice: T
 
-         Construct a block of code that prints "automatic" if x is
-         an odd number, "systematic" if x is greater than y, AND
-         "hydromatic" if y is not equal to x.  Check all 3 conditions.
+         Let's write the code for the triangleArea function. triangleArea
+         takes two parameters, base and height. It returns the 
+         area of the triangle using the formula 1/2 * base * height.
+         Put the necessary blocks of code in the correct order.
          -----
-         if (x % 2 == 1) {
+         double triangleArea (double base, double height) {
          =====
-         if (x % 2 == 0) { #paired
+         int triangleArea (double base, double height) {  #distractor
          =====
-          cout << "automatic"; }
+         void triangleArea (double base, double height) {  #distractor
          =====
-         if (x > y) {
+         double triangleArea (base, height) {  #distractor
          =====
-         else if (x > y) { #paired
+            double area;  #distractor
          =====
-          cout << "systematic"; }
+            return 0.5 * base * height;
          =====
-         if (y != x) {
+            cout << 0.5 * base * height << endl;  #distractor
          =====
-         else { #paired
-         =====
-          cout << "hydromatic"; }
-         
+         }
 
    .. tab:: Q5
 
-      .. parsonsprob:: cond_recc_p5
+      .. parsonsprob:: mucp_5_5
          :numbered: left
          :adaptive:
+         :practice: T
 
-         Construct a block of code that prints "Pick me!" if x is
-         equal to y, "Choose me!" if x is less than y, OR "Love me!" 
-         if x + y is even.
+         Let's write the code for the cylinderVolume function. cylinderVolume
+         takes two parameters, radius and height. It returns the 
+         volume of the cylinder using the formula pi * radius * radius * height.
+         Put the necessary blocks of code in the correct order.
          -----
-         if (x == y) {
+         double cylinderVolume (double radius, double height) {
          =====
-         if (x = y) { #paired
+         void cylinderVolume (double radius, double height) {  #distractor
          =====
-          cout << "Pick me!"; }
+         double cylinderVolume (radius, height) {  #distractor
          =====
-         else if (y > x) {
+            double pi = 3.14;
          =====
-         if (x < y) { #paired
+            return pi * radius * radius * height;
          =====
-          cout << "Choose me!"; } 
-         =====
-         else if ((x + y) % 2 == 0) {
-         =====
-         else (x + y % 2 == 0) { #paired
-         =====
-         else if (x + y % 2 == 0) { #paired
-         =====
-          cout << "Love me!"; } 
-
+         }
 
    .. tab:: Q6
 
-      .. parsonsprob:: cond_recc_p6
+      .. parsonsprob:: mucp_5_6
          :numbered: left
          :adaptive:
+         :practice: T
 
-         Construct a function that prints your letter grade according to this scheme.
-         [0, 70) = F, [70, 80) = C, [80, 90) = B, and [90, 100] = A.
+         On a distant planet, depending on the characteristics of an egg, a kenchic,
+         an ooseg, or a guinpen might hatch from it. Let's write the function 
+         birdType which returns an int corresponding to each type of bird
+         (1 for kenchic, 2 for ooseg, and 3 for guinpen). If the egg is round, then it is a 
+         guinpen. Otherwise, if the egg is round and it isn't gray, then it is a kenchic. If 
+         it isn't a guinpen and it isn't a kenchic, then it's an ooseg. 
+         Put the necessary blocks of code in the correct order.
          -----
-         void printLetterGrade (double grade) {
+         int birdType (bool isRound, bool isGray) {
          =====
-          if (grade < 70) {
+         void birdType (bool isRound, bool isGray) {  #distractor
          =====
-           cout << "F"; }
+         double birdType (int isRound, char isGray) {  #distractor
          =====
-          else if (grade < 80) {
+            if (isRound && !isGray) {
          =====
-          if (grade < 80) { #paired
+            if (!isRound && !isGray) {  #paired
          =====
-           cout << "C"; }
+               return 1;
          =====
-          else if (grade < 90) {
+            }
          =====
-          if (grade < 90) { #paired
+            else if (!isRound || isGray) {
          =====
-           cout << "B"; }
+            else if (!(isRound || isGray)) {  #paired
          =====
-          else {
+               return 2;
          =====
-          else if (grade < 100) { #paired
+            }
          =====
-          if (grade < 100) { #paired
+            else {
          =====
-           cout << "A"; }
+               return 3;
+         =====
+               return 0;  #distractor
+         =====
+            }
          =====
          }
-
 
    .. tab:: Q7
 
-      .. parsonsprob:: cond_recc_p7
+      .. parsonsprob:: mucp_5_7
          :numbered: left
          :adaptive:
+         :practice: T
 
-         According to a logic game, a knight is someone who cannot tell a lie,
-         and a knave is someone who cannot tell the truth.  Construct a function
-         that takes two booleans: the truth value of the story, and the truth value
-         told by the person.  The function should print whether the person was a
-         knight or a knave.
+         Let's write the code for the isDoubleDigit function. isDoubleDigit
+         takes num as a parameter. isDoubleDigit returns true if 
+         num is a double digit number and returns false otherwise.
+         Put the necessary blocks of code in the correct order.
          -----
-         void knightKnave (bool truth, bool told) {
+         bool isDoubleDigit (int num) {
          =====
-          if (truth == true) {
+         isDoubleDigit (int num) {  #paired
          =====
-           if (told == true) {
-            cout << "Knight";
-           }
+            if (num >= 10 && num < 100) {
          =====
-           else {
-            cout << "Knave";
-           } }
+            if (10 <= num <= 99) {  #distractor
          =====
-          else {
+            if (num > 10 && num < 100) {  #distractor
          =====
-           if (told == true) {
-            cout << "Knave";
-           }
+            if (num > 10 && num <= 100) {  #distractor
          =====
-           else {
-            cout << "Knive";
-           } }
+               return true;
+         =====
+            }
+         =====
+            else {
+         =====
+               return false;
+         =====
+            }
          =====
          }
-         
 
    .. tab:: Q8
 
-      .. parsonsprob:: cond_recc_p8
+      .. parsonsprob:: mucp_5_8
          :numbered: left
          :adaptive:
+         :practice: T
 
-         If a cat is in a good mood, it purrs; when it's in a bad mood, it
-         meows.  If a doog is in a good mood, it barks; when it's in a bad
-         mood it woofs.  Construct a function that accomplishes this.
+         Let's write the code for the Compare function. Compare
+         takes two integers a, b. Compare returns 1 if 
+         a is greater than b, -1 if a is less than b and 0 if they are equal.
+         Put the necessary blocks of code in the correct order.
          -----
-         void makeVocals (string animal, string mood) {
+         int Compare (int a, int b) {
          =====
-          if (mood == "bad") {
+         bool Compare (int a, int b) {   #paired
          =====
-           if (animal == "dog") {
-            cout << "Woof!";
-           }
+            if (a > b) {
          =====
-           else {
-            cout << "Meow!";
-           }
+            if (a > b && a &lt b) {  #distractor
          =====
-          else {
+               return 1;
          =====
-           if (animal == "dog") {
-            cout << "Bark!";
-           }
+            }
          =====
-           else {
-            cout << "Purr!";
-           }
+            else if (a &lt b) {  
+         =====
+            else if (a!=b) {  #distractor
+         =====
+               return -1;
+         =====
+            }
+         =====
+            else if (a > 0){ #distractor
+         =====
+            else {
+         =====
+               return 0;
+         =====
+            }
          =====
          }
 
-
    .. tab:: Q9
 
-      .. parsonsprob:: cond_recc_p9
+      .. parsonsprob:: mucp_5_9
          :numbered: left
          :adaptive:
+         :practice: T
 
-         Construct a recursive function that tells the user to enter a positive
-         number.  It should then output that number to the terminal.  If the user
-         enters a negative number or zero, prompt the user again.
+         Let's write the code for the isFactor function. isFactor
+         takes two parameters, num and factor.
+         isFactor returns true if factor is a factor of num 
+         and returns false otherwise.
+         Put the necessary blocks of code in the correct order.
          -----
-         void takeSum () {
+         bool isFactor (int num, int factor) {
          =====
-          cout << "Input a positive number!";
+         void isFactor (int num, int factor) {  #paired
          =====
-          int num;
-          cin >> num;
+            if (num % factor == 0) {
          =====
-          if (num < 0) {
+            if (num / factor == 0) {  #distractor
          =====
-           takesum ();
+            if (num % factor) {  #distractor
          =====
-          } // END "if"
+            if (factor % num == 0) {  #distractor
          =====
-          cout << num;
+               return true;
          =====
-         } // END function
-
+            }
+         =====
+            else {
+         =====
+               return false;
+         =====
+            }
+         =====
+         }
 
    .. tab:: Q10
 
-      .. parsonsprob:: cond_recc_p10
+      .. parsonsprob:: mucp_5_10
          :numbered: left
          :adaptive:
+         :practice: T
 
-         In the table of ASCII characters, the lowercase alphabet consists
-         of characters 97-122.  The uppercase alphabet consists of characters
-         65-90, which is a 32 character shift back from the lowercase.  Construct
-         a recursive function that asks the user to input a LOWERCASE character,
-         converts that character to UPPERCASE character and prints it.  If the user
-         enters a character outside of the range of the LOWERCASE alphabet, prompt
-         the user again.  Hint:  "||" means "or" when used between two conditional
-         statements.
+         Let's write the code for the isPerfectSquare function. isPerfectSquare
+         takes input as a parameter and returns true if input is a 
+         perfect square and returns false otherwise.
+         Put the necessary blocks of code in the correct order.
          -----
-         void capitalize () {
+         bool isPerfectSquare (int input) {
          =====
-          cout << "Input a lowercase character!";
+         bool isPerfectSquare (int input) #distractor
          =====
-          char let;
-          cin >> let;
+         int isPerfectSquare (int input) {  #distractor
          =====
-          if (int(let) < 97 || int(let) > 122) {
+            int root = sqrt (input);
          =====
-           capitalize (); }
+            double root = sqrt (input);  #distractor
          =====
-          let = let - 32;
+            if (pow (root, 2) == input) {
          =====
-          cout << char(let);
+            if (sqrt (input)) {  #distractor
+         =====
+               return true;
+         =====
+            }
+         =====
+            else {
+         =====
+               return false;
+         =====
+            }
+         =====
+         }
+
+   .. tab:: Q11
+
+      .. parsonsprob:: mucp_5_11
+         :numbered: left
+         :adaptive:
+         :practice: T
+
+         Most bacteria cultures grow exponentially. For this problem,
+         assume the number of cells in a bacterial culture doubles every hour.
+         Let's write the code for the countBacteria function. countBacteria 
+         takes hour as a parameter and returns the number of bacteria cells
+         after hour hours. Assume when hour is 0, there is one cell. When 
+         hour is one, the number of cells doubles to two. When hour is two, 
+         the number of cells doubles to four. Use recursion. 
+         Put the necessary blocks of code in the correct order.
+         -----
+         int countBacteria (int hour) {
+         =====
+         void countBacteria (int hour) {  #distractor
+         =====
+         bool countBacteria (int hour) {  #distractor
+         =====
+            if (hour == 0) {
+         =====
+            if (hour == 1) {  #paired
+         =====
+               return 1;
+         =====
+               return 2 * hour;  #distractor
+         =====
+            }
+         =====
+            else {
+         =====
+               return 2 * countBacteria (hour - 1);
+         =====
+               return 2 + countBacteria (hour - 1);  #distractor
+         =====
+               return 2 * countBacteria (hour);  #distractor
+         =====
+            }
          =====
          }

@@ -1,366 +1,485 @@
 Multiple Choice Exercises
 -------------------------
 
-.. tabbed:: self_check
+Answer the following **Multiple Choice** questions to
+assess what you have learned in this chapter.
 
-   .. tab:: Q1
-
-      .. mchoice:: mce_6_1
-          :practice: T
-
-          What is the output of the code below?
-
-          .. code-block:: cpp
-
-             int main() {
-               int x = 0;
-               int i = 1;
-               while (i < 10) {
-                 x = i;
-                 i++;
-               }
-               cout << x;
-             }
-
-          - 0
-
-            - ``x`` is initialized to 0, but it's value is reassigned in the while loop. Can you figure out what the final value assigned to ``x`` is?
-          
-          - 1
-          
-            - When ``i`` is 1, ``x`` is assigned the value of ``i``, so ``x`` is 1. However, the while loop continuously increments i, so the final value of ``x`` is not 1. 
-          
-          - 9
-          
-            + ``x`` is assigned the value of 9 during the last iteration of the while loop, and thus 9 is the output of the program.
-          
-          - 10
-          
-            - ``i`` is incremented to a value of 10, but since ``i < 10`` is false, the contents of the while loop is not executed, so ``x`` is never assigned the value of 10.
+.. tabbed:: self-check
 
    .. tab:: Q2
 
-      .. mchoice:: mce_6_2
-          :practice: T
+      .. mchoice:: cond_rec_mc2
 
-          What is the final value of ``i`` when the code is finished running?
+          What is printed when the following code executes?
 
-          .. code-block:: cpp
+          ::
 
-             int main() {
-               int x = 0;
-               int i = 1;
-               while (i < 10) {
-                 x = i;
-                 i++;
-               }
-               cout << x;
-             }
+              int x = 8;
 
-          - 0
-          
-            - ``i`` is initialized with a value of 1 and is incremented, so it will never have a value of 0.
-          
-          - 1
-          
-            - ``i`` is initialized with a value of 1 but it is incremented during the while loop.
-          
-          - 9
-          
-            - This is the final value of ``x`` when the code is finished running.
-          
-          - 10
-          
-            + In order for the while loop to terminate, the condition ``i < 10`` must be false, and this is achieved when ``i`` is incremented to 10.
+              if (x % 3 == 2) {
+                  cout << "hey!" << endl;
+              } else if (x != 7) {
+                  cout << "hi!" << endl;
+              } else if (x % 2 == 0) {
+                  cout << "hello!" << endl;
+              } else {
+                  cout << "bye!" << endl;
+              }
+
+          -   :: none
+
+                  hey!
+
+              +   Since the first conditon is met, the rest of the chained
+                  conditional does not execute.
+
+          -   :: none
+
+                  hi!
+
+              -   It's true that ``8 != 7``, but "hi!" is not printed here.
+
+          -   :: none
+
+                  hi!
+
+              -   It's true that ``8 % 2 == 0``, but "hello!" is not printed!
+
+          -   :: none
+
+                  hey!
+                  hi!
+                  hello!
+
+              -   All of these conditons are met, but only one expression is
+                  printed!
+
+          -   :: none
+
+                  bye!
+
+              -   At least one of the conditons is met, so the ``else`` will not
+                  execute!
+
 
    .. tab:: Q3
 
-      .. mchoice:: mce_6_3
-          :practice: T
+      .. mchoice:: cond_rec_mc3
 
-          How many times does the following while loop run?
+          What is printed when the following code executes?
 
-          .. code-block:: cpp
+          ::
 
-             int main() {
-               int i = 6;
-               while (i > 2) {
-                 i = i + 4;
-                 if (i > 8) {
-                   i = i - 5;
-                 }
-               }
-             }
+              int x = 34;
 
-          - 1
-          
-            - Take a closer look at the while loop and conditional.
-          
-          - 3
-          
-            - Take a closer look at the while loop and conditional.
-          
-          - 5
-          
-            - Take a closer look at the while loop and conditional.
-          
-          - The loop will run infinitely.
-          
-            + The value of ``i`` will always be greater than 2, resulting in an infinite loop.
+              if (32 < x) {
+                  cout << "It's Freezing!";
+              }
+              if (x < 40) {
+                  cout << "It's Cold!";
+              }
+              if (x > 65) {
+                  cout << "It's Warm!";
+              } else {
+                  cout << "It's Hot!";
+              }
+
+          -   :: none
+
+                  It's Freezing!
+
+              -   Take a closer look at the conditions and the way they
+                  are written in the program.
+
+          -   :: none
+
+                  It's Cold!
+
+              -   Take a closer look at the conditions and the way they
+                  are written in the program.
+
+          -   :: none
+
+                  It's Freezing!
+                  It's Cold!
+
+              -   You've identified some of the conditons that are met!
+                  Take another look at the *chain* of conditionals at the
+                  end!
+
+          -   :: none
+
+                  It's Freezing!
+                  It's Cold!
+                  It's Hot!
+
+              +   These statements are quite contradicting, but that's exactly
+                  what the output would be if we ran this code.
+
+          -   :: none
+
+                  It's Hot!
+
+              -   Take a closer look at the conditions and the way they
+                  are written in the program.
+
 
    .. tab:: Q4
 
-      .. mchoice:: mce_6_4
-          :practice: T
+      .. mchoice:: cond_rec_mc4
 
-          What is the output of the code below?
+          Suppose you have defined the following function:
 
-          .. code-block:: cpp
+          ::
 
-             int main() {
-               int n = 10;
-               // cout << "Da ";
-               cout << "na ";
-               while (n != 3) {
-                 cout << "na ";
-                 n--;
-               }
-               cout << "Batman!";
-             }
+              void practicingReturns (int a, int b) {
+                  if (a < b) {
+                      a += 2;
+                  }
+                  if (a > b) {
+                      return;
+                  }
+                  cout << a + b;
+              }
+          
+          What is printed when we run the following code?
 
-          - na na na na na na na na Batman!
+          ::
+
+              int x = practicingReturns(2, 3);
           
-            + The code prints out eight "na"s before printing out "Batman!"
-          
-          - na na na na na na na Batman!
-          
-            - Look over the code carefully. There are output statements before the while loop.
-          
-          - Da na na na na na na na na Batman!
-          
-            - Will "Da" ever be printed?
-          
-          - It will result in an infinite loop.
-          
-            - Since we repeatedly decrement ``n`` inside the while loop, it will eventually be equal to 3 and the while loop will terminate.
+          -   5
+
+              -   This is what ``a + b`` would be before the first conditonal.
+
+          -   7
+
+              -   This is the value of ``a + b`` after the first conditional, but it
+                  doesn't print.
+
+          -   23
+
+              -   This is not the value of ``a + b``.
+
+          -   Nothing.
+
+              +   The function exits with a return before anything is printed.
+
 
    .. tab:: Q5
 
-      .. mchoice:: mce_6_5
-          :practice: T
+      .. mchoice:: cond_rec_mc5
 
-          What is the output of the code below?
+          Suppose you have defined the following function:
 
-          .. code-block:: cpp
+          ::
 
-             int main() {
-               int n = 10;
-               cout << "Da ";
-               cout << "na ";
-               while (n != 3) {
-                 cout << "na ";
-               }
-               cout << "Batman!";
-             }
+              void fortuneCookie (int a, bool b, char c) {
+                  if (c < 'm') {
+                      if (a % 2 == 0) {
+                          cout << "An alien of some sort will be appearing to you shortly.";
+                      } else {
+                          cout << "The fortune you seek is in another cookie.";
+                      }
+                  } else if (c < 'r') {
+                      if (b) {
+                          cout << "He who laughs at himself never runs out of things to laugh at.";
+                      } else {
+                          cout << "You will be hungry again in one hour.";
+                      }
+                  } else {
+                      cout << "Fortune not found? Abort, retry, ignore.";
+                  }
+              }
 
-          - Batman!
-          
-            - Take a closer look at the while loop.
-          
-          - Da Batman!
-          
-            - Take a closer look at the while loop.
-          
-          - Da na na na na na na na na Batman!
-          
-            - Take a closer look at the while loop.
-          
-          - It will result in an infinite loop.
-          
-            + Since we never change the value of ``n``, 10 will never equal 3 so the code will run forever.
+          What will be your fortune if you run the following code?
+
+          ::
+
+              fortuneCookie(14, false, 'm');
+
+          -   ``An alien of some sort will be appearing to you shortly.``
+
+              -   ``'m'`` is NOT less than ``'m'``, so you don't even enter the ``if`` block.
+
+          -   ``The fortune you seek is in another cookie.``
+
+              -   ``'m'`` is NOT less than ``'m'``, so you don't even enter the ``if`` block.
+
+          -   ``He who laughs at himself never runs out of things to laugh at.``
+
+              -   ``if (b)`` really means ``if (b == true)``.
+
+          -   ``You will be hungry again in one hour.``
+
+              +   ``'m' < 'r'`` is true and ``b == false``, so this is the fortune that will print.
+
+          -   ``Fortune not found? Abort, retry, ignore.``
+
+              -   ``'m'`` is less than ``'r'`` so you would enter the ``else if`` block, not the ``else``.
+
 
    .. tab:: Q6
 
-      .. mchoice:: mce_6_6
-          :practice: T
+      .. mchoice:: cond_rec_mc6
 
-          What is the output of the code below?
+          Suppose you have defined the following function:
 
-          .. code-block:: cpp
+          ::
 
-             int main() {
-               int x = 1;
-               while (x < 6) {
-                 cout << x << "\t" << pow (x, 5) / pow (x, 3) << endl;
-                 x++;
-               }
-             }
+              void fortuneCookie (int a, bool b, char c) {
+                  if (c < 'm') {
+                      if (a % 2 == 0) {
+                          cout << "An alien of some sort will be appearing to you shortly.";
+                      } else {
+                          cout << "The fortune you seek is in another cookie.";
+                      }
+                  } else if (c < 'r') {
+                      if (b) {
+                          cout << "He who laughs at himself never runs out of things to laugh at.";
+                      } else {
+                          cout << "You will be hungry again in one hour.";
+                      }
+                  } else {
+                      cout << "Fortune not found? Abort, retry, ignore.";
+                  }
+              }
 
-          - The first six perfect fifths.
+          What will be your fortune if you run the following code?
 
-            - Take a closer look at the while loop and what ``x`` was initialized to.
-          
-          - The first six perfect squares.
+          ::
 
-            - Take a closer look at the while loop and what ``x`` was initialized to.
-          
-          - The first five perfect squares.
+              fortuneCookie(22, true, 'b');
 
-            + Dividing ``x`` to the power of 5 by ``x`` to the power of 3 effectively results in perfect squares.
-          
-          - The first five perfect cubes.
-          
-            - Take a closer look at the mathematical expression inside the while loop.
+          -   ``An alien of some sort will be appearing to you shortly.``
+
+              +   ``'b' < 'm'`` and ``22 % 2 == 0``, so this is the fortune that will print.
+
+          -   ``The fortune you seek is in another cookie.``
+
+              -   ``22 % 2 == 0``, so you enter the ``if`` block, not the else.
+
+          -   ``He who laughs at himself never runs out of things to laugh at.``
+
+              -   ``'b'`` is less than ``'m'``, so you would enter the ``if`` block, not the ``else if``.
+
+          -   ``You will be hungry again in one hour.``
+
+              -   ``'b'`` is less than ``'m'``, so you would enter the ``if`` block, not the ``else if``.
+
+          -   ``Fortune not found? Abort, retry, ignore.``
+
+              -   ``'b'`` is less than ``'m'``, so you would enter the ``if`` block, not the ``else``.
+
 
    .. tab:: Q7
 
-      .. mchoice:: mce_6_7
-          :practice: T
+      .. mchoice:: cond_rec_mc7
 
-          Why are we allowed to use the variable ``x`` in both ``main`` and in the function definition of ``superSecretFunction``?
+          Suppose you have defined the following function:
 
-          .. code-block:: cpp
-         
-             int superSecretFunction (int n) {
-               int x = 0;
-               return (2 + (n * n) - 5 * n / 7) * x;
-             }
+          ::
 
-             int main() {
-               int x = 1;
-               cout << "After using the super secret function, we get " << superSecretFunction (x);
-             }
+              void theThing (int m, int n, bool b) {
+                  if (b) {
+                      if (m % 4 == 0) {
+                          cout << m;
+                          return;
+                      }
+                      if ((m + n) > 10) {
+                          cout << m + n;
+                          return;
+                      }
+                  } else if ((m > n) == b) {
+                      cout << m - n;
+                      return;
+                  } else {
+                      if (n % 3 == 0) {
+                          cout << n;
+                          return;
+                      }
+                  }
+                  cout << -1;
+              }
 
-          - We're using the same variable, but just reassigning the value from 0 to 1.
+          What is printed when we run the following code?
 
-            - We are actually using two different variables that happen to have the same name.
+          ::
 
-          - Although the name of both variables is ``x``, they represent different locations in memory, and thus are different variables.
+              theThing (5, 10, false);
+
+          -   5
+
+              -   The outer ``if`` condition is not met, the block does not execute.
+
+          -   15
+
+              -   The outer ``if`` condition is not met, the block does not execute.
+
+          -   -5
+
+              +   ``m > n`` evaluates to false, so the ``else if`` block executes.
+
+          -   10
+
+              -   The condition for ``else if`` is met, so the function never enters the ``else``.
           
-            + One ``x`` is a local variable of ``superSecretFunction`` while the other is a local variable of ``main``.
+          -   -1
 
-          - We can assign them different values but not the same value. Thus, if both were initialized to 0, then we'd get an error.
-
-            - Since they are not in the same storage location, they can store any value, including the same value.
-
-          - We're not allowed to do this. The code will result in an error.
-
-            - The code does not produce an error.
+              -   The function has returned.
 
    .. tab:: Q8
 
-      .. mchoice:: mce_6_8
-          :practice: T
+      .. mchoice:: cond_rec_mc8
 
-          What is the output of the code below?
+          Suppose you have defined the following function:
 
-          .. code-block:: cpp
-         
-             int loopFive (int n) {
-               while (n % 5 != 0) {
-                 n = n + 3;
-               }
-               return n;
-             }
- 
-             int main() {
-               cout << loopFive (2);
-               cout << loopFive (3);
-               cout << loopFive (4);
-             }
+          ::
 
-          - 51510
+              void theThing (int m, int n, bool b) {
+                  if (b) {
+                      if (m % 4 == 0) {
+                          cout << m;
+                          return;
+                      }
+                      if ((m + n) > 10) {
+                          cout << m + n;
+                          return;
+                      }
+                  } else if ((m > n) == b) {
+                      cout << m - n;
+                      return;
+                  } else {
+                      if (n % 3 == 0) {
+                          cout << n;
+                          return;
+                      }
+                  }
+                  cout << -1;
+              }
 
-            + ``n`` is repeatedly incremented by 3 until it is divisible by 5, and this happens when ``n`` is 5, 15, and 10 for the inputs of 2, 3, and 4 respectively.
+          What is printed when we run the following code?
 
-          - 234
-          
-            - Although the function returns ``n``, ``n`` might not be its original value.
+          ::
 
-          - 5 15 10
+              theThing (6, 4, true);
 
-            - Take a closer look at the output statements.
+          -   6
 
-          - 567
+              -   ``5 % 4 != 0`` in the ``if`` block, so the function doesn't print 6.
 
-            - Take a closer look at the ``while`` loop in the function.
+          -   10
+
+              -   ``m + n !> 10`` in the ``if`` block, so the function doesn't print 10.
+
+          -   2
+
+              -   The condition for ``if`` is met, so the function never enters the ``else if``.
+
+          -   4
+
+              -   The condition for ``if`` is met, so the function never enters the ``else``.
+
+          -   -1
+
+              +   None of the conditions were met, so we reach the default cout -1.
+
 
    .. tab:: Q9
 
-      .. mchoice:: mce_6_9
-          :practice: T
+      .. mchoice:: cond_rec_mc9
 
-          The super evil villian RePete wants to annoy the city by
-          hacking into the city's helper robots and making them repeat
-          everything they say 5 times. However, there's an error in his 
-          code and now the robots won't stop repeating! Can you find the
-          error?
+          Suppose you have defined the following function:
 
-          .. code-block:: cpp
-         
-             void repeat_bot (string input) {
-               int n = 0;
-               while (n < 5) {
-                 cout << input << ' ';
-                 n--;
-               }
-             }
+          ::
 
-             int main() {
-               repeat_bot ("Hello, how may I help you?");
-             }
+              void moo (int m, int n) {
+                  if (m != n) {
+                      m += 2;
+                      cout << "Moo!";
+                      moo (m, n);
+                  } else {
+                      cout << "Got Milk?";
+                  }
+              }
 
-          - ``repeat_bot`` can only take one word as an argument.
+          How many times does "Moo!" print when we run the following?
 
-            - A ``string`` is any number of characters or words surrounded by double quotes, not just one word.
+          ::
 
-          - ``n`` is declared to be 0 and 0 is always less than 5.
-          
-            - The code doesn't loop infinitely because of the value ``n`` was declared to be.
+              moo (4, 8);
 
-          - Every time the ``while`` loop runs, ``n`` is reset to 0, so it will always be less than 5.
+          -   0
 
-            - The initialization of ``n`` occurs outside the ``while`` loop, so the value of ``n`` does not get reset to 0.
+              -   When we call the function ``4 != 8``, so "Moo!" is printed at least
+                  once.
 
-          - ``n`` is declared to be 0 and we continuously decrement ``n`` so it will always be less than 5.
+          -   1
 
-            + Since ``n`` starts at 0 and gets smaller, the conditional for the ``while`` loop will always be true, and thus the code runs forever.
+              -   The function calls itself inside of the ``if`` loop, so "Moo!" is printed
+                  more than once.
+
+          -   2
+
+              +   ``m`` is incremented by two each with each function call, so after two
+                  ``m == n`` and the recursion stops.
+
+          -   3
+
+              -   Take a look at how ``m`` is incremented with each function call.
+
+          -   infinite recursion
+
+              -   The function stops printing "Moo!" when ``m == n``.
+
 
    .. tab:: Q10
 
-      .. mchoice:: mce_6_10
+      .. mchoice:: cond_rec_mc10
 
-          After making some changes to his code, RePete tries again.
-          This time, however, the robots don't repeat anything!
-          Can you find the new error?
+          Suppose you have defined the following function:
 
-          .. code-block:: cpp
-         
-           void repeat_bot (string input) {
-             int n = 0;
-             while (n > 5) {
-               cout << input << ' ';
-               n++;
-             }
-           }
+          ::
 
-           int main() {
-             repeat_bot ("Hello, how may I help you?");
-           }
+              void moo (int m, int n) {
+                  if (m != n) {
+                      m += 2;
+                      cout << "Moo!";
+                      moo (m, n);
+                  } else {
+                      cout << "Got Milk?";
+                  }
+              }
 
-          - ``n > 5`` is not a valid conditional, so the ``while`` loop doesn't execute.
+          How many times does "Moo!" print when we run the following?
 
-            - ``n > 5`` is a boolean statement and thus is a valid conditional.
+          ::
 
-          - The value of ``n`` never gets modified in the ``while`` loop.
-          
-            - ``n`` is incremented in the ``while`` loop after the ``cout`` statement.
+              moo (5, 10);
 
-          - In the ``cout`` statement, only spaces are printed.
+          -   0
 
-            - ``input`` is also printed.
+              -   When we call the function ``5 != 10``, so "Moo!" is printed at least
+                  once.
 
-          - The conditional for the ``while`` loop is not met.
+          -   1
 
-            + Since ``n`` is declared to be 0, 0 is not greater than 5, so the ``while`` loop does not execute.
+              -   The function calls itself inside of the ``if`` loop, so "Moo!" is printed
+                  more than once.
+
+          -   2
+
+              -   After two function calls, ``m == 9`` and ``n == 10``.  The function is not
+                  done printing.
+
+          -   3
+
+              -   After three function calls, ``m == 11`` and ``n == 10``.  The function is not
+                  done printing
+
+          -   infinite recursion
+
+              +   The function stops printing "Moo!" when ``m == n``, but since ``m`` is odd
+                  and ``n`` is even, they will never be equal as long as we increment by two.
+
 

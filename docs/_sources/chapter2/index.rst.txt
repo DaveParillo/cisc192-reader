@@ -12,6 +12,7 @@ Variables and types
    output.rst
    keywords.rst
    operators.rst
+   modulus.rst
    order-of-operations.rst
    operators-char.rst
    composition.rst

@@ -12,7 +12,7 @@ simplest form is the if statement:
 ::
 
     if (x > 0) {
-      cout << "x is positive" << endl;
+      cout << "x is positive\n";
     }
 
 The expression in parentheses is called the condition. If it is true,
@@ -36,16 +36,15 @@ The condition can contain any of the **comparison operators**:
 Although these operations are probably familiar to you, the syntax C++
 uses is a little different from mathematical symbols like :math:`=`,
 :math:`\neq` and :math:`\le`. A common error is to use a single ``=``
-instead of a double ``==``. Remember that = is the assignment operator, and
-``==`` is a comparison operator. Also, there is no such thing as ``=<`` or ``=>``.
+instead of a double ``==``. Remember that ``=`` is the assignment operator, and
+``==`` is a comparison operator.
+Also, there is no such thing as ``=<`` or ``=>``.
 
 .. note::
    Both sides of a conditional operator have to be the same type.
 
-Despite automatic type conversion, you can only compare ``int`` s to ``int`` s and
-``double`` s to ``double`` s. Unfortunately, at this point you can’t compare ``string`` s
-at all! There is a way to compare them, but we won’t get to it for a couple of
-chapters.
+Despite automatic type conversion, you can only compare ``int``\s to ``int``\s,
+``double``\s to ``double``\s, and ``string``\s to ``string``\s .
 
 Observe the conditional statement below.
 
@@ -72,7 +71,6 @@ Observe the conditional statement below.
        if (x < 6) {
            cout << "Bigger!\n";
        }
-       return 0;
    }
 
 .. note:: Forgetting to use ``==`` for equivalence is a common source of error!
@@ -131,4 +129,12 @@ Observe the conditional statement below.
          :match_3: x < y|||x = 2, y = 6
 
          Match the operator to values of x and y that would return true.
+
+
+-----
+
+.. admonition:: More to Explore
+
+   - :lang:`if` and :lang:`comparison operators <operator_comparison>`
+     from cppreference.com
 

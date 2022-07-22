@@ -1,70 +1,51 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
 <!DOCTYPE html>
 
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4.12. Mixed-Up Code Exercises &#8212; CISC 192 Course Reader Overview</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>4.18. Mixed Up Code Practice &#8212; CISC 192 Course Reader Overview</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
     <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
-    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
-    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
-    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.5.5" />
-    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
     <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
     <script src="../_static/animationbase.js?v=A043C3A7"></script>
     <script src="../_static/html4css1.css?v=4533ACD3"></script>
-    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
-    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
-    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
     <script src="../_static/webglinteractive.js?v=2B768384"></script>
     <script src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script src="../_static/Blob.js?v=AEC2447"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script src="../_static/runestone.js?v=92D8BBF0"></script>
-    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
-    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
-    <script src="../_static/jquery-fix.js?v=1226591B"></script>
-    <script src="../_static/bootstrap-sphinx.js"></script>
-    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
-    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
-    <script src="../_static/theme.js?v=D899FB97"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/runtime.b0f8547c48f16a9f.bundle.js?v=2731F567"></script>
+    <script src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script src="../_static/runestone.0e9550fe42760516.bundle.js?v=71AD37BA"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4.13. Activecode Exercises" href="review-3.html" />
-    <link rel="prev" title="4.11. Multiple Choice Exercises" href="review-1.html" />
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="next" title="4.19. Coding Practice" href="review-3.html" />
+    <link rel="prev" title="4.17. Multiple Choice Exercises" href="review-1.html" />
+
+
 <link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
 
-<script type="text/javascript">
+
+<script>
   eBookConfig = {};
   
     eBookConfig.useRunestoneServices = false;
@@ -73,6 +54,8 @@
     eBookConfig.course = 'cisc192-reader';
     eBookConfig.basecourse = 'cisc192-reader';
     eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
   
   eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
   eBookConfig.logLevel = 0;
@@ -80,18 +63,16 @@
   eBookConfig.build_info = "unknown";
   eBookConfig.python3 = true;
   eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
-  eBookConfig.runestone_version = '5.5.5';
+  eBookConfig.runestone_version = '6.2.1';
   eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
   eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
   eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
   eBookConfig.enable_chatcodes = false ? false : false;
-
+  eBookConfig.enableScratchAC = true;
 
 </script>
 
 <!-- Ad Serving Headers Only serve ads to Anonymous Users -->
-
-
 
 
 
@@ -105,15 +86,16 @@
 
     <div class="navbar-header">
       <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
-        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
 
       <div>
         
-          <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;'>&nbsp;<span aria-label="logo" class="visuallyhidden">Runestone Logo</span> </a>
+        
+          <div class="brand-logo"><img src="../_static/img/RAIcon.png" alt=""></div>
         
         <a class="navbar-brand" href="../index.html" aria-label="index-page">
           
@@ -128,17 +110,16 @@
       <ul class="nav navbar-nav navbar-right" >
 
         <li class="divider-vertical"></li>
-
+        <li><span id="browsing_warning"></span></li>
 
         <!-- social media dropdown -->
         <!-- end social media dropdown -->
 
         <li class="divider-vertical"></li>
-
         <!-- search dropdown -->
         <li class="dropdown">
           <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
           </a>
           <ul class='dropdown-menu'>
             
@@ -171,8 +152,8 @@
         <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
 
         <!-- <li class="dropdown">             -->
-          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
-              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
         <!-- </li> -->
 
         <li class="divider-vertical"></li>
@@ -188,382 +169,512 @@
         
         <!-- 
           
-  <li id="relations-prev" title="Previous Chapter - <span class="section-number">4.11. </span>Multiple Choice Exercises" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">4.17. </span>Multiple Choice Exercises" data-toggle="tooltip">
     <a href="review-1.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - <span class="section-number">4.13. </span>Activecode Exercises' data-toggle="tooltip" >              
+  <li id="relations-next" title='Next Chapter - <span class="section-number">4.19. </span>Coding Practice' data-toggle="tooltip" >              
     <a href="review-3.html" >
         <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
   <li class="divider-vertical"></li>
 
-<script type="text/javascript">
+<script>
   opts = {'placement':'bottom',
           'selector': '',
           'delay': { show: 100, hide: 50}
          };
 
-  $('#relations-prev').tooltip(opts);
-  $('#relations-next').tooltip(opts);
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
 </script>
         -->
         
           <li></li>
         
       </ul>
-
-      </div> <!-- navbar -->
-
-
-
-
-
-
-
-    </div> <!-- container -->
-  </div>
-</div>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
 
 
 <div class="container" id="continue-reading"></div>
 
 <div class="container" id="main-content" role="main">
+
 <!-- Ad Serving for Runestone Campaign -->
 
 
   
-  <div class="section" id="mixed-up-code-exercises">
-<h1><span class="section-number">4.12. </span>Mixed-Up Code Exercises<a class="headerlink" href="#mixed-up-code-exercises" title="Permalink to this headline">¶</a></h1>
-<p>Answer the following <strong>Mixed-Up Code</strong> questions to
-assess what you have learned in this chapter.</p>
-<div id='self_check' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Q1" >
+  <section id="mixed-up-code-practice">
+<h1><span class="section-number">4.18. </span>Mixed Up Code Practice<a class="headerlink" href="#mixed-up-code-practice" title="Permalink to this headline">¶</a></h1>
+<div id='self_check' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Q1" >
 
-        <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" data-question_label="4.12.1" id="cond_recc_p1"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
-        <span data-question>Q-1 Construct a block of code that prints the remainder of 18 when
-divided by 13.</span>int main () {
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="mucp_5_1" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Vacation time! But before you go, you need to convert your currency.
+Let’s write the code for the dollarToYen function. dollarToYen
+takes dollar as a parameter and returns the equivalent amount of Japanese yen.
+The conversion rate is 1 USD equals 105.42 Japanese yen.
+Put the necessary blocks of code in the correct order.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="4.18.1"   data-adaptive="true"    data-noindent="true"    data-numbered="left"  style="visibility: hidden;">
+        double dollarToYen (double dollar) {
 ---
- int x = 18;
- int y = 13;
+int dollarToYen (double dollar) {  #distractor
 ---
- cout << x % y;
+void dollarToYen (double dollar) {  #distractor
 ---
- cout << y % x; #paired
+double dollarToYen () {  #distractor
 ---
- cout << y / x; #paired
+   double yen;  #distractor
+---
+   return 105.42 * dollar;
+---
+   return 105.42 * yen;  #distractor
 ---
 }
         </pre>
+        </div>
         </div>
     </div><div data-component="tab" data-tabname="Q2" >
 
-        <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" data-question_label="4.12.2" id="cond_recc_p2"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
-        <span data-question>Q-2 Construct a function that prints whether a number
-is true.</span>void is_true (int number) {
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="mucp_5_2" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>When you buy something, you also need to pay sales tax. For example,
+a nice shirt could be labeled with a price of exactly $20, but when
+you pay, you actually need to pay $21.20 in a state with 6% sales tax.
+However, different states have different tax rates. Write the function
+priceWithTax, which takes price and percentTax as parameters.
+priceWithTax calculates the price after tax and returns it.
+For example, priceWithTax (20, 6) returns 21.2.
+Put the necessary blocks of code in the correct order.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="4.18.2"   data-adaptive="true"    data-noindent="true"    data-numbered="left"  style="visibility: hidden;">
+        double priceWithTax (double price, double percentTax) {
 ---
-bool is_true (int number) { #paired
+int priceWithTax (double price, int percentTax) {  #distractor
 ---
- if (number % 2 == 0) {
+double priceWithTax (price, percentTax) {  #distractor
 ---
-  cout << true;
- }
+   return (1 + percentTax / 100) * price;
 ---
- else {
+   return (1 + percentTax) * price;  #distractor
 ---
-  cout << false;
- }
+   return percentTax * price;  #distractor
 ---
 }
         </pre>
+        </div>
         </div>
     </div><div data-component="tab" data-tabname="Q3" >
 
-        <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" data-question_label="4.12.3" id="cond_recc_p3"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
-        <span data-question>Q-3 Construct a function that prints the difference of a and b if the result
-would result in a positive number.  Otherwise, prints -1.</span>void difference (int a, int b) {
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="mucp_5_3" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Most assignments and tests are graded as a percentage, but final
+grades are letters. Let’s write the code for the percentToLetter function.
+percentToLetter takes a percentage and returns the corresponding
+letter grade. A 90 and above is an ‘A’, an 80 and above is a ‘B’, a 70 and above
+is a ‘C’, and anything under a 70 is an ‘F’.
+Put the necessary blocks of code in the correct order.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="4.18.3"   data-adaptive="true"    data-noindent="true"    data-numbered="left"  style="visibility: hidden;">
+        char percentToLetter (double percentage) {
 ---
-int difference (int a, int b) { #paired
+void percentToLetter (double percentage) {  #distractor
 ---
- if (a - b > 0) {
+void percentToLetter (int percentage) {  #distractor
 ---
- if (a - b < 0) { #paired
+char percentToLetter (percentage) {  #distractor
 ---
-  cout << a - b;
- }
+   if (percentage >= 90) {
 ---
- else {
+      return 'A';
 ---
-  cout << -1;
- }
+      return A;  #paired
+---
+   }
+---
+   else if (percentage >= 80) {
+---
+      return 'B';
+---
+      return 'B'  #paired
+---
+   }
+---
+   else if (percentage >= 70) {
+---
+   else if (percentage > 70) {  #paired
+---
+      return 'C';
+---
+   }
+---
+   else {
+---
+      return 'F';
+---
+   }
 ---
 }
         </pre>
+        </div>
         </div>
     </div><div data-component="tab" data-tabname="Q4" >
 
-        <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" data-question_label="4.12.4" id="cond_recc_p4"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
-        <span data-question>Q-4 Construct a block of code that prints "automatic" if x is
-an odd number, "systematic" if x is greater than y, AND
-"hydromatic" if y is not equal to x.  Check all 3 conditions.</span>if (x % 2 == 1) {
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="mucp_5_4" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Let’s write the code for the triangleArea function. triangleArea
+takes two parameters, base and height. It returns the
+area of the triangle using the formula 1/2 * base * height.
+Put the necessary blocks of code in the correct order.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="4.18.4"   data-adaptive="true"    data-noindent="true"    data-numbered="left"  style="visibility: hidden;">
+        double triangleArea (double base, double height) {
 ---
-if (x % 2 == 0) { #paired
+int triangleArea (double base, double height) {  #distractor
 ---
- cout << "automatic"; }
+void triangleArea (double base, double height) {  #distractor
 ---
-if (x > y) {
+double triangleArea (base, height) {  #distractor
 ---
-else if (x > y) { #paired
+   double area;  #distractor
 ---
- cout << "systematic"; }
+   return 0.5 * base * height;
 ---
-if (y != x) {
+   cout << 0.5 * base * height << endl;  #distractor
 ---
-else { #paired
----
- cout << "hydromatic"; }
+}
         </pre>
+        </div>
         </div>
     </div><div data-component="tab" data-tabname="Q5" >
 
-        <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" data-question_label="4.12.5" id="cond_recc_p5"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
-        <span data-question>Q-5 Construct a block of code that prints "Pick me!" if x is
-equal to y, "Choose me!" if x is less than y, OR "Love me!"
-if x + y is even.</span>if (x == y) {
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="mucp_5_5" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Let’s write the code for the cylinderVolume function. cylinderVolume
+takes two parameters, radius and height. It returns the
+volume of the cylinder using the formula pi * radius * radius * height.
+Put the necessary blocks of code in the correct order.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="4.18.5"   data-adaptive="true"       data-numbered="left"  style="visibility: hidden;">
+        double cylinderVolume (double radius, double height) {
 ---
-if (x = y) { #paired
+void cylinderVolume (double radius, double height) {  #distractor
 ---
- cout << "Pick me!"; }
+double cylinderVolume (radius, height) {  #distractor
 ---
-else if (y > x) {
+   double pi = 3.14;
 ---
-if (x < y) { #paired
+   return pi * radius * radius * height;
 ---
- cout << "Choose me!"; }
----
-else if ((x + y) % 2 == 0) {
----
-else (x + y % 2 == 0) { #paired
----
-else if (x + y % 2 == 0) { #paired
----
- cout << "Love me!"; }
+}
         </pre>
+        </div>
         </div>
     </div><div data-component="tab" data-tabname="Q6" >
 
-        <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" data-question_label="4.12.6" id="cond_recc_p6"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
-        <span data-question>Q-6 Construct a function that prints your letter grade according to this scheme.
-[0, 70) = F, [70, 80) = C, [80, 90) = B, and [90, 100] = A.</span>void printLetterGrade (double grade) {
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="mucp_5_6" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>On a distant planet, depending on the characteristics of an egg, a kenchic,
+an ooseg, or a guinpen might hatch from it. Let’s write the function
+birdType which returns an int corresponding to each type of bird
+(1 for kenchic, 2 for ooseg, and 3 for guinpen). If the egg is round, then it is a
+guinpen. Otherwise, if the egg is round and it isn’t gray, then it is a kenchic. If
+it isn’t a guinpen and it isn’t a kenchic, then it’s an ooseg.
+Put the necessary blocks of code in the correct order.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="4.18.6"   data-adaptive="true"       data-numbered="left"  style="visibility: hidden;">
+        int birdType (bool isRound, bool isGray) {
 ---
- if (grade < 70) {
+void birdType (bool isRound, bool isGray) {  #distractor
 ---
-  cout << "F"; }
+double birdType (int isRound, char isGray) {  #distractor
 ---
- else if (grade < 80) {
+   if (isRound && !isGray) {
 ---
- if (grade < 80) { #paired
+   if (!isRound && !isGray) {  #paired
 ---
-  cout << "C"; }
+      return 1;
 ---
- else if (grade < 90) {
+   }
 ---
- if (grade < 90) { #paired
+   else if (!isRound || isGray) {
 ---
-  cout << "B"; }
+   else if (!(isRound || isGray)) {  #paired
 ---
- else {
+      return 2;
 ---
- else if (grade < 100) { #paired
+   }
 ---
- if (grade < 100) { #paired
+   else {
 ---
-  cout << "A"; }
+      return 3;
+---
+      return 0;  #distractor
+---
+   }
 ---
 }
         </pre>
+        </div>
         </div>
     </div><div data-component="tab" data-tabname="Q7" >
 
-        <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" data-question_label="4.12.7" id="cond_recc_p7"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
-        <span data-question>Q-7 According to a logic game, a knight is someone who cannot tell a lie,
-and a knave is someone who cannot tell the truth.  Construct a function
-that takes two booleans: the truth value of the story, and the truth value
-told by the person.  The function should print whether the person was a
-knight or a knave.</span>void knightKnave (bool truth, bool told) {
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="mucp_5_7" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Let’s write the code for the isDoubleDigit function. isDoubleDigit
+takes num as a parameter. isDoubleDigit returns true if
+num is a double digit number and returns false otherwise.
+Put the necessary blocks of code in the correct order.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="4.18.7"   data-adaptive="true"       data-numbered="left"  style="visibility: hidden;">
+        bool isDoubleDigit (int num) {
 ---
- if (truth == true) {
+isDoubleDigit (int num) {  #paired
 ---
-  if (told == true) {
-   cout << "Knight";
-  }
+   if (num >= 10 && num < 100) {
 ---
-  else {
-   cout << "Knave";
-  } }
+   if (10 <= num <= 99) {  #distractor
 ---
- else {
+   if (num > 10 && num < 100) {  #distractor
 ---
-  if (told == true) {
-   cout << "Knave";
-  }
+   if (num > 10 && num <= 100) {  #distractor
 ---
-  else {
-   cout << "Knive";
-  } }
+      return true;
+---
+   }
+---
+   else {
+---
+      return false;
+---
+   }
 ---
 }
         </pre>
+        </div>
         </div>
     </div><div data-component="tab" data-tabname="Q8" >
 
-        <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" data-question_label="4.12.8" id="cond_recc_p8"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
-        <span data-question>Q-8 If a cat is in a good mood, it purrs; when it's in a bad mood, it
-meows.  If a doog is in a good mood, it barks; when it's in a bad
-mood it woofs.  Construct a function that accomplishes this.</span>void makeVocals (string animal, string mood) {
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="mucp_5_8" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Let’s write the code for the Compare function. Compare
+takes two integers a, b. Compare returns 1 if
+a is greater than b, -1 if a is less than b and 0 if they are equal.
+Put the necessary blocks of code in the correct order.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="4.18.8"   data-adaptive="true"       data-numbered="left"  style="visibility: hidden;">
+        int Compare (int a, int b) {
 ---
- if (mood == "bad") {
+bool Compare (int a, int b) {   #paired
 ---
-  if (animal == "dog") {
-   cout << "Woof!";
-  }
+   if (a > b) {
 ---
-  else {
-   cout << "Meow!";
-  }
+   if (a > b && a &lt b) {  #distractor
 ---
- else {
+      return 1;
 ---
-  if (animal == "dog") {
-   cout << "Bark!";
-  }
+   }
 ---
-  else {
-   cout << "Purr!";
-  }
+   else if (a &lt b) {
+---
+   else if (a!=b) {  #distractor
+---
+      return -1;
+---
+   }
+---
+   else if (a > 0){ #distractor
+---
+   else {
+---
+      return 0;
+---
+   }
 ---
 }
         </pre>
+        </div>
         </div>
     </div><div data-component="tab" data-tabname="Q9" >
 
-        <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" data-question_label="4.12.9" id="cond_recc_p9"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
-        <span data-question>Q-9 Construct a recursive function that tells the user to enter a positive
-number.  It should then output that number to the terminal.  If the user
-enters a negative number or zero, prompt the user again.</span>void takeSum () {
----
- cout << "Input a positive number!";
----
- int num;
- cin >> num;
----
- if (num < 0) {
----
-  takesum ();
----
- } // END "if"
----
- cout << num;
----
-} // END function
-        </pre>
-        </div>
-    </div><div data-component="tab" data-tabname="Q10" >
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="mucp_5_9" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Let’s write the code for the isFactor function. isFactor
+takes two parameters, num and factor.
+isFactor returns true if factor is a factor of num
+and returns false otherwise.
+Put the necessary blocks of code in the correct order.</p>
 
-        <div class="runestone" style="max-width: none;">
-        <pre data-component="parsons" data-question_label="4.12.10" id="cond_recc_p10"  data-adaptive="true"      data-numbered="left"  style="visibility: hidden;">
-        <span data-question>Q-10 In the table of ASCII characters, the lowercase alphabet consists
-of characters 97-122.  The uppercase alphabet consists of characters
-65-90, which is a 32 character shift back from the lowercase.  Construct
-a recursive function that asks the user to input a LOWERCASE character,
-converts that character to UPPERCASE character and prints it.  If the user
-enters a character outside of the range of the LOWERCASE alphabet, prompt
-the user again.  Hint:  "||" means "or" when used between two conditional
-statements.</span>void capitalize () {
+        </div>
+        <pre  class="parsonsblocks" data-question_label="4.18.9"   data-adaptive="true"       data-numbered="left"  style="visibility: hidden;">
+        bool isFactor (int num, int factor) {
 ---
- cout << "Input a lowercase character!";
+void isFactor (int num, int factor) {  #paired
 ---
- char let;
- cin >> let;
+   if (num % factor == 0) {
 ---
- if (int(let) < 97 || int(let) > 122) {
+   if (num / factor == 0) {  #distractor
 ---
-  capitalize (); }
+   if (num % factor) {  #distractor
 ---
- let = let - 32;
+   if (factor % num == 0) {  #distractor
 ---
- cout << char(let);
+      return true;
+---
+   }
+---
+   else {
+---
+      return false;
+---
+   }
 ---
 }
         </pre>
         </div>
-    </div>
-    </div>
-
-</div>
-
-
-  <div id=scprogresscontainer>
-    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
-  </div>
-  
-      
-<ul>
-  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 4.11. Multiple Choice Exercises' data-toggle="tooltip">
-    <a href="review-1.html" aria-label="4.11. Multiple Choice Exercises">
-        <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
-            <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
         </div>
+    </div><div data-component="tab" data-tabname="Q10" >
+
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="mucp_5_10" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Let’s write the code for the isPerfectSquare function. isPerfectSquare
+takes input as a parameter and returns true if input is a
+perfect square and returns false otherwise.
+Put the necessary blocks of code in the correct order.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="4.18.10"   data-adaptive="true"       data-numbered="left"  style="visibility: hidden;">
+        bool isPerfectSquare (int input) {
+---
+bool isPerfectSquare (int input) #distractor
+---
+int isPerfectSquare (int input) {  #distractor
+---
+   int root = sqrt (input);
+---
+   double root = sqrt (input);  #distractor
+---
+   if (pow (root, 2) == input) {
+---
+   if (sqrt (input)) {  #distractor
+---
+      return true;
+---
+   }
+---
+   else {
+---
+      return false;
+---
+   }
+---
+}
+        </pre>
+        </div>
+        </div>
+    </div><div data-component="tab" data-tabname="Q11" >
+
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="mucp_5_11" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Most bacteria cultures grow exponentially. For this problem,
+assume the number of cells in a bacterial culture doubles every hour.
+Let’s write the code for the countBacteria function. countBacteria
+takes hour as a parameter and returns the number of bacteria cells
+after hour hours. Assume when hour is 0, there is one cell. When
+hour is one, the number of cells doubles to two. When hour is two,
+the number of cells doubles to four. Use recursion.
+Put the necessary blocks of code in the correct order.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="4.18.11"   data-adaptive="true"       data-numbered="left"  style="visibility: hidden;">
+        int countBacteria (int hour) {
+---
+void countBacteria (int hour) {  #distractor
+---
+bool countBacteria (int hour) {  #distractor
+---
+   if (hour == 0) {
+---
+   if (hour == 1) {  #paired
+---
+      return 1;
+---
+      return 2 * hour;  #distractor
+---
+   }
+---
+   else {
+---
+      return 2 * countBacteria (hour - 1);
+---
+      return 2 + countBacteria (hour - 1);  #distractor
+---
+      return 2 * countBacteria (hour);  #distractor
+---
+   }
+---
+}
+        </pre>
+        </div>
+        </div>
+    </div>
+    </div>
+
+</section>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 4.17. Multiple Choice Exercises' data-toggle="tooltip">
+  <a href="review-1.html" aria-label="Previous - 4.17. Multiple Choice Exercises">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 4.19. Coding Practice' data-toggle="tooltip" >
+    <a href="review-3.html" aria-label="Next - 4.19. Coding Practice">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
     </a>
   </li>
 </ul>
-
-  
-<ul>
-  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - 4.13. Activecode Exercises' data-toggle="tooltip" >
-    <a href="review-3.html" aria-label="4.13. Activecode Exercises">
-      <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
-          <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
-      </div>
-    </a>
-  </li>
-</ul>
-
-<script type="text/javascript">
-
-  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
-  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
-
-</script>
 
 <script>
-	function mouseOverPrev() {
-		document.getElementById("relations-prev").style.opacity=1;
-	}
-
-	function mouseOutPrev() {
-		document.getElementById("relations-prev").style.opacity=0.4;
-	}
-	function mouseOverNext() {
-		document.getElementById("relations-next").style.opacity=1;
-	}
-
-	function mouseOutNext() {
-		document.getElementById("relations-next").style.opacity=0.4;
-	}
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
 </script>
-  
+
 </div>
 <footer class="footer">
   <div class="container">
@@ -573,8 +684,8 @@ statements.</span>void capitalize () {
       
     </p>
     <p>
-        &copy; Copyright 2020-2021 Dave Parillo.
-      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.5.
+        &copy; Copyright 2020-2022 Dave Parillo, Barbara Ericson, and Allen B. Downey..
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.2.1.
     </p>
   </div>
 </footer>
@@ -582,7 +693,11 @@ statements.</span>void capitalize () {
 
 
 
-<script> getSwitch(); </script>
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
 
 
   </body>

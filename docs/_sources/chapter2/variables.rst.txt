@@ -48,14 +48,79 @@ declarations:
 
 ::
 
-    char firstLetter;
-    char lastLetter;
+    char first_letter;
+    char last_letter;
     int hour, minute;
 
 you could probably make a good guess at what values would be stored in
 them. This example also demonstrates the syntax for declaring multiple
 variables with the same type: hour and minute are both integers (``int``
 type).
+
+Although the language allows this, it should be avoided.
+It is easy to accidentally create uninitialized variables,
+one of the most common sources of error in C++ programs.
+Consider the following:
+
+.. activecode:: variables_AC_1
+   :language: cpp
+   :compileargs: ['-std=c++11', '-Wall', '-Wextra']
+   :nocodelens:
+   :caption: Bad variable declaration
+
+   #include <iostream>
+
+   int main () {
+       int hour, minute = 59;
+       std::cout << hour << ':' << minute;
+   }
+
+What do you think this program will output?
+
+What should it output?
+
+.. reveal:: variables_ub_reveal
+
+   Uninitialized variables are an example of
+   *undefined behavior*.
+
+   The C++ language does specify what should happen here.
+   Most compilers will **warn** that you did this,
+   but none will stop you from compiling and running
+   this program unless you ask it to.
+
+   The value of ``hour`` could be 0, but might also be
+   any value constructed from the bits that just happened
+   to be stored in memory when ``hour`` was created.
+
+   Many compilers will allow something along the lines of:
+
+   .. code-block:: text
+
+      -Werror=uninitialized
+
+   To force an error if an uninitialized variable is detected.
+
+.. index:: naming conventions
+
+**Naming conventions**
+
+C++ is a multi-paradigm language with a long history.
+Over the years many different groups have developed different
+programming styles for C++.
+None of them are wrong as long as they apply their rules consistently.
+
+Since this book intends to teach C++, it follows the conventions
+used in the C++ Standard Library.
+For more information about naming conventions, see the
+:core:`Naming conventions <#S-naming>`
+section of the C++ Core Guidelines,
+edited by Bjarne Stroustrup and Herb Sutter.
+
+If you continue programming in C++, you will undoubtedly encounter
+variables that use other styles.
+
+That's ok. You can't follow everyone's conventions.
 
 .. tabbed:: tab_check
 
@@ -88,7 +153,7 @@ type).
 
    .. tab:: Q3
 
-      .. clickablearea:: variables2.0
+      .. clickablearea:: variables2_0
           :question: Click on all instances of integer VARIABLES.
           :iscode:
           :feedback: Try again!
@@ -98,7 +163,7 @@ type).
               int :click-correct:y:endclick: = :click-incorrect:10:endclick:;
               :click-incorrect:char c:endclick: = :click-incorrect:'8':endclick:;
               while (:click-correct:x:endclick: < :click-correct:y:endclick:) {
-                  cout << :click-incorrect:c:endclick: << endl;;
+                  cout << :click-incorrect:c:endclick: << '\n';;
                   :click-correct:x:endclick:++;
               }
               double :click-incorrect:d:endclick: = :click-incorrect:9:endclick:;
@@ -109,7 +174,7 @@ type).
 
    .. tab:: Q4
 
-      .. clickablearea:: variables2.1
+      .. clickablearea:: variables2_1
           :question: Click on all instances of character VARIABLES.
           :iscode:
           :feedback: Try again!
@@ -117,10 +182,10 @@ type).
           int main() {
               char :click-correct:init1:endclick: = :click-incorrect:'K':endclick:;
               string :click-incorrect:init2:endclick: = :click-incorrect:"T":endclick:;
-              cout << :click-correct:init1:endclick: << :click-incorrect:"+":endclick: << :click-incorrect:init2:endclick: << endl;
+              cout << :click-correct:init1:endclick: << :click-incorrect:"+":endclick: << :click-incorrect:init2:endclick: << '\n';
               string :click-incorrect:init3:endclick: = :click-incorrect:"C":endclick:;
               char :click-correct:init4:endclick: = :click-incorrect:'J':endclick:;
-              cout << :click-incorrect:init3:endclick: << :click-incorrect:'+':endclick: << :click-correct:init4:endclick: << endl;
+              cout << :click-incorrect:init3:endclick: << :click-incorrect:'+':endclick: << :click-correct:init4:endclick: << '\n';
               string :click-incorrect:c:endclick: = :click-incorrect:"Carved their initials in a tree!":endclick:;
               cout << :click-incorrect:c:endclick:;
           }
@@ -143,26 +208,38 @@ type).
          :numbered: left
          :adaptive:
          
-         Write code that creates the variables name, firstInitial, and numberOfSiblings IN THAT ORDER.  It is up to you to choose the correct types for these variables.
+         Write code that creates the variables name, first_initial, and number_of_siblings IN THAT ORDER.  It is up to you to choose the correct types for these variables.
          -----
          string name;
          =====
          string name #paired
          =====
-         char firstInitial;
+         char first_initial;
          =====
-         char firstInitial #paired
+         char first_initial #paired
          =====
-         string firstInitial; #paired
+         string first_initial; #paired
          =====
-         string firstInitial #paired
+         string first_initial #paired
          =====
-         int numberOfSiblings;
+         int number_of_siblings;
          =====
-         int numberOfSiblings #paired
+         int number_of_siblings #paired
          =====
-         double numberOfSiblings; #paired
+         double number_of_siblings; #paired
          =====
-         double numberOfSiblings #paired
+         double number_of_siblings #paired
 
+
+-----
+
+.. admonition:: More to Explore
+
+   - From cppreference.com
+
+     - C++ :lang:`identifiers`
+
+   - C++ Core Guidelines :core:`naming conventions <#S-naming>`.
+   - `Naming conventions <https://google.github.io/styleguide/cppguide.html#Variable_Names>`__
+     from Google C++ style guide.
 

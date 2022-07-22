@@ -1,3 +1,5 @@
+.. _chained-conditional:
+
 Chained Conditionals
 --------------------
 
@@ -35,13 +37,12 @@ series of ifs and elses:
        {
            std::cout << "x is zero\n";
        }
-       return 0;
    }
 
 Try changing the value of x above to see how the output is impacted.
 
 .. note::
-   If you have a chain of ``if`` statements, the program will go through 
+   If you have adjacent ``if`` statements, the program will go through 
    executing each conditional, regardless if the conditions are met.  
    However, as soon as you add an ``else`` or even an ``else if`` statement,
    the program will stop executing the chained conditionals as soon as a 
@@ -198,4 +199,9 @@ do.
                return 0;
              }
 
+-----
 
+.. admonition:: More to Explore
+
+   - :lang:`if` and :lang:`comparison operators <operator_comparison>`
+     from cppreference

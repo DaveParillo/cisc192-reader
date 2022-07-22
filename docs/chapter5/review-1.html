@@ -1,70 +1,51 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
 <!DOCTYPE html>
 
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>5.14. Multiple Choice Exercises &#8212; CISC 192 Course Reader Overview</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>5.13. Multiple Choice Exercises &#8212; CISC 192 Course Reader Overview</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
     <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
-    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
-    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
-    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.5.5" />
-    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
     <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
     <script src="../_static/animationbase.js?v=A043C3A7"></script>
     <script src="../_static/html4css1.css?v=4533ACD3"></script>
-    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
-    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
-    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
     <script src="../_static/webglinteractive.js?v=2B768384"></script>
     <script src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script src="../_static/Blob.js?v=AEC2447"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script src="../_static/runestone.js?v=92D8BBF0"></script>
-    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
-    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
-    <script src="../_static/jquery-fix.js?v=1226591B"></script>
-    <script src="../_static/bootstrap-sphinx.js"></script>
-    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
-    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
-    <script src="../_static/theme.js?v=D899FB97"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/runtime.b0f8547c48f16a9f.bundle.js?v=2731F567"></script>
+    <script src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script src="../_static/runestone.0e9550fe42760516.bundle.js?v=71AD37BA"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5.15. Mixed Up Code Practice" href="review-2.html" />
-    <link rel="prev" title="5.13. Glossary" href="glossary.html" />
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="next" title="5.14. Mixed Up Code Practice" href="review-2.html" />
+    <link rel="prev" title="5.12. Glossary" href="glossary.html" />
+
+
 <link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
 
-<script type="text/javascript">
+
+<script>
   eBookConfig = {};
   
     eBookConfig.useRunestoneServices = false;
@@ -73,6 +54,8 @@
     eBookConfig.course = 'cisc192-reader';
     eBookConfig.basecourse = 'cisc192-reader';
     eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
   
   eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
   eBookConfig.logLevel = 0;
@@ -80,18 +63,16 @@
   eBookConfig.build_info = "unknown";
   eBookConfig.python3 = true;
   eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
-  eBookConfig.runestone_version = '5.5.5';
+  eBookConfig.runestone_version = '6.2.1';
   eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
   eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
   eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
   eBookConfig.enable_chatcodes = false ? false : false;
-
+  eBookConfig.enableScratchAC = true;
 
 </script>
 
 <!-- Ad Serving Headers Only serve ads to Anonymous Users -->
-
-
 
 
 
@@ -105,15 +86,16 @@
 
     <div class="navbar-header">
       <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
-        <span class="icon-bar" aria-label="navbar toggle" class="visuallyhidden">toggle navbar</span>
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
 
       <div>
         
-          <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;'>&nbsp;<span aria-label="logo" class="visuallyhidden">Runestone Logo</span> </a>
+        
+          <div class="brand-logo"><img src="../_static/img/RAIcon.png" alt=""></div>
         
         <a class="navbar-brand" href="../index.html" aria-label="index-page">
           
@@ -128,17 +110,16 @@
       <ul class="nav navbar-nav navbar-right" >
 
         <li class="divider-vertical"></li>
-
+        <li><span id="browsing_warning"></span></li>
 
         <!-- social media dropdown -->
         <!-- end social media dropdown -->
 
         <li class="divider-vertical"></li>
-
         <!-- search dropdown -->
         <li class="dropdown">
           <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span aria-label="Search" class="visuallyhidden">Search</span></i>
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
           </a>
           <ul class='dropdown-menu'>
             
@@ -171,8 +152,8 @@
         <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
 
         <!-- <li class="dropdown">             -->
-          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
-              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span aria-label="Scratch Activecode" class="visuallyhidden">Scratch Activecode</span></i></a></li>
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
         <!-- </li> -->
 
         <li class="divider-vertical"></li>
@@ -188,422 +169,373 @@
         
         <!-- 
           
-  <li id="relations-prev" title="Previous Chapter - <span class="section-number">5.13. </span>Glossary" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">5.12. </span>Glossary" data-toggle="tooltip">
     <a href="glossary.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - <span class="section-number">5.15. </span>Mixed Up Code Practice' data-toggle="tooltip" >              
+  <li id="relations-next" title='Next Chapter - <span class="section-number">5.14. </span>Mixed Up Code Practice' data-toggle="tooltip" >              
     <a href="review-2.html" >
         <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
   <li class="divider-vertical"></li>
 
-<script type="text/javascript">
+<script>
   opts = {'placement':'bottom',
           'selector': '',
           'delay': { show: 100, hide: 50}
          };
 
-  $('#relations-prev').tooltip(opts);
-  $('#relations-next').tooltip(opts);
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
 </script>
         -->
         
           <li></li>
         
       </ul>
-
-      </div> <!-- navbar -->
-
-
-
-
-
-
-
-    </div> <!-- container -->
-  </div>
-</div>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
 
 
 <div class="container" id="continue-reading"></div>
 
 <div class="container" id="main-content" role="main">
+
 <!-- Ad Serving for Runestone Campaign -->
 
 
   
-  <div class="section" id="multiple-choice-exercises">
-<h1><span class="section-number">5.14. </span>Multiple Choice Exercises<a class="headerlink" href="#multiple-choice-exercises" title="Permalink to this headline">¶</a></h1>
-<div id='self_check' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Q1" >
+  <section id="multiple-choice-exercises">
+<h1><span class="section-number">5.13. </span>Multiple Choice Exercises<a class="headerlink" href="#multiple-choice-exercises" title="Permalink to this headline">¶</a></h1>
+<div id='self_check' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Q1" >
 
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="5.14.1" data-multipleanswers="false"  id="mce_5_1"  style="visibility: hidden;">
-            <p>Q-1: What should be the return type of the function <code class="docutils literal notranslate"><span class="pre">convertToCelsius</span></code>?</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">______</span> <span class="nf">convertToCelsius</span> <span class="p">(</span><span class="kt">double</span> <span class="n">fahrenheit</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kt">double</span> <span class="n">celsius</span><span class="p">;</span>
-  <span class="n">celsius</span> <span class="o">=</span> <span class="p">(</span><span class="n">fahrenheit</span> <span class="o">-</span> <span class="mi">32</span><span class="p">)</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">9</span><span class="p">;</span>
-  <span class="k">return</span> <span class="n">celsius</span><span class="p">;</span>
-<span class="p">}</span>
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="5.13.1" data-multipleanswers="false"  id="mce_6_1"  style="visibility: hidden;">
+    <p>Q-1: What is the output of the code below?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<li data-component="answer"  id="mce_5_1_opt_a"><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p>
-</li><li data-component="feedback" id="mce_5_1_opt_a">
-<p>What variable are we returning in the function, and what is the variable’s type?</p></li><li data-component="answer" data-correct id="mce_5_1_opt_b"><p><code class="docutils literal notranslate"><span class="pre">double</span></code></p>
-</li><li data-component="feedback" id="mce_5_1_opt_b">
-<p>The function returns <code class="docutils literal notranslate"><span class="pre">celsius</span></code>, which is a <code class="docutils literal notranslate"><span class="pre">double</span></code>.</p></li><li data-component="answer"  id="mce_5_1_opt_c"><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p>
-</li><li data-component="feedback" id="mce_5_1_opt_c">
-<p>What variable are we returning in the function, and what is the variable’s type?</p></li><li data-component="answer"  id="mce_5_1_opt_d"><p><code class="docutils literal notranslate"><span class="pre">void</span></code></p>
-</li><li data-component="feedback" id="mce_5_1_opt_d">
-<p>Since we are returning something in the function, the function is not <code class="docutils literal notranslate"><span class="pre">void</span></code>.</p></li>
+<li data-component="answer"  id="mce_6_1_opt_a"><p>0</p>
+</li><li data-component="feedback" id="mce_6_1_opt_a">
+<p><code class="docutils literal notranslate"><span class="pre">x</span></code> is initialized to 0, but it’s value is reassigned in the while loop. Can you figure out what the final value assigned to <code class="docutils literal notranslate"><span class="pre">x</span></code> is?</p></li><li data-component="answer"  id="mce_6_1_opt_b"><p>1</p>
+</li><li data-component="feedback" id="mce_6_1_opt_b">
+<p>When <code class="docutils literal notranslate"><span class="pre">i</span></code> is 1, <code class="docutils literal notranslate"><span class="pre">x</span></code> is assigned the value of <code class="docutils literal notranslate"><span class="pre">i</span></code>, so <code class="docutils literal notranslate"><span class="pre">x</span></code> is 1. However, the while loop continuously increments i, so the final value of <code class="docutils literal notranslate"><span class="pre">x</span></code> is not 1.</p></li><li data-component="answer" data-correct id="mce_6_1_opt_c"><p>9</p>
+</li><li data-component="feedback" id="mce_6_1_opt_c">
+<p><code class="docutils literal notranslate"><span class="pre">x</span></code> is assigned the value of 9 during the last iteration of the while loop, and thus 9 is the output of the program.</p></li><li data-component="answer"  id="mce_6_1_opt_d"><p>10</p>
+</li><li data-component="feedback" id="mce_6_1_opt_d">
+<p><code class="docutils literal notranslate"><span class="pre">i</span></code> is incremented to a value of 10, but since <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">&lt;</span> <span class="pre">10</span></code> is false, the contents of the while loop is not executed, so <code class="docutils literal notranslate"><span class="pre">x</span></code> is never assigned the value of 10.</p></li>
 
-            </ul>
-            </div>
-            </div><div data-component="tab" data-tabname="Q2" >
+    </ul>
+    </div>
+    </div><div data-component="tab" data-tabname="Q2" >
 
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="5.14.2" data-multipleanswers="false"  id="mce_5_2"  style="visibility: hidden;">
-            <p>Q-2: What would be returned by <code class="docutils literal notranslate"><span class="pre">secretFunction</span></code> if the input was 14?</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">secretFunction</span> <span class="p">(</span><span class="kt">int</span> <span class="n">input</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">input</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">input</span> <span class="o">-</span> <span class="mi">2</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="k">else</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">input</span> <span class="o">%</span> <span class="mi">7</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">return</span> <span class="n">input</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">input</span> <span class="o">+</span> <span class="mi">9</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="k">return</span> <span class="n">input</span> <span class="o">+</span> <span class="mi">4</span><span class="p">;</span>
-<span class="p">}</span>
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="5.13.2" data-multipleanswers="false"  id="mce_6_2"  style="visibility: hidden;">
+    <p>Q-2: What is the final value of <code class="docutils literal notranslate"><span class="pre">i</span></code> when the code is finished running?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<li data-component="answer"  id="mce_5_2_opt_a"><p>14</p>
-</li><li data-component="feedback" id="mce_5_2_opt_a">
-<p>Although 14 is divisible by 7, take another look at the conditionals.</p></li><li data-component="answer"  id="mce_5_2_opt_b"><p>18</p>
-</li><li data-component="feedback" id="mce_5_2_opt_b">
-<p>The flow of code would never reach the last return statement.</p></li><li data-component="answer"  id="mce_5_2_opt_c"><p>36</p>
-</li><li data-component="feedback" id="mce_5_2_opt_c">
-<p>Check your order of operations!</p></li><li data-component="answer"  id="mce_5_2_opt_d"><p>37</p>
-</li><li data-component="feedback" id="mce_5_2_opt_d">
-<p>Take a closer look at the conditional statements.</p></li><li data-component="answer" data-correct id="mce_5_2_opt_e"><p>40</p>
-</li><li data-component="feedback" id="mce_5_2_opt_e">
-<p>Since 14 is divisible by 2, the function returns two less than three times 14.</p></li>
+<li data-component="answer"  id="mce_6_2_opt_a"><p>0</p>
+</li><li data-component="feedback" id="mce_6_2_opt_a">
+<p><code class="docutils literal notranslate"><span class="pre">i</span></code> is initialized with a value of 1 and is incremented, so it will never have a value of 0.</p></li><li data-component="answer"  id="mce_6_2_opt_b"><p>1</p>
+</li><li data-component="feedback" id="mce_6_2_opt_b">
+<p><code class="docutils literal notranslate"><span class="pre">i</span></code> is initialized with a value of 1 but it is incremented during the while loop.</p></li><li data-component="answer"  id="mce_6_2_opt_c"><p>9</p>
+</li><li data-component="feedback" id="mce_6_2_opt_c">
+<p>This is the final value of <code class="docutils literal notranslate"><span class="pre">x</span></code> when the code is finished running.</p></li><li data-component="answer" data-correct id="mce_6_2_opt_d"><p>10</p>
+</li><li data-component="feedback" id="mce_6_2_opt_d">
+<p>In order for the while loop to terminate, the condition <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">&lt;</span> <span class="pre">10</span></code> must be false, and this is achieved when <code class="docutils literal notranslate"><span class="pre">i</span></code> is incremented to 10.</p></li>
 
-            </ul>
-            </div>
-            </div><div data-component="tab" data-tabname="Q3" >
+    </ul>
+    </div>
+    </div><div data-component="tab" data-tabname="Q3" >
 
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="5.14.3" data-multipleanswers="false"  id="mce_5_3"  style="visibility: hidden;">
-            <p>Q-3: If we wanted to create a boolean function called <code class="docutils literal notranslate"><span class="pre">isPrime</span></code>, which takes an <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">input</span></code>
-as a parameter, which of the following would be the correct function header?</p>
-<li data-component="answer"  id="mce_5_3_opt_a"><p><code class="docutils literal notranslate"><span class="pre">boolean</span> <span class="pre">isPrime</span> <span class="pre">(int</span> <span class="pre">input)</span> <span class="pre">{</span></code></p>
-</li><li data-component="feedback" id="mce_5_3_opt_a">
-<p>In C++, use the <code class="docutils literal notranslate"><span class="pre">bool</span></code> keyword for a boolean.</p></li><li data-component="answer"  id="mce_5_3_opt_b"><p><code class="docutils literal notranslate"><span class="pre">bool</span> <span class="pre">isPrime</span> <span class="pre">(input)</span> <span class="pre">{</span></code></p>
-</li><li data-component="feedback" id="mce_5_3_opt_b">
-<p>In a function header, the type of each variable must be specified in the parameter list.</p></li><li data-component="answer" data-correct id="mce_5_3_opt_c"><p><code class="docutils literal notranslate"><span class="pre">bool</span> <span class="pre">isPrime</span> <span class="pre">(int</span> <span class="pre">input)</span> <span class="pre">{</span></code></p>
-</li><li data-component="feedback" id="mce_5_3_opt_c">
-<p>This is the correct function header for the function.</p></li><li data-component="answer"  id="mce_5_3_opt_d"><p><code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">isPrime</span> <span class="pre">(bool</span> <span class="pre">input)</span> <span class="pre">{</span></code></p>
-</li><li data-component="feedback" id="mce_5_3_opt_d">
-<p>Take a closer look at what the return type is.</p></li>
-
-            </ul>
-            </div>
-            </div><div data-component="tab" data-tabname="Q4" >
-
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="5.14.4" data-multipleanswers="true"  id="mce_5_4"  style="visibility: hidden;">
-            <p>Q-4: If we wrote the following function, which of the other functions below can we also legally write
-and add to the program?</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">func</span> <span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">y</span><span class="p">);</span>
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="5.13.3" data-multipleanswers="false"  id="mce_6_3"  style="visibility: hidden;">
+    <p>Q-3: How many times does the following while loop run?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<li data-component="answer"  id="mce_5_4_opt_a"><p><code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">func</span> <span class="pre">(double</span> <span class="pre">a,</span> <span class="pre">bool</span> <span class="pre">b);</span></code></p>
-</li><li data-component="feedback" id="mce_5_4_opt_a">
-<p>Since this function has the same name and parameter types as the given function, it is not allowed.</p></li><li data-component="answer" data-correct id="mce_5_4_opt_b"><p><code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">foo</span> <span class="pre">(double</span> <span class="pre">x,</span> <span class="pre">bool</span> <span class="pre">y);</span></code></p>
-</li><li data-component="feedback" id="mce_5_4_opt_b">
-<p>This function has a different name from the given function, so it is allowed.</p></li><li data-component="answer" data-correct id="mce_5_4_opt_c"><p><code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">func</span> <span class="pre">(double</span> <span class="pre">x);</span></code></p>
-</li><li data-component="feedback" id="mce_5_4_opt_c">
-<p>Although this function has the same name as the given function, it has a different number of parameters, so it is allowed.</p></li><li data-component="answer"  id="mce_5_4_opt_d"><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">func</span> <span class="pre">(double</span> <span class="pre">x,</span> <span class="pre">bool</span> <span class="pre">y);</span></code></p>
-</li><li data-component="feedback" id="mce_5_4_opt_d">
-<p>Although this function has a different return type, its parameter list is the same as the given function, so it is not allowed.</p></li><li data-component="answer" data-correct id="mce_5_4_opt_e"><p><code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">func</span> <span class="pre">(bool</span> <span class="pre">y,</span> <span class="pre">double</span> <span class="pre">x);</span></code></p>
-</li><li data-component="feedback" id="mce_5_4_opt_e">
-<p>Although this function has the same name as the given function, its parameter list is in a different order, so it is allowed.</p></li>
+<li data-component="answer"  id="mce_6_3_opt_a"><p>1</p>
+</li><li data-component="feedback" id="mce_6_3_opt_a">
+<p>Take a closer look at the while loop and conditional.</p></li><li data-component="answer"  id="mce_6_3_opt_b"><p>3</p>
+</li><li data-component="feedback" id="mce_6_3_opt_b">
+<p>Take a closer look at the while loop and conditional.</p></li><li data-component="answer"  id="mce_6_3_opt_c"><p>5</p>
+</li><li data-component="feedback" id="mce_6_3_opt_c">
+<p>Take a closer look at the while loop and conditional.</p></li><li data-component="answer" data-correct id="mce_6_3_opt_d"><p>The loop will run infinitely.</p>
+</li><li data-component="feedback" id="mce_6_3_opt_d">
+<p>The value of <code class="docutils literal notranslate"><span class="pre">i</span></code> will always be greater than 2, resulting in an infinite loop.</p></li>
 
-            </ul>
-            </div>
-            </div><div data-component="tab" data-tabname="Q5" >
+    </ul>
+    </div>
+    </div><div data-component="tab" data-tabname="Q4" >
 
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="5.14.5" data-multipleanswers="false"  id="mce_5_5"  style="visibility: hidden;">
-            <p>Q-5: What is the output of the code below?</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kt">bool</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span>
-  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">x</span><span class="p">;</span>
-  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="nb">false</span><span class="p">;</span>
-  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">((</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">4</span><span class="p">)</span> <span class="o">*</span> <span class="mi">4</span> <span class="o">&gt;</span> <span class="mi">24</span><span class="p">);</span>
-  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="mi">23</span> <span class="o">==</span> <span class="p">(</span><span class="mi">32</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">11</span><span class="p">));</span>
-<span class="p">}</span>
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="5.13.4" data-multipleanswers="false"  id="mce_6_4"  style="visibility: hidden;">
+    <p>Q-4: What is the output of the code below?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// cout &lt;&lt; &quot;Da &quot;;</span>
+<span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;na &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;na &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">n</span><span class="o">--</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Batman!&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<li data-component="answer" data-correct id="mce_5_5_opt_a"><p>1001</p>
-</li><li data-component="feedback" id="mce_5_5_opt_a">
-<p>Since the first and last statements are true and the middle two are false, this is the correct output.</p></li><li data-component="answer"  id="mce_5_5_opt_b"><p>truefalsefalsetrue</p>
-</li><li data-component="feedback" id="mce_5_5_opt_b">
-<p>In C++, boolean values are outputted as 0 or 1.</p></li><li data-component="answer"  id="mce_5_5_opt_c"><p>1false01</p>
-</li><li data-component="feedback" id="mce_5_5_opt_c">
-<p>Since the second <code class="docutils literal notranslate"><span class="pre">cout</span></code> statement doesn’t have quotes around the word “false”, the value of 0 is outputted.</p></li><li data-component="answer"  id="mce_5_5_opt_d"><p>0110</p>
-</li><li data-component="feedback" id="mce_5_5_opt_d">
-<p>Remember that if a boolean expression is true, it has a value of 1.</p></li>
+<li data-component="answer" data-correct id="mce_6_4_opt_a"><p>na na na na na na na na Batman!</p>
+</li><li data-component="feedback" id="mce_6_4_opt_a">
+<p>The code prints out eight “na”s before printing out “Batman!”</p></li><li data-component="answer"  id="mce_6_4_opt_b"><p>na na na na na na na Batman!</p>
+</li><li data-component="feedback" id="mce_6_4_opt_b">
+<p>Look over the code carefully. There are output statements before the while loop.</p></li><li data-component="answer"  id="mce_6_4_opt_c"><p>Da na na na na na na na na Batman!</p>
+</li><li data-component="feedback" id="mce_6_4_opt_c">
+<p>Will “Da” ever be printed?</p></li><li data-component="answer"  id="mce_6_4_opt_d"><p>It will result in an infinite loop.</p>
+</li><li data-component="feedback" id="mce_6_4_opt_d">
+<p>Since we repeatedly decrement <code class="docutils literal notranslate"><span class="pre">n</span></code> inside the while loop, it will eventually be equal to 3 and the while loop will terminate.</p></li>
 
-            </ul>
-            </div>
-            </div><div data-component="tab" data-tabname="Q6" >
+    </ul>
+    </div>
+    </div><div data-component="tab" data-tabname="Q5" >
 
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="5.14.6" data-multipleanswers="false"  id="mce_5_6"  style="visibility: hidden;">
-            <p>Q-6: What is the output of the code below?</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kt">bool</span> <span class="n">w</span> <span class="o">=</span> <span class="o">!</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">6</span> <span class="o">||</span> <span class="mi">4</span> <span class="o">-</span> <span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">8</span><span class="p">);</span>
-  <span class="kt">bool</span> <span class="n">x</span> <span class="o">=</span> <span class="nb">true</span> <span class="o">||</span> <span class="mi">4</span> <span class="o">&gt;</span> <span class="mi">6</span><span class="p">;</span>
-  <span class="kt">bool</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">!=</span> <span class="mi">6</span> <span class="o">-</span> <span class="mi">3</span> <span class="o">&amp;&amp;</span> <span class="mi">23</span> <span class="o">&gt;=</span> <span class="mi">23</span><span class="p">;</span>
-  <span class="kt">bool</span> <span class="n">z</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span> <span class="o">+</span> <span class="mi">9</span> <span class="o">&lt;</span> <span class="mi">15</span> <span class="o">&amp;&amp;</span> <span class="mi">3</span> <span class="o">!=</span> <span class="mi">4</span><span class="p">)</span> <span class="o">||</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">7</span><span class="p">;</span>
-  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">w</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="n">y</span> <span class="o">&lt;&lt;</span> <span class="n">z</span><span class="p">;</span>
-<span class="p">}</span>
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="5.13.5" data-multipleanswers="false"  id="mce_6_5"  style="visibility: hidden;">
+    <p>Q-5: What is the output of the code below?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Da &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;na &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;na &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Batman!&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<li data-component="answer" data-correct id="mce_5_6_opt_a"><p>0101</p>
-</li><li data-component="feedback" id="mce_5_6_opt_a">
-<p>Since the expressions are false, true, false, and true, the output is 0101.</p></li><li data-component="answer"  id="mce_5_6_opt_b"><p>1010</p>
-</li><li data-component="feedback" id="mce_5_6_opt_b">
-<p>Remember that <code class="docutils literal notranslate"><span class="pre">true</span></code> outputs to 1 and <code class="docutils literal notranslate"><span class="pre">false</span></code> outputs to 0.</p></li><li data-component="answer"  id="mce_5_6_opt_c"><p>1101</p>
-</li><li data-component="feedback" id="mce_5_6_opt_c">
-<p>Remember the NOT operator (!) inverts the value of a boolean.</p></li><li data-component="answer"  id="mce_5_6_opt_d"><p>0100</p>
-</li><li data-component="feedback" id="mce_5_6_opt_d">
-<p>Take a closer look at the order of operations.</p></li><li data-component="answer"  id="mce_5_6_opt_e"><p>0110</p>
-</li><li data-component="feedback" id="mce_5_6_opt_e">
-<p>Take a closer look at the expressions.</p></li>
+<li data-component="answer"  id="mce_6_5_opt_a"><p>Batman!</p>
+</li><li data-component="feedback" id="mce_6_5_opt_a">
+<p>Take a closer look at the while loop.</p></li><li data-component="answer"  id="mce_6_5_opt_b"><p>Da Batman!</p>
+</li><li data-component="feedback" id="mce_6_5_opt_b">
+<p>Take a closer look at the while loop.</p></li><li data-component="answer"  id="mce_6_5_opt_c"><p>Da na na na na na na na na Batman!</p>
+</li><li data-component="feedback" id="mce_6_5_opt_c">
+<p>Take a closer look at the while loop.</p></li><li data-component="answer" data-correct id="mce_6_5_opt_d"><p>It will result in an infinite loop.</p>
+</li><li data-component="feedback" id="mce_6_5_opt_d">
+<p>Since we never change the value of <code class="docutils literal notranslate"><span class="pre">n</span></code>, 10 will never equal 3 so the code will run forever.</p></li>
 
-            </ul>
-            </div>
-            </div><div data-component="tab" data-tabname="Q7" >
+    </ul>
+    </div>
+    </div><div data-component="tab" data-tabname="Q6" >
 
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="5.14.7" data-multipleanswers="false"  id="mce_5_7"  style="visibility: hidden;">
-            <p>Q-7: Are there any issues with the code below?</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span> <span class="nf">isEven</span> <span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="5.13.6" data-multipleanswers="false"  id="mce_6_6"  style="visibility: hidden;">
+    <p>Q-6: What is the output of the code below?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">6</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\t</span><span class="s">&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pow</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">pow</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">x</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<li data-component="answer"  id="mce_5_7_opt_a"><p>Yes, we have to return either 0 or 1.</p>
-</li><li data-component="feedback" id="mce_5_7_opt_a">
-<p>Returning a 0 or 1 would be returning an <code class="docutils literal notranslate"><span class="pre">int</span></code>, even though booleans evaluate to 0 or 1.</p></li><li data-component="answer"  id="mce_5_7_opt_b"><p>Yes, we cannot pass an <code class="docutils literal notranslate"><span class="pre">int</span></code> into a <code class="docutils literal notranslate"><span class="pre">bool</span></code> function.</p>
-</li><li data-component="feedback" id="mce_5_7_opt_b">
-<p>The type of variables in the parameter list do not affect the return type.</p></li><li data-component="answer" data-correct id="mce_5_7_opt_c"><p>Yes, there is no case for odd numbers.</p>
-</li><li data-component="feedback" id="mce_5_7_opt_c">
-<p>Since we never established an else clause, if the input was an odd number, the function would not return anything despite not being a void function.</p></li><li data-component="answer"  id="mce_5_7_opt_d"><p>There are no issues with the code.</p>
-</li><li data-component="feedback" id="mce_5_7_opt_d">
-<p>There is an issue with the code. Can you find it?</p></li>
+<li data-component="answer"  id="mce_6_6_opt_a"><p>The first six perfect fifths.</p>
+</li><li data-component="feedback" id="mce_6_6_opt_a">
+<p>Take a closer look at the while loop and what <code class="docutils literal notranslate"><span class="pre">x</span></code> was initialized to.</p></li><li data-component="answer"  id="mce_6_6_opt_b"><p>The first six perfect squares.</p>
+</li><li data-component="feedback" id="mce_6_6_opt_b">
+<p>Take a closer look at the while loop and what <code class="docutils literal notranslate"><span class="pre">x</span></code> was initialized to.</p></li><li data-component="answer" data-correct id="mce_6_6_opt_c"><p>The first five perfect squares.</p>
+</li><li data-component="feedback" id="mce_6_6_opt_c">
+<p>Dividing <code class="docutils literal notranslate"><span class="pre">x</span></code> to the power of 5 by <code class="docutils literal notranslate"><span class="pre">x</span></code> to the power of 3 effectively results in perfect squares.</p></li><li data-component="answer"  id="mce_6_6_opt_d"><p>The first five perfect cubes.</p>
+</li><li data-component="feedback" id="mce_6_6_opt_d">
+<p>Take a closer look at the mathematical expression inside the while loop.</p></li>
 
-            </ul>
-            </div>
-            </div><div data-component="tab" data-tabname="Q8" >
+    </ul>
+    </div>
+    </div><div data-component="tab" data-tabname="Q7" >
 
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="5.14.8" data-multipleanswers="false"  id="mce_5_8"  style="visibility: hidden;">
-            <p>Q-8: Are there any issues with the code below?</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="nf">Free_time</span> <span class="p">(</span><span class="kt">int</span> <span class="n">day</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">day</span><span class="o">==</span><span class="mi">1</span><span class="o">||</span><span class="n">day</span><span class="o">==</span><span class="mi">2</span><span class="o">||</span><span class="n">day</span><span class="o">==</span><span class="mi">3</span><span class="o">||</span><span class="n">day</span><span class="o">==</span><span class="mi">4</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;Better study on weekday!&quot;</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
-    <span class="k">return</span> <span class="n">day</span><span class="o">*</span><span class="mf">0.25</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="k">else</span><span class="p">{</span>
-    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;Happy weekend&quot;</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
-    <span class="k">return</span> <span class="n">day</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="5.13.7" data-multipleanswers="false"  id="mce_6_7"  style="visibility: hidden;">
+    <p>Q-7: Why are we allowed to use the variable <code class="docutils literal notranslate"><span class="pre">x</span></code> in both <code class="docutils literal notranslate"><span class="pre">main</span></code> and in the function definition of <code class="docutils literal notranslate"><span class="pre">superSecretFunction</span></code>?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">superSecretFunction</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;After using the super secret function, we get &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">superSecretFunction</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<li data-component="answer"  id="mce_5_8_opt_a"><p>Yes, we might not return anything.</p>
-</li><li data-component="feedback" id="mce_5_8_opt_a">
-<p>We have an else clause in which we return a value.</p></li><li data-component="answer"  id="mce_5_8_opt_b"><p>Yes, we cannot return an entire expression like <code class="docutils literal notranslate"><span class="pre">day*0.25</span></code>.</p>
-</li><li data-component="feedback" id="mce_5_8_opt_b">
-<p>If the result of the expression is compatible with the return type we can return it.</p></li><li data-component="answer"  id="mce_5_8_opt_c"><p>Yes, we are returning an <code class="docutils literal notranslate"><span class="pre">int</span></code> (in the <code class="docutils literal notranslate"><span class="pre">else</span></code> block) where as the return type is <code class="docutils literal notranslate"><span class="pre">double</span></code>.</p>
-</li><li data-component="feedback" id="mce_5_8_opt_c">
-<p>Implicit conversion from an int to double is ok in c++!</p></li><li data-component="answer" data-correct id="mce_5_8_opt_d"><p>There are no issues with the code.</p>
-</li><li data-component="feedback" id="mce_5_8_opt_d">
-<p>Correct! implicit conversion from int to double are ok!</p></li>
+<li data-component="answer"  id="mce_6_7_opt_a"><p>We’re using the same variable, but just reassigning the value from 0 to 1.</p>
+</li><li data-component="feedback" id="mce_6_7_opt_a">
+<p>We are actually using two different variables that happen to have the same name.</p></li><li data-component="answer" data-correct id="mce_6_7_opt_b"><p>Although the name of both variables is <code class="docutils literal notranslate"><span class="pre">x</span></code>, they represent different locations in memory, and thus are different variables.</p>
+</li><li data-component="feedback" id="mce_6_7_opt_b">
+<p>One <code class="docutils literal notranslate"><span class="pre">x</span></code> is a local variable of <code class="docutils literal notranslate"><span class="pre">superSecretFunction</span></code> while the other is a local variable of <code class="docutils literal notranslate"><span class="pre">main</span></code>.</p></li><li data-component="answer"  id="mce_6_7_opt_c"><p>We can assign them different values but not the same value. Thus, if both were initialized to 0, then we’d get an error.</p>
+</li><li data-component="feedback" id="mce_6_7_opt_c">
+<p>Since they are not in the same storage location, they can store any value, including the same value.</p></li><li data-component="answer"  id="mce_6_7_opt_d"><p>We’re not allowed to do this. The code will result in an error.</p>
+</li><li data-component="feedback" id="mce_6_7_opt_d">
+<p>The code does not produce an error.</p></li>
 
-            </ul>
-            </div>
-            </div><div data-component="tab" data-tabname="Q9" >
+    </ul>
+    </div>
+    </div><div data-component="tab" data-tabname="Q8" >
 
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="5.14.9" data-multipleanswers="false"  id="mce_5_9"  style="visibility: hidden;">
-            <p>Q-9: Are there any issues with the code below?</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">moonWeight</span> <span class="p">(</span><span class="kt">double</span> <span class="n">earth</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kt">double</span> <span class="n">moon</span> <span class="o">=</span> <span class="mf">0.165</span> <span class="o">*</span> <span class="n">earth</span><span class="p">;</span>
-  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;You would weigh &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">moon</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; pounds on the moon.&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-  <span class="k">return</span> <span class="n">moon</span><span class="p">;</span>
-<span class="p">}</span>
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="5.13.8" data-multipleanswers="false"  id="mce_6_8"  style="visibility: hidden;">
+    <p>Q-8: What is the output of the code below?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">loopFive</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">loopFive</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">loopFive</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">loopFive</span><span class="w"> </span><span class="p">(</span><span class="mi">4</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<li data-component="answer"  id="mce_5_9_opt_a"><p>Yes, we cannot have <code class="docutils literal notranslate"><span class="pre">cout</span></code> statements in a function.</p>
-</li><li data-component="feedback" id="mce_5_9_opt_a">
-<p>We are allowed to use <code class="docutils literal notranslate"><span class="pre">cout</span></code> statements in a function.</p></li><li data-component="answer" data-correct id="mce_5_9_opt_b"><p>Yes, we cannot return anything.</p>
-</li><li data-component="feedback" id="mce_5_9_opt_b">
-<p><code class="docutils literal notranslate"><span class="pre">void</span></code> functions do not have return values, so we cannot return <code class="docutils literal notranslate"><span class="pre">moon</span></code>.</p></li><li data-component="answer"  id="mce_5_9_opt_c"><p>Yes, we need to return the output statement.</p>
-</li><li data-component="feedback" id="mce_5_9_opt_c">
-<p><code class="docutils literal notranslate"><span class="pre">void</span></code> functions do not have return values.</p></li><li data-component="answer"  id="mce_5_9_opt_d"><p>There are no issues with the code.</p>
-</li><li data-component="feedback" id="mce_5_9_opt_d">
-<p>There is an issue with the code. Can you find it?</p></li>
+<li data-component="answer" data-correct id="mce_6_8_opt_a"><p>51510</p>
+</li><li data-component="feedback" id="mce_6_8_opt_a">
+<p><code class="docutils literal notranslate"><span class="pre">n</span></code> is repeatedly incremented by 3 until it is divisible by 5, and this happens when <code class="docutils literal notranslate"><span class="pre">n</span></code> is 5, 15, and 10 for the inputs of 2, 3, and 4 respectively.</p></li><li data-component="answer"  id="mce_6_8_opt_b"><p>234</p>
+</li><li data-component="feedback" id="mce_6_8_opt_b">
+<p>Although the function returns <code class="docutils literal notranslate"><span class="pre">n</span></code>, <code class="docutils literal notranslate"><span class="pre">n</span></code> might not be its original value.</p></li><li data-component="answer"  id="mce_6_8_opt_c"><p>5 15 10</p>
+</li><li data-component="feedback" id="mce_6_8_opt_c">
+<p>Take a closer look at the output statements.</p></li><li data-component="answer"  id="mce_6_8_opt_d"><p>567</p>
+</li><li data-component="feedback" id="mce_6_8_opt_d">
+<p>Take a closer look at the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop in the function.</p></li>
 
-            </ul>
-            </div>
-            </div><div data-component="tab" data-tabname="Q10" >
+    </ul>
+    </div>
+    </div><div data-component="tab" data-tabname="Q9" >
 
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="5.14.10" data-multipleanswers="false"  id="mce_5_10"  style="visibility: hidden;">
-            <p>Q-10: What is the return type of main?</p>
-<li data-component="answer"  id="mce_5_10_opt_a"><p><code class="docutils literal notranslate"><span class="pre">void</span></code></p>
-</li><li data-component="feedback" id="mce_5_10_opt_a">
-<p>What keyword do we use before <code class="docutils literal notranslate"><span class="pre">main()</span></code> in every program?</p></li><li data-component="answer"  id="mce_5_10_opt_b"><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
-</li><li data-component="feedback" id="mce_5_10_opt_b">
-<p>What keyword do we use before <code class="docutils literal notranslate"><span class="pre">main()</span></code> in every program?</p></li><li data-component="answer"  id="mce_5_10_opt_c"><p><code class="docutils literal notranslate"><span class="pre">double</span></code></p>
-</li><li data-component="feedback" id="mce_5_10_opt_c">
-<p>What keyword do we use before <code class="docutils literal notranslate"><span class="pre">main()</span></code> in every program?</p></li><li data-component="answer" data-correct id="mce_5_10_opt_d"><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p>
-</li><li data-component="feedback" id="mce_5_10_opt_d">
-<p>Yes, <code class="docutils literal notranslate"><span class="pre">main</span></code> is supposed to return an integer, which is why programmers often return 0 at the end of <code class="docutils literal notranslate"><span class="pre">main</span></code>.</p></li>
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="5.13.9" data-multipleanswers="false"  id="mce_6_9"  style="visibility: hidden;">
+    <p>Q-9: The super evil villian RePete wants to annoy the city by
+hacking into the city’s helper robots and making them repeat
+everything they say 5 times. However, there’s an error in his
+code and now the robots won’t stop repeating! Can you find the
+error?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">repeat_bot</span><span class="w"> </span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">input</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">n</span><span class="o">--</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
-            </ul>
-            </div>
-            </div><div data-component="tab" data-tabname="Q11" >
-
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="5.14.11" data-multipleanswers="false"  id="mce_5_11"  style="visibility: hidden;">
-            <p>Q-11: What is the base case of the <code class="docutils literal notranslate"><span class="pre">factorial</span></code> recursive function?</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">factorial</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="k">else</span> <span class="p">{</span>
-    <span class="kt">int</span> <span class="n">recurse</span> <span class="o">=</span> <span class="n">factorial</span> <span class="p">(</span><span class="n">n</span><span class="mi">-1</span><span class="p">);</span>
-    <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="n">recurse</span><span class="p">;</span>
-    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">repeat_bot</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;Hello, how may I help you?&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<li data-component="answer" data-correct id="mce_5_11_opt_a"><p><code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">0</span></code></p>
-</li><li data-component="feedback" id="mce_5_11_opt_a">
-<p>When <code class="docutils literal notranslate"><span class="pre">n</span></code> is 0, the function returns the value 1 without making a recursive call.</p></li><li data-component="answer"  id="mce_5_11_opt_b"><p><code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">1</span></code></p>
-</li><li data-component="feedback" id="mce_5_11_opt_b">
-<p>When <code class="docutils literal notranslate"><span class="pre">n</span></code> is 1, the function makes a recursive call in the else statement.</p></li><li data-component="answer"  id="mce_5_11_opt_c"><p><code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">-1</span></code></p>
-</li><li data-component="feedback" id="mce_5_11_opt_c">
-<p><code class="docutils literal notranslate"><span class="pre">n</span></code> never becomes -1.</p></li><li data-component="answer"  id="mce_5_11_opt_d"><p>There is no base case.</p>
-</li><li data-component="feedback" id="mce_5_11_opt_d">
-<p>If there was no base case, the function would recurse infinitely.</p></li>
+<li data-component="answer"  id="mce_6_9_opt_a"><p><code class="docutils literal notranslate"><span class="pre">repeat_bot</span></code> can only take one word as an argument.</p>
+</li><li data-component="feedback" id="mce_6_9_opt_a">
+<p>A <code class="docutils literal notranslate"><span class="pre">string</span></code> is any number of characters or words surrounded by double quotes, not just one word.</p></li><li data-component="answer"  id="mce_6_9_opt_b"><p><code class="docutils literal notranslate"><span class="pre">n</span></code> is declared to be 0 and 0 is always less than 5.</p>
+</li><li data-component="feedback" id="mce_6_9_opt_b">
+<p>The code doesn’t loop infinitely because of the value <code class="docutils literal notranslate"><span class="pre">n</span></code> was declared to be.</p></li><li data-component="answer"  id="mce_6_9_opt_c"><p>Every time the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop runs, <code class="docutils literal notranslate"><span class="pre">n</span></code> is reset to 0, so it will always be less than 5.</p>
+</li><li data-component="feedback" id="mce_6_9_opt_c">
+<p>The initialization of <code class="docutils literal notranslate"><span class="pre">n</span></code> occurs outside the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, so the value of <code class="docutils literal notranslate"><span class="pre">n</span></code> does not get reset to 0.</p></li><li data-component="answer" data-correct id="mce_6_9_opt_d"><p><code class="docutils literal notranslate"><span class="pre">n</span></code> is declared to be 0 and we continuously decrement <code class="docutils literal notranslate"><span class="pre">n</span></code> so it will always be less than 5.</p>
+</li><li data-component="feedback" id="mce_6_9_opt_d">
+<p>Since <code class="docutils literal notranslate"><span class="pre">n</span></code> starts at 0 and gets smaller, the conditional for the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop will always be true, and thus the code runs forever.</p></li>
 
-            </ul>
-            </div>
-            </div><div data-component="tab" data-tabname="Q12" >
+    </ul>
+    </div>
+    </div><div data-component="tab" data-tabname="Q10" >
 
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="5.14.12" data-multipleanswers="false"  id="mce_5_12"  style="visibility: hidden;">
-            <p>Q-12: What is printed?</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">print_sequence</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-     <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="mi">1</span><span class="p">;</span>
-     <span class="k">return</span><span class="p">;</span>
-     <span class="c1">//we can have an empty return to a void function</span>
-  <span class="p">}</span>
-  <span class="k">else</span> <span class="p">{</span>
-    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">n</span><span class="o">&lt;&lt;</span><span class="s">&quot; &quot;</span><span class="p">;</span>
-    <span class="n">print_sequence</span><span class="p">(</span><span class="n">n</span><span class="mi">-1</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="5.13.10" data-multipleanswers="false"  id="mce_6_10"  style="visibility: hidden;">
+    <p>Q-10: After making some changes to his code, RePete tries again.
+This time, however, the robots don’t repeat anything!
+Can you find the new error?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">repeat_bot</span><span class="w"> </span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">input</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">n</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
-    <span class="kt">int</span> <span class="n">val</span><span class="o">=</span><span class="mi">6</span><span class="p">;</span>
-    <span class="n">print_sequence</span><span class="p">(</span><span class="n">val</span><span class="p">);</span>
-<span class="p">}</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">repeat_bot</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;Hello, how may I help you?&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<li data-component="answer"  id="mce_5_12_opt_a"><p>6 5 4 3 2 1 0</p>
-</li><li data-component="feedback" id="mce_5_12_opt_a">
-<p>Check what the base case prints.</p></li><li data-component="answer"  id="mce_5_12_opt_b"><p>6 6 6 6 6 6 1</p>
-</li><li data-component="feedback" id="mce_5_12_opt_b">
-<p>What value do we give the recursive call?</p></li><li data-component="answer"  id="mce_5_12_opt_c"><p>6 5 4 3 2 1</p>
-</li><li data-component="feedback" id="mce_5_12_opt_c">
-<p>The base case prints something!</p></li><li data-component="answer" data-correct id="mce_5_12_opt_d"><p>6 5 4 3 2 1 1</p>
-</li><li data-component="feedback" id="mce_5_12_opt_d">
-<p>We print a number and decrement it till we reach 0 then we print 1.</p></li>
+<li data-component="answer"  id="mce_6_10_opt_a"><p><code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;</span> <span class="pre">5</span></code> is not a valid conditional, so the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop doesn’t execute.</p>
+</li><li data-component="feedback" id="mce_6_10_opt_a">
+<p><code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;</span> <span class="pre">5</span></code> is a boolean statement and thus is a valid conditional.</p></li><li data-component="answer"  id="mce_6_10_opt_b"><p>The value of <code class="docutils literal notranslate"><span class="pre">n</span></code> never gets modified in the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop.</p>
+</li><li data-component="feedback" id="mce_6_10_opt_b">
+<p><code class="docutils literal notranslate"><span class="pre">n</span></code> is incremented in the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop after the <code class="docutils literal notranslate"><span class="pre">cout</span></code> statement.</p></li><li data-component="answer"  id="mce_6_10_opt_c"><p>In the <code class="docutils literal notranslate"><span class="pre">cout</span></code> statement, only spaces are printed.</p>
+</li><li data-component="feedback" id="mce_6_10_opt_c">
+<p><code class="docutils literal notranslate"><span class="pre">input</span></code> is also printed.</p></li><li data-component="answer" data-correct id="mce_6_10_opt_d"><p>The conditional for the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop is not met.</p>
+</li><li data-component="feedback" id="mce_6_10_opt_d">
+<p>Since <code class="docutils literal notranslate"><span class="pre">n</span></code> is declared to be 0, 0 is not greater than 5, so the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop does not execute.</p></li>
 
-            </ul>
-            </div>
-            </div>
+    </ul>
+    </div>
+    </div>
     </div>
 
-</div>
+</section>
 
 
-  <div id=scprogresscontainer>
-    You have attempted <span id=scprogresstotal></span> of <span id=scprogressposs></span> activities on this page <div id="subchapterprogress"></div>
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
   </div>
-  
-      
-<ul>
-  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - 5.13. Glossary' data-toggle="tooltip">
-    <a href="glossary.html" aria-label="5.13. Glossary">
-        <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
-            <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
-        </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 5.12. Glossary' data-toggle="tooltip">
+  <a href="glossary.html" aria-label="Previous - 5.12. Glossary">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 5.14. Mixed Up Code Practice' data-toggle="tooltip" >
+    <a href="review-2.html" aria-label="Next - 5.14. Mixed Up Code Practice">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
     </a>
   </li>
 </ul>
-
-  
-<ul>
-  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - 5.15. Mixed Up Code Practice' data-toggle="tooltip" >
-    <a href="review-2.html" aria-label="5.15. Mixed Up Code Practice">
-      <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
-          <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
-      </div>
-    </a>
-  </li>
-</ul>
-
-<script type="text/javascript">
-
-  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
-  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
-
-</script>
 
 <script>
-	function mouseOverPrev() {
-		document.getElementById("relations-prev").style.opacity=1;
-	}
-
-	function mouseOutPrev() {
-		document.getElementById("relations-prev").style.opacity=0.4;
-	}
-	function mouseOverNext() {
-		document.getElementById("relations-next").style.opacity=1;
-	}
-
-	function mouseOutNext() {
-		document.getElementById("relations-next").style.opacity=0.4;
-	}
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
 </script>
-  
+
 </div>
 <footer class="footer">
   <div class="container">
@@ -613,8 +545,8 @@ and add to the program?</p>
       
     </p>
     <p>
-        &copy; Copyright 2020-2021 Dave Parillo.
-      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.5.
+        &copy; Copyright 2020-2022 Dave Parillo, Barbara Ericson, and Allen B. Downey..
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.2.1.
     </p>
   </div>
 </footer>
@@ -622,7 +554,11 @@ and add to the program?</p>
 
 
 
-<script> getSwitch(); </script>
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
 
 
   </body>

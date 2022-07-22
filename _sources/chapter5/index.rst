@@ -1,23 +1,23 @@
-Fruitful functions
-==================
+Iteration
+=========
 
 .. toctree::
    :maxdepth: 3
 
-   return-values.rst
-   program-development.rst
-   composition.rst
-   overloading.rst 
-   bool-values.rst
-   bool-variables.rst
-   logical-operators.rst
-   bool-functions.rst
-   returning-from-main.rst
-   recursion.rst
-   leap-of-faith.rst
-   one-more-example.rst
+   multiple_assignment.rst
+   iteration.rst
+   loop_while.rst
+   tables.rst
+   two_dimensional_tables.rst
+   loop_for.rst
+   encapsulation_generalization.rst
+   functions.rst
+   more_encapsulation.rst
+   local_variables.rst
+   more_generalization.rst
    glossary.rst
    review-1.rst
    review-2.rst
    review-3.rst
+
 

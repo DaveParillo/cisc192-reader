@@ -1,0 +1,949 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>10.9. Activecode Exercises &#8212; CISC 192 Course Reader Overview</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/runtime.b0f8547c48f16a9f.bundle.js?v=2731F567"></script>
+    <script src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script src="../_static/runestone.0e9550fe42760516.bundle.js?v=71AD37BA"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="11. Random numbers" href="../chapter11/index.html" />
+    <link rel="prev" title="10.8. Mixed-Up Code Exercises" href="review-2.html" />
+
+
+<link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'https://daveparillo.github.io/cisc192-reader/' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/cisc192-reader';
+    eBookConfig.course = 'cisc192-reader';
+    eBookConfig.basecourse = 'cisc192-reader';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
+  eBookConfig.runestone_version = '6.2.1';
+  eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <div class="brand-logo"><img src="../_static/img/RAIcon.png" alt=""></div>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          cisc192-reader
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <!-- social media dropdown -->
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">10.8. </span>Mixed-Up Code Exercises" data-toggle="tooltip">
+    <a href="review-2.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">11. </span>Random numbers' data-toggle="tooltip" >              
+    <a href="../chapter11/index.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <section id="activecode-exercises">
+<h1><span class="section-number">10.9. </span>Activecode Exercises<a class="headerlink" href="#activecode-exercises" title="Permalink to this headline">¶</a></h1>
+<p>Answer the following <strong>Activecode</strong> questions to assess what you have learned in this chapter.</p>
+<div id='self_check' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Q1" >
+<div id='vectors_a1' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Question" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=vectors_a1q data-question_label="10.9.1">
+<div id=vectors_a1q_question class="ac_question col-md-12">
+<p>Fix the code below so that it creates a vector with 5 elements
+all initialized to 1, and changes
+the third element of that vector to a 2.</p>
+
+</div>
+<textarea data-lang="cpp" id="vectors_a1q_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-Wextra&#x27;, &#x27;-Werror&#x27; &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+     style="visibility: hidden;">
+int make_vector () {
+    vector<int> nums (5) = 1;
+    return nums;
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=vectors_a1a data-question_label="10.9.2">
+<div id=vectors_a1a_question class="ac_question col-md-12">
+<p>Below is one way to fix the program.</p>
+<ul class="simple">
+<li><p>Always include the <code class="docutils literal notranslate"><span class="pre">&lt;vector&gt;</span></code> header when using vectors.</p></li>
+<li><p>To initialize all vector elements to a certain value,
+you must include that as a second argument after the size.</p></li>
+<li><p>Finally, vectors are zero-indexed.
+The third element is at index ‘2’.</p></li>
+</ul>
+
+</div>
+<textarea data-lang="cpp" id="vectors_a1a_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-Wextra&#x27;, &#x27;-Werror&#x27; &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+     style="visibility: hidden;">
+#include <iostream>
+#include <vector>
+
+std::vector<int> make_vector () {
+    std::vector<int> nums (5,1);
+    nums[3] = 2;
+    return nums;
+}
+
+====
+#include <functional>
+#include <iomanip>
+#include <iostream>
+#include <string>
+
+template <class T, class Compare = std::equal_to<T>>
+void check (const std::string& name, const T& actual,
+            const T& expected, const Compare& op = Compare())
+{
+  std::cout << std::left << std::setfill('.')
+            << std::setw(50) << name
+            << std::setw(7) <<  std::left;
+  if(op(actual, expected)) {
+    std::cout << " OK      \n";
+    return;
+  }
+  std::cout << " FAILED\n";
+  std::cout << "\treceived [" << actual
+            << "], but expected [" << expected << "]\n";
+  exit(1);
+}
+int main() {
+  std::vector<int> expected = {1,1,1,2,1};
+  std::vector<int> actual = make_vector();
+  std::vector<std::string> ord = {"first", "second", "third", "fourth", "fifth"};
+  for (size_t i = 0; i<expected.size(); ++i) {
+    check(ord[i] , actual[i],  expected[i]);
+  }
+}
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</div><div data-component="tab" data-tabname="Q2" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=vectors_a2 data-question_label="10.9.3">
+<div id=vectors_a2_question class="ac_question col-md-12">
+<p>Fix the function below so that it returns how many even numbers are in <code class="docutils literal notranslate"><span class="pre">nums</span></code>.</p>
+
+</div>
+<textarea data-lang="cpp" id="vectors_a2_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-Wextra&#x27;, &#x27;-Werror&#x27; &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+     style="visibility: hidden;">
+#include <vector>
+
+int count_even (const vector<int>& nums) {
+    for (int i = 0; i < nums.size(); i++) {
+        if (i % 2 == 0) {
+            count = count + 1;
+        }
+    }
+    return count;
+}
+
+====
+#include <functional>
+#include <iomanip>
+#include <iostream>
+#include <string>
+template <class T, class Compare = std::equal_to<T>>
+void check (const std::string& name, const T& actual,
+            const T& expected, const Compare& op = Compare())
+{
+  std::cout << std::left << std::setfill('.')
+            << std::setw(50) << name
+            << std::setw(7) <<  std::left;
+  if(op(actual, expected)) {
+    std::cout << " OK      \n";
+    return;
+  }
+  std::cout << " FAILED\n";
+  std::cout << "\treceived [" << actual
+            << "], but expected [" << expected << "]\n";
+  exit(1);
+}
+int main() {
+  std::vector<int> expected = {1,1,1,2,1};
+  std::vector<int> actual = make_vector();
+  std::vector<std::string> ord = {"first", "second", "third", "fourth", "fifth"};
+  for (size_t i = 0; i<expected.size(); ++i) {
+    check(ord[i] , actual[i],  expected[i]);
+  }
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Q3" >
+<div id='vectors_a3' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Question" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=vectors_a3q data-question_label="10.9.4">
+<div id=vectors_a3q_question class="ac_question col-md-12">
+<p>Fix the function below so that it creates a vector of all of the
+words in <code class="docutils literal notranslate"><span class="pre">words</span></code> that end with the passed character.</p>
+
+</div>
+<textarea data-lang="cpp" id="vectors_a3q_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-Wextra&#x27;, &#x27;-Werror&#x27; &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+     style="visibility: hidden;">
+#include <iostream>
+#include <string>
+#include <vector>
+
+int ends_with (const std::vector<std::string>& words, char c) {
+    int count;
+    for (size_t i = 0; i <= words.size(); i++) {
+        last = words.size() - 1;
+        if (words[last] == c) {
+            ++count;
+        }
+    }
+    return count;
+}
+
+====
+#include <functional>
+#include <iomanip>
+#include <iostream>
+#include <string>
+template <class T, class Compare = std::equal_to<T>>
+void check (const std::string& name, const T& actual,
+            const T& expected, const Compare& op = Compare())
+{
+  std::cout << std::left << std::setfill('.')
+            << std::setw(50) << name
+            << std::setw(7) <<  std::left;
+  if(op(actual, expected)) {
+    std::cout << " OK      \n";
+    return;
+  }
+  std::cout << " FAILED\n";
+  std::cout << "\treceived [" << actual
+            << "], but expected [" << expected << "]\n";
+  exit(1);
+}
+int main() {
+  std::vector<std::string> words =
+           {"quick", "brown", "fox", "jumps", "dogs"};
+  check("ends with n", ends_with(words, 'n'), 1);
+  check("ends with s", ends_with(words, 's'), 2);
+  check("ends with e", ends_with(words, 'e'), 0);
+  check("ends with x", ends_with(words, 'x'), 1);
+  check("ends with k", ends_with(words, 'k'), 1);
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="OK Answer" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=vectors_a3a data-question_label="10.9.5">
+<div id=vectors_a3a_question class="ac_question col-md-12">
+<p>Below is one way to fix the function.
+However it is complicated and error prone.</p>
+<p>We must initialize <code class="docutils literal notranslate"><span class="pre">count</span></code> to zero and
+declare <code class="docutils literal notranslate"><span class="pre">last</span></code> as an integer.
+To access a string <em>inside</em> of <code class="docutils literal notranslate"><span class="pre">vec</span></code>,  we use <code class="docutils literal notranslate"><span class="pre">vec[i]</span></code>.
+To get the last character, we must index the
+string to the last index, which is one less than the length of the string.</p>
+
+</div>
+<textarea data-lang="cpp" id="vectors_a3a_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-Wextra&#x27;, &#x27;-Werror&#x27; &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+     style="visibility: hidden;">
+#include <string>
+#include <vector>
+
+int ends_with (const std::vector<std::string>& words, char c) {
+    int count = 0;
+    for (size_t i = 0; i < words.size(); i++) {
+        int last = words[i].size() - 1;
+        if (words[i][last] == c) {
+            ++count;
+        }
+    }
+    return count;
+}
+
+====
+  #include <functional>
+  #include <iomanip>
+  #include <iostream>
+  #include <string>
+  template <class T, class Compare = std::equal_to<T>>
+  void check (const std::string& name, const T& actual,
+              const T& expected, const Compare& op = Compare())
+  {
+    std::cout << std::left << std::setfill('.')
+              << std::setw(50) << name
+              << std::setw(7) <<  std::left;
+    if(op(actual, expected)) {
+      std::cout << " OK      \n";
+      return;
+    }
+    std::cout << " FAILED\n";
+    std::cout << "\treceived [" << actual
+              << "], but expected [" << expected << "]\n";
+    exit(1);
+  }
+  int main() {
+    std::vector<std::string> words =
+             {"quick", "brown", "fox", "jumps", "dogs"};
+    check("ends with n", ends_with(words, 'n'), 1);
+    check("ends with s", ends_with(words, 's'), 2);
+    check("ends with e", ends_with(words, 'e'), 0);
+    check("ends with x", ends_with(words, 'x'), 1);
+    check("ends with k", ends_with(words, 'k'), 1);
+  }
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Better Answer" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=vectors_a3a2 data-question_label="10.9.6">
+<div id=vectors_a3a2_question class="ac_question col-md-12">
+<p>Below is a simpler way to fix the function.
+We still must initialize <code class="docutils literal notranslate"><span class="pre">count</span></code> to zero.
+However, it is better to avoid array indexing completely.
+In general, it is always better to avoid array indexing
+if it is not needed.</p>
+
+</div>
+<textarea data-lang="cpp" id="vectors_a3a2_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-Wextra&#x27;, &#x27;-Werror&#x27; &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+     style="visibility: hidden;">
+#include <string>
+#include <vector>
+
+int ends_with (const std::vector<std::string>& words, char c) {
+    int count = 0;
+    for (const std::string& word: words) {
+        if (word.back() == c) {
+            ++count;
+        }
+    }
+    return count;
+}
+====
+#include <functional>
+#include <iomanip>
+#include <iostream>
+#include <string>
+template <class T, class Compare = std::equal_to<T>>
+void check (const std::string& name, const T& actual,
+            const T& expected, const Compare& op = Compare())
+{
+  std::cout << std::left << std::setfill('.')
+            << std::setw(50) << name
+            << std::setw(7) <<  std::left;
+  if(op(actual, expected)) {
+    std::cout << " OK      \n";
+    return;
+  }
+  std::cout << " FAILED\n";
+  std::cout << "\treceived [" << actual
+            << "], but expected [" << expected << "]\n";
+  exit(1);
+}
+int main() {
+  std::vector<std::string> words =
+           {"quick", "brown", "fox", "jumps", "dogs"};
+  check("ends with n", ends_with(words, 'n'), 1);
+  check("ends with s", ends_with(words, 's'), 2);
+  check("ends with e", ends_with(words, 'e'), 0);
+  check("ends with x", ends_with(words, 'x'), 1);
+  check("ends with k", ends_with(words, 'k'), 1);
+}
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</div><div data-component="tab" data-tabname="Q4" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=vectors_a4 data-question_label="10.9.7">
+<div id=vectors_a4_question class="ac_question col-md-12">
+<p>Someone could have COVID 19 if their temperature is above 99.9 degrees Fahrenheit.  Finish
+the code below so that it counts how many students in the class may have been exposed.</p>
+
+</div>
+<textarea data-lang="cpp" id="vectors_a4_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-Wextra&#x27;, &#x27;-Werror&#x27; &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+     style="visibility: hidden;">
+
+int count_covid (const std::vector<double>& temps) {
+}
+====
+
+#include <functional>
+#include <iomanip>
+#include <iostream>
+#include <string>
+template <class T, class Compare = std::equal_to<T>>
+void check (const std::string& name, const T& actual,
+            const T& expected, const Compare& op = Compare())
+{
+  std::cout << std::left << std::setfill('.')
+            << std::setw(50) << name
+            << std::setw(7) <<  std::left;
+  if(op(actual, expected)) {
+    std::cout << " OK      \n";
+    return;
+  }
+  std::cout << " FAILED\n";
+  std::cout << "\treceived [" << actual
+            << "], but expected [" << expected << "]\n";
+  exit(1);
+}
+int main() {
+  std::vector<double> temps = {
+      98.6, 97.8, 100.3, 97.2, 98.7, 97.8,
+      99.8, 96.9, 98.2, 99.1, 99.9};
+  check("test 1", count_covid(temps), 1);
+  temps[2]= 97.4;
+  check("test 2", count_covid(temps), 0);
+  temps[2]= 100.3;
+  temps[0]= 99.99;
+  check("test 3", count_covid(temps), 2);
+  temps.push_back(103.5);
+  temps.push_back(104.0);
+  check("test 4", count_covid(temps), 4);
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Q5" >
+<div id='vectors_a5' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Question" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=vectors_a5q data-question_label="10.9.8">
+<div id=vectors_a5q_question class="ac_question col-md-12">
+<p>Finish the code below so that it creates removes elements from the end of the vector until
+it ends with <code class="docutils literal notranslate"><span class="pre">&quot;stop&quot;</span></code>.</p>
+
+</div>
+<textarea data-lang="cpp" id="vectors_a5q_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-Wextra&#x27;, &#x27;-Werror&#x27; &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+     style="visibility: hidden;">
+
+int main () {
+    std::vector<string> words = {"roses", "are", "red", "violets", "stop", "are", "blue"}
+
+    while(          ) {
+
+    }
+
+}
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=vectors_a5a data-question_label="10.9.9">
+<div id=vectors_a5a_question class="ac_question col-md-12">
+<p>Below is one way to finish the program.  We just use the <code class="docutils literal notranslate"><span class="pre">pop_back</span></code> function until the
+last element of the vector is <code class="docutils literal notranslate"><span class="pre">&quot;stop&quot;</span></code>.</p>
+
+</div>
+<textarea data-lang="cpp" id="vectors_a5a_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-Wextra&#x27;, &#x27;-Werror&#x27; &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+     style="visibility: hidden;">
+#include <string>
+#include <vector>
+
+int main () {
+    std::vector<std::string> words = {"roses", "are", "red", "violets", "stop", "are", "blue"};
+    while (words.back() != "stop"){
+        words.pop_back();
+    }
+}
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</div><div data-component="tab" data-tabname="Q6" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=vectors_a6 data-question_label="10.9.10">
+<div id=vectors_a6_question class="ac_question col-md-12">
+<p>Write the function <code class="docutils literal notranslate"><span class="pre">ends_even</span></code> that takes a vector and removes
+elements from the end of the vector until
+it ends with an even number.</p>
+<p>No tests are provided for this question.</p>
+
+</div>
+<textarea data-lang="cpp" id="vectors_a6_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-Wextra&#x27;, &#x27;-Werror&#x27; &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+     style="visibility: hidden;">
+#include <vector>
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Q7" >
+<div id='vectors_a7' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Question" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=vectors_a7q data-question_label="10.9.11">
+<div id=vectors_a7q_question class="ac_question col-md-12">
+<p>Write a function called <code class="docutils literal notranslate"><span class="pre">all_have_char</span></code> that returns a bool if
+every string in the provided vector contains the test character.
+It should return true only if all strings contain the character.</p>
+<p>No tests are provided for this question.</p>
+
+</div>
+<textarea data-lang="cpp" id="vectors_a7q_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-Wextra&#x27;, &#x27;-Werror&#x27; &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+     style="visibility: hidden;">
+#include <vector>
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=vectors_a7a data-question_label="10.9.12">
+<div id=vectors_a7a_question class="ac_question col-md-12">
+<p>Below is one way to finish the program.
+We loop through the vector, and search each string.
+If the string has the character, then it is added to <code class="docutils literal notranslate"><span class="pre">count</span></code>.
+We then check whether <code class="docutils literal notranslate"><span class="pre">count</span></code>
+is equal to the number of elements in <code class="docutils literal notranslate"><span class="pre">vec</span></code> and return a boolean.</p>
+
+</div>
+<textarea data-lang="cpp" id="vectors_a7a_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-Wextra&#x27;, &#x27;-Werror&#x27; &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+     style="visibility: hidden;">
+#include <cstddef>
+#include <vector>
+
+
+bool all_have_char (const vector<string>& data, char c) {
+    size_t count = 0;
+    for (const string& tokens: data) {
+       for (const char tok: tokens) {
+            if (tok == c) {
+                count++;
+            }
+        }
+    }
+    return count == data.size();
+}
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</div><div data-component="tab" data-tabname="Q8" >
+<div id='vectors_a8' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Question" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=vectors_a9q data-question_label="10.9.13">
+<div id=vectors_a9q_question class="ac_question col-md-12">
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">mean</span></code> which returns the average of a vector of numbers.</p>
+<p>No tests are provided for this question.</p>
+
+</div>
+<textarea data-lang="cpp" id="vectors_a9q_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-Wextra&#x27;, &#x27;-Werror&#x27; &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+     style="visibility: hidden;">
+
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=vectors_a8a data-question_label="10.9.14">
+<div id=vectors_a8a_question class="ac_question col-md-12">
+<p>Below is one way to finish the program.
+First we take the sum, then divide the sum by the number
+of elements in <code class="docutils literal notranslate"><span class="pre">nums</span></code>.</p>
+<p>In the solution below, an empty vector results in a
+divide by zero error.</p>
+<p>How could we guard against that?</p>
+
+</div>
+<textarea data-lang="cpp" id="vectors_a8a_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-Wextra&#x27;, &#x27;-Werror&#x27; &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+     style="visibility: hidden;">
+#include <vector>
+
+double mean (const vector<double> nums) {
+    double sum = 0;
+    for (const auto& value: nums) {
+        sum += value;
+    }
+    return sum/nums.size();
+}
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</div><div data-component="tab" data-tabname="Q9" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=vectors_a9 data-question_label="10.9.15">
+<div id=vectors_a9_question class="ac_question col-md-12">
+<p>Write the function <code class="docutils literal notranslate"><span class="pre">hundyBundy</span></code> that returns a count of all numbers
+in a vector that are divisible by 100.</p>
+<p>No tests are provided for this question.</p>
+
+</div>
+<textarea data-lang="cpp" id="vectors_a9_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-Wextra&#x27;, &#x27;-Werror&#x27; &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+     style="visibility: hidden;">
+#include <vector>
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Q10" >
+<div id='vectors_a10' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Question" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=vectors_a11q data-question_label="10.9.16">
+<div id=vectors_a11q_question class="ac_question col-md-12">
+<p>Write the function <code class="docutils literal notranslate"><span class="pre">make_odd</span></code> which subtracts 1 from every
+even number in a vector of integers.
+We don’t want any negative values so don’t subtract 1 from 0.
+( remember to take in the vector by reference to make changes to the actual vector! )</p>
+
+</div>
+<textarea data-lang="cpp" id="vectors_a11q_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-Wextra&#x27;, &#x27;-Werror&#x27; &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+     style="visibility: hidden;">
+#include <vector>
+</textarea>
+</div>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=vectors_a11a data-question_label="10.9.17">
+<div id=vectors_a11a_question class="ac_question col-md-12">
+<p>Below is one way to finish the program.
+We us the modulus operator to check for even numbers and decrement them.
+we keep an extra check for 0 to make sure we are not decrementing 0.</p>
+
+</div>
+<textarea data-lang="cpp" id="vectors_a11a_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-Wextra&#x27;, &#x27;-Werror&#x27; &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+     style="visibility: hidden;">
+#include <vector>
+
+bool is_even (int value) {
+  return value % 2 == 0;
+}
+
+void make_odd ( std::vector<int>& nums) {
+  for (int& value: nums) {
+    if (is_even(value) && value > 0) {
+      --value;
+    }
+  }
+}
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=vectors_a11 data-question_label="10.9.18">
+<div id=vectors_a11_question class="ac_question col-md-12">
+<p>Write the function <code class="docutils literal notranslate"><span class="pre">weird_print</span></code> that prints the first half of a
+vector of integers in reverse order
+and then prints the second half in the order present in the vector.
+If we start with <code class="docutils literal notranslate"><span class="pre">{1,2,3,4,5,6}</span></code>
+we would print <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">2</span> <span class="pre">1</span> <span class="pre">4</span> <span class="pre">5</span> <span class="pre">6</span></code>.</p>
+
+</div>
+<textarea data-lang="cpp" id="vectors_a11_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-Wextra&#x27;, &#x27;-Werror&#x27; &#x27;-std=c++11&#x27;]"       data-wasm=/_static
+     style="visibility: hidden;">
+
+</textarea>
+</div>
+</div>
+</div>
+    </div>
+
+</section>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 10.8. Mixed-Up Code Exercises' data-toggle="tooltip">
+  <a href="review-2.html" aria-label="Previous - 10.8. Mixed-Up Code Exercises">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 11. Random numbers' data-toggle="tooltip" >
+    <a href="../chapter11/index.html" aria-label="Next - 11. Random numbers">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020-2022 Dave Parillo, Barbara Ericson, and Allen B. Downey..
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.2.1.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

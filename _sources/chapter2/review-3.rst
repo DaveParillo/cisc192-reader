@@ -15,7 +15,7 @@ Answer the following **Activecode** questions to assess what you have learned in
                :language: cpp
                :nocodelens:
 
-               Fix the code below so that it runs without errors.
+               Fix the code below so that it compiles and runs without errors.
                Hint: you might need to change the names of some variables.
                ~~~~
                #include <iostream>
@@ -23,10 +23,7 @@ Answer the following **Activecode** questions to assess what you have learned in
                int main () {
                    char true = 'T';
                    char false = 'F';
-
-                   // DO NOT MODIFY ANYTHING BELOW THIS LINE.
-                   std::cout << true << " is short for true. ";
-                   std::cout << false << " is short for false.\n";
+                   std::cout << "Program complete.\n";
                }
 
          .. tab:: Answer
@@ -35,15 +32,15 @@ Answer the following **Activecode** questions to assess what you have learned in
                :language: cpp
                :nocodelens:
 
-               Below is one way to fix the program.  ``true`` and ``false`` are keywords, so they cannot be used as variable names.
+               Below is one way to fix the program.  ``true`` and ``false``
+               are keywords, so they cannot be used as variable names.
                ~~~~
                #include <iostream>
 
                int main () {
                    char t = 'T';
                    char f = 'F';
-                   std::cout << t << " is short for true. ";
-                   std::cout << f << " is short for false.\n";
+                   std::cout << "Program complete.\n";
                }    
 
    .. tab:: Q2
@@ -53,22 +50,45 @@ Answer the following **Activecode** questions to assess what you have learned in
          :nocodelens:
 
          Finish the code below so that it prints "I drive a 2014 Buick Regal".
+
+         This code does not need to include a main.
+         It is already provided as part of the test.
          ~~~~
+         #include <string>
+
+         std::string my_car;
+         my_car = "Buick"
+
+         ====
+         #include <functional>
+         #include <iomanip>
          #include <iostream>
          #include <string>
-         using namespace std;
-
-         int main () {
-             string make;
-             make = "Buick"
-
-             // Finish the rest of the assignment statements by assigning
-             // 2014 and Regal to their respective variables.
-
-             // DO NOT MODIFY ANYTHING BELOW THIS LINE.
-             cout << "I drive a " << year << " " << make << " ";
-             cout << model << '\n'.
+         template <class T, class Compare = std::equal_to<T>>
+         void check (const std::string& name, 
+                     const T& actual, 
+                     const T& expected,
+                     const Compare& op = Compare())
+         {
+           std::cout << std::left << std::setfill('.') 
+                     << std::setw(50) << name 
+                     << std::setw(7) <<  std::left;
+            if(op(actual, expected)) {
+              std::cout << " OK      \n";
+              return;
+           }
+           std::cout << " FAILED\n";
+           std::cout << "\treceived [" << std::boolalpha << actual
+                     << "], but expected [" << expected << "]\n";
+           exit(1);
          }
+         int main() {
+             std::string expected = "I drive a 2014 Buick Regal";
+             check("test expected string", my_car,  expected);
+         }
+
+
+
 
 
    .. tab:: Q3
@@ -84,14 +104,13 @@ Answer the following **Activecode** questions to assess what you have learned in
                Fix the code below so that it prints "Cady scored 90% on the exam." 
                ~~~~
                #include <iostream>
-               using namespace std;
 
                int main() {
                    // Modify the next line so that Cady = 0.9.
                    int Cady = 3 * 5 * (6 / 100);
 
                    // DO NOT MODIFY ANYTHING BELOW THIS LINE.
-                   cout << "Cady scored " << Cady * 100 << "% on the exam.";
+                   std::cout << "Cady scored " << Cady * 100 << "% on the exam.";
                }
 
          .. tab:: Answer
@@ -100,14 +119,15 @@ Answer the following **Activecode** questions to assess what you have learned in
                :language: cpp
                :nocodelens:
 
-               Below is one way to fix the program.  We want to use doubles so that our result isn't rounded down to 0 through integer division.
+               Below is one way to fix the program.
+               We want to use doubles so that our result isn't truncated
+               to 0 through integer division.
                ~~~~
                #include <iostream>
-               using namespace std;
 
                int main() {
                    double Cady = (3 * 5) * 6 / 100.0;
-                   cout << "Cady scored " << Cady * 100 << "% on the exam.";
+                   std::cout << "Cady scored " << Cady * 100 << "% on the exam.";
                }    
 
 
@@ -118,20 +138,46 @@ Answer the following **Activecode** questions to assess what you have learned in
          :nocodelens:
 
          Finish the code below so that it shows the correct volume of a sphere.
-         Hint: think about what happens when you use integer division.
+         Hint: watch out for integer division.
+
+         This code does not need to include a main.
+         It is already provided as part of the test.
          ~~~~
+         int radius = 5;
+         double pi = 3.14159;
+
+         // Use these variables and the formula for volume to complete the next line.
+         volume = 
+
+         ====
+         #include <functional>
+         #include <iomanip>
          #include <iostream>
-
-         int main () {
-             int radius = 5;
-             double pi = 3.14;
-
-             // Use these variables and the formula for volume to complete the next line.
-             volume = 
-
-             // DO NOT MODIFY ANYTHING BELOW THIS LINE.
-             std::cout << "Your solution had volume = " << volume;
-             std::cout << "\nThe correct solution has volume = 104.667";
+         #include <string>
+         template <class T, class Compare = std::equal_to<T>>
+         void check (const std::string& name, 
+                     const T& actual, 
+                     const T& expected,
+                     const Compare& op = Compare())
+         {
+           std::cout << std::left << std::setfill('.') 
+                     << std::setw(50) << name 
+                     << std::setw(7) <<  std::left;
+            if(op(actual, expected)) {
+              std::cout << " OK      \n";
+              return;
+           }
+           std::cout << " FAILED\n";
+           std::cout << "\treceived [" << std::boolalpha << actual
+                     << "], but expected [" << expected << "]\n";
+           exit(1);
+         }
+         bool close_to(double x, double y)
+         {
+             return std::abs(x-y) < 0.001;
+         }
+         int main() {
+             check("test radius of 5...", volume,  523.598, close_to);
          }
 
 
@@ -167,7 +213,10 @@ Answer the following **Activecode** questions to assess what you have learned in
                :language: cpp
                :nocodelens:
 
-               Below is one way to complete the program.  There are many creative ways that you could use the order of operations to come up with a complex expression that will bring you to ``'a'``, here is one way.
+               Below is one way to complete the program.
+               There are many creative ways that you could use the
+               order of operations to come up with a complex expression that
+               will bring you to ``'a'``, here is one way.
                ~~~~
                #include <iostream>
             
@@ -210,7 +259,7 @@ Answer the following **Activecode** questions to assess what you have learned in
                :language: cpp
                :nocodelens:
 
-               Write code that prints "Eat", "More", and "Chicken" on
+               Write code that prints "Live", "Laugh", and "Love" on
                3 consecutive lines.
                Be sure to inclue any necessary headers.
                ~~~~
@@ -229,7 +278,7 @@ Answer the following **Activecode** questions to assess what you have learned in
                #include <iostream>
 
                int main () {
-                   std::cout << "Eat\nMore\nChicken";
+                   std::cout << "Live\nLaugh\nLove";
                } 
 
 
@@ -241,15 +290,47 @@ Answer the following **Activecode** questions to assess what you have learned in
 
          Write code that calculates how much you you will spend after 
          tipping 20% on your $36.25 dinner.
-         Save the result of this calculation in ``plusTip``.
-         Be sure to include any necessary headers.
-         ~~~~
-         int main () {
+         Store the tip in a variable ``tip``.
+         Save the final result of this calculation in ``plus_tip``.
 
-             // DO NOT MODIFY ANYTHING BELOW THIS LINE.
-             std::cout << "Your solution had plusTip = " << plusTip;
-             std::cout << "\nThe correct solution has plusTip = 43.5";
+         This code does not need to include a main.
+         It is already provided as part of the test.
+         ~~~~
+         tip = 0;
+         plus_tip = 0;
+
+         ====
+         #include <functional>
+         #include <iomanip>
+         #include <iostream>
+         #include <string>
+         template <class T, class Compare = std::equal_to<T>>
+         void check (const std::string& name, 
+                     const T& actual, 
+                     const T& expected,
+                     const Compare& op = Compare())
+         {
+           std::cout << std::left << std::setfill('.') 
+                     << std::setw(50) << name 
+                     << std::setw(7) <<  std::left;
+            if(op(actual, expected)) {
+              std::cout << " OK      \n";
+              return;
+           }
+           std::cout << " FAILED\n";
+           std::cout << "\treceived [" << std::boolalpha << actual
+                     << "], but expected [" << expected << "]\n";
+           exit(1);
          }
+         bool close_to(double x, double y)
+         {
+             return std::abs(x-y) < 0.001;
+         }
+         int main() {
+             check("test 20% tip on $36.25", tip,  7.25, close_to);
+             check("test $36.25 plus tip ", plus_tip,  43.5, close_to);
+         }
+
 
 
    .. tab:: Q9
@@ -262,14 +343,45 @@ Answer the following **Activecode** questions to assess what you have learned in
                :language: cpp
                :nocodelens:
 
-               You have about three hours and fifteen minutes of homework to do today.  Rather than starting it right away, you choose to procrastinate by calculating how many seconds you'll be spending on your work.  Convert the time to seconds and store the result in ``seconds``.  Be sure to inclue any necessary headers.
-               ~~~~
-               int main () {
+               You have about three hours and fifteen minutes of homework to do today.
+               Rather than starting it right away, you choose to procrastinate
+               by calculating how many seconds you'll be spending on your work.
+               Convert the time to seconds and store the result in ``seconds``.
 
-                   // DO NOT MODIFY ANYTHING BELOW THIS LINE.
-                   std::cout << "Your solution had seconds = " << seconds;
-                   std::cout << "\nThe correct solution has seconds = 11700";
+               This code does not need to include a main.
+               It is already provided as part of the test.
+               ~~~~
+
+               seconds = 0;
+
+               ====
+               #include <functional>
+               #include <iomanip>
+               #include <iostream>
+               #include <string>
+               template <class T, class Compare = std::equal_to<T>>
+               void check (const std::string& name, 
+                           const T& actual, 
+                           const T& expected,
+                           const Compare& op = Compare())
+               {
+                 std::cout << std::left << std::setfill('.') 
+                           << std::setw(50) << name 
+                           << std::setw(7) <<  std::left;
+                  if(op(actual, expected)) {
+                    std::cout << " OK      \n";
+                    return;
+                 }
+                 std::cout << " FAILED\n";
+                 std::cout << "\treceived [" << std::boolalpha << actual
+                           << "], but expected [" << expected << "]\n";
+                 exit(1);
                }
+               int main() {
+                   check("test 3 hrs 15 min in seconds", seconds,  11700);
+               }
+
+
 
          .. tab:: Answer
 
@@ -279,18 +391,40 @@ Answer the following **Activecode** questions to assess what you have learned in
 
                Below is one way to implement the solution.
                ~~~~
+
+               int hours = 3;
+               int minutes = 15;
+               int total_minutes = minutes + 60 * hours;
+               int seconds = total_minutes * 60;
+
+               ====
+               #include <functional>
+               #include <iomanip>
                #include <iostream>
-
-               int main () {
-                   int hours = 3;
-                   int minutes = 15;
-                   int total_minutes = minutes + 60 * hours;
-                   int seconds = total_minutes * 60;
-
-                   // DO NOT MODIFY ANYTHING BELOW THIS LINE.
-                   std::cout << "Your solution had seconds = " << seconds;
-                   std::cout << "\nThe correct solution has seconds = 11700";
+               #include <string>
+               template <class T, class Compare = std::equal_to<T>>
+               void check (const std::string& name, 
+                           const T& actual, 
+                           const T& expected,
+                           const Compare& op = Compare())
+               {
+                 std::cout << std::left << std::setfill('.') 
+                           << std::setw(50) << name 
+                           << std::setw(7) <<  std::left;
+                  if(op(actual, expected)) {
+                    std::cout << " OK      \n";
+                    return;
+                 }
+                 std::cout << " FAILED\n";
+                 std::cout << "\treceived [" << std::boolalpha << actual
+                           << "], but expected [" << expected << "]\n";
+                 exit(1);
                }
+               int main() {
+                   check("test 3 hrs 15 min in seconds", seconds,  11700);
+               }
+
+
 
 
    .. tab:: Q10
@@ -299,7 +433,10 @@ Answer the following **Activecode** questions to assess what you have learned in
          :language: cpp
          :nocodelens:
 
-         Write code that calculates and prints the average of a and b if a = 3.14, and b = 1.59.  You may only use one line of code.  Be sure to inclue any necessary headers.
+         Write code that calculates and prints the average of a and b if 
+         a = 3.14, and b = 1.59.
+         You may only use one line of code.
+         Be sure to inclue any necessary headers.
          ~~~~
          int main () {
 

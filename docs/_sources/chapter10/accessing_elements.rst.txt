@@ -115,7 +115,7 @@ common.
        cout << "Before we make any changes, count = "; print_vec(count);
        count[0] = 7;
        count[1] = count[0] * 2;
-       count[2]++;
+       ++count[2];
        count[3] -= 60;
        cout << "After we made the above changes, count = "; print_vec(count);
    }
@@ -134,7 +134,7 @@ The maximum size will vary among different types of computers.
 
           **Multiple Response** How would you increment the third element of ``vector<int> vec`` by one?
 
-          -   ``vec[3] = vec[3]++;``
+          -   ``vec[3] = ++vec[3];``
 
               -   Incorrect! This is actually incrementing the 4th element of **vec**, since vectors are zero indexed.
 
@@ -142,7 +142,7 @@ The maximum size will vary among different types of computers.
 
               -   Incorrect! This is not proper syntax.
 
-          -   ``vec[2] = vec[2]++;``
+          -   ``vec[2] = ++vec[2];``
 
               +   ``vec[2]`` is the third element and we increment it by using the ``++`` operator.
 

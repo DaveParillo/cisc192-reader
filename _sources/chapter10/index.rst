@@ -7,7 +7,6 @@ Vectors
    vectors.rst
    accessing_elements.rst
    copying_vectors.rst
-   for_loops.rst
    vector_size.rst
    vector_functions.rst
    glossary.rst

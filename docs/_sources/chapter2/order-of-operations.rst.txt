@@ -36,13 +36,12 @@ started:
 
    ~~~~
    #include <iostream>
-   using namespace std;
 
    int main () {
-       cout << (2 * 3) - 1 << endl;
-       cout << 2 * (3 - 1) << endl;
-       cout << 2 / 3 - 1 << endl;
-       cout << 2 / (3 -1) << endl;
+       std::cout << (2 * 3) - 1 << '\n'
+                 << 2 * (3 - 1) << '\n'
+                 << 2 / 3 - 1   << '\n'
+                 << 2 / (3 -1)  << '\n';
    }
 
 
@@ -138,4 +137,11 @@ started:
          operator to be evaluated.  The order of operations can be kind of confusing
          at times, but I think you've got a good grasp of the concept!
 
+-----
 
+.. admonition:: More to Explore
+
+   - From cppreference.com
+
+     - :lang:`Operator precedence <operator_precedence>`
+         

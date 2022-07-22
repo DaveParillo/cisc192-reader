@@ -1,517 +1,402 @@
 Multiple Choice Exercises
 -------------------------
 
-Answer the following **Multiple Choice** questions to
-assess what you have learned in this chapter.
-
-.. tabbed:: self-check
+.. tabbed:: self_check
 
    .. tab:: Q1
 
-      .. mchoice:: cond_rec_mc1
+      .. mchoice:: mce_5_1
+          :practice: T
 
-          Say you run the following code.  What is the value of ``mod``?
+          What should be the return type of the function ``convertToCelsius``?
 
-          ::
+          .. code-block:: cpp
 
-              int x = 4;
-              int y = 7;
-              int mod = y % x;
+            ______ convertToCelsius (double fahrenheit) {
+              double celsius;
+              celsius = (fahrenheit - 32) * 5 / 9;
+              return celsius;
+            }
+              
+          - ``int``
 
-          -   0
+            - What variable are we returning in the function, and what is the variable's type? 
 
-              -   There *is* a remainder.
+          - ``double``
 
-          -   1
+            + The function returns ``celsius``, which is a ``double``.
 
-              -   Incorrect!
+          - ``string``
 
-          -   2
+            - What variable are we returning in the function, and what is the variable's type? 
 
-              -   Incorrect!
+          - ``void``
 
-          -   3
-
-              +   The remainder of ``7 / 4`` is 3.
-
-          -   4
-
-              -   We can't have a remainder of 4, since 4 is the divisor.
+            - Since we are returning something in the function, the function is not ``void``.
 
    .. tab:: Q2
 
-      .. mchoice:: cond_rec_mc2
+      .. mchoice:: mce_5_2
+          :practice: T
 
-          What is printed when the following code executes?
+          What would be returned by ``secretFunction`` if the input was 14?
 
-          ::
+          .. code-block:: cpp
 
-              int x = 8;
-
-              if (x % 3 == 2) {
-                  cout << "hey!" << endl;
-              } else if (x != 7) {
-                  cout << "hi!" << endl;
-              } else if (x % 2 == 0) {
-                  cout << "hello!" << endl;
-              } else {
-                  cout << "bye!" << endl;
+            int secretFunction (int input) {
+              if (input % 2 == 0) {
+                return 3 * input - 2;
               }
+              else {
+                if (input % 7 == 0) {
+                  return input;
+                }
+                return 2 * input + 9;
+              }
+              return input + 4;
+            }  
 
-          -   :: none
+          - 14
 
-                  hey!
+            - Although 14 is divisible by 7, take another look at the conditionals. 
 
-              +   Since the first conditon is met, the rest of the chained
-                  conditional does not execute.
+          - 18
 
-          -   :: none
+            - The flow of code would never reach the last return statement.
 
-                  hi!
+          - 36
 
-              -   It's true that ``8 != 7``, but "hi!" is not printed here.
+            - Check your order of operations! 
 
-          -   :: none
+          - 37
 
-                  hi!
+            - Take a closer look at the conditional statements. 
 
-              -   It's true that ``8 % 2 == 0``, but "hello!" is not printed!
+          - 40
 
-          -   :: none
-
-                  hey!
-                  hi!
-                  hello!
-
-              -   All of these conditons are met, but only one expression is
-                  printed!
-
-          -   :: none
-
-                  bye!
-
-              -   At least one of the conditons is met, so the ``else`` will not
-                  execute!
-
+            + Since 14 is divisible by 2, the function returns two less than three times 14.
 
    .. tab:: Q3
 
-      .. mchoice:: cond_rec_mc3
+      .. mchoice:: mce_5_3
+                :practice: T
 
-          What is printed when the following code executes?
+          If we wanted to create a boolean function called ``isPrime``, which takes an ``int input``
+          as a parameter, which of the following would be the correct function header?
 
-          ::
+          - ``boolean isPrime (int input) {``
 
-              int x = 34;
+            - In C++, use the ``bool`` keyword for a boolean. 
 
-              if (32 < x) {
-                  cout << "It's Freezing!";
-              }
-              if (x < 40) {
-                  cout << "It's Cold!";
-              }
-              if (x > 65) {
-                  cout << "It's Warm!";
-              } else {
-                  cout << "It's Hot!";
-              }
+          - ``bool isPrime (input) {``
 
-          -   :: none
+            - In a function header, the type of each variable must be specified in the parameter list.
 
-                  It's Freezing!
+          - ``bool isPrime (int input) {`` 
 
-              -   Take a closer look at the conditions and the way they
-                  are written in the program.
+            + This is the correct function header for the function.
 
-          -   :: none
+          - ``int isPrime (bool input) {``
 
-                  It's Cold!
-
-              -   Take a closer look at the conditions and the way they
-                  are written in the program.
-
-          -   :: none
-
-                  It's Freezing!
-                  It's Cold!
-
-              -   You've identified some of the conditons that are met!
-                  Take another look at the *chain* of conditionals at the
-                  end!
-
-          -   :: none
-
-                  It's Freezing!
-                  It's Cold!
-                  It's Hot!
-
-              +   These statements are quite contradicting, but that's exactly
-                  what the output would be if we ran this code.
-
-          -   :: none
-
-                  It's Hot!
-
-              -   Take a closer look at the conditions and the way they
-                  are written in the program.
-
+            - Take a closer look at what the return type is.
 
    .. tab:: Q4
 
-      .. mchoice:: cond_rec_mc4
+      .. mchoice:: mce_5_4
+          :practice: T
 
-          Suppose you have defined the following function:
+          If we wrote the following function, which of the other functions below can we also legally write
+          and add to the program?
 
-          ::
+          .. code-block:: cpp
 
-              void practicingReturns (int a, int b) {
-                  if (a < b) {
-                      a += 2;
-                  }
-                  if (a > b) {
-                      return;
-                  }
-                  cout << a + b;
-              }
-          
-          What is printed when we run the following code?
+            int func (double x, bool y);
 
-          ::
+          - ``int func (double a, bool b);``
 
-              int x = practicingReturns(2, 3);
-          
-          -   5
+            - Since this function has the same name and parameter types as the given function, it is not allowed.
 
-              -   This is what ``a + b`` would be before the first conditonal.
+          - ``int foo (double x, bool y);``
 
-          -   7
+            + This function has a different name from the given function, so it is allowed.
 
-              -   This is the value of ``a + b`` after the first conditional, but it
-                  doesn't print.
+          - ``int func (double x);``
 
-          -   23
+            + Although this function has the same name as the given function, it has a different number of parameters, so it is allowed.
 
-              -   This is not the value of ``a + b``.
+          - ``void func (double x, bool y);``
 
-          -   Nothing.
+            - Although this function has a different return type, its parameter list is the same as the given function, so it is not allowed.
 
-              +   The function exits with a return before anything is printed.
+          - ``int func (bool y, double x);``
 
+            + Although this function has the same name as the given function, its parameter list is in a different order, so it is allowed.
 
    .. tab:: Q5
 
-      .. mchoice:: cond_rec_mc5
+      .. mchoice:: mce_5_5
+          :practice: T
 
-          Suppose you have defined the following function:
+          What is the output of the code below?
 
-          ::
+          .. code-block:: cpp
 
-              void fortuneCookie (int a, bool b, char c) {
-                  if (c < 'm') {
-                      if (a % 2 == 0) {
-                          cout << "An alien of some sort will be appearing to you shortly.";
-                      } else {
-                          cout << "The fortune you seek is in another cookie.";
-                      }
-                  } else if (c < 'r') {
-                      if (b) {
-                          cout << "He who laughs at himself never runs out of things to laugh at.";
-                      } else {
-                          cout << "You will be hungry again in one hour.";
-                      }
-                  } else {
-                      cout << "Fortune not found? Abort, retry, ignore.";
-                  }
-              }
+            int main() {
+              bool x = 2 < 3;
+              cout << x;
+              cout << false;
+              cout << ((1 + 4) * 4 > 24);
+              cout << (23 == (32 + 2 - 11));
+            }
 
-          What will be your fortune if you run the following code?
+          - 1001
 
-          ::
+            + Since the first and last statements are true and the middle two are false, this is the correct output.
 
-              fortuneCookie(14, false, 'm');
+          - truefalsefalsetrue
 
-          -   ``An alien of some sort will be appearing to you shortly.``
+            - In C++, boolean values are outputted as 0 or 1.
 
-              -   ``'m'`` is NOT less than ``'m'``, so you don't even enter the ``if`` block.
+          - 1false01
 
-          -   ``The fortune you seek is in another cookie.``
+            - Since the second ``cout`` statement doesn't have quotes around the word "false", the value of 0 is outputted.
 
-              -   ``'m'`` is NOT less than ``'m'``, so you don't even enter the ``if`` block.
+          - 0110
 
-          -   ``He who laughs at himself never runs out of things to laugh at.``
-
-              -   ``if (b)`` really means ``if (b == true)``.
-
-          -   ``You will be hungry again in one hour.``
-
-              +   ``'m' < 'r'`` is true and ``b == false``, so this is the fortune that will print.
-
-          -   ``Fortune not found? Abort, retry, ignore.``
-
-              -   ``'m'`` is less than ``'r'`` so you would enter the ``else if`` block, not the ``else``.
-
+            - Remember that if a boolean expression is true, it has a value of 1.
 
    .. tab:: Q6
 
-      .. mchoice:: cond_rec_mc6
+      .. mchoice:: mce_5_6
+          :practice: T
 
-          Suppose you have defined the following function:
+          What is the output of the code below?
 
-          ::
+          .. code-block:: cpp
 
-              void fortuneCookie (int a, bool b, char c) {
-                  if (c < 'm') {
-                      if (a % 2 == 0) {
-                          cout << "An alien of some sort will be appearing to you shortly.";
-                      } else {
-                          cout << "The fortune you seek is in another cookie.";
-                      }
-                  } else if (c < 'r') {
-                      if (b) {
-                          cout << "He who laughs at himself never runs out of things to laugh at.";
-                      } else {
-                          cout << "You will be hungry again in one hour.";
-                      }
-                  } else {
-                      cout << "Fortune not found? Abort, retry, ignore.";
-                  }
-              }
+            int main() {
+              bool w = !(2 * 3 == 6 || 4 - 3 > 8);
+              bool x = true || 4 > 6;
+              bool y = 3 != 6 - 3 && 23 >= 23;
+              bool z = (4 + 9 < 15 && 3 != 4) || 2 + 5 == 7;  
+              cout << w << x << y << z;
+            }
 
-          What will be your fortune if you run the following code?
+          - 0101
 
-          ::
+            + Since the expressions are false, true, false, and true, the output is 0101.
 
-              fortuneCookie(22, true, 'b');
+          - 1010
 
-          -   ``An alien of some sort will be appearing to you shortly.``
+            - Remember that ``true`` outputs to 1 and ``false`` outputs to 0.
 
-              +   ``'b' < 'm'`` and ``22 % 2 == 0``, so this is the fortune that will print.
+          - 1101
 
-          -   ``The fortune you seek is in another cookie.``
+            - Remember the NOT operator (!) inverts the value of a boolean.
 
-              -   ``22 % 2 == 0``, so you enter the ``if`` block, not the else.
+          - 0100
 
-          -   ``He who laughs at himself never runs out of things to laugh at.``
+            - Take a closer look at the order of operations.
 
-              -   ``'b'`` is less than ``'m'``, so you would enter the ``if`` block, not the ``else if``.
+          - 0110
 
-          -   ``You will be hungry again in one hour.``
-
-              -   ``'b'`` is less than ``'m'``, so you would enter the ``if`` block, not the ``else if``.
-
-          -   ``Fortune not found? Abort, retry, ignore.``
-
-              -   ``'b'`` is less than ``'m'``, so you would enter the ``if`` block, not the ``else``.
-
+            - Take a closer look at the expressions.
 
    .. tab:: Q7
 
-      .. mchoice:: cond_rec_mc7
+      .. mchoice:: mce_5_7
+          :practice: T
 
-          Suppose you have defined the following function:
+          Are there any issues with the code below?
 
-          ::
+          .. code-block:: cpp
 
-              void theThing (int m, int n, bool b) {
-                  if (b) {
-                      if (m % 4 == 0) {
-                          cout << m;
-                          return;
-                      }
-                      if ((m + n) > 10) {
-                          cout << m + n;
-                          return;
-                      }
-                  } else if ((m > n) == b) {
-                      cout << m - n;
-                      return;
-                  } else {
-                      if (n % 3 == 0) {
-                          cout << n;
-                          return;
-                      }
-                  }
-                  cout << -1;
+            bool isEven (int num) {
+              if (num % 2 == 0) {
+                return true;
               }
+            }
 
-          What is printed when we run the following code?
+          - Yes, we have to return either 0 or 1.
 
-          ::
+            - Returning a 0 or 1 would be returning an ``int``, even though booleans evaluate to 0 or 1.
 
-              theThing (5, 10, false);
+          - Yes, we cannot pass an ``int`` into a ``bool`` function.
 
-          -   5
+            - The type of variables in the parameter list do not affect the return type.
 
-              -   The outer ``if`` condition is not met, the block does not execute.
+          - Yes, there is no case for odd numbers.
 
-          -   15
+            + Since we never established an else clause, if the input was an odd number, the function would not return anything despite not being a void function.
 
-              -   The outer ``if`` condition is not met, the block does not execute.
+          - There are no issues with the code.
 
-          -   -5
-
-              +   ``m > n`` evaluates to false, so the ``else if`` block executes.
-
-          -   10
-
-              -   The condition for ``else if`` is met, so the function never enters the ``else``.
-          
-          -   -1
-
-              -   The function has returned.
+            - There is an issue with the code. Can you find it?
 
    .. tab:: Q8
 
-      .. mchoice:: cond_rec_mc8
+      .. mchoice:: mce_5_8
+          :practice: T
 
-          Suppose you have defined the following function:
+          Are there any issues with the code below?
 
-          ::
+          .. code-block:: cpp
 
-              void theThing (int m, int n, bool b) {
-                  if (b) {
-                      if (m % 4 == 0) {
-                          cout << m;
-                          return;
-                      }
-                      if ((m + n) > 10) {
-                          cout << m + n;
-                          return;
-                      }
-                  } else if ((m > n) == b) {
-                      cout << m - n;
-                      return;
-                  } else {
-                      if (n % 3 == 0) {
-                          cout << n;
-                          return;
-                      }
-                  }
-                  cout << -1;
+            double Free_time (int day) {
+              if (day==1||day==2||day==3||day==4) {
+                cout<<"Better study on weekday!"<<endl;
+                return day*0.25;
               }
+              else{
+                cout<<"Happy weekend"<<endl;
+                return day;
+              }
+            }
 
-          What is printed when we run the following code?
+          - Yes, we might not return anything.
 
-          ::
+            - We have an else clause in which we return a value. 
 
-              theThing (6, 4, true);
+          - Yes, we cannot return an entire expression like ``day*0.25``.
 
-          -   6
+            - If the result of the expression is compatible with the return type we can return it.
 
-              -   ``5 % 4 != 0`` in the ``if`` block, so the function doesn't print 6.
+          - Yes, we are returning an ``int`` (in the ``else`` block) where as the return type is ``double``.
 
-          -   10
+            - Implicit conversion from an int to double is ok in c++!
 
-              -   ``m + n !> 10`` in the ``if`` block, so the function doesn't print 10.
+          - There are no issues with the code.
 
-          -   2
-
-              -   The condition for ``if`` is met, so the function never enters the ``else if``.
-
-          -   4
-
-              -   The condition for ``if`` is met, so the function never enters the ``else``.
-
-          -   -1
-
-              +   None of the conditions were met, so we reach the default cout -1.
-
+            + Correct! implicit conversion from int to double are ok!
 
    .. tab:: Q9
 
-      .. mchoice:: cond_rec_mc9
+      .. mchoice:: mce_5_9
+          :practice: T
 
-          Suppose you have defined the following function:
+          Are there any issues with the code below?
 
-          ::
+          .. code-block:: cpp
 
-              void moo (int m, int n) {
-                  if (m != n) {
-                      m += 2;
-                      cout << "Moo!";
-                      moo (m, n);
-                  } else {
-                      cout << "Got Milk?";
-                  }
-              }
+            void moonWeight (double earth) {
+              double moon = 0.165 * earth;
+              cout << "You would weigh " << moon << " pounds on the moon." << endl;
+              return moon;
+            }
 
-          How many times does "Moo!" print when we run the following?
+          - Yes, we cannot have ``cout`` statements in a function.
 
-          ::
+            - We are allowed to use ``cout`` statements in a function.
 
-              moo (4, 8);
+          - Yes, we cannot return anything.
 
-          -   0
+            + ``void`` functions do not have return values, so we cannot return ``moon``.
 
-              -   When we call the function ``4 != 8``, so "Moo!" is printed at least
-                  once.
+          - Yes, we need to return the output statement.
 
-          -   1
+            - ``void`` functions do not have return values.
 
-              -   The function calls itself inside of the ``if`` loop, so "Moo!" is printed
-                  more than once.
+          - There are no issues with the code.
 
-          -   2
-
-              +   ``m`` is incremented by two each with each function call, so after two
-                  ``m == n`` and the recursion stops.
-
-          -   3
-
-              -   Take a look at how ``m`` is incremented with each function call.
-
-          -   infinite recursion
-
-              -   The function stops printing "Moo!" when ``m == n``.
-
+            - There is an issue with the code. Can you find it?
 
    .. tab:: Q10
 
-      .. mchoice:: cond_rec_mc10
+      .. mchoice:: mce_5_10
+          :practice: T
 
-          Suppose you have defined the following function:
+          What is the return type of main?
 
-          ::
+          - ``void``
 
-              void moo (int m, int n) {
-                  if (m != n) {
-                      m += 2;
-                      cout << "Moo!";
-                      moo (m, n);
-                  } else {
-                      cout << "Got Milk?";
-                  }
+            - What keyword do we use before ``main()`` in every program?
+
+          - ``bool``
+
+            - What keyword do we use before ``main()`` in every program?
+
+          - ``double``
+
+            - What keyword do we use before ``main()`` in every program?
+
+          - ``int``
+
+            + Yes, ``main`` is supposed to return an integer, which is why programmers often return 0 at the end of ``main``.
+
+   .. tab:: Q11
+
+      .. mchoice:: mce_5_11
+          :practice: T
+
+          What is the base case of the ``factorial`` recursive function?
+
+          .. code-block:: cpp
+
+            int factorial (int n) {
+              if (n == 0) {
+                return 1;
               }
+              else {
+                int recurse = factorial (n-1);
+                int result = n * recurse;
+                return result;
+              }
+            }
 
-          How many times does "Moo!" print when we run the following?
+          - ``n = 0``
 
-          ::
+            + When ``n`` is 0, the function returns the value 1 without making a recursive call.
 
-              moo (5, 10);
+          - ``n = 1``
 
-          -   0
+            - When ``n`` is 1, the function makes a recursive call in the else statement.
 
-              -   When we call the function ``5 != 10``, so "Moo!" is printed at least
-                  once.
+          - ``n = -1``
 
-          -   1
+            - ``n`` never becomes -1.
 
-              -   The function calls itself inside of the ``if`` loop, so "Moo!" is printed
-                  more than once.
+          - There is no base case.
 
-          -   2
+            - If there was no base case, the function would recurse infinitely.
 
-              -   After two function calls, ``m == 9`` and ``n == 10``.  The function is not
-                  done printing.
+   .. tab:: Q12
 
-          -   3
+      .. mchoice:: mce_5_12
+          :practice: T
 
-              -   After three function calls, ``m == 11`` and ``n == 10``.  The function is not
-                  done printing
+          What is printed?
 
-          -   infinite recursion
+          .. code-block:: cpp
 
-              +   The function stops printing "Moo!" when ``m == n``, but since ``m`` is odd
-                  and ``n`` is even, they will never be equal as long as we increment by two.
+            void print_sequence (int n) {
+              if (n == 0) {
+                 cout<<1;
+                 return;
+                 //we can have an empty return to a void function
+              }
+              else {
+                cout<<n<<" ";
+                print_sequence(n-1);
+              }
+            }
 
+            int main(){
+                int val=6;
+                print_sequence(val);
+            }
 
+          - 6 5 4 3 2 1 0
+
+            - Check what the base case prints.
+
+          - 6 6 6 6 6 6 1
+
+            - What value do we give the recursive call?
+
+          - 6 5 4 3 2 1
+
+            - The base case prints something!
+
+          - 6 5 4 3 2 1 1
+
+            + We print a number and decrement it till we reach 0 then we print 1.
