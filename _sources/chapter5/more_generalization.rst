@@ -7,15 +7,15 @@ You could add a parameter to ``multiples_table``:
 
 ::
 
-   void multiples_table (int high) {
+   void multiples_table (int table_size) {
      int i = 1;
-     while (i <= high) {
+     while (i <= table_size) {
        print_multiples (i);
        i = i + 1;
      }
    }
 
-I replaced the value 6 with the parameter ``high``. If I call
+I replaced the value 6 with the parameter ``table_size``. If I call
 ``multiples_table`` with the argument 7, I get
 
 ::
@@ -33,25 +33,25 @@ number of rows and columns), which means I have to add another parameter
 to ``print_multiples``, to specify how many columns the table should
 have.
 
-Just to be annoying, I will also call this parameter ``high``,
+Just to be annoying, I will also call this parameter ``table_size``,
 demonstrating that different functions can have parameters with the same
 name (just like local variables):
 
 ::
 
-   void print_multiples (int n, int high) {
+   void print_multiples (int n, int table_size) {
      int i = 1;
-     while (i <= high) {
+     while (i <= table_size) {
        cout << n*i << "   ";
        i = i + 1;
      }
      cout << endl;
    }
 
-   void multiples_table (int high) {
+   void multiples_table (int table_size) {
      int i = 1;
-     while (i <= high) {
-       print_multiples (i, high);
+     while (i <= table_size) {
+       print_multiples (i, table_size);
        i = i + 1;
      }
    }
@@ -83,21 +83,21 @@ expected, this program generates a square 7x7 table:
    Run the active code to see what happens!
    ~~~~
    #include <iostream>
-   using std::cout;
 
-   void print_multiples (int n, int high) {
+   void print_multiples (int n, int table_size) {
+     using std::cout;
      int i = 1;
-     while (i <= high) {
+     while (i <= table_size) {
        cout << n*i << '\t';
        i = i + 1;
      }
      cout << '\n';
    }
 
-   void multiples_table (int high) {
+   void multiples_table (int table_size) {
      int i = 1;
-     while (i <= high) {
-       print_multiples (i, high);
+     while (i <= table_size) {
+       print_multiples (i, table_size);
        i = i + 1;
      }
    }
@@ -115,7 +115,7 @@ change one line of ``multiples_table``. Change
 
 ::
 
-         print_multiples (i, high);
+         print_multiples (i, table_size);
 
 to
 
@@ -137,38 +137,135 @@ and you get
 
 I’ll leave it up to you to figure out how it works.
 
+We can generalize it a bit further by not hard-coding the table size.
+We change the parameter to a **default parameter**:
+
 .. activecode:: more_generalization_AC_2
    :language: cpp
-   :compileargs: ['-Wall', '-std=c++11']
+   :compileargs: ['-Wall', '-Wextra', '-Wpedantic', '-std=c++11']
    :nocodelens:
-   :caption: Two-dimensional tables
+   :caption: Table with default parameters
 
-   Modify the previous program so that it only prints
-   half the multiplication table.
+   Notice the new parameter passed to the ``multiples_table`` function.
+   It includes ``= 6`` after the parameter name.
+   This indicates a **default value** for ``table_size``.
+   This means that if a value is not passed to the function,
+   then the default value is used.
 
-   Run the active code to see how you did!
    ~~~~
    #include <iostream>
-   using std::cout;
 
-   void print_multiples (int n, int high) {
+   void print_multiples (int n, int table_size) {
+     using std::cout;
      int i = 1;
-     while (i <= high) {
+     while (i <= table_size) {
        cout << n*i << '\t';
        i = i + 1;
      }
      cout << '\n';
    }
 
-   void multiples_table (int high) {
+   void multiples_table (int table_size = 6) {
      int i = 1;
-     while (i <= high) {
-       print_multiples (i, high);
+     while (i <= table_size) {
+       print_multiples (i, table_size);
        i = i + 1;
      }
    }
 
    int main() {
-     multiples_table(7);
+     multiples_table();
    }
+
+Other than providing a bit more flexibility in how ``multiple_tables``
+is called, we have not changed this program.
+We **do** have a bit more to be careful about though.
+What values might be passed that would cause our program to behave
+unexpectedly?
+
+Also be aware that a default parameter also means that
+
+::
+
+   void multiples_table(int table_size = 6);
+
+implicitly defines a function with this signature:
+
+::
+
+   void multiples_table();
+
+with the value of ``table_size`` set to ``6``.
+Trying to define both of these functions is a compile error.
+This makes perfect sense if you consider what the compiler needs to do.
+You have two functions:
+
+::
+
+   void multiples_table(int table_size = 6);
+   void multiples_table();
+
+Which of these two functions is being referred to in main:
+
+::
+
+   int main() {
+     multiples_table();
+   }
+
+Is is the version that takes no parameters,
+or the function that defaults to ``6``?
+There is no way to know simply by looking at the code.
+The compiler can't know either, so it will report an error.
+
+
+.. tabbed:: self_check
+
+   .. tab:: Q1
+
+      .. activecode:: more_generalization_AC_3
+         :language: cpp
+         :compileargs: ['-Wall', '-Wextra', '-Wpedantic', '-std=c++11']
+         :nocodelens:
+         :caption: Two-dimensional tables
+
+         Modify the previous program so that it only prints
+         half the multiplication table.
+
+         Run the active code to see how you did!
+         ~~~~
+         #include <iostream>
+         using std::cout;
+
+         void print_multiples (int n, int table_size) {
+           int i = 1;
+           while (i <= table_size) {
+             cout << n*i << '\t';
+             i = i + 1;
+           }
+           cout << '\n';
+         }
+
+         void multiples_table (int table_size) {
+           int i = 1;
+           while (i <= table_size) {
+             print_multiples (i, table_size);
+             i = i + 1;
+           }
+         }
+
+         int main() {
+           multiples_table(7);
+         }
+
+-----
+
+.. admonition:: More to Explore
+
+   - From cppreference.com
+
+     - :lang:`Function definitions <definition>` and
+       :lang:`declarations`
+     - :lang:`Functions <functions>`
+     - :lang:`Overload resolution <overload_resolution>`
 

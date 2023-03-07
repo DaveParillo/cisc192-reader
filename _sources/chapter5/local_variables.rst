@@ -52,7 +52,7 @@ hand, the value of ``i`` in ``print_multiples`` goes from 1 up to ``n``.
 In the diagram, it happens to be 3. The next time through the loop it
 will be 4.
 
-It is often a good idea to use different variable names in different
+It may be a good idea to use different variable names in different
 functions, to avoid confusion, but there are good reasons to reuse
 names. For example, it is common to use the names ``i``, ``j`` and ``k``
 as loop variables. If you avoid using them in one function just because

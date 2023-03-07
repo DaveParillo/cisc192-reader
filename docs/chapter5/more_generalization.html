@@ -65,7 +65,7 @@
   eBookConfig.python3 = true;
   eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
   eBookConfig.runestone_version = '6.2.1';
-  eBookConfig.jobehost = 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.jobehost = 'https://red-voice-1370.fly.dev/http://jobe2.cosc.canterbury.ac.nz';
   eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
   eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
   eBookConfig.enable_chatcodes = false ? false : false;
@@ -217,16 +217,16 @@
 <p>As another example of generalization, imagine you wanted a program that
 would print a multiplication table of any size, not just the 6x6 table.
 You could add a parameter to <code class="docutils literal notranslate"><span class="pre">multiples_table</span></code>:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">multiples_table</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">high</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">multiples_table</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">table_size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">high</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">table_size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">print_multiples</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
 <span class="w">  </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>I replaced the value 6 with the parameter <code class="docutils literal notranslate"><span class="pre">high</span></code>. If I call
+<p>I replaced the value 6 with the parameter <code class="docutils literal notranslate"><span class="pre">table_size</span></code>. If I call
 <code class="docutils literal notranslate"><span class="pre">multiples_table</span></code> with the argument 7, I get</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="w">   </span><span class="mi">2</span><span class="w">   </span><span class="mi">3</span><span class="w">   </span><span class="mi">4</span><span class="w">   </span><span class="mi">5</span><span class="w">   </span><span class="mi">6</span><span class="w"></span>
 <span class="mi">2</span><span class="w">   </span><span class="mi">4</span><span class="w">   </span><span class="mi">6</span><span class="w">   </span><span class="mi">8</span><span class="w">   </span><span class="mi">10</span><span class="w">   </span><span class="mi">12</span><span class="w"></span>
@@ -241,22 +241,22 @@ You could add a parameter to <code class="docutils literal notranslate"><span cl
 number of rows and columns), which means I have to add another parameter
 to <code class="docutils literal notranslate"><span class="pre">print_multiples</span></code>, to specify how many columns the table should
 have.</p>
-<p>Just to be annoying, I will also call this parameter <code class="docutils literal notranslate"><span class="pre">high</span></code>,
+<p>Just to be annoying, I will also call this parameter <code class="docutils literal notranslate"><span class="pre">table_size</span></code>,
 demonstrating that different functions can have parameters with the same
 name (just like local variables):</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">print_multiples</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">high</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">print_multiples</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">table_size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">high</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">table_size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">n</span><span class="o">*</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;   &quot;</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
 <span class="w">  </span><span class="p">}</span><span class="w"></span>
 <span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">multiples_table</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">high</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">multiples_table</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">table_size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">high</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">print_multiples</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">high</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">table_size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">print_multiples</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">table_size</span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
 <span class="w">  </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
@@ -291,21 +291,21 @@ Run the active code to see what happens!</p>
     data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"     data-caption='Two-dimensional tables'  data-wasm=/_static
      style="visibility: hidden;">
 #include <iostream>
-using std::cout;
 
-void print_multiples (int n, int high) {
+void print_multiples (int n, int table_size) {
+  using std::cout;
   int i = 1;
-  while (i <= high) {
+  while (i <= table_size) {
     cout << n*i << '\t';
     i = i + 1;
   }
   cout << '\n';
 }
 
-void multiples_table (int high) {
+void multiples_table (int table_size) {
   int i = 1;
-  while (i <= high) {
-    print_multiples (i, high);
+  while (i <= table_size) {
+    print_multiples (i, table_size);
     i = i + 1;
   }
 }
@@ -322,7 +322,7 @@ might notice that the multiplication table is symmetric, because
 <span class="math notranslate nohighlight">\(ab = ba\)</span>, so all the entries in the table appear twice. You could
 save ink by printing only half the table. To do that, you only have to
 change one line of <code class="docutils literal notranslate"><span class="pre">multiples_table</span></code>. Change</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">print_multiples</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">high</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">print_multiples</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">table_size</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>to</p>
@@ -340,36 +340,112 @@ change one line of <code class="docutils literal notranslate"><span class="pre">
 </pre></div>
 </div>
 <p>I’ll leave it up to you to figure out how it works.</p>
+<p>We can generalize it a bit further by not hard-coding the table size.
+We change the parameter to a <strong>default parameter</strong>:</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=more_generalization_AC_2 data-question_label="5.11.2">
 <div id=more_generalization_AC_2_question class="ac_question col-md-12">
-<p>Modify the previous program so that it only prints
-half the multiplication table.</p>
-<p>Run the active code to see how you did!</p>
+<p>Notice the new parameter passed to the <code class="docutils literal notranslate"><span class="pre">multiples_table</span></code> function.
+It includes <code class="docutils literal notranslate"><span class="pre">=</span> <span class="pre">6</span></code> after the parameter name.
+This indicates a <strong>default value</strong> for <code class="docutils literal notranslate"><span class="pre">table_size</span></code>.
+This means that if a value is not passed to the function,
+then the default value is used.</p>
 
 </div>
 <textarea data-lang="cpp" id="more_generalization_AC_2_editor" 
       data-timelimit=25000     
     data-audio=''      
-    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-std=c++11&#x27;]"     data-caption='Two-dimensional tables'  data-wasm=/_static
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-Wextra&#x27;, &#x27;-Wpedantic&#x27;, &#x27;-std=c++11&#x27;]"     data-caption='Table with default parameters'  data-wasm=/_static
      style="visibility: hidden;">
 #include <iostream>
-using std::cout;
 
-void print_multiples (int n, int high) {
+void print_multiples (int n, int table_size) {
+  using std::cout;
   int i = 1;
-  while (i <= high) {
+  while (i <= table_size) {
     cout << n*i << '\t';
     i = i + 1;
   }
   cout << '\n';
 }
 
-void multiples_table (int high) {
+void multiples_table (int table_size = 6) {
   int i = 1;
-  while (i <= high) {
-    print_multiples (i, high);
+  while (i <= table_size) {
+    print_multiples (i, table_size);
+    i = i + 1;
+  }
+}
+
+int main() {
+  multiples_table();
+}
+</textarea>
+</div>
+</div>
+<p>Other than providing a bit more flexibility in how <code class="docutils literal notranslate"><span class="pre">multiple_tables</span></code>
+is called, we have not changed this program.
+We <strong>do</strong> have a bit more to be careful about though.
+What values might be passed that would cause our program to behave
+unexpectedly?</p>
+<p>Also be aware that a default parameter also means that</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">multiples_table</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">table_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>implicitly defines a function with this signature:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">multiples_table</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+<p>with the value of <code class="docutils literal notranslate"><span class="pre">table_size</span></code> set to <code class="docutils literal notranslate"><span class="pre">6</span></code>.
+Trying to define both of these functions is a compile error.
+This makes perfect sense if you consider what the compiler needs to do.
+You have two functions:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">multiples_table</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">table_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">multiples_table</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Which of these two functions is being referred to in main:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">multiples_table</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Is is the version that takes no parameters,
+or the function that defaults to <code class="docutils literal notranslate"><span class="pre">6</span></code>?
+There is no way to know simply by looking at the code.
+The compiler can’t know either, so it will report an error.</p>
+<div id='self_check' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Q1" >
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=more_generalization_AC_3 data-question_label="5.11.3">
+<div id=more_generalization_AC_3_question class="ac_question col-md-12">
+<p>Modify the previous program so that it only prints
+half the multiplication table.</p>
+<p>Run the active code to see how you did!</p>
+
+</div>
+<textarea data-lang="cpp" id="more_generalization_AC_3_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+    data-compileargs="[&#x27;-Wall&#x27;, &#x27;-Wextra&#x27;, &#x27;-Wpedantic&#x27;, &#x27;-std=c++11&#x27;]"     data-caption='Two-dimensional tables'  data-wasm=/_static
+     style="visibility: hidden;">
+#include <iostream>
+using std::cout;
+
+void print_multiples (int n, int table_size) {
+  int i = 1;
+  while (i <= table_size) {
+    cout << n*i << '\t';
+    i = i + 1;
+  }
+  cout << '\n';
+}
+
+void multiples_table (int table_size) {
+  int i = 1;
+  while (i <= table_size) {
+    print_multiples (i, table_size);
     i = i + 1;
   }
 }
@@ -379,6 +455,23 @@ int main() {
 }
 </textarea>
 </div>
+</div>
+</div>
+    </div>
+
+<hr class="docutils" />
+<div class="admonition-more-to-explore admonition">
+<p class="admonition-title">More to Explore</p>
+<ul class="simple">
+<li><p>From cppreference.com</p>
+<ul>
+<li><p><a class="reference external" href="https://en.cppreference.com/w/cpp/language/definition">Function definitions</a> and
+<a class="reference external" href="https://en.cppreference.com/w/cpp/language/declarations">declarations</a></p></li>
+<li><p><a class="reference external" href="https://en.cppreference.com/w/cpp/language/functions">Functions</a></p></li>
+<li><p><a class="reference external" href="https://en.cppreference.com/w/cpp/language/overload_resolution">Overload resolution</a></p></li>
+</ul>
+</li>
+</ul>
 </div>
 </section>
 

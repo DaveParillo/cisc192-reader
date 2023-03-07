@@ -1,3 +1,5 @@
+.. _bool-functions:
+
 Bool Functions
 --------------
 .. index::

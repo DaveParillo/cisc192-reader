@@ -41,7 +41,7 @@ options(
                        'dburl': '',
                        'default_ac_lang': 'cpp',
                        'basecourse': 'cisc192-reader',
-                       'jobe_server': 'https://fierce-ridge-58946.herokuapp.com/http://jobe2.cosc.canterbury.ac.nz',
+                       'jobe_server': 'https://red-voice-1370.fly.dev/http://jobe2.cosc.canterbury.ac.nz',
                        'proxy_uri_runs': '/jobe/index.php/restapi/runs/',
                        'proxy_uri_files': '/jobe/index.php/restapi/files/'
                        }

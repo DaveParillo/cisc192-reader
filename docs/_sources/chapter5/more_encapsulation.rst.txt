@@ -55,3 +55,12 @@ approach lets you design as you go along.
      multiples_table();
    }
 
+-----
+
+.. admonition:: More to Explore
+
+   - From cppreference.com
+
+     - :lang:`Function definitions <definition>` and
+       :lang:`declarations`
+     - :lang:`Functions <functions>`

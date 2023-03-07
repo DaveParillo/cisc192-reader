@@ -3,8 +3,8 @@ Encapsulation and generalization
 Encapsulation usually means taking a piece of code and wrapping it up in
 a function, allowing you to take advantage of all the things functions
 are good for. We have seen two examples of encapsulation, when we wrote
-``print_parity`` in Section `[alternative] <#alternative>`__ and
-``is_digit`` in Section `[bool] <#bool>`__.
+``print_parity`` in section :ref:`alternative` and
+``is_digit`` in section :ref:`bool-functions`.
 
 Generalization means taking something specific, like printing multiples
 of 2, and making it more general, like printing the multiples of any
@@ -182,3 +182,13 @@ you can also use tab characters, like below.
            }
          }
 
+-----
+
+.. admonition:: More to Explore
+
+   - From cppreference.com
+
+     - :lang:`Function definitions <definition>` and
+       :lang:`declarations`
+     - :lang:`Functions <functions>`
+     - :lang:`comparison operators <operator_comparison>`

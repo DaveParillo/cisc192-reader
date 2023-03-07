@@ -175,3 +175,14 @@ the function many times without rewriting it each time.
 
          What is of these is NOT a reason that functions are useful?
 
+-----
+
+.. admonition:: More to Explore
+
+   - From cppreference.com
+
+     - :lang:`Function definitions <definition>` and
+       :lang:`declarations`
+     - :lang:`Functions <functions>`
+     - :lang:`Arithmetic operators <operator_arithmetic>`
+     - :lang:`Assignment operators <operator_assignment>`
