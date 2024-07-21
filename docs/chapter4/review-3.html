@@ -3,39 +3,37 @@
      **************************************** -->
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>4.19. Coding Practice &#8212; CISC 192 Course Reader Overview</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
-    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
-    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
-    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.0fa6cababf056764.css?v=F9484CEF" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.3eb60bc006ae9a54.css?v=3A5A250C" />
 
 
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/animationbase.js?v=A043C3A7"></script>
-    <script src="../_static/html4css1.css?v=4533ACD3"></script>
-    <script src="../_static/webglinteractive.js?v=2B768384"></script>
-    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script src="../_static/runtime.b0f8547c48f16a9f.bundle.js?v=2731F567"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/runtime.66b619f51b746382.bundle.js?v=C3F69EE5"></script>
     <script src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script src="../_static/runestone.0e9550fe42760516.bundle.js?v=71AD37BA"></script>
+    <script src="../_static/runestone.ecc6dff5cad8b815.bundle.js?v=AE959292"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="5. Iteration" href="../chapter5/index.html" />
@@ -43,6 +41,10 @@
 
 
 <link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
 
 
 <script>
@@ -63,8 +65,8 @@
   eBookConfig.build_info = "unknown";
   eBookConfig.python3 = true;
   eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
-  eBookConfig.runestone_version = '6.2.1';
-  eBookConfig.jobehost = 'https://red-voice-1370.fly.dev/http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.runestone_version = '6.6.2';
+  eBookConfig.jobehost = 'https://delicate-frost-8843.fly.dev';
   eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
   eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
   eBookConfig.enable_chatcodes = false ? false : false;
@@ -110,7 +112,6 @@
       <ul class="nav navbar-nav navbar-right" >
 
         <li class="divider-vertical"></li>
-        <li><span id="browsing_warning"></span></li>
 
         <!-- social media dropdown -->
         <!-- end social media dropdown -->
@@ -212,7 +213,7 @@
 
   
   <section id="coding-practice">
-<h1><span class="section-number">4.19. </span>Coding Practice<a class="headerlink" href="#coding-practice" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">4.19. </span>Coding Practice<a class="headerlink" href="#coding-practice" title="Permalink to this heading">¶</a></h1>
 <p>Write a function called <code class="docutils literal notranslate"><span class="pre">calculator</span></code> which takes two <code class="docutils literal notranslate"><span class="pre">double</span></code>s, <code class="docutils literal notranslate"><span class="pre">first</span></code> and
 <code class="docutils literal notranslate"><span class="pre">second</span></code>, and a <code class="docutils literal notranslate"><span class="pre">char</span> <span class="pre">operation</span></code> as parameters. <code class="docutils literal notranslate"><span class="pre">calculator</span></code> performs
 addition, subtraction, multiplication, or division with the two <code class="docutils literal notranslate"><span class="pre">double</span></code>s
@@ -230,7 +231,7 @@ Run and test your code!</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cp_5_AC_1q data-question_label="4.19.1">
-<div id=cp_5_AC_1q_question class="ac_question col-md-12">
+<div id=cp_5_AC_1q_question class="ac_question">
 
 </div>
 <textarea data-lang="cpp" id="cp_5_AC_1q_editor" 
@@ -282,7 +283,7 @@ we return the correct result depending on which operation was given.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cp_5_AC_1a data-question_label="4.19.2">
-<div id=cp_5_AC_1a_question class="ac_question col-md-12">
+<div id=cp_5_AC_1a_question class="ac_question">
 
 </div>
 <textarea data-lang="cpp" id="cp_5_AC_1a_editor" 
@@ -344,7 +345,7 @@ we return the correct result depending on which operation was given.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cp_5_AC_2q data-question_label="4.19.3">
-<div id=cp_5_AC_2q_question class="ac_question col-md-12">
+<div id=cp_5_AC_2q_question class="ac_question">
 <p>A binary number is one that is expressed in the base-2 numeral system.
 Write a function <code class="docutils literal notranslate"><span class="pre">convertToBinary</span></code> which takes a <code class="docutils literal notranslate"><span class="pre">decimal</span></code> as
 a parameter. <code class="docutils literal notranslate"><span class="pre">convertToBinary</span></code> takes the number in decimal, converts
@@ -405,7 +406,7 @@ Run and test your code!</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cp_5_AC_3q data-question_label="4.19.4">
-<div id=cp_5_AC_3q_question class="ac_question col-md-12">
+<div id=cp_5_AC_3q_question class="ac_question">
 
 </div>
 <textarea data-lang="cpp" id="cp_5_AC_3q_editor" 
@@ -454,7 +455,7 @@ instead of 180 to avoid integer division.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cp_5_AC_3a data-question_label="4.19.5">
-<div id=cp_5_AC_3a_question class="ac_question col-md-12">
+<div id=cp_5_AC_3a_question class="ac_question">
 
 </div>
 <textarea data-lang="cpp" id="cp_5_AC_3a_editor" 
@@ -502,7 +503,7 @@ int main() {
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cp_5_AC_4q data-question_label="4.19.6">
-<div id=cp_5_AC_4q_question class="ac_question col-md-12">
+<div id=cp_5_AC_4q_question class="ac_question">
 <p>The astronomical start and end dates of the four seasons are based on
 the position of the Earth relative to the Sun. As a result, it
 changes every year and can be difficult to remember. However, the
@@ -578,7 +579,7 @@ Each year after the second year counts as 4 additional human years. For example,
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cp_5_AC_5q data-question_label="4.19.7">
-<div id=cp_5_AC_5q_question class="ac_question col-md-12">
+<div id=cp_5_AC_5q_question class="ac_question">
 
 </div>
 <textarea data-lang="cpp" id="cp_5_AC_5q_editor" 
@@ -634,7 +635,7 @@ We also don’t try to convert negative dog years.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cp_5_AC_5a data-question_label="4.19.8">
-<div id=cp_5_AC_5a_question class="ac_question col-md-12">
+<div id=cp_5_AC_5a_question class="ac_question">
 
 </div>
 <textarea data-lang="cpp" id="cp_5_AC_5a_editor" 
@@ -695,7 +696,7 @@ int main() {
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cp_5_AC_6q data-question_label="4.19.9">
-<div id=cp_5_AC_6q_question class="ac_question col-md-12">
+<div id=cp_5_AC_6q_question class="ac_question">
 <p>A number is a common factor of two other numbers if it divides evenly into both of the
 other numbers. For example, 2 is a common factor of 4 and 18, because 2 goes evenly into
 4 and 18. Write the function <code class="docutils literal notranslate"><span class="pre">isCommonFactor</span></code>, which takes three parameters,
@@ -754,7 +755,7 @@ if the year is a leap year and <code class="docutils literal notranslate"><span 
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cp_5_AC_7q data-question_label="4.19.10">
-<div id=cp_5_AC_7q_question class="ac_question col-md-12">
+<div id=cp_5_AC_7q_question class="ac_question">
 
 </div>
 <textarea data-lang="cpp" id="cp_5_AC_7q_editor" 
@@ -811,7 +812,7 @@ order to efficiently determine whether or not a given year is a leap year.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cp_5_AC_7a data-question_label="4.19.11">
-<div id=cp_5_AC_7a_question class="ac_question col-md-12">
+<div id=cp_5_AC_7a_question class="ac_question">
 
 </div>
 <textarea data-lang="cpp" id="cp_5_AC_7a_editor" 
@@ -879,7 +880,7 @@ int main() {
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cp_5_AC_8q data-question_label="4.19.12">
-<div id=cp_5_AC_8q_question class="ac_question col-md-12">
+<div id=cp_5_AC_8q_question class="ac_question">
 <p>In the enchanted Mushroom Forest, there are many different types of
 mushrooms as far as the eye can see. Most of these mushrooms
 can make delicious stews and dishes, but some of them are poisonous.
@@ -954,7 +955,7 @@ the <code class="docutils literal notranslate"><span class="pre">n</span></code>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cp_5_AC_9q data-question_label="4.19.13">
-<div id=cp_5_AC_9q_question class="ac_question col-md-12">
+<div id=cp_5_AC_9q_question class="ac_question">
 
 </div>
 <textarea data-lang="cpp" id="cp_5_AC_9q_editor" 
@@ -1006,7 +1007,7 @@ call <code class="docutils literal notranslate"><span class="pre">triangularNum<
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cp_5_AC_9a data-question_label="4.19.14">
-<div id=cp_5_AC_9a_question class="ac_question col-md-12">
+<div id=cp_5_AC_9a_question class="ac_question">
 
 </div>
 <textarea data-lang="cpp" id="cp_5_AC_9a_editor" 
@@ -1060,7 +1061,7 @@ int main() {
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cp_5_AC_10q data-question_label="4.19.15">
-<div id=cp_5_AC_10q_question class="ac_question col-md-12">
+<div id=cp_5_AC_10q_question class="ac_question">
 <p>Write the function <code class="docutils literal notranslate"><span class="pre">digit_sum</span></code> which takes an <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">num</span></code> as a parameter
 and returns the sum of all its digits. For example, <code class="docutils literal notranslate"><span class="pre">digit_sum</span> <span class="pre">(1423)</span></code>
 would return 10. Use recursion. Run and test your code!</p>
@@ -1118,6 +1119,8 @@ int main() {
 </section>
 
 
+  
+
   <div id="scprogresscontainer">
     You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
   </div>
@@ -1152,8 +1155,8 @@ window.addEventListener('load', (event) => {
       
     </p>
     <p>
-        &copy; Copyright 2020-2022 Dave Parillo, Barbara Ericson, and Allen B. Downey..
-      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.2.1.
+        &copy; Copyright 2020-2024 Dave Parillo, Barbara Ericson, and Allen B. Downey..
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.6.2.
     </p>
   </div>
 </footer>

@@ -3,40 +3,37 @@
      **************************************** -->
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>5.4. Tables &#8212; CISC 192 Course Reader Overview</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
-    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
-    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
-    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.0fa6cababf056764.css?v=F9484CEF" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.3eb60bc006ae9a54.css?v=3A5A250C" />
 
 
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/animationbase.js?v=A043C3A7"></script>
-    <script src="../_static/html4css1.css?v=4533ACD3"></script>
-    <script src="../_static/webglinteractive.js?v=2B768384"></script>
-    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script src="../_static/runtime.b0f8547c48f16a9f.bundle.js?v=2731F567"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/runtime.66b619f51b746382.bundle.js?v=C3F69EE5"></script>
     <script src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script src="../_static/runestone.0e9550fe42760516.bundle.js?v=71AD37BA"></script>
+    <script src="../_static/runestone.ecc6dff5cad8b815.bundle.js?v=AE959292"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="5.5. Two-dimensional tables" href="two_dimensional_tables.html" />
@@ -44,6 +41,10 @@
 
 
 <link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
 
 
 <script>
@@ -64,8 +65,8 @@
   eBookConfig.build_info = "unknown";
   eBookConfig.python3 = true;
   eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
-  eBookConfig.runestone_version = '6.2.1';
-  eBookConfig.jobehost = 'https://red-voice-1370.fly.dev/http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.runestone_version = '6.6.2';
+  eBookConfig.jobehost = 'https://delicate-frost-8843.fly.dev';
   eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
   eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
   eBookConfig.enable_chatcodes = false ? false : false;
@@ -111,7 +112,6 @@
       <ul class="nav navbar-nav navbar-right" >
 
         <li class="divider-vertical"></li>
-        <li><span id="browsing_warning"></span></li>
 
         <!-- social media dropdown -->
         <!-- end social media dropdown -->
@@ -213,7 +213,7 @@
 
   
   <section id="tables">
-<h1><span class="section-number">5.4. </span>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">5.4. </span>Tables<a class="headerlink" href="#tables" title="Permalink to this heading">¶</a></h1>
 <p>One of the things loops are good for is generating tabular data. For
 example, before computers were readily available, people had to
 calculate logarithms, sines and cosines, and other common mathematical
@@ -236,7 +236,7 @@ good example of iteration.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=tables_AC_1 data-question_label="5.4.1">
-<div id=tables_AC_1_question class="ac_question col-md-12">
+<div id=tables_AC_1_question class="ac_question">
 <p>The active code below outputs a sequence of values in the left column
 and their logarithms in the right column.</p>
 
@@ -281,15 +281,15 @@ even when it not needed (and it is relatively expensive),
 I typically use <code class="docutils literal notranslate"><span class="pre">\n</span></code> when possible and use <code class="docutils literal notranslate"><span class="pre">endl</span></code>
 when the situation requires it.</p>
 <p>The output of this program is</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="w">      </span><span class="mi">0</span><span class="w"></span>
-<span class="mi">2</span><span class="w">      </span><span class="mf">0.693147</span><span class="w"></span>
-<span class="mi">3</span><span class="w">      </span><span class="mf">1.09861</span><span class="w"></span>
-<span class="mi">4</span><span class="w">      </span><span class="mf">1.38629</span><span class="w"></span>
-<span class="mi">5</span><span class="w">      </span><span class="mf">1.60944</span><span class="w"></span>
-<span class="mi">6</span><span class="w">      </span><span class="mf">1.79176</span><span class="w"></span>
-<span class="mi">7</span><span class="w">      </span><span class="mf">1.94591</span><span class="w"></span>
-<span class="mi">8</span><span class="w">      </span><span class="mf">2.07944</span><span class="w"></span>
-<span class="mi">9</span><span class="w">      </span><span class="mf">2.19722</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="w">      </span><span class="mi">0</span>
+<span class="mi">2</span><span class="w">      </span><span class="mf">0.693147</span>
+<span class="mi">3</span><span class="w">      </span><span class="mf">1.09861</span>
+<span class="mi">4</span><span class="w">      </span><span class="mf">1.38629</span>
+<span class="mi">5</span><span class="w">      </span><span class="mf">1.60944</span>
+<span class="mi">6</span><span class="w">      </span><span class="mf">1.79176</span>
+<span class="mi">7</span><span class="w">      </span><span class="mf">1.94591</span>
+<span class="mi">8</span><span class="w">      </span><span class="mf">2.07944</span>
+<span class="mi">9</span><span class="w">      </span><span class="mf">2.19722</span>
 </pre></div>
 </div>
 <p>If these values seem odd, remember that the <code class="docutils literal notranslate"><span class="pre">log</span></code> function uses base
@@ -299,19 +299,19 @@ use the following formula:</p>
 <div class="math notranslate nohighlight">
 \[\log_2 x = \frac {log_e x}{log_e 2}\]</div>
 <p>Changing the output statement to</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\t</span><span class="s">&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">log</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">log</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\t</span><span class="s">&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">log</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">log</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>yields</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="w">      </span><span class="mi">0</span><span class="w"></span>
-<span class="mi">2</span><span class="w">      </span><span class="mi">1</span><span class="w"></span>
-<span class="mi">3</span><span class="w">      </span><span class="mf">1.58496</span><span class="w"></span>
-<span class="mi">4</span><span class="w">      </span><span class="mi">2</span><span class="w"></span>
-<span class="mi">5</span><span class="w">      </span><span class="mf">2.32193</span><span class="w"></span>
-<span class="mi">6</span><span class="w">      </span><span class="mf">2.58496</span><span class="w"></span>
-<span class="mi">7</span><span class="w">      </span><span class="mf">2.80735</span><span class="w"></span>
-<span class="mi">8</span><span class="w">      </span><span class="mi">3</span><span class="w"></span>
-<span class="mi">9</span><span class="w">      </span><span class="mf">3.16993</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="w">      </span><span class="mi">0</span>
+<span class="mi">2</span><span class="w">      </span><span class="mi">1</span>
+<span class="mi">3</span><span class="w">      </span><span class="mf">1.58496</span>
+<span class="mi">4</span><span class="w">      </span><span class="mi">2</span>
+<span class="mi">5</span><span class="w">      </span><span class="mf">2.32193</span>
+<span class="mi">6</span><span class="w">      </span><span class="mf">2.58496</span>
+<span class="mi">7</span><span class="w">      </span><span class="mf">2.80735</span>
+<span class="mi">8</span><span class="w">      </span><span class="mi">3</span>
+<span class="mi">9</span><span class="w">      </span><span class="mf">3.16993</span>
 </pre></div>
 </div>
 <p>We can see that 1, 2, 4 and 8 are powers of two, because their
@@ -319,7 +319,7 @@ logarithms base 2 are round numbers.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=tables_AC_2 data-question_label="5.4.2">
-<div id=tables_AC_2_question class="ac_question col-md-12">
+<div id=tables_AC_2_question class="ac_question">
 <p>If we wanted to find the logarithms of other powers of two,
 we could modify the program like this. Run the active code below.</p>
 
@@ -346,13 +346,13 @@ int main() {
 <p id="index-2">Now instead of adding something to <code class="docutils literal notranslate"><span class="pre">x</span></code> each time through the loop,
 which yields an arithmetic sequence, we multiply <code class="docutils literal notranslate"><span class="pre">x</span></code> by something,
 yielding a <strong>geometric</strong> sequence. The result is:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="w">      </span><span class="mi">0</span><span class="w"></span>
-<span class="mi">2</span><span class="w">      </span><span class="mi">1</span><span class="w"></span>
-<span class="mi">4</span><span class="w">      </span><span class="mi">2</span><span class="w"></span>
-<span class="mi">8</span><span class="w">      </span><span class="mi">3</span><span class="w"></span>
-<span class="mi">16</span><span class="w">     </span><span class="mi">4</span><span class="w"></span>
-<span class="mi">32</span><span class="w">     </span><span class="mi">5</span><span class="w"></span>
-<span class="mi">64</span><span class="w">     </span><span class="mi">6</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="w">      </span><span class="mi">0</span>
+<span class="mi">2</span><span class="w">      </span><span class="mi">1</span>
+<span class="mi">4</span><span class="w">      </span><span class="mi">2</span>
+<span class="mi">8</span><span class="w">      </span><span class="mi">3</span>
+<span class="mi">16</span><span class="w">     </span><span class="mi">4</span>
+<span class="mi">32</span><span class="w">     </span><span class="mi">5</span>
+<span class="mi">64</span><span class="w">     </span><span class="mi">6</span>
 </pre></div>
 </div>
 <p>Because we are using tab characters between the columns, the position of
@@ -366,7 +366,7 @@ Print it out and memorize it.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=tables_AC_3 data-question_label="5.4.3">
-<div id=tables_AC_3_question class="ac_question col-md-12">
+<div id=tables_AC_3_question class="ac_question">
 <p>Modify the active code below so that it outputs the power of two
 up to 65536, which is <span class="math notranslate nohighlight">\(2^{16}\)</span>. If you get stuck, you can
 reveal the extra problem at the end for help.</p>
@@ -451,13 +451,13 @@ int main() {
     <div class="runestone ">
     <ul data-component="multiplechoice" data-question_label="5.4.7" data-multipleanswers="false"  id="tables_4"  style="visibility: hidden;">
     <p>Q-7: How can we modify the code below to print out a table of the first five odd numbers and their perfect cubes?</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">11</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\t</span><span class="s">&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">11</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\t</span><span class="s">&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 
@@ -477,6 +477,8 @@ int main() {
 
 </section>
 
+
+  
 
   <div id="scprogresscontainer">
     You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
@@ -512,8 +514,8 @@ window.addEventListener('load', (event) => {
       
     </p>
     <p>
-        &copy; Copyright 2020-2022 Dave Parillo, Barbara Ericson, and Allen B. Downey..
-      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.2.1.
+        &copy; Copyright 2020-2024 Dave Parillo, Barbara Ericson, and Allen B. Downey..
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.6.2.
     </p>
   </div>
 </footer>

@@ -3,39 +3,37 @@
      **************************************** -->
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>9.14. Coding Practice &#8212; CISC 192 Course Reader Overview</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
-    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
-    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
-    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.0fa6cababf056764.css?v=F9484CEF" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.3eb60bc006ae9a54.css?v=3A5A250C" />
 
 
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/animationbase.js?v=A043C3A7"></script>
-    <script src="../_static/html4css1.css?v=4533ACD3"></script>
-    <script src="../_static/webglinteractive.js?v=2B768384"></script>
-    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script src="../_static/runtime.b0f8547c48f16a9f.bundle.js?v=2731F567"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/runtime.66b619f51b746382.bundle.js?v=C3F69EE5"></script>
     <script src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script src="../_static/runestone.0e9550fe42760516.bundle.js?v=71AD37BA"></script>
+    <script src="../_static/runestone.ecc6dff5cad8b815.bundle.js?v=AE959292"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="10. Vectors" href="../chapter10/index.html" />
@@ -43,6 +41,10 @@
 
 
 <link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
 
 
 <script>
@@ -63,8 +65,8 @@
   eBookConfig.build_info = "unknown";
   eBookConfig.python3 = true;
   eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
-  eBookConfig.runestone_version = '6.2.1';
-  eBookConfig.jobehost = 'https://red-voice-1370.fly.dev/http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.runestone_version = '6.6.2';
+  eBookConfig.jobehost = 'https://delicate-frost-8843.fly.dev';
   eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
   eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
   eBookConfig.enable_chatcodes = false ? false : false;
@@ -110,7 +112,6 @@
       <ul class="nav navbar-nav navbar-right" >
 
         <li class="divider-vertical"></li>
-        <li><span id="browsing_warning"></span></li>
 
         <!-- social media dropdown -->
         <!-- end social media dropdown -->
@@ -212,14 +213,14 @@
 
   
   <section id="coding-practice">
-<h1><span class="section-number">9.14. </span>Coding Practice<a class="headerlink" href="#coding-practice" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">9.14. </span>Coding Practice<a class="headerlink" href="#coding-practice" title="Permalink to this heading">¶</a></h1>
 <div id='self_check' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Q1" >
 <div id='cp_9_1' data-component="tabbedStuff"  class='alert alert-warning '><div data-component="tab" data-tabname="Question" >
 <p>Write the <code class="docutils literal notranslate"><span class="pre">Cake</span></code> structure, which has instance variables name, color, diameter, and has_icing.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cp_9_AC_1q data-question_label="9.14.1">
-<div id=cp_9_AC_1q_question class="ac_question col-md-12">
+<div id=cp_9_AC_1q_question class="ac_question">
 
 </div>
 <textarea data-lang="cpp" id="cp_9_AC_1q_editor" 
@@ -244,7 +245,7 @@ variables in order.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cp_9_AC_1a data-question_label="9.14.2">
-<div id=cp_9_AC_1a_question class="ac_question col-md-12">
+<div id=cp_9_AC_1a_question class="ac_question">
 
 </div>
 <textarea data-lang="cpp" id="cp_9_AC_1a_editor" 
@@ -275,7 +276,7 @@ int main() {
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cp_9_AC_2q data-question_label="9.14.3">
-<div id=cp_9_AC_2q_question class="ac_question col-md-12">
+<div id=cp_9_AC_2q_question class="ac_question">
 <p>Write the function <code class="docutils literal notranslate"><span class="pre">printCakeInfo</span></code>, which prints the cake’s information in the format
 “This is a <code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">diameter</span></code> inch diameter cake with/without icing.” If <code class="docutils literal notranslate"><span class="pre">name</span></code> does not
 have the value “n/a”, <code class="docutils literal notranslate"><span class="pre">printCakeInfo</span></code> prints out “Happy birthdday <code class="docutils literal notranslate"><span class="pre">name</span></code>! Your cake is <code class="docutils literal notranslate"><span class="pre">color</span></code>,
@@ -316,7 +317,7 @@ returns the cake.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cp_9_AC_3q data-question_label="9.14.4">
-<div id=cp_9_AC_3q_question class="ac_question col-md-12">
+<div id=cp_9_AC_3q_question class="ac_question">
 
 </div>
 <textarea data-lang="cpp" id="cp_9_AC_3q_editor" 
@@ -369,7 +370,7 @@ void printCakeInfo (Cake c) {
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cp_9_AC_3a data-question_label="9.14.5">
-<div id=cp_9_AC_3a_question class="ac_question col-md-12">
+<div id=cp_9_AC_3a_question class="ac_question">
 
 </div>
 <textarea data-lang="cpp" id="cp_9_AC_3a_editor" 
@@ -447,7 +448,7 @@ void printCakeInfo (Cake c) {
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cp_9_AC_4q data-question_label="9.14.6">
-<div id=cp_9_AC_4q_question class="ac_question col-md-12">
+<div id=cp_9_AC_4q_question class="ac_question">
 <p>Write the function <code class="docutils literal notranslate"><span class="pre">changeCakeDiameter</span></code>, which takes a <code class="docutils literal notranslate"><span class="pre">Cake</span></code> and a <code class="docutils literal notranslate"><span class="pre">double</span></code> as a parameter.
 <code class="docutils literal notranslate"><span class="pre">changeCakeDiameter</span></code> then multiplies the original diameter by the double and modifies the cake
 to have this new diameter.</p>
@@ -534,7 +535,7 @@ in your implementation to avoid duplicate code!</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cp_9_AC_5q data-question_label="9.14.7">
-<div id=cp_9_AC_5q_question class="ac_question col-md-12">
+<div id=cp_9_AC_5q_question class="ac_question">
 
 </div>
 <textarea data-lang="cpp" id="cp_9_AC_5q_editor" 
@@ -615,7 +616,7 @@ equal to the new one.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cp_9_AC_5a data-question_label="9.14.8">
-<div id=cp_9_AC_5a_question class="ac_question col-md-12">
+<div id=cp_9_AC_5a_question class="ac_question">
 
 </div>
 <textarea data-lang="cpp" id="cp_9_AC_5a_editor" 
@@ -700,7 +701,7 @@ int main() {
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cp_9_AC_6q data-question_label="9.14.9">
-<div id=cp_9_AC_6q_question class="ac_question col-md-12">
+<div id=cp_9_AC_6q_question class="ac_question">
 <p>Write the struct <code class="docutils literal notranslate"><span class="pre">Shirt</span></code>, which has the instance variables color and size.</p>
 
 </div>
@@ -726,7 +727,7 @@ int main () {
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cp_9_AC_7q data-question_label="9.14.10">
-<div id=cp_9_AC_7q_question class="ac_question col-md-12">
+<div id=cp_9_AC_7q_question class="ac_question">
 
 </div>
 <textarea data-lang="cpp" id="cp_9_AC_7q_editor" 
@@ -751,7 +752,7 @@ variables in order.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cp_9_AC_7a data-question_label="9.14.11">
-<div id=cp_9_AC_7a_question class="ac_question col-md-12">
+<div id=cp_9_AC_7a_question class="ac_question">
 
 </div>
 <textarea data-lang="cpp" id="cp_9_AC_7a_editor" 
@@ -780,7 +781,7 @@ int main() {
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cp_9_AC_8q data-question_label="9.14.12">
-<div id=cp_9_AC_8q_question class="ac_question col-md-12">
+<div id=cp_9_AC_8q_question class="ac_question">
 <p>Write the struct <code class="docutils literal notranslate"><span class="pre">Outfit</span></code>, which is a nested structure that has a <code class="docutils literal notranslate"><span class="pre">Shirt</span></code>, <code class="docutils literal notranslate"><span class="pre">Pants</span></code>, and has_hat.</p>
 
 </div>
@@ -809,7 +810,7 @@ The output below should be “Shirt: blue and L; Pants: S and denim; has hat”.
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cp_9_AC_9q data-question_label="9.14.13">
-<div id=cp_9_AC_9q_question class="ac_question col-md-12">
+<div id=cp_9_AC_9q_question class="ac_question">
 
 </div>
 <textarea data-lang="cpp" id="cp_9_AC_9q_editor" 
@@ -852,7 +853,7 @@ int main() {
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cp_9_AC_9a data-question_label="9.14.14">
-<div id=cp_9_AC_9a_question class="ac_question col-md-12">
+<div id=cp_9_AC_9a_question class="ac_question">
 
 </div>
 <textarea data-lang="cpp" id="cp_9_AC_9a_editor" 
@@ -906,7 +907,7 @@ int main() {
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=cp_9_AC_10q data-question_label="9.14.15">
-<div id=cp_9_AC_10q_question class="ac_question col-md-12">
+<div id=cp_9_AC_10q_question class="ac_question">
 <p>Write the <code class="docutils literal notranslate"><span class="pre">changeShirts</span></code> and <code class="docutils literal notranslate"><span class="pre">changePants</span></code> functions,
 which both take an <code class="docutils literal notranslate"><span class="pre">Outfit</span></code> as a parameter.
 <code class="docutils literal notranslate"><span class="pre">changeShirts</span></code> also takes a <code class="docutils literal notranslate"><span class="pre">Shirt</span></code> as a parameter and
@@ -965,6 +966,8 @@ int main() {
 </section>
 
 
+  
+
   <div id="scprogresscontainer">
     You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
   </div>
@@ -999,8 +1002,8 @@ window.addEventListener('load', (event) => {
       
     </p>
     <p>
-        &copy; Copyright 2020-2022 Dave Parillo, Barbara Ericson, and Allen B. Downey..
-      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.2.1.
+        &copy; Copyright 2020-2024 Dave Parillo, Barbara Ericson, and Allen B. Downey..
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.6.2.
     </p>
   </div>
 </footer>

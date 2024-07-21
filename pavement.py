@@ -15,7 +15,7 @@ master_url = 'https://daveparillo.github.io/cisc192-reader/'
 master_app = 'cisc192-reader'
 serving_dir = "./docs"
 dest = "../../static"
-dynamic_pages = False
+#dynamic_pages = False
 
 options(
     sphinx = Bunch(docroot=".",),
@@ -41,7 +41,7 @@ options(
                        'dburl': '',
                        'default_ac_lang': 'cpp',
                        'basecourse': 'cisc192-reader',
-                       'jobe_server': 'https://red-voice-1370.fly.dev/http://jobe2.cosc.canterbury.ac.nz',
+                       'jobe_server': 'https://delicate-frost-8843.fly.dev',
                        'proxy_uri_runs': '/jobe/index.php/restapi/runs/',
                        'proxy_uri_files': '/jobe/index.php/restapi/files/'
                        }

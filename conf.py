@@ -28,11 +28,47 @@ import pkg_resources
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
+my_extensions = ['runestone.common',
+                'runestone.accessibility',
+                'runestone.activecode',
+                'runestone.animation',
+                'runestone.assignment',
+                'runestone.blockly',
+                'runestone.cellbotics',
+                'runestone.chapterdb',
+                'runestone.clickableArea',
+                'runestone.codelens',
+                'runestone.datafile',
+                'runestone.dragndrop',
+                'runestone.fitb',
+                'runestone.groupsub',
+                'runestone.hparsons',
+                'runestone.matrixeq',
+                'runestone.mchoice',
+                'runestone.meta',
+                'runestone.parsons',
+                'runestone.pretext',
+                'runestone.question',
+                'runestone.quizly',
+                'runestone.reveal',
+                'runestone.selectquestion',
+                'runestone.server',
+                'runestone.shortanswer',
+                'runestone.showeval',
+                'runestone.spreadsheet',
+                'runestone.tabbedStuff',
+                'runestone.timed',
+                'runestone.utility',
+                'runestone.video',
+                'runestone.wavedrom']
+
+
 extensions = ['sphinx.ext.mathjax', 
               'sphinx.ext.graphviz', 
               'sphinx.ext.extlinks', 
+              'sphinxcontrib.mermaid', 
               'matplotlib.sphinxext.plot_directive',
-              'cppreference'] + runestone_extensions()
+              'cppreference'] + my_extensions
 
 # math_number_all = True
 # mathjax_options = {
@@ -41,34 +77,41 @@ plot_include_source = False
 plot_html_show_source_link = False
 plot_html_show_formats = False
 
+# mermaid properties
+mermaid_version = "10.9.1"
+mermaid_init_js = "mermaid.initialize({startOnLoad:true});"
+
 
 # graphviz_dot='/usr/bin/dot'
 # extlinks dict
 #            role       url                                              prefix
 extlinks = {
-        'c': ('https://en.cppreference.com/w/c/%s', ''),
-        'cpp': ('https://en.cppreference.com/w/cpp/%s', ''),
-        'cmath': ('https://en.cppreference.com/w/cpp/numeric/math/%s', ''),
-        'core': ('https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines%s', ''),
-        'cstdio': ('https://en.cppreference.com/w/cpp/io/c/%s', ''),
-        'algorithm': ('https://en.cppreference.com/w/cpp/algorithm/%s', ''),
-        'container': ('https://en.cppreference.com/w/cpp/container/%s', ''),
-        'error': ('https://en.cppreference.com/w/cpp/error/%s', ''),
-        'functional': ('https://en.cppreference.com/w/cpp/utility/functional/%s', ''),
-        'header': ('https://en.cppreference.com/w/cpp/header/%s', ''),
-        'io': ('https://en.cppreference.com/w/cpp/io/%s', ''),
-        'iterator': ('https://en.cppreference.com/w/cpp/iterator/%s', ''),
-        'keyword': ('https://en.cppreference.com/w/cpp/keyword/%s', ''),
-        'lang': ('https://en.cppreference.com/w/cpp/language/%s', ''),
-        'memory': ('https://en.cppreference.com/w/cpp/memory/%s', ''),
-        'numeric': ('https://en.cppreference.com/w/cpp/numeric/%s', ''),
-        'string': ('https://en.cppreference.com/w/cpp/string/basic_string/%s', ''),
-        'utility': ('https://en.cppreference.com/w/cpp/utility/%s', ''),
-        'vector': ('https://en.cppreference.com/w/cpp/container/vector/%s', ''),
-        'types': ('https://en.cppreference.com/w/cpp/types/%s', ''),
-        'wiki': ('https://en.wikipedia.org/wiki/%s', ''),
-        'issue': ('https://github.com/sphinx-doc/sphinx/issues/%s', 'issue ')
+        'c': ('https://en.cppreference.com/w/c/%s', '%s'),
+        'cpp': ('https://en.cppreference.com/w/cpp/%s', '%s'),
+        'cmath': ('https://en.cppreference.com/w/cpp/numeric/math/%s', '%s'),
+        'core': ('https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines%s', '%s'),
+        'cstdio': ('https://en.cppreference.com/w/cpp/io/c/%s', '%s'),
+        'algorithm': ('https://en.cppreference.com/w/cpp/algorithm/%s', '%s'),
+        'chrono': ('https://en.cppreference.com/w/cpp/chrono/%s', '%s'),
+        'container': ('https://en.cppreference.com/w/cpp/container/%s', '%s'),
+        'error': ('https://en.cppreference.com/w/cpp/error/%s', '%s'),
+        'functional': ('https://en.cppreference.com/w/cpp/utility/functional/%s', '%s'),
+        'header': ('https://en.cppreference.com/w/cpp/header/%s', '%s'),
+        'io': ('https://en.cppreference.com/w/cpp/io/%s', '%s'),
+        'iterator': ('https://en.cppreference.com/w/cpp/iterator/%s', '%s'),
+        'keyword': ('https://en.cppreference.com/w/cpp/keyword/%s', '%s'),
+        'lang': ('https://en.cppreference.com/w/cpp/language/%s', '%s'),
+        'memory': ('https://en.cppreference.com/w/cpp/memory/%s', '%s'),
+        'req': ('https://en.cppreference.com/w/cpp/named_req/%s', '%s'),
+        'numeric': ('https://en.cppreference.com/w/cpp/numeric/%s', '%s'),
+        'string': ('https://en.cppreference.com/w/cpp/string/basic_string/%s', '%s'),
+        'utility': ('https://en.cppreference.com/w/cpp/utility/%s', '%s'),
+        'vector': ('https://en.cppreference.com/w/cpp/container/vector/%s', '%s'),
+        'types': ('https://en.cppreference.com/w/cpp/types/%s', '%s'),
+        'wiki': ('https://en.wikipedia.org/wiki/%s', '%s'),
+        'issue': ('https://github.com/sphinx-doc/sphinx/issues/%s', 'issue %s')
         }
+
 # normal use cas iss :issue:`123`
 # prefix override as :issue:`this issue <123>`
 
@@ -84,7 +127,6 @@ source_suffix = '.rst'
 # A string of reStructuredText that will be included at the beginning of every
 # source file that is read.
 rst_prolog = (
-# For fill-in-the-blank questions, provide a convenient means to indicate a blank.
 """
 .. |blank| replace:: :blank:`x`
 """
@@ -100,15 +142,15 @@ highlight_language = 'cpp'
 master_doc = 'index'
 
 # General information about the project.
-project = 'CISC 192 Course Reader'
-copyright = '2020-2022 Dave Parillo, Barbara Ericson, and Allen B. Downey.'
+project = 'CISC 192 Textbook'
+copyright = '2020-2024 Dave Parillo, Barbara Ericson, and Allen B. Downey.'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
 # built documents.
 #
 # The short X.Y version.
-version = '0.0.1'
+version = '0.1.2'
 # The full version, including alpha/beta/rc tags.
 release = '0.0'
 

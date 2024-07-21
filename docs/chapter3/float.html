@@ -3,39 +3,37 @@
      **************************************** -->
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>3.1. Floating-point &#8212; CISC 192 Course Reader Overview</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
-    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
-    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
-    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.0fa6cababf056764.css?v=F9484CEF" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.3eb60bc006ae9a54.css?v=3A5A250C" />
 
 
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/animationbase.js?v=A043C3A7"></script>
-    <script src="../_static/html4css1.css?v=4533ACD3"></script>
-    <script src="../_static/webglinteractive.js?v=2B768384"></script>
-    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script src="../_static/runtime.b0f8547c48f16a9f.bundle.js?v=2731F567"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/runtime.66b619f51b746382.bundle.js?v=C3F69EE5"></script>
     <script src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script src="../_static/runestone.0e9550fe42760516.bundle.js?v=71AD37BA"></script>
+    <script src="../_static/runestone.ecc6dff5cad8b815.bundle.js?v=AE959292"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="3.2. Converting from double to int" href="convert.html" />
@@ -43,6 +41,10 @@
 
 
 <link rel="shortcut icon" href="/cisc192-reader/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
 
 
 <script>
@@ -63,8 +65,8 @@
   eBookConfig.build_info = "unknown";
   eBookConfig.python3 = true;
   eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
-  eBookConfig.runestone_version = '6.2.1';
-  eBookConfig.jobehost = 'https://red-voice-1370.fly.dev/http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.runestone_version = '6.6.2';
+  eBookConfig.jobehost = 'https://delicate-frost-8843.fly.dev';
   eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
   eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
   eBookConfig.enable_chatcodes = false ? false : false;
@@ -110,7 +112,6 @@
       <ul class="nav navbar-nav navbar-right" >
 
         <li class="divider-vertical"></li>
-        <li><span id="browsing_warning"></span></li>
 
         <!-- social media dropdown -->
         <!-- end social media dropdown -->
@@ -212,7 +213,7 @@
 
   
   <section id="floating-point">
-<span id="index-0"></span><h1><span class="section-number">3.1. </span>Floating-point<a class="headerlink" href="#floating-point" title="Permalink to this headline">¶</a></h1>
+<span id="index-0"></span><h1><span class="section-number">3.1. </span>Floating-point<a class="headerlink" href="#floating-point" title="Permalink to this heading">¶</a></h1>
 <p>In the last chapter we had some problems dealing with numbers that were
 not integers. We worked around the problem by measuring percentages
 instead of fractions, but a more general solution is to use
@@ -223,15 +224,15 @@ The <code class="docutils literal notranslate"><span class="pre">double</span></
 such as <code class="docutils literal notranslate"><span class="pre">3.14</span></code>.</p>
 <p>You can create floating-point variables and assign values to them using
 the same syntax we used for the other types. For example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">pi</span><span class="p">;</span><span class="w"></span>
-<span class="n">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">pi</span><span class="p">;</span>
+<span class="n">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>It is also legal to declare a variable and assign a value to it at the
 same time:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="n">string</span><span class="w"> </span><span class="n">empty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="k">constexpr</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="n">string</span><span class="w"> </span><span class="n">empty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="k">constexpr</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159</span><span class="p">;</span>
 </pre></div>
 </div>
 <p id="index-1">In fact, this syntax is quite common. A combined declaration and
@@ -252,20 +253,20 @@ floating-point value 1.0, even though they seem to be the same number.
 They belong to different types, and strictly speaking, you are not
 allowed to make assignments between types. For example, the following is
 illegal</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.1</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.1</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>because the variable on the left is an <code class="docutils literal notranslate"><span class="pre">int</span></code> and the value on the right is
 a <code class="docutils literal notranslate"><span class="pre">double</span></code>. But it is easy to forget this rule, especially because there
 are places where C++ automatically converts from one type to another.
 For example,</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>should technically not be legal, but C++ allows it by converting the <code class="docutils literal notranslate"><span class="pre">int</span></code>
 to a <code class="docutils literal notranslate"><span class="pre">double</span></code> automatically. This leniency is convenient, but it can cause
 problems; for example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>You might expect the variable y to be given the value 0.333333, which is
@@ -281,7 +282,7 @@ hard to catch, since your program will compile without problems.</p>
 </div>
 <p>One way to solve this problem (once you figure out what it is) is to
 make the right-hand side a floating-point expression:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">3.0</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">3.0</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>This sets y to 0.333333, as expected.</p>
@@ -311,10 +312,10 @@ assignment statement, which are combined.</p>
 evenly so that you and each of your 4 friends receive an equal amount.
 One of your friends is on a diet and, and wants to know the serving size
 of her slice.  You write the following code in C++ to answer her question.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">servings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span><span class="w"></span>
-<span class="kt">int</span><span class="w"> </span><span class="n">people</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">servings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">people</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
 
-<span class="kt">double</span><span class="w"> </span><span class="n">servingSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">servings</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">people</span><span class="p">;</span><span class="w"></span>
+<span class="kt">double</span><span class="w"> </span><span class="n">servingSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">servings</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">people</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Based on the value of <code class="docutils literal notranslate"><span class="pre">servingSize</span></code>, you tell your friend that each
@@ -335,10 +336,10 @@ the actual serving size of her slice.</p>
 an extremely precise measuring device.  Now we are writing a program
 to perform some calculations with our data.  Consider the following C++
 code.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.71828</span><span class="p">;</span><span class="w"></span>
-<span class="kt">int</span><span class="w"> </span><span class="n">e_int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">e</span><span class="p">;</span><span class="w"></span>
-<span class="kt">double</span><span class="w"> </span><span class="n">e_double</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">e_int</span><span class="p">;</span><span class="w"></span>
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">e_double</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.71828</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">e_int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">e</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">e_double</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">e_int</span><span class="p">;</span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">e_double</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>What is the value of <code class="docutils literal notranslate"><span class="pre">e_double</span></code> that is printed to the terminal?</p>
@@ -364,7 +365,7 @@ then the program will carry out floating point division.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=floating_point_a1 data-question_label="3.1.4">
-<div id=floating_point_a1_question class="ac_question col-md-12">
+<div id=floating_point_a1_question class="ac_question">
 <p>Run the code below to see what type of division occurs each time.</p>
 
 </div>
@@ -410,6 +411,8 @@ int main () {
 </section>
 
 
+  
+
   <div id="scprogresscontainer">
     You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
   </div>
@@ -444,8 +447,8 @@ window.addEventListener('load', (event) => {
       
     </p>
     <p>
-        &copy; Copyright 2020-2022 Dave Parillo, Barbara Ericson, and Allen B. Downey..
-      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.2.1.
+        &copy; Copyright 2020-2024 Dave Parillo, Barbara Ericson, and Allen B. Downey..
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.6.2.
     </p>
   </div>
 </footer>
