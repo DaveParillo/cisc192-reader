@@ -129,7 +129,7 @@ rules of a language.
          {{blank}}
 
          .. tb-answer::
-            :match: [//][//]
+            :match: //
             :feedback: Correct!
             :incorrect: Try again!
 
@@ -166,12 +166,12 @@ rules of a language.
          It requires you to use the {{blank:blank2}} operator.
 
          .. tb-answer:: blank1
-            :match: (cout)
+            :match: cout
             :feedback: Correct!
             :incorrect: Try again!
 
          .. tb-answer:: blank2
-            :match: (\<\<)
+            :match: <<
             :incorrect: Try again!
 
 -----

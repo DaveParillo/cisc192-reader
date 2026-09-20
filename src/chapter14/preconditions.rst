@@ -92,7 +92,7 @@ part of it); the second ``assert`` statement checks the postcondition.
 In my development environment, I get the following message when I
 violate an assertion:
 
-::
+.. code-block:: text
 
    complex_number.cpp:63: void complex_number::calculate_polar(): Assertion `cartesian' failed.
    Abort
@@ -264,7 +264,7 @@ fails and thus we get an error.
    {{blank}}
 
    .. tb-answer::
-      :match: Exit|exit
+      :regex:
+      :match: exit
       :feedback: Correct!
       :incorrect: Incorrect! Try again.
-

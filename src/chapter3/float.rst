@@ -113,11 +113,11 @@ performing floating-point operations.
       .. tb-blank::
          :name: floating_point_1
 
-         A(n) {{{{blank}}}} statment consists of a declaration statement and an 
+         A(n) {{blank}} statment consists of a declaration statement and an 
          assignment statement, which are combined.
 
          .. tb-answer::
-            :match: [Ii][Nn][Ii][Tt][Ii][Aa][Ll][Ii][Zz][Aa][Tt][Ii][Oo][Nn]
+            :match: initialization
             :feedback: Correct!
             :incorrect: Try again!
 
@@ -148,7 +148,7 @@ performing floating-point operations.
             :incorrect: servingSize and people are integer variables!
 
          .. tb-answer:: blank2
-            :match: [Ll][Ee][Ss][Ss]
+            :match: less
 
    .. tb-tab:: Q3
 

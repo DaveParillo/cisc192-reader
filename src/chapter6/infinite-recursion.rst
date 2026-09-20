@@ -61,17 +61,17 @@ line is being created infinitely.
          will continue executing indefinitely.  This is called {{blank:blank3}} {{blank:blank4}}.
 
          .. tb-answer:: blank1
-            :match: [Bb][Aa][Ss][Ee]
+            :match: base
             :feedback: Correct!
 
          .. tb-answer:: blank2
-            :match: [Cc][Aa][Ss][Ee]
+            :match: case
 
          .. tb-answer:: blank3
-            :match: [Ii][Nn][Ff][Ii][Nn][Ii][Tt][Ee]
+            :match: infinite
 
          .. tb-answer:: blank4
-            :match: [Rr][Ee][Cc][Uu][Rr][Ss][Ii][Oo][Nn]
+            :match: recursion
             :incorrect: Try again!
 
    .. tb-tab:: Q2

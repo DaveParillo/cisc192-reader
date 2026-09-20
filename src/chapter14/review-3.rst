@@ -65,9 +65,9 @@ Coding Practice
 
    The legacy Runestone question pool ``c192_cp_14_ac_2_sq`` is represented by these exercises:
 
-   * :ref:`c192_cp_14_ac_2q`
+   * :doc:`c192_cp_14_ac_2q <coding_practice_sq>`
 
-   * :ref:`c192_cp_14_ac_2q_pp`
+   * :doc:`c192_cp_14_ac_2q_pp <coding_practice_sq>`
 
 .. tb-group::
    :name: c192_cp_14_3
@@ -169,9 +169,9 @@ Coding Practice
 
    The legacy Runestone question pool ``c192_cp_14_ac_4_sq`` is represented by these exercises:
 
-   * :ref:`c192_cp_14_ac_4q`
+   * :doc:`c192_cp_14_ac_4q <coding_practice_sq>`
 
-   * :ref:`c192_cp_14_ac_4q_pp`
+   * :doc:`c192_cp_14_ac_4q_pp <coding_practice_sq>`
 
 .. tb-group::
    :name: c192_cp_14_5
@@ -223,9 +223,9 @@ Coding Practice
 
    The legacy Runestone question pool ``c192_cp_14_ac_6_sq`` is represented by these exercises:
 
-   * :ref:`c192_cp_14_ac_6q`
+   * :doc:`c192_cp_14_ac_6q <coding_practice_sq>`
 
-   * :ref:`c192_cp_14_ac_6q_pp`
+   * :doc:`c192_cp_14_ac_6q_pp <coding_practice_sq>`
 
 .. tb-group::
    :name: c192_cp_14_7
@@ -351,9 +351,9 @@ Coding Practice
 
    The legacy Runestone question pool ``c192_cp_14_ac_8_sq`` is represented by these exercises:
 
-   * :ref:`c192_cp_14_ac_8q`
+   * :doc:`c192_cp_14_ac_8q <coding_practice_sq>`
 
-   * :ref:`c192_cp_14_ac_8q_pp`
+   * :doc:`c192_cp_14_ac_8q_pp <coding_practice_sq>`
 
 .. tb-group::
    :name: c192_cp_14_9
@@ -531,7 +531,7 @@ Coding Practice
 
    The legacy Runestone question pool ``c192_cp_14_ac_10_sq`` is represented by these exercises:
 
-   * :ref:`c192_cp_14_ac_10q`
+   * :doc:`c192_cp_14_ac_10q <coding_practice_sq>`
 
-   * :ref:`c192_cp_14_ac_10q_pp`
+   * :doc:`c192_cp_14_ac_10q_pp <coding_practice_sq>`
 

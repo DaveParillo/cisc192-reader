@@ -38,7 +38,8 @@ random library is one of many excellent reasons to use them instead of the
          {{blank}}
 
          .. tb-answer::
-            :match: ([Uu]niformly|UNIFORMLY)
+            :regex:
+            :match: uniformly
             :feedback: Correct!
             :incorrect: Incorrect!
 

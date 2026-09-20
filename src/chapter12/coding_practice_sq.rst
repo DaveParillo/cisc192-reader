@@ -82,7 +82,6 @@ Coding Practice
              std::cout << "("<< r << ", " << g << ", " << b << ")";
          }
 
-
       .. tb-code:: cpp
          :name: c192_cp_12_ac_4q
          :caption: Example c192_cp_12_ac_4q
@@ -203,7 +202,6 @@ Coding Practice
              width = stop_col - start_col + 1;
              matrix = new_matrix;
          }
-
 
       .. tb-code:: cpp
          :name: c192_cp_12_ac_6q
@@ -336,7 +334,6 @@ Coding Practice
                  }
              }
          }
-
 
       .. tb-code:: cpp
          :name: c192_cp_12_ac_8q
@@ -512,7 +509,6 @@ Coding Practice
                  matrix[height - 1][c] = p;
              }
          }
-
 
       .. tb-code:: cpp
          :name: c192_cp_12_ac_10q

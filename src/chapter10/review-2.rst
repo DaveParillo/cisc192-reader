@@ -399,7 +399,7 @@ Answer the following **Mixed-Up Code** questions to assess what you have learned
          Construct a block of code that counts how many times ".", "!", and "?" occur in <code>exclamations</code>.
          Save the counts to a vector with "." count as the first element, "!" count as the second, and "?" count as the third.
 
-         .. code-block:: cpp
+         .. code-block:: text
 
             {{group}}
             vector<char> punc = {'.', '!', '?'};

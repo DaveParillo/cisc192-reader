@@ -80,11 +80,12 @@ These are called **forward declarations**.
       .. tb-blank::
          :name: defns_uses_1
 
-         The function declaration or  definition must be written {{{{blank}}}}
+         The function declaration or  definition must be written {{blank}}
          the first use of the function.
 
          .. tb-answer::
-            :match: ([Bb][Ee][Ff][Oo][Rr][Ee])|([Aa][Bb][Oo][Vv][Ee])
+            :regex:
+            :match: before|above
             :feedback: Correct!
             :incorrect: Try again!
 

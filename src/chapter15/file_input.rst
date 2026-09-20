@@ -93,10 +93,10 @@ of resource ownership: the object's lifetime controls the resource's lifetime.
 .. tb-blank::
    :name: c192_question15_3_2
 
-   The standard-library type used to read from a file is {{{{blank}}}}.
+   The standard-library type used to read from a file is {{blank}}.
 
    .. tb-answer::
-      :match: (std
-      :feedback: :)?ifstream: Correct!
+      :match: std::ifstream
+      :feedback: Correct!
       :incorrect: Look for the input file stream type.
 

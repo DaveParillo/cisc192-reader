@@ -102,7 +102,7 @@ Take a look at the active code below, which uses the copy constructor.
          {{blank}}
 
          .. tb-answer::
-            :match: [Cc][Oo][Pp][Yy] [Cc][Oo][Nn][Ss][Tt][Rr][Uu][Cc][Tt][Oo][Rr]
+            :match: copy constructor
             :feedback: Correct!
             :incorrect: incorrect! You can find the answer by re-reading the text above.
 

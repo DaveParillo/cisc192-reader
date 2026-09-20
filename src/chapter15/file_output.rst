@@ -103,10 +103,10 @@ matter, that is a different requirement.
 .. tb-blank::
    :name: c192_question15_4_3
 
-   Complete the type: {{{{blank}}}} ``output("results.txt");``.
+   Complete the type: {{blank}} ``output("results.txt");``.
 
    .. tb-answer::
-      :match: (std
-      :feedback: :)?ofstream: Correct!
+      :match: std::ofstream
+      :feedback: Correct!
       :incorrect: Use an output file stream.
 

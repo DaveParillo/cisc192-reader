@@ -192,7 +192,7 @@ the ``build_deck`` function.
    {{blank}}
 
    .. tb-answer::
-      :match: (7 of Diamonds)
+      :match: 7 of diamonds
       :feedback: Correct!
       :incorrect: Incorrect, try modifying the activecode and writing a print statement!
 

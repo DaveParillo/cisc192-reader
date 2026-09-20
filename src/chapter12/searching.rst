@@ -187,7 +187,7 @@ It returns the index that the card was located at.
         find(card, EuchreDeck);
       }
 
-   {{{{blank}}}}.
+   {{blank}}.
 
    .. tb-answer::
       :match: -1

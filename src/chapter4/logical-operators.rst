@@ -80,10 +80,10 @@ statements.
          :name: logical_op_3
 
          Add a single logical operator to make the expression check if x is greater than or equal to 50
-          {{{{blank}}}} ( x < 50 )
+          {{blank}} ( x < 50 )
 
          .. tb-answer::
-            :match: [!]
+            :match: !
             :feedback: If the expression checks for the opposite of what you want then just ``!`` the result
             :incorrect: Try again!
 

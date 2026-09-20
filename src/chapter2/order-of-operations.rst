@@ -69,10 +69,10 @@ Observe the output of the code below to see how the placement of parentheses can
       .. tb-blank::
          :name: order_of_operations_2
 
-         Any time you want to override the rules of precedence, you can use {{{{blank}}}}.
+         Any time you want to override the rules of precedence, you can use {{blank}}.
 
          .. tb-answer::
-            :match: [Pp][Aa][Rr][Ee][Nn][Tt][Hh][Ee][Ss][Ee][Ss]
+            :match: parentheses
             :feedback: Correct!
             :incorrect: Try again!
 

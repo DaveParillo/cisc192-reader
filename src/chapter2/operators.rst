@@ -122,10 +122,10 @@ capable of storing fractional values.
       .. tb-blank::
          :name: operators_3
 
-         Integer division always {{{{blank}}}}.
+         Integer division always {{blank}}.
 
          .. tb-answer::
-            :match: [Tt][Rr][Uu][Nn][Cc][Aa][Tt][Ee][Ss]
+            :match: truncates
             :feedback: Correct!
             :hint: x; Try again!
 

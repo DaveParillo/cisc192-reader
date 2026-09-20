@@ -308,7 +308,7 @@ Coding Practice
 
       Below are the contents of the input file.
 
-      ::
+      .. code-block:: text
 
          Have you ever had a dream that you,
          um, you had, your, you- you could,
@@ -412,7 +412,7 @@ Coding Practice
 
       Below are the contents of the input file.
 
-      ::
+      .. code-block:: text
 
           There's pineapple shrimp, lemon shrimp, coconut shrimp,
           pepper shrimp, shrimp soup, shrimp stew, shrimp salad,
@@ -502,4 +502,3 @@ Coding Practice
             {{group}}
             }
             {{endgroup}}
-

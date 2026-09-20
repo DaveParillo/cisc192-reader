@@ -46,7 +46,8 @@ combinations, using ``playing_card`` objects as a case study.
    {{blank}}
 
    .. tb-answer::
-      :match: ([Cc]omposition)|(COMPOSITION)
+      :regex:
+      :match: composition
       :feedback: Correct!
       :incorrect: Incorrect!  Try again!
 

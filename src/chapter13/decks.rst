@@ -62,10 +62,10 @@ demonstrates how to traverse the deck and output each card.
 
    A euchre deck consists of 9's, 10's, Jacks, Queens, Kings, and Aces.
    If we wanted to create a deck that is the size of the euchre deck, we
-   would type: ``card_deck euchre_deck`` {{{{blank}}}} ``;``
+   would type: ``card_deck euchre_deck`` {{blank}} ``;``
 
    .. tb-answer::
-      :match: \(24\)
+      :match: (24)
       :feedback: Correct!
       :incorrect: Try again!
 

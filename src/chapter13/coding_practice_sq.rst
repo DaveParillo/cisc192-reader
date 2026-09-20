@@ -269,7 +269,6 @@ Coding Practice
              board[2][2].is_filled = true;
          }
 
-
       .. tb-code:: cpp
          :name: c192_cp_13_ac_8q
          :caption: Example c192_cp_13_ac_8q

@@ -91,7 +91,7 @@ shows how to handle a separate format that permits commas.
 .. tb-blank::
    :name: c192_question15_5_2
 
-   The character used to escape a quote in an ordinary string literal is a {{{{blank}}}}.
+   The character used to escape a quote in an ordinary string literal is a {{blank}}.
 
    .. tb-answer::
       :match: backslash
@@ -104,11 +104,13 @@ shows how to handle a separate format that permits commas.
    ``std::string::substr`` takes a starting {{blank:blank1}} and an optional {{blank:blank2}}.
 
    .. tb-answer:: blank1
+      :regex:
       :match: index|position
       :feedback: Correct!
       :incorrect: Where should the substring begin?
 
    .. tb-answer:: blank2
+      :regex:
       :match: count|length
       :incorrect: How many characters should it contain?
 

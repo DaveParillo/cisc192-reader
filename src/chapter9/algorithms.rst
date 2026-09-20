@@ -62,7 +62,8 @@ produced.
          {{blank}}
 
          .. tb-answer::
-            :match: (?
-            :feedback: a|A)lgorithm: Correct!
+            :regex:
+            :match: algorithm
+            :feedback: Correct!
             :incorrect: Try again!
 

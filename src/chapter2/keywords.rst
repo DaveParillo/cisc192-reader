@@ -57,10 +57,10 @@ More on scope and namespaces in the next chapter.
       .. tb-blank::
          :name: keywords_1
 
-         Words that are reserved in C++ because they are used by the compiler to parse the structure of your program are called {{{{blank}}}}.
+         Words that are reserved in C++ because they are used by the compiler to parse the structure of your program are called {{blank}}.
 
          .. tb-answer::
-            :match: [Kk][Ee][Yy][Ww][Oo][Rr][Dd][Ss]
+            :match: keywords
             :feedback: Correct!
             :incorrect: Try again!
 

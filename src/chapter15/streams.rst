@@ -29,14 +29,15 @@ it adds a datum to the outgoing stream.
    in order to define objects to input from a file or send output to a file, you must include the ``<`` {{blank:blank3}} ``>`` header file.
 
    .. tb-answer:: blank1
-      :match: (?
-      :feedback: o|O)(?:f|F)(?:s|S)(?:t|T)(?:r|R)(?:e|E)(?:a|A)(?:m|M): Correct!
+      :regex:
+      :match: ofstream
+      :feedback: Correct!
 
    .. tb-answer:: blank2
       :match: x
 
    .. tb-answer:: blank3
-      :match: [Ff][Ss][Tt][Rr][Ee][Aa][Mm]
+      :match: fstream
       :incorrect: Incorrect! Try re-reading!
 
 .. tb-choice::

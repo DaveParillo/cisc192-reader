@@ -152,10 +152,10 @@ as part of a string:
       .. tb-blank::
          :name: more_output_2
 
-         The phrases that appear in quotation marks are called {{{{blank}}}}.
+         The phrases that appear in quotation marks are called {{blank}}.
 
          .. tb-answer::
-            :match: [Ss][Tt][Rr][Ii][Nn][Gg][Ss]?
+            :match: string
             :feedback: Correct!
             :incorrect: Try again!
 

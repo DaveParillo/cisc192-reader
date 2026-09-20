@@ -297,7 +297,6 @@ Coding Practice
 
          int my_vector::at(std::size_t index) { return elements.at(index); }
 
-
       .. tb-code:: cpp
          :name: c192_cp_14_ac_8q
          :caption: Example c192_cp_14_ac_8q
@@ -432,7 +431,6 @@ Coding Practice
              if (elements.empty()) throw std::out_of_range("empty vector");
              elements.pop_back();
          }
-
 
       .. tb-code:: cpp
          :name: c192_cp_14_ac_10q

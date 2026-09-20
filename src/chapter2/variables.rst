@@ -130,11 +130,11 @@ That's ok. You can't follow everyone's conventions.
       .. tb-blank::
          :name: variables_3
 
-         A(n) {{{{blank}}}} is a name given to a location in memory used to keep 
+         A(n) {{blank}} is a name given to a location in memory used to keep 
          track of a value.
 
          .. tb-answer::
-            :match: [Vv][Aa][Rr][Ii][Aa][Bb][Ll][Ee]
+            :match: variable
             :feedback: Correct!
             :incorrect: Try again!
 
@@ -149,10 +149,10 @@ That's ok. You can't follow everyone's conventions.
 
              char tom;
 
-         It's an example of a(n) {{{{blank}}}} statement.
+         It's an example of a(n) {{blank}} statement.
 
          .. tb-answer::
-            :match: [Dd][Ee][Cc][Ll][Aa][Rr][Aa][Tt][Ii][Oo][Nn]
+            :match: declaration
             :feedback: Correct!
             :incorrect: Try again!
 

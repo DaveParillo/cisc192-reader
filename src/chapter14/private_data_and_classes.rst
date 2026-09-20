@@ -186,7 +186,8 @@ Run the active code below. Uncomment the commented out code to see what happens!
    {{blank}}
 
    .. tb-answer::
-      :match: (Pp)rivate||((Pp)rivate (Dd)ata (Mm)ember)
+      :regex:
+      :match: private|private data member
       :feedback: Correct!
       :incorrect: Incorrect! Try again.
 

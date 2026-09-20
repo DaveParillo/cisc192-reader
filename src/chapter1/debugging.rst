@@ -143,12 +143,12 @@ programming practices.
          and fixing errors is called {{blank:blank2}}.
 
          .. tb-answer:: blank1
-            :match: [Bb][Uu][Gg]
+            :match: bug
             :feedback: Correct!
             :incorrect: Try again!
 
          .. tb-answer:: blank2
-            :match: [Dd][Ee][Bb][Uu][Gg][Gg][Ii][Nn][Gg]
+            :match: debugging
             :incorrect: Try again!
 
    .. tb-tab:: Q2
@@ -170,10 +170,10 @@ programming practices.
       .. tb-blank::
          :name: debugging_3
 
-         The structure of your program and the rules it must follow are called the {{{{blank}}}}.
+         The structure of your program and the rules it must follow are called the {{blank}}.
 
          .. tb-answer::
-            :match: [Ss][Yy][Nn][Tt][Aa][Xx]
+            :match: syntax
             :feedback: Correct!
             :incorrect: Try again!
 

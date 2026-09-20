@@ -236,8 +236,9 @@ Print it out and memorize it.
          {{blank}}
 
          .. tb-answer::
-            :match: (?
-            :feedback: (?:\\n)|(?:(?:n|N)ewline\s(?:c|C)haracter)): Is the correct answer!
+            :regex:
+            :match: \\n|newline\s+character
+            :feedback: Is the correct answer!
             :incorrect: Try again!
 
    .. tb-tab:: Q3
@@ -250,8 +251,9 @@ Print it out and memorize it.
          {{blank}}
 
          .. tb-answer::
-            :match: (?
-            :feedback: \\t): Correct!
+            :regex:
+            :match: \\t
+            :feedback: Correct!
             :incorrect: Try again!
 
    .. tb-tab:: Q4

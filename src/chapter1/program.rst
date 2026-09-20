@@ -46,11 +46,11 @@ performed with one of these simple functions.
       .. tb-blank::
          :name: program_1
 
-         A(n) {{{{blank}}}} is a series of instructions that are used to perform a 
+         A(n) {{blank}} is a series of instructions that are used to perform a 
          computation.
 
          .. tb-answer::
-            :match: [Pp][Rr][Oo][Gg][Rr][Aa][Mm]
+            :match: program
             :feedback: Correct!
             :incorrect: Try again!
 

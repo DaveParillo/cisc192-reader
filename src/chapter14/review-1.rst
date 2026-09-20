@@ -210,7 +210,6 @@ Multiple Choice Exercises
 
      + Since we called ``setCelsius`` last, we print out 30 degrees Celsius.
 
-
 .. tb-choice::
    :name: mce_14_7
 

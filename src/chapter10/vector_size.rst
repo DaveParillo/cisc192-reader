@@ -69,9 +69,11 @@ Try running the active code below!
          {{blank}}
 
          .. tb-answer::
-            :match: ([Ss]ize_t|SIZE_T)
+            :regex:
+            :match: size_t
             :feedback: Correct!
-            :match: ([Ii]nt|INT)
+            :regex:
+            :match: int
             :incorrect: Incorrect, Try again!
 
    .. tb-tab:: Q2

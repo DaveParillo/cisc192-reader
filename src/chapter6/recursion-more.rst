@@ -195,10 +195,10 @@ them does not execute.
          :name: more_recursion_2
 
          **Complete the circular definition:** unreal - a word used to describe
-         something that is {{{{blank}}}}.
+         something that is {{blank}}.
 
          .. tb-answer::
-            :match: [Uu][Nn][Rr][Ee][Aa][Ll]
+            :match: unreal
             :feedback: Correct! Circular defintions are a great example of recursion.
             :hint: x; Try again!
 
@@ -207,7 +207,7 @@ them does not execute.
       .. tb-blank::
          :name: more_recursion_3
 
-         The factorial of 12 is {{{{blank}}}}.
+         The factorial of 12 is {{blank}}.
 
          .. tb-answer::
             :match: 479001600

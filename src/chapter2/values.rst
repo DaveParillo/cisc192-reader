@@ -54,10 +54,11 @@ soon.
       .. tb-blank::
          :name: values_1
 
-         A {{{{blank}}}} value is a single letter, number, or punctuation enclosed in single quotes.
+         A {{blank}} value is a single letter, number, or punctuation enclosed in single quotes.
 
          .. tb-answer::
-            :match: ([Cc][Hh][Aa][Rr]|[Cc][Hh][Aa][Rr][Aa][Cc][Tt][Ee][Rr])
+            :regex:
+            :match: char|character
             :feedback: Correct!
             :incorrect: Try again!
 

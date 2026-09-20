@@ -126,7 +126,8 @@ times each value appears, and then see what happens when we increase
          {{blank}}
 
          .. tb-answer::
-            :match: ([Cc]onst|CONST)
+            :regex:
+            :match: const
             :feedback: Correct!
             :incorrect: Incorrect, Try again!
 

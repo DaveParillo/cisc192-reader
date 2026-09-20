@@ -1,5 +1,6 @@
 Mixed Up Code Practice
 ----------------------
+
 .. tb-group::
    :name: self_check
 

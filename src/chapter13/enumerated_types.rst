@@ -231,7 +231,8 @@ An unscoped enum can convert to an integer in an expression such as
    {{blank}}
 
    .. tb-answer::
-      :match: 12|[Tt][Ww|[Ee][Ll][Vv][Ee]
+      :regex:
+      :match: 12|twelve
       :feedback: Correct!
       :incorrect: Incorrect! Try again.
 

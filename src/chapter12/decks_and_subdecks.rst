@@ -71,7 +71,7 @@ unnecessary details while capturing relevant behavior.”
    {{blank}}
 
    .. tb-answer::
-      :match: [Aa][Bb][Ss][Tt][Rr][Aa][Cc][Tt][Ii][Oo][Nn]
+      :match: abstraction
       :feedback: Correct!
       :match: x
 

@@ -80,7 +80,7 @@ source_suffix = {
 }
 highlight_language = 'cpp'
 exclude_patterns = []
-suppress_warnings = ['toc', 'misc.highlighting_failure', 'ref.ref']
+suppress_warnings = ['misc.highlighting_failure']
 
 # Appearance
 pygments_style = 'default'

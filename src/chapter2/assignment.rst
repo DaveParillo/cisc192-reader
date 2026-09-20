@@ -131,10 +131,10 @@ assignment is illegal:
       .. tb-blank::
          :name: assignment_1
 
-         A(n) {{{{blank}}}} statement gives a value to a variable.
+         A(n) {{blank}} statement gives a value to a variable.
 
          .. tb-answer::
-            :match: [Aa][Ss][Ss][Ii][Gg][Nn][Mm][Ee][Nn][Tt]
+            :match: assignment
             :feedback: Correct!
             :incorrect: Try again!
 

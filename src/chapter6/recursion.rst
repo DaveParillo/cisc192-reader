@@ -241,10 +241,10 @@ You can have a little bit of fun with recursion.  Try this guessing game below!
       .. tb-blank::
          :name: recursion_3
 
-         A function that calls itself is said to be {{{{blank}}}}.
+         A function that calls itself is said to be {{blank}}.
 
          .. tb-answer::
-            :match: [Rr][Ee][Cc][Uu][Rr][Ss][Ii][Vv][Ee]
+            :match: recursive
             :feedback: And the process by which a function calls itself is called recursion.
             :incorrect: Try again!
 

@@ -110,10 +110,10 @@ In general it is good style to include a ``default`` case in every
 .. tb-blank::
    :name: c192_switch_1
 
-   A(n) {{{{blank}}}} statement is necessary for each branch in a ``switch`` statement.
+   A(n) {{blank}} statement is necessary for each branch in a ``switch`` statement.
 
    .. tb-answer::
-      :match: [Bb][Rr][Ee][Aa][Kk]
+      :match: break
       :feedback: A return would also suffice.
       :incorrect: Try again! How do we prevent the flow of execution from "falling through?"
 

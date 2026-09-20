@@ -88,9 +88,11 @@ Notice there is a lot going on in this small program.
          {{blank}}
 
          .. tb-answer::
-            :match: ([Nn]ondeterministic|NONDETERMINISTIC)
+            :regex:
+            :match: nondeterministic
             :feedback: Correct!
-            :match: ([Dd]eterministic|DETERMINISTIC)
+            :regex:
+            :match: deterministic
             :incorrect: Incorrect!
 
    .. tb-tab:: Q2

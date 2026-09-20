@@ -55,12 +55,12 @@ Once again, I am going to leave the implementation up to the reader.
    would help me condense the function's code and make it easier to understand.
 
    .. tb-answer:: blank1
-      :match: [Hh][Ee][Ll][Pp][Ee][Rr]
+      :match: helper
       :feedback: Correct!
       :incorrect: Try again!
 
    .. tb-answer:: blank2
-      :match: [Ff][Uu][Nn][Cc][Tt][Ii][Oo][Nn]
+      :match: function
       :incorrect: Try again!
 
 Try writing the ``find_lowest_card`` function in the commented section

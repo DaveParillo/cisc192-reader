@@ -1,5 +1,6 @@
 Coding Practice
 ---------------
+
 .. tb-file::
    :name: poem-txt
    :filename: poem.txt
@@ -49,7 +50,7 @@ Coding Practice
 
       Below are the contents of the input file.
 
-      ::
+      .. code-block:: text
 
           Two roads diverged in a yellow wood,
           And sorry I could not travel both
@@ -119,9 +120,9 @@ Coding Practice
 
    The legacy Runestone question pool ``c192_cp_15_ac_2_sq`` is represented by these exercises:
 
-   * :ref:`c192_cp_15_ac_2q`
+   * :doc:`c192_cp_15_ac_2q <coding_practice_sq>`
 
-   * :ref:`c192_cp_15_ac_2q_pp`
+   * :doc:`c192_cp_15_ac_2q_pp <coding_practice_sq>`
 
 .. tb-file::
    :name: heights-txt
@@ -159,7 +160,7 @@ Coding Practice
 
       Below are the contents of the input file.
 
-      ::
+      .. code-block:: text
 
           62	67	75	68	65
           67	70	72	74	66
@@ -218,9 +219,9 @@ Coding Practice
 
    The legacy Runestone question pool ``c192_cp_15_ac_4_sq`` is represented by these exercises:
 
-   * :ref:`c192_cp_15_ac_4q`
+   * :doc:`c192_cp_15_ac_4q <coding_practice_sq>`
 
-   * :ref:`c192_cp_15_ac_4q_pp`
+   * :doc:`c192_cp_15_ac_4q_pp <coding_practice_sq>`
 
 .. tb-file::
    :name: message-txt
@@ -261,7 +262,7 @@ Coding Practice
 
       Below are the contents of the input file.
 
-      ::
+      .. code-block:: text
 
           Can you encrypt this message and decrypt the message below?
           Pbatenghyngvbaf! Lbh'ir qrpelcgrq guvf zrffntr.
@@ -337,9 +338,9 @@ Coding Practice
 
    The legacy Runestone question pool ``c192_cp_15_ac_6_sq`` is represented by these exercises:
 
-   * :ref:`c192_cp_15_ac_6q`
+   * :doc:`c192_cp_15_ac_6q <coding_practice_sq>`
 
-   * :ref:`c192_cp_15_ac_6q_pp`
+   * :doc:`c192_cp_15_ac_6q_pp <coding_practice_sq>`
 
 .. tb-file::
    :name: class_data-txt
@@ -440,9 +441,9 @@ Coding Practice
 
    The legacy Runestone question pool ``c192_cp_15_ac_8_sq`` is represented by these exercises:
 
-   * :ref:`c192_cp_15_ac_8q`
+   * :doc:`c192_cp_15_ac_8q <coding_practice_sq>`
 
-   * :ref:`c192_cp_15_ac_8q_pp`
+   * :doc:`c192_cp_15_ac_8q_pp <coding_practice_sq>`
 
 .. tb-file::
    :name: mult_table-txt
@@ -519,7 +520,6 @@ Coding Practice
 
    The legacy Runestone question pool ``c192_cp_15_ac_10_sq`` is represented by these exercises:
 
-   * :ref:`c192_cp_15_ac_10q`
+   * :doc:`c192_cp_15_ac_10q <coding_practice_sq>`
 
-   * :ref:`c192_cp_15_ac_10q_pp`
-
+   * :doc:`c192_cp_15_ac_10q_pp <coding_practice_sq>`

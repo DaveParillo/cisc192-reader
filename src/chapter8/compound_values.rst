@@ -36,8 +36,9 @@ them).
          {{blank}}
 
          .. tb-answer::
-            :match: (?
-            :feedback: c|C)ompound: Correct!
+            :regex:
+            :match: compound
+            :feedback: Correct!
             :incorrect: Try again!
 
    .. tb-tab:: Q2
@@ -50,8 +51,9 @@ them).
          {{blank}}
 
          .. tb-answer::
-            :match: (?
-            :feedback: c|C)lasses: Correct!
+            :regex:
+            :match: classes
+            :feedback: Correct!
             :incorrect: Try again!
 
    .. tb-tab:: Q3

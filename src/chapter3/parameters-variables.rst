@@ -171,11 +171,11 @@ phil.
       .. tb-blank::
          :name: locals_3
 
-         Whenever we make a function call, we create a(n) {{{{blank}}}} of that fucntion,
+         Whenever we make a function call, we create a(n) {{blank}} of that fucntion,
          which contiains the parameters and local variables for that function.
 
          .. tb-answer::
-            :match: [Ii][Nn][Ss][Tt][Aa][Nn][Cc][Ee]
+            :match: instance
             :feedback: You could create many instances of one function, each with their own parameters and local variables if you wanted!
             :incorrect: Try again!
 

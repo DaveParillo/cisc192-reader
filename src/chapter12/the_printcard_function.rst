@@ -183,7 +183,7 @@ helpful for the programmer if the mappings are easy to remember.
    {{blank}}
 
    .. tb-answer::
-      :match: (Ace of Spades)
+      :match: ace of spades
       :feedback: Correct!
       :incorrect: Incorrect!  Try this input on the code above!
 

@@ -134,10 +134,10 @@ compiler will take you to task.
       .. tb-blank::
          :name: return_vals_3
 
-         A variable that exists only inside a function, is called a {{{{blank}}}} variable.
+         A variable that exists only inside a function, is called a {{blank}} variable.
 
          .. tb-answer::
-            :match: [Tt][Ee][Mm][Pp][Oo][Rr][Aa][Rr][Yy]
+            :match: temporary
             :feedback: Temporary variables are useful for calculating and returning values inside functions since they are short-lived.
             :incorrect: Try again!
 

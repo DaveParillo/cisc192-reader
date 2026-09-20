@@ -49,7 +49,8 @@ programming style.
          {{blank}}
 
          .. tb-answer::
-            :match: (?
-            :feedback: p|P)ure (?:F|f)unctions: Correct!
+            :regex:
+            :match: pure functions
+            :feedback: Correct!
             :incorrect: Try again!
 

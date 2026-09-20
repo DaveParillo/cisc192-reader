@@ -140,10 +140,10 @@ languages, can make a big difference in a formal language.
       .. tb-blank::
          :name: formal_natural_2
 
-         Analyzing the structure of a sentence or a program is called {{{{blank}}}}.
+         Analyzing the structure of a sentence or a program is called {{blank}}.
 
          .. tb-answer::
-            :match: [Pp][Aa][Rr][Ss][Ii][Nn][Gg]
+            :match: parsing
             :feedback: Correct!
             :incorrect: Try again!
 

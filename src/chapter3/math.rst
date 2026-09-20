@@ -233,7 +233,7 @@ For this reason, you often see math functions used without the
          {{blank}}
 
          .. tb-answer::
-            :match: [Rr][Aa][Dd][Ii][Aa][Nn][Ss]?
+            :match: radians
             :feedback: If you need to convert to degrees, just multiply by 360 and divide by 2pi.
             :hint: [Dd][Ee][Gg][Rr][Ee][Ee][Ss]?; This is a unit sometimes used for sinusoidal functions, but not the one used by C++.
             :incorrect: Try again!

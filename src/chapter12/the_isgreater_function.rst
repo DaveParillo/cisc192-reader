@@ -220,11 +220,11 @@ Feel free to change the values of the cards.
    
    If the above code is run, the terminal will print:
    "Queen of Hearts"
-   {{{{blank}}}}
+   {{blank}}
    "Queen of Diamonds"
    Type your answer exactly as it would appear in the terminal.
 
    .. tb-answer::
-      :match: (is greater than)
+      :match: is greater than
       :feedback: Correct!
       :incorrect: Incorrect!  Try this input on the code above!

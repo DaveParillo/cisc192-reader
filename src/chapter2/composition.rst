@@ -130,10 +130,10 @@ values. So the following is illegal: ``minute + 1 = hour;``.
       .. tb-blank::
          :name: compos_2
 
-         The left-hand side of an assignment statement has to be a {{{{blank}}}} name, not an expression.
+         The left-hand side of an assignment statement has to be a {{blank}} name, not an expression.
 
          .. tb-answer::
-            :match: [Vv][Aa][Rr][Ii][Aa][Bb][Ll][Ee]
+            :match: variable
             :feedback: Correct!
             :incorrect: Try again!
 
@@ -142,10 +142,10 @@ values. So the following is illegal: ``minute + 1 = hour;``.
       .. tb-blank::
          :name: compos_3
 
-         In programming, another word for **combine** is {{{{blank}}}}.
+         In programming, another word for **combine** is {{blank}}.
 
          .. tb-answer::
-            :match: [Cc][Oo][Mm][Pp][Oo][Ss][Ee]
+            :match: compose
             :feedback: Correct!
             :incorrect: Try again!
 

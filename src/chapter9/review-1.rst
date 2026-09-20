@@ -1,5 +1,6 @@
 Multiple Choice Exercises
 -------------------------
+
 .. tb-group::
    :name: self_check
 

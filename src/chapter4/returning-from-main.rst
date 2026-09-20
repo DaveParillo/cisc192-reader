@@ -80,7 +80,7 @@ but we are not going to deal with them for a little while.
          any errors that we catch, we might return {{blank:blank2}}.
 
          .. tb-answer:: blank1
-            :match: [0]
+            :match: 0
             :feedback: Correct!
 
          .. tb-answer:: blank2

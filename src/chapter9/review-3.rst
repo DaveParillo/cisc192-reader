@@ -1,5 +1,6 @@
 Coding Practice
 ---------------
+
 .. tb-group::
    :name: self_check
 

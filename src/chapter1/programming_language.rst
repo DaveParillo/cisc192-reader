@@ -171,12 +171,12 @@ figure out what it is.
          all at once, before executing any of the commands!
 
          .. tb-answer:: blank1
-            :match: [Ii][Nn][Tt][Ee][Rr][Pp][Rr][Ee][Tt][Ee][Rr]
+            :match: interpreter
             :feedback: Correct!
             :incorrect: Try again!
 
          .. tb-answer:: blank2
-            :match: [Cc][Oo][Mm][Pp][Ii][Ll][Ee][Rr]
+            :match: compiler
             :incorrect: Try again!
 
    .. tb-tab:: Q2

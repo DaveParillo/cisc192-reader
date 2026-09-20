@@ -42,12 +42,14 @@ a boolean expression is called for. For example,
          operator is used to check if two boolean values are equal.
 
          .. tb-answer:: blank1
-            :match: ([Tt][Rr][Uu][Ee]|[Ff][Aa][Ll][Ss][Ee])
+            :regex:
+            :match: true|false
             :feedback: Correct!
             :incorrect: Try again!
 
          .. tb-answer:: blank2
-            :match: ([Tt][Rr][Uu][Ee]|[Ff][Aa][Ll][Ss][Ee])
+            :regex:
+            :match: true|false
             :incorrect: Try again!
 
          .. tb-answer:: blank3

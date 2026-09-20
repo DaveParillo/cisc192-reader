@@ -107,7 +107,8 @@ naturally, represents the rank 3.
    The instance variables for a playing card are {{blank:blank1}} and {{blank:blank2}}.
 
    .. tb-answer:: blank1
-      :match: ([Ss][Uu][Ii][Tt])|([Rr][Aa][Nn][Kk])
+      :regex:
+      :match: suit|rank
       :feedback: Correct!
 
    .. tb-answer:: blank2
@@ -139,7 +140,8 @@ naturally, represents the rank 3.
    {{blank}}
 
    .. tb-answer::
-      :match: ([Mm][Aa][Pp][Ss] [Tt][Oo])
+      :regex:
+      :match: maps to
       :feedback: Correct!
       :incorrect: Incorrect!  Try again!
 

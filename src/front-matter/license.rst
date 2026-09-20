@@ -9,6 +9,5 @@ License
       :alt: Creative Commons License
       :align: left
 
-.. include:: ../../LICENSE.txt
-   :literal:
-
+.. literalinclude:: ../../LICENSE.txt
+   :language: text
