@@ -23,10 +23,10 @@ provide for hour and minute.
        char colon = ':';
 
        cout << "The current time is "
-       cout << hour
-       cout << colon
-       cout << minute
-       cout << '\n';
+            << hour
+            << colon
+            << minute
+            << '\n';
    }
 
 
@@ -248,5 +248,4 @@ and the special end of line character. Very impressive!
 
      - :io:`cout` and
        :lang:`escape sequences <escape>`
-
 
