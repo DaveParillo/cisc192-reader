@@ -73,54 +73,56 @@ it is being passed by reference), and assign the return value to a
       .. tb-choice::
          :name: structures_return_types_1
 
-         ch functions will return a structure?
+         Which functions will return a structure?
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         struct point {
-           double x, y;
-         };
+            struct Point {
+              double x, y;
+            };
 
-         struct rectangle {
-           point corner;
-           double width, height;
-         };
+            struct Rectangle {
+              Point corner;
+              double width, height;
+            };
 
-         rectangle add_two (point& p) {
-           double x = p.x + 2;
-           double y = p.y + 2;
-           point result = {x, y};
-           return result;
-         }
+            Rectangle addTwo (Point& p) {
+              double x = p.x + 2;
+              double y = p.y + 2;
+              Point result = {x, y};
+              return result;
+            }
 
-         void print_point (point p) {
-           cout << "(" << p.x << ", " << p.y << ")" << endl;
-         }
+            void printPoint (Point p) {
+              cout << "(" << p.x << ", " << p.y << ")" << endl;
+            }
 
-         point find_center (rectangle& box) {
-           double x = box.corner.x + box.width/2;
-           double y = box.corner.y + box.height/2;
-           point result = {x, y};
-           return result;
-         }
+            Point findCenter (Rectangle& box) {
+              double x = box.corner.x + box.width/2;
+              double y = box.corner.y + box.height/2;
+              Point result = {x, y};
+              return result;
+            }
 
-         int main() {
-           rectangle box = { {0.0, 0.0}, 100, 200 };
-           point center = find_center (box);
-           cout << add_two (center) << endl;
-           print_point (center);
-         }
+            int main() {
+              Rectangle box = { {0.0, 0.0}, 100, 200 };
+              Point center = findCenter (box);
+              cout << addTwo (center) << endl;
+              printPoint (center);
+            }
 
-         - [ ] add_two, print_point, find_center
+         - [ ] ``addTwo``, ``printPoint``, ``findCenter``
 
-           Look at the return type, found before the function name in its definition.
-         - [ ] print_point, find_center
+           - Look at the return type, found before the function name in its definition.
+         - [ ] ``printPoint``, ``findCenter``
 
-           Look at the return type, found before the function name in its definition.
-         - [x] add_two, find_center
+           - Look at the return type, found before the function name in its definition.
 
-           Correct!
-         - [ ] point, rectangle
+         - [x] ``addTwo``, ``findCenter``
 
-           These are structures, not functions.
+           + Correct!
+
+         - [ ] ``Point``, ``Rectangle``
+
+           - These are structures, not functions.
 

@@ -156,89 +156,102 @@ convention.
       .. tb-choice::
          :name: call_by_reference_2
 
-
+         Which is NOT a benefit to using pass by reference instead of pass by value?
 
          - [ ] Passing structures by reference is more versatile
 
-           Try again!
+           - Try again! Passing by reference is more versatile.
+
          - [ ] Passing structures by reference is faster, because the system does not have to copy the whole structure
 
-           Try again!
+           - Try again! Passing by reference does not involve making copies.
+
          - [ ] In C++ programs, almost all structures are passed by reference almost all the time
 
-           Try again!
-         - [x] Passing structures by reference is is less safe, since it is harder to keep track of what gets modified where
+           - Try again!
 
-           Correct!
+         - [x] Passing structures by reference is less safe, since it is harder to keep track of what gets modified where
+
+           + Correct!
+
 
    .. tb-tab:: Q3
 
       .. tb-choice::
          :name: call_by_reference_3
 
-         t will print?
+         What will print?
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         int add_two(int& x) {
-           cout << x << ' ';
-           x = x + 2;
-           cout << x << ' ';
-           return x;
-         }
+            int addTwo(int& x) {
+              cout << x << " ";
+              x = x + 2;
+              cout << x << " ";
+              return x;
+            }
 
-         int main() {
-           int num = 2;
-           add_two(num);
-           cout << num << endl;
-         }
+            int main() {
+              int num = 2;
+              addTwo(num);
+              cout << num << endl;
+            }
 
-         - [ ] 2 4
+         - [ ] ``2 4``
 
-           Take a look at exactly what is being outputted.
-         - [ ] 2 4 2
+           - Take a look at exactly what is being outputted.
 
-           Remember the rules of pass by reference.
-         - [ ] 4 4 2
+         - [ ] ``2 4 2``
 
-           Take a look at exactly what is being outputted.
-         - [x] 2 4 4
+           - Remember the rules of pass by reference.
 
-           Correct!
+         - [ ] ``4 4 2``
+
+           - Take a look at exactly what is being outputted.
+
+         - [x] ``2 4 4``
+
+           + Correct!
+
 
    .. tb-tab:: Q4
 
       .. tb-choice::
          :name: call_by_reference_4
 
-         t will print?
+         What will print?
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         struct point {
-           double x, y;
-         };
+            struct Point {
+              int x, y;
+            };
 
-         void times_two (point& p) {
-           cout << '(' << p.x * 2 << ", " << p.y * 2 << ')';
-         }
+            void timesTwo (Point& p) {
+              p.x = p.x * 2;
+              p.y = p.y * 2;
+              cout << "(" << p.x << ", " << p.y << ")";
+            }
 
-         int main() {
-           point blank = { 3.0, 4.0 };
-           times_two (blank);
-           cout << ", " << blank << endl;
-         }
+            int main() {
+              Point blank = { 3, 4 };
+              timesTwo (blank);
+              cout << ", " << blank.x << endl;
+            }
 
-         - [ ] 6.0, 8.0, 3.0, 4.0
+         - [ ] ``(6, 8), 3``
 
-           The ``&`` indicates pass by reference.
-         - [x] 6.0, 8.0, 6.0, 8.0
+           - The ``&`` indicates pass by reference.
 
-           Correct!
-         - [ ] 6.08.03.04.0
+         - [x] ``(6, 8), 6``
 
-           The ``&`` indicates pass by reference.
-         - [ ] 6.08.06.08.0
+           + Correct!
 
-           Take a look at exactly what is being outputted.
+         - [ ] ``(6.0, 8.0) 3.0``
+
+           - The ``&`` indicates pass by reference. Take a look at the data type.
+
+         - [ ] ``686``
+
+           - Take a look at exactly what is being printed.
 

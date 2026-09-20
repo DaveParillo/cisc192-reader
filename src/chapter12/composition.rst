@@ -21,19 +21,19 @@ In the next two chapters we will look at some examples of these
 combinations, using ``playing_card`` objects as a case study.
 
 .. tb-choice::
-   :name: c192_composition_1
+   :name: composition_1
 
-
+   Which of the following statements is correct?
 
    - [x] You can have vectors that contain other vectors and objects that contain other objects.
 
      This is called composition!
    - [ ] You can have vectors that contain other vectors, but you can never have objects that contain other objects.
 
-     in this chapter you will see how you can have objects that contain other objects.
+     In this chapter you will see how you can have objects that contain other objects.
    - [ ] You can never have vectors that contain other vectors, but you can have objects that contain other objects.
 
-     in this chapter you will see how you can have vectors that contain other vectors.
+     In this chapter you will see how you can have vectors that contain other vectors.
    - [ ] You can never have vectors that contain other vectors, nor objects that contain other objects.
 
      Vectors and objects can have nested compositons!

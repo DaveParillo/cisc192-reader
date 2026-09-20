@@ -65,19 +65,12 @@ line is being created infinitely.
             :feedback: Correct!
 
          .. tb-answer:: blank2
-            :hint: x; Try again!
-
-         .. tb-answer:: blank3
             :match: [Cc][Aa][Ss][Ee]
 
-         .. tb-answer:: blank4
-            :hint: x; Try again!
-
-         .. tb-answer:: blank5
+         .. tb-answer:: blank3
             :match: [Ii][Nn][Ff][Ii][Nn][Ii][Tt][Ee]
-            :incorrect: Try again!
 
-         .. tb-answer:: blank6
+         .. tb-answer:: blank4
             :match: [Rr][Ee][Cc][Uu][Rr][Ss][Ii][Oo][Nn]
             :incorrect: Try again!
 
@@ -86,25 +79,25 @@ line is being created infinitely.
       .. tb-choice::
          :name: unbounded_recursion_2
 
-          a look at the code below.  What will happen if you were to run it on
-          machine?
+         Take a look at the code below.  What will happen if you were to run it on
+         your machine?
 
+         ::
 
+             #include <iostream>
+             using namespace std;
 
-         #include <iostream>
-         using namespace std;
+             void isNegative(int n) {
+               if (n >= 0) {
+                 cout << "Not Negative!";
+                 isNegative(n - 1);
+               }
+               cout << "Negative!";
+             }
 
-         void isNegative(int n) {
-           if (n >= 0) {
-             cout << "Not Negative!";
-             print_lines(n - 1);
-           }
-           cout << "Negative!";
-         }
-
-         int main() {
-           isNegative(-10);
-         }
+             int main() {
+               isNegative(-10);
+             }
 
 
          - [ ] The function will print "Not Negative!"
@@ -125,24 +118,26 @@ line is being created infinitely.
       .. tb-choice::
          :name: unbounded_recursion_3
 
-          will happen if we run the code with this input?
+         ``isNegative`` is defined exactly as it was above, but we have changed the
+         call to it in ``main``.
+         What will happen if we run the code with this input?
 
+         ::
 
+             #include <iostream>
+             using namespace std;
 
-         #include <iostream>
-         using namespace std;
+             void isNegative(int n) {
+               if (n >= 0) {
+                 cout << "Not Negative!";
+                 isNegative(n - 1);
+               }
+               cout << "Negative!";
+             }
 
-         void isNegative(int n) {
-           if (n >= 0) {
-             cout << "Not Negative!";
-             print_lines(n - 1);
-           }
-           cout << "Negative!";
-         }
-
-         int main() {
-           isNegative(10);
-         }
+             int main() {
+               isNegative(10);
+             }
 
 
          - [ ] The function will print "Not Negative!"
@@ -163,25 +158,25 @@ line is being created infinitely.
       .. tb-choice::
          :name: unbounded_recursion_4
 
-         isNegative function has been **edited** as shown below.  What will 
-         en now when we run the code?
+         The ``isNegative`` function has been **edited** as shown below.  What will 
+         happen now when we run the code?
 
+         ::
 
+             #include <iostream>
+             using namespace std;
 
-         #include <iostream>
-         using namespace std;
+             void isNegative(int n) {
+               if (n >= 0) {
+                 cout << "Not Negative!";
+                 isNegative(n + 1);
+               }
+               cout << "Negative!";
+             }
 
-         void isNegative(int n) {
-           if (n >= 0) {
-             cout << "Not Negative!";
-             print_lines(n + 1);
-           }
-           cout << "Negative!";
-         }
-
-         int main() {
-           isNegative(10);
-         }
+             int main() {
+               isNegative(10);
+             }
 
          - [ ] The function will print "Not Negative!"
 
@@ -195,4 +190,3 @@ line is being created infinitely.
          - [x] The function will never stop executing, there will be infinite recursion.
 
            Our input is incremented with every recursive call, so if we start with a positive number, we will never reach the base case.
-

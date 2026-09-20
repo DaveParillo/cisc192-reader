@@ -162,35 +162,36 @@ as part of a string:
    .. tb-tab:: Q2
 
       .. tb-choice::
-         :name: more_output_3_0
+         :name: assignment_2
 
-         ow many separate lines will the 7's be printed?
+         What must be changed in order for this code block to work?
+
+         ::
+
+             #include <iostream>
+             using namespace std;
+             // main: generate some simple output
+
+             int main () {
+               int p;
+               int q;
+               p = "h";
+               q = "9";
+             }
 
 
+         - [ ] Change the type of variable q from int to string.
 
-         #include <iostream>
-         using namespace std;
+           Yes, but take a look at variable p.
+         - [x] Change the type of both variables (p and q) from int to string.
 
-         int main () {
-           cout << 7 << endl;
-           cout << 7;
-           cout << 7;
-           cout << 7;
-         }
+           Both variables are a character surrounded by double quotes, so they should be type string.
+         - [ ] Change the type of variable p from int to char.
 
+           Yes, but take a look at variable q.
+         - [ ] Nothing needs to change! The code will work just fine!
 
-         - [ ] 1
-
-           There is an "endl" statement, implying that a new line is created.
-         - [x] 2
-
-           "endl" creates one new line. The first line will say 7, while the second will print 777.
-         - [ ] 3
-
-           In C++, you must make sure to say "endl" every time you'd like to create a new line.
-         - [ ] 4
-
-           In C++, you must make sure to say "endl" every time you'd like to create a new line.
+           No! There will be a compile error.
 
    .. tb-tab:: Q3
 

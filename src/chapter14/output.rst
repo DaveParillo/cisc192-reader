@@ -143,17 +143,17 @@ Feel free to modify the code and experiment around!
    }
 
 .. tb-choice::
-   :name: c192_question14_5_1
+   :name: question14_5_1
 
-   t is the correct output of the code below?
+   What is the correct output of the code below?
 
-   code-block:: cpp
+   .. code-block:: cpp
 
-   int main() {
-     complex_number c1 (3.0, 4.0);
-     // c1.print_cartesian();
-     c1.print_polar();
-   }
+      int main() {
+        Complex c1 (3.0, 4.0);
+        // c1.printCartesian();
+        c1.printPolar();
+      }
 
    - [x] 5 e^ 0.927295i
 

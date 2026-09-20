@@ -91,12 +91,13 @@ using the ``size`` function.
       .. tb-choice::
          :name: length_1
 
-         t is printed by the following statements?
+         What is printed by the following statements?
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         string s = "coding rocks";
-         cout << s.size();
+            string s = "coding rocks";
+            cout << s.length() << endl;
+
 
          - [ ] 11
 
@@ -110,23 +111,24 @@ using the ``size`` function.
       .. tb-choice::
          :name: length_2
 
-         t is printed by the following statements?
+         What is printed by the following statements?
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         string s = "coding rocks";
-         cout << (s[s.size()-5]);
+            string s = "coding rocks";
+            cout << (s[s.length()-5]) << endl;
+
 
          - [ ] o
 
-           Take a look at the index calculation again, s.size()-5.
+           Take a look at the index calculation again, s.length()-5.
          - [x] r
 
-           Yes, s.size() is 12 and 12-5 is 7.  Use 7 as index and remember to start counting with 0.
+           Yes, s.length() is 12 and 12-5 is 7.  Use 7 as index and remember to start counting with 0.
          - [ ] s
 
            s is at index 11.
-         - [ ] Error, s.size() is 12 and there is no index 12.
+         - [ ] Error, s.length() is 12 and there is no index 12.
 
            You subtract 5 before using the index operator so it will work.
 

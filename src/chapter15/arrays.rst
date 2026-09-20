@@ -66,16 +66,26 @@ The dimensions here are two rows and three columns. Each ``at()`` checks one
 dimension. The elements in an array of arrays have fixed rectangular shape.
 
 .. tb-choice::
-   :name: c192_question15_8_1
+   :name: mce_15_1
 
+   We want to open a file and parse its data into our program. What library
+   do we need to include?
 
+   - [ ] ``iostream``
 
-   - [x] std::array<int, 4> samples{};
+     - This library deals with communication through the standard input and output.
 
-     Empty braces initialize every integer element to zero.
-   - [ ] std::array<int, 4> samples;
+   - [ ] ``sstream``
 
-     A local array declared this way has uninitialized integer elements.
+     -  This library is used to manipulate string objects as if they were streams.
+
+   - [x] ``fstream``
+
+     + This library is used to manipulate files using streams.
+
+   - [ ] ``iomanip``
+
+     - This library is used to modify internal flags and formatting options.
 
 .. tb-blank::
    :name: c192_question15_8_2

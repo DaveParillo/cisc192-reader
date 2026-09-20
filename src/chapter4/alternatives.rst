@@ -96,25 +96,26 @@ see how the output is changed.
       .. tb-choice::
          :name: alt_execution_1
 
-          will be printed after the main is executed?
+         What will be printed after ``main`` is executed?
 
+         ::
 
+             #include <iostream>
+             using namespace std;
 
-         void weather(int temp) {
-           if (temp < 52)
-           {
-             cout << "It is cold!";
-           }
-           else
-           {
-             cout << "It is warm!";
-           }
-         }
+             void weather(int temp) {
+               if (temp < 52) {
+                 cout << "It is cold!";
+               }
+               else {
+                 cout << "It is warm!";
+               }
+             }
 
-         int main() {
-           int degrees = 52;
-           weather(degrees);
-         }
+             int main() {
+               int degrees = 52;
+               weather(degrees);
+             }
 
 
          - [ ] It is cold!

@@ -96,98 +96,99 @@ read from top to bottom. Instead, **follow the flow of execution**.
       .. tb-choice::
          :name: multiple_fun_2
 
-         sider the following C++ code. Note that line numbers are included 
-         the left.
+         Consider the following C++ code. Note that line numbers are included 
+         on the left.
 
-         code-block:: cpp
-         :linenos:
+         .. code-block:: cpp
+            :linenos:
 
-         #include <iostream>
+            #include <iostream>
+            using namespace std;
 
-         void new_line () {
-           std::cout << '\n';
-         }
+            void newLine () {
+              cout << endl;
+            }
 
-         void three_line () {
-           new_line ();  new_line ();  new_line ();
-         }
+            void threeLine () {
+              newLine ();  newLine ();  newLine ();
+            }
 
-         int main () {
-           std::cout << "First Line.\n";
-           three_line ();
-           std::cout << "Second Line.\n";
-           return 0;
-         }
+            int main () {
+              cout << "First Line." << endl;
+              threeLine ();
+              cout << "Second Line." << endl;
+              return 0;
+            }
 
-         ch of the following reflects the order in which these functions 
-          executed in C++?
+         Which of the following reflects the order in which these functions 
+         are executed in C++?
 
-          ``new_line, three_line, main``
+         - [ ] ``newLine, threeLine, main``
 
-          - [ ] Remember to follow the order of execution, which is not necessarily the order the program is written.
+           -   Remember to follow the order of execution, which is not necessarily the order the program is written.
 
-          ``new_line, three_line, new_line, new_line, new_line, main``
+         - [ ] ``newLine, threeLine, newLine, newLine, newLine, main``
 
-          - [x] Remember to follow the order of execution, which is not necessarily the order the program is written.
+           -   Remember to follow the order of execution, which is not necessarily the order the program is written.
 
-          ``main, three_line, new_line, new_line, new_line``
+         - [x] ``main, threeLine, newLine, newLine, newLine``
 
-          +   Execution begins in the main, then functions are executed as they are called.
+           +   Execution begins in the main, then functions are executed as they are called.
 
-          ``main, three_line``
+         - [ ] ``main, threeLine``
 
-          - [ ] Note that ``new_line`` is called inside of ``three_line``.
+           -   Note that ``newLine`` is called inside of ``threeLine``.
 
    .. tb-tab:: Q3
 
       .. tb-choice::
          :name: multiple_fun_3
 
-         sider the following C++ code.
+         Consider the following C++ code.
 
-         code-block:: cpp
-         :linenos:
+         .. code-block:: cpp
+            :linenos:
 
-         #include <iostream>
-         using std::cout;
+            #include <iostream>
+            using namespace std;
 
-         void yo () {
-           cout << "yo, ";
-         }
+            void yo () {
+              cout << "yo, ";
+            }
 
-         void hello () {
-           cout << "hello, ";
-           yo(); yo();
-         }
+            void hello () {
+              cout << "hello, ";
+              yo(); yo();
+            }
 
-         void goodbye() {
-           yo(); hello();
-           cout << "goodbye,";
-         }
+            void goodbye () {
+              yo(); hello();
+              cout << "goodbye,";
+            }
 
-         int main () {
-           cout << "welcome, ";
-           goodbye();
-           return 0;
-         }
+            int main () {
+              cout << "welcome, ";
+              goodbye();
+              return 0;
+            }
 
-         t is printed when the code is executed?
+         What is printed when the code is executed?
 
-          "welcome, yo, hello, goodbye,"
+         - [ ] "welcome, yo, hello, goodbye,"
 
-          - [ ] take into account ``hello`` also calls ``yo`` .
+           -   take into account ``hello`` also calls ``yo`` .
 
-          "welcome, goodbye,"
+         - [ ] "welcome, goodbye,"
 
-          - [x] ``goodbye`` calls other functions that print output as well.
+           -   ``goodbye`` calls other functions that print output as well.
 
-          "welcome, yo, hello, yo, yo, goodbye,"
+         - [x] "welcome, yo, hello, yo, yo, goodbye,"
 
-          +   The order of calls and composition of ``yo`` in ``hello`` and both of those in ``goodbye`` produce this output.
+           +   The order of calls and composition of ``yo`` in ``hello`` and both of those in ``goodbye`` produce this output.
 
-          "yo, hello, yo, yo, goodbye,"
+         - [ ] "yo, hello, yo, yo, goodbye,"
 
-          - [ ] Note that the ``main`` also prints something directly.
+           -   Note that the ``main`` also prints something directly.
 
 -----
 

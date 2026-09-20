@@ -98,8 +98,7 @@ Notice there is a lot going on in this small program.
       .. tb-choice::
          :name: random_numbers_2
 
-
-
+         What header file do we need to declare in order to use the ``random`` function?
 
 
          - [x] cstdlib
@@ -120,31 +119,21 @@ Notice there is a lot going on in this small program.
       .. tb-choice::
          :name: random_numbers_3
 
-         we wanted to generate a random number between 0 and 12, 
-          we have previously declared
+         If we wanted to generate a random number between 0 and 12, and we have previously declared int ``int x = random ();``, what should be our next line of code?
 
-         code-block::
+         - [ ] ``int y = x / 12``
 
-         std::random_device dev;
-         std::default_random_engine engine(dev());
+           -   This returns some random number between 0 and x / 12, which is out of range.
 
+         - [ ] ``int y = x % 12``
 
-         t should be our next line of code?
+           -   This returns a random number between 0 and 11.
 
-          ``int x = std::uniform_int_distribution<int> {0, 12} (gen);``
+         - [ ] ``int y = x / 13``
 
-          - [ ] Does not compile. No variable ``gen`` in this program.
+           -   This returns some random number between 0 and x / 13, which is out of range.
 
-          ``std::uniform_int_distribution<int> {0, 12} (engine);``
+         - [x] ``int y = x % 13``
 
-          - [ ] Any random value created is lost.
-              The return value is not stored.
-
-          ``int x = std::uniform_int_distribution<int> {0, 13} (engine);``
-
-          - [x] This returns some random number between 0 and 13, which is out of range.
-
-          ``int x = std::uniform_int_distribution<int> {0, 12} (engine);``
-
-          +   Correct!
+           +   There are 13 numbers from 0 to 12 (the remainders of a division by 13).
 

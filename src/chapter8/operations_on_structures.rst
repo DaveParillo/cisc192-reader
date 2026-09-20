@@ -151,7 +151,7 @@ values of both members.
       .. tb-choice::
          :name: operations_structures_3
 
-
+         Which operators do NOT work on structures. Select all that apply.
 
          - [x] %
 

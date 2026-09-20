@@ -150,28 +150,24 @@ performing floating-point operations.
          .. tb-answer:: blank2
             :match: [Ll][Ee][Ss][Ss]
 
-         .. tb-answer:: blank3
-            :hint: [Mm][Oo][Rr][Ee]; Remember, integer division rounds down to the nearest integer.
-            :incorrect: Remember, C++ performs integer division.
-
    .. tb-tab:: Q3
 
       .. tb-choice::
          :name: floating_point_3
 
-         he lab, we measured a temperature of 7.99999999 degrees C, using
-         xtremely precise measuring device.  Now we are writing a program
-         erform some calculations with our data.  Consider the following C++
-         .
+         In the lab, we measured a temperature of 7.99999999 degrees C, using
+         an extremely precise measuring device.  Now we are writing a program
+         to perform some calculations with our data.  Consider the following C++
+         code.
 
+         ::
 
+             double e = 2.71828;
+             int e_int = e;
+             double e_double = e_int;
+             cout << e_double;
 
-         double e = 2.71828;
-         int e_int = e;
-         double e_double = e_int;
-         cout << e_double;
-
-          is the value of ``e_double`` that is printed to the terminal?
+         What is the value of ``e_double`` that is printed to the terminal?
 
          - [ ] e
 
@@ -228,5 +224,4 @@ performing floating-point operations.
 
      - C++ :lang:`types` and :types:`numeric_limits`
      - :types:`is_floating_point`
-
 

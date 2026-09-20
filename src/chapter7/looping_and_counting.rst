@@ -50,16 +50,17 @@ number of a’s.
       .. tb-choice::
          :name: looping_counting_1
 
-         t does the following code print?
+         What does the following code print?
 
-         code-block:: cpp
-         :linenos:
+         .. code-block:: cpp
+            :linenos:
 
-         int x = -5;
-         while (x < 0) {
-           x = x + 1;
-           cout << x << " ";
-         }
+            int x = -5;
+            while (x < 0) {
+              x = x + 1;
+              cout << x << " ";
+            }
+
 
          - [ ] 5 4 3 2 1
 
@@ -160,47 +161,49 @@ number of a’s.
       .. tb-choice::
          :name: looping_counting_4
 
-         t is the value of ``counter`` right before main returns 0?
+         What is the value of ``counter`` right before main returns 0?
 
-         code-block:: cpp
-         :linenos:
+         .. code-block:: cpp
+            :linenos:
 
-         string word_1 = "understand";
-         string word_2 = "underwaa";
+            string word_1 = "understand";
+            string word_2 = "underwaa";
 
-         std::size_t end_1 = word_1.size();
-         std::size_t end_2 = word_2.size();
+            size_t end_1 = word_1.length();
+            size_t end_2 = word_2.length();
 
-         if ( end_2 < end_1 ){
-            end_1 = end_2;
-         }
+            if ( end_2 < end_1 ){
+               end_1 = end_2;
+            }
 
-         std::size_t index = 0;
-         int counter = 0;
+            size_t index = 0;
+            size_t counter = 0;
 
-         while ( index < end_1 ) {
-           if ( word_1[index] == word_2[index] ){
-              counter = counter + 1;
-           }
+            while ( index < end_1 ) {
+              if ( word_1[index] == word_2[index] ){
+                 counter = counter + 1;
+              }
+              else {
+                 counter = counter - 1;
+              }
+              index = index + 1;
+            }
 
-           else{
-              counter = counter - 1;
-           }
-           ++index;
-         }
+            return 0;
 
-         return 0;
+         - [ ] The code dosen't reach ``return 0`` because we index out of bounds in ``word_2``.
 
-         - [ ] The code dosen't reach <code>return 0</code> becuase we index out of bounds in <code>word_2</code>.
+           - We set ``end_1`` to be the smaller of the two lengths so we don't index out of bounds.
 
-           We set <code>end_1</code> to be the smaller of the two lengths so we don't index out of bounds.
          - [ ] 2
 
-           Not all the letters after index 4 differ in the two words.
+           - Not all the letters after index 4 differ in the two words.
+
          - [ ] 3
 
-           We decrement the value of counter when we don't have matching letters.
+           - We decrement the value of counter when we don't have matching letters.
+
          - [x] 4
 
-           Correct! we have 6 matching letters and 2 differing letters upto the length of <code>word_2</code>.
+           + Correct! we have 6 matching letters and 2 differing letters upto the length of ``word_2``.
 

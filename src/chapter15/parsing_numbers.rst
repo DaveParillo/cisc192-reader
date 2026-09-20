@@ -70,34 +70,43 @@ An integer larger than ``int`` can represent is also rejected. The accumulated
 ``digits`` string is an example of building a result one character at a time.
 
 .. tb-choice::
-   :name: c192_question15_6_1
+   :name: question15_6_1
 
+   What does the ``atoi()`` function do?
 
+   - [ ] takes the absolute value of a number
 
-   - [x] Convert a string to an int and report conversion errors with exceptions.
+     Incorrect! Go back and read for the answer.
+   - [ ] converts a double to an int
 
-     stoi also accepts a pointer for reporting the number of characters consumed.
-   - [ ] Convert any text to an integer, returning zero on every error.
+     Incorrect! Go back and read for the answer.
+   - [x] converts a string to an int
 
-     A conversion error is not silently treated as zero.
+     Correct! This is very helpful when we read numbers from a file (where they are strings).
+   - [ ] converts an int to a string
+
+     Incorrect! Go back and read for the answer.
 
 .. tb-choice::
-   :name: c192_question15_6_2
+   :name: question15_6_2
 
+   Which of the following strings will return "2020" when passed into ``convertToInt()``?
 
+   - [x] 2020
 
-   - [x] "2020"
+     Correct! This one is quite simple.
+   - [x] ab,jkl2!!moo0?huh2mth0haha.
 
-     Plain digits are accepted.
-   - [x] "2,020"
+     Correct! This long, confusing string will clean up nicely!
+   - [ ] 2,00!!!!!!!!2
 
-     The groups have the required lengths.
-   - [ ] "2,02,0"
+     Incorrect!
+   - [x] 2OOO020OOOOO
 
-     Each group after a comma must have three digits.
-   - [ ] "20x20"
+     Correct! You have to look closely to see that some of these are 0's!
+   - [ ] we2love0parsing2numbersO!
 
-     Letters are not valid distance characters.
+     Incorrect! Although we do love parsing numbers, this is incorrect.
 
 .. tb-parsons::
    :name: c192_question15_6_3

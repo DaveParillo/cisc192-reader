@@ -83,17 +83,17 @@ and the special end of line character. Very impressive!
       .. tb-choice::
          :name: output_vars_1
 
-          prints when the following code is run?
+         What prints when the following code is run?
 
+         ::
 
-
-         int main () {
-           char a;
-           char b;
-           a = 'z';
-           b = '8';
-           cout << "a";
-         }
+             int main () {
+               char a;
+               char b;
+               a = 'z';
+               b = '8';
+               cout << "a";
+             }
 
 
          - [x] a
@@ -107,7 +107,7 @@ and the special end of line character. Very impressive!
            The cout statement prints a, not the value of the variable a.
          - [ ] 8
 
-           z is the value of a and will not be printed
+           z is the value of a and 8 will not be printed
          - [ ] Nothing! There will be a compile error!
 
            There is no type mismatch, so there will not be a compile error.
@@ -117,17 +117,17 @@ and the special end of line character. Very impressive!
       .. tb-choice::
          :name: output_vars_2
 
-          what prints?
+         Now, what prints?
 
+         ::
 
-
-         int main () {
-           char a;
-           char b;
-           a = 'z';
-           b = '8';
-           cout << b;
-         }
+             int main () {
+               char a;
+               char b;
+               a = 'z';
+               b = '8';
+               cout << b;
+             }
 
 
          - [ ] a
@@ -138,7 +138,7 @@ and the special end of line character. Very impressive!
            The string b will not be printed.
          - [ ] z
 
-           z is the value of a and will not be printed.
+           z is the value of a and 3 will not be printed.
          - [x] 8
 
            8 is the value of b will be printed!
@@ -151,17 +151,17 @@ and the special end of line character. Very impressive!
       .. tb-choice::
          :name: output_vars_3
 
-         now, what prints?
+         And now, what prints?
 
+         ::
 
-
-         int main () {
-           int x;
-           char y;
-           x = '3';
-           y = 'e';
-           cout << 'y';
-         }
+             int main () {
+               int x;
+               char y;
+               x = '3';
+               y = 'e';
+               cout << 'y';
+             }
 
 
          - [ ] x

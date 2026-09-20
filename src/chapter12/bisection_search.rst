@@ -292,10 +292,10 @@ reached. Either error will cause an infinite recursion, in which case
 C++ will (eventually) generate a run-time error.
 
 .. tb-choice::
-   :name: c192_bisection_search_1
+   :name: bisection_search_1
 
-
-
+   You are given a list of spelling words where the words are **not sorted** in any way.
+   What search method should you use?
 
    - [x] linear search
 
@@ -311,10 +311,10 @@ C++ will (eventually) generate a run-time error.
      Incorrect! Bisection sort does not work on unsorted elements.
 
 .. tb-choice::
-   :name: c192_bisection_search_2
+   :name: bisection_search_2
 
-
-
+   You are given the same list of spelling words, but this time the words are **sorted alphabetically**.
+   What search method should you use this time?
 
    - [ ] linear search
 
@@ -330,9 +330,9 @@ C++ will (eventually) generate a run-time error.
      Correct! When elements are sorted, bisection search is much quicker.
 
 .. tb-choice::
-   :name: c192_bisection_search_3
+   :name: bisection_search_3
 
-
+   When writing a recursive function, which of the following will result in infinite recursion?
 
    - [ ] having more than one recursive call
 

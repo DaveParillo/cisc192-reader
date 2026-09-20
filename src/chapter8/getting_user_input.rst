@@ -146,93 +146,104 @@ Section `[parsing] <#parsing>`__.
       .. tb-choice::
          :name: getting_user_input_1
 
+         What is the difference between ``cin`` and ``getline`` for a string?
 
+         - [ ] ``getline`` only takes the first word of input while ``cin`` reads the entire line until the user hits Return or Enter.
 
-         - [ ] getline only takes the first word of input while getline reads the entire line until the user hits Return or Enter.
+           - Try again!
 
-           Try again.
-         - [x] cin only takes the first word of input while cin reads the entire line until the user hits Return or Enter.
+         - [x] ``cin`` only takes the first word of input while ``getline`` reads the entire line until the user hits Return or Enter.
 
-           Correct!
-         - [ ] cin only takes the first two words of input while getline reads the entire line until there is a space.
+           + Correct!
 
-           Try again.
+         - [ ] ``cin`` only takes the first two words of input while ``getline`` reads the entire line until there is a space.
+
+           - Try again!
 
    .. tb-tab:: Q2
 
       .. tb-choice::
          :name: getting_user_input_2
 
-          user types in ``John Doe``. What prints?
+         The user types in ``John Doe``. What prints?
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         int main() {
-           char name;
-           cout << "What is your name? ";
-           cin >> name;
-           cout << name << endl;
-         }
+            int main() {
+              char name;
+              cout << "What is your name? ";
+              cin >> name;
+              cout << name << endl;
+            }
 
-         - [ ] John
+         - [ ] ``John``
 
-           Try again! Pay attention to the data type of name.
-         - [x] J
+           - Try again! Pay attention to the data type of name.
 
-           Correct!
-         - [ ] John Doe
+         - [x] ``J``
 
-           Try again!
+           + Correct!
+
+         - [ ] ``John Doe``
+
+           - Try again! Pay attention to the manner of getting user input.
+
 
    .. tb-tab:: Q3
 
       .. tb-choice::
          :name: getting_user_input_3
 
-          user types in ``John Doe``. What prints?
+         The user types in ``John Doe``. What prints?
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         int main() {
-           string name;
-           cout << "What is your name? ";
-           cin >> name;
-           cout << name << endl;
-         }
+            int main() {
+              string name;
+              cout << "What is your name? ";
+              cin >> name;
+              cout << name << endl;
+            }
 
-         - [x] John
+         - [x] ``John``
 
-           Correct!
-         - [ ] J
+           + Correct!
 
-           Try again!
-         - [ ] John Doe
+         - [ ] ``J``
 
-           Try again!
+           - Try again! Pay attention to the data type of name.
+
+         - [ ] ``John Doe``
+
+           - Try again! Pay attention to the manner of getting user input.
+
 
    .. tb-tab:: Q4
 
       .. tb-choice::
          :name: getting_user_input_4
 
-          user types in ``John Doe``. What prints?
+         The user types in ``John Doe``. What prints?
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         int main() {
-           string name;
-           cout << "What is your name? ";
-           getline (cin, name);
-           cout << name << endl;
-         }
+            int main() {
+              string name;
+              cout << "What is your name? ";
+              getline (cin, name);
+              cout << name << endl;
+            }
 
-         - [ ] John
+         - [ ] ``John``
 
-           Try again!
-         - [ ] J
+           - Try again! Pay attention to the manner of getting user input.
 
-           Try again!
-         - [x] John Doe
+         - [ ] ``J``
 
-           Correct!
+           - Try again! Pay attention to the manner of getting user input.
+
+         - [x] ``John Doe``
+
+           + Correct!
+
 

@@ -82,13 +82,13 @@ Try it for yourself and see what happens.
       .. tb-choice::
          :name: string_concatenation_1
 
-         t is printed by the following statements?
+         What is printed by the following statements?
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         string s = "C++";
-         string t = "rocks";
-         cout << s + t << endl;
+            string s = "C++";
+            string t = "rocks";
+            cout << s + t << endl;
 
          - [ ] C++ rocks
 

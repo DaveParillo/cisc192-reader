@@ -2,7 +2,7 @@ Multiple Choice Exercises
 -------------------------
 
 .. tb-choice::
-   :name: c192_mce_15_1
+   :name: mce_15_1
 
    We want to open a file and parse its data into our program. What library
    do we need to include?
@@ -24,7 +24,7 @@ Multiple Choice Exercises
      - This library is used to modify internal flags and formatting options.
 
 .. tb-choice::
-   :name: c192_mce_15_2
+   :name: mce_15_2
 
    The code below reads data from a file called ``input.txt``. What is wrong with the following code?
 
@@ -32,12 +32,13 @@ Multiple Choice Exercises
 
        #include <iostream>
        #include <fstream>
+       using namespace std;
 
        int main() {
-         std::string input;
-         std::string filename = "input.txt";
-         std::ifstream infile(filename);
-         std::getline(filename, input);
+         string input;
+         string filename = "input.txt";
+         ifstream infile(filename.c_str());
+         getline(filename, input);
        }
 
    - [ ] We should use ``ofstream`` instead of ``ifstream``.
@@ -57,7 +58,7 @@ Multiple Choice Exercises
      - Take another look at the code. Are we reading the input correctly into ``input``?
 
 .. tb-choice::
-   :name: c192_mce_15_3
+   :name: mce_15_3
 
    We want to make sure the file we wanted to open was opened successfully. Which of the
    following checks this and prints the proper output?
@@ -79,13 +80,13 @@ Multiple Choice Exercises
      - The ``open()`` function is different from ``is_open()`` and does not return a ``bool``.
 
 .. tb-choice::
-   :name: c192_mce_15_4
+   :name: mce_15_4
 
    Which of the following statements are true?
 
-   - [x] The ``std::ifstream`` constructor can accept a ``std::string`` filename.
+   - [x] The ``ifstream`` constructor expects a C string as an argument.
 
-     + C++20 accepts the string directly; a ``c_str()`` conversion is unnecessary.
+     + Thus you should convert a filename string to a C string using the c_str() function.
 
    - [ ] We can assume the program opens all files successfully.
 
@@ -100,7 +101,7 @@ Multiple Choice Exercises
      - We are also able to use the operators for ``fstream`` objects.
 
 .. tb-choice::
-   :name: c192_mce_15_5
+   :name: mce_15_5
 
    What are the contents of the output file ``output.txt`` after running the code below?
 
@@ -108,16 +109,17 @@ Multiple Choice Exercises
 
        #include <iostream>
        #include <fstream>
+       using namespace std;
 
        int main() {
-         std::ofstream outfile("output.txt");
+         ofstream outfile("output.txt");
 
          if (!outfile.good()) {
-           std::cout << "Unable to open file" << std::endl;
+           cout << "Unable to open file" << endl;
          }
 
-         std::cout << "Powers of 2: ";
-         outfile << "2 4 8 16 32 64" << std::endl;
+         cout << "Powers of 2: ";
+         outfile << "2 4 8 16 32 64" << endl;  
        }
 
    - [x] 2 4 8 16 32 64
@@ -137,7 +139,7 @@ Multiple Choice Exercises
      - Although this may be printed, this is not the contents of the output file.
 
 .. tb-choice::
-   :name: c192_mce_15_6
+   :name: mce_15_6
 
    The file ``scores.txt`` contains data about the roster number and test scores of students in a class.
    The output file ``averages.txt`` should store each student's roster number and average test score.
@@ -147,25 +149,26 @@ Multiple Choice Exercises
 
        #include <iostream>
        #include <fstream>
+       using namespace std;
 
        int main() {
-         std::string junk;
-         int student_num;
+         string junk;
+         int studentNum;
          double mid1, mid2, final;
-         std::ifstream infile("scores.txt");
-         std::ofstream outfile("averages.txt");
+         ifstream infile("scores.txt");
+         ofstream outfile("averages.txt");
 
          if (!infile.good() || !outfile.good()) {
-           std::cout << "Unable to open a file" << std::endl;
+           cout << "Unable to open a file" << endl;
          }
 
-         std::getline(infile, junk);
-         outfile << "student#\t_average" << std::endl;
+         getline(infile, junk);
+         outfile << "Student#\tAverage" << endl;
 
-         while (infile >> student_num >> mid1 >> mid2 >> final) {
+         while (infile >> studentNum >> mid1 >> mid2 >> final) {
            double avg = (mid1 + mid2 + final) / 3;
-           ???
-         }
+           ???  
+         }  
        }
 
    - [ ] ``cout << avg << endl``
@@ -176,16 +179,16 @@ Multiple Choice Exercises
 
      - Take another look at the code. Is there a clue as to what data should be in the output file?
 
-   - [ ] ``infile << student_num << "\t" << avg << endl``
+   - [ ] ``infile << studentNum << "\t" << avg << endl``
 
      - The data should be written to the output file.
 
-   - [x] ``outfile << student_num << "\t" << avg << endl``
+   - [x] ``outfile << studentNum << "\t" << avg << endl``
 
      + This properly outputs the student number and the student's average to the output file.
 
 .. tb-choice::
-   :name: c192_mce_15_7
+   :name: mce_15_7
 
    What does the following code do?
 
@@ -193,17 +196,18 @@ Multiple Choice Exercises
 
        #include <iostream>
        #include <string>
+       using namespace std;
 
        int main() {
-         std::string original = "430-0444";
-         std::string digit_string = "";
+         string original = "430-0444";
+         string digitString = "";
 
-         for (std::size_t i = 0; i < original.length(); i++) {
-           if (std::isdigit(static_cast<unsigned char>(original[original.length() - 1 - i]))) {
-             digit_string += original[original.length() - 1 - i];
+         for (size_t i = 0; i < original.length(); i++) {
+           if (isdigit(original[original.length() - 1 - i])) {
+             digitString += original[original.length() - 1 - i];
            }
          }
-         std::cout << std::stoi(digit_string) << std::endl;
+         cout << atoi(digitString.c_str()) << endl;
        }
 
    - [ ] The code converts the original string to an integer and outputs the integer.
@@ -212,85 +216,110 @@ Multiple Choice Exercises
 
    - [ ] The code converts an integer to a string and outputs the string.
 
-     - What does the ``std::stoi`` function do?
+     - What does the ``atoi`` function do?
 
    - [ ] The code outputs the sum of all the original string's digits.
 
-     - The ``digit_string`` variable is a ``string``, not an ``int``.
+     - The ``digitString`` variable is a ``string``, not an ``int``.
 
    - [x] The code converts the original string to an integer in reverse and outputs the integer in reverse.
 
      + The code in the ``for`` loop parses the string in reverse.
 
 .. tb-choice::
-   :name: c192_mce_15_8
+   :name: mce_15_8
 
+   Which of the following statements are false about the ``Set`` data structure?
 
+   - [x] A set can contain multiple elements with the same value.
 
-   - [x] A std::set can store the same key multiple times.
+     + All elements in a set are unique.
 
-     A set stores each distinct key once.
-   - [x] A std::set provides numeric indexing with operator[].
+   - [ ] We can identify elements of a set by each element's index.
 
-     Use membership tests or iterators, not numeric indexing.
-   - [ ] A std::set keeps keys sorted by its comparison function.
+     - Each element has an index associated with it.
 
-     This is true, so do not select it as false.
-   - [ ] A std::set can grow as keys are inserted.
+   - [x] The elements of a ``Set`` are always sorted.
 
-     This is true; a set is not fixed-size.
+     + Although a set is ordered, it is not necessarily sorted.
 
-.. tb-choice::
-   :name: c192_mce_15_9
+   - [x] The size of a ``Set`` object is fixed.
 
-
-
-   - [x] std::array<std::array<int, 6>, 2> table{};
-
-     Two rows of six integers are value-initialized to zero.
-   - [x] std::vector<std::vector<int>> table(2, std::vector<int>(6, 0));
-
-     Two vectors of six zero-initialized integers form the table.
-   - [ ] std::vector<int> table(2, 6);
-
-     This creates a one-dimensional vector of two integers equal to 6.
+     + The ``Set`` data structure can expand to make room for new elements.
 
 .. tb-choice::
-   :name: c192_mce_15_10
+   :name: mce_15_9
 
-   t does this C++20 program print?
+   There are many ways to construct a ``matrix``. Which of the following are valid constructors of a ``matrix``?
 
-   code-block:: cpp
+   - [ ] ``matrix<string> m1(2);``
 
-   #include <array>
-   #include <cstddef>
-   #include <iostream>
+     - A ``matrix`` has two dimensions and this constructor only has one dimension.
 
-   int main() {
-       std::array<std::array<int, 2>, 4> table{};
-       for (std::size_t row = 0; row < table.size(); ++row) {
-           for (std::size_t col = 0; col < table[row].size(); ++col) {
-               if ((row + col) % 2 == 0) {
-                   table[row][col] = static_cast<int>(row + col);
-               }
-           }
+   - [x] ``matrix<int> m2(2, 6, 0);``
+
+     + This creates a ``matrix`` with 2 rows and 6 columns with all of its elements equal to 0.
+
+   - [x] ``matrix<char> m3(m2);``
+
+     + This creates ``m3`` to be a copy of ``m2``.
+
+   - [ ] ``matrix<int> m2(2.4, 2);``
+
+     - There must be a whole number of rows and columns.
+
+.. tb-choice::
+   :name: mce_15_10
+
+   What is the output of the following code?
+
+   .. code-block:: cpp
+
+       #include <iostream>
+       #include <vector>
+       using namespace std;
+
+       bool secret_function(int num) {
+         if (num % 2 == 0) {
+           return true;
+         }
+         return false;
        }
-       int total = 0;
-       for (const auto& row : table) {
-           for (int value : row) {
-               total += value;
+
+       int main() {
+         matrix<int> mat(4, 2);
+         for (size_t i = 0 i < mat.size(); ++i) {
+           for (size_t j = 0; j < mat[i].size(); ++j) {
+             if (!secret_function(i + j) {
+               mat[i][j] = 0;
+             }
+             else {
+               mat[i][j] = i + j;
+             }
            }
+         }
+         int n;
+         for (size_t i = 0 i < mat.size(); ++i) {
+           for (size_t j = 0; j < mat[i].size(); ++j) {
+             n += mat[i][j];
+           }
+         }
+         cout << n << endl;
        }
-       std::cout << total << '\n';
-   }
 
-   - [x] 8
+   - [ ] 8
 
-     The nonzero entries are 2, 2, and 4, whose sum is 8.
+     - The matrix only contains even sums of the row and column indices and 0 otherwise. Thus, the sum of all elements is 8.
+
    - [ ] 16
 
-     Only even row-plus-column sums are stored.
+     - What does the secret function do?
+
    - [ ] 0
 
-     Several positions receive nonzero values.
+     - What are the contents of the matrix?
+
+   - [x] 9
+
+     + What are the contents of the matrix?
 

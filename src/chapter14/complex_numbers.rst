@@ -225,8 +225,9 @@ angle between them. Notice how our ``main`` function is the exact same as before
       {{endgroup}}
 
 .. tb-choice::
-   :name: c192_question14_3_2
+   :name: question14_3_2
 
+   Keeping instance variables private helps prevent client programs from making errors by reading uninitialized values.
 
    - [x] True
 

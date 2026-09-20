@@ -67,32 +67,36 @@ to read.
       .. tb-choice::
          :name: local_variables_1
 
-          there any issues with the code below?
+         Are there any issues with the code below?
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         #include <iostream>
+          #include <iostream>
+          using namespace std;
 
-         int main() {
-           using std::cout;
-           cout << "Let's print some numbers.\n";
-           for (int i = 1; i < 10; ++i) {
-             cout << i << "! ";
-           }
-           i = 10;
-           cout << i << "!";
-         }
+          int main() {
+            cout << "Let's print the multiples of 2." << endl;
+            int i = 1;
+            while (i < 10) {
+              int j = i * 2;
+              cout << i << ": " << j << endl;
+              i++;
+            }
+            i = 10;
+            j = 20;
+            cout << i << ": " << j << "!";
+          }
 
-         - [x] Yes, we cannot output the value of i outside of the for loop.
+         - [x] Yes, we cannot output the value of j outside of the loop.
 
-           The scope of i is restricted to the for loop, so we cannot change the value of i outside of the for loop.
-         - [ ] Yes, we cannot output anything before the for loop.
+           The scope of i is restricted to the loop, so we cannot change the value of i outside of the loop.
+         - [ ] Yes, we cannot output anything before the loop.
 
            This is allowed.
-         - [x] Yes, we cannot reassign i to 10 outside of the for loop.
+         - [x] Yes, we cannot reassign j to 20 outside of the loop.
 
-           The scope of i is restricted to the for loop, so we cannot output the value of i outside of the for loop.
-         - [ ] Yes, we cannot let i start at 1 in the for loop.
+           The scope of i is restricted to the loop, so we cannot output the value of i outside of the loop.
+         - [ ] Yes, we cannot let i start at 1 in the loop.
 
            We are allowed to initialize i to any value.
          - [ ] No, there are no issues with the code below.
@@ -104,77 +108,82 @@ to read.
       .. tb-choice::
          :name: local_variables_2
 
-         e a look at the code below. The ``i`` in ``print_multiples`` is the same variable as the ``i`` in ``multiples_table``.
+         Take a look at the code below. Is the ``i`` in ``printMultiples`` the same variable as the ``i`` in ``printMultTable``?
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         #include <iostream>
-         using std::cout;
+          #include <iostream>
+          using namespace std;
 
-         void print_multiples (int n) {
-           int i = 1;
-           while (i <= 6) {
-             cout << n*i << '\t';
-             i = i + 1;
-           }
-           cout << '\n';
-         }
+          void printMultiples (int n) {
+            int i = 1;
+            while (i <= 6) {
+              cout << n * i << '\t';
+              i = i + 1;
+            }
+            cout << endl;
+          }
 
-         void multiples_table() {
-           int i = 1;
-           while (i <= 6) {
-             print_multiples (i);
-             i = i + 1;
-           }
-         }
+          void printMultTable() {
+            int i = 1;
+            while (i <= 6) {
+              printMultiples (i);
+              i = i + 1;
+            }
+          }
 
-         int main() {
-           multiples_table();
-         }
+          int main() {
+            printMultTable();
+          }
 
-         - [ ] True
+         - [ ] Yes
 
-           They are two different variables in two different scopes but they do have the same name.
-         - [x] False
+           They are two different variables in two different scopes, but they do have the same name.
+         - [x] No
 
-           Yes, they are not the same variable.
+           Correct! They are not the same variable.
 
    .. tb-tab:: Q3
 
       .. tb-choice::
          :name: local_variables_3
 
-         e a look at the code below. The variable ``j`` is accessable in the function ``print_multiples``
+         Take a look at the code below. Is the variable ``j`` accessable  in the function ``printMultiples``?
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         #include <iostream>
+             #include <iostream>
+             using namespace std;
 
-         void print_multiples (int n) {
-           int i = 1;
-           while (i <= 6) {
-             std::cout << n*i << '\t';
-             i = i + 1;
-           }
-           std::cout << '\n';
-         }
+             void printMultiples (int n) {
+               int i = 1;
+               while (i <= 6) {
+                 cout << n * i << '\t';
+                 i = i + 1;
+               }
+               cout << endl;
+             }
 
-         void multiples_table() {
-           int j = 1;
-           while (j <= 6) {
-             print_multiples (j);
-             j = j + 1;
-           }
-         }
+             void printMultTable() {
+               int j = 1;
+               while (j <= 6) {
+                 printMultiples (j);
+                 j = j + 1;
+               }
+             }
 
-         int main() {
-           multiples_table();
-         }
+             int main() {
+               printMultTable();
+             }
 
-         - [ ] True
 
-           The scope of ``j`` does not include ``print_multiples`` function.
-         - [x] False
+         - [ ] Yes
 
-           Yes, ``j`` is not accessable as the value is merely passes from one function to another. We cannot have a statement such as j++; in ``print_multiples`` as it is out of the scope of ``multiples_table``
+           - The scope of ``j`` does not include ``printMultiples`` function.
+
+         - [x] No
+
+           + Correct! ``j`` is not accessable as the value is merely passes from one function to another. We cannot have a statement such as j++; in ``printMultiples`` as it is out of the scope of ``printMultTable``
+
+
 

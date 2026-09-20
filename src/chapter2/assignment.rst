@@ -143,33 +143,34 @@ assignment is illegal:
       .. tb-choice::
          :name: assignment_2
 
-          must be changed in order for this code block to work?
+         What must be changed in order for this code block to work?
+
+         ::
+
+             #include <iostream>
+             using namespace std;
+             // main: generate some simple output
+
+             int main () {
+               int p;
+               int q;
+               p = "h";
+               q = "9";
+             }
 
 
-
-         // Include the string header for the corrected declarations.
-         #include <string>
-
-         int main () {
-           int p;
-           int q;
-           p = "h";
-           q = "9";
-         }
-
-
-         - [ ] Change the type of variable q from int to std::string.
+         - [ ] Change the type of variable q from int to string.
 
            Yes, but take a look at variable p.
-         - [x] Change the type of both variables (p and q) from int to std::string.
+         - [x] Change the type of both variables (p and q) from int to string.
 
-           Both assignments use double-quoted string literals, so use std::string for both variables.
-         - [ ] Change the type of variable p from int to std::string.
+           Both variables are a character surrounded by double quotes, so they should be type string.
+         - [ ] Change the type of variable p from int to char.
 
            Yes, but take a look at variable q.
          - [ ] Nothing needs to change! The code will work just fine!
 
-           The string literals cannot be assigned to int variables; the code fails to compile.
+           No! There will be a compile error.
 
    .. tb-tab:: Q3
 

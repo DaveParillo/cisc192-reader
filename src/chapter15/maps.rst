@@ -68,13 +68,24 @@ logarithmic time. As with sets, an unordered counterpart is available when
 hashing rather than sorted iteration fits the task.
 
 .. tb-choice::
-   :name: c192_map_lookup_question
+   :name: mce_15_1
 
+   We want to open a file and parse its data into our program. What library
+   do we need to include?
 
-   - [ ] distances["Seattle"]
+   - [ ] ``iostream``
 
-     Subscript inserts a missing key, which can create a misleading zero distance.
-   - [x] distances.find("Seattle")
+     - This library deals with communication through the standard input and output.
 
-     find reports absence by returning end() and leaves the map unchanged.
+   - [ ] ``sstream``
+
+     -  This library is used to manipulate string objects as if they were streams.
+
+   - [x] ``fstream``
+
+     + This library is used to manipulate files using streams.
+
+   - [ ] ``iomanip``
+
+     - This library is used to modify internal flags and formatting options.
 

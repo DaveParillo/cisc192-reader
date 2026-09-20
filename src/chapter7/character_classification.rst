@@ -92,7 +92,7 @@ If you get stuck, you can reveal the extra problems at the end for help.
    }
 
 .. tb-reveal:: Reveal Problem
-   :name: 7_14_1
+   :name: id_7_14_1
 
    .. tb-parsons::
       :name: character_classification_1
@@ -142,7 +142,7 @@ If you get stuck, you can reveal the extra problems at the end for help.
          {{endgroup}}
 
 .. tb-reveal:: Reveal Problem
-   :name: 7_14_2
+   :name: id_7_14_2
 
    .. tb-parsons::
       :name: character_classification_2
@@ -190,4 +190,3 @@ If you get stuck, you can reveal the extra problems at the end for help.
             }
          }
          {{endgroup}}
-

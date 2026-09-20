@@ -206,7 +206,7 @@ where they make sense.
       .. tb-choice::
          :name: for_loops_2
 
-
+         Where are the incrementors in ``for`` loops and ``while``?
 
          - [ ] in the BODIES of both loops
 

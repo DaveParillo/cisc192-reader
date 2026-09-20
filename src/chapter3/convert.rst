@@ -238,20 +238,20 @@ Explicit type construction
       .. tb-choice::
          :name: double_to_int_1
 
-         he lab, we measured a temperature of 7.99999999 degrees C, using
-         xtremely precise measuring device.  Now we are writing a program
-         erform some calculations with our data.  Consider the following C++
-         .
+         In the lab, we measured a temperature of 7.99999999 degrees C, using
+         an extremely precise measuring device.  Now we are writing a program
+         to perform some calculations with our data.  Consider the following C++
+         code.
 
+         ::
 
+             int main () {
+               double temp = 7.99999999;
+               int roundedTemp = int (temp);
+               cout << roundedTemp;
+             }
 
-         int main () {
-           double temp = 7.99999999;
-           int approx_temp = int (temp);
-           cout << approx_temp;
-         }
-
-          is the value of ``approx_temp``?
+         What is the value of roundedTemp?
 
 
          - [ ] temp
@@ -259,7 +259,7 @@ Explicit type construction
            This is the name of a variable. Only the value of a variable will print with cout.
          - [ ] 8
 
-           Remember that converting to an integer always truncates.
+           Remember that converting to an integer always rounds down.
          - [x] 7
 
            Correct!
@@ -275,52 +275,52 @@ Explicit type construction
       .. tb-choice::
          :name: double_to_int_2
 
-          final grade consists of your average performance on exam 1 and exam 2.  
-          professor is using C++ to grade the exams and allows you to choose which
-         od you'd like your exam to be graded.
+         Your final grade consists of your average performance on exam 1 and exam 2.  
+         Your professor is using C++ to grade the exams and allows you to choose which
+         method you'd like your exam to be graded.
 
+         ::
 
+               double exam1 = 88.8;
+               double exam2 = 72.7;
+               double exam3 = 97.9;
 
-           double exam1 = 88.8;
-           double exam2 = 72.7;
-           double exam2 = 97.9;
+         **Method 1:**
 
-         thod 1:**
+         ::
 
+               double final = (int(exam1) + int(exam2) + int(exam3)) / 3;
 
+         **Method 2:**
 
-           double final = (int(exam1) + int(exam2) + int(exam3)) / 3;
+         ::
 
-         thod 2:**
+               int final = int((exam1 + exam2 + exam3) / 3);
 
+         Which method would **you** choose and why?
 
+         - [ ] **Method 1:** ``final`` is a ``double``, meaning my final grade will
+           have more digits past the decimal, and will be higher than the ``int``
+           in Method 2.
 
-           int final = int((exam1 + exam2 + exam3) / 3);
+           -   Although ``final`` is a ``double``, it doesn't have any digits past
+               the decimal due to the integer division.
 
-         h method would you choose and why?
+         - [ ] **Method 1:** the rounding happens at the beginning, so all three of my
+           test scores will be rounded to the nearest ``int``, which in my case, will
+           round all of them up.
 
-         **Method 1:** ``final`` is a ``double``, meaning my final grade will
-         have more digits past the decimal, and will be higher than the ``int``
-         in Method 2.
+           -   Converting to an ``int`` always rounds *down*, even if your ``double`` is very 
+               close to the next integer.
 
-         - [ ] Although ``final`` is a ``double``, it doesn't have any digits past
-             the decimal due to the integer division.
+         - [ ] **Method 2:** ``final`` is an ``int``, so it gets rounded up.
 
-         **Method 1:** the rounding happens at the beginning, so all three of my
-         test scores will be rounded to the nearest ``int``, which in my case, will
-         round all of them up.
+           -   Converting to an ``int`` always rounds *down*, even if your ``double`` is very 
+               close to the next integer.
 
-         - [ ] Converting to an ``int`` always rounds *down*, even if your ``double`` is very 
-             close to the next integer.
+         - [x] **Method 2:** the rounding happens at the very end, so my grade will be higher!
 
-         **Method 2:** ``final`` is an ``int``, so it gets rounded up.
-
-         - [x] Converting to an ``int`` always rounds *down*, even if your ``double`` is very 
-             close to the next integer.
-
-         **Method 2:** the rounding happens at the very end, so my grade will be higher!
-
-         +   Always save your rounding until the end!
+           +   Always save your rounding until the end!
 
 -----
 

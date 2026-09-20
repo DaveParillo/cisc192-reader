@@ -243,27 +243,27 @@ For this reason, you often see math functions used without the
       .. tb-choice::
          :name: math_functions_3
 
-         ltiple Response** Select all correct cmath functions.
+         **Multiple Response** Select all correct cmath functions.
 
-         ``cos``
+         - [x] ``cos``
 
-         +   This function computes the cosine of an angle.
+           +   This function computes the cosine of an angle.
 
-         ``arctan``
+         - [ ] ``arctan``
 
-         - [x] The arc tangent function is actually called ``atan``.
+           -   The arc tangent function is actually called ``atan``.
 
-         ``log10``
+         - [x] ``log10``
 
-         +   This function computes the 'common' logarithm.
+           +   This function computes the common logarithm.
 
-         ``pow``
+         - [x] ``pow``
 
-         +   This function raises an expression to a power.
+           +   This function raises an expression to a power.
 
-         ``ln``
+         - [ ] ``ln``
 
-         - [ ] The natural log function is actually called ``log``.
+           -   The natural log function is actually called ``log``.
 
 -----
 

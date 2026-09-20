@@ -159,7 +159,7 @@ The general form for a ``do-while`` loop is:
       .. tb-choice::
          :name: while_statement_1
 
-
+         Which of the following is NOT a valid condition for a while statement?
 
          - [x] n = 2
 
@@ -176,17 +176,17 @@ The general form for a ``do-while`` loop is:
       .. tb-choice::
          :name: while_statement_2
 
-          following code contains an infinite loop.  Which is the best explanation for why the loop does not terminate?
+         The following code contains an infinite loop.  Which is the best explanation for why the loop does not terminate?
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         int n = 10;
-         int answer = 1;
-         while (n > 0) {
-           answer = answer + n;
-           n = n + 1;
-         }
-         cout << answer;
+           int n = 10;
+           int answer = 1;
+           while (n > 0) {
+             answer = answer + n;
+             n = n + 1;
+           }
+           cout << answer;
 
          - [x] n starts at 10 and is incremented by 1 each time through the loop, so it will always be positive.
 
@@ -206,49 +206,52 @@ The general form for a ``do-while`` loop is:
       .. tb-choice::
          :name: while_statement_3
 
-          following code is a program to print the **even numbers from 0 to 20**. The code contains blanks. What is the correct while statement condition and iteration needed in order for the code to run successfully.
+         The following code is a program to print the **even numbers from 0 to 20**. The code contains blanks. What is the correct while statement condition and iteration needed in order for the code to run successfully.
 
-         code-block:: cpp
+         .. code-block::
 
-         int n = 0;
-         while (_____) {  // while statement condition
-           cout << n << '\n';
-           _______; // iteration of the variable
-         }
+            int n = 0;
+              while (_____) {    // while statement condition
+              cout << n << endl;
+              _______;           // iteration of the variable
+            }
 
-         - [ ] n % 2 = 0 && n = n + 1
+         - [ ] ``n % 2 = 0 && n <= 20`` and ``n = n + 1``
 
-           A single equal sign is the assignment operator, not comparison.
-         - [ ] n % 2 != 0 && ++n
+           - A single equal sign is the assignment operator, not comparison.
 
-           The code is meant to print the **even** numbers from 0-20
-         - [x] n % 2 == 0 && n++
+         - [ ] ``n % 2 != 0 && n <= 20`` and ``n = n + 1``
 
-           The condition checks whether a number is even and increments the variable n
-         - [ ] n == "even" && n = n + 2
+           - The code is meant to print the **even** numbers from 0-20
 
-           n is an int and here you are comparing it to a string.
+         - [x] ``n % 2 == 0 && n <= 20`` and ``n = n + 1``
+
+           + The condition checks whether a number is even and increments the variable ``n``
+
+         - [ ] ``n == "even" && n <= 20`` and ``n = n + 2``
+
+           - ``n`` is an ``int`` and here you are comparing it to a ``string``.
+
 
    .. tb-tab:: Q4
 
       .. tb-choice::
          :name: while_statement_4
 
-         t is printed by this code?
+         What is printed by this code?
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         int n = 1;
-         int x = 2;
-         do {
-           n = n + 1;
-           x = x + 1;
-           n = n + 2;
-           x = x + n;
-         } while (n < 5);
-         cout << n;
-         cout << x;
-
+           int n = 1;
+           int x = 2;
+           while (n < 5) {
+             n = n + 1;
+             x = x + 1;
+             n = n + 2;
+             x = x + n;
+           }
+           cout << n;
+           cout << x;
 
          - [ ] 4 7
 

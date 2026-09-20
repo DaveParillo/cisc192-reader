@@ -56,11 +56,11 @@ remaining implementation of these functions as an exercise to the
 reader.
 
 .. tb-choice::
-   :name: c192_shuffling_1
+   :name: shuffling_1
 
+   Which library should we include to create random numbers?
 
-
-   - [x] random
+   - [x] cstdlib
 
      Correct!
    - [ ] iostream

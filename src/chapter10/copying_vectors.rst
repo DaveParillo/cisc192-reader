@@ -72,23 +72,23 @@ Take a look at the active code below, which uses the copy constructor.
       .. tb-choice::
          :name: copying_vectors_1
 
-         ltiple Response** How would you make a copy of ``vector<double> decimals`` called **nums**?
+         **Multiple Response** How would you make a copy of ``vector<double> decimals`` called **nums**?
 
-         ``vector<double> nums = decimals;``
+         - [x] ``vector<double> nums = decimals;``
 
-         +   This is one way to make a copy.
+           +   This is one way to make a copy.
 
-         ``vector<double> decimals = nums;``
+         - [ ] ``vector<double> decimals = nums;``
 
-         - [x] This makes a copy of nums called decimals.
+           -   This makes a copy of nums called decimals.
 
-         ``vector<double> nums (decimals);``
+         - [x] ``vector<double> nums (decimals);``
 
-         +   This is one way to make a copy.
+           +   This is one way to make a copy.
 
-         ``vector<double> decimals (nums);``
+         - [ ] ``vector<double> decimals (nums);``
 
-         - [ ] This makes a copy of nums called decimals.
+           -   This makes a copy of nums called decimals.
 
 
    .. tb-tab:: Q2

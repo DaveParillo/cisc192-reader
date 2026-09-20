@@ -12,165 +12,165 @@ assess what you have learned in this chapter.
       .. tb-choice::
          :name: functions_mc1
 
-         want to spice up your resume before the career fair, so you decide to
-         te your GPA using the program below. What is the GPA that you will 
-          on display for future employers?
+         You want to spice up your resume before the career fair, so you decide to
+         update your GPA using the program below. What is the GPA that you will 
+         have on display for future employers?
 
+         ::
 
+             #include <iostream>
 
-         #include <iostream>
+             int main() {
+               double gpa = 3.52;
+               int updated_gpa = int(gpa);
+               std::cout << "GPA: " << updated_gpa;
+             }
 
-         int main() {
-           double gpa = 3.52;
-           int updated_gpa = int(gpa);
-           std::cout << "GPA: " << updated_gpa;
-         }
+         - [ ] ``3.0``
 
-         ``3.0``
+           -   Its correct to think that your GPA will be truncated, but what 
+               else happens when you convert from ``int`` to ``double``?
 
-         - [x] Its correct to think that your GPA will be truncated, but what 
-             else happens when you convert from ``int`` to ``double``?
+         - [x] ``3``
 
-         ``3``
+           +   Converting to an ``int`` always truncates, so I do not 
+               recommend using type conversions to build your resume... especially if you're 
+               close to ``4.0``.
 
-         +   Converting to an ``int`` always truncates, so I do not 
-             recommend using type conversions to build your resume... especially if you're 
-             close to ``4.0``.
+         - [ ] ``4.0``
 
-         ``4.0``
+           -   Converting to an int *will* change your GPA, but not in the direction
+               that you were hoping for... what else happens when you convert from
+               ``int`` to ``double``?
 
-         - [ ] Converting to an int *will* change your GPA, but not in the direction
-             that you were hoping for... what else happens when you convert from
-             ``int`` to ``double``?
+         - [ ] ``4``
 
-         ``4``
+           -   Converting to an int *will* change yor GPA, but not in the direction
+               that you were hoping for.
 
-         - [ ] Converting to an int *will* change yor GPA, but not in the direction
-             that you were hoping for.
+         - [ ] Error!
 
-         Error!
-
-         - [ ] No errors here! Type conversions are perfectly legal in C++!
+           -   No errors here! Type conversions are perfectly legal in C++!
 
    .. tb-tab:: Q2
 
       .. tb-choice::
          :name: functions_mc2
 
-          is the value of x after the program executes?
+         What is the value of x after the program executes?
 
+         ::
 
+             #include <iostream>
 
-         #include <iostream>
+             int main() {
+               int x = acos(-1);
+             }
 
-         int main() {
-           int x = acos(-1);
-         }
+         - [ ] 3.14159265358979323846
 
-         3.14159265358979323846
+           -   If ``x`` were a double, C++ would automatically round the value
+               of pi to **15** decimal places.
 
-         - [ ] If ``x`` were a double, C++ would automatically round the value
-             of pi to **15** decimal places.
+         - [ ] 3.142
 
-         3.142
+           -   If ``x`` were a double, C++ would automatically round the value
+               of pi to **15** decimal places.
 
-         - [ ] If ``x`` were a double, C++ would automatically round the value
-             of pi to **15** decimal places.
+         - [ ] 3.0
 
-         3.0
+           -   Automatic type conversion will round the value of pi down to the
+               nearest integer, but what else happens when we convert a ``double``
+               to an ``int``?
 
-         - [ ] Automatic type conversion will round the value of pi down to the
-             nearest integer, but what else happens when we convert a ``double``
-             to an ``int``?
+         - [ ] 3
 
-         3
+           -   The value of x *should* be 3, since automatic type conversion will
+               round the value of pi down to the nearest integer.
 
-         - [x] The value of x *should* be 3, since automatic type conversion will
-             round the value of pi down to the nearest integer.
+         - [x] Error!
 
-         Error!
-
-         +   Whenever we use math functions, we must include the ``<cmath>`` header file.
+           +   Whenever we use math functions, we must include the ``<cmath>`` header file.
 
    .. tb-tab:: Q3
 
       .. tb-choice::
          :name: functions_mc3
 
-         ltiple Response** Select all variables that have a *non-zero* value after the decimal place.
-          has a *non-zero* value, while 3.0 does not)
+         **Multiple Response** Select all variables that have a *non-zero* value after the decimal place.
+         (3.1 has a *non-zero* value, while 3.0 does not)
 
+         ::
 
+             int main() {
+               int a = 1.5;
+               double b = a + 1.5;
+               double c = 2.4;
+               double d = 1/5;
+               int e = c * c;
+               double f = int(c);
+             }
 
-         int main() {
-           int a = 1.5;
-           double b = a + 1.5;
-           double c = 2.4;
-           double d = 1/5;
-           int e = c * c;
-           double f = int(c);
-         }
+         - [ ] ``a``
 
-         ``a``
+           -   C++ performs automatic type conversion to truncate 1.5 to 1. 
 
-         - [x] C++ performs automatic type conversion to truncate 1.5 to 1. 
+         - [x] ``b``
 
-         ``b``
+           +   Since ``a = 1``, we know that ``b = 2.5``, which is a non-zero decimal.
 
-         +   Since ``a = 1``, we know that ``b = 2.5``, which is a non-zero decimal.
+         - [x] ``c``
 
-         ``c``
+           +   ``c`` is a ``double`` and has a non-zero decimal.
 
-         +   ``c`` is a ``double`` and has a non-zero decimal.
+         - [ ] ``d``
 
-         ``d``
+           -   C++ performs integer division which truncates ``1/5``.
+               The value will be stored as ``0``, not ``0.2``.
 
-         - [ ] C++ performs integer division which truncates ``1/5``.
-             The value will be stored as ``0``, not ``0.2``.
+         - [ ] ``e``
 
-         ``e``
+           -   ``c`` squared may have a non-zero decimal,
+               but automatic type conversion will truncate it before
+               storing the value in ``e``.
 
-         - [ ] ``c`` squared may have a non-zero decimal,
-             but automatic type conversion will truncate it before
-             storing the value in ``e``.
+         - [ ] ``f``
 
-         ``f``
-
-         - [ ] ``int(c)`` truncates ``c`` before storing the value in ``f``.
+           -   ``int(c)`` truncates ``c`` before storing the value in ``f``.
 
    .. tb-tab:: Q4
 
       .. tb-choice::
          :name: functions_mc4
 
-         ltiple Response** Which of the following would work as the
-         t line of a function definition?
+         **Multiple Response** Which of the following would work as the
+         first line of a function definition?
 
-         ``print_hellow_world () {``
+         - [ ] ``print_hellow_world () {``
 
-         - [ ] This declaration is missing a type.
+           -   This declaration is missing a type.
 
-         ``string palindrome (word) {``
+         - [ ] ``string palindrome (word) {``
 
-         - [x] The function's parameter is missing a type.
+           -   The function's parameter is missing a type.
 
-         ``int mult (int a, int b) {``
+         - [x] ``int mult (int a, int b) {``
 
-         +   Correct! The declaration has a type, empty parentheses, and
-             an open curly brace.
+           +   Correct! The declaration has a type, empty parentheses, and
+               an open curly brace.
 
-         ``char shift_three (char letter)``
+         - [ ] ``char shift_three (char letter)``
 
-         - [x] This declaration is missing an open curly brace ``{``.
+           -   This declaration is missing an open curly brace ``{``.
 
-         ``void give_compliment () {``
+         - [x] ``void give_compliment () {``
 
-         +   Correct! The declaration has a type, empty parentheses, and
-             an open curly brace.
+           +   Correct! The declaration has a type, empty parentheses, and
+               an open curly brace.
 
-         ``string friend (string name) {``
+         - [ ] ``string friend (string name) {``
 
-         - [ ] ``friend`` is a reserved keyword in C++.
+           -   ``friend`` is a reserved keyword in C++.
 
 
    .. tb-tab:: Q5
@@ -178,40 +178,40 @@ assess what you have learned in this chapter.
       .. tb-choice::
          :name: functions_mc5
 
-          is printed when the following code runs?  Are there any errors?
+         What is printed when the following code runs?  Are there any errors?
 
+         ::
 
+             #include <iostream>
+             using namespace std;
 
-         #include <iostream>
-         using namespace std;
+             void give_compliment () {
+                 cout << "You are awesome!";
+             }
 
-         void give_compliment () {
-             cout << "You are awesome!";
-         }
+             void give_insult () {
+                 insult = "You suck!";
+             }
 
-         void give_insult () {
-             insult = "You suck!";
-         }
+             int main () {
+                 give_insult ();
+             }
 
-         int main () {
-             give_insult ();
-         }
+         - [ ] ``"You are awesome!"``
 
-         ``"You are awesome!"``
+           -   The ``give_compliment`` function is not called in ``main``.
 
-         - [ ] The ``give_compliment`` function is not called in ``main``.
+         - [ ] ``"You suck!"``
 
-         ``"You suck!"``
+           -   The ``give_insult`` function doesn't ``cout`` anything.
 
-         - [x] The ``give_insult`` function doesn't ``cout`` anything.
+         - [x] Nothing is printed.
 
-         Nothing is printed.
+           +   Correct!  ``give_insult`` doesn't ``cout`` anything.
 
-         +   Correct!  ``give_insult`` doesn't ``cout`` anything.
+         - [ ] Error!
 
-         Error!
-
-         - [ ] There are no errors with this program!
+           -   There are no errors with this program!
 
 
    .. tb-tab:: Q6
@@ -219,49 +219,49 @@ assess what you have learned in this chapter.
       .. tb-choice::
          :name: functions_mc6
 
-         el and Monica are best friends.  They write a function
-         ed ``best_friends`` so that they announce this fact to the 
-          of their friends.  What is printed when they run the code 
-         w? Are there any errors?
+         Rachel and Monica are best friends.  They write a function
+         called ``best_friends`` so that they announce this fact to the 
+         rest of their friends.  What is printed when they run the code 
+         below? Are there any errors?
 
+         ::
 
+             #include <iostream>
+             #include <string>
 
-         #include <iostream>
-         #include <string>
+             void best_friends (string a, string b) {
+                 std::cout << a << " is best friends with " << b;
+             }
 
-         void best_friends (string a, string b) {
-             std::cout << a << " is best friends with " << b;
-         }
+             int main () {
+                 std::string a = "Rachel";
+                 std::string b = "Monica";
+                 best_friends(b, a);
+             }
 
-         int main () {
-             std::string a = "Rachel";
-             std::string b = "Monica";
-             best_friends(b, a);
-         }
+         - [x] ``"Monica is best friends with Rachel"``
 
-         ``"Monica is best friends with Rachel"``
+           +   Correct!  Although the function definition has ``a << " is best 
+               friends with " << b``, we call the function with variable ``b``
+               as argument ``a`` and variable ``a`` as argument ``b``.
 
-         +   Correct!  Although the function definition has ``a << " is best 
-             friends with " << b``, we call the function with variable ``b``
-             as argument ``a`` and variable ``a`` as argument ``b``.
+         - [ ] ``"Rachel is best friends with Monica"``
 
-         ``"Rachel is best friends with Monica"``
+           -   You seem to be confusing your arguments and parameters!
 
-         - [ ] You seem to be confusing your arguments and parameters!
+         - [ ] ``a is best friends with b``
 
-         ``a is best friends with b``
+           -   The function ``couts`` the *values* of the variables, not their
+               names!
 
-         - [ ] The function ``couts`` the *values* of the variables, not their
-             names!
+         - [ ] ``b is best friends with a``
 
-         ``b is best friends with a``
+           -   The function ``couts`` the *values* of the variables, not their
+               names!
 
-         - [ ] The function ``couts`` the *values* of the variables, not their
-             names!
+         - [ ] Error!
 
-         Error!
-
-         - [ ] There are no errors with this program!
+           -   There are no errors with this program!
 
 
    .. tb-tab:: Q7
@@ -269,58 +269,58 @@ assess what you have learned in this chapter.
       .. tb-choice::
          :name: functions_mc7
 
-          is printed when the following code runs?  Are there any errors?
+         What is printed when the following code runs?  Are there any errors?
 
+         ::
 
+             #include <iostream>
+             #include <string>
 
-         #include <iostream>
-         #include <string>
+             void greeting (string name) {
+                 std::cout << "hello, " << name << "!";
+             }
 
-         void greeting (string name) {
-             std::cout << "hello, " << name << "!";
-         }
+             void goodbye (string name) {
+                 greeting (name);
+                 std::cout << "!!";
+             }
 
-         void goodbye (string name) {
-             greeting (name);
-             std::cout << "!!";
-         }
+             int main () {
+                 std::string hannah = "Hannah";
+                 std::string anna = "Anna";
+                 std::string louise = hannah;
+                 hannah = anna;
+                 anna = louise;
+                 goodbye (anna);
+             }
 
-         int main () {
-             std::string hannah = "Hannah";
-             std::string anna = "Anna";
-             std::string louise = hannah;
-             hannah = anna;
-             anna = louise;
-             goodbye (anna);
-         }
+         - [x] ``hello, Hannah!!!``
 
-         ``hello, Hannah!!!``
+           +   Correct!  The string "Hannah" is assigned to the variable ``louise``,
+               then the value of ``louise`` is assigned to the variable ``anna``.  When
+               ``goodbye (anna)`` runs, ``anna`` has the value "Hannah".
 
-         +   Correct!  The string "Hannah" is assigned to the variable ``louise``,
-             then the value of ``louise`` is assigned to the variable ``anna``.  When
-             ``goodbye (anna)`` runs, ``anna`` has the value "Hannah".
+         - [ ] ``hello, anna!!!``
 
-         ``hello, anna!!!``
+           -   The function ``couts`` the *value* of the variable ``anna`` not
+               the variable name!
 
-         - [ ] The function ``couts`` the *value* of the variable ``anna`` not
-             the variable name!
+         - [ ] ``hello, Anna!!!``
 
-         ``hello, Anna!!!``
+           -   Is ``"Anna"`` still the value of ``anna``?
 
-         - [ ] Is ``"Anna"`` still the value of ``anna``?
+         - [ ] ``hello, Louise!``
 
-         ``hello, Louise!``
+           -   The ``goodbye`` function adds extra exclamation points.
 
-         - [ ] The ``goodbye`` function adds extra exclamation points.
+         - [ ] ``hello, Louise!!!``
 
-         ``hello, Louise!!!``
+           -   We assigned the value of ``louise`` to ``anna``.  Is ``"Louise"``
+               the value of ``louise``?
 
-         - [ ] We assigned the value of ``louise`` to ``anna``.  Is ``"Louise"``
-             the value of ``louise``?
+         - [ ] Error!
 
-         Error!
-
-         - [ ] There are no errors with this program!
+           -   There are no errors with this program!
 
 
    .. tb-tab:: Q8
@@ -328,48 +328,48 @@ assess what you have learned in this chapter.
       .. tb-choice::
          :name: functions_mc8
 
-         ltiple Response** Which of the following are legal function
-         s of ``order_food``?
+         **Multiple Response** Which of the following are legal function
+         calls of ``order_food``?
 
+         ::
 
+             #include <iostream>
+             #include <string>
+             using namespace std;
 
-         #include <iostream>
-         #include <string>
-         using namespace std;
+             void order_food (string food, int quantity) {
+                 cout << "I'll have " << quantity << " " << food;
+             }
 
-         void order_food (string food, int quantity) {
-             cout << "I'll have " << quantity << " " << food;
-         }
+             int main () {
+                 string a = "wings";
+                 string b = "sliders";
+                 int c = 3;
+                 double d = 8.64;
+                 char e = 'p';
+             }
 
-         int main () {
-             string a = "wings";
-             string b = "sliders";
-             int c = 3;
-             double d = 8.64;
-             char e = 'p';
-         }
+         - [x] ``order_food(a, c);``
 
-         ``order_food(a, c);``
+           +   Correct! ``a`` is a string and ``c`` is an int.
 
-         +   Correct! ``a`` is a string and ``c`` is an int.
+         - [x] ``order_food(b, d);``
 
-         ``order_food(b, d);``
+           +   Correct!  Automatic type conversion will convert d to
+               an ``int``.
 
-         +   Correct!  Automatic type conversion will convert d to
-             an ``int``.
+         - [ ] ``order_food(e, c);``
 
-         ``order_food(e, c);``
+           -   ``e`` has a character value, and this function takes a *string*.
 
-         - [x] ``e`` has a character value, and this function takes a *string*.
+         - [x] ``order_food(a, d);``
 
-         ``order_food(a, d);``
+           +   Correct! Automatic type conversion will convert d to
+               an ``int``.
 
-         +   Correct! Automatic type conversion will convert d to
-             an ``int``.
+         - [ ] ``order_food(c, a);``
 
-         ``order_food(c, a);``
-
-         - [ ] You have to input your arguments in the correct order.
+           -   You have to input your arguments in the correct order.
 
 
    .. tb-tab:: Q9
@@ -377,45 +377,45 @@ assess what you have learned in this chapter.
       .. tb-choice::
          :name: functions_mc9
 
-          is printed when the following code runs?  Are there any errors?
+         What is printed when the following code runs?  Are there any errors?
+
+         ::
+
+             #include <iostream>
+             #include <string>
+             using namespace std;
+
+             void print (string w) {
+                 cout << w << w;
+             }
+
+             int main () {
+                 char a = 'a' + 5;
+                 print (a);
+             }
+
+         - [ ] ``a``
+
+           -   ``'a'`` is no longer the value of ``a``, and the function would
+               print it more than once.  Hint: think about the *type* of ``a``.
+
+         - [ ] ``f``
+
+           -   ``'f'`` is the value of a, but the function would print it more than once.  
+               Hint: think about the *type* of ``a``.
+
+         - [ ] ``aa``
+
+           -   ``'a'`` is no longer the value of ``a``.  Hint: think about the *type* of ``a``.
+
+         - [ ] ``ff``
+
+           -   Hint: think about the *type* of ``a``.
 
 
+         - [x] Error!
 
-         #include <iostream>
-         #include <string>
-         using namespace std;
-
-         void print (string w) {
-             cout << w << w;
-         }
-
-         int main () {
-             char a = 'a' + 5;
-             print (a);
-         }
-
-         ``a``
-
-         - [ ] ``'a'`` is no longer the value of ``a``, and the function would
-             print it more than once.  Hint: think about the *type* of ``a``.
-
-         ``f``
-
-         - [ ] ``'f'`` is the value of a, but the function would print it more than once.  
-             Hint: think about the *type* of ``a``.
-
-         ``aa``
-
-         - [ ] ``'a'`` is no longer the value of ``a``.  Hint: think about the *type* of ``a``.
-
-         ``ff``
-
-         - [x] Hint: think about the *type* of ``a``.
-
-
-         Error!
-
-         +   ``print`` takes a string, not a character, as an argument.
+           +   ``print`` takes a string, not a character, as an argument.
 
 
    .. tb-tab:: Q10
@@ -423,83 +423,83 @@ assess what you have learned in this chapter.
       .. tb-choice::
          :name: functions_mc10
 
-         many local variables and parameters does ``mult`` have?
+         How many local variables and parameters does ``mult`` have?
 
+         ::
 
+             void mult (int a, int b, int c) {
+                 int d = 7;
+                 cout << a * b * c * d;
+             }
 
-         void mult (int a, int b, int c) {
-             int d = 7;
-             cout << a * b * c * d;
-         }
+         - [ ] 1 parameter, 3 local variables
 
-         1 parameter, 3 local variables
+           -   Remember, the parameters are declared in the function definition,
+               and the local variables are declared *inside* of the function.
 
-         - [ ] Remember, the parameters are declared in the function definition,
-             and the local variables are declared *inside* of the function.
+         - [ ] 2 parameters, 4 local variables
 
-         2 parameters, 4 local variables
+           -   You can declare multiple variables at once!  Also, remember that
+               local variables are declared *inside* of the function.
 
-         - [ ] You can declare multiple variables at once!  Also, remember that
-             local variables are declared *inside* of the function.
+         - [ ] 2 parameters, 1 local variables
 
-         2 parameters, 1 local variables
+           -   You can declare multiple variables at once!
 
-         - [x] You can declare multiple variables at once!
+         - [x] 3 parameters, 1 local variable
 
-         3 parameters, 1 local variable
+           +   ``a``, ``b``, and ``c`` are parameters declared in the function
+               definition. ``d`` is a local variable declared inside of the function.
 
-         +   ``a``, ``b``, and ``c`` are parameters declared in the function
-             definition. ``d`` is a local variable declared inside of the function.
+         - [ ] 3 parameters, 4 local variables
 
-         3 parameters, 4 local variables
-
-         - [ ] Remember that local variables are declared *inside* of the function.
+           -   Remember that local variables are declared *inside* of the function.
 
    .. tb-tab:: Q11
 
       .. tb-choice::
          :name: functions_mc11
 
-         many calls are made to ``party`` during the entire program?
+         How many calls are made to ``party`` during the entire program?
 
+         ::
 
-
-         void party (int day_of_month, string address) {
-             cout <<"party on "<<day_of_month<<" at "<<address<<endl;
-         }
-
-         void weekend(bool available){
-             if(available) {
-                party(21,"Big house"); party(22,"CCTC");
-             } else {
-                cout<<"sorry I have to study for ENGR101!\n";
+             void party (int day_of_month, string address) {
+                 cout <<"party on "<<day_of_month<<" at "<<address<<endl;
              }
-         }
 
-         int main(){
-             bool im_free=false;
-             party(25,"North campus");
-             weekend(im_free);
+             void weekend(bool available){
+                 if(available) {
+                    party(21,"Big house"); party(22,"CCTC");
+                 } else {
+                    cout<<"sorry I have to study for ENGR101!\n";
+                 }
+             }
 
-             im_free=true;
-             party(25,"Central campus");
-             weekend(im_free);
-             return 0;
-         }
+             int main(){
+                 bool im_free=false;
+                 party(25,"North campus");
+                 weekend(im_free);
 
-         6 calls
+                 im_free=true;
+                 party(25,"Central campus");
+                 weekend(im_free);
+                 return 0;
+             }
 
-         - [ ] Take into account that ``weekend`` only calls ``party`` if a conditional is true!
+         - [ ] 6 calls
 
-         2 calls
+           -   Take into account that ``weekend`` only calls ``party`` if a conditional is true!
 
-         - [x] ``weekend`` can also call the function ``party``
+         - [ ] 2 calls
 
-         4 calls
+           -   ``weekend`` can also call the function ``party``
 
-         +  Correct! two calls by ``main`` and two calls by ``weekend``
+         - [x] 4 calls
 
-         3 calls
+           +  Correct! two calls by ``main`` and two calls by ``weekend``
 
-         - [ ] One invocation of ``weekend`` calls ``party`` twice.
+         - [ ] 3 calls
+
+           -  One invocation of ``weekend`` calls ``party`` twice.
 

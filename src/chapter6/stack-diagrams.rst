@@ -72,31 +72,29 @@ or local variables.
       .. tb-choice::
          :name: stack_1
 
-         r to the ``print_lines`` function below.
-         s the same as the ``print_lines``
-         tion defined on the previous page. 
-         many instances of ``print_lines``
-         d there be in the stack diagram if we begin with n = 4?
+         Refer to the ``nLines`` function below.  It is the same as the ``nLines``
+         function defined on the previous page.  How many instances of ``nLines``
+         would there be in the stack diagram if we begin with n = 4?
 
+         ::
 
-
-         void print_lines(int n) {
-           if (n > 0) {
-             cout << endl;
-             print_lines(n + 1);
-           }
-         }
+             void nLines(int n) {
+               if (n > 0) {
+                 cout << endl;
+                 nLines(n + 1);
+               }
+             }
 
          - [ ] 3
 
-           If print_lines could reach its base case, it cannot be done in 3 function calls.
+           If nLines could reach its base case, it cannot be done in 3 function calls.
          - [ ] 4
 
-           If print_lines could reach its base case, it cannot be done in 4 function calls.
+           If nLines could reach its base case, it cannot be done in 4 function calls.
          - [ ] 5
 
-           If print_lines could reach its base case, it could be done in 5 function calls, but does it ever reach the base case?
+           If nLines could reach its base case, it could be done in 5 function calls, but does it ever reach the base case?
          - [x] infinite
 
-           The print_lines function never reaches its base case, so the stack diagram would be infinitely long.
+           The nLines function never reaches its base case, so the stack diagram would be infinitely long.
 

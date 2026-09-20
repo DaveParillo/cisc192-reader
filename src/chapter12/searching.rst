@@ -173,10 +173,6 @@ It returns the index that the card was located at.
    .. tb-answer:: blank2
       :match: x
 
-   .. tb-answer:: blank3
-      :match: 52
-      :incorrect: Incorrect! What if the card we were searching for wasn't in the deck? In this case, we'd have looped through all of the cards!
-
 .. tb-blank::
    :name: c192_searching_2
 
@@ -197,4 +193,3 @@ It returns the index that the card was located at.
       :match: -1
       :feedback: Correct! The find method should return -1 if the card is not part of the deck.
       :match: x
-

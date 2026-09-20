@@ -134,27 +134,27 @@ The maximum size will vary among different types of computers.
       .. tb-choice::
          :name: accessing_elements_1
 
-         ltiple Response** How would you increment the third element of ``vector<int> vec`` by one?
+         **Multiple Response** How would you increment the third element of ``vector<int> vec`` by one?
 
-         ``vec[3] = ++vec[3];``
+         - [ ] ``vec[3] = vec[3]++;``
 
-         - [ ] Incorrect! This is actually incrementing the 4th element of **vec**, since vectors are zero indexed.
+           -   Incorrect! This is actually incrementing the 4th element of **vec**, since vectors are zero indexed.
 
-         ``vec(3) = vec(3) + 1;``
+         - [ ] ``vec(3) = vec(3) + 1;``
 
-         - [x] Incorrect! This is not proper syntax.
+           -   Incorrect! This is not proper syntax.
 
-         ``vec[2] = ++vec[2];``
+         - [x] ``vec[2]++;``
 
-         +   ``vec[2]`` is the third element and we increment it by using the ``++`` operator.
+           +   ``vec[2]`` is the third element and we increment it by using the ``++`` operator.
 
-         ``vec(2) = vec(2)++;``
+         - [ ] ``vec(2) = vec(2)++;``
 
-         - [x] This is not proper syntax.
+           -   This is not proper syntax.
 
-         ``vec[2] = vec[2] + 1``
+         - [x] ``vec[2] = vec[2] + 1``
 
-         +   ``vec[2]`` is the third element and we increment it by adding 1.
+           +   ``vec[2]`` is the third element and we increment it by adding 1.
 
 
    .. tb-tab:: Q2

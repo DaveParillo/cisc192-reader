@@ -69,9 +69,7 @@ More on scope and namespaces in the next chapter.
       .. tb-choice::
          :name: keywords_2
 
-
-
-
+         Multiple Response: Which of the following are keywords or will otherwise generate some error from the compiler if used as a variable name?
 
 
          - [ ] integer
@@ -79,13 +77,13 @@ More on scope and namespaces in the next chapter.
            integer is not a keyword, but int is.
          - [x] cout
 
-           cout should not be used as a variable name.
+           cout cannot be used as a variable name!
          - [ ] variable
 
            variable is fair game to use to name a variable.
          - [x] string
 
-           string should not be used as a variable name.
+           string cannot be used as a variable name.
          - [x] char
 
            char is a keyword and cannot be used as a variable name.
@@ -145,10 +143,6 @@ More on scope and namespaces in the next chapter.
             Try again!
 
          .. tb-miss:: text:string
-
-            Try again!
-
-         .. tb-miss:: text:s
 
             Try again!
 
@@ -217,4 +211,3 @@ More on scope and namespaces in the next chapter.
      - :cpp:`input/output <io>` library
      - :cpp:`string` library
      - :container:`vector`
-

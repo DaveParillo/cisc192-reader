@@ -140,13 +140,13 @@ Run the active code below to see how the ``equals()`` function works.
    }
 
 .. tb-choice::
-   :name: c192_equals_function_1
+   :name: equals_function_1
 
-
+   How can we compare two ``Card`` objects?
 
    - [ ] Directly, using the build in == operator.
 
-     Incorrect! We have to create our own method to compare two playing_card objects, the == operator won't work.
+     Incorrect! We have to create our own method to compare two Card objects, the == operator won't work.
    - [ ] Compare their ranks and suits separately using the == operator. If either comparison is true, then they are equal.
 
      Incorrect! This would return true if two cards have the same rank, but different suits OR the same suit, but different ranks.
@@ -155,24 +155,24 @@ Run the active code below to see how the ``equals()`` function works.
      Correct! Both ranks and suits must be the same for two cards to be equal.
    - [ ] They cannot be compared because they are non-numerical objects.
 
-     Incorrect! playing_card objects can be compared, but we must create our own method.
+     Incorrect! Card objects can be compared, but we must create our own method.
 
 .. tb-choice::
-   :name: c192_equals_function_2
+   :name: equals_function_2
 
-   ould we write the ``equals()`` function as a free-standing function, or as a member function of ``playing_card``?
+   Should we write the ``equals()`` function as a free-standing function, or as a member function of ``Card``?
 
-   A free-standing function, because we shouldn't "invoke" the function on just one ``playing_card``.
+   - [ ] A free-standing function, because we shouldn't "invoke" the function on just one ``Card``.
 
-   - [ ] Incorrect! We can invoke the function on a ``playing_card``!
+     - Incorrect! We can invoke the function on a ``Card``!
 
-   A member function, because the ``equals()`` operation is part of the ``playing_card`` data structure.
+   - [ ] A member function, because the ``equals()`` operation is part of the ``Card`` data structure.
 
-   - [x] Incorrect! The ``equals()`` operation is not necessarily part of the ``playing_card`` data structure.
+     -  Incorrect! The ``equals()`` operation is not necessarily part of the ``Card`` data structure.
 
-   Both are viable.
+   - [x] Both are viable.
 
-   + Correct! This is a matter of preference!
+     + Correct! This is a matter of preference!
 
 
 .. tb-parsons::

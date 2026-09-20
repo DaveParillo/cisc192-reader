@@ -34,23 +34,42 @@ but we are not going to deal with them for a little while.
    .. tb-tab:: Q1
 
       .. tb-choice::
-         :name: return_main_1
+         :name: alt_execution_1
+
+         What will be printed after ``main`` is executed?
+
+         ::
+
+             #include <iostream>
+             using namespace std;
+
+             void weather(int temp) {
+               if (temp < 52) {
+                 cout << "It is cold!";
+               }
+               else {
+                 cout << "It is warm!";
+               }
+             }
+
+             int main() {
+               int degrees = 52;
+               weather(degrees);
+             }
 
 
+         - [ ] It is cold!
 
+           That statement would print if degrees was less than 50.
+         - [x] It is warm!
 
-         - [ ] string
+           Correct!
+         - [ ] Nothing prints.
 
-           Look at the function definition for main.
-         - [x] integer
+           One of the statements is satisfied, so something does print.
+         - [ ] Error message.
 
-           Correct!  You should always return an integer to avoid issues down the road.
-         - [ ] nothing
-
-           Main is supposed to return something!
-         - [ ] anything
-
-           Main has a return type, check its function definition.
+           There is nothing in the code below that would generate an error.
 
    .. tb-tab:: Q2
 
@@ -65,49 +84,48 @@ but we are not going to deal with them for a little while.
             :feedback: Correct!
 
          .. tb-answer:: blank2
-            :hint: x; Try again!
-
-         .. tb-answer:: blank3
             :match: -1
             :incorrect: Try again!
 
    .. tb-tab:: Q3
 
       .. tb-choice::
-         :name: return_main_3
+         :name: chained_conditionals_1
 
-         t gets printed?
+         What will print after the following code is executed?
+
+         ::
+
+             #include <iostream>
+             using namespace std;
+
+             int main () {
+               int x = 10;
+               if (x > 8) {
+                 cout << "One! ";
+               }
+               if (x > 6) {
+                 cout << "Two! ";
+               }
+               if (x > 3) {
+                 cout << "Three!" << endl;
+               }
+               return 0;
+             }
 
 
+         - [ ] Three!
 
-         int main(){
-           bool sun_set=true;
-           if(sun_sunset){
-             cout << "its night time ";
-             sun_set=false;
-             return 0;
-           }
-           if(!sunset){
-             cout << "Day time ";
-           }
-           else{
-             cout << "afternoon ";
-           }
-         }
+           Make note of the use of "if" instead of "else if" or "else".
+         - [ ] One!
 
+           Make note of the use of "if" instead of "else if" or "else".
+         - [ ] One! Two!
 
-         - [ ] "its night time Day time"
+           Make note of the use of "if" instead of "else if" or "else".
+         - [x] One! Two! Three!
 
-           a return statment if encountered before reaching the second ``if``.
-         - [ ] "its night time afternoon"
-
-           a return statment is encountered before and ``sun_set`` is false.
-         - [ ] nothing is printed
-
-           ``sun_set`` is true so the "its night time" gets printed
-         - [x] "its night time"
-
-           Correct! Once the ``return`` statement is encountered nothing else is printed
+           When we have "if" statments, but no "else if" or "else", every condition will be checked.
 
 -----
 
@@ -116,4 +134,3 @@ but we are not going to deal with them for a little while.
    - From cppreference.com
 
      - :lang:`Main function <main_function>`
-

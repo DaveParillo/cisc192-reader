@@ -170,7 +170,8 @@ The key aspects of the process are:
       .. tb-choice::
          :name: program_dvlmt_1
 
-
+         When writing the implementation for a function, a good place to
+         start is __________.
 
 
          - [ ] combining the parameters
@@ -181,7 +182,7 @@ The key aspects of the process are:
            If you don't know the values of the parameters, this could be useful, but there is a better answer.
          - [x] returning something
 
-           This is called stubbing.  You don't have to return the correct answer, but you do need to return the correct data type.
+           This is called placekeeping.  You don't have to return the correct answer, but you do need to return the correct data type.
          - [ ] debugging
 
            You don't need to debug until after you've written the function.
@@ -191,7 +192,7 @@ The key aspects of the process are:
       .. tb-choice::
          :name: program_dvlmt_2
 
-
+         Which of the following is **not** a key aspect of the incremental development process?
 
 
          - [ ] Use temporary variables to hold intermediate values so you can output and check them.
@@ -212,33 +213,33 @@ The key aspects of the process are:
       .. tb-choice::
          :name: program_dvlmt_3
 
-         print statements in the distance function will be removed after testing. What is this called, and what is its purpose?
+         The print statements in the distance function will be removed after testing. What is this called, and what is its purpose?
 
+         ::
 
+             #include <iostream>
+             using namespace std;
 
-         #include <iostream>
-
-         double distance (double x1, double y1, double x2, double y2) {
-           double dx = x2 - x1;
-           double dy = y2 - y1;
-           std::cout << "dx is " << dx << std::endl;
-           std::cout << "dy is " << dy << std::endl;
-           return 0.0;
-         }
-
+             double distance (double x1, double y1, double x2, double y2) {
+               double dx = x2 - x1;
+               double dy = y2 - y1;
+               cout << "dx is " << dx << endl;
+               cout << "dy is " << dy << endl;
+               return 0.0;
+             }
 
          - [ ] scaffolding - allows the function to compile and return something
 
            This is not the correct definition of scaffolding.
-         - [ ] stubbing - allows the function to compile and return something
+         - [ ] placekeeping - allows the function to compile and return something
 
-           This is the correct definition of stubbing but is not the correct answer.
+           This is the correct definition of placekeeping but is not the correct answer.
          - [x] scaffolding - used to test values of temporary variables, later removed
 
            Printing out the values allows you to observe whether the function is working or not.
-         - [ ] stubbing - used to test values of temporary variables, later removed
+         - [ ] placekeeping - used to test values of temporary variables, later removed
 
-           This is not the correct definition of stubbing.
+           This is not the correct definition of placekeeping.
 
 -----
 

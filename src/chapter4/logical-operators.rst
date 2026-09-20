@@ -28,15 +28,15 @@ statements.
       .. tb-choice::
          :name: logical_op_1
 
-         tiple Response: How could you re-write the following code using a single conditional?
+         Multiple Response: How could you re-write the following code using a single conditional?
 
+         ::
 
-
-         if (x > 0) {
-           if (x < 10) {
-             cout << "x is a positive single digit" << endl;
-           }
-         }
+            if (x > 0) {
+              if (x < 10) {
+                cout << "x is a positive single digit" << endl;
+              }
+            }
 
          - [x] if (x > 0 && x < 10) {...
 

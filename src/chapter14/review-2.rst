@@ -8,7 +8,7 @@ assess what you have learned in this chapter.
 
    The legacy Runestone question pool ``c192_mucp_14_1_sq`` is represented by these exercises:
 
-   * :ref:`c192_mucp_14_1`
+   * :ref:`mce_14_1`
 
    * :ref:`c192_mucp_14_1_ac_q`
 
@@ -16,7 +16,7 @@ assess what you have learned in this chapter.
 
    The legacy Runestone question pool ``c192_mucp_14_2_sq`` is represented by these exercises:
 
-   * :ref:`c192_mucp_14_2`
+   * :ref:`mce_14_2`
 
    * :ref:`c192_mucp_14_2_ac_q`
 
@@ -24,7 +24,7 @@ assess what you have learned in this chapter.
 
    The legacy Runestone question pool ``c192_mucp_14_3_sq`` is represented by these exercises:
 
-   * :ref:`c192_mucp_14_3`
+   * :ref:`mce_14_3`
 
    * :ref:`c192_mucp_14_3_ac_q`
 
@@ -32,7 +32,7 @@ assess what you have learned in this chapter.
 
    The legacy Runestone question pool ``c192_mucp_14_4_sq`` is represented by these exercises:
 
-   * :ref:`c192_mucp_14_4`
+   * :ref:`mce_14_4`
 
    * :ref:`c192_mucp_14_4_ac_q`
 
@@ -40,7 +40,7 @@ assess what you have learned in this chapter.
 
    The legacy Runestone question pool ``c192_mucp_14_5_sq`` is represented by these exercises:
 
-   * :ref:`c192_mucp_14_5`
+   * :ref:`mce_14_5`
 
    * :ref:`c192_mucp_14_5_ac_q`
 
@@ -48,7 +48,7 @@ assess what you have learned in this chapter.
 
    The legacy Runestone question pool ``c192_mucp_14_6_sq`` is represented by these exercises:
 
-   * :ref:`c192_mucp_14_6`
+   * :ref:`mce_14_6`
 
    * :ref:`c192_mucp_14_6_ac_q`
 
@@ -56,7 +56,7 @@ assess what you have learned in this chapter.
 
    The legacy Runestone question pool ``c192_mucp_14_7_sq`` is represented by these exercises:
 
-   * :ref:`c192_mucp_14_7`
+   * :ref:`mce_14_7`
 
    * :ref:`c192_mucp_14_7_ac_q`
 
@@ -64,7 +64,7 @@ assess what you have learned in this chapter.
 
    The legacy Runestone question pool ``c192_mucp_14_8_sq`` is represented by these exercises:
 
-   * :ref:`c192_mucp_14_8`
+   * :ref:`mce_14_8`
 
    * :ref:`c192_mucp_14_8_ac_q`
 
@@ -72,7 +72,7 @@ assess what you have learned in this chapter.
 
    The legacy Runestone question pool ``c192_mucp_14_9_sq`` is represented by these exercises:
 
-   * :ref:`c192_mucp_14_9`
+   * :ref:`mce_14_9`
 
    * :ref:`c192_mucp_14_9_ac_q`
 
@@ -80,7 +80,7 @@ assess what you have learned in this chapter.
 
    The legacy Runestone question pool ``c192_mucp_14_10_sq`` is represented by these exercises:
 
-   * :ref:`c192_mucp_14_10`
+   * :ref:`mce_14_10`
 
    * :ref:`c192_mucp_14_10_ac_q`
 

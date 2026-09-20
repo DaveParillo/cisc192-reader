@@ -116,7 +116,7 @@ the function many times without rewriting it each time.
       .. tb-choice::
          :name: functions_1
 
-
+         What is a function in C++?
 
 
          - [x] A named sequence/group of statements that perform a particular task.
@@ -180,7 +180,7 @@ the function many times without rewriting it each time.
       .. tb-choice::
          :name: functions_3
 
-
+         What is of these is NOT a reason that functions are useful?
 
          - [ ] Once you write and debug a function, you can reuse it.
 

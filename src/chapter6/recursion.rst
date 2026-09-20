@@ -167,23 +167,24 @@ You can have a little bit of fun with recursion.  Try this guessing game below!
       .. tb-choice::
          :name: recursion_1
 
-          will print?
+         What will print?
 
+         ::
 
+             #include <iostream>
+             using namespace std;
 
-         #include <iostream>
-         using namespace std;
+             void exclamationPoint(int n) {
+               if (n > 0) {
+                 cout << "!";
+                 exclamationPoint (n-1);
+               }
+             }
 
-         void exclamationPoint(int n) {
-           if (n > 0) {
-             cout << "!";
-             exclamationPoint (n-1);
-           }
-         }
+             int main () {
+               exclamationPoint(3);
+             }
 
-         int main () {
-           exclamationPoint(3);
-         }
 
          - [ ] !
 
@@ -203,23 +204,23 @@ You can have a little bit of fun with recursion.  Try this guessing game below!
       .. tb-choice::
          :name: recursion_2
 
-          will print?
+         What will print?
 
+         ::
 
+             #include <iostream>
+             using namespace std;
 
-         #include <iostream>
-         using namespace std;
+             void exclamationPoint(int n) {
+               if (n > 0) {
+                 cout << "!";
+                 exclamationPoint (n-1);
+               }
+             }
 
-         void exclamationPoint(int n) {
-           if (n > 0) {
-             cout << "!";
-             exclamationPoint (n-1);
-           }
-         }
-
-         int main () {
-           exclamationPoint(0);
-         }
+             int main () {
+               exclamationPoint(0);
+             }
 
 
          - [ ] !!

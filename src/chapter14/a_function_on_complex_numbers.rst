@@ -201,20 +201,20 @@ free to modify the code and experiment around!
          {{endgroup}}
 
 .. tb-choice::
-   :name: c192_question14_6_2
+   :name: question14_6_2
 
-   t is the correct output of the code below?
+   What is the correct output of the code below?
 
-   code-block:: cpp
+   .. code-block:: cpp
 
-   int main() {
-     complex_number c1 (2.5, 1.3);
-     complex_number c2 (3.9, 4.4);
-     complex_number c3 (9.5, 7.6);
-     complex_number sum = add (c1, c2);
-     complex_number diff = subtract(c3, sum);
-     diff.print_cartesian();
-   }
+      int main() {
+        Complex c1 (2.5, 1.3);
+        Complex c2 (3.9, 4.4);
+        Complex c3 (9.5, 7.6);
+        Complex sum = add (c1, c2);
+        Complex diff = subtract(c3, sum);
+        diff.printCartesian();
+      }
 
    - [ ] 3.1i + 1.9i
 

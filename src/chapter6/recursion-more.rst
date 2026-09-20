@@ -172,7 +172,8 @@ them does not execute.
       .. tb-choice::
          :name: more_recursion_1
 
-
+         In the example above, how many times was the ``factorial`` function
+         called?
 
 
          - [ ] 1
@@ -216,36 +217,35 @@ them does not execute.
    .. tb-tab:: Q4
 
       .. tb-choice::
-         :name: more_recursion_4
+         :name: mce_6_2
 
-         t gets printed?
+         What is the final value of ``i`` when the code finished running?
 
+         .. code-block:: cpp
 
+          int main() {
+            int x = 0;
+            int i = 1;
+            while (i < 10) {
+              x = i;
+              i++;
+            }
+            cout << x;
+          }
 
-         void print_descend(int a){
-           if(a==0){
-              return;
-           }
-           cout<<a<<" ";
-           a=a-1;
-           print_descend(a);
-         }
-         int main(){
-           print_descend(5);
-           return 0;
-         }
+         - [ ] 0
 
+           - ``i`` is initialized with a value of 1 and is incremented, so it will never have a value of 0.
 
-         - [ ] "5 4 3 2 1 0"
+         - [ ] 1
 
-           Consider what the base case is.
-         - [ ] "5 5 5 5 5"
+           - ``i`` is initialized with a value of 1 but it is incremented during the while loop.
 
-           Does the value of a stay the same after every function call?
-         - [ ] "5 4 3 2 1 0 -1 -2 -3 ...."
+         - [ ] 9
 
-           Consider what the base case is.
-         - [x] "5 4 3 2 1"
+           - This is the final value of ``x`` when the code is finished running.
 
-           Correct! we recursively print every value of a till we reach 0.
+         - [x] 10
+
+           + In order for the while loop to terminate, the condition ``i < 10`` must be false, and this is achieved when ``i`` is incremented to 10.
 

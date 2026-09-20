@@ -116,10 +116,6 @@ type has a copy of the instance variables for that type.
 
             Correct.
 
-         .. tb-miss:: text:}
-
-            Variables *use* a type, they are not part of the type.
-
    .. tb-tab:: Q2
 
       .. tb-click::
@@ -172,10 +168,6 @@ type has a copy of the instance variables for that type.
 
             Try again.
 
-         .. tb-miss:: text:}
-
-            Try again.
-
    .. tb-tab:: Q3
 
       Try writing the ``printTime`` function in the commented section
@@ -209,7 +201,7 @@ type has a copy of the instance variables for that type.
          }
 
       .. tb-reveal:: Reveal Problem
-         :name: 9_1_1
+         :name: id_9_1_1
 
          .. tb-parsons::
             :name: time_4
@@ -234,4 +226,3 @@ type has a copy of the instance variables for that type.
                   cout << hour << ":" << minute << ":" << second;
                }
                {{endgroup}}
-

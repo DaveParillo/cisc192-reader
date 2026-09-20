@@ -180,9 +180,9 @@ Feel free to change the values of the cards.
    }
 
 .. tb-choice::
-   :name: c192_is_greater_function_1
+   :name: isGreater_function_1
 
-
+   Select all **totally ordered** sets.
 
    - [ ] bool
 
@@ -196,7 +196,7 @@ Feel free to change the values of the cards.
    - [ ] Animal
 
      Incorrect! We cannot say that one animal is greater than another.
-   - [ ] playing_card
+   - [ ] Card
 
      Incorrect! Cards are partially ordered.
 
@@ -217,6 +217,7 @@ Feel free to change the values of the cards.
        std::cout << "is greater than" << std::endl;
        card1.print ();
     }
+   
    If the above code is run, the terminal will print:
    "Queen of Hearts"
    {{{{blank}}}}
@@ -227,4 +228,3 @@ Feel free to change the values of the cards.
       :match: (is greater than)
       :feedback: Correct!
       :incorrect: Incorrect!  Try this input on the code above!
-

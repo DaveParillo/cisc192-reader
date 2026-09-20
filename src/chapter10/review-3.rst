@@ -21,7 +21,7 @@ Answer the following **Activecode** questions to assess what you have learned in
             .. tb-code:: cpp
                :name: vectors_a1q
                :caption: Example vectors_a1q
-               :compileargs: ['-Wall', '-Wextra', '-Werror', '-std=c++11']
+               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
 
                int make_vector () {
                    vector<int> nums (5) = 1;
@@ -41,7 +41,7 @@ Answer the following **Activecode** questions to assess what you have learned in
             .. tb-code:: cpp
                :name: vectors_a1a-support
                :hidden:
-               :compileargs: ['-Wall', '-Wextra', '-Werror', '-std=c++11']
+               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
 
                #include <functional>
                #include <iomanip>
@@ -68,7 +68,7 @@ Answer the following **Activecode** questions to assess what you have learned in
                  std::vector<int> expected = {1,1,1,2,1};
                  std::vector<int> actual = make_vector();
                  std::vector<std::string> ord = {"first", "second", "third", "fourth", "fifth"};
-                 for (std::size_t i = 0; i<expected.size(); ++i) {
+                 for (size_t i = 0; i<expected.size(); ++i) {
                    check(ord[i] , actual[i],  expected[i]);
                  }
                }
@@ -78,9 +78,8 @@ Answer the following **Activecode** questions to assess what you have learned in
                :name: vectors_a1a
                :caption: Example vectors_a1a
                :run-after: vectors_a1a-support
-               :compileargs: ['-Wall', '-Wextra', '-Werror', '-std=c++11']
+               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
 
-               #include <cstddef>
                #include <iostream>
                #include <vector>
 
@@ -97,7 +96,7 @@ Answer the following **Activecode** questions to assess what you have learned in
       .. tb-code:: cpp
          :name: vectors_a2-support
          :hidden:
-         :compileargs: ['-Wall', '-Wextra', '-Werror', '-std=c++11']
+         :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
 
          #include <functional>
          #include <iomanip>
@@ -123,23 +122,23 @@ Answer the following **Activecode** questions to assess what you have learned in
            std::vector<int> expected = {1,1,1,2,1};
            std::vector<int> actual = make_vector();
            std::vector<std::string> ord = {"first", "second", "third", "fourth", "fifth"};
-           for (std::size_t i = 0; i<expected.size(); ++i) {
+           for (size_t i = 0; i<expected.size(); ++i) {
              check(ord[i] , actual[i],  expected[i]);
            }
          }
+
 
 
       .. tb-code:: cpp
          :name: vectors_a2
          :caption: Example vectors_a2
          :run-after: vectors_a2-support
-         :compileargs: ['-Wall', '-Wextra', '-Werror', '-std=c++11']
+         :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
 
-         #include <cstddef>
          #include <vector>
 
-         std::size_t count_even (const vector<int>& nums) {
-             for (std::size_t i = 0; i < nums.size(); i++) {
+         int count_even (const vector<int>& nums) {
+             for (int i = 0; i < nums.size(); i++) {
                  if (i % 2 == 0) {
                      count = count + 1;
                  }
@@ -160,7 +159,7 @@ Answer the following **Activecode** questions to assess what you have learned in
             .. tb-code:: cpp
                :name: vectors_a3q-support
                :hidden:
-               :compileargs: ['-Wall', '-Wextra', '-Werror', '-std=c++11']
+               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
 
                #include <functional>
                #include <iomanip>
@@ -185,28 +184,28 @@ Answer the following **Activecode** questions to assess what you have learned in
                int main() {
                  std::vector<std::string> words = 
                           {"quick", "brown", "fox", "jumps", "dogs"};
-                 check("ends with n", ends_with(words, 'n'), std::size_t{1});
-                 check("ends with s", ends_with(words, 's'), std::size_t{2});
-                 check("ends with e", ends_with(words, 'e'), std::size_t{0});
-                 check("ends with x", ends_with(words, 'x'), std::size_t{1});
-                 check("ends with k", ends_with(words, 'k'), std::size_t{1});
+                 check("ends with n", ends_with(words, 'n'), 1);
+                 check("ends with s", ends_with(words, 's'), 2);
+                 check("ends with e", ends_with(words, 'e'), 0);
+                 check("ends with x", ends_with(words, 'x'), 1);
+                 check("ends with k", ends_with(words, 'k'), 1);
                }
+
 
 
             .. tb-code:: cpp
                :name: vectors_a3q
                :caption: Example vectors_a3q
                :run-after: vectors_a3q-support
-               :compileargs: ['-Wall', '-Wextra', '-Werror', '-std=c++11']
+               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
 
-               #include <cstddef>
                #include <iostream>
                #include <string>
                #include <vector>
 
-               std::size_t ends_with (const std::vector<std::string>& words, char c) {
-                   std::size_t count = 0;
-                   for (std::size_t i = 0; i <= words.size(); i++) {
+               int ends_with (const std::vector<std::string>& words, char c) {
+                   int count;
+                   for (size_t i = 0; i <= words.size(); i++) {
                        last = words.size() - 1;
                        if (words[last] == c) {
                            ++count;
@@ -221,7 +220,7 @@ Answer the following **Activecode** questions to assess what you have learned in
             However it is complicated and error prone.
 
             We must initialize ``count`` to zero and
-            check that each string is nonempty before accessing its last character.
+            declare ``last`` as an integer.
             To access a string *inside* of ``vec``,  we use ``vec[i]``.
             To get the last character, we must index the
             string to the last index, which is one less than the length of the string.
@@ -229,7 +228,7 @@ Answer the following **Activecode** questions to assess what you have learned in
             .. tb-code:: cpp
                :name: vectors_a3a-support
                :hidden:
-               :compileargs: ['-Wall', '-Wextra', '-Werror', '-std=c++11']
+               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
 
                  #include <functional>
                  #include <iomanip>
@@ -254,28 +253,30 @@ Answer the following **Activecode** questions to assess what you have learned in
                  int main() {
                    std::vector<std::string> words = 
                             {"quick", "brown", "fox", "jumps", "dogs"};
-                   check("ends with n", ends_with(words, 'n'), std::size_t{1});
-                   check("ends with s", ends_with(words, 's'), std::size_t{2});
-                   check("ends with e", ends_with(words, 'e'), std::size_t{0});
-                   check("ends with x", ends_with(words, 'x'), std::size_t{1});
-                   check("ends with k", ends_with(words, 'k'), std::size_t{1});
+                   check("ends with n", ends_with(words, 'n'), 1);
+                   check("ends with s", ends_with(words, 's'), 2);
+                   check("ends with e", ends_with(words, 'e'), 0);
+                   check("ends with x", ends_with(words, 'x'), 1);
+                   check("ends with k", ends_with(words, 'k'), 1);
                  }
+
+
 
 
             .. tb-code:: cpp
                :name: vectors_a3a
                :caption: Example vectors_a3a
                :run-after: vectors_a3a-support
-               :compileargs: ['-Wall', '-Wextra', '-Werror', '-std=c++11']
+               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
 
-               #include <cstddef>
                #include <string>
                #include <vector>
 
-               std::size_t ends_with (const std::vector<std::string>& words, char c) {
-                   std::size_t count = 0;
-                   for (std::size_t i = 0; i < words.size(); i++) {
-                       if (!words[i].empty() && words[i][words[i].size() - 1] == c) {
+               int ends_with (const std::vector<std::string>& words, char c) {
+                   int count = 0;
+                   for (size_t i = 0; i < words.size(); i++) {
+                       int last = words[i].size() - 1;
+                       if (words[i][last] == c) {
                            ++count;
                        }
                    }
@@ -293,7 +294,7 @@ Answer the following **Activecode** questions to assess what you have learned in
             .. tb-code:: cpp
                :name: vectors_a3a2-support
                :hidden:
-               :compileargs: ['-Wall', '-Wextra', '-Werror', '-std=c++11']
+               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
 
                #include <functional>
                #include <iomanip>
@@ -318,26 +319,26 @@ Answer the following **Activecode** questions to assess what you have learned in
                int main() {
                  std::vector<std::string> words = 
                           {"quick", "brown", "fox", "jumps", "dogs"};
-                 check("ends with n", ends_with(words, 'n'), std::size_t{1});
-                 check("ends with s", ends_with(words, 's'), std::size_t{2});
-                 check("ends with e", ends_with(words, 'e'), std::size_t{0});
-                 check("ends with x", ends_with(words, 'x'), std::size_t{1});
-                 check("ends with k", ends_with(words, 'k'), std::size_t{1});
+                 check("ends with n", ends_with(words, 'n'), 1);
+                 check("ends with s", ends_with(words, 's'), 2);
+                 check("ends with e", ends_with(words, 'e'), 0);
+                 check("ends with x", ends_with(words, 'x'), 1);
+                 check("ends with k", ends_with(words, 'k'), 1);
                }
+
 
 
             .. tb-code:: cpp
                :name: vectors_a3a2
                :caption: Example vectors_a3a2
                :run-after: vectors_a3a2-support
-               :compileargs: ['-Wall', '-Wextra', '-Werror', '-std=c++11']
+               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
 
-               #include <cstddef>
                #include <string>
                #include <vector>
 
-               std::size_t ends_with (const std::vector<std::string>& words, char c) {
-                   std::size_t count = 0;
+               int ends_with (const std::vector<std::string>& words, char c) {
+                   int count = 0;
                    for (const std::string& word: words) {
                        if (word.back() == c) {
                            ++count;
@@ -354,7 +355,7 @@ Answer the following **Activecode** questions to assess what you have learned in
       .. tb-code:: cpp
          :name: vectors_a4-support
          :hidden:
-         :compileargs: ['-Wall', '-Wextra', '-Werror', '-std=c++11']
+         :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
 
 
          #include <functional>
@@ -381,27 +382,27 @@ Answer the following **Activecode** questions to assess what you have learned in
            std::vector<double> temps = {
                98.6, 97.8, 100.3, 97.2, 98.7, 97.8, 
                99.8, 96.9, 98.2, 99.1, 99.9};
-           check("test 1", count_covid(temps), std::size_t{1});
+           check("test 1", count_covid(temps), 1);
            temps[2]= 97.4;
-           check("test 2", count_covid(temps), std::size_t{0});
+           check("test 2", count_covid(temps), 0);
            temps[2]= 100.3;
            temps[0]= 99.99;
-           check("test 3", count_covid(temps), std::size_t{2});
+           check("test 3", count_covid(temps), 2);
            temps.push_back(103.5);
            temps.push_back(104.0);
-           check("test 4", count_covid(temps), std::size_t{4});
+           check("test 4", count_covid(temps), 4);
          }
+
 
 
       .. tb-code:: cpp
          :name: vectors_a4
          :caption: Example vectors_a4
          :run-after: vectors_a4-support
-         :compileargs: ['-Wall', '-Wextra', '-Werror', '-std=c++11']
+         :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
 
-         #include <cstddef>
 
-         std::size_t count_covid (const std::vector<double>& temps) {
+         int count_covid (const std::vector<double>& temps) {
          }
 
    .. tb-tab:: Q5
@@ -417,7 +418,7 @@ Answer the following **Activecode** questions to assess what you have learned in
             .. tb-code:: cpp
                :name: vectors_a5q
                :caption: Example vectors_a5q
-               :compileargs: ['-Wall', '-Wextra', '-Werror', '-std=c++11']
+               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
 
 
                int main () {
@@ -437,7 +438,7 @@ Answer the following **Activecode** questions to assess what you have learned in
             .. tb-code:: cpp
                :name: vectors_a5a
                :caption: Example vectors_a5a
-               :compileargs: ['-Wall', '-Wextra', '-Werror', '-std=c++11']
+               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
 
                #include <string>
                #include <vector>
@@ -448,6 +449,7 @@ Answer the following **Activecode** questions to assess what you have learned in
                        words.pop_back();
                    }
                }
+
 
    .. tb-tab:: Q6
 
@@ -460,9 +462,10 @@ Answer the following **Activecode** questions to assess what you have learned in
       .. tb-code:: cpp
          :name: vectors_a6
          :caption: Example vectors_a6
-         :compileargs: ['-Wall', '-Wextra', '-Werror', '-std=c++11']
+         :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
 
          #include <vector>
+
 
    .. tb-tab:: Q7
 
@@ -480,7 +483,7 @@ Answer the following **Activecode** questions to assess what you have learned in
             .. tb-code:: cpp
                :name: vectors_a7q
                :caption: Example vectors_a7q
-               :compileargs: ['-Wall', '-Wextra', '-Werror', '-std=c++11']
+               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
 
                #include <vector>
 
@@ -495,14 +498,14 @@ Answer the following **Activecode** questions to assess what you have learned in
             .. tb-code:: cpp
                :name: vectors_a7a
                :caption: Example vectors_a7a
-               :compileargs: ['-Wall', '-Wextra', '-Werror', '-std=c++11']
+               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
 
                #include <cstddef>
                #include <vector>
 
 
                bool all_have_char (const vector<string>& data, char c) {
-                   std::size_t count = 0;
+                   size_t count = 0;
                    for (const string& tokens: data) {
                       for (const char tok: tokens) {
                            if (tok == c) {
@@ -512,6 +515,7 @@ Answer the following **Activecode** questions to assess what you have learned in
                    }
                    return count == data.size();
                }
+
 
    .. tb-tab:: Q8
 
@@ -527,7 +531,10 @@ Answer the following **Activecode** questions to assess what you have learned in
             .. tb-code:: cpp
                :name: vectors_a9q
                :caption: Example vectors_a9q
-               :compileargs: ['-Wall', '-Wextra', '-Werror', '-std=c++11']
+               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
+
+               // Student code goes here.
+
 
 
          .. tb-tab:: Answer
@@ -544,7 +551,7 @@ Answer the following **Activecode** questions to assess what you have learned in
             .. tb-code:: cpp
                :name: vectors_a8a
                :caption: Example vectors_a8a
-               :compileargs: ['-Wall', '-Wextra', '-Werror', '-std=c++11']
+               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
 
                #include <vector>
 
@@ -556,6 +563,7 @@ Answer the following **Activecode** questions to assess what you have learned in
                    return sum/nums.size();
                }
 
+
    .. tb-tab:: Q9
 
       Write the function ``hundyBundy`` that returns a count of all numbers
@@ -566,7 +574,7 @@ Answer the following **Activecode** questions to assess what you have learned in
       .. tb-code:: cpp
          :name: vectors_a9
          :caption: Example vectors_a9
-         :compileargs: ['-Wall', '-Wextra', '-Werror', '-std=c++11']
+         :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
 
          #include <vector>
 
@@ -585,9 +593,10 @@ Answer the following **Activecode** questions to assess what you have learned in
             .. tb-code:: cpp
                :name: vectors_a11q
                :caption: Example vectors_a11q
-               :compileargs: ['-Wall', '-Wextra', '-Werror', '-std=c++11']
+               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
 
                #include <vector>
+
 
          .. tb-tab:: Answer
 
@@ -598,7 +607,7 @@ Answer the following **Activecode** questions to assess what you have learned in
             .. tb-code:: cpp
                :name: vectors_a11a
                :caption: Example vectors_a11a
-               :compileargs: ['-Wall', '-Wextra', '-Werror', '-std=c++11']
+               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
 
                #include <vector>
 
@@ -614,6 +623,7 @@ Answer the following **Activecode** questions to assess what you have learned in
                  }
                }
 
+
       Write the function ``weird_print`` that prints the first half of a
       vector of integers in reverse order
       and then prints the second half in the order present in the vector.
@@ -623,6 +633,7 @@ Answer the following **Activecode** questions to assess what you have learned in
       .. tb-code:: cpp
          :name: vectors_a11
          :caption: Example vectors_a11
-         :compileargs: ['-Wall', '-Wextra', '-Werror', '-std=c++11']
+         :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
 
+         // Student code goes here.
 

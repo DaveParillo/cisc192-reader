@@ -64,33 +64,28 @@ Then we use the built-in ``find`` function to demonstrate how the starting index
       .. tb-choice::
          :name: own_version_find_1
 
-         en the definition of find provided in the previous active code,
-         t is the correct output of the code below?
+         What is the correct output of the code below?
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         int main() {
-           string quote = "The way to get started is to quit talking and begin doing.";
-           cout << find(quote, 't', 11) << ", ";
-           std::size_t index = find(quote, 't', 42);
-           if (index == string::npos) {
-               cout << "not found";
-           } else {
-               cout << index;
-           }
-           cout << ", " << quote.find('t');
-         }
+            int main() {
+              string quote = "The way to get started is to quit talking and begin doing.";
+              cout << find(quote, 't', 11) << ", " << find(quote, 't', 42) << ", " << quote.find('t');
+            }
 
-         - [x] 13, not found, 8
+         - [x] 13, ``string::npos``, 8
 
-           The searches begin at 11, 42, and 0 respectively; no t occurs at or after 42.
-         - [ ] 13, not found, 7
+           + Notice how the built-in ``find`` function works differently from ours.
 
-           The final search starts at the beginning. Count indices from zero.
-         - [ ] 13, not found, 0
+         - [ ] 13, 0, 7
 
-           Keep in mind that the find function is case sensitive, so "A" is different from "a".
-         - [ ] 14, not found, 9
+           - Remember that when a character isn't found, the function returns ``string::npos``.
 
-           Remember that indexing begins at 0 for C++.
+         - [ ] 13, ``string::npos``, 0
+
+           - Keep in mind that the find function is case sensitive, so 'A' is different from 'a'.
+
+         - [ ] 14, ``string::npos``, 9
+
+           - Remember that indexing begins at 0 for C++.
 

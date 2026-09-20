@@ -44,28 +44,38 @@ are chosen at run time. A map of maps can represent only the routes we know.
 There is no need to implement another container just to store this data.
 
 .. tb-choice::
-   :name: c192_question15_1_1
+   :name: question15_1_1
 
+   Why aren't we filling in every value in our table, who are we leaving blank space above the diagonal of 0's?
 
+   - [ ] Because we only need the half of the dataset contained by the triangle.
 
-   - [ ] Store zero for every unknown route.
+     Incorrect! All of the data above the 0 diagonal is a mirror image of the triangle! So, the triangle contains the whole dataset.
+   - [ ] Because triangles are the most effective shape to use when presenting data to others.
 
-     Zero already means a distance of zero; it should not also mean missing information.
-   - [x] Store only known routes and check whether a key is present.
+     Incorrect! Triangles do look cool, but they aren't necessarily the most effective shape to use when presenting data.
+   - [ ] Because matrices are triangles.
 
-     A missing key lets us distinguish an unknown route from a known distance.
+     Incorrect! This triangle is PART OF an apmatrix.
+   - [x] Because the triangle contains the entire dataset.
+
+     Correct! The triangle contains all data points with no repeat data. If we included all datapoints, the would just be repeats of the points we already have.
 
 .. tb-choice::
-   :name: c192_question15_1_2
+   :name: question15_1_2
 
+   Based on how it is used to create the above table, what do you think a ``matrix`` is?
 
-   - [ ] std::array
+   - [ ] a geometric shape
 
-     An array does not enforce uniqueness.
-   - [ ] std::vector
+     Incorrect! A matrix is not a geometric shape, although they ARE rectangles.
+   - [x] a two-dimensional vector
 
-     A vector can contain repeated values.
-   - [x] std::set
+     Correct!
+   - [ ] a material in which something develops
 
-     A set stores each distinct key once.
+     Incorrect! This is a definition for matrix, but not in the programming sense.
+   - [ ] a mold used to shape things
+
+     Incorrect! This is a definition for matrix, but not in the programming sense.
 

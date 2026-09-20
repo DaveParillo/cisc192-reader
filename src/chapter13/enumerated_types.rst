@@ -156,14 +156,14 @@ An unscoped enum can convert to an integer in an expression such as
 ``suit + 1``, but ``++`` is not defined for it automatically.
 
 .. tb-choice::
-   :name: c192_enum_type_1
+   :name: enum_type_1
+
+   Multiple Response: What can we do with enumerated types?
 
 
+   - [ ] Perform arithmetic.
 
-
-   - [ ] Use ++ directly without defining an operator.
-
-     Built-in ++ does not accept an enum operand. Unscoped enums can still convert to integers in arithmetic expressions.
+     We are not allowed to do arithmetic with enumerated types.
    - [x] Include a mapping as part of the program.
 
      This is the purpose of an enumerated type.
@@ -178,33 +178,34 @@ An unscoped enum can convert to an integer in an expression such as
      Since the values in enumerated types are represented as integers, we can use them as vector indices.
 
 .. tb-choice::
-   :name: c192_enum_type_2
+   :name: enum_type_2
 
-   me we have the following struct defined by this enumerated
-   .  What will be printed by the print function?
+   Assume we have the following struct defined by this enumerated
+   type.  What will be printed by the print function?
 
+   ::
 
+       enum Scoops { SINGLE = 1, DOUBLE, TRIPLE };
+       enum Flavor { VANILLA, CHOCOLATE, STRAWBERRY, COOKIESNCREAM, MINTCHIP, COOKIEDOUGH };
+       enum Order { CUP, CAKECONE, SUGARCONE, WAFFLECONE }
 
-   enum scoops { single = 1, double, triple };
-   enum flavor { vanilla, chocolate, strawberry, cookiesncream, mintchip, cookiedough };
-   enum order { cup, cakecone, sugarcone, wafflecone }
+       struct iceCream {
+          Scoops scoops;
+          Flavor flavor;
+          Order order;
 
-   struct ice_cream {
-      scoops scoops;
-      flavor flavor;
-      order order;
+          iceCream (Scoops s, Flavor f, Order o);
+          printOrder () {
+            // To save space, I didn't include the mapping.  I'm sure you can still figure it out.
+            cout << "Who ordered a " << scoops[scoop] << " scoop of " << flavors[flavor] << " in a " << orders[order] << ?;
+          }
+       };
 
-      ice_cream (scoops s, flavor f, order o);
-      print_order () {
-        // To save space, I didn't include the mapping.  I'm sure you can still figure it out.
-        cout << "Who ordered a " << scoops[scoop] << " scoop of " << flavors[flavor] << " in a " << orders[order] << ?;
-      }
-   };
+       int main () {
+         iceCream icecream (2, 3, 2);
+         iceCream.printOrder();
+       }
 
-   int main () {
-     ice_cream icecream (2, 3, 2);
-     ice_cream.print_order();
-   }
 
    - [ ] Who ordered a triple scoop of Cookies 'n' Cream in a sugar cone?
 

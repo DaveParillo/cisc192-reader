@@ -50,7 +50,7 @@ x (in base 10). Similarly ``x % 100`` yields the last two digits.
       .. tb-choice::
          :name: mod_operator_1
 
-
+         How do you know whether the variable x is odd?
 
 
          - [ ] Use x % 2, and if the result is 0, it is odd.

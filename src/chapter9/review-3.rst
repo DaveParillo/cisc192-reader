@@ -574,7 +574,7 @@ Coding Practice
    .. tb-tab:: Q9
 
       .. tb-group::
-         :name: cp_9_AC_9q
+         :name: cp_9_AC_9q_group
 
          .. tb-tab:: Question
 
@@ -712,4 +712,3 @@ Coding Practice
              changePants (o, newPants);
              printOutfit (o);
          } 
-

@@ -118,9 +118,9 @@ In general it is good style to include a ``default`` case in every
       :incorrect: Try again! How do we prevent the flow of execution from "falling through?"
 
 .. tb-choice::
-   :name: c192_switch_2
+   :name: switch_2
 
-
+   Which one of the following types do NOT work with ``switch`` statement?
 
    - [ ] ints
 
@@ -136,29 +136,30 @@ In general it is good style to include a ``default`` case in every
      We can use enumerated types with switch statements.
 
 .. tb-choice::
-   :name: c192_switch_3
+   :name: switch_3
 
-   t is the correct output of the code below?
+   What is the correct output of the code below?
 
-   code-block:: cpp
+   .. code-block:: cpp
 
-   int main() {
-     int num = 2;
+      int main() {
+        int num = 2;
 
-     switch (num) {
-     case 1:
-       std::cout << 1;
-       break;
-     case 2:
-       std::cout << 4;
-     case 3:
-       std::cout << 9;
-       break;
-     default:
-       std::cout << "Invalid num! Please try again.";
-       break;
-     }
-   }
+        switch (num) {
+        case 1:
+          cout << 1;
+          break;
+        case 2:
+          cout << 4;
+        case 3:
+          cout << 9;
+          break;
+        default:
+          cout << "Invalid num! Please try again.";
+          break;
+        }
+      }
+
 
    - [ ] 4
 
@@ -177,27 +178,28 @@ In general it is good style to include a ``default`` case in every
      There is no reason why the code wouldn't run.
 
 .. tb-choice::
-   :name: c192_switch_4
+   :name: switch_4
 
-   t is the correct output **this time**?
+   What is the correct output **this time**?
 
-   code-block:: cpp
+   .. code-block:: cpp
 
-   int main() {
-     int num = 1;
+      int main() {
+        int num = 1;
 
-     switch (num) {
-     case 1:
-       std::cout << 1;
-       break;
-     case 2:
-       std::cout << 4;
-     case 3:
-       std::cout << 9;
-     default:
-       std::cout << "Invalid num! Please try again.";
-     }
-   }
+        switch (num) {
+        case 1:
+          cout << 1;
+          break;
+        case 2:
+          cout << 4;
+        case 3:
+          cout << 9;
+        default:
+          cout << "Invalid num! Please try again.";
+        }
+      }
+
 
    - [x] 1
 
@@ -216,27 +218,27 @@ In general it is good style to include a ``default`` case in every
      There is no reason why the code wouldn't run.
 
 .. tb-choice::
-   :name: c192_switch_5
+   :name: switch_5
 
-    finally, what about **this time**?
+   And finally, what about **this time**?
 
-   code-block:: cpp
+   .. code-block:: cpp
 
-   int main() {
-     int num = 2;
+      int main() {
+        int num = 2;
 
-     switch (num) {
-     case 1:
-       std::cout << 1;
-       break;
-     case 2:
-       std::cout << 4;
-     case 3:
-       std::cout << 9;
-     default:
-       std::cout << "Invalid num! Please try again.";
-     }
-   }
+        switch (num) {
+        case 1:
+          cout << 1;
+          break;
+        case 2:
+          cout << 4;
+        case 3:
+          cout << 9;
+        default:
+          cout << "Invalid num! Please try again.";
+        }
+      }
 
    - [ ] 4
 

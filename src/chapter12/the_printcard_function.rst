@@ -153,9 +153,9 @@ output uses human-readable formats. On the other hand, it is often
 helpful for the programmer if the mappings are easy to remember.
 
 .. tb-choice::
-   :name: c192_print_card_function_1
+   :name: printCard_function_1
 
-
+   How would we select the appropriate string for the instance variable ``rank``?
 
    - [ ] rank.ranks
 
@@ -177,6 +177,7 @@ helpful for the programmer if the mappings are easy to remember.
 
     playing_card card (3, 1);
     card.print ();
+   
    What is printed by card.print()? Type your answer exactly as it would appear in the terminal.
 
    {{blank}}
@@ -187,8 +188,9 @@ helpful for the programmer if the mappings are easy to remember.
       :incorrect: Incorrect!  Try this input on the code above!
 
 .. tb-choice::
-   :name: c192_print_card_function_3
+   :name: printCard_function_3
 
+   Does it matter how we encode a mapping?
 
    - [x] Yes, because the mappings should be easy for the programmer to remember.
 
@@ -202,4 +204,3 @@ helpful for the programmer if the mappings are easy to remember.
    - [x] No! All input and output uses human-readable formats, so the user doesn't need to understand what is going on behind the scenes.
 
      Correct! The user doesn't need to know how the programmer coded things.
-

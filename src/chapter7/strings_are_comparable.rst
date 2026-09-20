@@ -125,18 +125,17 @@ values as the words ``true`` or ``false``.
       .. tb-choice::
          :name: strings_comparable_1
 
-         t would the result of the following comparison be?
+         What would the result of the following comparison be?
+         Where ``1`` means true and ``0`` means false.
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         std::string a = "Dog";
-         std::string b = "Doghouse";
-         a < b;
+            "Dog" < "Doghouse";
 
-         - [x] true
+         - [x] 1
 
            Both match up to the g but Dog is shorter than Doghouse so it comes first in the dictionary.
-         - [ ] false
+         - [ ] 0
 
            Strings are compared character by character.
 
@@ -145,19 +144,17 @@ values as the words ``true`` or ``false``.
       .. tb-choice::
          :name: strings_comparable_2
 
-         t would the result of the following comparison be?
+         What would the result of the following comparison be?
+         Where ``1`` means true and ``0`` means false.
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         std::string a = "dog";
-         std::string b = "Dog";
-         a < b;
+            "dog" < "Dog";
 
-
-         - [ ] true
+         - [ ] 1
 
            d is greater than D
-         - [x] false
+         - [x] 0
 
            Yes, upper case is less than lower case according to the ordinal values of the characters.
          - [ ] They are the same word
@@ -169,20 +166,17 @@ values as the words ``true`` or ``false``.
       .. tb-choice::
          :name: strings_comparable_3
 
-         t would the result of the following comparison be?
+         What would the result of the following comparison be?
+         Where ``1`` means true and ``0`` means false. 
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         std::string a = "dog";
-         std::string b = "Doghouse";
-         a < b;
+            "dog" < "Doghouse";
 
-
-
-         - [ ] true
+         - [ ] 1
 
            d is greater than D.
-         - [x] false
+         - [x] 0
 
            The length does not matter.  Lower case d is greater than upper case D.
 
@@ -191,21 +185,17 @@ values as the words ``true`` or ``false``.
       .. tb-choice::
          :name: strings_comparable_4
 
-         t would the result of the following comparison be?
+         What would the result of the following comparison be?
+         Where ``1`` means true and ``0`` means false.
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         std::string a = "bread";
-         std::string b = "bread";
-         a < b;
+            "bread" < "bread";
 
-
-
-
-         - [ ] true
+         - [ ] 1
 
            They are equal so one can't be greater than the other.
-         - [x] false
+         - [x] 0
 
            Correct! because they are equal. They are equal because all characters match.
 

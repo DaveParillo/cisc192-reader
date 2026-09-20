@@ -93,23 +93,24 @@ These are called **forward declarations**.
       .. tb-choice::
          :name: defns_uses_2
 
-         h of the following is a correct function declaration?
+         Which of the following is a correct function header (first line of 
+         a function definition)?
 
-         ``void print_name()``
+         - [ ] ``void printName()``
 
-         - [ ] This declaration is missing a ``;``.
+           -   This function header is missing a ``{``, which is needed to begin defining the function.
 
-         ``total_cost_after_tax () {``
+         - [ ] ``totalCostAfterTax () {``
 
-         - [x] This declaration is missing a return type.
+           -   This function header is missing a return type.
 
-         ``void todays_weather ();``
+         - [x] ``void todaysWeather () {``
 
-         +   Correct!
+           +   Correct!
 
-         ``void final_grade {``
+         - [ ] ``void finalGrade {``
 
-         - [ ] This declaration is missing parentheses. Even if a function does not take in any parameters, empty parentheses should be used.
+           -   This function header is missing parentheses. Even if a function does not take in any parameters, empty parentheses should be used.
 
 
    .. tb-tab:: Q3

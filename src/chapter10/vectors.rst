@@ -141,31 +141,30 @@ them to three.
       .. tb-choice::
          :name: vectors_1
 
-         would you create a vector of five words and initialize all of them to empty strings?
+         How would you create a vector of five words and initialize all of them to empty strings?
 
-         ``vector<string> words ("", 5);``
+         - [ ] ``vector<string> words ("", 5);``
 
-         - [x] Incorrect! Vector parameters are in the wrong order.
+           -   Incorrect! Vector parameters are in the wrong order.
 
-         ``vector<string> words (5);``
+         - [x] ``vector<string> words (5);``
 
-         +   Correct! Vector elements are initialized to default values.
+           +   Correct! Vector elements are default constructed to empty strings.
 
-         ``vector<string> words (5, "");``
+         - [x] ``vector<string> words (5, "");``
 
-         - [ ] Partly correct! This works, but there is a simpler way that does not create redunadant strings
+           +   Correct! We made a vector of strings with 5 elements, initialized to empty strings.
 
-         ``vector<char> words (5, '');``
+         - [ ] ``vector<char> words (5, '');``
 
-         - [ ] Incorrect! words should be a vector of strings. A char is not a string.
+           -   Incorrect! words should be a vector of strings.
 
    .. tb-tab:: Q2
 
       .. tb-choice::
          :name: vectors_2
 
-
-
+         **Multiple Response** Which of the following could be an element of **words**?
 
          - [ ] 1
 
@@ -188,7 +187,7 @@ them to three.
       .. tb-choice::
          :name: vectors_3
 
-
+         What do you call a function that creates an instance of a new object and initializes its instance variables?
 
          - [ ] initializer
 
@@ -208,25 +207,21 @@ them to three.
       .. tb-choice::
          :name: vectors_4
 
-         t are the values of ``number``'s elements after this declaration?
+         What are the values of ``number``'s elements after this declaration?
 
-         code-block::
+         .. code-block::
 
-         vector<int> numbers(6);
+            vector<int> numbers(6);
 
-          undefined (we don't know the values)
+         - [ ] undefined (we don't know the values)
 
-          - [x] These elements do have values
+           -   Integers are default constructed to a known value.
 
-          0
+         - [x] 0
 
-          +    Yes, we have 6 default initialized integers.
+           +    Integers are default constructed to a zero value.
 
-          6
+         - [ ] 6
 
-          - [ ] 6 is the size of the vector, not the values.
-
-          0,1,2,3,4,5
-
-          - [ ] These are the indices, not the values.
+           -   6 is the size we want the vector to be.
 

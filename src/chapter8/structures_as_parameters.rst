@@ -87,35 +87,39 @@ parameters instead of four ``double``\ s.
       .. tb-choice::
          :name: structures_parameters_1
 
-         t will print?
+         What will print?
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         struct coordinate {
-           double x, y;
-         };
+            struct Coordinate {
+              int x, y;
+            };
 
-         void print_opposite_coordinate (point p) {
-           cout << "(" << -p.y << ", " << -p.x << ")" << endl;
-         }
+            void printOppositeCoordinate (Coordinate p) {
+              cout << "(" << -p.y << ", " << -p.x << ")" << endl;
+            }
 
-         int main() {
-           coordinate coord = { 2.0, 7.0 };
-           print_opposite_coordinate (coord);
-         }
+            int main() {
+              Coordinate coord = { 2, 7 };
+              printOppositeCoordinate (coord);
+            }
 
-         - [ ] (-2.0, -7.0)
+         - [ ] ``(-2, -7)``
 
-           Take a close look at the print_opposite_coordinate function.
-         - [ ] (2.0, 7.0)
+           - Take a close look at the printOppositeCoordinate function.
 
-           Take a close look at the print_opposite_coordinate function.
-         - [x] (-7.0, -2.0)
+         - [ ] ``(2.0, 7.0)``
 
-           Yes, this is the correct output.
-         - [ ] (7.0, 2.0)
+           - Take a close look at the printOppositeCoordinate function.
 
-           Take a close look at the print_opposite_coordinate function.
+         - [x] ``(-7, -2)``
+
+           + Yes, this is the correct output.
+
+         - [ ] ``(-7.0, -2.0)``
+
+           - Take a close look at the Coordinate struct.
+
 
    .. tb-tab:: Q3
 

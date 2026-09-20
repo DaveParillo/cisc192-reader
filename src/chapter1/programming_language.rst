@@ -184,7 +184,7 @@ figure out what it is.
       .. tb-choice::
          :name: program_lang_2
 
-
+         **Multiple Response** Which is true about a high-level programming language?
 
 
          - [x] Almost all programs are written in high-level languages.
@@ -208,6 +208,7 @@ figure out what it is.
       .. tb-choice::
          :name: program_lang_3
 
+         What is the role of an executor?
 
 
          - [ ] To translate the program line by line.

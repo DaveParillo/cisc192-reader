@@ -12,24 +12,24 @@ assess what you have learned in this chapter.
       .. tb-choice::
          :name: programming_1
 
-          is a **program** in computer science?
+         What is a **program** in computer science?
 
-         a planned series of events, a schedule
+         - [ ] a planned series of events, a schedule
 
-         - [ ] This is a definition of a program, just not in the computer science sense.
+           -   This is a definition of a program, just not in the computer science sense.
 
-         a translated language that is easy for the computer to understand
+         - [ ] a translated language that is easy for the computer to understand
 
-         - [x] This is actually called a low-level language!
+           -   This is actually called a low-level language!
 
-         a sequence of instructions that specifies how to perform a computation
+         - [x] a sequence of instructions that specifies how to perform a computation
 
-         +   You can write these instructions to accomplish pretty much anything 
-             you want!
+           +   You can write these instructions to accomplish pretty much anything 
+               you want!
 
-         a general process for solving a category of problems
+         - [ ] a general process for solving a category of problems
 
-         - [ ] This is actually called an algorithm!
+           -   This is actually called an algorithm!
 
 
    .. tb-tab:: Q2
@@ -37,29 +37,29 @@ assess what you have learned in this chapter.
       .. tb-choice::
          :name: programming_2
 
-          is the function of the compiler?
+         What is the function of the compiler?
 
-         It loads the program from its saved location and makes the computer execute it.
+         - [ ] It loads the program from its saved location and makes the computer execute it.
 
-         - [x] This is the function of an executor.  If you use a compiler, you must also
-             use an executer to run your code.
+           -   This is the function of an executor.  If you use a compiler, you must also
+               use an executer to run your code.
 
-         It reads a high-level program and translates everything at once, before executing
-         any of the commands.
+         - [x] It reads a high-level program and translates everything at once, before executing
+           any of the commands.
 
-         +   If there are any errors in your code, the program will not compile.  It is an
-             all-or-nothing process.
+           +   If there are any errors in your code, the program will not compile.  It is an
+               all-or-nothing process.
 
-         It translates the program from the low-level language you coded in to a high-level
-         language that the computer can understand.
+         - [ ] It translates the program from the low-level language you coded in to a high-level
+           language that the computer can understand.
 
-         - [ ] You, the programmer, write your program in a HIGH-level language.  It is then
-             translated to a LOW-level language that the computer can understand.
+           -   You, the programmer, write your program in a HIGH-level language.  It is then
+               translated to a LOW-level language that the computer can understand.
 
-         It translates the program line-by-line, alternately reading lines and carrying 
-         out commands.
+         - [ ] It translates the program line-by-line, alternately reading lines and carrying 
+           out commands.
 
-         - [ ] This is the function of an interpreter.
+           -   This is the function of an interpreter.
 
 
    .. tb-tab:: Q3
@@ -67,29 +67,29 @@ assess what you have learned in this chapter.
       .. tb-choice::
          :name: programming_3
 
-          is the difference between **source code** and **object code**?
+         What is the difference between **source code** and **object code**?
 
-         Source code can contain simple things like variables and values.  Object code 
-         can contain more complex objects like data structures.
+         - [ ] Source code can contain simple things like variables and values.  Object code 
+           can contain more complex objects like data structures.
 
-         - [ ] Contrary to it's name, object code has nothing to do with creating objects!
+           -   Contrary to it's name, object code has nothing to do with creating objects!
 
-         Object code can contain simple things like variables and values.  Source code 
-         can contain more complex objects like data structures.
+         - [ ] Object code can contain simple things like variables and values.  Source code 
+           can contain more complex objects like data structures.
 
-         - [ ] Source code and object code both contain variables, values, and data structures.
-             They're just written in a different way.
+           -   Source code and object code both contain variables, values, and data structures.
+               They're just written in a different way.
 
-         Object code is the code that your program is written in.  Source code is the
-         translated version of this code that the computer can understand.
+         - [ ] Object code is the code that your program is written in.  Source code is the
+           translated version of this code that the computer can understand.
 
-         - [x] You seem to have things a bit mixed up!
+           -   You seem to have things a bit mixed up!
 
-         Source code is the code that your program is written in.  Object code is the
-         translated version of this code that the computer can understand.
+         - [x] Source code is the code that your program is written in.  Object code is the
+           translated version of this code that the computer can understand.
 
-         +   The computer can either use an interpreter or a compiler to make the 
-             translation.
+           +   The computer can either use an interpreter or a compiler to make the 
+               translation.
 
 
    .. tb-tab:: Q4
@@ -97,32 +97,32 @@ assess what you have learned in this chapter.
       .. tb-choice::
          :name: programming_4
 
-         ltiple Response**  What are the basic functions that appear in
-         y programming language?
+         **Multiple Response**  What are the basic functions that appear in
+         every programming language?
 
-         math operations
+         - [x] math operations
 
-         +   This is how your program can carry out complex calculations!
+           +   This is how your program can carry out complex calculations!
 
-         debugging
+         - [ ] debugging
 
-         - [x] Debugging is the process of finding and fixing errors AFTER you 
-             have written your program. It's not one of the basic functions
-             of a programming language.
+           -   Debugging is the process of finding and fixing errors AFTER you 
+               have written your program. It's not one of the basic functions
+               of a programming language.
 
-         input/output from the terminal and saved files
+         - [x] input/output from the terminal and saved files
 
-         +   This allows your program to communicate with data either from the user, 
-             or from the user's saved files.
+           +   This allows your program to communicate with data either from the user, 
+               or from the user's saved files.
 
-         testing for conditions
+         - [x] testing for conditions
 
-         +   This is why you would consider using conditional statements
-             in your program.
+           +   This is why you would consider using conditional statements
+               in your program.
 
-         repetition
+         - [x] repetition
 
-         +   This is why you would consider using a loop in your program.
+           +   This is why you would consider using a loop in your program.
 
 
    .. tb-tab:: Q5
@@ -130,32 +130,32 @@ assess what you have learned in this chapter.
       .. tb-choice::
          :name: programming_5
 
-          type of error would the following code cause?  Assume you are
-         ng to calculate the volume of a cylinder:
+         What type of error would the following code cause?  Assume you are
+         trying to calculate the volume of a cylinder:
 
+         ::
 
+             int radius = 7;
+             int height = 8;
+             double volume = 3.14 * radius * height;
 
-         int radius = 7;
-         int height = 8;
-         double volume = 3.14 * radius * height;
+         - [ ] syntax error
 
-         syntax error
+           -   There is nothing wrong with the structure of this program.
 
-         - [ ] There is nothing wrong with the structure of this program.
+         - [ ] run-time error
 
-         run-time error
+           -   There are no errors that will surface at runtime.
 
-         - [x] There are no errors that will surface at runtime.
+         - [x] semantic error
 
-         semantic error
+           +   This is not the correct formula for calculating the volume of a
+               cylinder.  This program will go on to calculate the wrong volume
+               because it doesn't know any better.
 
-         +   This is not the correct formula for calculating the volume of a
-             cylinder.  This program will go on to calculate the wrong volume
-             because it doesn't know any better.
+         - [ ] no error
 
-         no error
-
-         - [ ] Take a look at the area formula.
+           -   Take a look at the area formula.
 
 
    .. tb-tab:: Q6
@@ -163,32 +163,32 @@ assess what you have learned in this chapter.
       .. tb-choice::
          :name: programming_6
 
-          type of error would the following generate?  Assume you are
-         ng to calculate the volume of a cylinder:
+         What type of error would the following generate?  Assume you are
+         trying to calculate the volume of a cylinder:
 
+         ::
 
+             int radius = 7;
+             int height = 8
+             double volume = 3.14 * r * r * height;
 
-         int radius = 7;
-         int height = 8
-         double volume = 3.14 * r * r * height;
+         - [x] syntax error
 
-         syntax error
+           +   You are missing a semicolon on the second line, and you are using
+               the variable ``r`` without defining it on the third line.  your
+               program will not compile.
 
-         +   You are missing a semicolon on the second line, and you are using
-             the variable ``r`` without defining it on the third line.  your
-             program will not compile.
+         - [ ] run-time error
 
-         run-time error
+           -   There are no errors that will surface at runtime.
 
-         - [ ] There are no errors that will surface at runtime.
+         - [ ] semantic error
 
-         semantic error
+           -   Everything looks good with your volume calculations.
 
-         - [ ] Everything looks good with your volume calculations.
+         - [ ] no error
 
-         no error
-
-         - [ ] Take a closer look at the structure of the code.
+           -   Take a closer look at the structure of the code.
 
 
    .. tb-tab:: Q7
@@ -196,27 +196,27 @@ assess what you have learned in this chapter.
       .. tb-choice::
          :name: programming_7
 
-         ltiple Response**  C++ is a(n) ________.
+         **Multiple Response**  C++ is a(n) ________.
 
-         formal language
+         - [x] formal language
 
-         +   all programming languages are formal languages!
+           +   all programming languages are formal languages!
 
-         natural language
+         - [ ] natural language
 
-         - [ ] C++ certainly did not evolve naturally!
+           -   C++ certainly did not evolve naturally!
 
-         foreign language
+         - [ ] foreign language
 
-         - [x] C++ might seem foreign to you, but it's used globally!
+           -   C++ might seem foreign to you, but it's used globally!
 
-         high-level language.
+         - [x] high-level language.
 
-         +   C++ must be translated before the computer can understand!
+           +   C++ must be translated before the computer can understand!
 
-         low-level language.
+         - [ ] low-level language.
 
-         - [ ] The computer doesn't understand C++ until it gets translated!
+           -   The computer doesn't understand C++ until it gets translated!
 
 
    .. tb-tab:: Q8
@@ -224,30 +224,30 @@ assess what you have learned in this chapter.
       .. tb-choice::
          :name: programming_8
 
-         ltiple Response** Which of the following is true about writing a program.
+         **Multiple Response** Which of the following is true about writing a program.
 
-         The compiler ignores anything after ``//``.
+         - [x] The compiler ignores anything after ``//``.
 
-         +   This is called a comment, which you can use to describe your code to
-             outsiders who might not understand.
+           +   This is called a comment, which you can use to describe your code to
+               outsiders who might not understand.
 
-         There is no limit the number of statements you can put in ``main``.
+         - [x] There is no limit the number of statements you can put in ``main``.
 
-         +   You can include as many statements as you want to, but it is good 
-             practice to keep the ``main`` as short as possible.
+           +   You can include as many statements as you want to, but it is good 
+               practice to keep the ``main`` as short as possible.
 
-         Program execution begins at the first line of code.
+         - [ ] Program execution begins at the first line of code.
 
-         - [x] Program execution actually begins with ``main`` and then
-             happens in order, from top to bottom.
+           -   Program execution actually begins with ``main`` and then
+               happens in order, from top to bottom.
 
-         ``main`` is enclosed by squiggly brackets ``{ }``.
+         - [x] ``main`` is enclosed by squiggly brackets ``{ }``.
 
-         +   The ``main`` program and *all* functions in C++ are enclosed by squiggly brackets.
+           +   The ``main`` program and *all* functions in C++ are enclosed by squiggly brackets.
 
-         The end of each statement is marked with a colon ``:``.
+         - [ ] The end of each statement is marked with a colon ``:``.
 
-         - [ ] Actually, each statement is terminated with a *semi* colon ``;``.
+           -   Actually, each statement is terminated with a *semi* colon ``;``.
 
 
    .. tb-tab:: Q9
@@ -255,30 +255,30 @@ assess what you have learned in this chapter.
       .. tb-choice::
          :name: programming_9
 
-         ltiple Response** Which is true about programming languages?
+         **Multiple Response** Which is true about programming languages?
 
-         Low-level languages are only used for a few special applications.
+         - [x] Low-level languages are only used for a few special applications.
 
-         +   Low-level languages take more time to write, and they are much harder to
-             understand, so they aren't used often.
+           +   Low-level languages take more time to write, and they are much harder to
+               understand, so they aren't used often.
 
-         Programs written in low-level languages must be translated before they can be run.
+         - [ ] Programs written in low-level languages must be translated before they can be run.
 
-         - [x] Low level languages are already written in a language that your computer
-             can understand, so they don't need to be translated!
+           -   Low level languages are already written in a language that your computer
+               can understand, so they don't need to be translated!
 
-         It's easier to program in a high-level language than a low-level language.
+         - [x] It's easier to program in a high-level language than a low-level language.
 
-         +   High-level languages take less time to write, they are much easier to
-             understand, and they are more likely to be correct!
+           +   High-level languages take less time to write, they are much easier to
+               understand, and they are more likely to be correct!
 
-         Computers can only execute programs written in low-level languages.
+         - [x] Computers can only execute programs written in low-level languages.
 
-         +   This is why most programs need to be translated before they can be run!
+           +   This is why most programs need to be translated before they can be run!
 
-         High-level languages can run on many different kinds of computers without an issue.
+         - [x] High-level languages can run on many different kinds of computers without an issue.
 
-         +   This is called portability.
+           +   This is called portability.
 
 
    .. tb-tab:: Q10
@@ -286,25 +286,25 @@ assess what you have learned in this chapter.
       .. tb-choice::
          :name: programming_10
 
-         were asked to parse through your program, what should this entail?
+         You were asked to parse through your program, what should this entail?
 
-         You should walk through your program line by line to make sure it's 
-         that your code doing what it is supposed to.
+         - [ ] You should walk through your program line by line to make sure it's 
+           that your code doing what it is supposed to.
 
-         - [x] This is how you would detect a semantic error. Parsing doesn't involve
-             semantic errors.
+           -   This is how you would detect a semantic error. Parsing doesn't involve
+               semantic errors.
 
-         You should search through your program for syntax errors.
+         - [x] You should search through your program for syntax errors.
 
-         +   Parsing involves looking at the syntactic structure of your program.
+           +   Parsing involves looking at the syntactic structure of your program.
 
-         You should translate your program to object code.
+         - [ ] You should translate your program to object code.
 
-         - [ ] This would be quite a chore! Luckily you have an interpreter or a compiler
-             to do that for you!
+           -   This would be quite a chore! Luckily you have an interpreter or a compiler
+               to do that for you!
 
-         You should run your program and check for run-time errors.
+         - [ ] You should run your program and check for run-time errors.
 
-         - [ ] Parsing doesn't involve run-time errors.
+           -   Parsing doesn't involve run-time errors.
 
 

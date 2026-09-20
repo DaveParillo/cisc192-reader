@@ -95,6 +95,7 @@ of the circle.
       .. tb-choice::
          :name: fun_comp_1
 
+         What is the composition of the function ``fred`` ?
 
 
          - [ ] the types and quantities of variables that make up the function
@@ -115,16 +116,15 @@ of the circle.
       .. tb-choice::
          :name: fun_comp_2
 
-         urns out you already have a function called ``printHelloName``
-         ou must rename this one.  Which of the following could be the 
-         name for your function?
+         It turns out you already have a function called ``printHelloName``
+         so you must rename this one.  Which of the following could be the 
+         new name for your function?
 
+         ::
 
-
-         void printHelloName (string name) {
-           cout << "Hello " << name << "!" <<  endl;
-         }
-
+             void printHelloName (string name) {
+               cout << "Hello " << name << "!" <<  endl;
+             }
 
          - [ ] print_hello_name
 

@@ -83,24 +83,24 @@ Feel free to modify the code!
       .. tb-choice::
          :name: fillin_functions_1
 
-         ch parameter is not declared as a ``const``?
+         Which parameter is not declared as a ``const``?
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         void addTimeFill (const Time& t1, const Time& t2, Time& sum) {
-           sum.hour = t1.hour + t2.hour;
-           sum.minute = t1.minute + t2.minute;
-           sum.second = t1.second + t2.second;
+            void addTimeFill (const Time& t1, const Time& t2, Time& sum) {
+              sum.hour = t1.hour + t2.hour;
+              sum.minute = t1.minute + t2.minute;
+              sum.second = t1.second + t2.second;
 
-           if (sum.second >= 60.0) {
-             sum.second -= 60.0;
-             sum.minute += 1;
-           }
-           if (sum.minute >= 60) {
-             sum.minute -= 60;
-             sum.hour += 1;
-           }
-         }
+              if (sum.second >= 60.0) {
+                sum.second -= 60.0;
+                sum.minute += 1;
+              }
+              if (sum.minute >= 60) {
+                sum.minute -= 60;
+                sum.hour += 1;
+              }
+            }
 
          - [ ] Time& t1
 

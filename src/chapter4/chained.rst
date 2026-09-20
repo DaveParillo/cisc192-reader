@@ -63,26 +63,26 @@ do.
       .. tb-choice::
          :name: chained_conditionals_1
 
-          will print after the following code is executed?
+         What will print after the following code is executed?
 
+         ::
 
+             #include <iostream>
+             using namespace std;
 
-         #include <iostream>
-         using std::cout;
-
-         int main () {
-           int x = 10;
-           if (x > 8) {
-             cout << "One! ";
-           }
-           if (x > 6) {
-             cout << "Two! ";
-           }
-           if (x > 3) {
-             cout << "Three!\n";
-           }
-           return 0;
-         }
+             int main () {
+               int x = 10;
+               if (x > 8) {
+                 cout << "One! ";
+               }
+               if (x > 6) {
+                 cout << "Two! ";
+               }
+               if (x > 3) {
+                 cout << "Three!" << endl;
+               }
+               return 0;
+             }
 
 
          - [ ] Three!
@@ -103,29 +103,27 @@ do.
       .. tb-choice::
          :name: chained_conditionals_2
 
-          will print after the following code is executed?
+         What will print after the following code is executed?
 
+         ::
 
+             #include <iostream>
+             using namespace std;
 
-         #include <iostream>
-         using std::cout;
+             int main () {
+               int x = 10;
+               if (x > 8) {
+                 cout << "One! " ;
+               }
+               else if (x > 6) {
+                 cout << "Two! ";
+               }
+               else {
+                 cout << "Three!" << endl;
+               }
+               return 0;
+             }
 
-         int main () {
-           int x = 10;
-           if (x > 8) 
-           {
-             cout << "One! " ;
-           }
-           else if (x > 6) 
-           {
-             cout << "Two! ";
-           }
-           else 
-           {
-             cout << "Three!\n";
-           }
-           return 0;
-         }
 
          - [ ] Three!
 
@@ -145,25 +143,27 @@ do.
       .. tb-choice::
          :name: chained_conditionals_3
 
-          will print after the following code is executed?
+         What will print after the following code is executed?
 
+         ::
 
+             #include <iostream>
+             using namespace std;
 
-         #include <iostream>
+             int main () {
+               int x = 7;
+               if (x > 8) {
+                 cout << "One! " ;
+               }
+               if (x > 6) {
+                 cout << "Two! ";
+               }
+               if (x > 3) {
+                 cout << "Three!" << endl;
+               }
+               return 0;
+             }
 
-         int main () {
-           int x = 7;
-           if (x > 8) {
-             std::cout << "One! " ;
-           }
-           if (x > 6) {
-             std::cout << "Two! ";
-           }
-           if (x > 3) {
-             std::cout << "Three!\n";
-           }
-           return 0;
-         }
 
          - [ ] Two!
 
@@ -183,28 +183,26 @@ do.
       .. tb-choice::
          :name: chained_conditionals_4
 
-          will print after the following code is executed?
+         What will print after the following code is executed?
 
+         ::
 
+             #include <iostream>
+             using namespace std;
 
-         #include <iostream>
-
-         int main () {
-           int x = 7;
-           if (x > 8) 
-           {
-             std::cout << "One! " ;
-           }
-           else if (x > 6) 
-           {
-             std::cout << "Two! ";
-           }
-           else 
-           {
-             std::cout << "Three!\n";
-           }
-           return 0;
-         }
+             int main () {
+               int x = 7;
+               if (x > 8) {
+                 cout << "One! " ;
+               }
+               else if (x > 6) {
+                 cout << "Two! ";
+               }
+               else {
+                 cout << "Three!" << endl;
+               }
+               return 0;
+             }
 
          - [x] Two!
 

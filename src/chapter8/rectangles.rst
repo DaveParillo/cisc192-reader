@@ -142,26 +142,30 @@ This statement is an example of a **nested structure**.
       .. tb-choice::
          :name: rectangles_1
 
-          can you combine these two statements into one?
+         How can you combine these two statements into one?
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         point temp = box.corner;
-         double x = temp.x;
+            Point temp = box.corner;
+            double y = temp.y;
 
 
-         - [ ] double x = corner.box.x;
+         - [ ] ``double y = corner.box.y;``
 
-           Try again.
-         - [x] double x = box.corner.x;
+           - Try again.
 
-           Correct!
-         - [ ] double x = corner.x;
+         - [x] ``double y = box.corner.y;``
 
-           Try again.
-         - [ ] double x = box.x;
+           + Correct!
 
-           Try again.
+         - [ ] ``double y = corner.y;``
+
+           - Try again.
+
+         - [ ] ``double y = box.y;``
+
+           - Try again.
+
 
    .. tb-tab:: Q3
 

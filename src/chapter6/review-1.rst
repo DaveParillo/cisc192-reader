@@ -12,56 +12,56 @@ assess what you have learned in this chapter.
       .. tb-choice::
          :name: cond_rec_mc2
 
-          is printed when the following code executes?
+         What is printed when the following code executes?
 
+         ::
 
+             int x = 8;
 
-         int x = 8;
+             if (x % 3 == 2) {
+                 cout << "hey!" << endl;
+             } else if (x != 7) {
+                 cout << "hi!" << endl;
+             } else if (x % 2 == 0) {
+                 cout << "hello!" << endl;
+             } else {
+                 cout << "bye!" << endl;
+             }
 
-         if (x % 3 == 2) {
-             cout << "hey!" << endl;
-         } else if (x != 7) {
-             cout << "hi!" << endl;
-         } else if (x % 2 == 0) {
-             cout << "hello!" << endl;
-         } else {
-             cout << "bye!" << endl;
-         }
+         - [x] :: none
 
-         :: none
+               hey!
 
-             hey!
+           +   Since the first conditon is met, the rest of the chained
+               conditional does not execute.
 
-         +   Since the first conditon is met, the rest of the chained
-             conditional does not execute.
+         - [ ] :: none
 
-         :: none
+               hi!
 
-             hi!
+           -   It's true that ``8 != 7``, but "hi!" is not printed here.
 
-         - [ ] It's true that ``8 != 7``, but "hi!" is not printed here.
+         - [ ] :: none
 
-         :: none
+               hi!
 
-             hi!
+           -   It's true that ``8 % 2 == 0``, but "hello!" is not printed!
 
-         - [ ] It's true that ``8 % 2 == 0``, but "hello!" is not printed!
+         - [ ] :: none
 
-         :: none
+               hey!
+               hi!
+               hello!
 
-             hey!
-             hi!
-             hello!
+           -   All of these conditons are met, but only one expression is
+               printed!
 
-         - [ ] All of these conditons are met, but only one expression is
-             printed!
+         - [ ] :: none
 
-         :: none
+               bye!
 
-             bye!
-
-         - [ ] At least one of the conditons is met, so the ``else`` will not
-             execute!
+           -   At least one of the conditons is met, so the ``else`` will not
+               execute!
 
 
    .. tb-tab:: Q3
@@ -69,62 +69,62 @@ assess what you have learned in this chapter.
       .. tb-choice::
          :name: cond_rec_mc3
 
-          is printed when the following code executes?
+         What is printed when the following code executes?
 
+         ::
 
+             int x = 34;
 
-         int x = 34;
+             if (32 < x) {
+                 cout << "It's Freezing!";
+             }
+             if (x < 40) {
+                 cout << "It's Cold!";
+             }
+             if (x > 65) {
+                 cout << "It's Warm!";
+             } else {
+                 cout << "It's Hot!";
+             }
 
-         if (32 < x) {
-             cout << "It's Freezing!";
-         }
-         if (x < 40) {
-             cout << "It's Cold!";
-         }
-         if (x > 65) {
-             cout << "It's Warm!";
-         } else {
-             cout << "It's Hot!";
-         }
+         - [ ] :: none
 
-         :: none
+               It's Freezing!
 
-             It's Freezing!
+           -   Take a closer look at the conditions and the way they
+               are written in the program.
 
-         - [ ] Take a closer look at the conditions and the way they
-             are written in the program.
+         - [ ] :: none
 
-         :: none
+               It's Cold!
 
-             It's Cold!
+           -   Take a closer look at the conditions and the way they
+               are written in the program.
 
-         - [ ] Take a closer look at the conditions and the way they
-             are written in the program.
+         - [ ] :: none
 
-         :: none
+               It's Freezing!
+               It's Cold!
 
-             It's Freezing!
-             It's Cold!
+           -   You've identified some of the conditons that are met!
+               Take another look at the *chain* of conditionals at the
+               end!
 
-         - [x] You've identified some of the conditons that are met!
-             Take another look at the *chain* of conditionals at the
-             end!
+         - [x] :: none
 
-         :: none
+               It's Freezing!
+               It's Cold!
+               It's Hot!
 
-             It's Freezing!
-             It's Cold!
-             It's Hot!
+           +   These statements are quite contradicting, but that's exactly
+               what the output would be if we ran this code.
 
-         +   These statements are quite contradicting, but that's exactly
-             what the output would be if we ran this code.
+         - [ ] :: none
 
-         :: none
+               It's Hot!
 
-             It's Hot!
-
-         - [ ] Take a closer look at the conditions and the way they
-             are written in the program.
+           -   Take a closer look at the conditions and the way they
+               are written in the program.
 
 
    .. tb-tab:: Q4
@@ -132,42 +132,42 @@ assess what you have learned in this chapter.
       .. tb-choice::
          :name: cond_rec_mc4
 
-         ose you have defined the following function:
+         Suppose you have defined the following function:
 
+         ::
 
-
-         void practicingReturns (int a, int b) {
-             if (a < b) {
-                 a += 2;
+             void practicingReturns (int a, int b) {
+                 if (a < b) {
+                     a += 2;
+                 }
+                 if (a > b) {
+                     return;
+                 }
+                 cout << a + b;
              }
-             if (a > b) {
-                 return;
-             }
-             cout << a + b;
-         }
 
-          is printed when we run the following code?
+         What is printed when we run the following code?
 
+         ::
 
+             int x = practicingReturns(2, 3);
 
-         int x = practicingReturns(2, 3);
+         - [ ] 5
 
-         5
+           -   This is what ``a + b`` would be before the first conditonal.
 
-         - [ ] This is what ``a + b`` would be before the first conditonal.
+         - [ ] 7
 
-         7
+           -   This is the value of ``a + b`` after the first conditional, but it
+               doesn't print.
 
-         - [ ] This is the value of ``a + b`` after the first conditional, but it
-             doesn't print.
+         - [ ] 23
 
-         23
+           -   This is not the value of ``a + b``.
 
-         - [x] This is not the value of ``a + b``.
+         - [x] Nothing.
 
-         Nothing.
-
-         +   The function exits with a return before anything is printed.
+           +   The function exits with a return before anything is printed.
 
 
    .. tb-tab:: Q5
@@ -175,53 +175,53 @@ assess what you have learned in this chapter.
       .. tb-choice::
          :name: cond_rec_mc5
 
-         ose you have defined the following function:
+         Suppose you have defined the following function:
 
+         ::
 
-
-         void fortuneCookie (int a, bool b, char c) {
-             if (c < 'm') {
-                 if (a % 2 == 0) {
-                     cout << "An alien of some sort will be appearing to you shortly.";
+             void fortuneCookie (int a, bool b, char c) {
+                 if (c < 'm') {
+                     if (a % 2 == 0) {
+                         cout << "An alien of some sort will be appearing to you shortly.";
+                     } else {
+                         cout << "The fortune you seek is in another cookie.";
+                     }
+                 } else if (c < 'r') {
+                     if (b) {
+                         cout << "He who laughs at himself never runs out of things to laugh at.";
+                     } else {
+                         cout << "You will be hungry again in one hour.";
+                     }
                  } else {
-                     cout << "The fortune you seek is in another cookie.";
+                     cout << "Fortune not found? Abort, retry, ignore.";
                  }
-             } else if (c < 'r') {
-                 if (b) {
-                     cout << "He who laughs at himself never runs out of things to laugh at.";
-                 } else {
-                     cout << "You will be hungry again in one hour.";
-                 }
-             } else {
-                 cout << "Fortune not found? Abort, retry, ignore.";
              }
-         }
 
-          will be your fortune if you run the following code?
+         What will be your fortune if you run the following code?
 
+         ::
 
+             fortuneCookie(14, false, 'm');
 
-         fortuneCookie(14, false, 'm');
+         - [ ] ``An alien of some sort will be appearing to you shortly.``
 
-         ``An alien of some sort will be appearing to you shortly.``
+           -   ``'m'`` is NOT less than ``'m'``, so you don't even enter the ``if`` block.
 
-         - [ ] ``'m'`` is NOT less than ``'m'``, so you don't even enter the ``if`` block.
+         - [ ] ``The fortune you seek is in another cookie.``
 
-         ``The fortune you seek is in another cookie.``
+           -   ``'m'`` is NOT less than ``'m'``, so you don't even enter the ``if`` block.
 
-         - [ ] ``'m'`` is NOT less than ``'m'``, so you don't even enter the ``if`` block.
+         - [ ] ``He who laughs at himself never runs out of things to laugh at.``
 
-         ``He who laughs at himself never runs out of things to laugh at.``
+           -   ``if (b)`` really means ``if (b == true)``.
 
-         - [x] ``if (b)`` really means ``if (b == true)``.
+         - [x] ``You will be hungry again in one hour.``
 
-         ``You will be hungry again in one hour.``
+           +   ``'m' < 'r'`` is true and ``b == false``, so this is the fortune that will print.
 
-         +   ``'m' < 'r'`` is true and ``b == false``, so this is the fortune that will print.
+         - [ ] ``Fortune not found? Abort, retry, ignore.``
 
-         ``Fortune not found? Abort, retry, ignore.``
-
-         - [ ] ``'m'`` is less than ``'r'`` so you would enter the ``else if`` block, not the ``else``.
+           -   ``'m'`` is less than ``'r'`` so you would enter the ``else if`` block, not the ``else``.
 
 
    .. tb-tab:: Q6
@@ -229,53 +229,53 @@ assess what you have learned in this chapter.
       .. tb-choice::
          :name: cond_rec_mc6
 
-         ose you have defined the following function:
+         Suppose you have defined the following function:
 
+         ::
 
-
-         void fortuneCookie (int a, bool b, char c) {
-             if (c < 'm') {
-                 if (a % 2 == 0) {
-                     cout << "An alien of some sort will be appearing to you shortly.";
+             void fortuneCookie (int a, bool b, char c) {
+                 if (c < 'm') {
+                     if (a % 2 == 0) {
+                         cout << "An alien of some sort will be appearing to you shortly.";
+                     } else {
+                         cout << "The fortune you seek is in another cookie.";
+                     }
+                 } else if (c < 'r') {
+                     if (b) {
+                         cout << "He who laughs at himself never runs out of things to laugh at.";
+                     } else {
+                         cout << "You will be hungry again in one hour.";
+                     }
                  } else {
-                     cout << "The fortune you seek is in another cookie.";
+                     cout << "Fortune not found? Abort, retry, ignore.";
                  }
-             } else if (c < 'r') {
-                 if (b) {
-                     cout << "He who laughs at himself never runs out of things to laugh at.";
-                 } else {
-                     cout << "You will be hungry again in one hour.";
-                 }
-             } else {
-                 cout << "Fortune not found? Abort, retry, ignore.";
              }
-         }
 
-          will be your fortune if you run the following code?
+         What will be your fortune if you run the following code?
 
+         ::
 
+             fortuneCookie(22, true, 'b');
 
-         fortuneCookie(22, true, 'b');
+         - [x] ``An alien of some sort will be appearing to you shortly.``
 
-         ``An alien of some sort will be appearing to you shortly.``
+           +   ``'b' < 'm'`` and ``22 % 2 == 0``, so this is the fortune that will print.
 
-         +   ``'b' < 'm'`` and ``22 % 2 == 0``, so this is the fortune that will print.
+         - [ ] ``The fortune you seek is in another cookie.``
 
-         ``The fortune you seek is in another cookie.``
+           -   ``22 % 2 == 0``, so you enter the ``if`` block, not the else.
 
-         - [ ] ``22 % 2 == 0``, so you enter the ``if`` block, not the else.
+         - [ ] ``He who laughs at himself never runs out of things to laugh at.``
 
-         ``He who laughs at himself never runs out of things to laugh at.``
+           -   ``'b'`` is less than ``'m'``, so you would enter the ``if`` block, not the ``else if``.
 
-         - [ ] ``'b'`` is less than ``'m'``, so you would enter the ``if`` block, not the ``else if``.
+         - [ ] ``You will be hungry again in one hour.``
 
-         ``You will be hungry again in one hour.``
+           -   ``'b'`` is less than ``'m'``, so you would enter the ``if`` block, not the ``else if``.
 
-         - [ ] ``'b'`` is less than ``'m'``, so you would enter the ``if`` block, not the ``else if``.
+         - [ ] ``Fortune not found? Abort, retry, ignore.``
 
-         ``Fortune not found? Abort, retry, ignore.``
-
-         - [ ] ``'b'`` is less than ``'m'``, so you would enter the ``if`` block, not the ``else``.
+           -   ``'b'`` is less than ``'m'``, so you would enter the ``if`` block, not the ``else``.
 
 
    .. tb-tab:: Q7
@@ -283,114 +283,114 @@ assess what you have learned in this chapter.
       .. tb-choice::
          :name: cond_rec_mc7
 
-         ose you have defined the following function:
+         Suppose you have defined the following function:
 
+         ::
 
-
-         void theThing (int m, int n, bool b) {
-             if (b) {
-                 if (m % 4 == 0) {
-                     cout << m;
+             void theThing (int m, int n, bool b) {
+                 if (b) {
+                     if (m % 4 == 0) {
+                         cout << m;
+                         return;
+                     }
+                     if ((m + n) > 10) {
+                         cout << m + n;
+                         return;
+                     }
+                 } else if ((m > n) == b) {
+                     cout << m - n;
                      return;
+                 } else {
+                     if (n % 3 == 0) {
+                         cout << n;
+                         return;
+                     }
                  }
-                 if ((m + n) > 10) {
-                     cout << m + n;
-                     return;
-                 }
-             } else if ((m > n) == b) {
-                 cout << m - n;
-                 return;
-             } else {
-                 if (n % 3 == 0) {
-                     cout << n;
-                     return;
-                 }
+                 cout << -1;
              }
-             cout << -1;
-         }
 
-          is printed when we run the following code?
+         What is printed when we run the following code?
 
+         ::
 
+             theThing (5, 10, false);
 
-         theThing (5, 10, false);
+         - [ ] 5
 
-         5
+           -   The outer ``if`` condition is not met, the block does not execute.
 
-         - [ ] The outer ``if`` condition is not met, the block does not execute.
+         - [ ] 15
 
-         15
+           -   The outer ``if`` condition is not met, the block does not execute.
 
-         - [x] The outer ``if`` condition is not met, the block does not execute.
+         - [x] -5
 
-         -5
+           +   ``m > n`` evaluates to false, so the ``else if`` block executes.
 
-         +   ``m > n`` evaluates to false, so the ``else if`` block executes.
+         - [ ] 10
 
-         10
+           -   The condition for ``else if`` is met, so the function never enters the ``else``.
 
-         - [ ] The condition for ``else if`` is met, so the function never enters the ``else``.
+         - [ ] -1
 
-         -1
-
-         - [ ] The function has returned.
+           -   The function has returned.
 
    .. tb-tab:: Q8
 
       .. tb-choice::
          :name: cond_rec_mc8
 
-         ose you have defined the following function:
+         Suppose you have defined the following function:
 
+         ::
 
-
-         void theThing (int m, int n, bool b) {
-             if (b) {
-                 if (m % 4 == 0) {
-                     cout << m;
+             void theThing (int m, int n, bool b) {
+                 if (b) {
+                     if (m % 4 == 0) {
+                         cout << m;
+                         return;
+                     }
+                     if ((m + n) > 10) {
+                         cout << m + n;
+                         return;
+                     }
+                 } else if ((m > n) == b) {
+                     cout << m - n;
                      return;
+                 } else {
+                     if (n % 3 == 0) {
+                         cout << n;
+                         return;
+                     }
                  }
-                 if ((m + n) > 10) {
-                     cout << m + n;
-                     return;
-                 }
-             } else if ((m > n) == b) {
-                 cout << m - n;
-                 return;
-             } else {
-                 if (n % 3 == 0) {
-                     cout << n;
-                     return;
-                 }
+                 cout << -1;
              }
-             cout << -1;
-         }
 
-          is printed when we run the following code?
+         What is printed when we run the following code?
 
+         ::
 
+             theThing (6, 4, true);
 
-         theThing (6, 4, true);
+         - [ ] 6
 
-         6
+           -   ``5 % 4 != 0`` in the ``if`` block, so the function doesn't print 6.
 
-         - [ ] ``5 % 4 != 0`` in the ``if`` block, so the function doesn't print 6.
+         - [ ] 10
 
-         10
+           -   ``m + n !> 10`` in the ``if`` block, so the function doesn't print 10.
 
-         - [ ] ``m + n !> 10`` in the ``if`` block, so the function doesn't print 10.
+         - [ ] 2
 
-         2
+           -   The condition for ``if`` is met, so the function never enters the ``else if``.
 
-         - [ ] The condition for ``if`` is met, so the function never enters the ``else if``.
+         - [ ] 4
 
-         4
+           -   The condition for ``if`` is met, so the function never enters the ``else``.
 
-         - [x] The condition for ``if`` is met, so the function never enters the ``else``.
+         - [x] -1
 
-         -1
-
-         +   None of the conditions were met, so we reach the default cout -1.
+           +   None of the conditions were met, so we reach the default cout -1.
 
 
    .. tb-tab:: Q9
@@ -398,48 +398,48 @@ assess what you have learned in this chapter.
       .. tb-choice::
          :name: cond_rec_mc9
 
-         ose you have defined the following function:
+         Suppose you have defined the following function:
 
+         ::
 
-
-         void moo (int m, int n) {
-             if (m != n) {
-                 m += 2;
-                 cout << "Moo!";
-                 moo (m, n);
-             } else {
-                 cout << "Got Milk?";
+             void moo (int m, int n) {
+                 if (m != n) {
+                     m += 2;
+                     cout << "Moo!";
+                     moo (m, n);
+                 } else {
+                     cout << "Got Milk?";
+                 }
              }
-         }
 
-         many times does "Moo!" print when we run the following?
+         How many times does "Moo!" print when we run the following?
 
+         ::
 
+             moo (4, 8);
 
-         moo (4, 8);
+         - [ ] 0
 
-         0
+           -   When we call the function ``4 != 8``, so "Moo!" is printed at least
+               once.
 
-         - [ ] When we call the function ``4 != 8``, so "Moo!" is printed at least
-             once.
+         - [ ] 1
 
-         1
+           -   The function calls itself inside of the ``if`` loop, so "Moo!" is printed
+               more than once.
 
-         - [x] The function calls itself inside of the ``if`` loop, so "Moo!" is printed
-             more than once.
+         - [x] 2
 
-         2
+           +   ``m`` is incremented by two each with each function call, so after two
+               ``m == n`` and the recursion stops.
 
-         +   ``m`` is incremented by two each with each function call, so after two
-             ``m == n`` and the recursion stops.
+         - [ ] 3
 
-         3
+           -   Take a look at how ``m`` is incremented with each function call.
 
-         - [ ] Take a look at how ``m`` is incremented with each function call.
+         - [ ] infinite recursion
 
-         infinite recursion
-
-         - [ ] The function stops printing "Moo!" when ``m == n``.
+           -   The function stops printing "Moo!" when ``m == n``.
 
 
    .. tb-tab:: Q10
@@ -447,49 +447,49 @@ assess what you have learned in this chapter.
       .. tb-choice::
          :name: cond_rec_mc10
 
-         ose you have defined the following function:
+         Suppose you have defined the following function:
 
+         ::
 
-
-         void moo (int m, int n) {
-             if (m != n) {
-                 m += 2;
-                 cout << "Moo!";
-                 moo (m, n);
-             } else {
-                 cout << "Got Milk?";
+             void moo (int m, int n) {
+                 if (m != n) {
+                     m += 2;
+                     cout << "Moo!";
+                     moo (m, n);
+                 } else {
+                     cout << "Got Milk?";
+                 }
              }
-         }
 
-         many times does "Moo!" print when we run the following?
+         How many times does "Moo!" print when we run the following?
 
+         ::
 
+             moo (5, 10);
 
-         moo (5, 10);
+         - [ ] 0
 
-         0
+           -   When we call the function ``5 != 10``, so "Moo!" is printed at least
+               once.
 
-         - [ ] When we call the function ``5 != 10``, so "Moo!" is printed at least
-             once.
+         - [ ] 1
 
-         1
+           -   The function calls itself inside of the ``if`` loop, so "Moo!" is printed
+               more than once.
 
-         - [ ] The function calls itself inside of the ``if`` loop, so "Moo!" is printed
-             more than once.
+         - [ ] 2
 
-         2
+           -   After two function calls, ``m == 9`` and ``n == 10``.  The function is not
+               done printing.
 
-         - [ ] After two function calls, ``m == 9`` and ``n == 10``.  The function is not
-             done printing.
+         - [ ] 3
 
-         3
+           -   After three function calls, ``m == 11`` and ``n == 10``.  The function is not
+               done printing
 
-         - [x] After three function calls, ``m == 11`` and ``n == 10``.  The function is not
-             done printing
+         - [x] infinite recursion
 
-         infinite recursion
-
-         +   The function stops printing "Moo!" when ``m == n``, but since ``m`` is odd
-             and ``n`` is even, they will never be equal as long as we increment by two.
+           +   The function stops printing "Moo!" when ``m == n``, but since ``m`` is odd
+               and ``n`` is even, they will never be equal as long as we increment by two.
 
 

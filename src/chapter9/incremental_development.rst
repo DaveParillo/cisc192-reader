@@ -179,7 +179,7 @@ way.
          }
 
       .. tb-reveal:: Reveal Problem
-         :name: 9_9_1
+         :name: id_9_9_1
 
          .. tb-parsons::
             :name: incremental_development_1
@@ -213,4 +213,3 @@ way.
                   return makeTime (seconds)
                }
                {{endgroup}}
-

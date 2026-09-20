@@ -116,6 +116,7 @@ languages, can make a big difference in a formal language.
       .. tb-choice::
          :name: formal_natural_1
 
+         **Multiple Response** Select all **formal** languages from the choices below.
 
 
          - [x] C++
@@ -164,9 +165,9 @@ languages, can make a big difference in a formal language.
    .. tb-tab:: Q4
 
       .. tb-choice::
-         :name: formal_natural_4
+         :name: formal_natural_5
 
-
+         **Multiple Response** Formal languages are...
 
          - [ ] ambiguous
 

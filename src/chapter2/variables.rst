@@ -216,10 +216,6 @@ That's ok. You can't follow everyone's conventions.
 
             Correct.
 
-         .. tb-miss:: text:c
-
-            Try again!
-
          .. tb-hit:: text:x#3
 
             Correct.
@@ -415,4 +411,3 @@ That's ok. You can't follow everyone's conventions.
    - C++ Core Guidelines :core:`naming conventions <#S-naming>`.
    - `Naming conventions <https://google.github.io/styleguide/cppguide.html#Variable_Names>`__
      from Google C++ style guide.
-

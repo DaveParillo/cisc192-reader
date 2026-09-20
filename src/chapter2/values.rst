@@ -104,23 +104,11 @@ soon.
 
             Try again!
 
-         .. tb-miss:: text:x
-
-            Try again!
-
          .. tb-hit:: text:10
 
             Correct.
 
-         .. tb-miss:: text:c
-
-            Try again!
-
          .. tb-miss:: text:x#2
-
-            Try again!
-
-         .. tb-miss:: text:c#2
 
             Try again!
 
@@ -247,4 +235,3 @@ soon.
 
      - The :lang:`type` property
      - :c:`Complete list of all punctuation <language/punctuators>`
-

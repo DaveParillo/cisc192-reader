@@ -68,7 +68,7 @@ probably uniform.
       .. tb-choice::
          :name: checking_values_1
 
-
+         If you declare a variable inside a ``for`` statement, where can it exist?
 
          - [x] inside of the for loop.
 
@@ -85,7 +85,7 @@ probably uniform.
       .. tb-choice::
          :name: checking_values_2
 
-
+         **Multiple Response** When we increase the size of ``numValues``, which of the following is true:
 
          - [x] the difference between actual and expected number of appearances increases
 
@@ -98,5 +98,5 @@ probably uniform.
            Incorrect! Take a look at the numbers again!
          - [x] the percent by which the number of appearances differs from the expected number decreases
 
-           Incorrect! As we continue to increase the size of num_values, the percent by which the number of appearances differes from the expected value approaches 0.
+           Incorrect! As we continue to increase the size of numValues, the percent by which the number of appearances differes from the expected value approaches 0.
 

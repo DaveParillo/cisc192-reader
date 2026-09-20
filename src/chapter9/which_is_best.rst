@@ -27,7 +27,7 @@ programming style.
       .. tb-choice::
          :name: which_is_best_1
 
-
+         What is a functional programming style?
 
          - [x] Writing modifiers only if there is a compelling advantage. Otherwise, write pure functions.
 

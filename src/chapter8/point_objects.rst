@@ -89,32 +89,30 @@ object with two named instance variables.
       .. tb-choice::
          :name: point_objects_1
 
-         ch of the following would be the correct way to initialize the instance variables
-         the ``point`` object?
+         Which of the following would be the correct way to initialize the ``x`` instance variable of the ``Point`` object?
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         struct point () {
-           double x;
-           double y;
-         };
+            struct Point () {
+              double x, y;
+            };
 
-         int main() {
-           point nice;
-         }
+            int main() {
+              Point nice;
+            }
 
          - [ ] blank.x = 3.0;
 
            This declaration would not work for the specific code block below.
-         - [ ] point.x = 3.0;
+         - [ ] Point.x = 3.0;
 
            The specific name of the structure should be used, not its type.
          - [x] nice.x = 3.0;
 
-           Yes, we can access and modify the instance variables using the member access operator.
-         - [ ] nice.x = 3.0
+           Yes, we can access and modify the instance variables using the dot operator.
+         - [ ] nice.x( ) = 3.0;
 
-           The semi-colon is missing at the end.
+           You are not calling a function therefore brackets for an argument list aren't required.
 
    .. tb-tab:: Q2
 
@@ -159,7 +157,7 @@ object with two named instance variables.
       .. tb-choice::
          :name: point_objects_3
 
-
+         ``struct`` definitions occur...
 
          - [ ] outside of any function definition, usually at the beginning of the program
 

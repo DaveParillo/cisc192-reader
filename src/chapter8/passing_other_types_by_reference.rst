@@ -74,34 +74,37 @@ arguments have to be variables.
       .. tb-choice::
          :name: pass_others_reference_1
 
-         t of the parameters in the following code block are pass-by-reference?
+         Which of the parameters in the following code block are pass-by-reference?
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         void swap (int& x, int& y) {
-           int temp = x;
-           x = y;
-           y = temp;
-         }
+            void swap (int& x, int& y) {
+              int temp = x;
+              x = y;
+              y = temp;
+            }
 
-         void add (int& z, int q) {
-           z = z + y;
-         }
+            void add (int& z, int q) {
+              z = z + y;
+            }
 
-         int multiply (int a, int b) {
-           int total = a * b;
-           return total;
-         }
+            int multiply (int a, int b) {
+              int total = a * b;
+              return total;
+            }
 
-         - [x] x, y, z
+         - [x] ``x``, ``y``, ``z``
 
-           Correct!
-         - [ ] x, y, z, q
+           + Correct!
 
-           Pay attention to the placement of the ``&``
-         - [ ] a, b
+         - [ ] ``x``, ``y``, ``z``, ``q``
 
-           Pay attention to the placement of the ``&``
+           - Pay attention to the placement of the ``&``
+
+         - [ ] ``a``, ``b``
+
+           - Pay attention to the placement of the ``&``
+
 
    .. tb-tab:: Q2
 

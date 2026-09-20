@@ -69,24 +69,29 @@ is a best practice or not.
       .. tb-choice::
          :name: nested_conditionals_1
 
-          will print?
+         What will print?
 
+         ::
 
+             #include <iostream>
+             using namespace std;
 
-         #include <iostream>
-
-         int main () {
-           int x = 0;
-           if (x == 0) {
-             std::cout << "Hey!\n";
-           } else {
-             if (x > 0) {
-               std::cout << "Hi!\n";
-             } else {
-               std::cout << "Hello!\n";
+             int main () {
+               int x = 0;
+               if (x == 0) {
+                 cout << "Hey!" << endl;
+               }
+               else {
+                 if (x > 0) {
+                   cout << "Hi!" << endl;
+                 }
+                 else {
+                   cout << "Hello!" << endl;
+                 }
+               }
+               return 0;
              }
-           }
-         }
+
 
          - [x] Hey!
 
@@ -106,24 +111,28 @@ is a best practice or not.
       .. tb-choice::
          :name: nested_conditionals_2
 
-          will print?
+         What will print?
 
+         ::
 
+             #include <iostream>
+             using namespace std;
 
-         #include <iostream>
-
-         int main () {
-           int x = -4;
-           if (x == 0) {
-             std::cout << "Hey!\n";
-           } else {
-             if (x > 0) {
-               std::cout << "Hi!\n";
-             } else {
-               std::cout << "Hello!\n";
+             int main () {
+               int x = -4;
+               if (x == 0) {
+                 cout << "Hey!" << endl;
+               }
+               else {
+                 if (x > 0) {
+                   cout << "Hi!" << endl;
+                 }
+                 else {
+                   cout << "Hello!" << endl;
+                 }
+               }
+               return 0;
              }
-           }
-         }
 
          - [ ] Hey!
 
@@ -143,31 +152,30 @@ is a best practice or not.
       .. tb-choice::
          :name: nested_conditionals_3
 
-          school uses a system to arrange students in a large stadium using 
-         r initials.  Look at the function definition below.  Where would a
-         ent with the initials "MZ" be seated?
+         Your school uses a system to arrange students in a large stadium using
+         their initials.  Look at the function definition below.  Where would a
+         student with the initials "MZ" be seated?
 
+         ::
 
-
-         string seating_arrangement(char first, char last) {
-           constexpr char center = 'm';
-           if (last > center) {
-             if (first > center) {
-               return "Back Left!";
-             } else {
-               return "Back Right!";
+             string seatingArrangement(char first, char last) {
+               if (last > m) {
+                 if (first > m) {
+                   return "Back Left!";
+                 }
+                 else {
+                   return "Back Right!";
+                 }
+               }
+               else {
+                 if (first > m) {
+                   return "Front Left!";
+                 }
+                 else {
+                   return "Front Right!";
+                 }
+               }
              }
-           } else {
-             if (first > .) {
-               return "Front Left!";
-             } else {
-               return "Front Right!";
-             }
-           }
-         }
-
-
-
 
          - [ ] Back Left!
 

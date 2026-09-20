@@ -74,36 +74,36 @@ presence or absence of some condition.
       .. tb-choice::
          :name: bool_var_3
 
-          will print?
+         What will print?
 
+         ::
 
+             int n = 16;
+             int x = 4;
 
-         int n = 16;
-         int x = 4;
+             bool evenFlag = (n % 2 == 0);
+             bool plusFlag = (x > 0);
 
-         bool even = (n % 2 == 0);
-         bool plus = (x > 0);
+             if (evenFlag) {
+               cout << "n was even when I checked it ";
+             }
 
-         if (even) {
-           cout << "n was even when I checked it ";
-         }
+             if (plusFlag) {
+               cout << "x was positive when I checked it";
+             }
 
-         if (plus) {
-           cout << "x was positive when I checked it";
-         }
+         - [x] n was even when I checked it x was positive when I checked it
 
-         - [ ] n was even when I checked it x was positive when I checked it
-
-           A space is not automatically added.
+           Great!
          - [ ] x was positive when I checked it n was even when I checked it
 
            Make sure you follow the correct order of execution.  Also, a space is not automatically added.
          - [ ] x was positive when I checked it
 
            Take another look at the result from the modulus operator.
-         - [x] n was even when I checked itx was positive when I checked it
+         - [ ] n was even when I checked itx was positive when I checked it
 
-           Both flags are made, and no space is added.
+           Both flags are made, But A space is after it.
          - [ ] x was positive when I checked itn was even when I checked it
 
            Make sure you follow the correct order of execution.
@@ -113,50 +113,53 @@ presence or absence of some condition.
       .. tb-choice::
          :name: bool_var_4
 
-          will print?
+         What will print?
 
+         .. code-block::
 
+             bool low_battery=true;
+             bool power_outage=true;
 
-         bool low_battery=true;
-         bool power_outage=true;
+             if(low_battery){
 
-         if(low_battery){
+               if(power_outage){
+                   power_outage=!power_outage;
+               }
+               else{
+                   low_battery=false;
+               }
 
-            if(power_outage){
-                power_outage=!power_outage;
-            }
-            else{
-                low_battery=false;
-            }
+               if(!power_outage){
 
-            if(!power_outage){
+                 if(low_battery){
+                     cout<<"Charging your phone"<<endl;
+                 }
+                 else{
+                     cout<<"Battery is charged"<<endl;
+                 }
 
-              if(low_battery){
-                  cout<<"Charging your phone\n";
-              }
-              else{
-                  cout<<"Battery is charged\n";
-              }
+               }
+               else{
+                 cout<<"There is no power"<<endl>>;
+               }
+             }
 
-            }
-            else{
-              cout<<"There is no power\n";
-            }
-
-         }
 
          - [ ] nothing will print
 
-           The value of ``low_battery`` is true so we enter the first ``if`` block.
+           -   The value of ``low_battery`` is true so we enter the first ``if`` block.
+
          - [x] "Charging your phone"
 
-           correct! ``low_battery`` stays true and we set ``power_outage`` to false.
+           +   correct! ``low_battery`` stays true and we set ``power_outage`` to false.
+
          - [ ] "Battery is charged"
 
-           ``low_battery`` is true so we don't reach this ``else``.
+           -   ``low_battery`` is true so we don't reach this ``else``.
+
          - [ ] "There is no power"
 
-           We change the value of ``power_outage`` to false before hand.
+           -   We change the value of ``power_outage`` to false before hand.
 
 -----
 

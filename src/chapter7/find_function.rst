@@ -168,22 +168,34 @@ the argument we provide.
       .. tb-choice::
          :name: find_function_3
 
-         t is printed when the code is run?
+         What is printed when the code is run?
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         string sentence = "Most seas are rough but this sea is so calm!";
-         string target = "sea";
-         std::size_t index = sentence.find(target);
-         cout << "Index to find sea is " << index << endl;
+            string sentence = "Most seas are rough but this sea is so calm!";
+            string target = "sea";
+            size_t index = sentence.find(target);
+            cout << "Index to find sea is " << index << endl;
+
+         - Index to find sea is 29
+
+           - ``find`` returns the index of the *first* occurence of "sea".
+
+         - Index to find sea is 5
+
+           + Correct! ``index`` only has to look for a sequence arranged as "sea" in the string.
+
+         - Index to find sea is ``string::npos``
+
+           - "sea" is present in the ``sentence`` string.
 
          - [ ] Index to find sea is 29
 
            <code>find</code> returns the index of the FIRST occurence of "sea".
          - [x] Index to find sea is 5
 
-           Correct! <code>index</code> only has to look for a sequence arranged as "sea" in the stirng.
-         - [ ] Index to find sea is std::string::npos
+           Correct! <code>index</code> only has to look for a sequence arranged as "sea" in the string.
+         - [ ] Index to find sea is -1
 
            sea is present in the <code>sentence</code>.
 

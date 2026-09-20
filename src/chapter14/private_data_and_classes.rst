@@ -166,10 +166,10 @@ Run the active code below. Uncomment the commented out code to see what happens!
    }
 
 .. tb-choice::
-   :name: c192_question14_1_1
+   :name: question14_1_1
 
-
-
+   Data encapsulation is based on the idea that each structure definition should provide a set of functions that 
+   apply to the structure, and allow unrestricted access to the internal representation.
 
    - [ ] True
 
@@ -191,19 +191,20 @@ Run the active code below. Uncomment the commented out code to see what happens!
       :incorrect: Incorrect! Try again.
 
 .. tb-choice::
-   :name: c192_question14_1_3
+   :name: question14_1_3
 
+   Multiple Response: Which of the following are examples of accessor functions?
 
-   - [x] get_suit
+   - [x] getSuit
 
      Correct!
-   - [x] set_rank
+   - [x] setRank
 
      Correct! "Setter" functions are also known as "mutator" functions.
    - [ ] print
 
      Incorrect!
-   - [x] get_rank
+   - [x] getRank
 
      Correct!
 

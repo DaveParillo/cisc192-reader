@@ -59,7 +59,7 @@ them).
       .. tb-choice::
          :name: compound_values_3
 
-
+         Which is different from the others because it is does not represent a single value?
 
          - [ ] integer
 

@@ -11,39 +11,39 @@ Answer the following **Multiple Choice** questions to assess what you have learn
       .. tb-choice::
          :name: random_mc1
 
-         pose you are randomly assigning students to discussions 1-8.  How would you do this correctly?  Assume
-          have alreay implemented the following code.
+         Suppose you are randomly assigning students to discussions 1-8.  How would you do this correctly?  Assume
+         you have alreay implemented the following code.
 
-         code-block::
+         .. code-block::
 
-         int x = random ();
+            int x = random ();
 
-          .. code-block ::
+         - [x] .. code-block ::
 
-             int y = x % 7;
-             y = y + 1;
+              int y = x % 7;
+              y = y + 1;
 
-          +   The first part creates a random number between 0 and 7 (8 numbers) and the second part adds 1 so that
-              our random number is actually between 1 and 8.
+           +   The first part creates a random number between 0 and 7 (8 numbers) and the second part adds 1 so that
+               our random number is actually between 1 and 8.
 
-          .. code-block ::
+         - [ ] .. code-block ::
 
-             int y = x % 8;
-             y = y + 1;
+              int y = x % 8;
+              y = y + 1;
 
-          - [ ] The first part creates a random number between 0 and 8 (9 numbers).  This is too many.
+           -   The first part creates a random number between 0 and 8 (9 numbers).  This is too many.
 
-          .. code-block ::
+         - [ ] .. code-block ::
 
-             int y = x % 7;
+              int y = x % 7;
 
-          - [ ] This creates a random number between 0 and 7 (8 numbers), which are not the numbers we are looking for.
+           -   This creates a random number between 0 and 7 (8 numbers), which are not the numbers we are looking for.
 
-          .. code-block ::
+         - [ ] .. code-block ::
 
-             int y = x % 8;
+              int y = x % 8;
 
-          - [ ] The first part creates a random number between 0 and 8 (9 numbers).  This is too many, and not the numbers we are looking for.
+           -   The first part creates a random number between 0 and 8 (9 numbers).  This is too many, and not the numbers we are looking for.
 
 
    .. tb-tab:: Q2
@@ -51,46 +51,46 @@ Answer the following **Multiple Choice** questions to assess what you have learn
       .. tb-choice::
          :name: random_mc2
 
-         ose you have defined the ``fizzBuzz`` function as the following
+         Suppose you have defined the ``fizzBuzz`` function as the following
 
-         ode-block::
+         .. code-block::
 
-         int fizzBuzz (const vector<int> & vec, int num1, int num2) {
-             std::size_t count = 0;
-             for (std::size_t i = 0; i < vec.size(); i++) {
-                 if (vec[i] % num1 == 0 && vec[i] % num2 == 0) {
-                     count++;
+             int fizzBuzz (const vector<int> & vec, int num1, int num2) {
+                 int count = 0;
+                 for (size_t i = 0; i < vec.size(); i++) {
+                     if (vec[i]/num1 == 0 && vec[i]/num2 == 0) {
+                         count++;
+                     }
                  }
+                 return count;
              }
-             return count;
-         }
 
-          would be printed in the following case?
+         What would be printed in the following case?
 
-         ode-block::
+         .. code-block::
 
-         vector<int> numbers = {6, 8, 14, 21, 28, 35, 36, 42, 49, 70, 81, 98};
-         cout << fizzBuzz(numbers, 2, 7);
+             vector<int> numbers = {6, 8, 14, 21, 28, 35, 36, 42, 49, 70, 81, 98};
+             cout << fizzBuzz(numbers, 2, 7);
 
-         1
+         - [ ] 1
 
-         - [ ] 14 is 7 * 2. Don't forget about the other multiples of 7 and 2.
+           -   14 is 7 * 2. Don't forget about the other multiples of 7 and 2.
 
-         2
+         - [ ] 2
 
-         - [ ] See if you can find the other multiples of 7 and 2.
+           -   See if you can find the other multiples of 7 and 2.
 
-         3
+         - [ ] 3
 
-         - [ ] See if you can find the other multiples of 7 and 2.
+           -   See if you can find the other multiples of 7 and 2.
 
-         4
+         - [ ] 4
 
-         - [x] See if you can find the other multiples of 7 and 2.
+           -   See if you can find the other multiples of 7 and 2.
 
-         5
+         - [x] 5
 
-         +   14, 28, 42, 70, and 98 are all multiples of 7 and 2 and are counted by ``fizzBuzz``.
+           +   14, 28, 42, 70, and 98 are all multiples of 7 and 2 and are counted by ``fizzBuzz``.
 
 
    .. tb-tab:: Q3
@@ -98,48 +98,48 @@ Answer the following **Multiple Choice** questions to assess what you have learn
       .. tb-choice::
          :name: random_mc3
 
-         ose you have defined the ``startsWith`` function as the following
+         Suppose you have defined the ``startsWith`` function as the following
 
-         ode-block::
+         .. code-block::
 
-         int startsWith (const vector<string> & vec, char c) {
-             std::size_t count = 0;
-             int pos = 0;
-             for (std::size_t i = 0; i < vec.size(); i++) {
-                 pos = vec[i].find(" ");
-                 if (vec[i][pos + 1] == c) {
-                     count++;
+             int startsWith (const vector<string> & vec, char c) {
+                 int count = 0;
+                 int pos = 0;
+                 for (size_t i = 0; i < vec.size(); i++) {
+                     pos = vec[i].find(" ");
+                     if (vec[i][pos + 1] == c) {
+                         count++;
+                     }
                  }
+                 return count;
              }
-             return count;
-         }
 
-          would be printed in the following case?
+         What would be printed in the following case?
 
-         ode-block::
+         .. code-block::
 
-         vector<string> names = {"Ross Meldrum", "Monica Morrissey", "Maria Geller", "Marty Bing"};
-         cout << how_many(names, 'M');
+             vector<string> names = {"Ross Meldrum", "Monica Morrissey", "Maria Geller", "Marty Bing"};
+             cout << howMany(names, 'M');
 
-         1
+         - [ ] 1
 
-         - [x] Is the function counting how many first and last ``names`` begin with ``"M"``?
+           -   Is the function counting how many first and last ``names`` begin with ``"M"``?
 
-         2
+         - [x] 2
 
-         +   The function is counting how many last names begin with ``"M"``.
+           +   The function is counting how many last names begin with ``"M"``.
 
-         3
+         - [ ] 3
 
-         - [ ] Is the function counting how many first ``names`` begin with ``"M"``?
+           -   Is the function counting how many first ``names`` begin with ``"M"``?
 
-         4
+         - [ ] 4
 
-         - [ ] Is the function counting how many elements in ``names`` contain ``"M"``?
+           -   Is the function counting how many elements in ``names`` contain ``"M"``?
 
-         5
+         - [ ] 5
 
-         - [ ] Is the function counting how many times ``"M"`` appears in ``names``?
+           -   Is the function counting how many times ``"M"`` appears in ``names``?
 
 
    .. tb-tab:: Q4
@@ -147,52 +147,52 @@ Answer the following **Multiple Choice** questions to assess what you have learn
       .. tb-choice::
          :name: random_mc4
 
-         ose you have defined the ``how_many`` function as the following
+         Suppose you have defined the ``howMany`` function as the following
 
-         ode-block::
+         .. code-block::
 
-         std::size_t how_many (const vector<string>& vec, char let) {
-             std::size_t count = 0;
-             for (std::size_t i = 0; i < vec.size(); i++) {
-                 for (std::size_t c = 0; c < vec[i].size(); c++) {
-                     if (vec[i][c] == let) {
-                         count++;
+             int howMany (const vector<string>& vec, char let) {
+                 int count = 0;
+                 for (size_t i = 0; i < vec.size(); i++) {
+                     for (size_t c = 0; c < vec[i].size(); c++) {
+                         if (vec[i][c] == let) {
+                             count++;
+                         }
                      }
                  }
+                 return count;
              }
-             return count;
-         }
 
-          is the value of counts after the following code is run?
+         What is the value of counts after the following code is run?
 
-         ode-block::
+         .. code-block::
 
-         vector<string> snacks = {"cheetos", "ruffles", "jalepeno chips", "oreos", "m&ms"};
-         vector<char> letters = {'a', 'e', 'i', 'o', 'u'};
-         vector<std::size_t> counts = {};
-         for (std::size_t i = 0; i < letters.size(); ++i) {
-             counts.push_back(how_many(snacks, letters[i]));
-         }
+             vector<string> snacks = {"cheetos", "ruffles", "jalepeno chips", "oreos", "m&ms"};
+             vector<char> letters = {'a', 'e', 'i', 'o', 'u'};
+             vector<int> counts = {};
+             for (int i = 0; i < letters.size(); ++i) {
+                 counts.push_back(howMany(snacks, letters[i]));
+             }
 
-         {1, 6, 2, 6, 2}
+         - [ ] {1, 6, 2, 6, 2}
 
-         - [ ] What is being counted in ``counts``?
+           -   What is being counted in ``counts``?
 
-         {1, 4, 1, 3, 1}
+         - [ ] {1, 4, 1, 3, 1}
 
-         - [x] ``counts`` isn't a count of how many words each vowel appers in inside ``snacks``.
+           -   ``counts`` isn't a count of how many words each vowel appers in inside ``snacks``.
 
-         {1, 6, 1, 4, 1}
+         - [x] {1, 6, 1, 4, 1}
 
-         +   ``counts`` contains a count of how many times each vowel appers in ``snacks``.
+           +   ``counts`` contains a count of how many times each vowel appers in ``snacks``.
 
-         {1, 6, 2, 3, 2}
+         - [ ] {1, 6, 2, 3, 2}
 
-         - [ ] What is being counted in ``counts``?
+           -   What is being counted in ``counts``?
 
-         Error!
+         - [ ] Error!
 
-         - [ ] There isn't anything wrong with the code that would cause an error.
+           -   There isn't anything wrong with the code that would cause an error.
 
 
    .. tb-tab:: Q5
@@ -200,42 +200,42 @@ Answer the following **Multiple Choice** questions to assess what you have learn
       .. tb-choice::
          :name: random_mc5
 
-         ose you have defined the ``repeater`` function as the following
+         Suppose you have defined the ``repeater`` function as the following
 
-         ode-block::
+         .. code-block::
 
-         std::size_t repeater (const vector<int>& vec) {
-             std::size_t count = 0;
-             for (std::size_t i = 0; i < vec.size(); i++) {
-                 for (std::size_t j = 0; j < vec.size(); j++) {
-                     if ((vec[j] == vec[i]) && (i != j)) {
-                         count++;
+             int repeater (const vector<int>& vec) {
+                 int count = 0;
+                 for (size_t i = 0; i < vec.size(); i++) {
+                     for (size_t j = 0; j < vec.size(); j++) {
+                         if ((vec[j] == vec[i]) && (i != j)) {
+                             count++;
+                         }
                      }
                  }
+                 return count;
              }
-             return count;
-         }
 
-          is the value of counter after the following code is run?
+         What is the value of counter after the following code is run?
 
-         ode-block::
+         .. code-block::
 
-         vector<int> vals = {1,1,3,2,2,3,3,4,5,6,7,4,4,5};
-         std::size_t counter = repeater(vals);
+             vector<int> vals = {1,1,3,2,2,3,3,4,5,6,7,4,4,5};
+             int counter = repeater(vals);
 
-         169
+         - [ ] 169
 
-         - [ ] What is being counted by ``repeater`` in each iteration of the outer loop? Definitely not everything!
+           -   What is being counted by ``repeater`` in each iteration of the outer loop? Definitely not everything!
 
-         32
+         - [ ] 32
 
-         - [x] ``repeater`` does count repeats but does it consider values at the same indexes repeats?
+           -   ``repeater`` does count repeats but does it consider values at the same indexes repeats?
 
-         18
+         - [x] 18
 
-         +   ``repeater`` considers the number of times each index shares a value with any of the other indices.
+           +   ``repeater`` considers the number of times each index shares a value with any of the other indices.
 
-         13
+         - [ ] 13
 
-         - [ ] ``repeater`` dosen't simply count the number of elements.
+           -   ``repeater`` dosen't simply count the number of elements.
 

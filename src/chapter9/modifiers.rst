@@ -108,7 +108,7 @@ you can reveal the extra problem at the end for help.
    }
 
 .. tb-reveal:: Reveal Problem
-   :name: 9_6_1
+   :name: id_9_6_1
 
    .. tb-parsons::
       :name: modifiers_1
@@ -158,4 +158,3 @@ you can reveal the extra problem at the end for help.
             time.hour += hours;
          }
          {{endgroup}}
-

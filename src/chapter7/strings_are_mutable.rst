@@ -38,13 +38,13 @@ single character in the string.
       .. tb-choice::
          :name: string_mutable_1
 
-         t is printed by the following statements?
+         What is printed by the following statements?
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         string fav_food = "ice cream";
-         fav_food[3] = 'd';
-         cout << fav_food << '\n';
+            string fav_food = "ice cream";
+            fav_food[3] = "d";
+            cout << fav_food << endl;
 
          - [ ] icd cream
 
@@ -64,22 +64,22 @@ single character in the string.
       .. tb-choice::
          :name: string_mutable_2
 
-          can we fix the message to be "You're a wizard Harry"?
+         How can we fix the message to be "You're a wizard Harry"?
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         string message = "You're a lizard Harry";
+            string message = "You're a lizard Harry";
 
-         - [x] message[9] = 'w';
+         - [x] message[9] = "w";
 
            Since "l" is at index 9, replacing it with "w" fixes the message.
-         - [ ] message[10] = 'w';
+         - [ ] message[10] = "w";
 
            Remember indexing starts at 0.
-         - [ ] 'w' = message[9];
+         - [ ] "w" = message[9];
 
            In order to change a letter in a string, the ``[]`` operator must be on the left of the assignment.
-         - [ ] message[8] = 'w';
+         - [ ] message[8] = "w";
 
            Remember indexing starts at 0.
 

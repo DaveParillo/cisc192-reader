@@ -142,7 +142,7 @@ Answer the following **Mixed-Up Code** questions to assess what you have learned
             vector<int> numbers = {1, 2, 3, 4, 5};
             {{endgroup}}
             {{group}}
-            for (std::size_t i = 0; i < numbers.size(); i++) {
+            for (size_t i = 0; i < numbers.size(); i++) {
             {{endgroup}}
             {{group}}
              numbers[i] = numbers[i] * 2;
@@ -156,11 +156,11 @@ Answer the following **Mixed-Up Code** questions to assess what you have learned
             {{endgroup}}
             {{distractor}}
             {{group}}
-            for (std::size_t i = 1; i <= numbers.size(); ++i) { #distractor
+            for (size_t i = 1; i <= numbers.size(); ++i) { #distractor
             {{endgroup}}
             {{distractor}}
             {{group}}
-            for (std::size_t i = 0; i < numbers.size(); i++) { #distractor
+            for (int i = 0; i < numbers.size(); i++) { #distractor
             {{endgroup}}
             {{distractor}}
             {{group}}
@@ -196,10 +196,10 @@ Answer the following **Mixed-Up Code** questions to assess what you have learned
             words.push_back("mario");
             {{endgroup}}
             {{group}}
-            for (std::size_t i = 0; i < words.size(); ++i) {
+            for (size_t i = 0; i < words.size(); ++i) {
             {{endgroup}}
             {{group}}
-             for (std::size_t c = 0; c < words[i].size(); ++c) {
+             for (size_t c = 0; c < words[i].size(); ++c) {
             {{endgroup}}
             {{group}}
               if (words[i][c] == 'a') {
@@ -218,11 +218,11 @@ Answer the following **Mixed-Up Code** questions to assess what you have learned
             {{endgroup}}
             {{distractor}}
             {{group}}
-            for (std::size_t i = 0; i < words.size(); ++i) { #distractor
+            for (int i = 0; i < words.size(); ++i) { #distractor
             {{endgroup}}
             {{distractor}}
             {{group}}
-            for (std::size_t c = 0; c < words[i].size(); ++c) { #distractor
+            for (int c = 0; c < words[i].size(); ++c) { #distractor
             {{endgroup}}
             {{distractor}}
             {{group}}
@@ -249,7 +249,7 @@ Answer the following **Mixed-Up Code** questions to assess what you have learned
             count = 0
             {{endgroup}}
             {{group}}
-            for (std::size_t i = 0; i < album.size(); i++) {
+            for (size_t i = 0; i < album.size(); i++) {
             {{endgroup}}
             {{group}}
              if (album[i][0] == 'b') {
@@ -263,7 +263,7 @@ Answer the following **Mixed-Up Code** questions to assess what you have learned
             {{endgroup}}
             {{distractor}}
             {{group}}
-            for (std::size_t i = 0; i < album.size(); i++) { #distractor
+            for (int i = 0; i < album.size(); i++) { #distractor
             {{endgroup}}
             {{distractor}}
             {{group}}
@@ -301,7 +301,7 @@ Answer the following **Mixed-Up Code** questions to assess what you have learned
             count = 0;
             {{endgroup}}
             {{group}}
-            for (std::size_t i = 0; i < 7; ++i) {
+            for (int i = 0; i < 7; ++i) {
             {{endgroup}}
             {{group}}
              if (temps[i] >= 75.0 && precip[i] < 0.50) {
@@ -315,7 +315,7 @@ Answer the following **Mixed-Up Code** questions to assess what you have learned
             {{endgroup}}
             {{distractor}}
             {{group}}
-            for (std::size_t i = 1; i <= 7; ++i) { #distractor
+            for (size_t i = 1; i <= 7; ++i) { #distractor
             {{endgroup}}
             {{distractor}}
             {{group}}
@@ -347,7 +347,7 @@ Answer the following **Mixed-Up Code** questions to assess what you have learned
             vector<string> proper = {};
             {{endgroup}}
             {{group}}
-            for (std::size_t i = 0; i < nouns.size(); ++i) {
+            for (size_t i = 0; i < nouns.size(); ++i) {
             {{endgroup}}
             {{group}}
              if (isupper(nouns[i][0])) {
@@ -376,18 +376,16 @@ Answer the following **Mixed-Up Code** questions to assess what you have learned
             vector proper = {}; #distractor
             {{endgroup}}
 
-      .. tb-parsons::
-         :name: vectors_p10
-         :no-indent:
+      .. admonition:: Parsons exercise
 
-         Suppose you have the following function <code>how_many</code> and vector <code>exclamations</code>
+         Suppose you have the following function <code>howMany</code> and vector <code>exclamations</code>
 
          ::
 
-            std::size_t how_many (const vector<string>& vec, char let) {
-                std::size_t count = 0;
-                for (std::size_t i = 0; i < vec.size(); i++) {
-                    for (std::size_t c = 0; c < vec[i].size(); c++) {
+            int howMany (const vector<string>& vec, char let) {
+                int count = 0;
+                for (size_t i = 0; i < vec.size(); i++) {
+                    for (size_t c = 0; c < vec[i].size(); c++) {
                         if (vec[i][c] == let) {
                             count++;
                         }
@@ -405,13 +403,13 @@ Answer the following **Mixed-Up Code** questions to assess what you have learned
 
             {{group}}
             vector<char> punc = {'.', '!', '?'};
-            vector<std::size_t> counts = {};
+            vector<int> counts = {};
             {{endgroup}}
             {{group}}
-            for (std::size_t i = 0; i < punc.size(); ++i) {
+            for (int i = 0; i < punc.size(); ++i) {
             {{endgroup}}
             {{group}}
-             counts.push_back(how_many(excl, punc[i]));
+             counts.push_back(howMany(excl, punc[i]));
             {{endgroup}}
             {{group}}
             }
@@ -419,14 +417,13 @@ Answer the following **Mixed-Up Code** questions to assess what you have learned
             {{distractor}}
             {{group}}
             vector<string> punc = {".", "!", "?"}; #distractor
-            vector<std::size_t> counts = {};
+            vector<int> counts = {};
             {{endgroup}}
             {{distractor}}
             {{group}}
-            for (std::size_t i = 0; i < excl.size(); ++i) { #distractor
+            for (int i = 0; i < excl.size(); ++i) { #distractor
             {{endgroup}}
             {{distractor}}
             {{group}}
-            counts.push_back(how_many(excl, i)); #distractor
+            counts.push_back(howMany(excl, i)); #distractor
             {{endgroup}}
-

@@ -54,6 +54,7 @@ If we reorder the data in the histogram, our results are invalid.
       .. tb-choice::
          :name: histogram_1
 
+         Which of the following statements are true about using vectors to store data?
 
          - [ ] Vectors require more typing than using individual variables to store data.
 

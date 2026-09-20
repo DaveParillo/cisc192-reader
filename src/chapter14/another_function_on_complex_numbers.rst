@@ -194,22 +194,22 @@ coordinates. The result is also in polar format, so when we invoke
 that we get the right answer!
 
 .. tb-choice::
-   :name: c192_question14_7_1
+   :name: question14_7_1
 
-   t is the correct output of the code below?
+   What is the correct output of the code below?
 
-   code-block:: cpp
+   .. code-block:: cpp
 
-   int main() {
-     complex_number c1 (2.0, 3.0);
-     complex_number c2 (3.0, 4.0);
-     complex_number c3 (1.0, 0.0);
-     complex_number c4 (3.5, 2.5);
-     complex_number product = mult (c1, c2);
-     complex_number diff = subtract (c4, c3);
-     complex_number sum = add (product, diff);
-     sum.print_cartesian();
-   }
+      int main() {
+        Complex c1 (2.0, 3.0);
+        Complex c2 (3.0, 4.0);
+        Complex c3 (1.0, 0.0);
+        Complex c4 (3.5, 2.5);
+        Complex product = mult (c1, c2);
+        Complex diff = subtract (c4, c3);
+        Complex sum = add (product, diff);
+        sum.printCartesian();
+      }
 
    - [ ] 3.5 + 19.5i
 

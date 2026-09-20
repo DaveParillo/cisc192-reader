@@ -135,7 +135,7 @@ times each value appears, and then see what happens when we increase
       .. tb-choice::
          :name: vector_of_rand_nums_2
 
-
+         As we store more and more random numbers in a vector, we expect its contents to be __________.
 
          - [x] more uniform
 
@@ -155,21 +155,21 @@ times each value appears, and then see what happens when we increase
       .. tb-choice::
          :name: vector_of_rand_nums_3
 
-         ld compiling the following code lead to a compiler error?
+         Would compiling the following code lead to a compiler error?
 
-         code-block:: cpp
-         :linenos:
+         .. code-block:: cpp
+            :linenos:
 
-         void dostuff (const std::vector<int> & vec) {
-            for (std::size_t i = 0; i < vec.size(); ++i) {
-               vec[i] = i;
+            void dostuff (const vector<int> & vec) {
+               for (size_t i = 0; i < vec.size(); i++) {
+                  vec[i] = vec[i] ;
+               }
             }
-         }
 
          - [x] yes we would get a compile error
 
            Correct! we can't make changes to a vector we take in by constant reference
-         - [ ] no we would not because values are valid.
+         - [ ] no we would not because values remain same.
 
-           Even if the values are legal and valid we are editing a constant which is not allowed.
+           Even if we keep the values same we are editing a constant which is not allowed.
 

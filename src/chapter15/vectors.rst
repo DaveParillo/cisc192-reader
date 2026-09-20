@@ -73,13 +73,24 @@ rows. Check both dimensions when accessing a value; ``table.at(r)[c]`` checks
 only the row. A table with no rows has no first row from which to read a width.
 
 .. tb-choice::
-   :name: c192_vectors_reserve
+   :name: mce_15_1
 
+   We want to open a file and parse its data into our program. What library
+   do we need to include?
 
-   - [ ] 100
+   - [ ] ``iostream``
 
-     reserve changes capacity, not size.
-   - [x] 0
+     - This library deals with communication through the standard input and output.
 
-     No elements were appended or created by resize.
+   - [ ] ``sstream``
+
+     -  This library is used to manipulate string objects as if they were streams.
+
+   - [x] ``fstream``
+
+     + This library is used to manipulate files using streams.
+
+   - [ ] ``iomanip``
+
+     - This library is used to modify internal flags and formatting options.
 

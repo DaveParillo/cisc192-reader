@@ -74,7 +74,7 @@ If you get stuck, you can reveal the extra problem at the end for help.
    }
 
 .. tb-reveal:: Reveal Problem
-   :name: 7_5_1
+   :name: id_7_5_1
 
    .. tb-parsons::
       :name: traversal_1
@@ -128,16 +128,16 @@ cannot become negative, so ``x >= 0`` cannot terminate this loop.
       .. tb-choice::
          :name: traversal_2
 
-          many times is the letter o printed by the following statements?
+         How many times is the letter o printed by the following statements?
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         string s = "coding rocks";
-         std::size_t i = 1;
-         while (i < s.size()) {
-           cout << s[i] << endl;
-           i = i + 2;
-         }
+            string s = "coding rocks";
+            size_t i = 1;
+            while (i < s.length()) {
+              cout << s[i] << endl;
+              i = i + 2;
+            }
 
          - [ ] 0
 
@@ -154,18 +154,18 @@ cannot become negative, so ``x >= 0`` cannot terminate this loop.
       .. tb-choice::
          :name: traversal_3
 
-         t is printed when the code is run?
+         What is printed when the code is run?
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         string truth = "engr101";
-         std::size_t index = 0;
-         std::size_t counter = 0;
-         while ( index < truth.size() ) {
-           cout << truth[index] << ' ';
-           index = index + counter;
-           counter = counter + 1;
-         }
+            string truth = "engr101";
+            size_t index = 0;
+            int counter = 0;
+            while (index < truth.length()) {
+              cout << truth[index] << " ";
+              index = index + counter;
+              counter = counter + 1;
+            }
 
          - [x] e e n r 1
 
@@ -176,4 +176,3 @@ cannot become negative, so ``x >= 0`` cannot terminate this loop.
          - [ ] e e n r
 
            Recalculate the values of <code>index</code> at each stage and consider which ones are &lt 7.
-

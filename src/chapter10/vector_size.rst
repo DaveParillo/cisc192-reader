@@ -93,6 +93,7 @@ Try running the active code below!
       .. tb-choice::
          :name: vector_size_3
 
+         Let **nums** be the vector { 0, 1, 2, 3, 4 }. What is the value *at* ``nums[nums.size()]``?
 
          - [ ] 5
 

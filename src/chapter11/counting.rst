@@ -114,7 +114,7 @@ modify the code and experiment around.
       .. tb-choice::
          :name: counting_1
 
-
+         Which of the following is the best definition of bottom-up design?
 
          - [x] a method of programming where you write simple "helper" functions that are later incorporated into larger functions
 

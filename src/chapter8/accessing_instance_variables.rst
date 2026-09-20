@@ -57,75 +57,90 @@ Next, we display the distance from the origin.
       .. tb-choice::
          :name: accessing_instance_variables_1
 
-
-
+         In ``string x = thing.cube;``, what is the object and what is the instance variable we are reading the value of?
 
          - [ ] ``string`` is the instance variable, ``cube`` is the object
 
-           ``string`` is a data type.
+           - ``string`` is a data type.
+
          - [ ] ``x`` is the instance variable, ``thing`` is the object
 
-           ``x`` is the local variable.
+           - ``x`` is the local variable.
+
          - [ ] ``thing`` is the instance variable, ``cube`` is the object
 
-           Consider the placement of ``thing`` -- it is before the ``.``
+           - Consider the placement of ``thing`` -- it is before the ``.``
+
+
          - [x] ``cube`` is the instance variable, ``thing`` is the object
 
-           Yes, we access the instance variable ``cube`` of the object ``thing`` using the dot operator.
+           + Yes, we access the instance variable ``cube`` of the object ``thing`` using the dot operator.
+
+         - [ ] ``cube`` is the instance variable, ``string`` is the object
+
+           - ``string`` is a data type.
+
 
    .. tb-tab:: Q2
 
       .. tb-choice::
          :name: accessing_instance_variables_2
 
-         t will print?
+         What will print?
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         struct blue {
-           double x;
-           double y;
-         };
+            struct Blue {
+              double x, y;
+            };
 
-         int main() {
-           blue blank;
-           blank.x = 7.0;
-           blank.y = 2.0;
-           cout << blank.y << blank.x;
-           double distance = blank.x * blank.x + blank.y * blank.y;
-           cout << distance << endl;
-         }
+            int main() {
+              Blue blank;
+              blank.x = 7.0;
+              blank.y = 2.0;
+              cout << blank.y << blank.x;
+              double distance = blank.x * blank.x + blank.y * blank.y;
+              cout << distance << endl;
+            }
 
-         - [ ] 2.0 7.0 53
 
-           Spaces need to be printed out like any other output.
-         - [x] 2.07.053
+         - [ ] ``2.0 7.0 53``
 
-           There are no spaces in the correct output.
-         - [ ] 7.0, 2.0 53
+           - Spaces need to be printed out like any other output.
 
-           The order in which the variables are printed out do not need to match the order in which they are declared.
-         - [ ] 7.02.053
+         - [x] ``2753``
 
-           The order in which the variables are printed out do not need to match the order in which they are declared.
+           + There are no spaces in the correct output.
+
+         - [ ] ``7253``
+
+           - The order in which the variables are printed out do not need to match the order in which they are declared.
+
+         - [ ] ``7.02.053``
+
+           - The order in which the variables are printed out do not need to match the order in which they are declared.
+
 
    .. tb-tab:: Q3
 
       .. tb-choice::
          :name: accessing_instance_variables_3
 
+         You want to go to the object named ``circle`` and get the integer value of ``y``, then assign it to the local variable ``x``. How would you do that?
 
+         - [ ] ``int y = circle.x();``
 
-         - [ ] int y = circle.x();
+           -  No parentheses are needed.
 
-           No parentheses are needed.
-         - [ ] int circle = x.y;
+         - [ ] ``int circle = x.y;``
 
-           You should be assigning to the local variable x.
-         - [ ] int y = circle.x;
+           - You should be assigning to the local variable ``x``.
 
-           You should be assigning to the local variable x.
-         - [x] int x = circle.y;
+         - [ ] ``int y = circle.x;``
 
-           This is the correct way to assign the value of y to x.
+           - You should be assigning to the local variable ``x``.
+
+         - [x] ``int x = circle.y;``
+
+           + This is the correct way to assign the value of ``y`` to ``x``.
 

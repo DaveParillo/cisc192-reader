@@ -91,71 +91,78 @@ function ``add_two`` changes the instance variables, but not on ``blank`` itself
       .. tb-choice::
          :name: call_by_value_1
 
-         t will print?
+         What will print?
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         int add_two(int x) {
-           cout << x << ' ';
-           x = x + 2;
-           cout << x << ' ';
-           return x;
-         }
+            int addTwo(int x) {
+              cout << x << " ";
+              x = x + 2;
+              cout << x << " ";
+              return x;
+            }
 
-         int main() {
-           int num = 2;
-           add_two(num);
-           cout << num << '\n';
-         }
+            int main() {
+              int num = 2;
+              addTwo(num);
+              cout << num << endl;
+            }
 
-         - [ ] 2 4
+         - [ ] ``2 4``
 
-           Take a look at exactly what is being output.
-         - [x] 2 4 2
+           - Take a look at exactly what is being outputted.
 
-           Correct!
-         - [ ] 4 4 2
+         - [x] ``2 4 2``
 
-           Take a look at exactly what is being output.
-         - [ ] 2 4 4
+           + Correct!
 
-           Remember the rules of pass by value.
+         - [ ] ``4 4 2``
+
+           - Take a look at exactly what is being outputted.
+
+         - [ ] ``2 4 4``
+
+           - Remember the rules of pass by value.
+
 
    .. tb-tab:: Q2
 
       .. tb-choice::
          :name: call_by_value_2
 
-         t will print?
+         What will print?
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         struct point {
-           double x;
-           double y;
-         };
+            struct Point {
+              int x, y;
+            };
 
-         void times_two (point p) {
-           cout << '(' << p.x * 2 << ", " << p.y * 2 << ')';
-         }
+            void timesTwo (Point p) {
+              p.x = p.x * 2;
+              p.y = p.y * 2;
+              cout << "(" << p.x << ", " << p.y << ")";
+            }
 
-         int main() {
-           point blank = { 3.0, 4.0 };
-           times_two (blank);
-           cout << ", " << blank << endl;
-         }
+            int main() {
+              Point blank = { 3, 4 };
+              timesTwo (blank);
+              cout << ", " << blank.x << endl;
+            }
 
+         - [x] ``(6, 8), 3``
 
-         - [x] 6.0, 8.0, 3.0, 4.0
+           + Correct!
 
-           Correct!
-         - [ ] 6.0, 8.0, 6.0, 8.0
+         - [ ] ``(6, 8), 6``
 
-           Remember the rules of pass by value.
-         - [ ] 6.08.03.04.0
+           - Remember the rules of pass by value.
 
-           Take a look at exactly what is being outputted.
-         - [ ] 6.08.06.08.0
+         - [ ] ``(68),3``
 
-           Take a look at exactly what is being outputted.
+           - Take a look at exactly what is being outputted.
+
+         - [ ] ``68, 6``
+
+           - Take a look at exactly what is being outputted.
 

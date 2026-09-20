@@ -71,16 +71,22 @@ This format deliberately uses plain digits for distances. The next section
 shows how to handle a separate format that permits commas.
 
 .. tb-choice::
-   :name: c192_question15_5_1
+   :name: question15_5_1
 
+   What does **parsing** mean in the programming sense?
 
+   - [ ] to scan an entire program for errors
 
-   - [x] Interpreting input according to a specified structure.
+     Incorrect! This is included in the debugging process.
+   - [ ] to run a program start to finish and record the run time
 
-     Parsing extracts and validates meaningful values.
-   - [ ] Printing every character unchanged.
+     Incorrect! This is included in the debugging process.
+   - [x] to analyze the structure of a statement in a formal language
 
-     Copying text does not interpret its structure.
+     Correct! The compiler has to parse the program before it can translate it into machine language!
+   - [ ] to search an entire program for a statement
+
+     Incorrect! You can use control (command) + F to find a particular statement.
 
 .. tb-blank::
    :name: c192_question15_5_2

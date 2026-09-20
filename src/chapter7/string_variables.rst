@@ -81,7 +81,7 @@ Run the active code below!
       .. tb-choice::
          :name: string_variables_2
 
-
+         How would you initialize a string?
 
 
          - [x] string x = "Hello";

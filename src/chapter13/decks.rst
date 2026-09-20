@@ -70,10 +70,10 @@ demonstrates how to traverse the deck and output each card.
       :incorrect: Try again!
 
 .. tb-choice::
-   :name: c192_decks_2
+   :name: decks_2
 
-
-
+   Take a look at the state diagram above. When we create a deck of cards using ``Deck deck (52)``, 
+   what is true about our new deck?
 
    - [ ] The ranks and suits of the cards are initialized to the proper ranks and suits in a standard deck of cards.
 
@@ -83,7 +83,7 @@ demonstrates how to traverse the deck and output each card.
      We initialized cards with a value of 52.
    - [x] The ranks and suits will be initialized to their default values.
 
-     in our case is, the default values are zero.
+     In our case is, the default values are zero.
    - [x] The only instance variable in the deck is cards.
 
      cards is a vector of Cards!
@@ -92,8 +92,9 @@ demonstrates how to traverse the deck and output each card.
      You can access any card by indexing, for example: deck.cards[n].
 
 .. tb-choice::
-   :name: c192_decks_3
+   :name: decks_3
 
+   ``ACE`` corresponds to a rank of value ``0``. 
 
    - [ ] True - because this is the default mapping of enumerated types.
 

@@ -29,8 +29,6 @@ Coding Practice
                #include <iomanip>
                #include <iostream>
                #include <string>
-               #include <cstddef>
-               using std::size_t;
                template <class T, class Compare = std::equal_to<T>>
                void check (const std::string& name, 
                            const T& actual, 
@@ -66,8 +64,6 @@ Coding Practice
                #include <cctype>
                #include <iostream>
                #include <string>
-               #include <cstddef>
-               using std::size_t;
 
 
                bool is_palindrome (std::string input) {
@@ -90,8 +86,6 @@ Coding Practice
                #include <iomanip>
                #include <iostream>
                #include <string>
-               #include <cstddef>
-               using std::size_t;
                template <class T, class Compare = std::equal_to<T>>
                void check (const std::string& name, 
                            const T& actual, 
@@ -127,23 +121,18 @@ Coding Practice
                #include <cctype>
                #include <iostream>
                #include <string>
-               #include <cstddef>
-               using std::size_t;
 
                bool is_palindrome (std::string input) {
-                   std::size_t front = 0;
-                   std::size_t back = input.size();
+                   int front = 0;
+                   int back = input.size() - 1;
                    while (front < back) {
-                       while (front < back && !std::isalpha(static_cast<unsigned char>(input[front]))) {
+                       while (!std::isalpha(input[front])) {
                            ++front;
                        }
-                       while (front < back && !std::isalpha(static_cast<unsigned char>(input[back - 1]))) {
+                       while (!std::isalpha(input[back])) {
                            --back;
                        }
-                       if (front == back) {
-                           return true;
-                       }
-                       if (input[front] != input[back - 1]) {
+                       if (input[front] != input[back]) {
                            return false;
                        }
                        ++front;
@@ -167,12 +156,10 @@ Coding Practice
          #include <cctype>
          #include <iostream>
          #include <string>
-         #include <cstddef>
-         using std::size_t;
 
 
          void stringToLower (string &input) {
-            std::size_t i = 0;
+            int i = 0;
             while (i < input.size()) {
                 if (std::isalpha(input[i]) != 0 && std::isupper(input[i]) != 0) {
                     input[i] = std::tolower(input[i]);
@@ -181,7 +168,7 @@ Coding Practice
             }
          }
 
-         std::size_t count_word (string input, string word) {
+         int count_word (string input, string word) {
              // Write your implementation here.
          }
 
@@ -221,8 +208,6 @@ Coding Practice
 
                #include <iostream>
                #include <string>
-               #include <cstddef>
-               using std::size_t;
                using std::string;
 
                void censor_word (string input, string word) {
@@ -232,6 +217,7 @@ Coding Practice
                int main() {
                    censor_word ("I really, really, really, really, really, really like you", "really");
                }
+
 
          .. tb-tab:: Answer
 
@@ -246,23 +232,17 @@ Coding Practice
 
                #include <iostream>
                #include <string>
-               #include <cstddef>
-               using std::size_t;
                using std::string;
 
                void censor_word(string input, string word) {
-                   if (word.empty()) {
-                       std::cout << input;
-                       return;
-                   }
-                   std::size_t index = input.find(word);
-                   while (index != std::string::npos) {
-                       std::size_t i = 0;
-                       while (i < word.size()) {
+                   int length = word.size();
+                   while (input.find(word) != std::string::npos) {
+                       int index = input.find(word);
+                       int i = 0;
+                       while (i < length) {
                            input[index + i] = '*';
                            ++i;
                        }
-                       index = input.find(word, index + word.size());
                    }
                    std::cout << input;
                }
@@ -291,8 +271,6 @@ Coding Practice
 
          #include <iostream>
          #include <string>
-         #include <cstddef>
-         using std::size_t;
 
          void remove_word (std::string input, std::string word) {
              // Write your implementation here.
@@ -325,8 +303,6 @@ Coding Practice
                #include <cctype>
                #include <iostream>
                #include <string>
-               #include <cstddef>
-               using std::size_t;
 
                std::string rotate13 (std::string message) {
                    // Write your implementation here.
@@ -346,6 +322,7 @@ Coding Practice
                    // cout << rotate13 (secretMessage) << '\n';
                }
 
+
          .. tb-tab:: Answer
 
             Below is one way to implement the ``rotate13`` function. We use a ``while`` loop to
@@ -361,12 +338,10 @@ Coding Practice
                #include <cctype>
                #include <iostream>
                #include <string>
-               #include <cstddef>
-               using std::size_t;
                using std::string;
 
                string rotate13(string message) {
-                   std::size_t pos = 0;
+                   size_t pos = 0;
                    while (pos < message.size()) {
                       char& letter = message[pos];
                        if (std::isalpha(letter) != 0) {
@@ -409,8 +384,6 @@ Coding Practice
          #include <iomanip>
          #include <iostream>
          #include <string>
-         #include <cstddef>
-         using std::size_t;
          template <class T, class Compare = std::equal_to<T>>
          void check (const std::string& name, 
                      const T& actual, 
@@ -436,6 +409,7 @@ Coding Practice
          }
 
 
+
       .. tb-code:: cpp
          :name: cp_7_AC_6q
          :caption: Example cp_7_AC_6q
@@ -443,8 +417,6 @@ Coding Practice
          :compileargs: ['-Wall', '-std=c++11']
 
          #include <string>
-         #include <cstddef>
-         using std::size_t;
 
          std::string reverse_word (std::string input) {
              // Write your implementation here.
@@ -468,8 +440,6 @@ Coding Practice
                #include <cctype>
                #include <iostream>
                #include <string>
-               #include <cstddef>
-               using std::size_t;
 
                std::string capitalize (std::string input) {
                    // Write your implementation here.
@@ -479,6 +449,7 @@ Coding Practice
                    std::cout << capitalize ("every word in this string should be capitalized!\n");
                    std::cout << capitalize ("this String As well\n");
                }
+
 
          .. tb-tab:: Answer
 
@@ -494,11 +465,9 @@ Coding Practice
                #include <cctype>
                #include <iostream>
                #include <string>
-               #include <cstddef>
-               using std::size_t;
 
                std::string capitalize (std::string input) {
-                   std::size_t pos = 0;
+                   size_t pos = 0;
                    while (pos < input.size()) {
                        if (pos == 0) {
                            input[pos] = std::toupper(input[pos]);
@@ -516,6 +485,8 @@ Coding Practice
                    std::cout << capitalize ("this String As well\n");
                }
 
+
+
    .. tb-tab:: Q8
 
       Write the function ``count_vowels`` which takes a ``string input`` and returns
@@ -532,8 +503,6 @@ Coding Practice
          #include <iomanip>
          #include <iostream>
          #include <string>
-         #include <cstddef>
-         using std::size_t;
          template <class T, class Compare = std::equal_to<T>>
          void check (const std::string& name, 
                      const T& actual, 
@@ -553,10 +522,12 @@ Coding Practice
            exit(1);
          }
          int main() {
-           check("count 'onomatopoeia'", count_vowels("onomatopoeia"), std::size_t{8});
-           check("count 'cycsts!'", count_vowels("cycsts"), std::size_t{0});
-           check("count 'vowels'", count_vowels("vowels"), std::size_t{2});
+           check("count 'onomatopoeia'", count_vowels("onomatopoeia"), 8);
+           check("count 'cycsts!'", count_vowels("cycsts"), 0);
+           check("count 'vowels'", count_vowels("vowels"), 2);
          }
+
+
 
 
       .. tb-code:: cpp
@@ -566,10 +537,8 @@ Coding Practice
          :compileargs: ['-Wall', '-std=c++11']
 
          #include <string>
-         #include <cstddef>
-         using std::size_t;
 
-         std::size_t count_vowels (std::string input) {
+         int count_vowels (std::string input) {
             // Write your implementation here.
          }
 
@@ -593,8 +562,6 @@ Coding Practice
                #include <iomanip>
                #include <iostream>
                #include <string>
-               #include <cstddef>
-               using std::size_t;
                template <class T, class Compare = std::equal_to<T>>
                void check (const std::string& name, 
                            const T& actual, 
@@ -621,6 +588,7 @@ Coding Practice
                }
 
 
+
             .. tb-code:: cpp
                :name: cp_7_AC_9q
                :caption: Example cp_7_AC_9q
@@ -628,8 +596,6 @@ Coding Practice
                :compileargs: ['-Wall', '-std=c++11']
 
                #include <string>
-               #include <cstddef>
-               using std::size_t;
 
                std::string longest_word (std::string input) {
                    // Write your implementation here.
@@ -653,8 +619,6 @@ Coding Practice
                #include <iomanip>
                #include <iostream>
                #include <string>
-               #include <cstddef>
-               using std::size_t;
                template <class T, class Compare = std::equal_to<T>>
                void check (const std::string& name, 
                            const T& actual, 
@@ -681,6 +645,7 @@ Coding Practice
                }
 
 
+
             .. tb-code:: cpp
                :name: cp_7_AC_9a
                :caption: Example cp_7_AC_9a
@@ -688,16 +653,14 @@ Coding Practice
                :compileargs: ['-Wall', '-std=c++11']
 
                #include <string>
-               #include <cstddef>
-               using std::size_t;
 
                std::string longest_word (std::string input) {
-                   std::size_t pos = 0;
+                   size_t pos = 0;
                    std::string longest;
-                   std::size_t max_length = 0;
+                   int max_length = 0;
                    while (pos < input.size()) {
-                       std::size_t word_length = 0;
-                       while (pos < input.size() && input[pos] != ' ') {
+                       int word_length = 0;
+                       while (input[pos] != ' ' && pos < input.size()) {
                            ++word_length;
                            ++pos;
                        }
@@ -729,8 +692,6 @@ Coding Practice
          #include <iomanip>
          #include <iostream>
          #include <string>
-         #include <cstddef>
-         using std::size_t;
          template <class T, class Compare = std::equal_to<T>>
          void check (const std::string& name, 
                      const T& actual, 
@@ -768,8 +729,6 @@ Coding Practice
          :compileargs: ['-Wall', '-std=c++11']
 
          #include <string>
-         #include <cstddef>
-         using std::size_t;
          using std::string;
 
          string snake_to_camel (string input) {

@@ -65,75 +65,27 @@ putting ``return 0;`` in your main ends your program.
       .. tb-choice::
          :name: return_1
 
-          will print?
+         What will print?
 
+         ::
 
+             #include <iostream>
+             using namespace std;
 
-         #include <iostream>
-         using std::cout;
+             int main () {
+               int x = 8;
+               if (x > 8) {
+                 cout << "One! ";
+               }
+               if (x > 6) {
+                 cout << "Two! ";
+               }
+               if (x > 3) {
+                 cout << "Three!" << endl;
+               }
+               return 0;
+             }
 
-         int main () {
-           int x = 8;
-           if (x > 8) {
-             cout << "One! ";
-             return 0;
-           }
-           if (x > 6) {
-             cout << "Two! ";
-             return 0;
-           }
-           if (x > 3) {
-             cout << "Three!\n";
-             return 0;
-           }
-           return 0;
-         }
-
-         - [ ] One! Two! Three!
-
-           Try again! Remember the function of return 0.
-         - [ ] Two! Three!
-
-           Try again! Remember the function of return 0.
-         - [ ] Three!
-
-           Try again! Remember the function of return 0.
-         - [x] Two!
-
-           8 is not greater than 8, so the first condition will not be met.
-         - [ ] One!
-
-           Take a look at the first conditional statement more closely.
-
-   .. tb-tab:: Q2
-
-      Compare Q1 to this example.
-      Look it over carefully.
-      At first glance it looks the same, but the logic is different.
-
-      .. tb-choice::
-         :name: return_2
-
-          will print?
-
-
-
-         #include <iostream>
-         using namespace std;
-
-         int main () {
-           int x = 8;
-           if (x > 8) {
-             cout << "One! ";
-           }
-           if (x > 6) {
-             cout << "Two! ";
-           }
-           if (x > 3) {
-             cout << "Three!\n";
-           }
-           return 0;
-         }
 
          - [ ] One! Two! Three!
 
@@ -147,6 +99,55 @@ putting ``return 0;`` in your main ends your program.
          - [ ] Two!
 
            All of the following are "if" statements, with no return. There are no "else" statements.
+         - [ ] One!
+
+           Take a look at the first conditional statement more closely.
+
+   .. tb-tab:: Q2
+
+      Compare Q1 to this example.
+      Look it over carefully.
+      At first glance it looks the same, but the logic is different.
+
+      .. tb-choice::
+         :name: return_2
+
+         What will print?
+
+         ::
+
+             #include <iostream>
+             using namespace std;
+
+             int main () {
+               int x = 8;
+               if (x > 8) {
+                 cout << "One! ";
+                 return 0;
+               }
+               if (x > 6) {
+                 cout << "Two! ";
+                 return 0;
+               }
+               if (x > 3) {
+                 cout << "Three!" << endl;
+                 return 0;
+               }
+               return 0;
+             }
+
+         - [ ] One! Two! Three!
+
+           Try again! 8 is not greater than 8, so the first condition will not be met.
+         - [ ] Two! Three!
+
+           Try again! Remember what "return 0" is for!
+         - [ ] Three!
+
+           Try again! 8 is greater than 6!
+         - [x] Two!
+
+           Correct!
          - [ ] One!
 
            Take a look at the first conditional statement more closely.
@@ -302,28 +303,31 @@ double correctly.
       .. tb-choice::
          :name: dead_code_printing_1
 
-          will print?
+         What will print?
 
+         ::
 
+             #include <iostream>
+             using namespace std;
 
-         #include <iostream>
+             double ticket_price(int age) {
+                if(age<5){
+                    return 5.50;
+                    cout<<" You get a child discount yay!"<<endl;
+                }
 
-         double ticket_price(int age) {
-            if(age<5) {
-                return 5.50;
-                std::cout << " You get a child discount yay!\n";
-            } else {
-                return 9.50;
-                std::cout << " Sorry you have to pay full price.\n";
-            }
-            return 0.0; //to avoid compiler error
-         }
+                else{
+                    return 9.50;
+                    cout<<" Sorry you have to pay full price."<<endl;
+                }
+                return 0.0; //to avoid compiler error
+             }
 
-         int main () {
-           int years = 5;
-           double price = ticket_price(5);
-           return 0;
-         }
+             int main () {
+               int years = 5;
+               double price = ticket_price(5);
+               return 0;
+             }
 
          - [ ] You get a child discount yay!
 

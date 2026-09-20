@@ -94,19 +94,19 @@ values. So the following is illegal: ``minute + 1 = hour;``.
       .. tb-choice::
          :name: compos_1
 
-          must be changed in order for this code block to work?
+         What must be changed in order for this code block to work?
 
-         ode-block:: 
-         :linenos:
+         .. code-block:: 
+             :linenos:
 
-         int main () {
-           int dogs = 3;
-           int cats = 6;
-           int pets;
-           dogs + cats = pets;
-           cout << "I have " << pets << " pets!";
-           return 0;
-         }
+             int main () {
+               int dogs = 3;
+               int cats = 6;
+               int pets;
+               dogs + cats = pets;
+               cout << "I have " << pets << " pets!";
+               return 0;
+             }
 
 
          - [x] Change line 5 to pets = dogs + cats;

@@ -2,7 +2,7 @@ Multiple Choice Exercises
 -------------------------
 
 .. tb-choice::
-   :name: c192_mce_14_1
+   :name: mce_14_1
 
    What is one use of data encapsulation?
 
@@ -23,42 +23,42 @@ Multiple Choice Exercises
      - Data encapsulation is based on the idea that each estructure should prevent unrestricted access to internal representation.
 
 .. tb-choice::
-   :name: c192_mce_14_2
+   :name: mce_14_2
 
    Which of the following are accessor functions?
 
    .. code-block:: cpp
 
-       struct student {
+       struct Student {
          private:
            int id;
          public:
-           std::string name;
+           string name;
            int year;
 
-           int get_id () { return id; }
-           void set_id (int i) { id = i; }
-           void print_info () { std::cout << "student: " << name << ", " << year; }
+           int getID () { return id; }
+           int setID (int i) { id = i; }
+           void printInfo () { cout << "Student: " << name << ", " << year; }
        };
 
-   - [ ] ``student ()``
+   - [ ] ``Student ()``
 
-     - This is the ``student`` constructor.
+     - This is the ``Student`` constructor.
 
-   - [x] ``get_id ()``
+   - [x] ``getID ()``
 
      + This is a "getter" function, which is an accessor function since it accesses and returns a private member variable.
 
-   - [x] ``set_id ()``
+   - [x] ``setID ()``
 
      + This is a "setter" function, which is an accessor function since it accesses and modifies a private member variable.
 
-   - [ ] ``print_info ()``
+   - [ ] ``printInfo ()``
 
      - This function does not access a private member variable.
 
 .. tb-choice::
-   :name: c192_mce_14_3
+   :name: mce_14_3
 
    Which of the following are true?
 
@@ -79,29 +79,29 @@ Multiple Choice Exercises
      + Public member variables can be accessed anywhere, including within the class.
 
 .. tb-choice::
-   :name: c192_mce_14_4
+   :name: mce_14_4
 
    What should replace the question marks in the code below? Use accessor functions.
 
    .. code-block:: cpp
 
-       class right_triangle {
+       class rightTriangle {
          int base;
          int height;
 
          public:
-           int get_base () { return base; }
-           int get_height () { return height; }
-           double calculate_hypotenuse () {
+           int getBase () { return base; }
+           int getHeight () { return height; }
+           double calculateHypotenuse () { 
              ???
            }
        };
 
-   - [x] ``return sqrt(pow(get_base, 2) + pow(get_height, 2));``
+   - [x] ``return sqrt(pow(getBase, 2) + pow(getHeight, 2));``
 
-     + We use the Pythagorean Theorem and ``get_base`` and ``get_height`` to calculate and return the hypotenuse.
+     + We use the Pythagorean Theorem and ``getBase`` and ``getHeight`` to calculate and return the hypotenuse. 
 
-   - [ ] ``return pow(get_base, 2) + pow(get_height, 2);``
+   - [ ] ``return pow(getBase, 2) + pow(getHeight, 2);``
 
      - Use the Pythagorean Theorem!
 
@@ -109,98 +109,98 @@ Multiple Choice Exercises
 
      - Although this would work, we want to use accessor functions.
 
-   - [ ] ``cout << sqrt(pow(get_base, 2) + pow(get_height, 2));``
+   - [ ] ``cout << sqrt(pow(getBase, 2) + pow(getHeight, 2));``
 
-     - Take a look at the return type of ``calculate_hypotenuse``.
+     - Take a look at the return type of ``calculateHypotenuse``.
 
 .. tb-choice::
-   :name: c192_mce_14_5
+   :name: mce_14_5
 
    What is wrong with the code below?
 
    .. code-block:: cpp
 
-       class plane {
-         int flight_number;
-         std::string model;
-         std::string origin;
-         std::string destination;
+       class Plane {
+         int flightNumber;
+         string model;
+         string origin;
+         string destination;
 
          public:
-           void print_info () {
-             std::cout << "Flight " << flight_number << " (" << model
-                  << ") from " << origin << " to " << destination << std::endl;
+           void printInfo () { 
+             cout << "Flight " << flightNumber << " (" << model 
+                  << ") from " << origin << " to " << destination << endl;
            }
        };
 
        int main() {
-         plane p;
-         p.flight_number = 1846;
+         Plane p;
+         p.flightNumber = 1846;
          p.model = "Boeing 787";
          p.origin = "Los Angeles";
          p.destination = "Detroit";
-         p.print_info ();
+         p.printInfo ();
        }
 
-   - [ ] The ``plane`` class is missing the keyword ``private:``.
+   - [ ] The ``Plane`` class is missing the keyword ``private:``.
 
      - By default, ``class`` member variables are private, so we don't need to explicitly write ``private:``.
 
-   - [ ] ``print_info`` cannot access ``plane``\'s private member variables.
+   - [ ] ``printInfo`` cannot access ``Plane``\'s private member variables.
 
-     - The private member variables of ``plane`` are only inaccessible to those outside of the class.
+     - The private member variables of ``Plane`` are only inaccessible to those outside of the class.
 
    - [x] We cannot assign the private member variables of ``p`` in ``main``.
 
-     + We are trying to access the private member variables of a ``plane`` object outside of the ``plane`` class.
+     + We are trying to access the private member variables of a ``Plane`` object outside of the ``Plane`` class.
 
-   - [ ] We cannot call ``print_info`` in ``main``.
+   - [ ] We cannot call ``printInfo`` in ``main``.
 
-     - ``print_info`` is a public member function, so we are allowed to call it in ``main``.
+     - ``printInfo`` is a public member function, so we are allowed to call it in ``main``.
 
 .. tb-choice::
-   :name: c192_mce_14_6
+   :name: mce_14_6
 
    What is the output of the code below?
 
    .. code-block:: cpp
 
-       class temp {
-         private:
+       class Temp {
+         private: 
            double fahrenheit;
            double celsius;
            bool is_fahrenheit;
            bool is_celsius;
 
          public:
-           double get_fahrenheit () { return fahrenheit; }
-           double get_celsius () { return celsius; }
-           void set_fahrenheit (double f) { fahrenheit = f; is_fahrenheit = true; is_celsius = false; }
-           void set_celsius (double c) { celsius = c; is_celsius = true; is_fahrenheit = false; }
-           void print_temp () {
+           double getFahrenheit () { return fahrenheit; }
+           double getCelsius () { return celsius; }
+           void setFahrenheit (double f) { fahrenheit = f; is_fahrenheit = true; is_celsius = false; }
+           void setCelsius (double c) { celsius = c; is_celsius = true; is_fahrenheit = false; }
+           void printTemp () { 
              if (is_fahrenheit) {
-               std::cout << "It is " << get_fahrenheit() << " degrees Fahrenheit" << std::endl;
+               cout << "It is " << getFahrenheit() << " degrees Fahrenheit" << endl;
              }
              else {
-               std::cout << "It is " << get_celsius() << " degrees Celsius" << std::endl;
+               cout << "It is " << getCelsius() << " degrees Celsius" << endl;
              }
            }
        };
 
        int main() {
-         temp t;
-         t.set_fahrenheit (125);
-         t.set_celsius (30);
-         t.print_temp ();
+         Temp t;
+         t.setFahrenheit (125);
+         t.setCelsius (30);
+         t.printTemp ();
        }
 
    - [ ] It is 125 degrees Fahrenheit
 
-     - Since we called ``set_celsius`` last, ``is_celsius`` is ``true`` and ``is_fahrenheit`` is false.
+     - Since we called ``setCelsius`` last, ``is_celsius`` is ``true`` and ``is_fahrenheit`` is false.
 
    - [ ] It is 30 degrees Fahrenheit
 
-     - Since we called ``set_celsius`` last, ``is_celsius`` is ``true`` and ``is_fahrenheit`` is false.
+     - Since we called ``setCelsius`` last, ``is_celsius`` is ``true`` and ``is_fahrenheit`` is false.
 
    - [ ] It is 125 degrees Celsius
 
@@ -208,11 +208,11 @@ Multiple Choice Exercises
 
    - [x] It is 30 degrees Celsius
 
-     + Since we called ``set_celsius`` last, we print out 30 degrees Celsius.
+     + Since we called ``setCelsius`` last, we print out 30 degrees Celsius.
 
 
 .. tb-choice::
-   :name: c192_mce_14_7
+   :name: mce_14_7
 
    Which of the following are true about invariants?
 
@@ -226,29 +226,29 @@ Multiple Choice Exercises
 
    - [ ] An invariant cannot be false in the middle of a function, even if it is true at the start and the end.
 
-     - An invariant can be false in the middle of a function, and it is sometimes unavoidable.
+     - An invariant can be false in the middle of a function, and it is sometimes unavoidable. 
 
    - [x] Maintaining invariants can reduce the number of bugs in a program.
 
-     + By maintaining invariants, you can guarantee that all values are what they should be.
+     + By maintaining invariants, you can guarantee that all values are what they should be. 
 
 .. tb-choice::
-   :name: c192_mce_14_8
+   :name: mce_14_8
 
-   Take a look at the class definition of ``date``. What are some invariants we must maintain?
+   Take a look at the class definition of ``Date``. What are some invariants we must maintain?
 
    .. code-block:: cpp
 
-       class date {
+       class Date {
          private:
            int day;
            int month;
            int year;
            bool is_birthday;
-           std::string message;
+           string message;
 
          public:
-           date (int hour, int d, int m, int y, bool b, std::string m) {
+           Date (int hour, int d, int m, int y, bool b, string m) { 
              day = d;
              month = m;
              year = y;
@@ -274,13 +274,13 @@ Multiple Choice Exercises
      - ``year`` can be less than 2000, so this isn't a correct invariant to maintain.
 
 .. tb-choice::
-   :name: c192_mce_14_9
+   :name: mce_14_9
 
    Take a look at the function below. What are its preconditions and postconditions?
 
    .. code-block:: cpp
 
-       int calculate_rectangle_area (int length, int width) {
+       int calculateRectangleArea (int length, int width) {
          return length * width;
        }
 
@@ -290,18 +290,18 @@ Multiple Choice Exercises
 
    - [ ] Precondition: ``length`` must be greater than ``width``.
 
-     - A rectangle can be wider than it is long.
+     - A rectangle can be wider than it is long. 
 
-   - [x] Postcondition: ``calculate_rectangle_area`` must return a positive number.
+   - [x] Postcondition: ``calculateRectangleArea`` must return a positive number.
 
      + Since ``length`` and ``width`` must both be positive, their product muast also be positive.
 
-   - [ ] Postcondition: ``calculate_rectangle_area`` must return a nonnegative number.
+   - [ ] Postcondition: ``calculateRectangleArea`` must return a nonnegative number.
 
-     - ``calculate_rectangle_area`` cannot return 0, which is a nonnegative number but not a valid area.
+     - ``calculateRectangleArea`` cannot return 0, which is a nonnegative number but not a valid area.
 
 .. tb-choice::
-   :name: c192_mce_14_10
+   :name: mce_14_10
 
    What are private functions and what do they do?
 

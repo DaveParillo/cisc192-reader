@@ -2,7 +2,7 @@ Multiple Choice Exercises
 -------------------------
 
 .. tb-choice::
-   :name: c192_mce_12_1
+   :name: mce_12_1
 
    Select all of the true statements.
 
@@ -10,9 +10,9 @@ Multiple Choice Exercises
 
      + C++ allows for a variety of different compositions.
 
-   - [ ] in order to check to see if two ``playing_card``\s are equal, we can use the ``==`` operator.
+   - [ ] In order to check to see if two ``Card``\s are equal, we can use the ``==`` operator.
 
-     - We have to write a function that compares two ``playing_card``\s.
+     - We have to write a function that compares two ``Card``\s.
 
    - [x] There is no faster way to search through an unsorted vector than using a linear search.
 
@@ -23,7 +23,7 @@ Multiple Choice Exercises
      + All variables are given default values unless otherwise specified by the user.
 
 .. tb-choice::
-   :name: c192_mce_12_2
+   :name: mce_12_2
 
    What is the correct way to declare a ``vector`` of ``vector``\s of ``int``\s called ``vec``?
 
@@ -33,7 +33,7 @@ Multiple Choice Exercises
 
    - [ ] ``vector<int> vec<int>;``
 
-     - This is not the proper way to declare ``vec``.
+     - This is not the proper way to declare ``vec``. 
 
    - [ ] ``vector<vector<int> vec;``
 
@@ -44,28 +44,28 @@ Multiple Choice Exercises
      + This is the proper way to declare a ``vector`` of ``vector``\s of ``int``\s.
 
 .. tb-choice::
-   :name: c192_mce_12_3
+   :name: mce_12_3
 
    What is the value of ``card``?
 
    .. code-block:: cpp
 
-       struct playing_card {
+       struct Card {
          int suit, rank;
-         playing_card ();
-         playing_card (int s, int r);
+         Card ();
+         Card (int s, int r);
        };
 
-       playing_card::playing_card () {
-         suit = 0;  rank = 1;
+       Card::Card () {
+         suit = 0;  rank = 0;
        }
 
-       playing_card::playing_card (int s, int r) {
+       Card::Card (int s, int r) {
          suit = s;  rank = r;
        }
 
        int main() {
-         playing_card card (2, 8);
+         Card card (2, 8);
        }
 
    - [ ] Ace of Clubs
@@ -85,25 +85,25 @@ Multiple Choice Exercises
      - We initialized ``card`` with a ``suit`` value of 2 and a ``rank`` value of 8.
 
 .. tb-choice::
-   :name: c192_mce_12_4
+   :name: mce_12_4
 
    There is an error with the code below. Can you find it?
 
    .. code-block:: cpp
 
-       struct playing_card {
+       struct Card {
          int suit, rank;
-         playing_card ();
-         playing_card (int s, int r);
+         Card ();
+         Card (int s, int r);
          void print () const;
        };
 
        int main() {
-         playing_card card (1,3);
+         Card card (1,3);
          print (card);
        }
 
-   - [ ] ``card`` is not a valid ``playing_card``.
+   - [ ] ``card`` is not a valid ``Card``.
 
      - A ``suit`` of 1 and a ``rank`` of 3 maps to the 3 of Diamonds.
 
@@ -120,24 +120,24 @@ Multiple Choice Exercises
      - There is an error with the code. Can you find it?
 
 .. tb-choice::
-   :name: c192_mce_12_5
+   :name: mce_12_5
 
    What is the output of the code below?
 
    .. code-block:: cpp
 
-      struct playing_card {
+      struct Card {
         int suit, rank;
-        playing_card ();
-        playing_card (int s, int r);
+        Card ();
+        Card (int s, int r);
         void print () const;
-        bool is_greater (const playing_card& c2) const;
+        bool isGreater (const Card& c2) const;
       };
 
       int main() {
-        playing_card card1 (2,12);
-        playing_card card2 (2,2);
-        std::cout << card1.is_greater (card2) << std::endl;
+        Card card1 (2,12);
+        Card card2 (2,2);
+        cout << card1.isGreater (card2) << endl;
       }
 
    - [ ] True
@@ -157,34 +157,34 @@ Multiple Choice Exercises
      + The Queen of Hearts is greater than the 2 of Hearts.
 
 .. tb-choice::
-   :name: c192_mce_12_6
+   :name: mce_12_6
 
    What is the output of the code below?
 
    .. code-block:: cpp
 
-      struct playing_card {
+      struct Card {
         int suit, rank;
-        playing_card ();
-        playing_card (int s, int r);
+        Card ();
+        Card (int s, int r);
         void print () const;
-        bool is_greater (const playing_card& c2) const;
+        bool isGreater (const Card& c2) const;
       };
 
-      std::vector<playing_card> build_deck();
+      vector<Card> buildDeck();
 
-      bool equals (const playing_card& c1, const playing_card& c2){
+      bool equals (const Card& c1, const Card& c2){
         return (c1.rank == c2.rank && c1.suit == c2.suit);
       }
 
-      void print_deck(const std::vector<playing_card>& deck);
+      void printDeck(const vector<Card>& deck);
 
-      std::ptrdiff_t find (const playing_card& card, const std::vector<playing_card>& deck);
+      int find (const Card& card, const vector<Card>& deck);
 
       int main() {
-        std::vector<playing_card> deck = build_deck();
-        playing_card card (3, 13);
-        std::cout << find(card, deck);
+        vector<Card> deck = buildDeck();
+        Card card (3, 13);
+        cout << find(card, deck);
       }
 
    - [x] 51
@@ -204,23 +204,23 @@ Multiple Choice Exercises
      - What is the value of ``card``?
 
 .. tb-choice::
-   :name: c192_mce_12_7
+   :name: mce_12_7
 
    What is true about ``deck``?
 
    .. code-block:: cpp
 
-      struct playing_card {
+      struct Card {
         int suit, rank;
-        playing_card ();
-        playing_card (int s, int r);
+        Card ();
+        Card (int s, int r);
         void print () const;
-        bool is_greater (const playing_card& c2) const;
+        bool isGreater (const Card& c2) const;
       };
 
-      std::vector<playing_card> create_deck() {
-        std::vector<playing_card> deck (12);
-        std::size_t i = 0;
+      vector<Card> createDeck() {
+        vector<Card> deck (12);
+        int i = 0;
         for (int suit = 0; suit <= 3; suit++) {
           for (int rank = 1; rank < 4; rank++) {
             deck[i].suit = suit;
@@ -232,12 +232,12 @@ Multiple Choice Exercises
       }
 
       int main() {
-        std::vector<playing_card> deck = create_deck();
+        vector<Card> deck = createDeck();
       }
 
-   - [x] It contains 12 ``playing_card``\s.
+   - [x] It contains 12 ``Card``\s.
 
-     + ``create_deck`` returns a ``vector`` of size 12, corresponding to 12 ``playing_card``\s.
+     + ``createDeck`` returns a ``vector`` of size 12, corresponding to 12 ``Card``\s.
 
    - [ ] The highest ``rank`` is 4.
 
@@ -252,30 +252,30 @@ Multiple Choice Exercises
      + Each suit has an Ace, 2, and 3.
 
 .. tb-choice::
-   :name: c192_mce_12_8
+   :name: mce_12_8
 
-   How many times does ``find_bisect`` need to call itself in order to find the King of Diamonds?
+   How many times does ``findBisect`` need to call itself in order to find the King of Diamonds?
 
    .. code-block:: cpp
 
-       struct playing_card {
+       struct Card {
          int suit, rank;
-         playing_card ();
-         playing_card (int s, int r);
+         Card ();
+         Card (int s, int r);
          void print () const;
-         bool is_greater (const playing_card& c2) const;
+         bool isGreater (const Card& c2) const;
        };
 
-       std::vector<playing_card> build_deck();
-       bool equals (const playing_card& c1, const playing_card& c2);
-       void print_deck(const std::vector<playing_card>& deck);
-       std::ptrdiff_t find (const playing_card& card, const std::vector<playing_card>& deck);
-       std::ptrdiff_t find_bisect (const playing_card& card, const std::vector<playing_card>& deck, std::ptrdiff_t low, std::ptrdiff_t high);
+       vector<Card> buildDeck();
+       bool equals (const Card& c1, const Card& c2);
+       void printDeck(const vector<Card>& deck);
+       int find (const Card& card, const vector<Card>& deck);
+       int findBisect (const Card& card, const vector<Card>& deck, int low, int high);
 
        int main() {
-         std::vector<playing_card> deck = build_deck();
-         playing_card card (1, 13);
-         std::cout << find_bisect(card, deck, 0, 51);
+         vector<Card> deck = buildDeck();
+         Card card (1, 13);
+         cout << findBisect(card, deck, 0, 51);
        }
 
    - [x] 0
@@ -295,36 +295,36 @@ Multiple Choice Exercises
      - Where is the King of Diamonds located relative to the sorted deck?
 
 .. tb-choice::
-   :name: c192_mce_12_9
+   :name: mce_12_9
 
-   We want to write the function ``find_all_queens``, which searches through a deck and
+   We want to write the function ``findAllQueens``, which searches through a deck and 
    prints out the location of all 4 queens in the ``deck``. What should go in the blanks?
 
    .. code-block:: cpp
 
-       struct playing_card {
+       struct Card {
          int suit, rank;
-         playing_card ();
-         playing_card (int s, int r);
+         Card ();
+         Card (int s, int r);
          void print () const;
-         bool is_greater (const playing_card& c2) const;
+         bool isGreater (const Card& c2) const;
        };
 
-       std::vector<playing_card> build_deck();
-       bool equals (const playing_card& c1, const playing_card& c2);
-       void print_deck(const std::vector<playing_card>& deck);
+       vector<Card> buildDeck();
+       bool equals (const Card& c1, const Card& c2);
+       void printDeck(const vector<Card>& deck);
 
-       void find_all_queens (const std::vector<playing_card>& deck) {
-         for (std::size_t i = 0; i < deck.____; ++i) {
+       void findAllQueens (const vector<Card>& deck) {
+         for (size_t i = 0; i < deck.____; ++i) {
            if (deck[i].____ == 12) {
-             std::cout << ____ << " ";
+             cout << ____ << " ";
            }
          }
        }
 
        int main() {
-         std::vector<playing_card> deck = build_deck();
-         find_all_queens (deck);
+         vector<Card> deck = buildDeck();
+         findAllQueens (deck);
        }
 
    - [ ] ``push_back()``, ``suit``, ``i``
@@ -344,7 +344,7 @@ Multiple Choice Exercises
      - What value should ``i`` go up to?
 
 .. tb-choice::
-   :name: c192_mce_12_10
+   :name: mce_12_10
 
    What is the process of modeling a complex system with a simplified description in order to suppress unnecessary details while capturing relevant behavior?
 

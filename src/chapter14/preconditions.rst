@@ -239,9 +239,9 @@ fails and thus we get an error.
    }
 
 .. tb-choice::
-   :name: c192_question14_9_1
+   :name: question14_9_1
 
-
+   Which of the following are ways that we can make our code more robust?
 
    - [ ] Assume assumptions are always true.
 

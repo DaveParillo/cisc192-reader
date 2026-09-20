@@ -63,20 +63,20 @@ compiler will take you to task.
       .. tb-choice::
          :name: return_vals_1
 
-          should the return type of the below function be?
+         What should the return type of the below function be?
 
+         ::
 
-
-         ________ weather (int temp) {
-          string outside = "";
-          if (temp < 50) {
-            outside = "cold";
-          }
-          else {
-            outside = "warm"
-          }
-          return outside;
-         }
+             ________ weather (int temp) {
+              string outside = "";
+              if (temp < 50) {
+                outside = "cold";
+              }
+              else {
+                outside = "warm"
+              }
+              return outside;
+             }
 
 
          - [ ] double
@@ -97,23 +97,24 @@ compiler will take you to task.
       .. tb-choice::
          :name: return_vals_2
 
-          will print?
+         What will print?
 
+         ::
 
+             #include <iostream>
+             using namespace std;
 
-         #include <iostream>
+             int timesTwo(int x) {
+               int y = x;
+               return y;
+               y = y * 2;
+             }
 
-         int timesTwo(int x) {
-           int y = x;
-           return y;
-           y = y * 2;
-         }
-
-         int main () {
-           int i = 2;
-           std::cout << timesTwo(i);
-           return 0;
-         }
+             int main () {
+               int i = 2;
+               cout << timesTwo(i);
+               return 0;
+             }
 
          - [ ] 4
 

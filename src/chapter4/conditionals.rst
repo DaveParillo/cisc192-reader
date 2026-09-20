@@ -99,15 +99,16 @@ assess true/false situations.
       .. tb-choice::
          :name: conditional_execution_1
 
+         Observe the code above. "Bigger" doesn't print! How can you modify this so that all of the statements print?
 
 
          - [ ] Change the value of x to be anything less than 6.
 
            While "Bigger" would now print, the other two statements would not!
-         - [x] Change the value of x to 13.
+         - [ ] Change the value of x to 13.
 
            Now, none of the statements would print!
-         - [ ] Change the sign of the last conditional statement to x > 6.
+         - [x] Change the sign of the last conditional statement to x > 6.
 
            Now, all of the statements would print.
          - [ ] Change the value of the return from 0 to "Bigger!"

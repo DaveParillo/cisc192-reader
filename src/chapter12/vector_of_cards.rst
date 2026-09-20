@@ -144,23 +144,23 @@ the ``build_deck`` function.
    }
 
 .. tb-choice::
-   :name: c192_vector_of_cards_1
+   :name: vector_of_cards_1
 
-   ke a look at the code below. What can we say about the deck that is created?
+   Take a look at the code below. What can we say about the deck that is created?
+   ::
 
-
-   std::vector<playing_card> create_deck() {
-      std::vector<playing_card> deck (16);
-      std::size_t i = 0;
-      for (int suit = 0; suit <= 1; suit++) {
-         for (int rank = 4; rank <= 11; rank++) {
-            deck[i].suit = suit;
-            deck[i].rank = rank;
-            i++;
-         }
-      }
-      return deck;
-   }
+     vector<Card> createDeck() {
+        vector<Card> deck (16);
+        int i = 0;
+        for (int suit = 0; suit <= 1; suit++) {
+           for (int rank = 4; rank <= 11; rank++) {
+              deck[i].suit = suit;
+              deck[i].rank = rank;
+              i++;
+           }
+        }
+        return deck;
+     }
 
    - [x] There are 16 cards in the deck.
 

@@ -92,47 +92,48 @@ The active code below accesses the first character in string ``fruit``.
       .. tb-choice::
          :name: extracting_characters_1
 
-         t would replace the "?" in order to access the letter 'b' in the string below?
+         What would replace the "?" in order to access the letter "b" in the string below?
 
-         code-block:: cpp
-         :linenos:
+         .. code-block:: cpp
+            :linenos:
 
-         #include <string>
+            #include <iostream>
+            using namespace std;
 
-         int main () {
-           std::string bake = "bake a cake!";
-           char letter = bake[?];
-         }
+            int main () {
+              string bake = "bake a cake!";
+              char letter = bake[?];
+            }
 
          - [ ] 1
 
            Don't forget that computer scientists do not start counting at 1!
          - [x] 0
 
-           Yes, this would access the letter 'b'.
+           Yes, this would access the letter "b".
          - [ ] 2
 
-           This would access the letter 'k'.
+           This would access the letter "k".
 
    .. tb-tab:: Q2
 
       .. tb-choice::
          :name: extracting_characters_2
 
-         t is printed when the code below is run?
+         What is printed when the code below is run?
 
-         code-block:: cpp
-         :linenos:
+         .. code-block:: cpp
+            :linenos:
 
-         #include <iostream>
-         #include <string>
+            #include <iostream>
+            using namespace std;
 
-         int main () {
-           std::string lunch = "hello";
-           std::string person = "deejay";
-           lunch[0] = lunch[3];
-           std::cout << lunch;
-         }
+            int main () {
+              string lunch = "hello";
+              string person = "deejay";
+              lunch[0] = lunch[3];
+              cout << lunch;
+            }
 
          - [ ] lunch
 

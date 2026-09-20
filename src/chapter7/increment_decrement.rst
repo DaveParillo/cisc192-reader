@@ -150,16 +150,16 @@ warn you. The effect of this statement is to leave the value of
       .. tb-choice::
          :name: increment_decrement_2
 
-         t does the following code print?
+         What does the following code print?
 
-         code-block:: cpp
-         :linenos:
+         .. code-block:: cpp
+            :linenos:
 
-         int x = -5;
-         while (x < 0) {
-           x++;
-           cout << x << " ";
-         }
+            int x = -5;
+            while (x < 0) {
+              x++;
+              cout << x << " ";
+            }
 
          - [ ] 5 4 3 2 1
 

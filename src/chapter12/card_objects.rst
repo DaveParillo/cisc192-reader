@@ -113,14 +113,10 @@ naturally, represents the rank 3.
    .. tb-answer:: blank2
       :match: x
 
-   .. tb-answer:: blank3
-      :match: ([Ss][Uu][Ii][Tt])|([Rr][Aa][Nn][Kk])
-      :incorrect: Incorrect!  Try again!
-
 .. tb-choice::
-   :name: c192_card_objects_2
+   :name: card_objects_2
 
-
+   What does it mean to **encode** the ranks and suits?
 
    - [ ] To translate each rank / suit into a secret code.
 
@@ -148,8 +144,9 @@ naturally, represents the rank 3.
       :incorrect: Incorrect!  Try again!
 
 .. tb-choice::
-   :name: c192_card_objects_4
+   :name: card_objects_4
 
+   What is the purpose of mapping?
 
    - [ ] To have better organization in your code.
 

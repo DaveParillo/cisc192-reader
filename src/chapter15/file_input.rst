@@ -72,16 +72,23 @@ A file stream closes its file when it goes out of scope. This is an example
 of resource ownership: the object's lifetime controls the resource's lifetime.
 
 .. tb-choice::
-   :name: c192_question15_3_1
+   :name: question15_3_3
+
+   We need to use the function ``c_str()`` to convert a string to a native C string because...
 
 
+   - [x] the ifstream constructor expects a C string as an argument.
 
-   - [ ] while (!input.eof())
+     Correct!
+   - [ ] you need to make sure you have permission to read to/from the file.
 
-     This checks the state before attempting the next read.
-   - [x] while (std::getline(input, line))
+     Incorrect! Try reading again!
+   - [ ] it will check whether you have an infinite loop or not.
 
-     The loop body runs only when a line was successfully read.
+     Incorrect! Try reading again!
+   - [ ] strings are not supported by C++.
+
+     Incorrect! strings are allowed in C++.
 
 .. tb-blank::
    :name: c192_question15_3_2

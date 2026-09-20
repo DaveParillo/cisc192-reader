@@ -48,6 +48,7 @@ or at least a warning.
 .. tb-choice::
    :name: const_parameters_2
 
+   Which statement does NOT describe the ``const`` as a parameter feature in C++?
 
    - [ ] Makes reference parameters just as safe as value parameters.
 

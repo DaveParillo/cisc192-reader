@@ -191,7 +191,7 @@ Print it out and memorize it.
          }
 
       .. tb-reveal:: Reveal Problem
-         :name: 6_4_1
+         :name: id_6_4_1
 
          .. tb-parsons::
             :name: tables_1
@@ -259,28 +259,30 @@ Print it out and memorize it.
       .. tb-choice::
          :name: tables_4
 
-          can we modify the code below to print out a table of the first five odd numbers and their perfect cubes?
+         How can we modify the code below to print out a table of the first five odd numbers and their perfect cubes?
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         int main() {
-           int x = 1;
-           while (x < 11) {
-             cout << x << "\t" << pow(x, 2) << endl;
-             x = x + 1;
+           int main() {
+             int x = 1;
+             while (x < 11) {
+               cout << x << "\t" << pow(x, 2) << endl;
+               x = x + 1;
+             }
            }
-         }
 
          - [ ] Change ``pow(x,2)`` to ``pow(3,x)`` and change ``x = x + 1`` to ``x = x + 2``.
 
-           Check the order of the ``pow`` function!
+           - :feedback_a: Check the order of the ``pow`` function!
+
          - [ ] Change ``pow(x,2)`` to ``pow(x,3)``.
 
-           This will print out the first ten perfect cubes.
+           - This will print out the first ten perfect cubes.
+
          - [x] Change ``pow(x,2)`` to ``pow(x,3)`` and change ``x = x + 1`` to ``x = x + 2``.
 
-           Changing both the ``pow`` function and the increment in this way gives us the right answer.
+           + Changing both the ``pow`` function and the increment in this way gives us the right answer.
+
          - [ ] Change ``x < 11`` to ``x < 6`` and change ``pow(x,2)`` to ``pow(x,3)``.
 
-           This will print out the first five perfect cubes, but not the first five odd perfect cubes.
-
+           - This will print out the first five perfect cubes, but not the first five odd perfect cubes.

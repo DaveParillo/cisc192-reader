@@ -136,19 +136,20 @@ and debug.
       .. tb-choice::
          :name: multiple_assignment_2
 
-         hat will print?
+         What will print?
 
-         . code-block:: cpp
+         .. code-block:: cpp
 
-         #include <iostream>
+          #include <iostream>
+          using namespace std;
 
-         int main () {
-           int x = 10;
-           std::cout << x << "!";
-           x = 1;
-           std::cout << x << "!";
-           return 0;
-         }
+          int main () {
+            int x = 10;
+            cout << x << "!";
+            x = 1;
+            cout << x << "!";
+            return 0;
+          }
 
          - [x] 10!1!
 
@@ -168,21 +169,21 @@ and debug.
       .. tb-choice::
          :name: multiple_assignment_3
 
-         hat is the correct output?
+         What is the correct output?
 
-         . code-block:: cpp
+         .. code-block:: cpp
 
-         #include <iostream>
-         using std::cout;
+          #include <iostream>
+          using namespace std;
 
-         int main () {
-           int x = 0;
-           x = 5;
-           int y = x;
-           y = 5;
-           bool z = x == y;
-           cout << z;
-         }
+          int main () {
+            int x = 0;
+            x = 5;
+            int y = x;
+            y = 5;
+            bool z = x == y;
+            cout << z;
+          }
 
          - [ ] True
 

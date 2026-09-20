@@ -169,25 +169,26 @@ example only demonstrates two:
    .. tb-tab:: Q1
 
       .. tb-choice::
-         :name: new_functions_1
+         :name: new_functions_mc_1
 
-         h of these statements is false about functions?
+         Which of these statements is false about functions?
 
-         You can name a function anything you want.
+         - [x] You can name a function anything you want.
 
-         +   You can't name a function the same name as a reserved keyword.
+           +   You can't name a function the same name as a reserved keyword.
 
-         You can have a function with several parameters or a function with none.
+         - [ ] You can have a function with several parameters or a function with none.
 
-         - [ ] This is true! However, you must always use parentheses.
+           -   This is true! However, you must always use parentheses.
 
-         You can call a function inside of another function.
+         - [ ] You can call a function inside of another function.
 
-         - [ ] This is true! It is common and useful.
+           -   This is true! It is common and useful.
 
-         You can write multiple statements on one line of a function.
+         - [ ] You can write multiple statements on one line of a function.
 
-         - [ ] This is true! As long as each statement ends with a semicolon.
+           -   This is true! As long as each statement ends with a semicolon.
+
 
    .. tb-tab:: Q2
 

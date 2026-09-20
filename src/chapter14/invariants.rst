@@ -54,9 +54,9 @@ If the invariant was violated somewhere else in the program, usually the
 best we can do is detect the error, output an error message, and exit.
 
 .. tb-choice::
-   :name: c192_question14_8_1
+   :name: question14_8_1
 
-
+   How does data encapsulation help us enforce invariants? 
 
    - [x] It prevents unrestricted access to the instance variables by making them private.
 
@@ -72,9 +72,9 @@ best we can do is detect the error, output an error message, and exit.
      Incorrect! Try again.
 
 .. tb-choice::
-   :name: c192_question14_8_2
+   :name: question14_8_2
 
-
+   An invariant can be false in the middle of a function as long as it is true at the start and end. 
 
    - [x] True
 
@@ -84,9 +84,9 @@ best we can do is detect the error, output an error message, and exit.
      Incorrect! Try again.
 
 .. tb-choice::
-   :name: c192_question14_8_3
+   :name: question14_8_3
 
-
+   If an invariant is false at the start of the function, the function must fix it to be true by the end. 
 
    - [ ] True
 
@@ -96,19 +96,20 @@ best we can do is detect the error, output an error message, and exit.
      Correct! We only have to maintain the invariant if it was true at the start. If it's false, all bets are off.
 
 .. tb-choice::
-   :name: c192_question14_8_4
+   :name: question14_8_4
 
+   If we create a ``Triangle`` class, which of the following are invariants we must maintain?
 
-   - [x] The interior angles of a ``triangle`` object must add up to 180 degrees.
-
-     Correct!
-   - [x] The sum of two sides of a ``triangle`` object must be greater than the third.
+   - [x] The interior angles of a ``Triangle`` object must add up to 180 degrees.
 
      Correct!
-   - [ ] All angles of a ``triangle`` object must be 60 degrees.
+   - [x] The sum of two sides of a ``Triangle`` object must be greater than the third.
+
+     Correct!
+   - [ ] All angles of a ``Triangle`` object must be 60 degrees.
 
      Incorrect! An equilateral triangle is only one possible kind of triangle.
-   - [ ] The greatest angle in a ``triangle`` object must be less than 90 degrees.
+   - [ ] The greatest angle in a ``Triangle`` object must be less than 90 degrees.
 
      Incorrect! We are allowed to have obtuse triangles.
 

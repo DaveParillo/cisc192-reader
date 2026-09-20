@@ -122,7 +122,7 @@ The active code below uses tab characters to make the table neater.
       .. tb-choice::
          :name: encapsulation_generalization_1
 
-
+         What is the purpose of generalization?
 
          - [ ] Replacing integers with parameters.
 

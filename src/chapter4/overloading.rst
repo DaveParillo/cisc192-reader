@@ -211,12 +211,12 @@ accordingly.
       .. tb-choice::
          :name: overloading_1
 
-         h of the following function declarations would be legal if it was added to the program below?
+         Which of the following function declarations would be legal if it was added to the program below?
 
+         ::
 
-
-         double price (int x, int y);
-         double price (double a, int b, string c);
+             double price (int x, int y);
+             double price (double a, int b, string c);
 
 
          - [ ] double price(int a, int b);
@@ -237,12 +237,12 @@ accordingly.
       .. tb-choice::
          :name: overloading_2
 
-          are the following functions an example of?
+         What are the following functions an example of?
 
+         ::
 
-
-         double price(int x, int y);
-         double price(double a, int b, string c);
+             double price(int x, int y);
+             double price(double a, int b, string c);
 
 
          - [ ] recursion
@@ -263,13 +263,13 @@ accordingly.
       .. tb-choice::
          :name: overloading_3
 
-         ose you have written the following functions for baking cake.  
-         here anything wrong with how ``bakeCake`` was overloaded?
+         Suppose you have written the following functions for baking cake.  
+         Is there anything wrong with how ``bakeCake`` was overloaded?
 
+         ::
 
-
-         bool bakeCake (string cakeMix, int eggs, double milk, bool birthday);
-         bool bakeCake (string cakeMix, int eggs, double water, bool holiday);
+             bool bakeCake (string cakeMix, int eggs, double milk, bool birthday);
+             bool bakeCake (string cakeMix, int eggs, double water, bool holiday);
 
          - [ ] Yes. Some of the parameters have the same names, so overloading is NOT legal.
 
@@ -289,12 +289,12 @@ accordingly.
       .. tb-choice::
          :name: overloading_4
 
-         d adding both of the follwoing function declarations to a program lead to an error?
+         Would adding both of the following function declarations to a program lead to an error?
 
+         ::
 
-
-         int stockPrice (string currency, int previous_price, double interest_rate );
-         double stockPrice (string currency, int older_price, double interest_rate );
+             int stockPrice (string currency, int previous_price, double interest_rate );
+             double stockPrice (string currency, int older_price, double interest_rate );
 
          - [ ] Yes. Two functions with the same name have different return types which is not permitted.
 

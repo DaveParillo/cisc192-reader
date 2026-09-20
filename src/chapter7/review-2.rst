@@ -38,15 +38,15 @@ Mixed Up Code Practice
                cout << word[4] << endl;  #distractor
             {{endgroup}}
             {{group}}
-               while (word.find('i') != string::npos) {
+               while ((int)word.find('i') != -1) {
             {{endgroup}}
             {{distractor}}
             {{group}}
-               while (word.find('e') != string::npos) {  #distractor
+               while ((int)word.find('e') != -1) {  #distractor
             {{endgroup}}
             {{distractor}}
             {{group}}
-               while (word.find('i')) {  #distractor
+               while ((int)word.find('i')) {  #distractor
             {{endgroup}}
             {{group}}
                   word[word.find('i')] = 'e';
@@ -198,7 +198,7 @@ Mixed Up Code Practice
             string cipherText (string input) {
             {{endgroup}}
             {{group}}
-               std::size_t i = 0;
+               int i = 0;
             {{endgroup}}
             {{group}}
                while (i < input.length()) {
@@ -249,17 +249,17 @@ Mixed Up Code Practice
                string tongue_twister = "twelve twins twirled twelve twigs";
             {{endgroup}}
             {{group}}
-               std::size_t count = 0;
+               int count = 0;
             {{endgroup}}
             {{distractor}}
             {{group}}
-               std::size_t count = 1;
+               int count = 1;
             {{endgroup}}
             {{group}}
-               std::size_t i = 0;
+               int i = 0;
             {{endgroup}}
             {{group}}
-               while (i < tongue_twister.size()) {
+               while (i < (int)tongue_twister.length()) {
             {{endgroup}}
             {{group}}
                   if (tongue_twister[i] == 't') {
@@ -306,21 +306,21 @@ Mixed Up Code Practice
             {{endgroup}}
             {{distractor}}
             {{group}}
-               std::size_t i = 0;  #distractor
+               int i = 0;  #distractor
             {{endgroup}}
             {{distractor}}
             {{group}}
                while (i < quote.length()) {  #distractor
             {{endgroup}}
             {{group}}
-               std::size_t first = quote.find("i");
+               int first = quote.find("i");
             {{endgroup}}
             {{group}}
-               std::size_t index = find (quote, 'i', first + 1);
+               int index = find (quote, 'i', first + 1);
             {{endgroup}}
             {{distractor}}
             {{group}}
-               std::size_t index = find (quote, 'i', first);
+               int index = find (quote, 'i', first);
             {{endgroup}}
             {{group}}
                cout << index;
@@ -412,7 +412,7 @@ Mixed Up Code Practice
                string copy = input;  #distractor
             {{endgroup}}
             {{group}}
-               std::size_t i = 0;
+               int i = 0;
             {{endgroup}}
             {{group}}
                while (i < input.length()) {
@@ -473,11 +473,11 @@ Mixed Up Code Practice
             string censorLetter (string input) {
             {{endgroup}}
             {{group}}
-               std::size_t i = 0;
+               int i = 0;
             {{endgroup}}
             {{distractor}}
             {{group}}
-               std::size_t i = 1;
+               int i = 1;
             {{endgroup}}
             {{group}}
                while (i < input.length()) {
@@ -592,21 +592,21 @@ Mixed Up Code Practice
             string ispalindrome(bool input) {
             {{endgroup}}
             {{group}}
-               std::size_t front = 0, back = input.size();
+               int front = 0 , back = input.length() - 1;
             {{endgroup}}
             {{distractor}}
             {{group}}
-               std::size_t front = 0, back = input.size() - 1;
+               int front = 0 , back = input.length();
             {{endgroup}}
             {{group}}
-               while (front < back) {
+               while ( front &lt back) {
             {{endgroup}}
             {{distractor}}
             {{group}}
-               while (front > back) {
+               while ( front &gt back) {
             {{endgroup}}
             {{group}}
-                  if (input[front] != input[back - 1]) {
+                  if( input[b] != input[e] ) {
             {{endgroup}}
             {{distractor}}
             {{group}}

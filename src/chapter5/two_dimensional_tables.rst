@@ -57,70 +57,73 @@ So far, so good. The next step is to **encapsulate** and **generalize**.
    .. tb-tab:: Q1
 
       .. tb-choice::
-         :name: twoD_tables_1
+         :name: mce_5_1
 
-         t is a good name for the variable x, found in the code block below?
+         What should be the return type of the function ``convertToCelsius``?
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         #include <iostream>
-
-         int main() {
-           int x = 1;
-           while (x <= 6) {
-             std::cout << 2*x << "   ";
-             x = x + 1;
+           ______ convertToCelsius (double fahrenheit) {
+             double celsius;
+             celsius = (fahrenheit - 32) * 5 / 9;
+             return celsius;
            }
-           cout << endl;
-           return 0;
-         }
 
-         - [ ] counter
+         - [ ] ``int``
 
-           Try again!
-         - [ ] loop variable
+           - What variable are we returning in the function, and what is the variable's type? 
 
-           Try again!
-         - [x] Both a and b
+         - [x] ``double``
 
-           Correct!
-         - [ ] None of the above
+           + The function returns ``celsius``, which is a ``double``.
 
-           Try again!
+         - [ ] ``string``
+
+           - What variable are we returning in the function, and what is the variable's type? 
+
+         - [ ] ``void``
+
+           - Since we are returning something in the function, the function is not ``void``.
 
    .. tb-tab:: Q2
 
       .. tb-choice::
-         :name: twoD_tables_2
+         :name: mce_5_2
 
-         rently, the code below prints all of the multiples of three on one line. How can you change the output so that each multiple prints on its own line?
+         What would be returned by ``secretFunction`` if the input was 14?
 
-         code-block:: cpp
+         .. code-block:: cpp
 
-         #include <iostream>
-         using std::cout;
-         using std::endl;
+           int secretFunction (int input) {
+             if (input % 2 == 0) {
+               return 3 * input - 2;
+             }
+             else {
+               if (input % 7 == 0) {
+                 return input;
+               }
+               return 2 * input + 9;
+             }
+             return input + 4;
+           }  
 
-           int main() {
-           int x = 1;
-           while (x <= 6) {
-             cout << 3*x << "  ";
-             x = x + 1;
-           }
-           cout << endl;
-           return 0;
-         }
+         - [ ] 14
 
-         - [x] Change the first output statement to say cout << 3*x << endl;
+           - Although 14 is divisible by 7, take another look at the conditionals. 
 
-           The addition of the endl will print the multiples of three on separate lines.
-         - [ ] Change the first output statement to say cout << 3*x << \n;
+         - [ ] 18
 
-           A newline character must be used in conjunction with a string. In this case, we are outputting an integer. To use a newline character in this scenario you must use quotes around it. (ex. "\n")
-         - [ ] Change the second output statement to say cout << endl << endl;
+           - The flow of code would never reach the last return statement.
 
-           This would simply print out two new lines after all of the multiples have already printed on one line.
-         - [ ] This code already prints each multiple on its own line.
+         - [ ] 36
 
-           This code prints all multiples out on one line.
+           - Check your order of operations! 
+
+         - [ ] 37
+
+           - Take a closer look at the conditional statements. 
+
+         - [x] 40
+
+           + Since 14 is divisible by 2, the function returns two less than three times 14.
 

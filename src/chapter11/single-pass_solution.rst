@@ -44,7 +44,7 @@ numbers vector.
       .. tb-choice::
          :name: single_pass_solution_1
 
-
+         What happens if you don't initialize a counter?
 
          - [ ] Your code runs without a problem because counters are automatically initialized to zero.
 

@@ -74,23 +74,20 @@ are passed into the print_price function.
       .. tb-choice::
          :name: multiple_params_1
 
-         h of the following is a correct function declaration?
+         Which of the following is a correct function header (first line of 
+         a function definition)?
 
-         ``total_cost (double cost, tax, discount);``
+         - [ ] ``totalcost (double cost, tax, discount)``
 
-         - [ ] ``total_cost`` needs a return type, and each parameter needs a data type.
+           -   ``totalcost`` needs a return type, and each parameter needs a data type.
 
-         ``total_cost (double cost, double tax) {``
+         - [ ] ``totalCost (double cost, double tax) {``
 
-         - [x] ``total_cost`` needs a return type.
+           -   ``totalcost`` needs a return type.
 
-         ``void total_cost (double cost, double tax, double discount);``
+         - [x] ``void totalCost (double cost, double tax, double discount) {``
 
-         +   Correct!
-
-         ``void total_cost (double cost, tax);``
-
-         - [ ] This declaration needs types for each parameter.
+           +   Correct!
 
 
    .. tb-tab:: Q2
@@ -98,35 +95,35 @@ are passed into the print_price function.
       .. tb-choice::
          :name: multiple_params_2
 
-         h of the following is a legal function call of the function below?
+         Which of the following is a legal function call of the function below?
 
+         ::
 
+             void multiplyTwo (int num, string name) {
+               int total = num * 2;
+               cout << "Hi " << name << ", your total is " << total << "!" << endl;
+             }
 
-         void multiply_two (int num, string name) {
-           int total = num * 2;
-           cout << "Hi " << name << ", your total is " << total << "!" << endl;
-         }
+             int main() {
+               int x = 2;
+               string phil = "Phil";
+             }
 
-         int main() {
-           int x = 2;
-           string phil = "Phil";
-         }
+         - [ ] ``multiplyTwo (int x, string phil);``
 
-         ``multiply_two (int x, string phil);``
+           -   Data types are not needed when calling a function.
 
-         - [x] Data types are not needed when calling a function.
+         - [x] ``multiplyTwo (x, phil);``
 
-         ``multiply_two (x, phil);``
+           +   Correct!
 
-         +   Correct!
+         - [ ] ``void multiplyTwo (int num, string name) {``
 
-         ``void multiply_two (int num, string name) {``
+           -   This is the function definition.
 
-         - [ ] This is the function definition.
+         - [ ] ``void multiplyTwo (int x, string phil);``
 
-         ``void multiply_two (int x, string phil);``
-
-         - [ ] Data types are not needed when calling a function.
+           -   Data types are not needed when calling a function.
 
 -----
 

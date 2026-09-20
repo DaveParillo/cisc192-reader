@@ -101,21 +101,21 @@ phil.
       .. tb-choice::
          :name: locals_1
 
-         many local variables and parameters does ``main`` have?
+         How many local variables and parameters does ``main`` have?
 
+         ::
 
+             void printHelloName (string name) {
+               cout << "Hello " << name << "!";
+             }
 
-         void print_hello_name (string name) {
-           cout << "Hello " << name << "!\n";
-         }
-
-         int main () {
-           string name1 = "Phil";
-           print_hello_name(name1);
-           string name2 = "Joe";
-           print_hello_name(name2);
-           return 0;
-         }
+             int main () {
+               string name1 = "Phil";
+               printHelloName(name1);
+               string name2 = "Joe";
+               printHelloName(name2);
+               return 0;
+             }
 
 
          - [ ] 1 local variable, 1 parameter
@@ -136,21 +136,21 @@ phil.
       .. tb-choice::
          :name: locals_2
 
-         many local variables and parameters does ``print_hello_name`` have?
+         How many local variables and parameters does ``printHelloName`` have?
 
+         ::
 
+             void printHelloName (string name) {
+               cout << "Hello " << name << "!";
+             }
 
-         void print_hello_name (string name) {
-           cout << "Hello " << name << "!\n";
-         }
-
-         int main () {
-           string name1 = "Phil";
-           print_hello_name(name1);
-           string name2 = "Joe";
-           print_hello_name(name2);
-           return 0;
-         }
+             int main () {
+               string name1 = "Phil";
+               printHelloName(name1);
+               string name2 = "Joe";
+               printHelloName(name2);
+               return 0;
+             }
 
 
          - [ ] 1 local variable, 1 parameter
@@ -184,26 +184,26 @@ phil.
       .. tb-choice::
          :name: locals_4
 
-         many calls to ``hi`` are made during the exectuion of the entire program?
+         How many calls to ``hi`` are made during the exectuion of the entire program?
 
+         ::
 
+             void hi() {
+               cout << "hiii !"<<endl;
+             }
 
-         void hi() {
-           cout << "hiii !\n";
-         }
+             void printGreeting(){
+               hi();
+               cout<<"how are you doing today. "<<endl;
+               hi();
+             }
 
-         void print_greeting(){
-           hi();
-           cout<<"how are you doing today. \n";
-           hi();
-         }
-
-         int main () {
-           hi();
-           print_greeting();
-           hi();
-           return 0;
-         }
+             int main () {
+               hi();
+               printGreeting();
+               hi();
+               return 0;
+             }
 
          - [ ] 1 call
 

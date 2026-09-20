@@ -2,59 +2,59 @@ Multiple Choice Exercises
 -------------------------
 
 .. tb-choice::
-   :name: c192_mce_13_1
+   :name: mce_13_1
 
    What is the output of the code below?
 
    .. code-block:: cpp
 
-       enum month { jan = 1, feb, mar, apr,
-       may, jun, jul, aug, sep, oct, nov, dec };
+       enum Month { JAN = 1, FEB, MAR, APR, 
+       MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC };
 
        int main() {
-         month m1 = jul;
-         month m2 = nov;
-         std::cout << m1 << " " << m2 << std::endl;
+         Month m1 = JUL;
+         Month m2 = NOV;
+         cout << m1 << " " << m2 << endl;
        }
 
    - [ ] JULY NOVEMBER
 
-     - What are the actual values of ``jul`` and ``nov``?
+     - What are the actual values of ``JUL`` and ``NOV``?
 
-   - [ ] jul nov
+   - [ ] JUL NOV
 
      - What do the values of enumerated types map to?
 
    - [x] 7 11
 
-     + Since we defined ``jan`` to start at 1, ``jul`` and ``nov`` map to 7 and 11.
+     + Since we defined ``JAN`` to start at 1, ``JUL`` and ``NOV`` map to 7 and 11.
 
    - [ ] 6 10
 
      - Take a closer look at our enumerated type definition.
 
 .. tb-choice::
-   :name: c192_mce_13_2
+   :name: mce_13_2
 
    What is the output of the code below?
 
    .. code-block:: cpp
 
        int main() {
-         std::string s = "summer";
+         string s = "summer";
          switch (s) {
            case "spring":
-             std::cout << "It's spring!";
+             cout << "It's spring!";
              break;
            case "summer":
-             std::cout << "It's summer!";
+             cout << "It's summer!";
            case "fall":
-             std::cout << "It's fall!";
+             cout << "It's fall!";
              break;
            case "winter":
-             std::cout << "It's winter!";
+             cout << "It's winter!";
            default:
-             std::cout << "Invalid season!";
+             cout << "Invalid season!";
              break;
          }
        }
@@ -76,34 +76,34 @@ Multiple Choice Exercises
      + ``switch`` statements can't be used on ``string``\s.
 
 .. tb-choice::
-   :name: c192_mce_13_3
+   :name: mce_13_3
 
    What is the output of the code below?
 
    .. code-block:: cpp
 
-       enum season { spring, summer, fall, winter };
+       enum Season { SPRING, SUMMER, FALL, WINTER };
 
        int main() {
-         season s = summer;
+         Season s = SUMMER;
          switch (s) {
-           case spring:
-             std::cout << "It's spring!";
+           case SPRING:
+             cout << "It's spring!";
              break;
-           case summer:
-             std::cout << "It's summer!";
-           case fall:
-             std::cout << "It's fall!";
+           case SUMMER:
+             cout << "It's summer!";
+           case FALL:
+             cout << "It's fall!";
              break;
-           case winter:
-             std::cout << "It's winter!";
+           case WINTER:
+             cout << "It's winter!";
            default:
-             std::cout << "Invalid season!";
+             cout << "Invalid season!";
              break;
          }
        }
 
-   - [ ] summer
+   - [ ] SUMMER
 
      - Although that is the value of ``s``, is that printed?
 
@@ -117,74 +117,74 @@ Multiple Choice Exercises
 
    - [ ] Compile error.
 
-     - Since ``s`` is an enumerated type, the ``season``\s are mapped to ``int``\s, which are valid for ``switch`` statements.
+     - Since ``s`` is an enumerated type, the ``Season``\s are mapped to ``int``\s, which are valid for ``switch`` statements.
 
 .. tb-choice::
-   :name: c192_mce_13_4
+   :name: mce_13_4
 
-   Take a look at the ``struct`` definition of ``entry``. If we wanted to make a
-   ``struct`` called ``dictionary``, how can we create a ``vector`` of ``entry``\s
+   Take a look at the ``struct`` definition of ``Entry``. If we wanted to make a
+   ``struct`` called ``Dictionary``, how can we create a ``vector`` of ``Entry``\s
    as a member variable?
 
    .. code-block:: cpp
 
-       struct entry {
-         std::string word;
+       struct Entry {
+         string word;
          int page;
        }
 
-   - [x] ``vector<entry> entries;``
+   - [x] ``vector<Entry> entries;``
 
-     + We create a ``vector`` with type ``entry``.
+     + We create a ``vector`` with type ``Entry``.
 
-   - [ ] ``entry entries``
+   - [ ] ``Entry entries``
 
-     - This only creates one ``entry``.
+     - This only creates one ``Entry``.
 
-   - [ ] ``vector<dictionary> entry``
+   - [ ] ``vector<Dictionary> Entry``
 
-     - This creates a ``vector`` of ``dictionary``\s called ``entry``.
+     - This creates a ``vector`` of ``Dictionary``\s called ``Entry``.
 
    - [ ] We can't make an object that contains a ``vector``.
 
      - We can have ``vector``\s inside objects.
 
 .. tb-choice::
-   :name: c192_mce_13_5
+   :name: mce_13_5
 
    What is wrong with the code below?
 
    .. code-block:: cpp
 
-       struct playing_card {
+       struct Card {
          int suit, rank;
 
-         playing_card ();
-         playing_card (int s, int r);
+         Card ();
+         Card (int s, int r);
 
          void print () const;
-         bool is_greater (const playing_card& c2) const;
-         std::ptrdiff_t find (const card_deck& deck) const;
+         bool isGreater (const Card& c2) const;
+         int find (const Deck& deck) const;
        };
 
-       struct card_deck {
-         std::vector<playing_card> cards;
+       struct Deck {
+         vector<Card> cards;
 
-         card_deck ();
-         card_deck (std::size_t n);
+         Deck ();
+         Deck (int n);
          void print () const;
-         std::ptrdiff_t find (const playing_card& card) const;
+         int find (const Card& card) const;
        };
 
-   - [ ] We can't have a ``vector`` in ``card_deck``.
+   - [ ] We can't have a ``vector`` in ``Deck``.
 
      - We are allowed to have ``vector``\s in objects.
 
-   - [x] The definition of ``playing_card::find()`` is invalid.
+   - [x] The definition of ``Card::find()`` is invalid.
 
-     + The definition references ``card_deck``, but ``card_deck`` is defined after ``playing_card``.
+     + The definition references ``Deck``, but ``Deck`` is defined after ``Card``.
 
-   - [ ] We can't define ``print()`` in both ``playing_card`` and in ``card_deck``.
+   - [ ] We can't define ``print()`` in both ``Card`` and in ``Deck``.
 
      - Although they have the same name, these are two different ``print()`` functions.
 
@@ -193,7 +193,7 @@ Multiple Choice Exercises
      - There is an error in the code. Can you find it?
 
 .. tb-choice::
-   :name: c192_mce_13_6
+   :name: mce_13_6
 
    Why can't we code our ``shuffle`` function to work the exact same way humans shuffle cards?
 
@@ -214,7 +214,7 @@ Multiple Choice Exercises
      + Because the cards are shuffled perfectly, the exact ordering of the cards is predictable and thus the cards aren't really shuffled.
 
 .. tb-choice::
-   :name: c192_mce_13_7
+   :name: mce_13_7
 
    What is true about helper functions?
 
@@ -235,7 +235,7 @@ Multiple Choice Exercises
      + Since helper functions break down the bigger function into smaller parts, it's easier to isolate and identify issues.
 
 .. tb-choice::
-   :name: c192_mce_13_8
+   :name: mce_13_8
 
    Using pseudocode to figure out what helper functions are needed is a characteristic of what?
 
@@ -256,7 +256,7 @@ Multiple Choice Exercises
      - This is the process of writing small, useful functions and then assembling them into larger solutions.
 
 .. tb-choice::
-   :name: c192_mce_13_9
+   :name: mce_13_9
 
    Which of the following can lead to off by one errors?
 
@@ -277,30 +277,30 @@ Multiple Choice Exercises
      + These can all lead to off by one errors.
 
 .. tb-choice::
-   :name: c192_mce_13_10
+   :name: mce_13_10
 
-   What is the amount of time that merge_sort takes?
+   What is the amount of time that mergeSort takes?
 
    - [x] n log n
 
-     + This makes merge_sort faster than our previous version of selection sort.
+     + This makes mergeSort faster than our previous version of selection sort.
 
    - [ ] n!
 
-     - merge_sort runs faster than factorial time.
+     - mergeSort runs faster than factorial time.
 
    - [ ] logn
 
-     - merge_sort runs slower than logarithmic time.
+     - mergeSort runs slower than logarithmic time.
 
    - [ ] n^2
 
      - This is the time complexity of selection sort.
 
 .. tb-choice::
-   :name: c192_mce_13_11
+   :name: mce_13_11
 
-   What kind of sorting algorithm is our ``sort_deck`` function? You are encouraged to search up these different sorting algorithms!
+   What kind of sorting algorithm is our ``sortDeck`` function? You are encouraged to search up these different sorting algorithms!
 
    - [ ] Bubble sort
 

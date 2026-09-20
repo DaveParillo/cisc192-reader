@@ -138,7 +138,7 @@ rules of a language.
       .. tb-choice::
          :name: first_program_2
 
-
+         **Multiple Response** Which is true about writing a program?
 
 
          - [x] The main marks the spot in the program where execution begins.
@@ -152,7 +152,7 @@ rules of a language.
            When the program runs, it starts by executing the first statement in main, and it continues until the last.
          - [ ] The main program is enclosed by parentheses.
 
-           The main program and all functions in C++ are enclosed by curly brackets ( { and } ).
+           The main program and all functions in C++ are enclosed by squiggly brackets ( { and } ).
          - [x] The end of each statement is marked with a semicolon ( ; ).
 
            Forgetting a semicolon will cause a compile error!

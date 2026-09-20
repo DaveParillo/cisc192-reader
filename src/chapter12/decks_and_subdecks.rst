@@ -46,9 +46,9 @@ complex system with a simplified description in order to suppress
 unnecessary details while capturing relevant behavior.”
 
 .. tb-choice::
-   :name: c192_decks_and_subdecks_1
+   :name: decks_and_subdecks_1
 
-
+   Which is false about the ``findBisect()`` funtion?
 
    - [ ] It uses binary search to locate the card in the deck.
 
@@ -58,10 +58,10 @@ unnecessary details while capturing relevant behavior.”
      This is true. If the user doesn't follow the rules, we might be in trouble.
    - [x] It can only access the part of the deck that is between the bounds high and low.
 
-     This is false! find_bisect() can access the entire deck, even when you pass high and low parameters.
-   - [ ] A vector with size zero is an empty container.
+     This is false! findBisect() can access the entire deck, even when you pass high and low parameters.
+   - [ ] There is no such thing as an empty object.
 
-     This is true. Empty describes the container's logical contents.
+     This is true.  When you create an object, it is given default values.
 
 .. tb-blank::
    :name: c192_decks_and_subdecks_2

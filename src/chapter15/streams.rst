@@ -36,17 +36,13 @@ it adds a datum to the outgoing stream.
       :match: x
 
    .. tb-answer:: blank3
-      :match: (?
-      :incorrect: Incorrect! Try re-reading!
-
-   .. tb-answer:: blank4
-      :match: (?
+      :match: [Ff][Ss][Tt][Rr][Ee][Aa][Mm]
       :incorrect: Incorrect! Try re-reading!
 
 .. tb-choice::
-   :name: c192_question15_2_2
+   :name: question15_2_2
 
-
+   What is a stream object?
 
    - [ ] an abstract object that works exclusively with cin and cout statements
 
@@ -70,4 +66,3 @@ it adds a datum to the outgoing stream.
       std::istream
    std::cout
       std::ostream
-

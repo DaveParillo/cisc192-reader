@@ -176,20 +176,20 @@ One solution is to declare ``card_deck`` before ``playing_card`` and then define
 .. _c192_shuffle:
 
 .. tb-choice::
-   :name: c192_deck_members_1
+   :name: deck_members_1
 
-
+   Multiple Response: What are some tricks we can use to write ``find`` as a ``Card`` member function?
 
    - [x] Use the keyword this.
 
-     We use this to refer to the playing_card that the function is invoked on.
-   - [ ] Define card_deck before playing_card.
+     We use this to refer to the Card that the function is invoked on.
+   - [ ] Define Deck before Card.
 
-     We don't have to define card_deck before playing_card.
-   - [ ] Pass a playing_card parameter in the playing_card member function find.
+     We don't have to define Deck before Card.
+   - [ ] Pass a Card parameter in the Card member function find.
 
      What do we pass as a parameter in find?
-   - [x] Declare card_deck before playing_card and then define card_deck afterwards.
+   - [x] Declare Deck before Card and then define Deck afterwards.
 
      This is how we implemented our code!
 

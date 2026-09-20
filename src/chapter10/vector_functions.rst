@@ -80,7 +80,7 @@ even numbers less than or equal to 10 to the vector ``values``.
       .. tb-choice::
          :name: vector_functions_1
 
-
+         Let **nums** be the vector { 0, 1, 2, 3, 4 }. If we run the command ``nums.push_back(3)``, what will be returned by ``nums.size()``?
 
          - [ ] 5
 
@@ -154,29 +154,29 @@ even numbers less than or equal to 10 to the vector ``values``.
       .. tb-choice::
          :name: vector_functions_3
 
-         t does the following code print?
+         What does the following code print?
 
-         code-block:: cpp
-         :linenos:
+         .. code-block:: cpp
+            :linenos:
 
-         vector<int> numbers(5);
-         std::size_t size = 5;
-         for (std::size_t i = 0; i < size; ++i){
-            numbers[i] = i;
-         }
+            vector<int> numbers(5);
+            int size = 5;
+            for (int i = 0; i < size; i++){
+               numbers[i] = i;
+            }
 
-         int end = 4;
+            int end = 4;
 
-         for (std::size_t i = 0; i < size; ++i){
-            numbers[i] = numbers[end];
-            end--;
-         }
+            for (int i = 0; i < size; i++){
+               numbers[i] = numbers[end];
+               end--;
+            }
 
-         for (std::size_t i = 0; i < size; ++i){
-            cout << numbers[i] << "  ";
-         }
+            for (int i = 0; i < size; i++){
+               cout << numbers[i] << "  ";
+            }
 
-         cout << endl;
+            cout << endl;
 
          - [ ] 4 3 2 1 0
 

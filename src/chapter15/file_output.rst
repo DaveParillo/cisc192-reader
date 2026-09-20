@@ -86,16 +86,19 @@ matter, that is a different requirement.
       {{endgroup}}
 
 .. tb-choice::
-   :name: c192_question15_4_2
+   :name: question15_4_2
 
+   The code from the previous problem checks whether the files open or not. It doesn't specify which one, if any, doesn't open. How could you specify which file does not open?
 
+   - [ ] Create two "for" loops instead of an if-statement so that the statement loops through both conditions once.
 
-   - [x] Check input and output separately and report the relevant file name.
+     Try again!
+   - [ ] Create a "while" loop instead of an if-statement so that the statement loops through both conditions separately until the body of the loop is reached.
 
-     Separate checks identify the failed operation.
-   - [ ] A successful open guarantees every later write succeeds.
+     Try again!
+   - [x] Create two "if" statements, one that check whether in_file.good() is false, and another that checks whether out_file.good() is false, instead of putting them together in one "if" statement.
 
-     Writes can fail after a successful open, so check their results too.
+     Correct!
 
 .. tb-blank::
    :name: c192_question15_4_3

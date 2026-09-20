@@ -49,51 +49,52 @@ result of this computation is assigned to x.
       .. tb-choice::
          :name: function_comp_1
 
-         h of these statements has proper syntax?
+         Which of these statements has proper syntax?
 
-         ``double x = log6 (12);``
+         - [ ] ``double x = log6 (12);``
 
-         - [x] ``log6`` is not a built in cmath function, but you could write an implementation for it if you wanted!
+           -   ``log6`` is not a built in cmath function, but you could write an implementation for it if you wanted!
 
-         ``double val = abs (tan (1.57));``
+         - [x] ``double val = abs (tan (1.57));``
 
-         +   This correctly uses cmath functions!
+           +   This correctly uses cmath functions!
 
-         ``double num = exp (cosine (0.86667));``
+         - [ ] ``double num = exp (cosine (0.86667));``
 
-         - [ ] ``cosine`` is not a built in cmath function, but ``cos`` is!
+           -   ``cosine`` is not a built in cmath function, but ``cos`` is!
 
-         ``double y = exp (cos (1.047)) + exp (tan (2.094))``
+         - [ ] ``double y = exp (cos (1.047)) + exp (tan (2.094))``
 
-         - [ ] This would be correct if it ended in a semi-colon.
+           -   This would be correct if it ended in a semi-colon.
+
 
    .. tb-tab:: Q2
 
       .. tb-choice::
          :name: function_comp_2
 
-         h of these statements returns the y-component of the unit
-         or at 330 degrees?
+         Which of these statements returns the y-component of the unit
+         vector at 330 degrees?
 
-         ``y = cos(330);``
+         - [ ] ``y = cos(330);``
 
-         - [ ] You must always convert to radians before using sinusoidal functions.
+           -   You must always convert to radians before using sinusoidal functions.
 
-         ``y = cos(330 * 2 * pi / 360);``
+         - [ ] ``y = cos(330 * 2 * pi / 360);``
 
-         - [ ] ``cos`` will return the x-component.
+           -   ``cos`` will return the x-component.
 
-         ``y = sin(330);``
+         - [ ] ``y = sin(330);``
 
-         - [x] You must always convert to radians before using sinusoidal functions.
+           -   You must always convert to radians before using sinusoidal functions.
 
-         ``y = sin(330 * 2 * pi / 360);``
+         - [x] ``y = sin(330 * 2 * pi / 360);``
 
-         +   ``sin`` returns the y-component, ``cos`` returns the x-component.
+           +   ``sin`` returns the y-component, ``cos`` returns the x-component.
 
-         ``y = tan(330 * 2 * pi / 360);``
+         - [ ] ``y = tan(330 * 2 * pi / 360);``
 
-         - [ ] ``tan`` is not the proper function to use here.
+           -   ``tan`` is not the proper function to use here.
 
 -----
 

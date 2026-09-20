@@ -124,11 +124,11 @@ writing the recursive version should be no problem. Good luck!
 
 
 .. tb-choice::
-   :name: c192_mergesort_1
+   :name: mergesort_1
 
-
-
-
+   The efficiency of a simple sorting algorithm is __________.  The
+   efficiency of mergesort is __________.  Mergesort is __________ than
+   the simple sorting algorithm.
 
 
    - [ ] n, nlogn, more efficient

@@ -118,21 +118,21 @@ The active code below prints out the cards in a deck using the loop from the pre
    }
 
 .. tb-choice::
-   :name: c192_deck_constructor_1
+   :name: deck_constructor_1
 
+   Based on your observations from the active code above, the cards in ``deck`` are initialized 
+   to the correct suits and ranks of a standard deck of 52 cards.
 
-
-
-   - [ ] True - we used the build_deck function with a few modifications to do this.
+   - [ ] True - we used the buildDeck function with a few modifications to do this.
 
      How do we create the deck?
-   - [x] True - we wrote a card_deck constructor to do this.
+   - [x] True - we wrote a Deck constructor to do this.
 
-     The for loops in the card_deck constructor initialize each card to its proper value.
-   - [ ] False - we used the build_deck function with a few modifications to do this.
+     The for loops in the Deck constructor initialize each card to its proper value.
+   - [ ] False - we used the buildDeck function with a few modifications to do this.
 
      Look at the active code.  How do we create the deck?
-   - [ ] False - we wrote a card_deck constructor to do this.
+   - [ ] False - we wrote a Deck constructor to do this.
 
      Look at the active code.
 

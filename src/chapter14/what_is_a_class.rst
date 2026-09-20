@@ -43,9 +43,9 @@ Also, it is common to refer to all user-defined types in C++ as
 ``class``.
 
 .. tb-choice::
-   :name: c192_question14_2_1
+   :name: question14_2_1
 
-
+   By default, the data members of a ``class`` are private. 
 
    - [x] True
 
@@ -55,33 +55,33 @@ Also, it is common to refer to all user-defined types in C++ as
      Incorrect! Try again.
 
 .. tb-choice::
-   :name: c192_question14_2_2
+   :name: question14_2_2
 
-    can we change ``card_deck``, which is currently a ``struct``, into a ``class``?
+   How can we change ``Deck``, which is currently a ``struct``, into a ``class``? 
 
-   code-block:: cpp
+   .. code-block:: cpp
 
-   struct card_deck {
-   private:
-     std::vector<playing_card> cards;
+      struct Deck {
+      private:
+        vector<Card> cards;
 
-   public:
-     card_deck ();
-     card_deck (std::size_t n);
+      public:
+        Deck ();
+        Deck (int n);
 
-     void print () const;
-     void swap_cards (std::size_t index1, std::size_t index2);
-     std::size_t find_lowest_card (std::size_t index);
-     void shuffle_deck ();
-     void sort_deck ();
-     card_deck subdeck (std::ptrdiff_t low, std::ptrdiff_t high) const;
-     card_deck merge_sort () const;
-     card_deck merge_sort (card_deck deck) const;
-   };
+        void print () const;
+        void swapCards (int index1, int index2);
+        int findLowestCard (int index);
+        void shuffleDeck ();
+        void sortDeck ();
+        Deck subdeck (int low, int high) const;
+        Deck mergeSort () const;
+        Deck mergeSort (Deck deck) const;
+      };
 
    - [ ] Remove the ``private:`` label.
 
-     Incorrect! ``card_deck`` is still a ``struct``.
+     Incorrect! ``Deck`` is still a ``struct``.
    - [ ] Change ``struct`` to ``class`` and remove the ``public:`` label.
 
      Incorrect! We don't want to make the constructors and all member functions private.
@@ -90,11 +90,12 @@ Also, it is common to refer to all user-defined types in C++ as
      Incorrect! We don't want to make the constructors and all member functions private.
    - [x] Change ``struct`` to ``class``.
 
-     Correct! ``card_deck`` is now a ``class`` and it's okay that we kept the ``private:`` label.
+     Correct! ``Deck`` is now a ``class`` and it's okay that we kept the ``private:`` label.
 
 .. tb-choice::
-   :name: c192_question14_2_3
+   :name: question14_2_3
 
+   Private data members can be accessed within the class.
 
    - [x] True
 

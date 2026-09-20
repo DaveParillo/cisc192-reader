@@ -61,16 +61,24 @@ An ``std::unordered_set`` is another option when sorted iteration is not needed;
 it uses hashing and has different ordering and performance guarantees.
 
 .. tb-choice::
-   :name: c192_set_membership
+   :name: mce_15_1
 
+   We want to open a file and parse its data into our program. What library
+   do we need to include?
 
-   - [ ] cities[0]
+   - [ ] ``iostream``
 
-     A set has no numeric indexing operator.
-   - [x] cities.contains("Boston")
+     - This library deals with communication through the standard input and output.
 
-     contains tests membership without inserting a key.
-   - [ ] cities.find("Boston") == 0
+   - [ ] ``sstream``
 
-     find returns an iterator, not an index.
+     -  This library is used to manipulate string objects as if they were streams.
+
+   - [x] ``fstream``
+
+     + This library is used to manipulate files using streams.
+
+   - [ ] ``iomanip``
+
+     - This library is used to modify internal flags and formatting options.
 
