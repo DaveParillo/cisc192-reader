@@ -20,7 +20,7 @@ Answer the following **Mixed-Up Code** questions to assess what you have learned
             int main() {
             {{endgroup}}
             {{group}}
-             cout << "Lions &" << endl;
+             cout << "Lions &" << '\n';
             {{endgroup}}
             {{distractor}}
             {{group}}
@@ -31,17 +31,17 @@ Answer the following **Mixed-Up Code** questions to assess what you have learned
             {{endgroup}}
             {{distractor}}
             {{group}}
-             cout << "Tigers &" << endl;
+             cout << "Tigers &" << '\n';
             {{endgroup}}
             {{group}}
-             cout << " Bears!" << endl;
+             cout << " Bears!" << '\n';
             {{endgroup}}
             {{distractor}}
             {{group}}
-             cout << "Bears!" << endl;
+             cout << "Bears!" << '\n';
             {{endgroup}}
             {{group}}
-             cout << endl;
+             cout << '\n';
             {{endgroup}}
             {{group}}
              cout << "Oh my!";
@@ -126,7 +126,7 @@ Answer the following **Mixed-Up Code** questions to assess what you have learned
             {{endgroup}}
             {{distractor}}
             {{group}}
-             char crush = "S";
+             char crush = 'S';
             {{endgroup}}
             {{group}}
             }
@@ -232,7 +232,7 @@ Answer the following **Mixed-Up Code** questions to assess what you have learned
             {{endgroup}}
             {{distractor}}
             {{group}}
-             char a = "a";
+             char a = 'a';
             {{endgroup}}
             {{group}}
              a = a + 25;
@@ -321,7 +321,7 @@ Answer the following **Mixed-Up Code** questions to assess what you have learned
             {{endgroup}}
             {{distractor}}
             {{group}}
-             cout << "My favorite class is " << endl;
+             cout << "My favorite class is " << '\n';
              cout << favorite;
             {{endgroup}}
             {{distractor}}

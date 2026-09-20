@@ -79,7 +79,7 @@ do.
                  cout << "Two! ";
                }
                if (x > 3) {
-                 cout << "Three!" << endl;
+                 cout << "Three!" << '\n';
                }
                return 0;
              }
@@ -119,7 +119,7 @@ do.
                  cout << "Two! ";
                }
                else {
-                 cout << "Three!" << endl;
+                 cout << "Three!" << '\n';
                }
                return 0;
              }
@@ -159,7 +159,7 @@ do.
                  cout << "Two! ";
                }
                if (x > 3) {
-                 cout << "Three!" << endl;
+                 cout << "Three!" << '\n';
                }
                return 0;
              }
@@ -199,7 +199,7 @@ do.
                  cout << "Two! ";
                }
                else {
-                 cout << "Three!" << endl;
+                 cout << "Three!" << '\n';
                }
                return 0;
              }

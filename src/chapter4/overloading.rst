@@ -264,12 +264,12 @@ accordingly.
          :name: overloading_3
 
          Suppose you have written the following functions for baking cake.  
-         Is there anything wrong with how ``bakeCake`` was overloaded?
+         Is there anything wrong with how ``bake_cake`` was overloaded?
 
          ::
 
-             bool bakeCake (string cakeMix, int eggs, double milk, bool birthday);
-             bool bakeCake (string cakeMix, int eggs, double water, bool holiday);
+             bool bake_cake (string cake_mix, int eggs, double milk, bool birthday);
+             bool bake_cake (string cake_mix, int eggs, double water, bool holiday);
 
          - [ ] Yes. Some of the parameters have the same names, so overloading is NOT legal.
 
@@ -293,8 +293,8 @@ accordingly.
 
          ::
 
-             int stockPrice (string currency, int previous_price, double interest_rate );
-             double stockPrice (string currency, int older_price, double interest_rate );
+             int stock_price (string currency, int previous_price, double interest_rate );
+             double stock_price (string currency, int older_price, double interest_rate );
 
          - [ ] Yes. Two functions with the same name have different return types which is not permitted.
 

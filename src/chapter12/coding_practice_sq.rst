@@ -79,7 +79,7 @@ Coding Practice
          :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          void pixel::print_pixel() {
-             std::cout << "("<< r << ", " << g << ", " << b << ")";
+             std::cout << '('<< r << ", " << g << ", " << b << ')';
          }
 
       .. tb-code:: cpp
@@ -142,13 +142,13 @@ Coding Practice
                      matrix[r][c].print_pixel();
             {{endgroup}}
             {{group}}
-                     std::cout << " ";
+                     std::cout << ' ';
             {{endgroup}}
             {{group}}
                  }
             {{endgroup}}
             {{group}}
-                 std::cout << std::endl;
+                 std::cout << '\n';
             {{endgroup}}
             {{group}}
                  }
@@ -173,16 +173,16 @@ Coding Practice
          :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          void pixel::print_pixel() {
-             cout << "("<< r << ", " << g << ", " << b << ")";
+             cout << '('<< r << ", " << g << ", " << b << ')';
          }
 
          void image::print_image() {
              for (std::size_t r = 0; r < height; ++r) {
              for (std::size_t c = 0; c < width; ++ c) {
                  matrix[r][c].print_pixel();
-                 cout << " ";
+                 cout << ' ';
              }
-             cout << std::endl;
+             cout << '\n';
              }
          }
 
@@ -237,7 +237,7 @@ Coding Practice
              std::vector<std::vector<pixel> > matrix = { { { 0, 140, 255 }, { 0, 0, 0 }, { 15, 20, 255 } } };
              image image = { 1, 3, matrix };
              image.print_image();
-             cout << std::endl;
+             cout << '\n';
              image.swap_pixel(0, 0, 0, 2);
              image.print_image();
          }
@@ -287,16 +287,16 @@ Coding Practice
          :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          void pixel::print_pixel() {
-             cout << "("<< r << ", " << g << ", " << b << ")";
+             cout << '('<< r << ", " << g << ", " << b << ')';
          }
 
          void image::print_image() {
              for (std::size_t r = 0; r < height; ++r) {
              for (std::size_t c = 0; c < width; ++ c) {
                  matrix[r][c].print_pixel();
-                 cout << " ";
+                 cout << ' ';
              }
-             cout << std::endl;
+             cout << '\n';
              }
          }
 
@@ -374,7 +374,7 @@ Coding Practice
                                              { { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 } } };
              image image = { 4, 3, matrix };
              image.print_image();
-             cout << std::endl;
+             cout << '\n';
              image.flip_vertical();
              image.print_image();
          }
@@ -438,16 +438,16 @@ Coding Practice
          :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          void pixel::print_pixel() {
-             cout << "("<< r << ", " << g << ", " << b << ")";
+             cout << '('<< r << ", " << g << ", " << b << ')';
          }
 
          void image::print_image() {
              for (std::size_t r = 0; r < height; ++r) {
              for (std::size_t c = 0; c < width; ++ c) {
                  matrix[r][c].print_pixel();
-                 cout << " ";
+                 cout << ' ';
              }
-             cout << std::endl;
+             cout << '\n';
              }
          }
 
@@ -550,7 +550,7 @@ Coding Practice
                                              { { 89, 36, 65 }, { 75, 43, 26 }, { 40, 75, 70 } } };
              image image = { 3, 3, matrix };
              image.print_image();
-             cout << std::endl;
+             cout << '\n';
              image.clear_image();
              image.print_image();
          }

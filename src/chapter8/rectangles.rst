@@ -130,11 +130,11 @@ This statement is an example of a **nested structure**.
 
          int main() {
              using std::cout;
-             using std::endl;
+             
              rectangle box = { { 0.0, 0.0 }, 100.0, 200.0 };
              box.width += 50.0;
-             cout << box.height << endl;
-             cout << box.width << endl;
+             cout << box.height << '\n';
+             cout << box.width << '\n';
          }
 
    .. tb-tab:: Q2
@@ -146,7 +146,7 @@ This statement is an example of a **nested structure**.
 
          .. code-block:: cpp
 
-            Point temp = box.corner;
+            point temp = box.corner;
             double y = temp.y;
 
 

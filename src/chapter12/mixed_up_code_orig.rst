@@ -268,7 +268,7 @@ Mixed Up Code Practice
          std::cout << " by " << songs[max_index].artist << " with ";
       {{endgroup}}
       {{group}}
-         std::cout << songs[max_index].num_likes << " likes." << std::endl;
+         std::cout << songs[max_index].num_likes << " likes." << '\n';
       {{endgroup}}
       {{group}}
       }
@@ -436,7 +436,7 @@ Mixed Up Code Practice
 .. tb-parsons::
    :name: c192_mucp_12_9
 
-   Time to checkout! Write the list member function total_price
+   time to checkout! Write the list member function total_price
    which calculates and returns the total price of all the Products.
    Put the necessary blocks of code in the correct order.
 

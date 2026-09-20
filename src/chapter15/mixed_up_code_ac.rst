@@ -36,7 +36,7 @@ Answer the following **Activecode** questions to assess what you have learned in
          int main() {
              std::ifstream infile("locations.txt");
              if (infile.good() == false) {
-                 std::cout << "Unable to open the file." << std::endl;
+                 std::cout << "Unable to open the file." << '\n';
                  std::exit(1);
              }
          }
@@ -77,7 +77,7 @@ Answer the following **Activecode** questions to assess what you have learned in
              std::cin >> filename;
              std::ifstream infile(filename);
              if (infile.good() == false) {
-                 std::cout << "Unable to open the file." << std::endl;
+                 std::cout << "Unable to open the file." << '\n';
                  std::exit(1);
              }
          }
@@ -118,7 +118,7 @@ Answer the following **Activecode** questions to assess what you have learned in
          int main() {
             std::ofstream outfile("average.txt");
             if (outfile.good() == false) {
-               std::cout << "Unable to open the file." << std::endl;
+               std::cout << "Unable to open the file." << '\n';
                std::exit(1);
             }
             int sum = 0;
@@ -126,7 +126,7 @@ Answer the following **Activecode** questions to assess what you have learned in
             std::cout << "Enter five integers separated by spaces: ";
             if (!(std::cin >> n1 >> n2 >> n3 >> n4 >> n5)) return 1;
             sum = n1 + n2 + n3 + n4 + n5;
-            outfile << "The average is " << sum / 5.0 << std::endl;
+            outfile << "The average is " << sum / 5.0 << '\n';
          }
 
 .. tb-group::
@@ -168,7 +168,7 @@ Answer the following **Activecode** questions to assess what you have learned in
              std::ifstream infile("data.txt");
              std::ofstream outfile("summary.txt");
              if (infile.good() == false || outfile.good() == false) {
-                 std::cout << "Unable to open a file." << std::endl;
+                 std::cout << "Unable to open a file." << '\n';
                  std::exit(1);
              }
              std::size_t num_data = 1;
@@ -181,7 +181,7 @@ Answer the following **Activecode** questions to assess what you have learned in
                  if (value < min) { min = value; }
                  if (value > max) { max = value; }
              }
-             outfile << "Number of data: " << num_data << ", min: " << min << ", max: " << max << std::endl;
+             outfile << "Number of data: " << num_data << ", min: " << min << ", max: " << max << '\n';
          }
 
 .. tb-group::
@@ -238,7 +238,7 @@ Answer the following **Activecode** questions to assess what you have learned in
          int main() {
              std::ifstream infile("employee_data.txt");
              if (infile.good() == false) {
-                 std::cout << "Unable to open the file." << std::endl;
+                 std::cout << "Unable to open the file." << '\n';
                  std::exit(1);
              }
              std::vector<employee> data;
@@ -296,13 +296,13 @@ Answer the following **Activecode** questions to assess what you have learned in
              std::ifstream infile("UPPER.txt");
              std::ofstream outfile("lower.txt");
              if (infile.good() == false || outfile.good() == false) {
-                 std::cout << "Unable to open a file." << std::endl;
+                 std::cout << "Unable to open a file." << '\n';
                  std::exit(1);
              }
              std::string word;
              while (infile >> word) {
                  std::string upper = upper_to_lower(word);
-                 outfile << upper << " ";
+                 outfile << upper << ' ';
              }
          }
 
@@ -345,12 +345,12 @@ Answer the following **Activecode** questions to assess what you have learned in
              std::ifstream evens("evens.txt");
              std::ofstream outfile("numbers.txt");
              if (!odds.good() || !evens.good() || !outfile.good()) {
-                 std::cout << "Unable to open a file." << std::endl;
+                 std::cout << "Unable to open a file." << '\n';
                  std::exit(1);
              }
              int odd, even;
              while (odds >> odd && evens >> even) {
-                 outfile << odd << " " << even << " ";
+                 outfile << odd << ' ' << even << ' ';
              }
          }
 

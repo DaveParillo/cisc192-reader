@@ -38,7 +38,7 @@ In main you can call this function in the usual ways:
 
 ::
 
-      std::cout << is_digit (2) << std::endl;
+      std::cout << is_digit (2) << '\n';
       bool is_big = !is_digit (17);
 
 .. tb-code:: cpp
@@ -54,7 +54,7 @@ In main you can call this function in the usual ways:
    }
 
    int main () {
-     std::cout << is_digit (2) << std::endl;
+     std::cout << is_digit (2) << '\n';
      bool is_big = !is_digit (17);
      std::cout << is_big;
      return 0;

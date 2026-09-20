@@ -256,7 +256,7 @@ where they make sense.
                   new_amount / 2;
             {{endgroup}}
             {{group}}
-                  cout << new_amount << endl;
+                  cout << new_amount << '\n';
             {{endgroup}}
             {{distractor}}
             {{group}}

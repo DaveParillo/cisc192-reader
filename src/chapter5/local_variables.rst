@@ -75,16 +75,16 @@ to read.
           using namespace std;
 
           int main() {
-            cout << "Let's print the multiples of 2." << endl;
+            cout << "Let's print the multiples of 2." << '\n';
             int i = 1;
             while (i < 10) {
               int j = i * 2;
-              cout << i << ": " << j << endl;
+              cout << i << ": " << j << '\n';
               i++;
             }
             i = 10;
             j = 20;
-            cout << i << ": " << j << "!";
+            cout << i << ": " << j << '!';
           }
 
          - [x] Yes, we cannot output the value of j outside of the loop.
@@ -108,32 +108,32 @@ to read.
       .. tb-choice::
          :name: local_variables_2
 
-         Take a look at the code below. Is the ``i`` in ``printMultiples`` the same variable as the ``i`` in ``printMultTable``?
+         Take a look at the code below. Is the ``i`` in ``print_multiples`` the same variable as the ``i`` in ``print_mult_table``?
 
          .. code-block:: cpp
 
           #include <iostream>
           using namespace std;
 
-          void printMultiples (int n) {
+          void print_multiples (int n) {
             int i = 1;
             while (i <= 6) {
               cout << n * i << '\t';
               i = i + 1;
             }
-            cout << endl;
+            cout << '\n';
           }
 
-          void printMultTable() {
+          void print_mult_table() {
             int i = 1;
             while (i <= 6) {
-              printMultiples (i);
+              print_multiples (i);
               i = i + 1;
             }
           }
 
           int main() {
-            printMultTable();
+            print_mult_table();
           }
 
          - [ ] Yes
@@ -148,42 +148,42 @@ to read.
       .. tb-choice::
          :name: local_variables_3
 
-         Take a look at the code below. Is the variable ``j`` accessable  in the function ``printMultiples``?
+         Take a look at the code below. Is the variable ``j`` accessable  in the function ``print_multiples``?
 
          .. code-block:: cpp
 
              #include <iostream>
              using namespace std;
 
-             void printMultiples (int n) {
+             void print_multiples (int n) {
                int i = 1;
                while (i <= 6) {
                  cout << n * i << '\t';
                  i = i + 1;
                }
-               cout << endl;
+               cout << '\n';
              }
 
-             void printMultTable() {
+             void print_mult_table() {
                int j = 1;
                while (j <= 6) {
-                 printMultiples (j);
+                 print_multiples (j);
                  j = j + 1;
                }
              }
 
              int main() {
-               printMultTable();
+               print_mult_table();
              }
 
 
          - [ ] Yes
 
-           - The scope of ``j`` does not include ``printMultiples`` function.
+           - The scope of ``j`` does not include ``print_multiples`` function.
 
          - [x] No
 
-           + Correct! ``j`` is not accessable as the value is merely passes from one function to another. We cannot have a statement such as j++; in ``printMultiples`` as it is out of the scope of ``printMultTable``
+           + Correct! ``j`` is not accessable as the value is merely passes from one function to another. We cannot have a statement such as j++; in ``print_multiples`` as it is out of the scope of ``print_mult_table``
 
 
 

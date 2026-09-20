@@ -245,7 +245,7 @@ Answer the following **Activecode** questions to assess what you have learned in
              }
              cout << "The most liked song is " << songs[max_index].title;
              cout << " by " << songs[max_index].artist << " with ";
-             cout << songs[max_index].num_likes << " likes." << std::endl;
+             cout << songs[max_index].num_likes << " likes." << '\n';
          }
 
 .. tb-group::
@@ -391,7 +391,7 @@ Answer the following **Activecode** questions to assess what you have learned in
 
    .. tb-tab:: Question
 
-       Time to checkout! Write the list member function ``total_price``
+       time to checkout! Write the list member function ``total_price``
        which calculates and returns the total price of all the Products.
 
       .. tb-code:: cpp

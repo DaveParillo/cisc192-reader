@@ -82,7 +82,7 @@ of the circle.
 
    int main () {
        double circle_area = fred (1.0, 2.0, 4.0, 6.0);
-       cout << circle_area << endl;
+       cout << circle_area << '\n';
        return 0;
    }
 
@@ -116,14 +116,14 @@ of the circle.
       .. tb-choice::
          :name: fun_comp_2
 
-         It turns out you already have a function called ``printHelloName``
+         It turns out you already have a function called ``print_hello_name``
          so you must rename this one.  Which of the following could be the 
          new name for your function?
 
          ::
 
-             void printHelloName (string name) {
-               cout << "Hello " << name << "!" <<  endl;
+             void print_hello_name (string name) {
+               cout << "Hello " << name << '!' <<  '\n';
              }
 
          - [ ] print_hello_name
@@ -162,7 +162,7 @@ also shows that calling two or more different functions is valid.
 
    void print_population (int population) {
        std::cout << "The current population is " 
-                 << population << std::endl;
+                 << population << '\n';
    }
 
    void grow_4(int start_size){

@@ -13,7 +13,7 @@ correctly for any size vector.
 ::
 
      for (std::size_t i = 0; i < count.size(); ++i) {
-       cout << count[i] << endl;
+       cout << count[i] << '\n';
      }
 
 .. note::
@@ -52,7 +52,7 @@ Try running the active code below!
    int main() {
        std::vector<int> count = {1,2,3,4};
        for (std::size_t i = 0; i < count.size(); i++) {
-           std::cout << count[i] << std::endl;
+           std::cout << count[i] << '\n';
        }
    }
 

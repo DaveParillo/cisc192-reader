@@ -40,7 +40,7 @@ line is being created infinitely.
 
     void print_lines(int n) {
       if (n > 0) {
-        cout << endl;
+        cout << '\n';
         print_lines(n + 1);
       }
     }
@@ -87,16 +87,16 @@ line is being created infinitely.
              #include <iostream>
              using namespace std;
 
-             void isNegative(int n) {
+             void is_negative(int n) {
                if (n >= 0) {
                  cout << "Not Negative!";
-                 isNegative(n - 1);
+                 is_negative(n - 1);
                }
                cout << "Negative!";
              }
 
              int main() {
-               isNegative(-10);
+               is_negative(-10);
              }
 
 
@@ -118,7 +118,7 @@ line is being created infinitely.
       .. tb-choice::
          :name: unbounded_recursion_3
 
-         ``isNegative`` is defined exactly as it was above, but we have changed the
+         ``is_negative`` is defined exactly as it was above, but we have changed the
          call to it in ``main``.
          What will happen if we run the code with this input?
 
@@ -127,16 +127,16 @@ line is being created infinitely.
              #include <iostream>
              using namespace std;
 
-             void isNegative(int n) {
+             void is_negative(int n) {
                if (n >= 0) {
                  cout << "Not Negative!";
-                 isNegative(n - 1);
+                 is_negative(n - 1);
                }
                cout << "Negative!";
              }
 
              int main() {
-               isNegative(10);
+               is_negative(10);
              }
 
 
@@ -158,7 +158,7 @@ line is being created infinitely.
       .. tb-choice::
          :name: unbounded_recursion_4
 
-         The ``isNegative`` function has been **edited** as shown below.  What will 
+         The ``is_negative`` function has been **edited** as shown below.  What will 
          happen now when we run the code?
 
          ::
@@ -166,16 +166,16 @@ line is being created infinitely.
              #include <iostream>
              using namespace std;
 
-             void isNegative(int n) {
+             void is_negative(int n) {
                if (n >= 0) {
                  cout << "Not Negative!";
-                 isNegative(n + 1);
+                 is_negative(n + 1);
                }
                cout << "Negative!";
              }
 
              int main() {
-               isNegative(10);
+               is_negative(10);
              }
 
          - [ ] The function will print "Not Negative!"

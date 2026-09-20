@@ -93,7 +93,7 @@ Mixed Up Code Practice
             double set_radius (double r) {  #distractor
       {{endgroup}}
       {{group}}
-               if (r < 0) { std::cout << "Error! Cannot have a negative radius!" << std::endl; }
+               if (r < 0) { std::cout << "Error! Cannot have a negative radius!" << '\n'; }
       {{endgroup}}
       {{group}}
                else { radius = r; }
@@ -130,11 +130,11 @@ Mixed Up Code Practice
          c.radius = 2.4;  #distractor
       {{endgroup}}
       {{group}}
-         std::cout << "Radius: " << c.get_radius () << std::endl;
+         std::cout << "Radius: " << c.get_radius () << '\n';
       {{endgroup}}
       {{distractor}}
       {{group}}
-         std::cout << "Radius: " << c.radius << std::endl;  #distractor
+         std::cout << "Radius: " << c.radius << '\n';  #distractor
       {{endgroup}}
       {{distractor}}
       {{group}}
@@ -144,11 +144,11 @@ Mixed Up Code Practice
          s.set_radius (3.6);
       {{endgroup}}
       {{group}}
-         std::cout << "New radius: " << c.get_radius () << std::endl;
+         std::cout << "New radius: " << c.get_radius () << '\n';
       {{endgroup}}
       {{distractor}}
       {{group}}
-         std::cout << "New radius: " << c.radius << std::endl;  #distractor
+         std::cout << "New radius: " << c.radius << '\n';  #distractor
       {{endgroup}}
       {{group}}
       }
@@ -333,14 +333,14 @@ Mixed Up Code Practice
          r.calculate_sides();
       {{endgroup}}
       {{group}}
-         std::cout << "Length: " << r.length << ", Height: " << r.height << std::endl;
+         std::cout << "length: " << r.length << ", Height: " << r.height << '\n';
       {{endgroup}}
       {{distractor}}
       {{group}}
-         std::cout << "Length: " << r.get_length() << ", Height: " << r.get_height() << std::endl;  #distractor
+         std::cout << "length: " << r.get_length() << ", Height: " << r.get_height() << '\n';  #distractor
       {{endgroup}}
       {{group}}
-         std::cout << "Area: " << r.calculate_area() << std::endl;
+         std::cout << "Area: " << r.calculate_area() << '\n';
       {{endgroup}}
       {{group}}
          point p3(4.2, 10.7);
@@ -356,7 +356,7 @@ Mixed Up Code Practice
          r.calculate_sides();
       {{endgroup}}
       {{group}}
-         std::cout << "New area: " << r.calculate_area() << std::endl;
+         std::cout << "New area: " << r.calculate_area() << '\n';
       {{endgroup}}
       {{group}}
       }
@@ -450,15 +450,15 @@ Mixed Up Code Practice
          if (get_year() < 0) {
       {{endgroup}}
       {{group}}
-            std::cout << get_month() << "/" << get_day() << "/" << -get_year() << " BCE" << std::endl;
+            std::cout << get_month() << '/' << get_day() << '/' << -get_year() << " BCE" << '\n';
       {{endgroup}}
       {{distractor}}
       {{group}}
-            std::cout << month << "/" << day << "/" << year << " BCE" << std::endl;  #distractor
+            std::cout << month << '/' << day << '/' << year << " BCE" << '\n';  #distractor
       {{endgroup}}
       {{distractor}}
       {{group}}
-            std::cout << get_month() << "/" << get_day() << "/" << get_year() << " BCE" << std::endl;  #distractor
+            std::cout << get_month() << '/' << get_day() << '/' << get_year() << " BCE" << '\n';  #distractor
       {{endgroup}}
       {{group}}
          }
@@ -467,7 +467,7 @@ Mixed Up Code Practice
          else {
       {{endgroup}}
       {{group}}
-            std::cout << get_month() << "/" << get_day() << "/" << get_year() << " CE" << std::endl;
+            std::cout << get_month() << '/' << get_day() << '/' << get_year() << " CE" << '\n';
       {{endgroup}}
       {{group}}
          }

@@ -175,7 +175,7 @@ That's ok. You can't follow everyone's conventions.
                 }
                 double d = 9;
                 int z = x + y;
-                cout << "It's the year " << 2000 + z << "!";
+                cout << "It's the year " << 2000 + z << '!';
             }
 
 
@@ -204,7 +204,7 @@ That's ok. You can't follow everyone's conventions.
 
             Try again!
 
-         .. tb-miss:: text:'8'
+         .. tb-miss:: text:8
 
             Try again!
 
@@ -259,8 +259,8 @@ That's ok. You can't follow everyone's conventions.
 
             int main() {
                 char init1 = 'K';
-                string init2 = "T";
-                cout << init1 << "+" << init2 << '\n';
+                string init2 = "t";
+                cout << init1 << '+' << init2 << '\n';
                 string init3 = "C";
                 char init4 = 'J';
                 cout << init3 << '+' << init4 << '\n';
@@ -274,7 +274,7 @@ That's ok. You can't follow everyone's conventions.
 
             Correct.
 
-         .. tb-miss:: text:'K'
+         .. tb-miss:: text:K
 
             Try again!
 
@@ -282,7 +282,7 @@ That's ok. You can't follow everyone's conventions.
 
             Try again!
 
-         .. tb-miss:: text:"T"
+         .. tb-miss:: text:"t"
 
             Try again!
 
@@ -290,7 +290,7 @@ That's ok. You can't follow everyone's conventions.
 
             Correct.
 
-         .. tb-miss:: text:"+"
+         .. tb-miss:: text:+
 
             Try again!
 
@@ -310,7 +310,7 @@ That's ok. You can't follow everyone's conventions.
 
             Correct.
 
-         .. tb-miss:: text:'J'
+         .. tb-miss:: text:J
 
             Try again!
 
@@ -318,7 +318,7 @@ That's ok. You can't follow everyone's conventions.
 
             Try again!
 
-         .. tb-miss:: text:'+'
+         .. tb-miss:: text:+#2
 
             Try again!
 

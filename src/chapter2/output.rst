@@ -10,7 +10,7 @@ provide for hour and minute.
 
 .. tb-code:: cpp
    :name: output_vars_AC_1
-   :caption: Time Output
+   :caption: time Output
    :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
@@ -92,7 +92,7 @@ and the special end of line character. Very impressive!
                char b;
                a = 'z';
                b = '8';
-               cout << "a";
+               cout << 'a';
              }
 
 
@@ -236,7 +236,7 @@ and the special end of line character. Very impressive!
             {{endgroup}}
             {{distractor}}
             {{group}}
-             std::cout << "h";
+             std::cout << 'h';
             {{endgroup}}
             {{group}}
             }

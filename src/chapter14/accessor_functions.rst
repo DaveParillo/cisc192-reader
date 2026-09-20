@@ -84,7 +84,7 @@ accessor function.
 
    int main() {
      complex_number c1 (5.0, 3.5);
-     std::cout << c1.get_real() << ", " << c1.get_imag() << std::endl;
+     std::cout << c1.get_real() << ", " << c1.get_imag() << '\n';
    }
 
 Write your implementation of ``calculate_polar`` in the commented area of the active
@@ -168,7 +168,7 @@ functions works. If you get stuck, you can reveal the extra problem at the end f
    int main() {
      complex_number c1 (0.0, 1.0);
      // Magnitude should be 1, theta should be pi/2, or about 1.5708
-     std::cout << c1.get_mag() << ", " << c1.get_theta() << std::endl;
+     std::cout << c1.get_mag() << ", " << c1.get_theta() << '\n';
    }
 
 .. tb-reveal:: Reveal Problem

@@ -108,10 +108,10 @@ Coding Practice
                  void set_celsius (double c) { celsius = c; is_celsius = true; is_fahrenheit = false; }
                  void print_temp () {
                      if (is_fahrenheit) {
-                         std::cout << "It is " << get_fahrenheit() << " degrees Fahrenheit" << std::endl;
+                         std::cout << "It is " << get_fahrenheit() << " degrees Fahrenheit" << '\n';
                      }
                      else {
-                         std::cout << "It is " << get_celsius() << " degrees Celsius" << std::endl;
+                         std::cout << "It is " << get_celsius() << " degrees Celsius" << '\n';
                      }
                  }
          };
@@ -157,10 +157,10 @@ Coding Practice
                  void set_celsius (double c) { celsius = c; is_celsius = true; is_fahrenheit = false; }
                  void print_temp () {
                      if (is_fahrenheit) {
-                         std::cout << "It is " << get_fahrenheit() << " degrees Fahrenheit" << std::endl;
+                         std::cout << "It is " << get_fahrenheit() << " degrees Fahrenheit" << '\n';
                      }
                      else {
-                         std::cout << "It is " << get_celsius() << " degrees Celsius" << std::endl;
+                         std::cout << "It is " << get_celsius() << " degrees Celsius" << '\n';
                      }
                  }
          };
@@ -284,13 +284,13 @@ Coding Practice
          int main() {
              std::vector<int> data = { 2, 4, 1, 5, 2, 6 };
              my_vector my_vec(data);
-             std::cout << "The first element is " << my_vec.at(0) << std::endl;
+             std::cout << "The first element is " << my_vec.at(0) << '\n';
              my_vec.pop_back();
              my_vec.pop_back();
              my_vec.push_back(12);
-             std::cout << "The size of my_vec is " << my_vec.size() << std::endl;
+             std::cout << "The size of my_vec is " << my_vec.size() << '\n';
              std::cout << "The last three elements are " << my_vec.at(2) << ", "
-                  << my_vec.at(3) << ", and " << my_vec.at(4) << std::endl;
+                  << my_vec.at(3) << ", and " << my_vec.at(4) << '\n';
          }
 
    .. tb-tab:: Answer
@@ -338,13 +338,13 @@ Coding Practice
          int main() {
              std::vector<int> data = { 2, 4, 1, 5, 2, 6 };
              my_vector my_vec(data);
-             std::cout << "The first element is " << my_vec.at(0) << std::endl;
+             std::cout << "The first element is " << my_vec.at(0) << '\n';
              my_vec.pop_back();
              my_vec.pop_back();
              my_vec.push_back(12);
-             std::cout << "The size of my_vec is " << my_vec.size() << std::endl;
+             std::cout << "The size of my_vec is " << my_vec.size() << '\n';
              std::cout << "The last three elements are " << my_vec.at(2) << ", "
-                  << my_vec.at(3) << ", and " << my_vec.at(4) << std::endl;
+                  << my_vec.at(3) << ", and " << my_vec.at(4) << '\n';
          }
 
 .. admonition:: Practice selection
@@ -384,12 +384,12 @@ Coding Practice
          int my_vector::at(std::size_t index) { return elements.at(index); }
 
          void my_vector::print() {
-             std::cout << "[";
+             std::cout << '[';
              for (std::size_t i = 0; i < elements.size(); ++i) {
                  if (i != 0) std::cout << ", ";
                  std::cout << elements[i];
              }
-             std::cout << "]" << std::endl;
+             std::cout << ']' << '\n';
          }
 
 
@@ -430,7 +430,7 @@ Coding Practice
              my_vec.pop_front();
              my_vec.push_front(5);
              my_vec.push_front(10);
-             cout << "The new size is " << my_vec.size(); << std::endl;
+             cout << "The new size is " << my_vec.size(); << '\n';
              my_vec.print();
          }
 
@@ -461,12 +461,12 @@ Coding Practice
          int my_vector::at(std::size_t index) { return elements.at(index); }
 
          void my_vector::print() {
-             std::cout << "[";
+             std::cout << '[';
              for (std::size_t i = 0; i < elements.size(); ++i) {
                  if (i != 0) std::cout << ", ";
                  std::cout << elements[i];
              }
-             std::cout << "]" << std::endl;
+             std::cout << ']' << '\n';
          }
 
 
@@ -523,7 +523,7 @@ Coding Practice
              my_vec.pop_front();
              my_vec.push_front(5);
              my_vec.push_front(10);
-             cout << "The new size is " << my_vec.size() << std::endl;
+             cout << "The new size is " << my_vec.size() << '\n';
              my_vec.print();
          }
 

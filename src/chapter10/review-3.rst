@@ -48,9 +48,9 @@ Answer the following **Activecode** questions to assess what you have learned in
                #include <iostream>
                #include <string>
 
-               template <class T, class Compare = std::equal_to<T>>
-               void check (const std::string& name, const T& actual, 
-                           const T& expected, const Compare& op = Compare())
+               template <class t, class compare = std::equal_to<t>>
+               void check (const std::string& name, const t& actual, 
+                           const t& expected, const compare& op = compare())
                {
                  std::cout << std::left << std::setfill('.') 
                            << std::setw(50) << name 
@@ -102,9 +102,9 @@ Answer the following **Activecode** questions to assess what you have learned in
          #include <iomanip>
          #include <iostream>
          #include <string>
-         template <class T, class Compare = std::equal_to<T>>
-         void check (const std::string& name, const T& actual, 
-                     const T& expected, const Compare& op = Compare())
+         template <class t, class compare = std::equal_to<t>>
+         void check (const std::string& name, const t& actual, 
+                     const t& expected, const compare& op = compare())
          {
            std::cout << std::left << std::setfill('.') 
                      << std::setw(50) << name 
@@ -165,9 +165,9 @@ Answer the following **Activecode** questions to assess what you have learned in
                #include <iomanip>
                #include <iostream>
                #include <string>
-               template <class T, class Compare = std::equal_to<T>>
-               void check (const std::string& name, const T& actual, 
-                           const T& expected, const Compare& op = Compare())
+               template <class t, class compare = std::equal_to<t>>
+               void check (const std::string& name, const t& actual, 
+                           const t& expected, const compare& op = compare())
                {
                  std::cout << std::left << std::setfill('.') 
                            << std::setw(50) << name 
@@ -234,9 +234,9 @@ Answer the following **Activecode** questions to assess what you have learned in
                  #include <iomanip>
                  #include <iostream>
                  #include <string>
-                 template <class T, class Compare = std::equal_to<T>>
-                 void check (const std::string& name, const T& actual, 
-                             const T& expected, const Compare& op = Compare())
+                 template <class t, class compare = std::equal_to<t>>
+                 void check (const std::string& name, const t& actual, 
+                             const t& expected, const compare& op = compare())
                  {
                    std::cout << std::left << std::setfill('.') 
                              << std::setw(50) << name 
@@ -300,9 +300,9 @@ Answer the following **Activecode** questions to assess what you have learned in
                #include <iomanip>
                #include <iostream>
                #include <string>
-               template <class T, class Compare = std::equal_to<T>>
-               void check (const std::string& name, const T& actual, 
-                           const T& expected, const Compare& op = Compare())
+               template <class t, class compare = std::equal_to<t>>
+               void check (const std::string& name, const t& actual, 
+                           const t& expected, const compare& op = compare())
                {
                  std::cout << std::left << std::setfill('.') 
                            << std::setw(50) << name 
@@ -362,9 +362,9 @@ Answer the following **Activecode** questions to assess what you have learned in
          #include <iomanip>
          #include <iostream>
          #include <string>
-         template <class T, class Compare = std::equal_to<T>>
-         void check (const std::string& name, const T& actual, 
-                     const T& expected, const Compare& op = Compare())
+         template <class t, class compare = std::equal_to<t>>
+         void check (const std::string& name, const t& actual, 
+                     const t& expected, const compare& op = compare())
          {
            std::cout << std::left << std::setfill('.') 
                      << std::setw(50) << name 
@@ -533,7 +533,7 @@ Answer the following **Activecode** questions to assess what you have learned in
                :caption: Example vectors_a9q
                :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
 
-               // Student code goes here.
+               // student code goes here.
 
 
 
@@ -566,7 +566,7 @@ Answer the following **Activecode** questions to assess what you have learned in
 
    .. tb-tab:: Q9
 
-      Write the function ``hundyBundy`` that returns a count of all numbers
+      Write the function ``hundy_bundy`` that returns a count of all numbers
       in a vector that are divisible by 100.
 
       No tests are provided for this question.
@@ -635,5 +635,5 @@ Answer the following **Activecode** questions to assess what you have learned in
          :caption: Example vectors_a11
          :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
 
-         // Student code goes here.
+         // student code goes here.
 

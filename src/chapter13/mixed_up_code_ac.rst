@@ -37,13 +37,13 @@ Answer the following **Activecode** questions to assess what you have learned in
              day day = sun;
              switch (day > 5) {
                  case 0:
-                     std::cout << "It is not the weekend :(" << std::endl;
+                     std::cout << "It is not the weekend :(" << '\n';
                      break;
                  case 1:
-                     std::cout << "It is the weekend :)" << std::endl;
+                     std::cout << "It is the weekend :)" << '\n';
                      break;
                  default:
-                     std::cout << "Invalid input." << std::endl;
+                     std::cout << "Invalid input." << '\n';
                      break;
              }
          }
@@ -84,13 +84,13 @@ Answer the following **Activecode** questions to assess what you have learned in
              std::cin >> input;
              switch (input % 2) {
                  case 0:
-                     cout << input << " is even!" << std::endl;
+                     cout << input << " is even!" << '\n';
                      break;
                  case 1:
-                     cout << input << " is odd!" << std::endl;
+                     cout << input << " is odd!" << '\n';
                      break;
                  default:
-                     cout << "Invalid input." << std::endl;
+                     cout << "Invalid input." << '\n';
                      break;
              }
          }
@@ -133,12 +133,12 @@ Answer the following **Activecode** questions to assess what you have learned in
              std::cin >> input2;
              switch (input1 > input2) {
                  case 0:
-                     cout << "The maximum is " << input2 << std::endl;
+                     cout << "The maximum is " << input2 << '\n';
                      break;
                  case 1:
-                     cout << "The maximum is " << input1 << std::endl;
+                     cout << "The maximum is " << input1 << '\n';
                  default:
-                     cout << "Invalid input." << std::endl;
+                     cout << "Invalid input." << '\n';
                      break;
              }
          }
@@ -464,7 +464,7 @@ Answer the following **Activecode** questions to assess what you have learned in
 
          void dictionary::print_dictionary () {
              for (std::size_t i = 0; i < entries.size(); ++i) {
-                 std::cout << entries[i].word << std::endl;
+                 std::cout << entries[i].word << '\n';
              }
          }
 

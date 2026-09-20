@@ -64,7 +64,7 @@ user might look like. Feel free to change 42 to other values!
 
        // check and see if the input statement succeeded
        if (cin.good() == false) {
-           cout << "That was not an integer." << endl;
+           cout << "That was not an integer." << '\n';
            return -1;
        }
 
@@ -80,7 +80,7 @@ user might look like. Feel free to change 42 to other values!
 
      cout << "What is your name? ";
      cin >> name;
-     cout << name << endl;
+     cout << name << '\n';
 
 Unfortunately, this statement only takes the first word of input, and
 leaves the rest for the next input statement. So, if you run this
@@ -98,7 +98,7 @@ Instead, I use a function in the header ``string`` called ``getline``.
 
      cout << "What is your name? ";
      getline (cin, name);
-     cout << name << endl;
+     cout << name << '\n';
 
 The first argument to ``getline`` is ``cin``, which is where the input
 is coming from. The second argument is the name of the ``string`` where
@@ -173,7 +173,7 @@ Section `[parsing] <#parsing>`__.
               char name;
               cout << "What is your name? ";
               cin >> name;
-              cout << name << endl;
+              cout << name << '\n';
             }
 
          - [ ] ``John``
@@ -202,7 +202,7 @@ Section `[parsing] <#parsing>`__.
               string name;
               cout << "What is your name? ";
               cin >> name;
-              cout << name << endl;
+              cout << name << '\n';
             }
 
          - [x] ``John``
@@ -231,7 +231,7 @@ Section `[parsing] <#parsing>`__.
               string name;
               cout << "What is your name? ";
               getline (cin, name);
-              cout << name << endl;
+              cout << name << '\n';
             }
 
          - [ ] ``John``

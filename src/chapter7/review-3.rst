@@ -29,11 +29,11 @@ Coding Practice
                #include <iomanip>
                #include <iostream>
                #include <string>
-               template <class T, class Compare = std::equal_to<T>>
+               template <class t, class compare = std::equal_to<t>>
                void check (const std::string& name, 
-                           const T& actual, 
-                           const T& expected,
-                           const Compare& op = Compare())
+                           const t& actual, 
+                           const t& expected,
+                           const compare& op = compare())
                {
                  std::cout << std::left << std::setfill('.') 
                            << std::setw(50) << name 
@@ -86,11 +86,11 @@ Coding Practice
                #include <iomanip>
                #include <iostream>
                #include <string>
-               template <class T, class Compare = std::equal_to<T>>
+               template <class t, class compare = std::equal_to<t>>
                void check (const std::string& name, 
-                           const T& actual, 
-                           const T& expected,
-                           const Compare& op = Compare())
+                           const t& actual, 
+                           const t& expected,
+                           const compare& op = compare())
                {
                  std::cout << std::left << std::setfill('.') 
                            << std::setw(50) << name 
@@ -146,7 +146,7 @@ Coding Practice
       How much does Bubba love shrimp? Probably a lot. But how many times does the word "shrimp" come
       up in his monologue? Write a function ``count_word`` that counts the number of times a given word 
       appears in a given string. ``count_word`` should take two strings ``input`` and ``word`` as parameters and return an ``int``.
-      Feel free to use the ``stringToLower`` function we wrote earlier.
+      Feel free to use the ``string_to_lower`` function we wrote earlier.
 
       .. tb-code:: cpp
          :name: cp_7_AC_2q
@@ -158,7 +158,7 @@ Coding Practice
          #include <string>
 
 
-         void stringToLower (string &input) {
+         void string_to_lower (string &input) {
             int i = 0;
             while (i < input.size()) {
                 if (std::isalpha(input[i]) != 0 && std::isupper(input[i]) != 0) {
@@ -181,7 +181,7 @@ Coding Practice
                  "pepper shrimp, shrimp soup, shrimp stew, shrimp salad, shrimp and "
                  "potatoes, shrimp burger, shrimp sandwich. That- that's about "
                  "it.";
-             cout << "Your output: " << count_word(quote, "shrimp") << ", Correct output: 14" << endl; 
+             cout << "Your output: " << count_word(quote, "shrimp") << ", Correct output: 14" << '\n'; 
          }
 
    .. tb-tab:: Q3
@@ -318,8 +318,8 @@ Coding Practice
                    cout << "Decrypted string: " << decrypted << '\n';
 
                    // Uncomment and run the code below once your function works!
-                   // string secretMessage = "Pbatenghyngvbaf! Lbh'ir fhpprffshyyl vzcyrzragrq EBG13 naq qrpbqrq gur frperg zrffntr :)";
-                   // cout << rotate13 (secretMessage) << '\n';
+                   // string secret_message = "Pbatenghyngvbaf! Lbh'ir fhpprffshyyl vzcyrzragrq EBG13 naq qrpbqrq gur frperg zrffntr :)";
+                   // cout << rotate13 (secret_message) << '\n';
                }
 
 
@@ -384,11 +384,11 @@ Coding Practice
          #include <iomanip>
          #include <iostream>
          #include <string>
-         template <class T, class Compare = std::equal_to<T>>
+         template <class t, class compare = std::equal_to<t>>
          void check (const std::string& name, 
-                     const T& actual, 
-                     const T& expected,
-                     const Compare& op = Compare())
+                     const t& actual, 
+                     const t& expected,
+                     const compare& op = compare())
          {
            std::cout << std::left << std::setfill('.') 
                      << std::setw(50) << name 
@@ -503,11 +503,11 @@ Coding Practice
          #include <iomanip>
          #include <iostream>
          #include <string>
-         template <class T, class Compare = std::equal_to<T>>
+         template <class t, class compare = std::equal_to<t>>
          void check (const std::string& name, 
-                     const T& actual, 
-                     const T& expected,
-                     const Compare& op = Compare())
+                     const t& actual, 
+                     const t& expected,
+                     const compare& op = compare())
          {
            std::cout << std::left << std::setfill('.') 
                      << std::setw(50) << name 
@@ -562,11 +562,11 @@ Coding Practice
                #include <iomanip>
                #include <iostream>
                #include <string>
-               template <class T, class Compare = std::equal_to<T>>
+               template <class t, class compare = std::equal_to<t>>
                void check (const std::string& name, 
-                           const T& actual, 
-                           const T& expected,
-                           const Compare& op = Compare())
+                           const t& actual, 
+                           const t& expected,
+                           const compare& op = compare())
                {
                  std::cout << std::left << std::setfill('.') 
                            << std::setw(50) << name 
@@ -619,11 +619,11 @@ Coding Practice
                #include <iomanip>
                #include <iostream>
                #include <string>
-               template <class T, class Compare = std::equal_to<T>>
+               template <class t, class compare = std::equal_to<t>>
                void check (const std::string& name, 
-                           const T& actual, 
-                           const T& expected,
-                           const Compare& op = Compare())
+                           const t& actual, 
+                           const t& expected,
+                           const compare& op = compare())
                {
                  std::cout << std::left << std::setfill('.') 
                            << std::setw(50) << name 
@@ -692,11 +692,11 @@ Coding Practice
          #include <iomanip>
          #include <iostream>
          #include <string>
-         template <class T, class Compare = std::equal_to<T>>
+         template <class t, class compare = std::equal_to<t>>
          void check (const std::string& name, 
-                     const T& actual, 
-                     const T& expected,
-                     const Compare& op = Compare())
+                     const t& actual, 
+                     const t& expected,
+                     const compare& op = compare())
          {
            std::cout << std::left << std::setfill('.') 
                      << std::setw(50) << name 
@@ -713,11 +713,11 @@ Coding Practice
          int main() {
            using std::string;
            check("Snake to Camel case 1", snake_to_camel("turn_this_into_camel_case"), string("turnThisIntoCamelCase"));
-           check("Snake to Camel case 2", snake_to_camel("hello_world"), string("helloWorld"));
+           check("Snake to Camel case 2", snake_to_camel("hello_world"), string("hello_world"));
            check("Snake to Camel case 3", snake_to_camel("code"), string("code"));
 
            check("Camel to Snake case 1", camel_to_snake("turnThisIntoSnakeCase"), string("turn_this_into_snake_case"));
-           check("Camel to Snake case 2", camel_to_snake("helloWorld"), string("hello_world"));
+           check("Camel to Snake case 2", camel_to_snake("hello_world"), string("hello_world"));
            check("Camel to Snake case 3", camel_to_snake("code"), string("code"));
          }
 

@@ -90,7 +90,7 @@ An integer larger than ``int`` can represent is also rejected. The accumulated
 .. tb-choice::
    :name: question15_6_2
 
-   Which of the following strings will return "2020" when passed into ``convertToInt()``?
+   Which of the following strings will return "2020" when passed into ``convert_to_int()``?
 
    - [x] 2020
 
@@ -104,7 +104,7 @@ An integer larger than ``int`` can represent is also rejected. The accumulated
    - [x] 2OOO020OOOOO
 
      Correct! You have to look closely to see that some of these are 0's!
-   - [ ] we2love0parsing2numbersO!
+   - [ ] we2love0parsing2numbers_o!
 
      Incorrect! Although we do love parsing numbers, this is incorrect.
 

@@ -9,7 +9,7 @@ the arguments, and it has no side effects like modifying an argument or
 outputting something. The only result of calling a pure function is the
 return value.
 
-One example is the function ``after``, which compares two ``Time``\ s and
+One example is the function ``after``, which compares two ``time``\ s and
 returns a ``bool`` that indicates whether the first operand comes
 after the second.
 Take a look at the active code below.
@@ -21,12 +21,12 @@ Take a look at the active code below.
 
    #include <iostream>
 
-   struct Time {
+   struct time {
       int hour, minute;
       double second;
    };
 
-   bool after (Time& time1, Time& time2) {
+   bool after (time& time1, time& time2) {
       if (time1.hour > time2.hour) { return true; }
       if (time1.hour < time2.hour) { return false; }
       if (time1.minute > time2.minute) { return true; }
@@ -36,8 +36,8 @@ Take a look at the active code below.
    }
 
    int main () {
-      Time time = { 11, 59, 3.14159 };
-      Time time2 = { 1, 50, 3.14159 };
+      time time = { 11, 59, 3.14159 };
+      time time2 = { 1, 50, 3.14159 };
       std::cout << after(time, time2);
    }
 
@@ -46,27 +46,27 @@ that seem like the appropriate result for this function? If you were
 writing the documentation for this function, would you mention that case
 specifically?
 
-A second example is ``addTime``, which calculates the sum of two times.
+A second example is ``add_time``, which calculates the sum of two times.
 For example, if it is ``9:14:30``, and your bread maker takes 3 hours and
-35 minutes, you could use ``addTime`` to figure out when the bread will
+35 minutes, you could use ``add_time`` to figure out when the bread will
 be done.
 
 Here is a rough draft of this function that is not quite right:
 
 ::
 
-   Time addTime (Time& t1, Time& t2) {
-     Time sum;
+   time add_time (time& t1, time& t2) {
+     time sum;
      sum.hour = t1.hour + t2.hour;
      sum.minute = t1.minute + t2.minute;
      sum.second = t1.second + t2.second;
      return sum;
    }
 
-Take a look at the active code below. If ``currentTime``
-contains the current time and ``breadTime`` contains the amount of time
+Take a look at the active code below. If ``current_time``
+contains the current time and ``bread_time`` contains the amount of time
 it takes for your breadmaker to make bread, then you could use
-``addTime`` to figure out when the bread will be done.
+``add_time`` to figure out when the bread will be done.
 
 .. tb-code:: cpp
    :name: pure_function_AC_2
@@ -75,17 +75,17 @@ it takes for your breadmaker to make bread, then you could use
 
    #include <iostream>
 
-   struct Time {
+   struct time {
        int hour, minute;
        double second;
    };
 
-   void printTime (Time& t) {
+   void print_time (time& t) {
        std::cout << t.hour << ':' << t.minute << ':' << t.second << '\n';
    }
 
-   Time addTime (Time& t1, Time& t2) {
-       Time sum;
+   time add_time (time& t1, time& t2) {
+       time sum;
        sum.hour = t1.hour + t2.hour;
        sum.minute = t1.minute + t2.minute;
        sum.second = t1.second + t2.second;
@@ -93,10 +93,10 @@ it takes for your breadmaker to make bread, then you could use
    }
 
    int main() {
-       Time currentTime = { 9, 14, 30.0 };
-       Time breadTime = { 3, 35, 0.0 };
-       Time doneTime = addTime (currentTime, breadTime);
-       printTime (doneTime);
+       time current_time = { 9, 14, 30.0 };
+       time bread_time = { 3, 35, 0.0 };
+       time done_time = add_time (current_time, bread_time);
+       print_time (done_time);
    }
 
 The output of this program is ``12:49:30``, which is correct. On the
@@ -110,7 +110,7 @@ minutes into the hours column.
 
 Here's a second, corrected version of this function.
 
- The active code below is the corrected version of ``addTime``.
+ The active code below is the corrected version of ``add_time``.
 
 .. tb-code:: cpp
    :name: pure_function_AC_3
@@ -119,17 +119,17 @@ Here's a second, corrected version of this function.
 
    #include <iostream>
 
-   struct Time {
+   struct time {
        int hour, minute;
        double second;
    };
 
-   void printTime (Time& t) {
+   void print_time (time& t) {
        std::cout << t.hour << ':' << t.minute << ':' << t.second << '\n';
    }
 
-   Time addTime (Time& t1, Time& t2) {
-       Time sum;
+   time add_time (time& t1, time& t2) {
+       time sum;
        sum.hour = t1.hour + t2.hour;
        sum.minute = t1.minute + t2.minute;
        sum.second = t1.second + t2.second;
@@ -145,10 +145,10 @@ Here's a second, corrected version of this function.
    }
 
    int main() {
-       Time currentTime = { 9, 14, 30.0 };
-       Time breadTime = { 3, 35, 0.0 };
-       Time doneTime = addTime (currentTime, breadTime);
-       printTime (doneTime);
+       time current_time = { 9, 14, 30.0 };
+       time bread_time = { 3, 35, 0.0 };
+       time done_time = add_time (current_time, bread_time);
+       print_time (done_time);
    }
 
 Although it's correct, it's starting to get big. Later, I will suggest

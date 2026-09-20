@@ -82,7 +82,7 @@ If you get stuck, you can reveal the extra problem at the end for help.
        ranks[12] = "Queen";
        ranks[13] = "King";
 
-       cout << ranks[rank] << " of " << suits[suit] << std::endl;
+       cout << ranks[rank] << " of " << suits[suit] << '\n';
    }
 
    bool playing_card::is_greater (const playing_card& c2) const {
@@ -229,9 +229,9 @@ If you get stuck, you can reveal the extra problem at the end for help.
        club_cards.print();
        playing_card card1 (clubs, seven);
        playing_card card2 (diamonds, king);
-       cout << std::endl;
-       cout << "The Seven of Clubs is at index " << find_bisect (club_cards, card1) << std::endl;
-       cout << "The King of Diamonds is at index " << find_bisect (club_cards, card2) << std::endl;
+       cout << '\n';
+       cout << "The Seven of Clubs is at index " << find_bisect (club_cards, card1) << '\n';
+       cout << "The King of Diamonds is at index " << find_bisect (club_cards, card2) << '\n';
    }
 
 .. tb-reveal:: find_bisect Help

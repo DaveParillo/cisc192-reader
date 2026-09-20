@@ -35,9 +35,9 @@ Run and test your code!
                #include <iostream>
                #include <string>
 
-               template <class T, class Compare = std::equal_to<T>>
-               void check (const std::string& name, const T& actual, 
-                           const T& expected, const Compare& op = Compare())
+               template <class t, class compare = std::equal_to<t>>
+               void check (const std::string& name, const t& actual, 
+                           const t& expected, const compare& op = compare())
                {
                  std::cout << std::left << std::setfill('.') 
                            << std::setw(50) << name 
@@ -87,9 +87,9 @@ Run and test your code!
                 #include <iomanip>
                 #include <iostream>
                 #include <string>
-                template <class T, class Compare = std::equal_to<T>>
-                void check (const std::string& name, const T& actual, 
-                            const T& expected, const Compare& op = Compare())
+                template <class t, class compare = std::equal_to<t>>
+                void check (const std::string& name, const t& actual, 
+                            const t& expected, const compare& op = compare())
                 {
                   std::cout << std::left << std::setfill('.') 
                             << std::setw(50) << name 
@@ -138,8 +138,8 @@ Run and test your code!
    .. tb-tab:: Q2
 
       A binary number is one that is expressed in the base-2 numeral system.
-      Write a function ``convertToBinary`` which takes a ``decimal`` as
-      a parameter. ``convertToBinary`` takes the number in decimal, converts
+      Write a function ``convert_to_binary`` which takes a ``decimal`` as
+      a parameter. ``convert_to_binary`` takes the number in decimal, converts
       it into a binary number, and returns the binary number. 
       Run and test your code!
 
@@ -152,9 +152,9 @@ Run and test your code!
          #include <iomanip>
          #include <iostream>
          #include <string>
-         template <class T, class Compare = std::equal_to<T>>
-         void check (const std::string& name, const T& actual, 
-                     const T& expected, const Compare& op = Compare())
+         template <class t, class compare = std::equal_to<t>>
+         void check (const std::string& name, const t& actual, 
+                     const t& expected, const compare& op = compare())
          {
            std::cout << std::left << std::setfill('.') 
                      << std::setw(50) << name 
@@ -215,9 +215,9 @@ Run and test your code!
                #include <iomanip>
                #include <iostream>
                #include <string>
-               template <class T, class Compare = std::equal_to<T>>
-               void check (const std::string& name, const T& actual, 
-                           const T& expected, const Compare& op = Compare())
+               template <class t, class compare = std::equal_to<t>>
+               void check (const std::string& name, const t& actual, 
+                           const t& expected, const compare& op = compare())
                {
                  std::cout << std::left << std::setfill('.') 
                            << std::setw(50) << name 
@@ -267,9 +267,9 @@ Run and test your code!
                #include <iomanip>
                #include <iostream>
                #include <string>
-               template <class T, class Compare = std::equal_to<T>>
-               void check (const std::string& name, const T& actual, 
-                           const T& expected, const Compare& op = Compare())
+               template <class t, class compare = std::equal_to<t>>
+               void check (const std::string& name, const t& actual, 
+                           const t& expected, const compare& op = compare())
                {
                  std::cout << std::left << std::setfill('.') 
                            << std::setw(50) << name 
@@ -310,11 +310,11 @@ Run and test your code!
       meteorological start and end dates are based on the Gregorian
       calendar and is easier to remember. Spring starts on March 1, summer
       starts on June 1, fall starts on September 1, and winter starts on
-      December 1. Write a function called ``birthSeason``, which takes two
-      parameters, ``month`` and ``day``. ``birthSeason`` calculates which
+      December 1. Write a function called ``birth_season``, which takes two
+      parameters, ``month`` and ``day``. ``birth_season`` calculates which
       season the birthday falls in according to the meteorological start
       and returns a ``string`` with the correct season.  For example,
-      ``birthSeason (7, 5)`` returns "summer" since July 5 is in the
+      ``birth_season (7, 5)`` returns "summer" since July 5 is in the
       summer. 
 
       Run and test your code!
@@ -328,9 +328,9 @@ Run and test your code!
          #include <iomanip>
          #include <iostream>
          #include <string>
-         template <class T, class Compare = std::equal_to<T>>
-         void check (const std::string& name, const T& actual, 
-                     const std::string& expected, const Compare& op = Compare())
+         template <class t, class compare = std::equal_to<t>>
+         void check (const std::string& name, const t& actual, 
+                     const std::string& expected, const compare& op = compare())
          {
            std::cout << std::left << std::setfill('.') 
                      << std::setw(50) << name 
@@ -345,18 +345,18 @@ Run and test your code!
            exit(1);
          }
          int main() {
-           check("May 3rd",   birthSeason(5, 3), "spring");
-           check("March 1st", birthSeason(3, 1), "spring");
-           check("May 31st",  birthSeason(5, 31), "spring");
-           check("July 5th",   birthSeason(7, 5), "summer");
-           check("June 1st", birthSeason(6, 1), "summer");
-           check("August 31st",  birthSeason(8, 31), "summer");
-           check("November 24th",   birthSeason(11, 24), "fall");
-           check("September 1st", birthSeason(9, 1), "fall");
-           check("November 30th",  birthSeason(11, 30), "fall");
-           check("February 20th",   birthSeason(2, 20), "winter");
-           check("December 1st", birthSeason(12, 1), "winter");
-           check("February 28th",  birthSeason(2, 28), "winter");
+           check("May 3rd",   birth_season(5, 3), "spring");
+           check("March 1st", birth_season(3, 1), "spring");
+           check("May 31st",  birth_season(5, 31), "spring");
+           check("July 5th",   birth_season(7, 5), "summer");
+           check("June 1st", birth_season(6, 1), "summer");
+           check("August 31st",  birth_season(8, 31), "summer");
+           check("November 24th",   birth_season(11, 24), "fall");
+           check("September 1st", birth_season(9, 1), "fall");
+           check("November 30th",  birth_season(11, 30), "fall");
+           check("February 20th",   birth_season(2, 20), "winter");
+           check("December 1st", birth_season(12, 1), "winter");
+           check("February 28th",  birth_season(2, 28), "winter");
          }
 
 
@@ -367,7 +367,7 @@ Run and test your code!
          :run-after: cp_5_AC_4q-support
          :compileargs: ['-Wall', '-std=c++11']
 
-         string birthSeason (int month, int day) {
+         string birth_season (int month, int day) {
              // Write your implementation here.
          }
 
@@ -381,8 +381,8 @@ Run and test your code!
             Dog owners will know that figuring out a dog's age is more complicated
             than just counting age directly. Dogs mature faster than humans do,
             so to get a more accurate calculation of a dog's age, write the
-            ``dogToHumanYears`` function, which takes an ``dogAge`` as a parameter.
-            ``dogToHumanYears`` converts and returns the dog's age to human years. 
+            ``dog_to_human_years`` function, which takes an ``dog_age`` as a parameter.
+            ``dog_to_human_years`` converts and returns the dog's age to human years. 
             A one year old dog is 15 years old in human years; a two year old dog is 24 years old in human years. 
             Each year after the second year counts as 4 additional human years. For example, a dog that is
             3 years old is actually 28 years old in human years. Run and test your code!
@@ -396,11 +396,11 @@ Run and test your code!
                #include <iomanip>
                #include <iostream>
                #include <string>
-               template <class T, class Compare = std::equal_to<T>>
+               template <class t, class compare = std::equal_to<t>>
                void check (const std::string& name, 
-                           const T& actual, 
-                           const T& expected,
-                           const Compare& op = Compare())
+                           const t& actual, 
+                           const t& expected,
+                           const compare& op = compare())
                {
                  std::cout << std::left << std::setfill('.') 
                            << std::setw(50) << name 
@@ -415,14 +415,14 @@ Run and test your code!
                  exit(1);
                }
                int main() {
-                 check("age == 1", dogToHumanYears(1), 15);
-                 check("age == 2", dogToHumanYears(2), 24);
-                 check("age == 3", dogToHumanYears(3), 28);
-                 check("age == 5", dogToHumanYears(5), 36);
+                 check("age == 1", dog_to_human_years(1), 15);
+                 check("age == 2", dog_to_human_years(2), 24);
+                 check("age == 3", dog_to_human_years(3), 28);
+                 check("age == 5", dog_to_human_years(5), 36);
                  std::cout << "Simple error handling\n";
-                 check("age == 0", dogToHumanYears(0), 0);
-                 check("age == -1", dogToHumanYears(-1), 0);
-                 check("age == -99", dogToHumanYears(-99), 0);
+                 check("age == 0", dog_to_human_years(0), 0);
+                 check("age == -1", dog_to_human_years(-1), 0);
+                 check("age == -99", dog_to_human_years(-99), 0);
                }
 
 
@@ -433,7 +433,7 @@ Run and test your code!
                :run-after: cp_5_AC_5q-support
                :compileargs: ['-Wall', '-std=c++11']
 
-               int dogToHumanYears (int dogAge) {
+               int dog_to_human_years (int dog_age) {
                    // Write your implementation here.
                }
 
@@ -453,11 +453,11 @@ Run and test your code!
                #include <iomanip>
                #include <iostream>
                #include <string>
-               template <class T, class Compare = std::equal_to<T>>
+               template <class t, class compare = std::equal_to<t>>
                void check (const std::string& name, 
-                           const T& actual, 
-                           const T& expected,
-                           const Compare& op = Compare())
+                           const t& actual, 
+                           const t& expected,
+                           const compare& op = compare())
                {
                  std::cout << std::left << std::setfill('.') 
                            << std::setw(50) << name 
@@ -472,14 +472,14 @@ Run and test your code!
                  exit(1);
                }
                int main() {
-                 check("age == 1", dogToHumanYears(1), 15);
-                 check("age == 2", dogToHumanYears(2), 24);
-                 check("age == 3", dogToHumanYears(3), 28);
-                 check("age == 5", dogToHumanYears(5), 36);
+                 check("age == 1", dog_to_human_years(1), 15);
+                 check("age == 2", dog_to_human_years(2), 24);
+                 check("age == 3", dog_to_human_years(3), 28);
+                 check("age == 5", dog_to_human_years(5), 36);
                  std::cout << "Simple error handling\n";
-                 check("age == 0", dogToHumanYears(0), 0);
-                 check("age == -1", dogToHumanYears(-1), 0);
-                 check("age == -99", dogToHumanYears(-99), 0);
+                 check("age == 0", dog_to_human_years(0), 0);
+                 check("age == -1", dog_to_human_years(-1), 0);
+                 check("age == -99", dog_to_human_years(-99), 0);
                }
 
 
@@ -490,22 +490,22 @@ Run and test your code!
                :run-after: cp_5_AC_5a-support
                :compileargs: ['-Wall', '-std=c++11']
 
-               int dogToHumanYears (int dogAge) {
-                   if (dogAge < 1) {
+               int dog_to_human_years (int dog_age) {
+                   if (dog_age < 1) {
                        return 0;
                    }
-                   if (dogAge == 1) {
+                   if (dog_age == 1) {
                        return 15;
                    }
-                   return 24 + (dogAge - 2) * 4;
+                   return 24 + (dog_age - 2) * 4;
                }
 
    .. tb-tab:: Q6
 
       A number is a common factor of two other numbers if it divides evenly into both of the
       other numbers. For example, 2 is a common factor of 4 and 18, because 2 goes evenly into 
-      4 and 18. Write the function ``isCommonFactor``, which takes three parameters,
-      ``num1``, ``num2``, and ``factor``. ``isCommonFactor`` returns ``true`` if ``factor`` is a
+      4 and 18. Write the function ``is_common_factor``, which takes three parameters,
+      ``num1``, ``num2``, and ``factor``. ``is_common_factor`` returns ``true`` if ``factor`` is a
       factor of both ``num1`` and ``num2``, and returns ``false`` otherwise. Run and test your code!
 
       .. tb-code:: cpp
@@ -517,11 +517,11 @@ Run and test your code!
          #include <iomanip>
          #include <iostream>
          #include <string>
-         template <class T, class Compare = std::equal_to<T>>
+         template <class t, class compare = std::equal_to<t>>
          void check (const std::string& name, 
-                     const T& actual, 
-                     const T& expected,
-                     const Compare& op = Compare())
+                     const t& actual, 
+                     const t& expected,
+                     const compare& op = compare())
          {
            std::cout << std::left << std::setfill('.') 
                      << std::setw(50) << name 
@@ -536,10 +536,10 @@ Run and test your code!
            exit(1);
          }
          int main() {
-           check("4 is a factor of 24 and 8", isCommonFactor(24,8,4), true);
-           check("5 is a factor of 75 and 20", isCommonFactor(75,20,5), true);
-           check("11 is not a factor of 132 and 42", isCommonFactor(132,42,11), false);
-           check("3 is not a factor of 74 and 24", isCommonFactor(74,24,3), false);
+           check("4 is a factor of 24 and 8", is_common_factor(24,8,4), true);
+           check("5 is a factor of 75 and 20", is_common_factor(75,20,5), true);
+           check("11 is not a factor of 132 and 42", is_common_factor(132,42,11), false);
+           check("3 is not a factor of 74 and 24", is_common_factor(74,24,3), false);
          }
 
 
@@ -550,7 +550,7 @@ Run and test your code!
          :run-after: cp_5_AC_6q-support
          :compileargs: ['-Wall', '-std=c++11']
 
-         bool isCommonFactor (int num1, int num2, int factor) {
+         bool is_common_factor (int num1, int num2, int factor) {
              // Write your implementation here.
          }
 
@@ -564,7 +564,7 @@ Run and test your code!
             If a year is divisible by 4, then it is a leap year. However, if it is also divisible by 100,
             then it is not a leap year. However, if it is also divisible by 400, then it is a leap year.
             Thus, 2001 is not a leap year, 2004 is a leap year, 2100 is not a leap year, and 2000 is a leap year.
-            Write the boolean function ``isLeapYear``, which takes a ``year`` as a parameter and returns ``true`` 
+            Write the boolean function ``is_leap_year``, which takes a ``year`` as a parameter and returns ``true`` 
             if the year is a leap year and ``false`` otherwise. Run and test your code!
 
             .. tb-code:: cpp
@@ -576,12 +576,12 @@ Run and test your code!
                #include <iomanip>
                #include <iostream>
                #include <string>
-               template <class T, class Compare = std::equal_to<T>>
+               template <class t, class compare = std::equal_to<t>>
                void check (const std::string& name, 
-                           const T& actual, 
-                           const T& expected,
+                           const t& actual, 
+                           const t& expected,
                            std::string help,
-                           const Compare& op = Compare())
+                           const compare& op = compare())
                {
                  std::cout << std::left << std::setfill('.') 
                            << std::setw(50) << name 
@@ -597,16 +597,16 @@ Run and test your code!
                  exit(1);
                }
                int main() {
-                 check("is 2001?", isLeapYear(2001), false, "year is not divisible by 4");
-                 check("is 2005?", isLeapYear(2005), false, "year is not divisible by 4");
-                 check("is 1730?", isLeapYear(1730), false, "year is not divisible by 4");
-                 check("is 2004?", isLeapYear(2004), true, "year is divisible by 4");
-                 check("is 2020?", isLeapYear(2020), true, "year is divisible by 4");
-                 check("is 1776?", isLeapYear(1776), true, "year is divisible by 4");
-                 check("is 1900?", isLeapYear(1900), false, "year is divisible by 100");
-                 check("is 2100?", isLeapYear(2100), false, "year is divisible by 100");
-                 check("is 2000?", isLeapYear(2000), true, "year is divisible by 400");
-                 check("is 2400?", isLeapYear(2400), true, "year is divisible by 400");
+                 check("is 2001?", is_leap_year(2001), false, "year is not divisible by 4");
+                 check("is 2005?", is_leap_year(2005), false, "year is not divisible by 4");
+                 check("is 1730?", is_leap_year(1730), false, "year is not divisible by 4");
+                 check("is 2004?", is_leap_year(2004), true, "year is divisible by 4");
+                 check("is 2020?", is_leap_year(2020), true, "year is divisible by 4");
+                 check("is 1776?", is_leap_year(1776), true, "year is divisible by 4");
+                 check("is 1900?", is_leap_year(1900), false, "year is divisible by 100");
+                 check("is 2100?", is_leap_year(2100), false, "year is divisible by 100");
+                 check("is 2000?", is_leap_year(2000), true, "year is divisible by 400");
+                 check("is 2400?", is_leap_year(2400), true, "year is divisible by 400");
                }
 
 
@@ -617,7 +617,7 @@ Run and test your code!
                :run-after: cp_5_AC_7q-support
                :compileargs: ['-Wall', '-std=c++11']
 
-               bool isLeapYear (int year) {
+               bool is_leap_year (int year) {
                    // Write your implementation here.
                }
 
@@ -636,12 +636,12 @@ Run and test your code!
                #include <iomanip>
                #include <iostream>
                #include <string>
-               template <class T, class Compare = std::equal_to<T>>
+               template <class t, class compare = std::equal_to<t>>
                void check (const std::string& name, 
-                           const T& actual, 
-                           const T& expected,
+                           const t& actual, 
+                           const t& expected,
                            const std::string& help,
-                           const Compare& op = Compare())
+                           const compare& op = compare())
                {
                  std::cout << std::left << std::setfill('.') 
                            << std::setw(50) << name 
@@ -657,16 +657,16 @@ Run and test your code!
                  exit(1);
                }
                int main() {
-                 check("is 2001?", isLeapYear(2001), false, "year is not divisible by 4");
-                 check("is 2005?", isLeapYear(2005), false, "year is not divisible by 4");
-                 check("is 1730?", isLeapYear(1730), false, "year is not divisible by 4");
-                 check("is 2004?", isLeapYear(2004), true, "year is divisible by 4");
-                 check("is 2020?", isLeapYear(2020), true, "year is divisible by 4");
-                 check("is 1776?", isLeapYear(1776), true, "year is divisible by 4");
-                 check("is 1900?", isLeapYear(1900), false, "year is divisible by 100");
-                 check("is 2100?", isLeapYear(2100), false, "year is divisible by 100");
-                 check("is 2000?", isLeapYear(2000), true, "year is divisible by 400");
-                 check("is 2400?", isLeapYear(2400), true, "year is divisible by 400");
+                 check("is 2001?", is_leap_year(2001), false, "year is not divisible by 4");
+                 check("is 2005?", is_leap_year(2005), false, "year is not divisible by 4");
+                 check("is 1730?", is_leap_year(1730), false, "year is not divisible by 4");
+                 check("is 2004?", is_leap_year(2004), true, "year is divisible by 4");
+                 check("is 2020?", is_leap_year(2020), true, "year is divisible by 4");
+                 check("is 1776?", is_leap_year(1776), true, "year is divisible by 4");
+                 check("is 1900?", is_leap_year(1900), false, "year is divisible by 100");
+                 check("is 2100?", is_leap_year(2100), false, "year is divisible by 100");
+                 check("is 2000?", is_leap_year(2000), true, "year is divisible by 400");
+                 check("is 2400?", is_leap_year(2400), true, "year is divisible by 400");
                }
 
 
@@ -677,7 +677,7 @@ Run and test your code!
                :run-after: cp_5_AC_7a-support
                :compileargs: ['-Wall', '-std=c++11']
 
-               bool isLeapYear (int year) {
+               bool is_leap_year (int year) {
                    if (year % 400 == 0) {
                        return true;
                    }
@@ -696,7 +696,7 @@ Run and test your code!
       mushrooms as far as the eye can see. Most of these mushrooms
       can make delicious stews and dishes, but some of them are poisonous.
       Write the function ``poisonous``, which takes an ``char size``,
-      ``int numSpots``, and ``bool isRed`` as parameters. If a mushroom is large
+      ``int num_spots``, and ``bool is_red`` as parameters. If a mushroom is large
       ('L') and has fewer than 3 spots, it is poisonous. If a mushroom is small ('S')
       and is red, it is poisonous. If a mushroom has fewer than 3 spots or is not red,
       it is poisonous. Otherwise, it is not. ``poisonous`` should return ``true`` if 
@@ -711,12 +711,12 @@ Run and test your code!
          #include <iomanip>
          #include <iostream>
          #include <string>
-         template <class T, class Compare = std::equal_to<T>>
+         template <class t, class compare = std::equal_to<t>>
          void check (const std::string& name, 
-                     const T& actual, 
-                     const T& expected,
+                     const t& actual, 
+                     const t& expected,
                      const std::string& help,
-                     const Compare& op = Compare())
+                     const compare& op = compare())
          {
            std::cout << std::left << std::setfill('.') 
                      << std::setw(50) << name 
@@ -754,7 +754,7 @@ Run and test your code!
          :run-after: cp_5_AC_8q-support
          :compileargs: ['-Wall', '-std=c++11']
 
-         bool poisonous (char size, int numSpots, bool isRed) {
+         bool poisonous (char size, int num_spots, bool is_red) {
              // Write your implementation here.
          }
 
@@ -770,7 +770,7 @@ Run and test your code!
             except you add all the numbers instead of multiplying. For example, the 1st triangular
             number is 1, the 2nd is 3, the 3rd is 6, the 4th is 10, the 5th is 15, etc. You can imagine 
             rows of dots, where each successive row has one more dot, thus forming a triangular shape.
-            Write the ``triangularNum`` function, which takes an ``int n`` as a parameter and returns
+            Write the ``triangular_num`` function, which takes an ``int n`` as a parameter and returns
             the ``n``\th triangular number. Use recursion. Run and test your code!
 
             .. tb-code:: cpp
@@ -783,11 +783,11 @@ Run and test your code!
                #include <iomanip>
                #include <iostream>
                #include <string>
-               template <class T, class Compare = std::equal_to<T>>
+               template <class t, class compare = std::equal_to<t>>
                void check (const std::string& name, 
-                           const T& actual, 
-                           const T& expected,
-                           const Compare& op = Compare())
+                           const t& actual, 
+                           const t& expected,
+                           const compare& op = compare())
                {
                  std::cout << std::left << std::setfill('.') 
                            << std::setw(50) << name 
@@ -802,10 +802,10 @@ Run and test your code!
                  exit(1);
                }
                int main() {
-                 check("num == 1", triangularNum(1), 1);
-                 check("num == 3", triangularNum(3), 6);
-                 check("num == 6", triangularNum(6), 21);
-                 check("num == 17", triangularNum(17), 153);
+                 check("num == 1", triangular_num(1), 1);
+                 check("num == 3", triangular_num(3), 6);
+                 check("num == 6", triangular_num(6), 21);
+                 check("num == 17", triangular_num(17), 153);
                }
 
 
@@ -816,7 +816,7 @@ Run and test your code!
                :run-after: cp_5_AC_9q-support
                :compileargs: ['-Wall', '-std=c++11']
 
-               int triangularNum (int n) {
+               int triangular_num (int n) {
                    // Write your implementation here.
                }
 
@@ -825,7 +825,7 @@ Run and test your code!
             Below is one way to implement the program. We can use conditionals to 
             separate the base case and recursive cases. Our base case is when ``n``
             is 1, and in that case we return 1. Otherwise, we recursively
-            call ``triangularNum`` on ``n-1``.
+            call ``triangular_num`` on ``n-1``.
 
             .. tb-code:: cpp
                :name: cp_5_AC_9a-support
@@ -837,11 +837,11 @@ Run and test your code!
                #include <iomanip>
                #include <iostream>
                #include <string>
-               template <class T, class Compare = std::equal_to<T>>
+               template <class t, class compare = std::equal_to<t>>
                void check (const std::string& name, 
-                           const T& actual, 
-                           const T& expected,
-                           const Compare& op = Compare())
+                           const t& actual, 
+                           const t& expected,
+                           const compare& op = compare())
                {
                  std::cout << std::left << std::setfill('.') 
                            << std::setw(50) << name 
@@ -856,10 +856,10 @@ Run and test your code!
                  exit(1);
                }
                int main() {
-                 check("num == 1", triangularNum(1), 1);
-                 check("num == 3", triangularNum(3), 6);
-                 check("num == 6", triangularNum(6), 21);
-                 check("num == 17", triangularNum(17), 153);
+                 check("num == 1", triangular_num(1), 1);
+                 check("num == 3", triangular_num(3), 6);
+                 check("num == 6", triangular_num(6), 21);
+                 check("num == 17", triangular_num(17), 153);
                }
 
 
@@ -871,11 +871,11 @@ Run and test your code!
                :run-after: cp_5_AC_9a-support
                :compileargs: ['-Wall', '-std=c++11']
 
-               int triangularNum (int n) {
+               int triangular_num (int n) {
                    if (n == 1) {
                        return 1;
                    } 
-                   return n + triangularNum(n - 1);
+                   return n + triangular_num(n - 1);
                }
 
    .. tb-tab:: Q10
@@ -893,11 +893,11 @@ Run and test your code!
          #include <iomanip>
          #include <iostream>
          #include <string>
-         template <class T, class Compare = std::equal_to<T>>
+         template <class t, class compare = std::equal_to<t>>
          void check (const std::string& name, 
-                     const T& actual, 
-                     const T& expected,
-                     const Compare& op = Compare())
+                     const t& actual, 
+                     const t& expected,
+                     const compare& op = compare())
          {
            std::cout << std::left << std::setfill('.') 
                      << std::setw(50) << name 

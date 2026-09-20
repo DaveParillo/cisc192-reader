@@ -81,7 +81,7 @@ The active code below accesses the first character in string ``fruit``.
    int main() {
        string fruit = "orange";
        char letter = fruit[0];
-       cout << letter << endl;
+       cout << letter << '\n';
    }
 
 .. tb-group::
@@ -160,8 +160,8 @@ The active code below accesses the first character in string ``fruit``.
             int main() {
                 string fruit = "apple";
                 char letter = fruit[2];
-                cout << fruit << endl;
-                cout <<  fruit[4]  << endl;
+                cout << fruit << '\n';
+                cout <<  fruit[4]  << '\n';
             }
 
 
@@ -178,7 +178,7 @@ The active code below accesses the first character in string ``fruit``.
 
             Correct.
 
-         .. tb-miss:: text:cout << fruit << endl;
+         .. tb-miss:: text:cout << fruit << '\n';
 
             Remember, square brackets [] are used to access a character in a string.
 
@@ -206,10 +206,10 @@ The active code below accesses the first character in string ``fruit``.
             x = "It is warm outside"
             {{endgroup}}
             {{group}}
-            cout << x[7] << endl;
+            cout << x[7] << '\n';
             {{endgroup}}
             {{distractor}}
             {{group}}
-            cout << x[8] << endl; #distractor
+            cout << x[8] << '\n'; #distractor
             {{endgroup}}
 

@@ -8,7 +8,7 @@ string **concatenation**. To concatenate means to join the two operands
 end to end. 
 
 In the active code below, we use the ``+`` operator to concatenate ``fruit`` with
-``bakedGood`` to create ``dessert``.
+``baked_good`` to create ``dessert``.
 
 .. tb-code:: cpp
    :name: string_concatenation_AC_1
@@ -20,9 +20,9 @@ In the active code below, we use the ``+`` operator to concatenate ``fruit`` wit
 
    int main() {
        string fruit = "banana";
-       string bakedGood = " nut bread";
-       string dessert = fruit + bakedGood;
-       cout << dessert << endl;
+       string baked_good = " nut bread";
+       string dessert = fruit + baked_good;
+       cout << dessert << '\n';
    }
 
 The output of this program is ``banana nut bread``.
@@ -88,7 +88,7 @@ Try it for yourself and see what happens.
 
             string s = "C++";
             string t = "rocks";
-            cout << s + t << endl;
+            cout << s + t << '\n';
 
          - [ ] C++ rocks
 
@@ -127,11 +127,11 @@ Try it for yourself and see what happens.
                string adjective = "fun!";
             {{endgroup}}
             {{group}}
-               cout << language + action + adjective << endl;
+               cout << language + action + adjective << '\n';
             {{endgroup}}
             {{distractor}}
             {{group}}
-               cout << "language" + "action" + "adjective" << endl; #distractor
+               cout << "language" + "action" + "adjective" << '\n'; #distractor
             {{endgroup}}
             {{group}}
             }

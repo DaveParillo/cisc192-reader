@@ -72,7 +72,7 @@ demonstrates how to traverse the deck and output each card.
 .. tb-choice::
    :name: decks_2
 
-   Take a look at the state diagram above. When we create a deck of cards using ``Deck deck (52)``, 
+   Take a look at the state diagram above. When we create a deck of cards using ``deck deck (52)``, 
    what is true about our new deck?
 
    - [ ] The ranks and suits of the cards are initialized to the proper ranks and suits in a standard deck of cards.

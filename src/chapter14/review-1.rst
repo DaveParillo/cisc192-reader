@@ -29,31 +29,31 @@ Multiple Choice Exercises
 
    .. code-block:: cpp
 
-       struct Student {
+       struct student {
          private:
            int id;
          public:
            string name;
            int year;
 
-           int getID () { return id; }
-           int setID (int i) { id = i; }
-           void printInfo () { cout << "Student: " << name << ", " << year; }
+           int get_id () { return id; }
+           int set_id (int i) { id = i; }
+           void print_info () { cout << "student: " << name << ", " << year; }
        };
 
-   - [ ] ``Student ()``
+   - [ ] ``student ()``
 
-     - This is the ``Student`` constructor.
+     - This is the ``student`` constructor.
 
-   - [x] ``getID ()``
+   - [x] ``get_id ()``
 
      + This is a "getter" function, which is an accessor function since it accesses and returns a private member variable.
 
-   - [x] ``setID ()``
+   - [x] ``set_id ()``
 
      + This is a "setter" function, which is an accessor function since it accesses and modifies a private member variable.
 
-   - [ ] ``printInfo ()``
+   - [ ] ``print_info ()``
 
      - This function does not access a private member variable.
 
@@ -85,23 +85,23 @@ Multiple Choice Exercises
 
    .. code-block:: cpp
 
-       class rightTriangle {
+       class right_triangle {
          int base;
          int height;
 
          public:
-           int getBase () { return base; }
-           int getHeight () { return height; }
-           double calculateHypotenuse () { 
+           int get_base () { return base; }
+           int get_height () { return height; }
+           double calculate_hypotenuse () { 
              ???
            }
        };
 
-   - [x] ``return sqrt(pow(getBase, 2) + pow(getHeight, 2));``
+   - [x] ``return sqrt(pow(get_base, 2) + pow(get_height, 2));``
 
-     + We use the Pythagorean Theorem and ``getBase`` and ``getHeight`` to calculate and return the hypotenuse. 
+     + We use the Pythagorean Theorem and ``get_base`` and ``get_height`` to calculate and return the hypotenuse. 
 
-   - [ ] ``return pow(getBase, 2) + pow(getHeight, 2);``
+   - [ ] ``return pow(get_base, 2) + pow(get_height, 2);``
 
      - Use the Pythagorean Theorem!
 
@@ -109,9 +109,9 @@ Multiple Choice Exercises
 
      - Although this would work, we want to use accessor functions.
 
-   - [ ] ``cout << sqrt(pow(getBase, 2) + pow(getHeight, 2));``
+   - [ ] ``cout << sqrt(pow(get_base, 2) + pow(get_height, 2));``
 
-     - Take a look at the return type of ``calculateHypotenuse``.
+     - Take a look at the return type of ``calculate_hypotenuse``.
 
 .. tb-choice::
    :name: mce_14_5
@@ -120,43 +120,43 @@ Multiple Choice Exercises
 
    .. code-block:: cpp
 
-       class Plane {
-         int flightNumber;
+       class plane {
+         int flight_number;
          string model;
          string origin;
          string destination;
 
          public:
-           void printInfo () { 
-             cout << "Flight " << flightNumber << " (" << model 
-                  << ") from " << origin << " to " << destination << endl;
+           void print_info () { 
+             cout << "Flight " << flight_number << " (" << model 
+                  << ") from " << origin << " to " << destination << '\n';
            }
        };
 
        int main() {
-         Plane p;
-         p.flightNumber = 1846;
+         plane p;
+         p.flight_number = 1846;
          p.model = "Boeing 787";
          p.origin = "Los Angeles";
          p.destination = "Detroit";
-         p.printInfo ();
+         p.print_info ();
        }
 
-   - [ ] The ``Plane`` class is missing the keyword ``private:``.
+   - [ ] The ``plane`` class is missing the keyword ``private:``.
 
      - By default, ``class`` member variables are private, so we don't need to explicitly write ``private:``.
 
-   - [ ] ``printInfo`` cannot access ``Plane``\'s private member variables.
+   - [ ] ``print_info`` cannot access ``plane``\'s private member variables.
 
-     - The private member variables of ``Plane`` are only inaccessible to those outside of the class.
+     - The private member variables of ``plane`` are only inaccessible to those outside of the class.
 
    - [x] We cannot assign the private member variables of ``p`` in ``main``.
 
-     + We are trying to access the private member variables of a ``Plane`` object outside of the ``Plane`` class.
+     + We are trying to access the private member variables of a ``plane`` object outside of the ``plane`` class.
 
-   - [ ] We cannot call ``printInfo`` in ``main``.
+   - [ ] We cannot call ``print_info`` in ``main``.
 
-     - ``printInfo`` is a public member function, so we are allowed to call it in ``main``.
+     - ``print_info`` is a public member function, so we are allowed to call it in ``main``.
 
 .. tb-choice::
    :name: mce_14_6
@@ -165,7 +165,7 @@ Multiple Choice Exercises
 
    .. code-block:: cpp
 
-       class Temp {
+       class temp {
          private: 
            double fahrenheit;
            double celsius;
@@ -173,34 +173,34 @@ Multiple Choice Exercises
            bool is_celsius;
 
          public:
-           double getFahrenheit () { return fahrenheit; }
-           double getCelsius () { return celsius; }
-           void setFahrenheit (double f) { fahrenheit = f; is_fahrenheit = true; is_celsius = false; }
-           void setCelsius (double c) { celsius = c; is_celsius = true; is_fahrenheit = false; }
-           void printTemp () { 
+           double get_fahrenheit () { return fahrenheit; }
+           double get_celsius () { return celsius; }
+           void set_fahrenheit (double f) { fahrenheit = f; is_fahrenheit = true; is_celsius = false; }
+           void set_celsius (double c) { celsius = c; is_celsius = true; is_fahrenheit = false; }
+           void print_temp () { 
              if (is_fahrenheit) {
-               cout << "It is " << getFahrenheit() << " degrees Fahrenheit" << endl;
+               cout << "It is " << get_fahrenheit() << " degrees Fahrenheit" << '\n';
              }
              else {
-               cout << "It is " << getCelsius() << " degrees Celsius" << endl;
+               cout << "It is " << get_celsius() << " degrees Celsius" << '\n';
              }
            }
        };
 
        int main() {
-         Temp t;
-         t.setFahrenheit (125);
-         t.setCelsius (30);
-         t.printTemp ();
+         temp t;
+         t.set_fahrenheit (125);
+         t.set_celsius (30);
+         t.print_temp ();
        }
 
    - [ ] It is 125 degrees Fahrenheit
 
-     - Since we called ``setCelsius`` last, ``is_celsius`` is ``true`` and ``is_fahrenheit`` is false.
+     - Since we called ``set_celsius`` last, ``is_celsius`` is ``true`` and ``is_fahrenheit`` is false.
 
    - [ ] It is 30 degrees Fahrenheit
 
-     - Since we called ``setCelsius`` last, ``is_celsius`` is ``true`` and ``is_fahrenheit`` is false.
+     - Since we called ``set_celsius`` last, ``is_celsius`` is ``true`` and ``is_fahrenheit`` is false.
 
    - [ ] It is 125 degrees Celsius
 
@@ -208,7 +208,7 @@ Multiple Choice Exercises
 
    - [x] It is 30 degrees Celsius
 
-     + Since we called ``setCelsius`` last, we print out 30 degrees Celsius.
+     + Since we called ``set_celsius`` last, we print out 30 degrees Celsius.
 
 .. tb-choice::
    :name: mce_14_7
@@ -234,11 +234,11 @@ Multiple Choice Exercises
 .. tb-choice::
    :name: mce_14_8
 
-   Take a look at the class definition of ``Date``. What are some invariants we must maintain?
+   Take a look at the class definition of ``date``. What are some invariants we must maintain?
 
    .. code-block:: cpp
 
-       class Date {
+       class date {
          private:
            int day;
            int month;
@@ -247,7 +247,7 @@ Multiple Choice Exercises
            string message;
 
          public:
-           Date (int hour, int d, int m, int y, bool b, string m) { 
+           date (int hour, int d, int m, int y, bool b, string m) { 
              day = d;
              month = m;
              year = y;
@@ -279,7 +279,7 @@ Multiple Choice Exercises
 
    .. code-block:: cpp
 
-       int calculateRectangleArea (int length, int width) {
+       int calculate_rectangle_area (int length, int width) {
          return length * width;
        }
 
@@ -291,13 +291,13 @@ Multiple Choice Exercises
 
      - A rectangle can be wider than it is long. 
 
-   - [x] Postcondition: ``calculateRectangleArea`` must return a positive number.
+   - [x] Postcondition: ``calculate_rectangle_area`` must return a positive number.
 
      + Since ``length`` and ``width`` must both be positive, their product muast also be positive.
 
-   - [ ] Postcondition: ``calculateRectangleArea`` must return a nonnegative number.
+   - [ ] Postcondition: ``calculate_rectangle_area`` must return a nonnegative number.
 
-     - ``calculateRectangleArea`` cannot return 0, which is a nonnegative number but not a valid area.
+     - ``calculate_rectangle_area`` cannot return 0, which is a nonnegative number but not a valid area.
 
 .. tb-choice::
    :name: mce_14_10

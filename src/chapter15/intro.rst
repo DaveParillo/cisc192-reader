@@ -25,13 +25,13 @@ The standard library provides containers for different jobs:
    * - Container
      - Organization
      - A useful example
-   * - ``std::array<T, N>``
+   * - ``std::array<t, N>``
      - A fixed number of elements in sequence
      - The four suit names or seven daily readings
-   * - ``std::vector<T>``
+   * - ``std::vector<t>``
      - A sequence that can grow
      - Records read from a file of unknown length
-   * - ``std::set<T>``
+   * - ``std::set<t>``
      - Unique keys in sorted order
      - City names without duplicates
    * - ``std::map<Key, Value>``

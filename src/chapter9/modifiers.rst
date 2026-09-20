@@ -5,12 +5,12 @@ Of course, sometimes you *want* to modify one of the arguments.
 Functions that do are called modifiers.
 
 As an example of a modifier, consider ``increment``, which adds a given
-number of seconds to a ``Time`` object. Again, a rough draft of this
+number of seconds to a ``time`` object. Again, a rough draft of this
 function looks like:
 
 ::
 
-   void increment (Time& time, double secs) {
+   void increment (time& time, double secs) {
      time.second += secs;
 
      if (time.second >= 60.0) {
@@ -42,16 +42,16 @@ Run the active code to see what the output is!
 
    #include <iostream>
 
-   struct Time {
+   struct time {
        int hour, minute;
        double second;
    };
 
-   void printTime (Time& t) {
-       std::cout << t.hour << ":" << t.minute << ":" << t.second << std::endl;
+   void print_time (time& t) {
+       std::cout << t.hour << ':' << t.minute << ':' << t.second << '\n';
    }
 
-   void increment (Time& time, double secs) {
+   void increment (time& time, double secs) {
        time.second += secs;
        while (time.second >= 60.0) {
            time.second -= 60.0;
@@ -64,9 +64,9 @@ Run the active code to see what the output is!
    }
 
    int main() {
-       Time currentTime = { 9, 14, 30.0 };
-       increment(currentTime, 60.0);
-       printTime (currentTime);
+       time current_time = { 9, 14, 30.0 };
+       increment(current_time, 60.0);
+       print_time (current_time);
    }
 
 The solution above is correct, but not very efficient. Can you think of a
@@ -82,29 +82,29 @@ you can reveal the extra problem at the end for help.
    #include <iostream>
    using namespace std;
 
-   struct Time {
+   struct time {
        int hour, minute;
        double second;
    };
 
-   void printTime (Time& t) {
-       cout << t.hour << ":" << t.minute << ":" << t.second << endl;
+   void print_time (time& t) {
+       cout << t.hour << ':' << t.minute << ':' << t.second << '\n';
    }
 
-   void increment (Time& time, double secs) {
+   void increment (time& time, double secs) {
        // Write your implementation here.
    }
 
    int main() {
-       Time t1 = { 9, 14, 30.0 };
+       time t1 = { 9, 14, 30.0 };
        increment(t1, 60.0);
        // Should output "9:15:30"
-       printTime (t1);
+       print_time (t1);
 
-       Time t2 = { 9, 59, 45.0 };
+       time t2 = { 9, 59, 45.0 };
        increment(t2, 120.0);
        // Should output "10:1:45"
-       printTime (t2);
+       print_time (t2);
    }
 
 .. tb-reveal:: Reveal Problem
@@ -114,17 +114,17 @@ you can reveal the extra problem at the end for help.
       :name: modifiers_1
 
       Let's write the code for the ``increment`` function. ``increment`` 
-      adds a number of seconds to a ``Time`` object and updates the values
+      adds a number of seconds to a ``time`` object and updates the values
       of the object.
 
       .. code-block:: cpp
 
          {{group}}
-         void increment (Time& time, double secs) {
+         void increment (time& time, double secs) {
          {{endgroup}}
          {{distractor}}
          {{group}}
-         void increment (const Time& time, double secs) {
+         void increment (const time& time, double secs) {
          {{endgroup}}
          {{group}}
             int mins = (time.second + secs) / 60;

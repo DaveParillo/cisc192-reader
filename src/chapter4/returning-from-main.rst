@@ -108,7 +108,7 @@ but we are not going to deal with them for a little while.
                  cout << "Two! ";
                }
                if (x > 3) {
-                 cout << "Three!" << endl;
+                 cout << "Three!" << '\n';
                }
                return 0;
              }

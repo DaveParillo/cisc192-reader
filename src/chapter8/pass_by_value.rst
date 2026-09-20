@@ -95,17 +95,17 @@ function ``add_two`` changes the instance variables, but not on ``blank`` itself
 
          .. code-block:: cpp
 
-            int addTwo(int x) {
-              cout << x << " ";
+            int add_two(int x) {
+              cout << x << ' ';
               x = x + 2;
-              cout << x << " ";
+              cout << x << ' ';
               return x;
             }
 
             int main() {
               int num = 2;
-              addTwo(num);
-              cout << num << endl;
+              add_two(num);
+              cout << num << '\n';
             }
 
          - [ ] ``2 4``
@@ -134,20 +134,20 @@ function ``add_two`` changes the instance variables, but not on ``blank`` itself
 
          .. code-block:: cpp
 
-            struct Point {
+            struct point {
               int x, y;
             };
 
-            void timesTwo (Point p) {
+            void times_two (point p) {
               p.x = p.x * 2;
               p.y = p.y * 2;
-              cout << "(" << p.x << ", " << p.y << ")";
+              cout << '(' << p.x << ", " << p.y << ')';
             }
 
             int main() {
-              Point blank = { 3, 4 };
-              timesTwo (blank);
-              cout << ", " << blank.x << endl;
+              point blank = { 3, 4 };
+              times_two (blank);
+              cout << ", " << blank.x << '\n';
             }
 
          - [x] ``(6, 8), 3``

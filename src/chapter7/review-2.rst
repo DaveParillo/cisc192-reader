@@ -23,19 +23,19 @@ Mixed Up Code Practice
                string word = "irritating";
             {{endgroup}}
             {{group}}
-               cout << word[3] << endl;
+               cout << word[3] << '\n';
             {{endgroup}}
             {{distractor}}
             {{group}}
-               cout << irritating[3] << endl;  #distractor
+               cout << irritating[3] << '\n';  #distractor
             {{endgroup}}
             {{distractor}}
             {{group}}
-               cout << word.at(4) << endl;  #distractor
+               cout << word.at(4) << '\n';  #distractor
             {{endgroup}}
             {{distractor}}
             {{group}}
-               cout << word[4] << endl;  #distractor
+               cout << word[4] << '\n';  #distractor
             {{endgroup}}
             {{group}}
                while ((int)word.find('i') != -1) {
@@ -59,7 +59,7 @@ Mixed Up Code Practice
                }
             {{endgroup}}
             {{group}}
-               cout << word << endl;
+               cout << word << '\n';
             {{endgroup}}
             {{group}}
             }
@@ -119,21 +119,21 @@ Mixed Up Code Practice
          :name: mucp_7_3
          :no-indent:
 
-         Let's write the function longerString, which takes two parameters, 
+         Let's write the function longer_string, which takes two parameters, 
          first and second. If first has more letters
-         than second, longerString prints "first is longer than second",
-         and vice versa. If they have the same number of letters, longerString 
+         than second, longer_string prints "first is longer than second",
+         and vice versa. If they have the same number of letters, longer_string 
          prints "first and second are the same length".
          Put the necessary blocks in the correct order.
 
          .. code-block:: cpp
 
             {{group}}
-            void longerString (string first, string second) {
+            void longer_string (string first, string second) {
             {{endgroup}}
             {{distractor}}
             {{group}}
-            string longerString (string first, string second) {
+            string longer_string (string first, string second) {
             {{endgroup}}
             {{group}}
                if (first.length() > second.length()) {
@@ -143,7 +143,7 @@ Mixed Up Code Practice
                if (first.length() >= second.length()) {
             {{endgroup}}
             {{group}}
-                  cout << first << " is longer than " << second << endl;
+                  cout << first << " is longer than " << second << '\n';
             {{endgroup}}
             {{group}}
                }
@@ -152,11 +152,11 @@ Mixed Up Code Practice
                else if (first.length() < second.length()) {
             {{endgroup}}
             {{group}}
-                  cout << second << " is longer than " << first << endl;
+                  cout << second << " is longer than " << first << '\n';
             {{endgroup}}
             {{distractor}}
             {{group}}
-                  cout << second << " is longer than " << second << endl;
+                  cout << second << " is longer than " << second << '\n';
             {{endgroup}}
             {{group}}
                }
@@ -169,7 +169,7 @@ Mixed Up Code Practice
                else (first.length() == second.length()) {  #distractor
             {{endgroup}}
             {{group}}
-                  cout << first << " and " << second << " are the same length" << endl;
+                  cout << first << " and " << second << " are the same length" << '\n';
             {{endgroup}}
             {{group}}
                }
@@ -183,7 +183,7 @@ Mixed Up Code Practice
       .. tb-parsons::
          :name: mucp_7_4
 
-         Let's write the code for the cipherText function. cipherText 
+         Let's write the code for the cipher_text function. cipher_text 
          should be a void function that takes input as a parameter,
          increases the value of each character by 1 (i.e. "bad" turns into "cbe"),
          and prints the encrypted string.
@@ -191,11 +191,11 @@ Mixed Up Code Practice
          .. code-block:: cpp
 
             {{group}}
-            void cipherText (string input) {
+            void cipher_text (string input) {
             {{endgroup}}
             {{distractor}}
             {{group}}
-            string cipherText (string input) {
+            string cipher_text (string input) {
             {{endgroup}}
             {{group}}
                int i = 0;
@@ -313,7 +313,7 @@ Mixed Up Code Practice
                while (i < quote.length()) {  #distractor
             {{endgroup}}
             {{group}}
-               int first = quote.find("i");
+               int first = quote.find('i');
             {{endgroup}}
             {{group}}
                int index = find (quote, 'i', first + 1);
@@ -369,7 +369,7 @@ Mixed Up Code Practice
                   if (letter == 'U') {
             {{endgroup}}
             {{group}}
-                     cout << letter + suffix << endl;
+                     cout << letter + suffix << '\n';
             {{endgroup}}
             {{group}}
                   }
@@ -394,18 +394,18 @@ Mixed Up Code Practice
          :name: mucp_7_8
 
          On the strange planet of Noes, there's a law that prohibits the usage of the letter "e". 
-         As a result, they hired you to write a function called censorE that replaces all occurences
+         As a result, they hired you to write a function called censor_e that replaces all occurences
          of the letter "e" in a string with an asterisk and returns the censored string. For example, 
          if the input is "hello world", the function returns "h*llo world".
 
          .. code-block:: cpp
 
             {{group}}
-            string censorE (string input) {
+            string censor_e (string input) {
             {{endgroup}}
             {{distractor}}
             {{group}}
-            void censorE (string input) {
+            void censor_e (string input) {
             {{endgroup}}
             {{distractor}}
             {{group}}
@@ -459,18 +459,18 @@ Mixed Up Code Practice
          Your work for the planet of Noes impressed the nearby planets of Noas, Nois, Noos, and Nous.
          They want you to write different functions that censor out each planet's corresponding forbidden letter.
          However, your galaxy brain knows better than to write a different function for each planet.
-         Using generalization, write the function censorLetter which takes input and a char to censor 
-         as parameters and returns a censored string. For example, censorLetter("Bye world", 'o') returns the
+         Using generalization, write the function censor_letter which takes input and a char to censor 
+         as parameters and returns a censored string. For example, censor_letter("Bye world", 'o') returns the
          string "Bye w*rld".
 
          .. code-block:: cpp
 
             {{group}}
-            string censorLetter (string input, char letter) {
+            string censor_letter (string input, char letter) {
             {{endgroup}}
             {{distractor}}
             {{group}}
-            string censorLetter (string input) {
+            string censor_letter (string input) {
             {{endgroup}}
             {{group}}
                int i = 0;
@@ -517,7 +517,7 @@ Mixed Up Code Practice
       .. tb-parsons::
          :name: mucp_7_10
 
-         Let's write a function called alphaCombine which takes
+         Let's write a function called alpha_combine which takes
          two strings, first and second,
          and returns a string which concatenates first and second in
          alphabetical order. For example,
@@ -528,11 +528,11 @@ Mixed Up Code Practice
          .. code-block:: cpp
 
             {{group}}
-            string alphaCombine (string first, string second) {
+            string alpha_combine (string first, string second) {
             {{endgroup}}
             {{distractor}}
             {{group}}
-            void alphaCombine (string first, string second) {
+            void alpha_combine (string first, string second) {
             {{endgroup}}
             {{group}}
                if (first > second) {

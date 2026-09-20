@@ -19,13 +19,13 @@ assess what you have learned in this chapter.
              int x = 8;
 
              if (x % 3 == 2) {
-                 cout << "hey!" << endl;
+                 cout << "hey!" << '\n';
              } else if (x != 7) {
-                 cout << "hi!" << endl;
+                 cout << "hi!" << '\n';
              } else if (x % 2 == 0) {
-                 cout << "hello!" << endl;
+                 cout << "hello!" << '\n';
              } else {
-                 cout << "bye!" << endl;
+                 cout << "bye!" << '\n';
              }
 
          - [x] :: none
@@ -136,7 +136,7 @@ assess what you have learned in this chapter.
 
          ::
 
-             void practicingReturns (int a, int b) {
+             void practicing_returns (int a, int b) {
                  if (a < b) {
                      a += 2;
                  }
@@ -150,7 +150,7 @@ assess what you have learned in this chapter.
 
          ::
 
-             int x = practicingReturns(2, 3);
+             int x = practicing_returns(2, 3);
 
          - [ ] 5
 
@@ -179,7 +179,7 @@ assess what you have learned in this chapter.
 
          ::
 
-             void fortuneCookie (int a, bool b, char c) {
+             void fortune_cookie (int a, bool b, char c) {
                  if (c < 'm') {
                      if (a % 2 == 0) {
                          cout << "An alien of some sort will be appearing to you shortly.";
@@ -201,7 +201,7 @@ assess what you have learned in this chapter.
 
          ::
 
-             fortuneCookie(14, false, 'm');
+             fortune_cookie(14, false, 'm');
 
          - [ ] ``An alien of some sort will be appearing to you shortly.``
 
@@ -233,7 +233,7 @@ assess what you have learned in this chapter.
 
          ::
 
-             void fortuneCookie (int a, bool b, char c) {
+             void fortune_cookie (int a, bool b, char c) {
                  if (c < 'm') {
                      if (a % 2 == 0) {
                          cout << "An alien of some sort will be appearing to you shortly.";
@@ -255,7 +255,7 @@ assess what you have learned in this chapter.
 
          ::
 
-             fortuneCookie(22, true, 'b');
+             fortune_cookie(22, true, 'b');
 
          - [x] ``An alien of some sort will be appearing to you shortly.``
 
@@ -287,7 +287,7 @@ assess what you have learned in this chapter.
 
          ::
 
-             void theThing (int m, int n, bool b) {
+             void the_thing (int m, int n, bool b) {
                  if (b) {
                      if (m % 4 == 0) {
                          cout << m;
@@ -313,7 +313,7 @@ assess what you have learned in this chapter.
 
          ::
 
-             theThing (5, 10, false);
+             the_thing (5, 10, false);
 
          - [ ] 5
 
@@ -344,7 +344,7 @@ assess what you have learned in this chapter.
 
          ::
 
-             void theThing (int m, int n, bool b) {
+             void the_thing (int m, int n, bool b) {
                  if (b) {
                      if (m % 4 == 0) {
                          cout << m;
@@ -370,7 +370,7 @@ assess what you have learned in this chapter.
 
          ::
 
-             theThing (6, 4, true);
+             the_thing (6, 4, true);
 
          - [ ] 6
 

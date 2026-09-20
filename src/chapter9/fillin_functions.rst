@@ -1,16 +1,16 @@
 Fill-in functions
 -----------------
 
-Occasionally you will see functions like ``addTime`` written with a
+Occasionally you will see functions like ``add_time`` written with a
 different interface (different arguments and return values). 
-Instead of creating a new object every time ``addTime`` is called,
+Instead of creating a new object every time ``add_time`` is called,
 we could require the caller to provide an "empty" object where 
-``addTime`` can store the result.
-Compare the following with the previous version:
+``add_time`` can store the result.
+compare the following with the previous version:
 
 ::
 
-   void addTimeFill (const Time& t1, const Time& t2, Time& sum) {
+   void add_time_fill (const time& t1, const time& t2, time& sum) {
      sum.hour = t1.hour + t2.hour;
      sum.minute = t1.minute + t2.minute;
      sum.second = t1.second + t2.second;
@@ -31,7 +31,7 @@ This can be slightly more efficient, although it can be confusing enough
 to cause subtle errors. For the vast majority of programming, it is
 worth a spending a little run time to avoid a lot of debugging time.
 
-The active code below uses the fill-in version of the ``addTime`` function.
+The active code below uses the fill-in version of the ``add_time`` function.
 Feel free to modify the code!
 
 .. tb-code:: cpp
@@ -42,16 +42,16 @@ Feel free to modify the code!
    #include <iostream>
    using namespace std;
 
-   struct Time {
+   struct time {
        int hour, minute;
        double second;
    };
 
-   void printTime (Time& t) {
-      cout << t.hour << ":" << t.minute << ":" << t.second << endl;
+   void print_time (time& t) {
+      cout << t.hour << ':' << t.minute << ':' << t.second << '\n';
    }
 
-   void addTimeFill (const Time& t1, const Time& t2, Time& sum) {
+   void add_time_fill (const time& t1, const time& t2, time& sum) {
        sum.hour = t1.hour + t2.hour;
        sum.minute = t1.minute + t2.minute;
        sum.second = t1.second + t2.second;
@@ -67,12 +67,12 @@ Feel free to modify the code!
    }
 
    int main() {
-      Time currentTime = { 5, 45, 30.0 };
-      Time bakingTime = {0, 55, 0.0 };
-      Time finishedTime; // We'll store the sum in this variable
-      addTimeFill (currentTime, bakingTime, finishedTime);
+      time current_time = { 5, 45, 30.0 };
+      time baking_time = {0, 55, 0.0 };
+      time finished_time; // We'll store the sum in this variable
+      add_time_fill (current_time, baking_time, finished_time);
       cout << "The bread will be ready at ";
-      printTime (finishedTime);
+      print_time (finished_time);
    }
 
 .. tb-group::
@@ -87,7 +87,7 @@ Feel free to modify the code!
 
          .. code-block:: cpp
 
-            void addTimeFill (const Time& t1, const Time& t2, Time& sum) {
+            void add_time_fill (const time& t1, const time& t2, time& sum) {
               sum.hour = t1.hour + t2.hour;
               sum.minute = t1.minute + t2.minute;
               sum.second = t1.second + t2.second;
@@ -102,13 +102,13 @@ Feel free to modify the code!
               }
             }
 
-         - [ ] Time& t1
+         - [ ] time& t1
 
            Try again.
-         - [ ] Time& t2
+         - [ ] time& t2
 
            Try again.
-         - [x] Time& sum
+         - [x] time& sum
 
            Correct!
 

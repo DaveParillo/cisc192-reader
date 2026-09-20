@@ -23,7 +23,7 @@ For example, look at the following function:
       if (n == 0) {
         cout << "Blastoff!\n";
       } else {
-        cout << n << endl;
+        cout << n << '\n';
         countdown (n - 1);
       }
     }
@@ -94,7 +94,7 @@ As a second example, let’s look again at the functions ``new_line`` and
 ::
 
     void new_line () {
-      cout << endl;
+      cout << '\n';
     }
 
     void three_line () {
@@ -108,7 +108,7 @@ newlines, or 106. A better alternative would be
 
     void repeat_lines (int n) {
       if (n > 0) {
-        cout << endl;
+        cout << '\n';
         repeat_lines (n - 1);
       }
     }
@@ -154,8 +154,8 @@ You can have a little bit of fun with recursion.  Try this guessing game below!
        std::random_device r;
        std::default_random_engine eng(r());
 
-       int randomNumber = std::uniform_int_distribution<int> {1, 100} (eng);
-       guess_number(randomNumber);
+       int random_number = std::uniform_int_distribution<int> {1, 100} (eng);
+       guess_number(random_number);
    }
 
 
@@ -174,15 +174,15 @@ You can have a little bit of fun with recursion.  Try this guessing game below!
              #include <iostream>
              using namespace std;
 
-             void exclamationPoint(int n) {
+             void exclamation_point(int n) {
                if (n > 0) {
-                 cout << "!";
-                 exclamationPoint (n-1);
+                 cout << '!';
+                 exclamation_point (n-1);
                }
              }
 
              int main () {
-               exclamationPoint(3);
+               exclamation_point(3);
              }
 
 
@@ -194,7 +194,7 @@ You can have a little bit of fun with recursion.  Try this guessing game below!
            The function keeps executing while n is greater than 0.
          - [x] !!!
 
-           Correct! First, the program enters the if statement within exclamationPoint because n is greater than 0. Then the function prints a "!" and calls itself again, but with n-1, which is 2. This repeats until n is 0, which is when the program exits the function.
+           Correct! First, the program enters the if statement within exclamation_point because n is greater than 0. Then the function prints a "!" and calls itself again, but with n-1, which is 2. This repeats until n is 0, which is when the program exits the function.
          - [ ] !!!!
 
            The function keeps executing while n is greater than 0. Therefore, when n is 0, it will not print a "!"
@@ -211,15 +211,15 @@ You can have a little bit of fun with recursion.  Try this guessing game below!
              #include <iostream>
              using namespace std;
 
-             void exclamationPoint(int n) {
+             void exclamation_point(int n) {
                if (n > 0) {
-                 cout << "!";
-                 exclamationPoint (n-1);
+                 cout << '!';
+                 exclamation_point (n-1);
                }
              }
 
              int main () {
-               exclamationPoint(0);
+               exclamation_point(0);
              }
 
 

@@ -168,9 +168,9 @@ values. So the following is illegal: ``minute + 1 = hour;``.
          #include <iostream>
          #include <string>
 
-         template <class T, class Compare = std::equal_to<T>>
-         void check (const std::string& name, const T& actual, 
-                     const T& expected, const Compare& op = Compare())
+         template <class t, class compare = std::equal_to<t>>
+         void check (const std::string& name, const t& actual, 
+                     const t& expected, const compare& op = compare())
          {
            std::cout << std::left << std::setfill('.') 
                      << std::setw(50) << name 
@@ -219,9 +219,9 @@ values. So the following is illegal: ``minute + 1 = hour;``.
          #include <iostream>
          #include <string>
 
-         template <class T, class Compare = std::equal_to<T>>
-         void check (const std::string& name, const T& actual, 
-                     const T& expected, const Compare& op = Compare())
+         template <class t, class compare = std::equal_to<t>>
+         void check (const std::string& name, const t& actual, 
+                     const t& expected, const compare& op = compare())
          {
            std::cout << std::left << std::setfill('.') 
                      << std::setw(50) << name 

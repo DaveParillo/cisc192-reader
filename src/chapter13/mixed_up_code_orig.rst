@@ -27,7 +27,7 @@ Mixed Up Code Practice
             case 0:
       {{endgroup}}
       {{group}}
-               std::cout << "It is not the weekend :(" << std::endl;
+               std::cout << "It is not the weekend :(" << '\n';
       {{endgroup}}
       {{group}}
                break;
@@ -36,7 +36,7 @@ Mixed Up Code Practice
             case 1:
       {{endgroup}}
       {{group}}
-               std::cout << "It is the weekend :)" << std::endl;
+               std::cout << "It is the weekend :)" << '\n';
       {{endgroup}}
       {{group}}
                break;
@@ -45,7 +45,7 @@ Mixed Up Code Practice
             default:
       {{endgroup}}
       {{group}}
-               std::cout << "Invalid input." << std::endl;
+               std::cout << "Invalid input." << '\n';
       {{endgroup}}
       {{group}}
                break;
@@ -86,7 +86,7 @@ Mixed Up Code Practice
             case 0:
       {{endgroup}}
       {{group}}
-               std::cout << input << " is even!" << std::endl;
+               std::cout << input << " is even!" << '\n';
       {{endgroup}}
       {{group}}
                break;
@@ -95,7 +95,7 @@ Mixed Up Code Practice
             case 1:
       {{endgroup}}
       {{group}}
-               std::cout << input << " is odd!" << std::endl;
+               std::cout << input << " is odd!" << '\n';
       {{endgroup}}
       {{group}}
                break;
@@ -104,7 +104,7 @@ Mixed Up Code Practice
             default:
       {{endgroup}}
       {{group}}
-               std::cout << "Invalid input." << std::endl;
+               std::cout << "Invalid input." << '\n';
       {{endgroup}}
       {{group}}
                break;
@@ -154,7 +154,7 @@ Mixed Up Code Practice
             case 0:
       {{endgroup}}
       {{group}}
-               std::cout << "The maximum is " << input2 << std::endl;
+               std::cout << "The maximum is " << input2 << '\n';
       {{endgroup}}
       {{group}}
                break;
@@ -163,13 +163,13 @@ Mixed Up Code Practice
             case 1:
       {{endgroup}}
       {{group}}
-               std::cout << "The maximum is " << input1 << std::endl;
+               std::cout << "The maximum is " << input1 << '\n';
       {{endgroup}}
       {{group}}
             default:
       {{endgroup}}
       {{group}}
-               std::cout << "Invalid input." << std::endl;
+               std::cout << "Invalid input." << '\n';
       {{endgroup}}
       {{group}}
                break;
@@ -457,15 +457,15 @@ Mixed Up Code Practice
          for (std::size_t i = 0; i < entries.size(); ++i) {
       {{endgroup}}
       {{group}}
-            std::cout << entries[i].word << std::endl;
+            std::cout << entries[i].word << '\n';
       {{endgroup}}
       {{distractor}}
       {{group}}
-            std::cout << entries[i].entry << std::endl;  #distractor
+            std::cout << entries[i].entry << '\n';  #distractor
       {{endgroup}}
       {{distractor}}
       {{group}}
-            std::cout << entry.word << std::endl;  #distractor
+            std::cout << entry.word << '\n';  #distractor
       {{endgroup}}
       {{group}}
          }

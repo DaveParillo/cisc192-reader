@@ -44,7 +44,7 @@ the vector that should be searched (including both ``low`` and
 ``high``).
 
 #. To search the vector, choose an index between ``low`` and ``high``,
-   and call it ``mid``. Compare the card at ``mid`` to the card you are
+   and call it ``mid``. compare the card at ``mid`` to the card you are
    looking for.
 
 #. If you found it, stop.
@@ -95,7 +95,7 @@ With that line added, the function works correctly:
    std::ptrdiff_t find_bisect (const playing_card& card, const std::vector<playing_card>& deck,
                    std::ptrdiff_t low, std::ptrdiff_t high) {
 
-     std::cout << low << ", " << high << std::endl;
+     std::cout << low << ", " << high << '\n';
 
      if (high < low) return -1;
 
@@ -186,7 +186,7 @@ This time, it uses bisection search to locate the card.
       ranks[12] = "Queen";
       ranks[13] = "King";
 
-      std::cout << ranks[rank] << " of " << suits[suit] << std::endl;
+      std::cout << ranks[rank] << " of " << suits[suit] << '\n';
     }
 
    std::vector<playing_card> build_deck() {
@@ -217,7 +217,7 @@ This time, it uses bisection search to locate the card.
 
    std::ptrdiff_t find_bisect (const playing_card& card, const std::vector<playing_card>& deck, std::ptrdiff_t low, std::ptrdiff_t high) {
 
-      std::cout << low << ", " << high << std::endl;
+      std::cout << low << ", " << high << '\n';
 
       if (high < low) return -1;
 

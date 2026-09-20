@@ -18,10 +18,10 @@ Answer the following **Multiple Choice** questions to assess what you have learn
              int main() {
                int hour = 7;
                int min = 50;
-               cout << "The current time is: " << endl;
+               cout << "The current time is: " << '\n';
                cout << hour;
-               cout << ":";  cout << minute;
-               cout << endl;
+               cout << ':';  cout << minute;
+               cout << '\n';
                cout << "I'm going to be late for my 8am!";
              }
 
@@ -193,7 +193,7 @@ Answer the following **Multiple Choice** questions to assess what you have learn
               string mango = "mango";
               pineapple = apples;         
               cout << "My favorite fruit is ";
-              cout << pineapple << endl;
+              cout << pineapple << '\n';
               pineapple = mango;
             }
 
@@ -253,7 +253,7 @@ Answer the following **Multiple Choice** questions to assess what you have learn
 
            -   If the code runs, C++ doesn't automatically add spaces between consecutive strings.
 
-         - [ ] No error, ``Tomis friends withJerry``
+         - [ ] No error, ``Tomis friends with_jerry``
 
            -   If the error was corrected, this would be the output. Unfortunately, there is an error that prevents this line from executing.
 

@@ -81,11 +81,11 @@ are passed into the print_price function.
 
            -   ``totalcost`` needs a return type, and each parameter needs a data type.
 
-         - [ ] ``totalCost (double cost, double tax) {``
+         - [ ] ``total_cost (double cost, double tax) {``
 
            -   ``totalcost`` needs a return type.
 
-         - [x] ``void totalCost (double cost, double tax, double discount) {``
+         - [x] ``void total_cost (double cost, double tax, double discount) {``
 
            +   Correct!
 
@@ -99,9 +99,9 @@ are passed into the print_price function.
 
          ::
 
-             void multiplyTwo (int num, string name) {
+             void multiply_two (int num, string name) {
                int total = num * 2;
-               cout << "Hi " << name << ", your total is " << total << "!" << endl;
+               cout << "Hi " << name << ", your total is " << total << '!' << '\n';
              }
 
              int main() {
@@ -109,19 +109,19 @@ are passed into the print_price function.
                string phil = "Phil";
              }
 
-         - [ ] ``multiplyTwo (int x, string phil);``
+         - [ ] ``multiply_two (int x, string phil);``
 
            -   Data types are not needed when calling a function.
 
-         - [x] ``multiplyTwo (x, phil);``
+         - [x] ``multiply_two (x, phil);``
 
            +   Correct!
 
-         - [ ] ``void multiplyTwo (int num, string name) {``
+         - [ ] ``void multiply_two (int num, string name) {``
 
            -   This is the function definition.
 
-         - [ ] ``void multiplyTwo (int x, string phil);``
+         - [ ] ``void multiply_two (int x, string phil);``
 
            -   Data types are not needed when calling a function.
 

@@ -100,7 +100,7 @@ Coding Practice
          };
 
          void pixel::print_pixel() {
-             std::cout << "("<< r << ", " << g << ", " << b << ")";
+             std::cout << '('<< r << ", " << g << ", " << b << ')';
          }
 
          int main() {
@@ -132,16 +132,16 @@ Coding Practice
          :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          void pixel::print_pixel() {
-             cout << "("<< r << ", " << g << ", " << b << ")";
+             cout << '('<< r << ", " << g << ", " << b << ')';
          }
 
          void image::print_image() {
              for (std::size_t r = 0; r < height; ++r) {
              for (std::size_t c = 0; c < width; ++ c) {
                  matrix[r][c].print_pixel();
-                 cout << " ";
+                 cout << ' ';
              }
-             cout << std::endl;
+             cout << '\n';
              }
          }
 
@@ -181,7 +181,7 @@ Coding Practice
                                                { { 255, 60, 0 }, { 20, 25, 255 }, { 65, 55, 0 } } };
              image image = { 4, 3, matrix };
              image.print_image();
-             cout << std::endl;
+             cout << '\n';
              image.crop_image(2, 3, 1, 2);
              image.print_image();
          }
@@ -200,16 +200,16 @@ Coding Practice
          :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          void pixel::print_pixel() {
-             cout << "("<< r << ", " << g << ", " << b << ")";
+             cout << '('<< r << ", " << g << ", " << b << ')';
          }
 
          void image::print_image() {
              for (std::size_t r = 0; r < height; ++r) {
              for (std::size_t c = 0; c < width; ++ c) {
                  matrix[r][c].print_pixel();
-                 cout << " ";
+                 cout << ' ';
              }
-             cout << std::endl;
+             cout << '\n';
              }
          }
 
@@ -265,7 +265,7 @@ Coding Practice
                                                { { 255, 60, 0 }, { 20, 25, 255 }, { 65, 55, 0 } } };
              image image = { 4, 3, matrix };
              image.print_image();
-             cout << std::endl;
+             cout << '\n';
              image.crop_image(2, 3, 1, 2);
              image.print_image();
          }
@@ -295,16 +295,16 @@ Coding Practice
          :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          void pixel::print_pixel() {
-             cout << "("<< r << ", " << g << ", " << b << ")";
+             cout << '('<< r << ", " << g << ", " << b << ')';
          }
 
          void image::print_image() {
              for (std::size_t r = 0; r < height; ++r) {
              for (std::size_t c = 0; c < width; ++ c) {
                  matrix[r][c].print_pixel();
-                 cout << " ";
+                 cout << ' ';
              }
-             cout << std::endl;
+             cout << '\n';
              }
          }
 
@@ -370,7 +370,7 @@ Coding Practice
                                                { { 150, 150, 150 }, { 10, 10, 10 }, { 255, 255, 255 } } };
              image image = { 4, 3, matrix };
              image.print_image();
-             cout << std::endl;
+             cout << '\n';
              image.flip_horizontal();
              image.print_image();
          }
@@ -388,16 +388,16 @@ Coding Practice
          :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          void pixel::print_pixel() {
-             cout << "("<< r << ", " << g << ", " << b << ")";
+             cout << '('<< r << ", " << g << ", " << b << ')';
          }
 
          void image::print_image() {
              for (std::size_t r = 0; r < height; ++r) {
              for (std::size_t c = 0; c < width; ++ c) {
                  matrix[r][c].print_pixel();
-                 cout << " ";
+                 cout << ' ';
              }
-             cout << std::endl;
+             cout << '\n';
              }
          }
 
@@ -473,7 +473,7 @@ Coding Practice
                                                { { 150, 150, 150 }, { 10, 10, 10 }, { 255, 255, 255 } } };
              image image = { 4, 3, matrix };
              image.print_image();
-             cout << std::endl;
+             cout << '\n';
              image.flip_horizontal();
              image.print_image();
          }
@@ -501,16 +501,16 @@ Coding Practice
          :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          void pixel::print_pixel() {
-             cout << "("<< r << ", " << g << ", " << b << ")";
+             cout << '('<< r << ", " << g << ", " << b << ')';
          }
 
          void image::print_image() {
              for (std::size_t r = 0; r < height; ++r) {
              for (std::size_t c = 0; c < width; ++ c) {
                  matrix[r][c].print_pixel();
-                 cout << " ";
+                 cout << ' ';
              }
-             cout << std::endl;
+             cout << '\n';
              }
          }
 
@@ -603,7 +603,7 @@ Coding Practice
                                                { { 150, 150, 150 }, { 241, 42, 64 }, { 1, 4, 255 }, { 16, 73, 84 } } };
              image image = { 5, 4, matrix };
              image.print_image();
-             cout << std::endl;
+             cout << '\n';
              pixel p = { 0, 0, 0 };
              image.create_border(p);
              image.print_image();
@@ -621,16 +621,16 @@ Coding Practice
          :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          void pixel::print_pixel() {
-             cout << "("<< r << ", " << g << ", " << b << ")";
+             cout << '('<< r << ", " << g << ", " << b << ')';
          }
 
          void image::print_image() {
              for (std::size_t r = 0; r < height; ++r) {
              for (std::size_t c = 0; c < width; ++ c) {
                  matrix[r][c].print_pixel();
-                 cout << " ";
+                 cout << ' ';
              }
-             cout << std::endl;
+             cout << '\n';
              }
          }
 
@@ -733,7 +733,7 @@ Coding Practice
                                                { { 150, 150, 150 }, { 241, 42, 64 }, { 1, 4, 255 }, { 16, 73, 84 } } };
              image image = { 5, 4, matrix };
              image.print_image();
-             cout << std::endl;
+             cout << '\n';
              pixel p = { 0, 0, 0 };
              image.create_border(p);
              image.print_image();

@@ -196,15 +196,15 @@ In each case, the code is (mostly) the same, but the results may be different.
 
       Try changing ``char p`` to ``auto p`` and see what happens.
 
-To summarize, casting to some type ``T`` ordered from worst to best:
+To summarize, casting to some type ``t`` ordered from worst to best:
 
 C-style cast
-   ``new_value = (T) value;``
+   ``new_value = (t) value;``
 
    Never protects against inappropriate conversions. Avoid.
 
 Functional cast
-   ``new_value = T (value);``
+   ``new_value = t (value);``
 
    Protects against inappropriate conversions.
    Allows narrowing conversions.
@@ -213,7 +213,7 @@ Functional cast
    such as ``long long`` and ``unsigned int``.
 
 Named cast
-   ``new_value = static_cast<T> (value);``
+   ``new_value = static_cast<t> (value);``
 
    Protects against inappropriate conversions.
    Allows narrowing conversions.
@@ -222,12 +222,12 @@ Named cast
    such as ``long long`` and ``unsigned int``.
 
 Explicit type construction
-   ``new_value = T {value};``
+   ``new_value = t {value};``
 
-   The ``T{value}`` construction syntax makes it explicit that construction is desired.
-   The ``T{value}`` construction syntax doesn't allow narrowing.
+   The ``t{value}`` construction syntax makes it explicit that construction is desired.
+   The ``t{value}`` construction syntax doesn't allow narrowing.
    It is the **only safe and general expression** for constructing a value of 
-   type ``T`` from a value or an expression. 
+   type ``t`` from a value or an expression. 
 
 
 .. tb-group::
@@ -247,11 +247,11 @@ Explicit type construction
 
              int main () {
                double temp = 7.99999999;
-               int roundedTemp = int (temp);
-               cout << roundedTemp;
+               int rounded_temp = int (temp);
+               cout << rounded_temp;
              }
 
-         What is the value of roundedTemp?
+         What is the value of rounded_temp?
 
 
          - [ ] temp
@@ -331,7 +331,7 @@ Explicit type construction
      - Principle P.4 :core:`Ideally, a program should be statically type safe <#p4-ideally-a-program-should-be-statically-type-safe>`
      - Guideline ES.48 :core:`Avoid casts <#es48-avoid-casts>`
      - Guideline ES.46 :core:`Avoid narrowing conversions <#es46-avoid-lossy-narrowing-truncating-arithmetic-conversions>`
-     - Guideline ES.64 :core:`Use the T{e} notation for construction <#es64-use-the-tenotation-for-construction>`
+     - Guideline ES.64 :core:`Use the t{e} notation for construction <#es64-use-the-tenotation-for-construction>`
 
    - :lang:`Explicit casting <explicit_cast>` from cppreference.com
 

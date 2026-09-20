@@ -20,7 +20,7 @@ We would call this function in the usual way:
      int i = 7;
      int j = 9;
      swap (i, j);
-     cout << i << j << endl;
+     cout << i << j << '\n';
 
 The output of this program is ``97``. Draw a stack diagram for this
 program to convince yourself this is true. If the parameters ``x`` and

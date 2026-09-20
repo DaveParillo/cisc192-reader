@@ -93,11 +93,11 @@ free to modify the code and experiment around!
    }
 
    void complex_number::print_cartesian () {
-     std::cout << get_real() << " + " << get_imag() << "i" << std::endl;
+     std::cout << get_real() << " + " << get_imag() << 'i' << '\n';
    }
 
    void complex_number::print_polar () {
-     std::cout << get_mag() << " e^ " << get_theta() << "i" << std::endl;
+     std::cout << get_mag() << " e^ " << get_theta() << 'i' << '\n';
    }
 
    complex_number add (complex_number& a, complex_number& b) {
@@ -208,12 +208,12 @@ free to modify the code and experiment around!
    .. code-block:: cpp
 
       int main() {
-        Complex c1 (2.5, 1.3);
-        Complex c2 (3.9, 4.4);
-        Complex c3 (9.5, 7.6);
-        Complex sum = add (c1, c2);
-        Complex diff = subtract(c3, sum);
-        diff.printCartesian();
+        complex c1 (2.5, 1.3);
+        complex c2 (3.9, 4.4);
+        complex c3 (9.5, 7.6);
+        complex sum = add (c1, c2);
+        complex diff = subtract(c3, sum);
+        diff.print_cartesian();
       }
 
    - [ ] 3.1i + 1.9i

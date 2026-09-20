@@ -15,7 +15,7 @@ expression at the same time. For example, you might see something like:
 
 ::
 
-     cout << i++ << endl;
+     cout << i++ << '\n';
 
 Looking at this, it is not clear whether the increment will take effect
 before or after the value is displayed. Because expressions like this
@@ -40,7 +40,7 @@ with ``cout`` statements can be confusing.
    int main() {
       int x = 0;
       // We incremented x, so it should print out 1 now right?
-      cout << x++ << endl; // Weird, x is still 0?
+      cout << x++ << '\n'; // Weird, x is still 0?
    }
 
 If you're curious about this, feel free to search up about prefix and postfix 
@@ -116,7 +116,7 @@ warn you. The effect of this statement is to leave the value of
                 count = count + 1;
                 index++;
                 count = count++;
-                cout << x++ << endl;
+                cout << x++ << '\n';
                 count--; 
             }
 
@@ -137,7 +137,7 @@ warn you. The effect of this statement is to leave the value of
 
             Correct.
 
-         .. tb-hit:: text:cout << x++ << endl;
+         .. tb-hit:: text:cout << x++ << '\n';
 
             Correct.
 
@@ -158,7 +158,7 @@ warn you. The effect of this statement is to leave the value of
             int x = -5;
             while (x < 0) {
               x++;
-              cout << x << " ";
+              cout << x << ' ';
             }
 
          - [ ] 5 4 3 2 1
@@ -191,7 +191,7 @@ warn you. The effect of this statement is to leave the value of
             while (x <= 10) {
             {{endgroup}}
             {{group}}
-                cout << "Number " << x << endl;
+                cout << "Number " << x << '\n';
             {{endgroup}}
             {{distractor}}
             {{group}}

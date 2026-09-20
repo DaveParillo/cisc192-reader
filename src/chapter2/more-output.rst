@@ -17,8 +17,8 @@ using ``endl``.
 
    // main: generate some simple output
    int main () {
-       std::cout << "Hello, world." << std::endl;     // output one line
-       std::cout << "How are you?" << std::endl;      // output another
+       std::cout << "Hello, world." << '\n';     // output one line
+       std::cout << "How are you?" << '\n';      // output another
    }
 
 
@@ -53,7 +53,7 @@ This program prints two different statements on the same line.
 
    int main () {
        std::cout << "Goodbye, ";
-       std::cout << "cruel world!" << std::endl;
+       std::cout << "cruel world!" << '\n';
    }
 
 
@@ -79,7 +79,7 @@ components of each line.  This is a matter of personal preference.
 
    int main () {
        std::cout<<"Goodbye, ";
-       std::cout<<"cruel world!"<<std::endl;
+       std::cout<<"cruel world!"<<'\n';
    }
 
 
@@ -99,7 +99,7 @@ hard to follow.
    :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
-   int main(){std::cout<<"Goodbye, ";std::cout<<"cruel world!"<<std::endl;}
+   int main(){std::cout<<"Goodbye, ";std::cout<<"cruel world!"<<'\n';}
 
 
 That would work, too, although you have probably noticed that the
@@ -210,30 +210,30 @@ as part of a string:
              cout << "Snap!";
             {{endgroup}}
             {{group}}
-             cout << endl; // first endl
+             cout << '\n'; // first '\n'
             {{endgroup}}
             {{group}}
-             cout << endl; // second endl
+             cout << '\n'; // second '\n'
             {{endgroup}}
             {{group}}
-             cout << "Crakcle!" << endl;
+             cout << "Crakcle!" << '\n';
             {{endgroup}}
             {{group}}
-             cout << endl; // third endl
+             cout << '\n'; // third '\n'
             {{endgroup}}
             {{group}}
-             cout << endl; // fourth endl
+             cout << '\n'; // fourth '\n'
             {{endgroup}}
             {{group}}
              cout << "Pop!";
             {{endgroup}}
             {{distractor}}
             {{group}}
-             cout << endl; // fifth endl #distractor
+             cout << '\n'; // fifth '\n' #distractor
             {{endgroup}}
             {{distractor}}
             {{group}}
-             cout << endl; // sixth endl #distractor
+             cout << '\n'; // sixth '\n' #distractor
             {{endgroup}}
             {{group}}
             }
@@ -253,19 +253,19 @@ as part of a string:
             int main () {
             {{endgroup}}
             {{group}}
-             cout << "Hello," << endl; cout << "world!";
+             cout << "Hello," << '\n'; cout << "world!";
             {{endgroup}}
             {{distractor}}
             {{group}}
-             cout << "Hello," << "world!" << endl; #distractor
+             cout << "Hello," << "world!" << '\n'; #distractor
             {{endgroup}}
             {{distractor}}
             {{group}}
-             cout >> "Hello," >> endl; cout >> "world!"; #distractor
+             cout >> "Hello," >> '\n'; cout >> "world!"; #distractor
             {{endgroup}}
             {{distractor}}
             {{group}}
-             cout >> "Hello," >> "world!" >> endl; #distractor
+             cout >> "Hello," >> "world!" >> '\n'; #distractor
             {{endgroup}}
             {{group}}
             }
@@ -277,7 +277,7 @@ as part of a string:
 
    - From cppreference.com
 
-     - :io:`cout` and :io:`endl`
+     - :io:`cout` and :io:`'\n'`
      - :lang:`Main function <main_function>`
 
    - :wiki:`The whitespace character <Whitespace_character>` from Wikipedia

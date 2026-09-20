@@ -149,7 +149,7 @@ exceptions later.
              #include <iostream>
 
              void print_twice (char phil) {
-               std::cout << phil << phil << std::endl;
+               std::cout << phil << phil << '\n';
              }
 
              int main () {

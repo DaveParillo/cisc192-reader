@@ -27,7 +27,7 @@ We can output strings in the usual way:
 
 ::
 
-     cout << first << second << endl;
+     cout << first << second << '\n';
 
 In order to compile this code, you will have to include the header file
 containing the ``string`` definitions to all your source files
@@ -73,7 +73,7 @@ Run the active code below!
             x = "It is cold outside"
             {{endgroup}}
             {{group}}
-            std::cout << x << std::endl;
+            std::cout << x << '\n';
             {{endgroup}}
 
    .. tb-tab:: Q2

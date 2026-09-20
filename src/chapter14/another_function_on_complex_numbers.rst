@@ -112,11 +112,11 @@ Feel free to modify the code and experiment around!
    }
 
    void complex_number::print_cartesian () {
-     std::cout << get_real() << " + " << get_imag() << "i" << std::endl;
+     std::cout << get_real() << " + " << get_imag() << 'i' << '\n';
    }
 
    void complex_number::print_polar () {
-     std::cout << get_mag() << " e^ " << get_theta() << "i" << std::endl;
+     std::cout << get_mag() << " e^ " << get_theta() << 'i' << '\n';
    }
 
    complex_number add (complex_number& a, complex_number& b) {
@@ -201,14 +201,14 @@ that we get the right answer!
    .. code-block:: cpp
 
       int main() {
-        Complex c1 (2.0, 3.0);
-        Complex c2 (3.0, 4.0);
-        Complex c3 (1.0, 0.0);
-        Complex c4 (3.5, 2.5);
-        Complex product = mult (c1, c2);
-        Complex diff = subtract (c4, c3);
-        Complex sum = add (product, diff);
-        sum.printCartesian();
+        complex c1 (2.0, 3.0);
+        complex c2 (3.0, 4.0);
+        complex c3 (1.0, 0.0);
+        complex c4 (3.5, 2.5);
+        complex product = mult (c1, c2);
+        complex diff = subtract (c4, c3);
+        complex sum = add (product, diff);
+        sum.print_cartesian();
       }
 
    - [ ] 3.5 + 19.5i
@@ -278,11 +278,11 @@ you can reveal the extra problem at the end for help.
    }
 
    void complex_number::print_cartesian () {
-     std::cout << get_real() << " + " << get_imag() << "i" << std::endl;
+     std::cout << get_real() << " + " << get_imag() << 'i' << '\n';
    }
 
    void complex_number::print_polar () {
-     std::cout << get_mag() << " e^ " << get_theta() << "i" << std::endl;
+     std::cout << get_mag() << " e^ " << get_theta() << 'i' << '\n';
    }
 
    complex_number add (complex_number& a, complex_number& b) {

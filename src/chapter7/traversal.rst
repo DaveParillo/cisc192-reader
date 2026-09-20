@@ -135,7 +135,7 @@ cannot become negative, so ``x >= 0`` cannot terminate this loop.
             string s = "coding rocks";
             size_t i = 1;
             while (i < s.length()) {
-              cout << s[i] << endl;
+              cout << s[i] << '\n';
               i = i + 2;
             }
 
@@ -162,7 +162,7 @@ cannot become negative, so ``x >= 0`` cannot terminate this loop.
             size_t index = 0;
             int counter = 0;
             while (index < truth.length()) {
-              cout << truth[index] << " ";
+              cout << truth[index] << ' ';
               index = index + counter;
               counter = counter + 1;
             }

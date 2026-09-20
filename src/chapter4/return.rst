@@ -104,7 +104,7 @@ compiler will take you to task.
              #include <iostream>
              using namespace std;
 
-             int timesTwo(int x) {
+             int times_two(int x) {
                int y = x;
                return y;
                y = y * 2;
@@ -112,7 +112,7 @@ compiler will take you to task.
 
              int main () {
                int i = 2;
-               cout << timesTwo(i);
+               cout << times_two(i);
                return 0;
              }
 
@@ -121,7 +121,7 @@ compiler will take you to task.
            The function returns y before reaching the line where y is doubled.
          - [x] 2
 
-           Because the return statement in the timesTwo function returns prior to the modification of y, 2 is returned and then printed.
+           Because the return statement in the times_two function returns prior to the modification of y, 2 is returned and then printed.
          - [ ] 16
 
            The function returns y before reaching the line where y is doubled.

@@ -20,7 +20,7 @@ so the following are legal.
 
 ::
 
-   cout << blank.x << ", " << blank.y << endl;
+   cout << blank.x << ", " << blank.y << '\n';
    double distance = sqrt(blank.x * blank.x + blank.y * blank.y);
 
 In the active code below, we access the instance variables of ``point`` object 
@@ -44,9 +44,9 @@ Next, we display the distance from the origin.
       point blank;
       blank.x = 3.0;
       blank.y = 4.0;
-      std::cout << blank.x << ", " << blank.y << std::endl;
+      std::cout << blank.x << ", " << blank.y << '\n';
       double distance = std::sqrt(blank.x * blank.x + blank.y * blank.y);
-      std::cout << distance << std::endl;
+      std::cout << distance << '\n';
    }
 
 .. tb-group::
@@ -90,17 +90,17 @@ Next, we display the distance from the origin.
 
          .. code-block:: cpp
 
-            struct Blue {
+            struct blue {
               double x, y;
             };
 
             int main() {
-              Blue blank;
+              blue blank;
               blank.x = 7.0;
               blank.y = 2.0;
               cout << blank.y << blank.x;
               double distance = blank.x * blank.x + blank.y * blank.y;
-              cout << distance << endl;
+              cout << distance << '\n';
             }
 
 

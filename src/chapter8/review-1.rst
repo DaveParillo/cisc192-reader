@@ -134,18 +134,18 @@ Multiple Choice Exercises
 
          .. code-block:: cpp
 
-            struct Cube {
-              int edgeLength;
+            struct cube {
+              int edge_length;
               int volume;
               int mass;
             };
 
             int main() {
-              Cube c;
-              c.edgeLength = 4;
+              cube c;
+              c.edge_length = 4;
               c.volume = 64;
               c.mass = 128;
-              cout << c.edgeLength << ", " << c.volume << ", " << c.mass << ", ";
+              cout << c.edge_length << ", " << c.volume << ", " << c.mass << ", ";
               int density = c.mass / c.volume;
               cout << density;
             }
@@ -162,7 +162,7 @@ Multiple Choice Exercises
 
            + The code outputs all instance variables and the density in the proper order. 
 
-         - [ ] edgeLength, volume, mass, density
+         - [ ] edge_length, volume, mass, density
 
            - Dot notation accesses the values of the instance variables, not the names.
 
@@ -175,19 +175,19 @@ Multiple Choice Exercises
 
          .. code-block:: cpp
 
-            struct Cube {
-              int edgeLength;
+            struct cube {
+              int edge_length;
               int volume;
               int mass;
             };
 
-            int calculateDensity (Cube c) {
+            int calculate_density (cube c) {
               return c.mass / c.volume;
             }
 
             int main() {
-              Cube c = { 2, 8, 4 };
-              int density = calculateDensity (c);
+              cube c = { 2, 8, 4 };
+              int density = calculate_density (c);
               cout << density;
             }
 
@@ -254,46 +254,46 @@ Multiple Choice Exercises
       .. tb-choice::
          :name: mce_8_7
 
-         What is the value of ``r.batteryLevelPercentage`` when the code is done running?
+         What is the value of ``r.battery_level_percentage`` when the code is done running?
 
          .. code-block:: cpp
 
-            struct Robot {
+            struct robot {
               string name;
-              int batteryLevelPercentage;
-              bool isFullyCharged;
+              int battery_level_percentage;
+              bool is_fully_charged;
             };
 
-            void chargeRobot (Robot& r) {
-              if (r.batteryLevelPercentage + 50 > 100) {
-                r.batteryLevelPercentage = 100;
-                r.isFullyCharged = true;
+            void charge_robot (robot& r) {
+              if (r.battery_level_percentage + 50 > 100) {
+                r.battery_level_percentage = 100;
+                r.is_fully_charged = true;
               }
               else {
-                r.batteryLevelPercentage = r.batteryLevelPercentage + 50;
+                r.battery_level_percentage = r.battery_level_percentage + 50;
               }
             }
 
             int main() {
-              Robot r = { "Rob", 60, false };
-              chargeRobot (r);
+              robot r = { "Rob", 60, false };
+              charge_robot (r);
             }
 
          - [x] 100
 
-           + The ``Robot`` object is passed by reference to ``chargeRobot``, which caps the ``batteryLevelPercentage`` at 100.
+           + The ``robot`` object is passed by reference to ``charge_robot``, which caps the ``battery_level_percentage`` at 100.
 
          - [ ] 110
 
-           - Take a closer look at the ``chargeRobot`` function.
+           - Take a closer look at the ``charge_robot`` function.
 
          - [ ] 60
 
-           - Is the ``Robot`` object passed by value or by reference to ``chargeRobot``?
+           - Is the ``robot`` object passed by value or by reference to ``charge_robot``?
 
          - [ ] 1
 
-           - That is the final value of ``r.isFullyCharged``. 
+           - That is the final value of ``r.is_fully_charged``. 
 
    .. tb-tab:: Q8
 
@@ -355,7 +355,7 @@ Multiple Choice Exercises
             int main() {
               string name;
               cin >> name;
-              cout << "Hello, " << name << "!";
+              cout << "Hello, " << name << '!';
             }
 
          - [ ] R2-D2
@@ -386,7 +386,7 @@ Multiple Choice Exercises
             int main() {
               char name;
               cin >> name;
-              cout << "Hello, " << name << "!";
+              cout << "Hello, " << name << '!';
             }
 
          - [ ] Hello, CPO!

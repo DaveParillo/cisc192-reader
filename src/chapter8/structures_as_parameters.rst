@@ -6,7 +6,7 @@ You can pass structures as parameters in the usual way. For example,
 ::
 
    void print_point (point p) {
-     cout << "(" << p.x << ", " << p.y << ")" << endl;
+     cout << '(' << p.x << ", " << p.y << ')' << '\n';
    }
 
 ``print_point`` takes a point as an argument and outputs it in the
@@ -29,7 +29,7 @@ see the output!
    };
 
    void print_point (point p) {
-       cout << "(" << p.x << ", " << p.y << ")" << endl;
+       cout << '(' << p.x << ", " << p.y << ')' << '\n';
    }
 
    int main() {
@@ -79,7 +79,7 @@ parameters instead of four ``double``\ s.
          int main() {
              point origin = { 0.0, 0.0 };
              point point = { 3.0, 4.0 };
-             cout << "The distance from the point to the origin is " << distance (origin, point) << endl;
+             cout << "The distance from the point to the origin is " << distance (origin, point) << '\n';
          }
 
    .. tb-tab:: Q2
@@ -91,26 +91,26 @@ parameters instead of four ``double``\ s.
 
          .. code-block:: cpp
 
-            struct Coordinate {
+            struct coordinate {
               int x, y;
             };
 
-            void printOppositeCoordinate (Coordinate p) {
-              cout << "(" << -p.y << ", " << -p.x << ")" << endl;
+            void print_opposite_coordinate (coordinate p) {
+              cout << '(' << -p.y << ", " << -p.x << ')' << '\n';
             }
 
             int main() {
-              Coordinate coord = { 2, 7 };
-              printOppositeCoordinate (coord);
+              coordinate coord = { 2, 7 };
+              print_opposite_coordinate (coord);
             }
 
          - [ ] ``(-2, -7)``
 
-           - Take a close look at the printOppositeCoordinate function.
+           - Take a close look at the print_opposite_coordinate function.
 
          - [ ] ``(2.0, 7.0)``
 
-           - Take a close look at the printOppositeCoordinate function.
+           - Take a close look at the print_opposite_coordinate function.
 
          - [x] ``(-7, -2)``
 
@@ -118,7 +118,7 @@ parameters instead of four ``double``\ s.
 
          - [ ] ``(-7.0, -2.0)``
 
-           - Take a close look at the Coordinate struct.
+           - Take a close look at the coordinate struct.
 
 
    .. tb-tab:: Q3
@@ -144,11 +144,11 @@ parameters instead of four ``double``\ s.
              double avg_y = (y.p1 + y.p2 + y.p3)/3; #distractor
             {{endgroup}}
             {{group}}
-             cout << "(" << avg_x << "," << avg_y << ")";
+             cout << '(' << avg_x << ',' << avg_y << ')';
             {{endgroup}}
             {{distractor}}
             {{group}}
-             cout << "(" << "avg_x" << "," << "avg_y" << ")"; #distractor
+             cout << '(' << "avg_x" << ',' << "avg_y" << ')'; #distractor
             {{endgroup}}
             {{group}}
             }

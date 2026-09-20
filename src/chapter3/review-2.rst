@@ -46,7 +46,7 @@ assess what you have learned in this chapter.
       .. tb-parsons::
          :name: functions_p0
 
-         Construct a function called newLine that takes no arguments and prints a blank line.  Then construct another function called divider that prints two blank lines separated by a line of ". . . . . . . . . . . ."
+         Construct a function called new_line that takes no arguments and prints a blank line.  Then construct another function called divider that prints two blank lines separated by a line of ". . . . . . . . . . . ."
 
          .. code-block:: cpp
 
@@ -54,7 +54,7 @@ assess what you have learned in this chapter.
             void new_line () {
             {{endgroup}}
             {{group}}
-             cout << endl;
+             cout << '\n';
             {{endgroup}}
             {{group}}
             }  //new_line
@@ -64,7 +64,7 @@ assess what you have learned in this chapter.
             {{endgroup}}
             {{distractor}}
             {{group}}
-             void divider (newLine) {
+             void divider (new_line) {
             {{endgroup}}
             {{group}}
              new_line ();  //first call
@@ -74,7 +74,7 @@ assess what you have learned in this chapter.
              cout << new_line ();  //first call
             {{endgroup}}
             {{group}}
-             cout << ". . . . . . . . . . . . " << endl;
+             cout << ". . . . . . . . . . . . " << '\n';
             {{endgroup}}
             {{group}}
              new_line ();  //second call
@@ -288,20 +288,20 @@ assess what you have learned in this chapter.
             {{endgroup}}
             {{distractor}}
             {{group}}
-             cout << "Eat" << endl;
+             cout << "Eat" << '\n';
             {{endgroup}}
             {{group}}
-             cout << endl; cout << "More" << endl;
+             cout << '\n'; cout << "More" << '\n';
             {{endgroup}}
             {{group}}
-             cout << endl;
+             cout << '\n';
             {{endgroup}}
             {{group}}
-             cout << animal << "!" << endl;
+             cout << animal << '!' << '\n';
             {{endgroup}}
             {{distractor}}
             {{group}}
-             cout << animal << ! << endl;
+             cout << animal << ! << '\n';
             {{endgroup}}
             {{group}}
             }
@@ -336,11 +336,11 @@ assess what you have learned in this chapter.
              double cent_total = cents / 100;
             {{endgroup}}
             {{group}}
-             cout << '$' << dollarTotal << '.' << centTotal;
+             cout << '$' << dollar_total << '.' << cent_total;
             {{endgroup}}
             {{distractor}}
             {{group}}
-             cout << '$' << dollarTotal << centTotal;
+             cout << '$' << dollar_total << cent_total;
             {{endgroup}}
             {{group}}
             }
@@ -387,20 +387,20 @@ assess what you have learned in this chapter.
             int main () {
             {{endgroup}}
             {{group}}
-             double pSnow = 0.14;
-             double pSnowday = 0.04;
-             double pBoth = 0.08;
+             double p_snow = 0.14;
+             double p_snowday = 0.04;
+             double p_both = 0.08;
             {{endgroup}}
             {{group}}
-             conditional_probability(pSnow, pBoth);
-            {{endgroup}}
-            {{distractor}}
-            {{group}}
-             conditional_probability(pSnowday, pBoth);
+             conditional_probability(p_snow, p_both);
             {{endgroup}}
             {{distractor}}
             {{group}}
-             conditional_probability(pSnowday, pSnow);
+             conditional_probability(p_snowday, p_both);
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+             conditional_probability(p_snowday, p_snow);
             {{endgroup}}
             {{group}}
             } //main

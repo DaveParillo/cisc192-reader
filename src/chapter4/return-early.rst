@@ -81,7 +81,7 @@ putting ``return 0;`` in your main ends your program.
                  cout << "Two! ";
                }
                if (x > 3) {
-                 cout << "Three!" << endl;
+                 cout << "Three!" << '\n';
                }
                return 0;
              }
@@ -105,7 +105,7 @@ putting ``return 0;`` in your main ends your program.
 
    .. tb-tab:: Q2
 
-      Compare Q1 to this example.
+      compare Q1 to this example.
       Look it over carefully.
       At first glance it looks the same, but the logic is different.
 
@@ -130,7 +130,7 @@ putting ``return 0;`` in your main ends your program.
                  return 0;
                }
                if (x > 3) {
-                 cout << "Three!" << endl;
+                 cout << "Three!" << '\n';
                  return 0;
                }
                return 0;
@@ -313,12 +313,12 @@ double correctly.
              double ticket_price(int age) {
                 if(age<5){
                     return 5.50;
-                    cout<<" You get a child discount yay!"<<endl;
+                    cout<<" You get a child discount yay!"<<'\n';
                 }
 
                 else{
                     return 9.50;
-                    cout<<" Sorry you have to pay full price."<<endl;
+                    cout<<" Sorry you have to pay full price."<<'\n';
                 }
                 return 0.0; //to avoid compiler error
              }

@@ -98,7 +98,7 @@ change the output from the ``print`` function. Notice how this is much clearer t
        ranks[12] = "Queen";
        ranks[13] = "King";
 
-       std::cout << ranks[rank] << " of " << suits[suit] << std::endl;
+       std::cout << ranks[rank] << " of " << suits[suit] << '\n';
    }
 
 
@@ -189,21 +189,21 @@ An unscoped enum can convert to an integer in an expression such as
        enum Flavor { VANILLA, CHOCOLATE, STRAWBERRY, COOKIESNCREAM, MINTCHIP, COOKIEDOUGH };
        enum Order { CUP, CAKECONE, SUGARCONE, WAFFLECONE }
 
-       struct iceCream {
+       struct ice_cream {
           Scoops scoops;
           Flavor flavor;
           Order order;
 
-          iceCream (Scoops s, Flavor f, Order o);
-          printOrder () {
+          ice_cream (Scoops s, Flavor f, Order o);
+          print_order () {
             // To save space, I didn't include the mapping.  I'm sure you can still figure it out.
             cout << "Who ordered a " << scoops[scoop] << " scoop of " << flavors[flavor] << " in a " << orders[order] << ?;
           }
        };
 
        int main () {
-         iceCream icecream (2, 3, 2);
-         iceCream.printOrder();
+         ice_cream icecream (2, 3, 2);
+         ice_cream.print_order();
        }
 
 

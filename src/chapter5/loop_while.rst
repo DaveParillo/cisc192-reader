@@ -212,7 +212,7 @@ The general form for a ``do-while`` loop is:
 
             int n = 0;
               while (_____) {    // while statement condition
-              cout << n << endl;
+              cout << n << '\n';
               _______;           // iteration of the variable
             }
 

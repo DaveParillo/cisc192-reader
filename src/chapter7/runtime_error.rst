@@ -63,10 +63,10 @@ of indexing out of range?
                 char b = fruit[9];
                 char c = fruit.at(0);
                 char d = fruit.at(9);
-                cout << fruit << endl;
-                cout <<  fruit[-4]  << endl;
+                cout << fruit << '\n';
+                cout <<  fruit[-4]  << '\n';
                 char e = fruit.at(-4);
-                cout <<  fruit[4]  << endl;
+                cout <<  fruit[4]  << '\n';
             }
 
 
@@ -94,7 +94,7 @@ of indexing out of range?
 
             Correct.
 
-         .. tb-miss:: text:cout << fruit << endl;
+         .. tb-miss:: text:cout << fruit << '\n';
 
             at() throws for an out-of-range index; invalid unchecked accesses have undefined behavior.
 
@@ -148,7 +148,7 @@ of indexing out of range?
                sentence[11] = 'h' #distractor
             {{endgroup}}
             {{group}}
-               cout << sentence << endl;
+               cout << sentence << '\n';
             {{endgroup}}
             {{group}}
             }

@@ -18,7 +18,7 @@ language.  Observe the program structure below.
    #include <iostream>
    // main: generate some simple output
    int main () {
-       std::cout << "Hello, World!" << std::endl;
+       std::cout << "Hello, World!" << '\n';
    }
 
 
@@ -66,7 +66,7 @@ The symbol ``<<`` is an operator that you apply to
 ``cout`` and a string, and that causes the string to be displayed.
 
 ``endl`` is an object that represents the end of a line. When you
-send an ``endl`` to ``cout``, it causes the cursor to move to the next line of
+send an ``'\n'`` to ``cout``, it causes the cursor to move to the next line of
 the display. The next time you output something, the new text appears on
 the next line.
 
@@ -180,7 +180,7 @@ rules of a language.
 
    - From cppreference.com
 
-     - :io:`cout` and :io:`endl`
+     - :io:`cout` and :io:`'\n'`
      - :cpp:`Comments <comment>`
      - :lang:`Main function <main_function>`
      - :cpp:`Include files <preprocessor/include>`

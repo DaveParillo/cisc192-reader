@@ -97,19 +97,19 @@ These are called **forward declarations**.
          Which of the following is a correct function header (first line of 
          a function definition)?
 
-         - [ ] ``void printName()``
+         - [ ] ``void print_name()``
 
            -   This function header is missing a ``{``, which is needed to begin defining the function.
 
-         - [ ] ``totalCostAfterTax () {``
+         - [ ] ``total_cost_after_tax () {``
 
            -   This function header is missing a return type.
 
-         - [x] ``void todaysWeather () {``
+         - [x] ``void todays_weather () {``
 
            +   Correct!
 
-         - [ ] ``void finalGrade {``
+         - [ ] ``void final_grade {``
 
            -   This function header is missing parentheses. Even if a function does not take in any parameters, empty parentheses should be used.
 

@@ -105,15 +105,15 @@ phil.
 
          ::
 
-             void printHelloName (string name) {
-               cout << "Hello " << name << "!";
+             void print_hello_name (string name) {
+               cout << "Hello " << name << '!';
              }
 
              int main () {
                string name1 = "Phil";
-               printHelloName(name1);
+               print_hello_name(name1);
                string name2 = "Joe";
-               printHelloName(name2);
+               print_hello_name(name2);
                return 0;
              }
 
@@ -136,19 +136,19 @@ phil.
       .. tb-choice::
          :name: locals_2
 
-         How many local variables and parameters does ``printHelloName`` have?
+         How many local variables and parameters does ``print_hello_name`` have?
 
          ::
 
-             void printHelloName (string name) {
-               cout << "Hello " << name << "!";
+             void print_hello_name (string name) {
+               cout << "Hello " << name << '!';
              }
 
              int main () {
                string name1 = "Phil";
-               printHelloName(name1);
+               print_hello_name(name1);
                string name2 = "Joe";
-               printHelloName(name2);
+               print_hello_name(name2);
                return 0;
              }
 
@@ -189,18 +189,18 @@ phil.
          ::
 
              void hi() {
-               cout << "hiii !"<<endl;
+               cout << "hiii !"<<'\n';
              }
 
-             void printGreeting(){
+             void print_greeting(){
                hi();
-               cout<<"how are you doing today. "<<endl;
+               cout<<"how are you doing today. "<<'\n';
                hi();
              }
 
              int main () {
                hi();
-               printGreeting();
+               print_greeting();
                hi();
                return 0;
              }

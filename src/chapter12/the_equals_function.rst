@@ -31,7 +31,7 @@ the other as an argument:
      playing_card card2 (1, 11);
 
      if (card1.equals(card2)) {
-       std::cout << "Yup, that's the same card." << std::endl;
+       std::cout << "Yup, that's the same card." << '\n';
      }
 
 This method of invocation always seems strange to me when the function
@@ -52,7 +52,7 @@ side-by-side in a way that makes more logical sense, to me at least.
 ::
 
      if (equals (card1, card2)) {
-       std::cout << "Yup, that's the same card." << std::endl;
+       std::cout << "Yup, that's the same card." << '\n';
      }
 
 Of course, this is a matter of taste. My point here is that you should
@@ -78,10 +78,10 @@ Run the active code below to see how the ``equals()`` function works.
    bool playing_card::equals (const playing_card& c2) const {
      bool boolean = (rank == c2.rank && suit == c2.suit);
      if (boolean == true) {
-       std::cout << "Yup, that's the same card." << std::endl;
+       std::cout << "Yup, that's the same card." << '\n';
      }
      else {
-       std::cout << "Nope, those cards are different." << std::endl;
+       std::cout << "Nope, those cards are different." << '\n';
      }
      return boolean;
    }
@@ -108,7 +108,7 @@ Run the active code below to see how the ``equals()`` function works.
      ranks[12] = "Queen";
      ranks[13] = "King";
 
-      std::cout << ranks[rank] << " of " << suits[suit] << std::endl;
+      std::cout << ranks[rank] << " of " << suits[suit] << '\n';
    }
 
 
@@ -142,33 +142,33 @@ Run the active code below to see how the ``equals()`` function works.
 .. tb-choice::
    :name: equals_function_1
 
-   How can we compare two ``Card`` objects?
+   How can we compare two ``card`` objects?
 
    - [ ] Directly, using the build in == operator.
 
-     Incorrect! We have to create our own method to compare two Card objects, the == operator won't work.
-   - [ ] Compare their ranks and suits separately using the == operator. If either comparison is true, then they are equal.
+     Incorrect! We have to create our own method to compare two card objects, the == operator won't work.
+   - [ ] compare their ranks and suits separately using the == operator. If either comparison is true, then they are equal.
 
      Incorrect! This would return true if two cards have the same rank, but different suits OR the same suit, but different ranks.
-   - [x] Compare their ranks and suits separately using the == operator. If either comparison is false, then they are NOT equal.
+   - [x] compare their ranks and suits separately using the == operator. If either comparison is false, then they are NOT equal.
 
      Correct! Both ranks and suits must be the same for two cards to be equal.
    - [ ] They cannot be compared because they are non-numerical objects.
 
-     Incorrect! Card objects can be compared, but we must create our own method.
+     Incorrect! card objects can be compared, but we must create our own method.
 
 .. tb-choice::
    :name: equals_function_2
 
-   Should we write the ``equals()`` function as a free-standing function, or as a member function of ``Card``?
+   Should we write the ``equals()`` function as a free-standing function, or as a member function of ``card``?
 
-   - [ ] A free-standing function, because we shouldn't "invoke" the function on just one ``Card``.
+   - [ ] A free-standing function, because we shouldn't "invoke" the function on just one ``card``.
 
-     - Incorrect! We can invoke the function on a ``Card``!
+     - Incorrect! We can invoke the function on a ``card``!
 
-   - [ ] A member function, because the ``equals()`` operation is part of the ``Card`` data structure.
+   - [ ] A member function, because the ``equals()`` operation is part of the ``card`` data structure.
 
-     -  Incorrect! The ``equals()`` operation is not necessarily part of the ``Card`` data structure.
+     -  Incorrect! The ``equals()`` operation is not necessarily part of the ``card`` data structure.
 
    - [x] Both are viable.
 

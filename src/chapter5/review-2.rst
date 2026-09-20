@@ -38,7 +38,7 @@ Mixed Up Code Practice
                while (n < 40) {
             {{endgroup}}
             {{group}}
-                  cout << n << endl;
+                  cout << n << '\n';
             {{endgroup}}
             {{group}}
                   n = n + 2;
@@ -92,7 +92,7 @@ Mixed Up Code Practice
                while (n > 0) { #distractor
             {{endgroup}}
             {{group}}
-                  cout << n << endl;
+                  cout << n << '\n';
             {{endgroup}}
             {{group}}
                   n -= 10;
@@ -150,7 +150,7 @@ Mixed Up Code Practice
             {{endgroup}}
             {{distractor}}
             {{group}}
-                  cout << n << endl;  #distractor
+                  cout << n << '\n';  #distractor
             {{endgroup}}
             {{group}}
                   sum = sum + n;
@@ -170,18 +170,18 @@ Mixed Up Code Practice
       .. tb-parsons::
          :name: mucp_6_4
 
-         Let's write the code for the repeatHello function. repeatHello 
+         Let's write the code for the repeat_hello function. repeat_hello 
          should be a void function that takes no arguments and uses a while
          loop to print out "hello" three times.  
 
          .. code-block:: cpp
 
             {{group}}
-            void repeatHello () {
+            void repeat_hello () {
             {{endgroup}}
             {{distractor}}
             {{group}}
-            repeatHello () {
+            repeat_hello () {
             {{endgroup}}
             {{group}}
                int n = 0;
@@ -198,7 +198,7 @@ Mixed Up Code Practice
                while (n > 3) {
             {{endgroup}}
             {{group}}
-                  cout << "hello" << endl;
+                  cout << "hello" << '\n';
             {{endgroup}}
             {{group}}
                   n++;
@@ -215,18 +215,18 @@ Mixed Up Code Practice
       .. tb-parsons::
          :name: mucp_6_5
 
-         Now let's generalize the repeatHello function so that it repeats a given string three times.
-         Let's write the code for the repeatString function, which takes 
+         Now let's generalize the repeat_hello function so that it repeats a given string three times.
+         Let's write the code for the repeat_string function, which takes 
          input as a parameter and uses a while loop to print out the string three times.  
 
          .. code-block:: cpp
 
             {{group}}
-            void repeatString (string input) {
+            void repeat_string (string input) {
             {{endgroup}}
             {{distractor}}
             {{group}}
-            void repeatString () {
+            void repeat_string () {
             {{endgroup}}
             {{group}}
                int n = 0;
@@ -239,11 +239,11 @@ Mixed Up Code Practice
                while (3 > n) {
             {{endgroup}}
             {{group}}
-                  cout << input << endl;
+                  cout << input << '\n';
             {{endgroup}}
             {{distractor}}
             {{group}}
-                  cout << string << endl;
+                  cout << string << '\n';
             {{endgroup}}
             {{group}}
                   n++;
@@ -260,18 +260,18 @@ Mixed Up Code Practice
       .. tb-parsons::
          :name: mucp_6_6
 
-         We can further generalize repeatString so that it repeats a given string a given number of times. 
-         Let's write the code for the new repeatString function, which takes 
+         We can further generalize repeat_string so that it repeats a given string a given number of times. 
+         Let's write the code for the new repeat_string function, which takes 
          input and x as parameters and uses a while loop to print out the string x number of times.  
 
          .. code-block:: cpp
 
             {{group}}
-            void repeatString (string input, int x) {
+            void repeat_string (string input, int x) {
             {{endgroup}}
             {{distractor}}
             {{group}}
-            void repeatString (string input, string x) {
+            void repeat_string (string input, string x) {
             {{endgroup}}
             {{group}}
                int n = 0;
@@ -288,7 +288,7 @@ Mixed Up Code Practice
                while (x < n) {
             {{endgroup}}
             {{group}}
-                  cout << input << endl;
+                  cout << input << '\n';
             {{endgroup}}
             {{group}}
                   n++;
@@ -310,17 +310,17 @@ Mixed Up Code Practice
          :name: mucp_6_7
 
          On the last day of every year, we count down the seconds before the new year arrives.
-         Write the function newYearCountdown, which prints out a countdown from 10 and then
+         Write the function new_year_countdown, which prints out a countdown from 10 and then
          prints out "Happy New Year!".
 
          .. code-block:: cpp
 
             {{group}}
-            void newYearCountdown () {
+            void new_year_countdown () {
             {{endgroup}}
             {{distractor}}
             {{group}}
-            void newYearCountdown (string input) {
+            void new_year_countdown (string input) {
             {{endgroup}}
             {{group}}
                int n = 10;
@@ -337,7 +337,7 @@ Mixed Up Code Practice
                while (n != 10) {
             {{endgroup}}
             {{group}}
-                  cout << n << " ";
+                  cout << n << ' ';
             {{endgroup}}
             {{group}}
                   n--;
@@ -349,7 +349,7 @@ Mixed Up Code Practice
                }
             {{endgroup}}
             {{group}}
-               cout << "Happy New Year!" << endl;
+               cout << "Happy New Year!" << '\n';
             }
             {{endgroup}}
 
@@ -359,41 +359,41 @@ Mixed Up Code Practice
          :name: mucp_6_8
 
          Help Goku reach power levels of over 9000! Write the function
-         powerUp which takes powerLevel as a parameter.
-         powerUp checks to see if powerLevel is over 9000. If it 
-         isn't, it repeatedly prints "More power!" and increments powerLevel by 
-         1000 until powerLevel is over 9000. Then powerUp prints "It's over 9000!".
+         power_up which takes power_level as a parameter.
+         power_up checks to see if power_level is over 9000. If it 
+         isn't, it repeatedly prints "More power!" and increments power_level by 
+         1000 until power_level is over 9000. Then power_up prints "It's over 9000!".
          Put the necessary blocks in the correct order.
 
          .. code-block:: cpp
 
             {{group}}
-            void powerUp (int powerLevel) {
+            void power_up (int power_level) {
             {{endgroup}}
             {{distractor}}
             {{group}}
-            void powerUp () {
+            void power_up () {
             {{endgroup}}
             {{distractor}}
             {{group}}
                int n = 0;  #distractor
             {{endgroup}}
             {{group}}
-               while (powerLevel < 9000) {
+               while (power_level < 9000) {
             {{endgroup}}
             {{distractor}}
             {{group}}
-               while (powerLevel > 9000) {
+               while (power_level > 9000) {
             {{endgroup}}
             {{group}}
-                  cout << "More power!" << endl;
+                  cout << "More power!" << '\n';
             {{endgroup}}
             {{group}}
-                  powerLevel = powerLevel + 1000;
+                  power_level = power_level + 1000;
             {{endgroup}}
             {{distractor}}
             {{group}}
-                  powerLevel++;
+                  power_level++;
             {{endgroup}}
             {{distractor}}
             {{group}}
@@ -404,10 +404,10 @@ Mixed Up Code Practice
             {{endgroup}}
             {{distractor}}
             {{group}}
-               if (powerLevel < 9000) {  #distractor
+               if (power_level < 9000) {  #distractor
             {{endgroup}}
             {{group}}
-               cout << "It's over 9000!" << endl;
+               cout << "It's over 9000!" << '\n';
             }
             {{endgroup}}
 
@@ -476,20 +476,20 @@ Mixed Up Code Practice
       .. tb-parsons::
          :name: mucp_6_10
 
-         Write the function reverseNumber which takes num
+         Write the function reverse_number which takes num
          as a parameter and returns num but with its digits reversed.
-         For example, reverseNumber (1324) returns 4231. 
+         For example, reverse_number (1324) returns 4231. 
          Put the necessary blocks in the correct order, with reverse
          declared first, then temp, and lastly remainder.
 
          .. code-block:: cpp
 
             {{group}}
-            int reverseNumber (int num) {
+            int reverse_number (int num) {
             {{endgroup}}
             {{distractor}}
             {{group}}
-            void reverseNumber (int num) {  #distractor
+            void reverse_number (int num) {  #distractor
             {{endgroup}}
             {{group}}
                int reverse = 0;

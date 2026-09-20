@@ -41,7 +41,7 @@ Coding Practice
              r.height = 10;
              std::cout << "The room with dimensions " << r.length ", " << r.width
                  << ", and " << r.height << " has an area of " << r.calculate_area()
-                 << " and a volume of " << r.calculate_volume << std::endl;
+                 << " and a volume of " << r.calculate_volume << '\n';
          }
 
    .. tb-tab:: Parsonsprob
@@ -123,7 +123,7 @@ Coding Practice
             {{group}}
                  std::cout << "The room with dimensions " << r.get_length() << ", " << r.get_width()
                      << ", and " << r.get_height() << " has an area of " << r.calculate_area()
-                     << " and a volume of " << r.calculate_volume() << std::endl;
+                     << " and a volume of " << r.calculate_volume() << '\n';
             {{endgroup}}
             {{group}}
              }
@@ -173,10 +173,10 @@ Coding Practice
                  void set_celsius (double c) { celsius = c; is_celsius = true; is_fahrenheit = false; }
                  void print_temp () {
                      if (is_fahrenheit) {
-                         std::cout << "It is " << get_fahrenheit() << " degrees Fahrenheit" << std::endl;
+                         std::cout << "It is " << get_fahrenheit() << " degrees Fahrenheit" << '\n';
                      }
                      else {
-                         std::cout << "It is " << get_celsius() << " degrees Celsius" << std::endl;
+                         std::cout << "It is " << get_celsius() << " degrees Celsius" << '\n';
                      }
                  }
          };
@@ -356,7 +356,7 @@ Coding Practice
              void print() {
             {{endgroup}}
             {{group}}
-                std::cout << "[";
+                std::cout << '[';
             {{endgroup}}
             {{group}}
                 for (std::size_t i = 0; i < elements.size(); ++i) {
@@ -369,7 +369,7 @@ Coding Practice
                 }
             {{endgroup}}
             {{group}}
-                std::cout << "]" << std::endl;
+                std::cout << ']' << '\n';
             {{endgroup}}
             {{group}}
              }
@@ -407,12 +407,12 @@ Coding Practice
          int my_vector::at(std::size_t index) { return elements.at(index); }
 
          void my_vector::print() {
-             std::cout << "[";
+             std::cout << '[';
              for (std::size_t i = 0; i < elements.size(); ++i) {
                  if (i != 0) std::cout << ", ";
                  std::cout << elements[i];
              }
-             std::cout << "]" << std::endl;
+             std::cout << ']' << '\n';
          }
 
          void my_vector::push_front(int value) {
@@ -472,8 +472,8 @@ Coding Practice
          int main() {
              std::vector<int> vec = { 8, 1, 5, 87, 23, 64 };
              my_vector my_vec(vec);
-             cout << "The largest element is " << my_vec.max() << std::endl;
-             cout << "The smallest element is " << my_vec.min() << std::endl;
+             cout << "The largest element is " << my_vec.max() << '\n';
+             cout << "The smallest element is " << my_vec.min() << '\n';
          }
 
    .. tb-tab:: Parsonsprob

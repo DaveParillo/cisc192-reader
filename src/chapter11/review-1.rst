@@ -51,11 +51,11 @@ Answer the following **Multiple Choice** questions to assess what you have learn
       .. tb-choice::
          :name: random_mc2
 
-         Suppose you have defined the ``fizzBuzz`` function as the following
+         Suppose you have defined the ``fizz_buzz`` function as the following
 
          .. code-block::
 
-             int fizzBuzz (const vector<int> & vec, int num1, int num2) {
+             int fizz_buzz (const vector<int> & vec, int num1, int num2) {
                  int count = 0;
                  for (size_t i = 0; i < vec.size(); i++) {
                      if (vec[i]/num1 == 0 && vec[i]/num2 == 0) {
@@ -70,7 +70,7 @@ Answer the following **Multiple Choice** questions to assess what you have learn
          .. code-block::
 
              vector<int> numbers = {6, 8, 14, 21, 28, 35, 36, 42, 49, 70, 81, 98};
-             cout << fizzBuzz(numbers, 2, 7);
+             cout << fizz_buzz(numbers, 2, 7);
 
          - [ ] 1
 
@@ -90,7 +90,7 @@ Answer the following **Multiple Choice** questions to assess what you have learn
 
          - [x] 5
 
-           +   14, 28, 42, 70, and 98 are all multiples of 7 and 2 and are counted by ``fizzBuzz``.
+           +   14, 28, 42, 70, and 98 are all multiples of 7 and 2 and are counted by ``fizz_buzz``.
 
 
    .. tb-tab:: Q3
@@ -98,15 +98,15 @@ Answer the following **Multiple Choice** questions to assess what you have learn
       .. tb-choice::
          :name: random_mc3
 
-         Suppose you have defined the ``startsWith`` function as the following
+         Suppose you have defined the ``starts_with`` function as the following
 
          .. code-block::
 
-             int startsWith (const vector<string> & vec, char c) {
+             int starts_with (const vector<string> & vec, char c) {
                  int count = 0;
                  int pos = 0;
                  for (size_t i = 0; i < vec.size(); i++) {
-                     pos = vec[i].find(" ");
+                     pos = vec[i].find(' ');
                      if (vec[i][pos + 1] == c) {
                          count++;
                      }
@@ -119,7 +119,7 @@ Answer the following **Multiple Choice** questions to assess what you have learn
          .. code-block::
 
              vector<string> names = {"Ross Meldrum", "Monica Morrissey", "Maria Geller", "Marty Bing"};
-             cout << howMany(names, 'M');
+             cout << how_many(names, 'M');
 
          - [ ] 1
 
@@ -147,11 +147,11 @@ Answer the following **Multiple Choice** questions to assess what you have learn
       .. tb-choice::
          :name: random_mc4
 
-         Suppose you have defined the ``howMany`` function as the following
+         Suppose you have defined the ``how_many`` function as the following
 
          .. code-block::
 
-             int howMany (const vector<string>& vec, char let) {
+             int how_many (const vector<string>& vec, char let) {
                  int count = 0;
                  for (size_t i = 0; i < vec.size(); i++) {
                      for (size_t c = 0; c < vec[i].size(); c++) {
@@ -171,7 +171,7 @@ Answer the following **Multiple Choice** questions to assess what you have learn
              vector<char> letters = {'a', 'e', 'i', 'o', 'u'};
              vector<int> counts = {};
              for (int i = 0; i < letters.size(); ++i) {
-                 counts.push_back(howMany(snacks, letters[i]));
+                 counts.push_back(how_many(snacks, letters[i]));
              }
 
          - [ ] {1, 6, 2, 6, 2}

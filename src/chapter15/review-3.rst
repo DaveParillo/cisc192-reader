@@ -96,12 +96,12 @@ Coding Practice
              std::ifstream infile("poem.txt");
              std::string input;
              if (!infile.good()) {
-                 std::cout << "Error. Unable to open file." << std::endl;
+                 std::cout << "Error. Unable to open file." << '\n';
                  std::exit(1);
              }
              for (std::size_t i = 0; i < 5; ++i) {
                  std::getline(infile, input);
-                 std::cout << input << std::endl;
+                 std::cout << input << '\n';
              }
          }
 
@@ -193,7 +193,7 @@ Coding Practice
              double median;
              int height;
              if (!infile.good()) {
-                 std::cout << "Error. Unable to open file." << std::endl;
+                 std::cout << "Error. Unable to open file." << '\n';
                  std::exit(1);
              }
              while (infile >> height) {
@@ -206,14 +206,14 @@ Coding Practice
              else {
                  median = data[data.size() / 2];
              }
-             std::cout << "The median height is: " << median << " inches" << std::endl;
+             std::cout << "The median height is: " << median << " inches" << '\n';
          }
 
 .. tb-file::
    :name: powers-txt
    :filename: powers.txt
 
-   Student output file
+   student output file
 
 .. admonition:: Practice selection
 
@@ -315,11 +315,11 @@ Coding Practice
              std::ifstream infile("message.txt");
              std::string message;
              if (!infile.good()) {
-                 std::cout << "Error. Unable to open file." << std::endl;
+                 std::cout << "Error. Unable to open file." << '\n';
                  std::exit(1);
              }
              while (std::getline(infile, message)) {
-                 std::cout << ROT13(message) << std::endl;
+                 std::cout << ROT13(message) << '\n';
              }
          }
 
@@ -416,14 +416,14 @@ Coding Practice
              int grade, age;
              double gpa;
              if (!infile.good()) {
-                 std::cout << "Error. Unable to open file." << std::endl;
+                 std::cout << "Error. Unable to open file." << '\n';
                  std::exit(1);
              }
              std::getline(infile, fname);
              while (infile >> fname >> lname >> grade >> gpa >> age) {
                  if (gpa >= 3.5) {
                      std::cout << fname << '\t' << lname << '\t' << grade
-                          << '\t' << gpa << '\t' << age << std::endl;
+                          << '\t' << gpa << '\t' << age << '\n';
                  }
              }
          }
@@ -449,7 +449,7 @@ Coding Practice
    :name: mult_table-txt
    :filename: mult_table.txt
 
-   Student output file
+   student output file
 
 .. tb-group::
    :name: c192_cp_15_9
@@ -495,7 +495,7 @@ Coding Practice
          int main() {
              std::ofstream outfile("mult_table.txt");
              if (!outfile.good()) {
-                 std::cout << "Error. Unable to open file." << std::endl;
+                 std::cout << "Error. Unable to open file." << '\n';
                  std::exit(1);
              }
              std::vector<std::size_t> rows(10);

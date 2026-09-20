@@ -98,7 +98,7 @@ Changing the output statement to
 
 ::
 
-         cout << x << "\t" << log(x) / log(2.0) << endl;
+         cout << x << '\t' << log(x) / log(2.0) << '\n';
 
 yields
 
@@ -131,8 +131,8 @@ we could modify the program like this. Run the active code below.
    int main() {
      int x = 1;
      while (x < 100) {
-       std::cout << x << "\t" 
-                 << std::log(x) / std::log(2) << endl;
+       std::cout << x << '\t' 
+                 << std::log(x) / std::log(2) << '\n';
        x = x * 2;
      }
    }
@@ -184,8 +184,8 @@ Print it out and memorize it.
          int main() {
            int x = 1;
            while (x < 100) {
-                cout << x << "\t" 
-                     << log(x) / log(2) << endl;
+                cout << x << '\t' 
+                     << log(x) / log(2) << '\n';
                 x = x * 2;
            }
          }
@@ -214,11 +214,11 @@ Print it out and memorize it.
                   while (x < 16) {
                {{endgroup}}
                {{group}}
-                     cout << x << "\t" << pow(2, x) << endl;
+                     cout << x << '\t' << pow(2, x) << '\n';
                {{endgroup}}
                {{distractor}}
                {{group}}
-                     cout << x << "\t" << pow(x, 2) << endl;
+                     cout << x << '\t' << pow(x, 2) << '\n';
                {{endgroup}}
                {{group}}
                      x++;
@@ -268,7 +268,7 @@ Print it out and memorize it.
            int main() {
              int x = 1;
              while (x < 11) {
-               cout << x << "\t" << pow(x, 2) << endl;
+               cout << x << '\t' << pow(x, 2) << '\n';
                x = x + 1;
              }
            }

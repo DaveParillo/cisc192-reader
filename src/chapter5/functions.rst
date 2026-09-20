@@ -137,24 +137,24 @@ the function many times without rewriting it each time.
       .. tb-parsons::
          :name: functions_2
 
-         Create a function called ``absoluteValue``, which returns the absolute value of a parameter ``num``. Assume you do not have access to ``#include <cmath>``.
+         Create a function called ``absolute_value``, which returns the absolute value of a parameter ``num``. Assume you do not have access to ``#include <cmath>``.
 
          .. code-block:: cpp
 
             {{group}}
-            int absoluteValue (int num) {
+            int absolute_value (int num) {
             {{endgroup}}
             {{distractor}}
             {{group}}
-            void absoluteValue (int num) { #distractor
+            void absolute_value (int num) { #distractor
             {{endgroup}}
             {{distractor}}
             {{group}}
-            int absoluteValue (int num) #distractor
+            int absolute_value (int num) #distractor
             {{endgroup}}
             {{distractor}}
             {{group}}
-            void absoluteValue (int num) #distractor
+            void absolute_value (int num) #distractor
             {{endgroup}}
             {{group}}
               if (num > 0) {
@@ -167,10 +167,10 @@ the function many times without rewriting it each time.
               else {
             {{endgroup}}
             {{group}}
-                int absNum = -(num);
+                int abs_num = -(num);
             {{endgroup}}
             {{group}}
-                return absNum;
+                return abs_num;
               }
             }
             {{endgroup}}

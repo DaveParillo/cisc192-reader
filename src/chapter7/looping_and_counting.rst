@@ -58,7 +58,7 @@ number of a’s.
             int x = -5;
             while (x < 0) {
               x = x + 1;
-              cout << x << " ";
+              cout << x << ' ';
             }
 
 
@@ -149,7 +149,7 @@ number of a’s.
             while (x < 10) { #distractor
             {{endgroup}}
             {{group}}
-               cout << x << endl;
+               cout << x << '\n';
             {{endgroup}}
             {{group}}
                x = x + 2;

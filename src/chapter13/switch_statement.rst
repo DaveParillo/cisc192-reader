@@ -19,7 +19,7 @@ prettier and often more efficient. It looks like this:
        perform_multiplication ();
        break;
      default:
-       std::cout << "I only know how to perform addition and multiplication" << std::endl;
+       std::cout << "I only know how to perform addition and multiplication" << '\n';
        break;
      }
 
@@ -35,7 +35,7 @@ conditional:
        perform_multiplication ();
      }
      else {
-       std::cout << "I only know how to perform addition and multiplication" << std::endl;
+       std::cout << "I only know how to perform addition and multiplication" << '\n';
      }
 
 The ``break`` statements are necessary in each branch in a ``switch``
@@ -51,8 +51,8 @@ perform addition, and then perform multiplication, and then print the
 error message. Occasionally this feature is useful, but most of the time
 it is a source of errors when people forget the ``break`` statements.
 
-Take a look at the active code below that allows you to choose your starter Pokemon.
-If you change the value of ``type``, it will change the Pokemon you choose. Notice how
+Take a look at the active code below that allows you to choose your starter pokemon.
+If you change the value of ``type``, it will change the pokemon you choose. Notice how
 if you don't assign ``type`` to a valid type, it outputs the default message. Try taking out
 the ``break`` statements in each case. What happens if you run the code with ``type`` as 'g' afterwards?
 
@@ -70,16 +70,16 @@ the ``break`` statements in each case. What happens if you run the code with ``t
 
        switch (type) {
        case 'g':
-           cout << "You've chosen Bulbasaur!" << std::endl;
+           cout << "You've chosen Bulbasaur!" << '\n';
            break;
        case 'f':
-           cout << "You've chosen Charmander!" << std::endl;
+           cout << "You've chosen Charmander!" << '\n';
            break;
        case 'w':
-           cout << "You've chosen Squirtle!" << std::endl;
+           cout << "You've chosen Squirtle!" << '\n';
           break;
        default:
-           cout << "Invalid type! Please try again." << std::endl;
+           cout << "Invalid type! Please try again." << '\n';
            break;
        }
    }

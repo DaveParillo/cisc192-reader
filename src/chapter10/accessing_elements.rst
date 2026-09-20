@@ -73,7 +73,7 @@ For example:
 
      std::size_t i = 0;
      while (i < 5) {
-       cout << count[i] << endl;
+       cout << count[i] << '\n';
        ++i;
      }
 

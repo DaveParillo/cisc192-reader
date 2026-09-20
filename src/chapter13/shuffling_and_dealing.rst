@@ -74,7 +74,7 @@ games like War, Poker, and Egyptian Ratscrew.
        ranks[12] = "Queen";
        ranks[13] = "King";
 
-       cout << ranks[rank] << " of " << suits[suit] << std::endl;
+       cout << ranks[rank] << " of " << suits[suit] << '\n';
    }
 
    bool playing_card::is_greater (const playing_card& c2) const {
@@ -228,13 +228,13 @@ games like War, Poker, and Egyptian Ratscrew.
        card_deck hand2 = deck.subdeck(7, 13);
        card_deck hand3 = deck.subdeck(14, 20);
        card_deck pack = deck.subdeck(21, 51);
-       cout << "Player 1's hand:" << std::endl;
+       cout << "Player 1's hand:" << '\n';
        hand1.print();
-       cout << std::endl;
-       cout << "Player 2's hand:" << std::endl;
+       cout << '\n';
+       cout << "Player 2's hand:" << '\n';
        hand2.print();
-       cout << std::endl;
-       cout << "Player 3's hand:" << std::endl;
+       cout << '\n';
+       cout << "Player 3's hand:" << '\n';
        hand3.print();
    }
 

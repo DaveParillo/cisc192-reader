@@ -145,9 +145,9 @@ and debug.
 
           int main () {
             int x = 10;
-            cout << x << "!";
+            cout << x << '!';
             x = 1;
-            cout << x << "!";
+            cout << x << '!';
             return 0;
           }
 

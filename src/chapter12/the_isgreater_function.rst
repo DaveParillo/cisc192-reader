@@ -62,7 +62,7 @@ possible questions we are asking:
 
      if (card1.is_greater (card2)) {
        card1.print ();
-       std::cout << "is greater than" << std::endl;
+       std::cout << "is greater than" << '\n';
        card2.print ();
      }
 
@@ -99,10 +99,10 @@ Feel free to change the values of the cards.
    bool playing_card::equals (const playing_card& c2) const {
      bool boolean = (rank == c2.rank && suit == c2.suit);
      if (boolean == true) {
-       cout << "Yup, that's the same card." << std::endl;
+       cout << "Yup, that's the same card." << '\n';
      }
      else {
-       cout << "Nope, those cards are different." << std::endl;
+       cout << "Nope, those cards are different." << '\n';
      }
      return boolean;
    }
@@ -139,7 +139,7 @@ Feel free to change the values of the cards.
      ranks[12] = "Queen";
      ranks[13] = "King";
 
-      cout << ranks[rank] << " of " << suits[suit] << std::endl;
+      cout << ranks[rank] << " of " << suits[suit] << '\n';
    }
 
 
@@ -169,18 +169,18 @@ Feel free to change the values of the cards.
        playing_card card2 (2,4);
        if (card1.is_greater (card2)) {
            card1.print ();
-           cout << "is greater than" << std::endl;
+           cout << "is greater than" << '\n';
            card2.print ();
        }
        else {
            card2.print ();
-           cout << "is greater than" << std::endl;
+           cout << "is greater than" << '\n';
            card1.print ();
        }
    }
 
 .. tb-choice::
-   :name: isGreater_function_1
+   :name: is_greater_function_1
 
    Select all **totally ordered** sets.
 
@@ -196,7 +196,7 @@ Feel free to change the values of the cards.
    - [ ] Animal
 
      Incorrect! We cannot say that one animal is greater than another.
-   - [ ] Card
+   - [ ] card
 
      Incorrect! Cards are partially ordered.
 
@@ -209,12 +209,12 @@ Feel free to change the values of the cards.
     playing_card card2 (1,12);
     if (card1.is_greater (card2)) {
        card1.print ();
-       std::cout << "is greater than" << std::endl;
+       std::cout << "is greater than" << '\n';
        card2.print ();
     }
     else {
        card2.print ();
-       std::cout << "is greater than" << std::endl;
+       std::cout << "is greater than" << '\n';
        card1.print ();
     }
    

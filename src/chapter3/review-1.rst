@@ -277,7 +277,7 @@ assess what you have learned in this chapter.
              #include <string>
 
              void greeting (string name) {
-                 std::cout << "hello, " << name << "!";
+                 std::cout << "hello, " << name << '!';
              }
 
              void goodbye (string name) {
@@ -338,7 +338,7 @@ assess what you have learned in this chapter.
              using namespace std;
 
              void order_food (string food, int quantity) {
-                 cout << "I'll have " << quantity << " " << food;
+                 cout << "I'll have " << quantity << ' ' << food;
              }
 
              int main () {
@@ -465,7 +465,7 @@ assess what you have learned in this chapter.
          ::
 
              void party (int day_of_month, string address) {
-                 cout <<"party on "<<day_of_month<<" at "<<address<<endl;
+                 cout <<"party on "<<day_of_month<<" at "<<address<<'\n';
              }
 
              void weekend(bool available){

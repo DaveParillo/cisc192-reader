@@ -119,7 +119,7 @@ Run the active code below. Uncomment the commented out code to see what happens!
        ranks[12] = "Queen";
        ranks[13] = "King";
 
-       std::cout << ranks[rank] << " of " << suits[suit] << std::endl;
+       std::cout << ranks[rank] << " of " << suits[suit] << '\n';
    }
 
 
@@ -149,17 +149,17 @@ Run the active code below. Uncomment the commented out code to see what happens!
    int main() {
        playing_card card (3, 8);
        card.print();
-       std::cout << "card_rank: " << card.get_rank() << "    card_suit: " << card.get_suit() << std::endl;
+       std::cout << "card_rank: " << card.get_rank() << "    card_suit: " << card.get_suit() << '\n';
        card.set_rank(12);
        card.set_suit(2);
        card.print();
-       std::cout << "card_rank: " << card.get_rank() << "    card_suit: " << card.get_suit() << std::endl;
+       std::cout << "card_rank: " << card.get_rank() << "    card_suit: " << card.get_suit() << '\n';
 
        // If you uncomment the following code, you'll get an error! We cannot directly
        // access the private data members of playing_card, which is why we use accessor functions.
 
        /*
-       cout << "card_rank: " << card.rank << "\t card_suit: " << card.suit << endl;
+       cout << "card_rank: " << card.rank << "\t card_suit: " << card.suit << '\n';
        card.rank = 4;
        card.suit = 0;
        */
@@ -196,16 +196,16 @@ Run the active code below. Uncomment the commented out code to see what happens!
 
    Multiple Response: Which of the following are examples of accessor functions?
 
-   - [x] getSuit
+   - [x] get_suit
 
      Correct!
-   - [x] setRank
+   - [x] set_rank
 
      Correct! "Setter" functions are also known as "mutator" functions.
    - [ ] print
 
      Incorrect!
-   - [x] getRank
+   - [x] get_rank
 
      Correct!
 

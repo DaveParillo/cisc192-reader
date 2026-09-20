@@ -105,7 +105,7 @@ More on scope and namespaces in the next chapter.
                 if (y > x) {
                    Bool = true;
                 }
-                cout << Bool << endl;
+                cout << Bool << '\n';
             }
 
 
@@ -175,10 +175,6 @@ More on scope and namespaces in the next chapter.
             Try again!
 
          .. tb-miss:: text:Bool#3
-
-            Try again!
-
-         .. tb-miss:: text:endl
 
             Try again!
 

@@ -11,7 +11,7 @@ Coding Practice
 
          .. tb-tab:: Question
 
-            Write the ``Cake`` structure, which has instance variables name, color, diameter, and has_icing.
+            Write the ``cake`` structure, which has instance variables name, color, diameter, and has_icing.
 
             .. tb-code:: cpp
                :name: cp_9_AC_1q
@@ -21,16 +21,16 @@ Coding Practice
                #include <iostream>
                using namespace std;
 
-               // Write your code for the struct Cake here.
+               // Write your code for the struct cake here.
 
                int main() {
-                   Cake c = { "Mary", "blue", 3.5, false };
+                   cake c = { "Mary", "blue", 3.5, false };
                } 
 
 
          .. tb-tab:: Answer
 
-            Below is one way to implement the program. We declare the ``Cake`` struct and list the instance 
+            Below is one way to implement the program. We declare the ``cake`` struct and list the instance 
             variables in order.
 
             .. tb-code:: cpp
@@ -41,7 +41,7 @@ Coding Practice
                #include <iostream>
                using namespace std;
 
-               struct Cake {
+               struct cake {
                    string name;
                    string color;
                    double diameter;
@@ -49,14 +49,14 @@ Coding Practice
                };
 
                int main() {
-                   Cake c = { "Mary", "blue", 3.5, false };
+                   cake c = { "Mary", "blue", 3.5, false };
                } 
 
    .. tb-tab:: Q2
 
-      Write the function ``printCakeInfo``, which prints the cake's information in the format
+      Write the function ``print_cake_info``, which prints the cake's information in the format
       "This is a ``color``, ``diameter`` inch diameter cake with/without icing." If ``name`` does not
-      have the value "n/a", ``printCakeInfo`` prints out "Happy birthdday ``name``! Your cake is ``color``,
+      have the value "n/a", ``print_cake_info`` prints out "Happy birthdday ``name``! Your cake is ``color``,
       has a ``diameter`` inch diameter, and comes with/without icing."
 
       .. tb-code:: cpp
@@ -67,20 +67,20 @@ Coding Practice
          #include <iostream>
          using namespace std;
 
-         struct Cake {
+         struct cake {
              string name;
              string color;
              double diameter;
              bool has_icing;
          };
 
-         // Write your code for the printCakeInfo function here.
+         // Write your code for the print_cake_info function here.
 
          int main() {
-             Cake c1 = { "n/a", "red", 12.5, true };
-             printCakeInfo (c1);
-             Cake c2 = { "Tom", "white", 10, false };
-             printCakeInfo (c2);
+             cake c1 = { "n/a", "red", 12.5, true };
+             print_cake_info (c1);
+             cake c2 = { "Tom", "white", 10, false };
+             print_cake_info (c2);
          }
 
    .. tb-tab:: Q3
@@ -90,7 +90,7 @@ Coding Practice
 
          .. tb-tab:: Question
 
-            Write the ``makeCake`` function, which prompts the user for a name,
+            Write the ``make_cake`` function, which prompts the user for a name,
             color, diameter, and whether or not they want icing. The function then
             returns the cake.
 
@@ -100,21 +100,21 @@ Coding Practice
                :compileargs: ['-Wall', '-std=c++11']
                :stdin: test
 
-               void printCakeInfo (Cake c) {
+               void print_cake_info (cake c) {
                    if (c.name == "n/a") {
                        if (c.has_icing) { 
-                           cout << "This is a " << c.color << "," << c.diameter << " inch diameter cake with icing." << endl;
+                           cout << "This is a " << c.color << ',' << c.diameter << " inch diameter cake with icing." << '\n';
                        } 
                        else {
-                           cout << "This is a " << c.color << "," << c.diameter << " inch diameter cake without icing." << endl;
+                           cout << "This is a " << c.color << ',' << c.diameter << " inch diameter cake without icing." << '\n';
                        }
                    } 
                    else {
                        if (c.has_icing) { 
-                           cout << "Happy birthday " << c.name << "! Your cake is " << c.color << ", has a " << c.diameter << " inch diameter, and comes with icing." << endl;
+                           cout << "Happy birthday " << c.name << "! Your cake is " << c.color << ", has a " << c.diameter << " inch diameter, and comes with icing." << '\n';
                        } 
                        else {
-                           cout << "Happy birthday " << c.name << "! Your cake is " << c.color << ", has a " << c.diameter << " inch diameter, and comes without icing." << endl;
+                           cout << "Happy birthday " << c.name << "! Your cake is " << c.color << ", has a " << c.diameter << " inch diameter, and comes without icing." << '\n';
                        }
                    } 
                }
@@ -131,25 +131,25 @@ Coding Practice
                #include <iostream>
                using namespace std;
 
-               struct Cake {
+               struct cake {
                    string name;
                    string color;
                    double diameter;
                    bool has_icing;
                };
 
-               void printCakeInfo (Cake c);
+               void print_cake_info (cake c);
 
-               // Write your code for the makeCake function here.
+               // Write your code for the make_cake function here.
 
                int main() {
-                   Cake input = makeCake ();
-                   printCakeInfo (input);
+                   cake input = make_cake ();
+                   print_cake_info (input);
                }
 
          .. tb-tab:: Answer
 
-            Below is one way to implement the program. We create a ``Cake`` for the user, read in the user's input using cin, and return the ``Cake``.
+            Below is one way to implement the program. We create a ``cake`` for the user, read in the user's input using cin, and return the ``cake``.
 
             .. tb-code:: cpp
                :name: cp_9_AC_3a-support
@@ -157,21 +157,21 @@ Coding Practice
                :compileargs: ['-Wall', '-std=c++11']
                :stdin: test
 
-               void printCakeInfo (Cake c) {
+               void print_cake_info (cake c) {
                    if (c.name == "n/a") {
                        if (c.has_icing) { 
-                           cout << "This is a " << c.color << "," << c.diameter << " inch diameter cake with icing." << endl;
+                           cout << "This is a " << c.color << ',' << c.diameter << " inch diameter cake with icing." << '\n';
                        } 
                        else {
-                           cout << "This is a " << c.color << "," << c.diameter << " inch diameter cake without icing." << endl;
+                           cout << "This is a " << c.color << ',' << c.diameter << " inch diameter cake without icing." << '\n';
                        }
                    } 
                    else {
                        if (c.has_icing) { 
-                           cout << "Happy birthday " << c.name << "! Your cake is " << c.color << ", has a " << c.diameter << " inch diameter, and comes with icing." << endl;
+                           cout << "Happy birthday " << c.name << "! Your cake is " << c.color << ", has a " << c.diameter << " inch diameter, and comes with icing." << '\n';
                        } 
                        else {
-                           cout << "Happy birthday " << c.name << "! Your cake is " << c.color << ", has a " << c.diameter << " inch diameter, and comes without icing." << endl;
+                           cout << "Happy birthday " << c.name << "! Your cake is " << c.color << ", has a " << c.diameter << " inch diameter, and comes without icing." << '\n';
                        }
                    } 
                }
@@ -187,17 +187,17 @@ Coding Practice
                #include <iostream>
                using namespace std;
 
-               struct Cake {
+               struct cake {
                    string name;
                    string color;
                    double diameter;
                    bool has_icing;
                };
 
-               void printCakeInfo (Cake c);
+               void print_cake_info (cake c);
 
-               Cake makeCake () {
-                   Cake input;
+               cake make_cake () {
+                   cake input;
                    string name, color;
                    double diameter;
                    char icing;
@@ -222,14 +222,14 @@ Coding Practice
                }
 
                int main() {
-                   Cake input = makeCake ();
-                   printCakeInfo (input);
+                   cake input = make_cake ();
+                   print_cake_info (input);
                }
 
    .. tb-tab:: Q4
 
-      Write the function ``changeCakeDiameter``, which takes a ``Cake`` and a ``double`` as a parameter. 
-      ``changeCakeDiameter`` then multiplies the original diameter by the double and modifies the cake
+      Write the function ``change_cake_diameter``, which takes a ``cake`` and a ``double`` as a parameter. 
+      ``change_cake_diameter`` then multiplies the original diameter by the double and modifies the cake
       to have this new diameter.
 
       .. tb-code:: cpp
@@ -237,27 +237,27 @@ Coding Practice
          :hidden:
          :compileargs: ['-Wall', '-std=c++11']
 
-         void printCakeInfo (Cake c) {
+         void print_cake_info (cake c) {
              if (c.name == "n/a") {
                  if (c.has_icing) { 
-                     cout << "This is a " << c.color << "," << c.diameter << " inch diameter cake with icing." << endl;
+                     cout << "This is a " << c.color << ',' << c.diameter << " inch diameter cake with icing." << '\n';
                  } 
                  else {
-                     cout << "This is a " << c.color << "," << c.diameter << " inch diameter cake without icing." << endl;
+                     cout << "This is a " << c.color << ',' << c.diameter << " inch diameter cake without icing." << '\n';
                  }
              } 
              else {
                  if (c.has_icing) { 
-                     cout << "Happy birthday " << c.name << "! Your cake is " << c.color << ", has a " << c.diameter << " inch diameter, and comes with icing." << endl;
+                     cout << "Happy birthday " << c.name << "! Your cake is " << c.color << ", has a " << c.diameter << " inch diameter, and comes with icing." << '\n';
                  } 
                  else {
-                     cout << "Happy birthday " << c.name << "! Your cake is " << c.color << ", has a " << c.diameter << " inch diameter, and comes without icing." << endl;
+                     cout << "Happy birthday " << c.name << "! Your cake is " << c.color << ", has a " << c.diameter << " inch diameter, and comes without icing." << '\n';
                  }
              } 
          }
 
-         Cake makeCake () {
-             Cake input;
+         cake make_cake () {
+             cake input;
              string name, color;
              double diameter;
              char icing;
@@ -291,22 +291,22 @@ Coding Practice
          #include <iostream>
          using namespace std;
 
-         struct Cake {
+         struct cake {
              string name;
              string color;
              double diameter;
              bool has_icing;
          };
 
-         void printCakeInfo (Cake c);
-         Cake makeCake ();
+         void print_cake_info (cake c);
+         cake make_cake ();
 
-         // Write your code for the changeCakeDiameter function here.
+         // Write your code for the change_cake_diameter function here.
 
          int main() {
-             Cake original = { "John", "green", 8.5, true };
-             changeCakeDiameter (original, 2);
-             printCakeInfo (original);
+             cake original = { "John", "green", 8.5, true };
+             change_cake_diameter (original, 2);
+             print_cake_info (original);
          }
 
    .. tb-tab:: Q5
@@ -316,9 +316,9 @@ Coding Practice
 
          .. tb-tab:: Question
 
-            Write the ``editCake`` function, which prompts the user for a new name,
+            Write the ``edit_cake`` function, which prompts the user for a new name,
             color, diameter, and whether or not they want icing. The function modifies 
-            the original cake that is passed in as a parameter. Use the makeCake function 
+            the original cake that is passed in as a parameter. Use the make_cake function 
             in your implementation to avoid duplicate code!
 
             .. tb-code:: cpp
@@ -327,27 +327,27 @@ Coding Practice
                :compileargs: ['-Wall', '-std=c++11']
                :stdin: test
 
-                void printCakeInfo (Cake c) {
+                void print_cake_info (cake c) {
                     if (c.name == "n/a") {
                         if (c.has_icing) { 
-                            cout << "This is a " << c.color << "," << c.diameter << " inch diameter cake with icing." << endl;
+                            cout << "This is a " << c.color << ',' << c.diameter << " inch diameter cake with icing." << '\n';
                         } 
                         else {
-                            cout << "This is a " << c.color << "," << c.diameter << " inch diameter cake without icing." << endl;
+                            cout << "This is a " << c.color << ',' << c.diameter << " inch diameter cake without icing." << '\n';
                         }
                     } 
                     else {
                         if (c.has_icing) { 
-                            cout << "Happy birthday " << c.name << "! Your cake is " << c.color << ", has a " << c.diameter << " inch diameter, and comes with icing." << endl;
+                            cout << "Happy birthday " << c.name << "! Your cake is " << c.color << ", has a " << c.diameter << " inch diameter, and comes with icing." << '\n';
                         } 
                         else {
-                            cout << "Happy birthday " << c.name << "! Your cake is " << c.color << ", has a " << c.diameter << " inch diameter, and comes without icing." << endl;
+                            cout << "Happy birthday " << c.name << "! Your cake is " << c.color << ", has a " << c.diameter << " inch diameter, and comes without icing." << '\n';
                         }
                     } 
                 }
 
-                Cake makeCake () {
-                    Cake input;
+                cake make_cake () {
+                    cake input;
                     string name, color;
                     double diameter;
                     char icing;
@@ -383,27 +383,27 @@ Coding Practice
                #include <iostream>
                using namespace std;
 
-               struct Cake {
+               struct cake {
                    string name;
                    string color;
                    double diameter;
                    bool has_icing;
                };
 
-               void printCakeInfo (Cake c);
-               Cake makeCake ();
+               void print_cake_info (cake c);
+               cake make_cake ();
 
-               // Write your code for the editCake function here.
+               // Write your code for the edit_cake function here.
 
                int main() {
-                   Cake original = { "Oops", "orange", 185, true };
-                   editCake (original);
-                   printCakeInfo (original);
+                   cake original = { "Oops", "orange", 185, true };
+                   edit_cake (original);
+                   print_cake_info (original);
                }
 
          .. tb-tab:: Answer
 
-            Below is one way to implement the program. We call ``makeCake`` in ``editCake`` and then set the original cake
+            Below is one way to implement the program. We call ``make_cake`` in ``edit_cake`` and then set the original cake
             equal to the new one.
 
             .. tb-code:: cpp
@@ -412,27 +412,27 @@ Coding Practice
                :compileargs: ['-Wall', '-std=c++11']
                :stdin: test
 
-                void printCakeInfo (Cake c) {
+                void print_cake_info (cake c) {
                     if (c.name == "n/a") {
                         if (c.has_icing) { 
-                            cout << "This is a " << c.color << "," << c.diameter << " inch diameter cake with icing." << endl;
+                            cout << "This is a " << c.color << ',' << c.diameter << " inch diameter cake with icing." << '\n';
                         } 
                         else {
-                            cout << "This is a " << c.color << "," << c.diameter << " inch diameter cake without icing." << endl;
+                            cout << "This is a " << c.color << ',' << c.diameter << " inch diameter cake without icing." << '\n';
                         }
                     } 
                     else {
                         if (c.has_icing) { 
-                            cout << "Happy birthday " << c.name << "! Your cake is " << c.color << ", has a " << c.diameter << " inch diameter, and comes with icing." << endl;
+                            cout << "Happy birthday " << c.name << "! Your cake is " << c.color << ", has a " << c.diameter << " inch diameter, and comes with icing." << '\n';
                         } 
                         else {
-                            cout << "Happy birthday " << c.name << "! Your cake is " << c.color << ", has a " << c.diameter << " inch diameter, and comes without icing." << endl;
+                            cout << "Happy birthday " << c.name << "! Your cake is " << c.color << ", has a " << c.diameter << " inch diameter, and comes without icing." << '\n';
                         }
                     } 
                 }
 
-                Cake makeCake () {
-                    Cake input;
+                cake make_cake () {
+                    cake input;
                     string name, color;
                     double diameter;
                     char icing;
@@ -467,30 +467,30 @@ Coding Practice
                #include <iostream>
                using namespace std;
 
-               struct Cake {
+               struct cake {
                    string name;
                    string color;
                    double diameter;
                    bool has_icing;
                };
 
-               void printCakeInfo (Cake c);
-               Cake makeCake ();
+               void print_cake_info (cake c);
+               cake make_cake ();
 
-               void editCake (Cake& c) {
-                   Cake newCake = makeCake ();
-                   c = newCake;
+               void edit_cake (cake& c) {
+                   cake new_cake = make_cake ();
+                   c = new_cake;
                }
 
                int main() {
-                   Cake original = { "Oops", "orange", 185, true };
-                   editCake (original);
-                   printCakeInfo (original);
+                   cake original = { "Oops", "orange", 185, true };
+                   edit_cake (original);
+                   print_cake_info (original);
                }
 
    .. tb-tab:: Q6
 
-      Write the struct ``Shirt``, which has the instance variables color and size.
+      Write the struct ``shirt``, which has the instance variables color and size.
 
       .. tb-code:: cpp
          :name: cp_9_AC_6q
@@ -500,10 +500,10 @@ Coding Practice
          #include <iostream>
          using namespace std;
 
-         // Write your code for the struct Shirt here.
+         // Write your code for the struct shirt here.
 
          int main () {
-             Shirt t = { "blue", 'L' };
+             shirt t = { "blue", 'L' };
          }
 
    .. tb-tab:: Q7
@@ -513,7 +513,7 @@ Coding Practice
 
          .. tb-tab:: Question
 
-            Write the ``Pants`` structure, which has instance variables size and material.
+            Write the ``pants`` structure, which has instance variables size and material.
 
             .. tb-code:: cpp
                :name: cp_9_AC_7q
@@ -523,16 +523,16 @@ Coding Practice
                #include <iostream>
                using namespace std;
 
-               // Write your code for the struct Pants here.
+               // Write your code for the struct pants here.
 
                int main() {
-                   Pants p = { 'S', "denim" };
+                   pants p = { 'S', "denim" };
                } 
 
 
          .. tb-tab:: Answer
 
-            Below is one way to implement the program. We declare the ``Pants`` struct and list the instance 
+            Below is one way to implement the program. We declare the ``pants`` struct and list the instance 
             variables in order.
 
             .. tb-code:: cpp
@@ -543,18 +543,18 @@ Coding Practice
                #include <iostream>
                using namespace std;
 
-               struct Pants {
+               struct pants {
                    char size;
                    string material;
                };
 
                int main() {
-                   Pants p = { 'S', "denim" };
+                   pants p = { 'S', "denim" };
                } 
 
    .. tb-tab:: Q8
 
-      Write the struct ``Outfit``, which is a nested structure that has a ``Shirt``, ``Pants``, and has_hat.
+      Write the struct ``outfit``, which is a nested structure that has a ``shirt``, ``pants``, and has_hat.
 
       .. tb-code:: cpp
          :name: cp_9_AC_8q
@@ -564,12 +564,12 @@ Coding Practice
          #include <iostream>
          using namespace std;
 
-         // Write your code for the struct Outfit here.
+         // Write your code for the struct outfit here.
 
          int main () {
-             Shirt t = { "blue", 'L' };
-             Pants p = { 'S', "denim" };
-             Outfit o = { t, p, true };
+             shirt t = { "blue", 'L' };
+             pants p = { 'S', "denim" };
+             outfit o = { t, p, true };
          }
 
    .. tb-tab:: Q9
@@ -579,8 +579,8 @@ Coding Practice
 
          .. tb-tab:: Question
 
-            Write the ``printOutfit`` function, which prints out details of the outfit.
-            The output below should be "Shirt: blue and L; Pants: S and denim; has hat".
+            Write the ``print_outfit`` function, which prints out details of the outfit.
+            The output below should be "shirt: blue and L; pants: S and denim; has hat".
 
             .. tb-code:: cpp
                :name: cp_9_AC_9q
@@ -590,29 +590,29 @@ Coding Practice
                #include <iostream>
                using namespace std;
 
-               struct Shirt {
+               struct shirt {
                    string color;
                    char size;
                };
 
-               struct Pants {
+               struct pants {
                    char size;
                    string material;
                };
 
-               struct Outfit {
-                   Shirt s;
-                   Pants p;
+               struct outfit {
+                   shirt s;
+                   pants p;
                    bool has_hat;
                };
 
-               // Write your code for the printOutfit function here.
+               // Write your code for the print_outfit function here.
 
                int main() {
-                   Shirt t = { "blue", 'L' };
-                   Pants p = { 'S', "denim" };
-                   Outfit o = { t, p, true };
-                   printOutfit (o);
+                   shirt t = { "blue", 'L' };
+                   pants p = { 'S', "denim" };
+                   outfit o = { t, p, true };
+                   print_outfit (o);
                } 
 
 
@@ -628,50 +628,50 @@ Coding Practice
                #include <iostream>
                using namespace std;
 
-               struct Shirt {
+               struct shirt {
                    string color;
                    char size;
                };
 
-               struct Pants {
+               struct pants {
                    char size;
                    string material;
                };
 
-               struct Outfit {
-                   Shirt s;
-                   Pants p;
+               struct outfit {
+                   shirt s;
+                   pants p;
                    bool has_hat;
                };
 
-               void printOutfit (Outfit o) {
-               // "Shirt: blue and L; Pants: S and denim; has hat"
-                   cout << "Shirt: " << o.s.color << " and " << o.s.size << "; Pants:" << o.p.size << " and " << o.p.material << "; ";
+               void print_outfit (outfit o) {
+               // "shirt: blue and L; pants: S and denim; has hat"
+                   cout << "shirt: " << o.s.color << " and " << o.s.size << "; pants:" << o.p.size << " and " << o.p.material << "; ";
                    if (o.has_hat) {
-                       cout << "has hat" << endl;
+                       cout << "has hat" << '\n';
                    }
                    else {
-                       cout << "does not have hat" << endl;
+                       cout << "does not have hat" << '\n';
                    }
                }
 
                int main() {
-                   Shirt t = { "blue", 'L' };
-                   Pants p = { 'S', "denim" };
-                   Outfit o = { t, p, true };
-                   printOutfit (o);
+                   shirt t = { "blue", 'L' };
+                   pants p = { 'S', "denim" };
+                   outfit o = { t, p, true };
+                   print_outfit (o);
                } 
 
    .. tb-tab:: Q10
 
-      Write the ``changeShirts`` and ``changePants`` functions, 
-      which both take an ``Outfit`` as a parameter. 
-      ``changeShirts`` also takes a ``Shirt`` as a parameter and 
-      ``changePants`` also takes a ``Pants`` as a parameter. 
-      Each function modifies the ``Outfit``
+      Write the ``change_shirts`` and ``change_pants`` functions, 
+      which both take an ``outfit`` as a parameter. 
+      ``change_shirts`` also takes a ``shirt`` as a parameter and 
+      ``change_pants`` also takes a ``pants`` as a parameter. 
+      Each function modifies the ``outfit``
       and changes the shirt or pants to the new input.
 
-      If you did Q9, then feel free to copy the ``printOutfit`` function
+      If you did Q9, then feel free to copy the ``print_outfit`` function
       from there into this program.
 
       .. tb-code:: cpp
@@ -682,34 +682,34 @@ Coding Practice
          #include <iostream>
          using namespace std;
 
-         struct Shirt {
+         struct shirt {
              string color;
              char size;
          };
 
-         struct Pants {
+         struct pants {
              char size;
              string material;
          };
 
-         struct Outfit {
-             Shirt s;
-             Pants p;
+         struct outfit {
+             shirt s;
+             pants p;
              bool has_hat;
          };
 
-         // Write your code for the changeShirts function here.
+         // Write your code for the change_shirts function here.
 
-         // Write your code for the changePants function here.
+         // Write your code for the change_pants function here.
 
          int main() {
-             Shirt t = { "blue", 'L' };
-             Pants p = { 'S', "denim" };
-             Outfit o = { t, p, true };
-             printOutfit (o);
-             Shirt newShirt = { "red", 'M' };
-             Pants newPants = { 'M', "khakis" };
-             changeShirts (o, newShirt);
-             changePants (o, newPants);
-             printOutfit (o);
+             shirt t = { "blue", 'L' };
+             pants p = { 'S', "denim" };
+             outfit o = { t, p, true };
+             print_outfit (o);
+             shirt new_shirt = { "red", 'M' };
+             pants new_pants = { 'M', "khakis" };
+             change_shirts (o, new_shirt);
+             change_pants (o, new_pants);
+             print_outfit (o);
          } 

@@ -77,52 +77,52 @@ it is being passed by reference), and assign the return value to a
 
          .. code-block:: cpp
 
-            struct Point {
+            struct point {
               double x, y;
             };
 
-            struct Rectangle {
-              Point corner;
+            struct rectangle {
+              point corner;
               double width, height;
             };
 
-            Rectangle addTwo (Point& p) {
+            rectangle add_two (point& p) {
               double x = p.x + 2;
               double y = p.y + 2;
-              Point result = {x, y};
+              point result = {x, y};
               return result;
             }
 
-            void printPoint (Point p) {
-              cout << "(" << p.x << ", " << p.y << ")" << endl;
+            void print_point (point p) {
+              cout << '(' << p.x << ", " << p.y << ')' << '\n';
             }
 
-            Point findCenter (Rectangle& box) {
+            point find_center (rectangle& box) {
               double x = box.corner.x + box.width/2;
               double y = box.corner.y + box.height/2;
-              Point result = {x, y};
+              point result = {x, y};
               return result;
             }
 
             int main() {
-              Rectangle box = { {0.0, 0.0}, 100, 200 };
-              Point center = findCenter (box);
-              cout << addTwo (center) << endl;
-              printPoint (center);
+              rectangle box = { {0.0, 0.0}, 100, 200 };
+              point center = find_center (box);
+              cout << add_two (center) << '\n';
+              print_point (center);
             }
 
-         - [ ] ``addTwo``, ``printPoint``, ``findCenter``
+         - [ ] ``add_two``, ``print_point``, ``find_center``
 
            - Look at the return type, found before the function name in its definition.
-         - [ ] ``printPoint``, ``findCenter``
+         - [ ] ``print_point``, ``find_center``
 
            - Look at the return type, found before the function name in its definition.
 
-         - [x] ``addTwo``, ``findCenter``
+         - [x] ``add_two``, ``find_center``
 
            + Correct!
 
-         - [ ] ``Point``, ``Rectangle``
+         - [ ] ``point``, ``rectangle``
 
            - These are structures, not functions.
 

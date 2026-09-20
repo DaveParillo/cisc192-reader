@@ -29,7 +29,7 @@ stored key; ``second`` is true only if a new key was inserted. Trying to insert
 an existing key leaves the set unchanged. ``contains`` is a C++20 member that
 answers a membership question without changing the container.
 
-``find(key)`` returns an iterator, not a numeric index. Compare it with
+``find(key)`` returns an iterator, not a numeric index. compare it with
 ``end()`` before dereferencing it. Set keys cannot be changed through their
 iterators: changing a key could break the ordering. Erase the old key and
 insert a new one instead. ``erase(key)`` returns the number of keys removed,

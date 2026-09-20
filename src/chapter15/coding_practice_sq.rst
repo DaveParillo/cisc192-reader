@@ -54,19 +54,19 @@ Coding Practice
             {{group}}
                std::cout << "Enter the name of the file: ";
                std::cin >> file_in;
-               std::cout << file_in << std::endl;
+               std::cout << file_in << '\n';
             {{endgroup}}
             {{group}}
                std::cout << "Enter an integer: ";
                std::cin >> n;
-               std::cout << n << std::endl;
+               std::cout << n << '\n';
             {{endgroup}}
             {{group}}
                std::ifstream in_file(file_in);
             {{endgroup}}
             {{group}}
                if (in_file.good() == false) {
-                  std::cout << "Unable to open the file named " << file_in << " and output " << n << " lines." << std::endl;
+                  std::cout << "Unable to open the file named " << file_in << " and output " << n << " lines." << '\n';
                   std::exit(1);
                }
             {{endgroup}}
@@ -77,7 +77,7 @@ Coding Practice
                   std::getline(in_file, line);
             {{endgroup}}
             {{group}}
-                  std::cout << line << std::endl;
+                  std::cout << line << '\n';
             {{endgroup}}
             {{group}}
                }
@@ -130,11 +130,11 @@ Coding Practice
             // Do not modify the code below
             std::ifstream student_output("powers.txt");
             if (!student_output.good()) {
-                  std::cout << "Error opening student's output." << std::endl;
+                  std::cout << "Error opening student's output." << '\n';
             }
             std::string answer;
             while (std::getline(student_output, answer)) {
-                  std::cout << answer << std::endl;
+                  std::cout << answer << '\n';
             }
          }
 
@@ -164,14 +164,14 @@ Coding Practice
                std::cin >> n;
             {{endgroup}}
             {{group}}
-               std::cout << n << std::endl;
+               std::cout << n << '\n';
             {{endgroup}}
             {{group}}
                std::ofstream outfile ("powers.txt");
             {{endgroup}}
             {{group}}
                if (outfile.good() == false) {
-                  std::cout << "Unable to open output file." << std::endl;
+                  std::cout << "Unable to open output file." << '\n';
                   std::exit (1);
                }
             {{endgroup}}
@@ -182,7 +182,7 @@ Coding Practice
                   for (std::size_t i = 0; i < n; i++) {
             {{endgroup}}
             {{group}}
-                        outfile << std::pow(2,i) << std::endl;
+                        outfile << std::pow(2,i) << '\n';
             {{endgroup}}
             {{group}}
                   }
@@ -195,7 +195,7 @@ Coding Practice
             {{endgroup}}
             {{group}}
                if (!student_output.good()) {
-                  std::cout << "Error opening student's output." << std::endl;
+                  std::cout << "Error opening student's output." << '\n';
                }
             {{endgroup}}
             {{group}}
@@ -203,7 +203,7 @@ Coding Practice
             {{endgroup}}
             {{group}}
                while (std::getline(student_output, answer)) {
-                  std::cout << answer << std::endl;
+                  std::cout << answer << '\n';
                }
             {{endgroup}}
             {{group}}
@@ -260,7 +260,7 @@ Coding Practice
             {{endgroup}}
             {{group}}
                if (!in_file.good()) {
-                  std::cout << "Unable to open file." << std::endl;
+                  std::cout << "Unable to open file." << '\n';
                   std::exit(1);
                }
             {{endgroup}}
@@ -298,7 +298,7 @@ Coding Practice
                }
             {{endgroup}}
             {{group}}
-               std::cout << count << std::endl;
+               std::cout << count << '\n';
             {{endgroup}}
             {{group}}
             }
@@ -363,7 +363,7 @@ Coding Practice
                std::cin >> word;
             {{endgroup}}
             {{group}}
-               std::cout << word << std::endl;
+               std::cout << word << '\n';
             {{endgroup}}
             {{group}}
                std::string replace = "shrimp";
@@ -399,7 +399,7 @@ Coding Practice
                   }
             {{endgroup}}
             {{group}}
-                  std::cout << line<< std::endl;
+                  std::cout << line<< '\n';
             {{endgroup}}
             {{group}}
                }

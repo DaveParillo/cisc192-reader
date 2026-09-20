@@ -63,7 +63,7 @@ function will allow you to verify that you have done this correctly.
       ranks[12] = "Queen";
       ranks[13] = "King";
 
-      std::cout << ranks[rank] << " of " << suits[suit] << std::endl;
+      std::cout << ranks[rank] << " of " << suits[suit] << '\n';
     }
 
     void print_deck (const std::vector<playing_card>& deck) {

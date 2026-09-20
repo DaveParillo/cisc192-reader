@@ -157,11 +157,11 @@ The active code below uses tab characters to make the table neater.
               while (x <= 5) {
             {{endgroup}}
             {{group}}
-                cout << x << "\t" << pow(2, x) << endl;
+                cout << x << '\t' << pow(2, x) << '\n';
             {{endgroup}}
             {{distractor}}
             {{group}}
-                cout << x << "\t" << pow(x, 2) << endl;
+                cout << x << '\t' << pow(x, 2) << '\n';
             {{endgroup}}
             {{group}}
                 x++;
@@ -195,11 +195,11 @@ The active code below uses tab characters to make the table neater.
               while (x <= 5) {
             {{endgroup}}
             {{group}}
-                cout << x << "\t" << pow(n, x) << endl;
+                cout << x << '\t' << pow(n, x) << '\n';
             {{endgroup}}
             {{distractor}}
             {{group}}
-                cout << x << "\t" << pow(5, x) << endl;
+                cout << x << '\t' << pow(5, x) << '\n';
             {{endgroup}}
             {{group}}
                 x++;

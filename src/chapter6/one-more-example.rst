@@ -24,7 +24,7 @@ example on the previous page.
    }
 
    int main () {
-       std::cout << factorial(3) << std::endl;
+       std::cout << factorial(3) << '\n';
    }
 
 From now on I will tend to use the more concise version, but I recommend
@@ -63,7 +63,7 @@ fibonacci sequence.
    }
 
    int main () {
-       std::cout << fibonacci(3) << std::endl;
+       std::cout << fibonacci(3) << '\n';
    }
 
 

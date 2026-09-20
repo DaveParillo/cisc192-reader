@@ -47,7 +47,7 @@ To test this function, I wrote the following:
      std::vector<playing_card> deck = build_deck ();
 
      std::ptrdiff_t index = find (deck[17], deck);
-     std::cout << "I found the card at index = " << index << std::endl;
+     std::cout << "I found the card at index = " << index << '\n';
 
 The output of this code is
 
@@ -94,7 +94,7 @@ It returns the index that the card was located at.
       ranks[12] = "Queen";
       ranks[13] = "King";
 
-      std::cout << ranks[rank] << " of " << suits[suit] << std::endl;
+      std::cout << ranks[rank] << " of " << suits[suit] << '\n';
     }
 
     void print_deck (const std::vector<playing_card>& deck) {
@@ -182,9 +182,9 @@ It returns the index that the card was located at.
    ::
 
      int main() {
-        EuchreDeck = build_euchre_deck();
+        euchre_deck = build_euchre_deck();
         playing_card card (3, 6);
-        find(card, EuchreDeck);
+        find(card, euchre_deck);
       }
 
    {{blank}}.

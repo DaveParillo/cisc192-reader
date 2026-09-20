@@ -25,7 +25,7 @@ single, sorted deck. Try this out with a deck of cards:
    they are face up the lowest cards are on top. Place both decks face
    up in front of you.
 
-#. Compare the top card from each deck and choose the lower one. Flip it
+#. compare the top card from each deck and choose the lower one. Flip it
    over and add it to the merged deck.
 
 #. Repeat step two until one of the decks is empty. Then take the
@@ -187,7 +187,7 @@ at the end for help.
        ranks[12] = "Queen";
        ranks[13] = "King";
 
-       cout << ranks[rank] << " of " << suits[suit] << std::endl;
+       cout << ranks[rank] << " of " << suits[suit] << '\n';
    }
 
    bool playing_card::is_greater (const playing_card& c2) const {
@@ -352,18 +352,18 @@ at the end for help.
        // Sort each half
        d1.sort_deck();
        d2.sort_deck();
-       cout << "Sorted first half:" << std::endl;
+       cout << "Sorted first half:" << '\n';
        d1.print();
-       cout << std::endl;
-       cout << "Sorted second half:" << std::endl;
+       cout << '\n';
+       cout << "Sorted second half:" << '\n';
        d2.print();
-       cout << std::endl;
+       cout << '\n';
 
        // Merge sorted decks together
        card_deck finished = merge(d1, d2);
 
        // We should see a sorted standard deck of 52 cards
-       cout << "Merged sorted full deck:" << std::endl;
+       cout << "Merged sorted full deck:" << '\n';
        finished.print();
    }
 
@@ -489,7 +489,7 @@ deck of cards. If you get stuck, you can reveal the extra problems at the end fo
        ranks[12] = "Queen";
        ranks[13] = "King";
 
-       std::cout << ranks[rank] << " of " << suits[suit] << std::endl;
+       std::cout << ranks[rank] << " of " << suits[suit] << '\n';
    }
 
    bool playing_card::is_greater (const playing_card& c2) const {

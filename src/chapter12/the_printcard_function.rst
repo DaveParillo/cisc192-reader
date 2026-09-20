@@ -59,7 +59,7 @@ on which it is invoked:
      ranks[12] = "Queen";
      ranks[13] = "King";
 
-     std::cout << ranks[rank] << " of " << suits[suit] << std::endl;
+     std::cout << ranks[rank] << " of " << suits[suit] << '\n';
    }
 
 The expression ``suits[suit]`` means “use the instance variable ``suit``
@@ -117,7 +117,7 @@ change the output from the ``playing_card::print()`` function.
      ranks[12] = "Queen";
      ranks[13] = "King";
 
-      std::cout << ranks[rank] << " of " << suits[suit] << std::endl;
+      std::cout << ranks[rank] << " of " << suits[suit] << '\n';
    }
 
 
@@ -153,7 +153,7 @@ output uses human-readable formats. On the other hand, it is often
 helpful for the programmer if the mappings are easy to remember.
 
 .. tb-choice::
-   :name: printCard_function_1
+   :name: print_card_function_1
 
    How would we select the appropriate string for the instance variable ``rank``?
 
@@ -188,7 +188,7 @@ helpful for the programmer if the mappings are easy to remember.
       :incorrect: Incorrect!  Try this input on the code above!
 
 .. tb-choice::
-   :name: printCard_function_3
+   :name: print_card_function_3
 
    Does it matter how we encode a mapping?
 

@@ -57,31 +57,31 @@ Also, it is common to refer to all user-defined types in C++ as
 .. tb-choice::
    :name: question14_2_2
 
-   How can we change ``Deck``, which is currently a ``struct``, into a ``class``? 
+   How can we change ``deck``, which is currently a ``struct``, into a ``class``? 
 
    .. code-block:: cpp
 
-      struct Deck {
+      struct deck {
       private:
-        vector<Card> cards;
+        vector<card> cards;
 
       public:
-        Deck ();
-        Deck (int n);
+        deck ();
+        deck (int n);
 
         void print () const;
-        void swapCards (int index1, int index2);
-        int findLowestCard (int index);
-        void shuffleDeck ();
-        void sortDeck ();
-        Deck subdeck (int low, int high) const;
-        Deck mergeSort () const;
-        Deck mergeSort (Deck deck) const;
+        void swap_cards (int index1, int index2);
+        int find_lowest_card (int index);
+        void shuffle_deck ();
+        void sort_deck ();
+        deck subdeck (int low, int high) const;
+        deck merge_sort () const;
+        deck merge_sort (deck deck) const;
       };
 
    - [ ] Remove the ``private:`` label.
 
-     Incorrect! ``Deck`` is still a ``struct``.
+     Incorrect! ``deck`` is still a ``struct``.
    - [ ] Change ``struct`` to ``class`` and remove the ``public:`` label.
 
      Incorrect! We don't want to make the constructors and all member functions private.
@@ -90,7 +90,7 @@ Also, it is common to refer to all user-defined types in C++ as
      Incorrect! We don't want to make the constructors and all member functions private.
    - [x] Change ``struct`` to ``class``.
 
-     Correct! ``Deck`` is now a ``class`` and it's okay that we kept the ``private:`` label.
+     Correct! ``deck`` is now a ``class`` and it's okay that we kept the ``private:`` label.
 
 .. tb-choice::
    :name: question14_2_3

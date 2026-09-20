@@ -14,7 +14,7 @@ Multiple Choice Exercises
        int main() {
          Month m1 = JUL;
          Month m2 = NOV;
-         cout << m1 << " " << m2 << endl;
+         cout << m1 << ' ' << m2 << '\n';
        }
 
    - [ ] JULY NOVEMBER
@@ -122,28 +122,28 @@ Multiple Choice Exercises
 .. tb-choice::
    :name: mce_13_4
 
-   Take a look at the ``struct`` definition of ``Entry``. If we wanted to make a
-   ``struct`` called ``Dictionary``, how can we create a ``vector`` of ``Entry``\s
+   Take a look at the ``struct`` definition of ``entry``. If we wanted to make a
+   ``struct`` called ``Dictionary``, how can we create a ``vector`` of ``entry``\s
    as a member variable?
 
    .. code-block:: cpp
 
-       struct Entry {
+       struct entry {
          string word;
          int page;
        }
 
-   - [x] ``vector<Entry> entries;``
+   - [x] ``vector<entry> entries;``
 
-     + We create a ``vector`` with type ``Entry``.
+     + We create a ``vector`` with type ``entry``.
 
-   - [ ] ``Entry entries``
+   - [ ] ``entry entries``
 
-     - This only creates one ``Entry``.
+     - This only creates one ``entry``.
 
-   - [ ] ``vector<Dictionary> Entry``
+   - [ ] ``vector<Dictionary> entry``
 
-     - This creates a ``vector`` of ``Dictionary``\s called ``Entry``.
+     - This creates a ``vector`` of ``Dictionary``\s called ``entry``.
 
    - [ ] We can't make an object that contains a ``vector``.
 
@@ -156,35 +156,35 @@ Multiple Choice Exercises
 
    .. code-block:: cpp
 
-       struct Card {
+       struct card {
          int suit, rank;
 
-         Card ();
-         Card (int s, int r);
+         card ();
+         card (int s, int r);
 
          void print () const;
-         bool isGreater (const Card& c2) const;
-         int find (const Deck& deck) const;
+         bool is_greater (const card& c2) const;
+         int find (const deck& deck) const;
        };
 
-       struct Deck {
-         vector<Card> cards;
+       struct deck {
+         vector<card> cards;
 
-         Deck ();
-         Deck (int n);
+         deck ();
+         deck (int n);
          void print () const;
-         int find (const Card& card) const;
+         int find (const card& card) const;
        };
 
-   - [ ] We can't have a ``vector`` in ``Deck``.
+   - [ ] We can't have a ``vector`` in ``deck``.
 
      - We are allowed to have ``vector``\s in objects.
 
-   - [x] The definition of ``Card::find()`` is invalid.
+   - [x] The definition of ``card::find()`` is invalid.
 
-     + The definition references ``Deck``, but ``Deck`` is defined after ``Card``.
+     + The definition references ``deck``, but ``deck`` is defined after ``card``.
 
-   - [ ] We can't define ``print()`` in both ``Card`` and in ``Deck``.
+   - [ ] We can't define ``print()`` in both ``card`` and in ``deck``.
 
      - Although they have the same name, these are two different ``print()`` functions.
 
@@ -279,19 +279,19 @@ Multiple Choice Exercises
 .. tb-choice::
    :name: mce_13_10
 
-   What is the amount of time that mergeSort takes?
+   What is the amount of time that merge_sort takes?
 
    - [x] n log n
 
-     + This makes mergeSort faster than our previous version of selection sort.
+     + This makes merge_sort faster than our previous version of selection sort.
 
    - [ ] n!
 
-     - mergeSort runs faster than factorial time.
+     - merge_sort runs faster than factorial time.
 
    - [ ] logn
 
-     - mergeSort runs slower than logarithmic time.
+     - merge_sort runs slower than logarithmic time.
 
    - [ ] n^2
 
@@ -300,7 +300,7 @@ Multiple Choice Exercises
 .. tb-choice::
    :name: mce_13_11
 
-   What kind of sorting algorithm is our ``sortDeck`` function? You are encouraged to search up these different sorting algorithms!
+   What kind of sorting algorithm is our ``sort_deck`` function? You are encouraged to search up these different sorting algorithms!
 
    - [ ] Bubble sort
 

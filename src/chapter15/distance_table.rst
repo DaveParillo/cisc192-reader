@@ -107,7 +107,7 @@ we print a dash instead of inventing a distance or searching for an indirect rou
            for (const auto& destination : cities) {
                auto position = neighbors.find(destination);
                if (position == neighbors.end()) {
-                   cout << std::setw(16) << "-";
+                   cout << std::setw(16) << '-';
                } else {
                    cout << std::setw(16) << position->second;
                }

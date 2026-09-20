@@ -157,7 +157,7 @@ the argument we provide.
                index = city.find('b'); #distractor
             {{endgroup}}
             {{group}}
-               cout << index << endl;
+               cout << index << '\n';
             {{endgroup}}
             {{group}}
             }
@@ -175,7 +175,7 @@ the argument we provide.
             string sentence = "Most seas are rough but this sea is so calm!";
             string target = "sea";
             size_t index = sentence.find(target);
-            cout << "Index to find sea is " << index << endl;
+            cout << "Index to find sea is " << index << '\n';
 
          - Index to find sea is 29
 

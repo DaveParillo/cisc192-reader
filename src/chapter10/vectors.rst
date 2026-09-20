@@ -9,7 +9,7 @@ number (called an index). A ``string`` is similar to a vector, since it
 is made up of an indexed set of characters. The nice thing about vectors
 is that they can be made up of any type of element, including basic
 types like ``int``\ s and ``double``\ s, and user-defined types like
-``Point`` and ``Time``.
+``point`` and ``time``.
 
 .. note::
    All elements of a vector must have the same type.
@@ -24,7 +24,7 @@ You can create a vector the same way you create other variable types:
 ::
 
      vector<int> count;
-     vector<double> doubleVector;
+     vector<double> double_vector;
 
 The type that makes up the vector appears in angle brackets (``<`` and
 ``>``). The first line creates a vector of integers named ``count``; the
@@ -169,7 +169,7 @@ them to three.
          - [ ] 1
 
            Incorrect! This is an integer, not a string.
-         - [x] "a"
+         - [x] 'a'
 
            Correct!
          - [ ] 'a'
@@ -178,7 +178,7 @@ them to three.
          - [x] "word"
 
            Correct!
-         - [x] "1"
+         - [x] '1'
 
            Correct!
 

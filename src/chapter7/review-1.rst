@@ -19,7 +19,7 @@ Multiple Choice Exercises
               string word = "hello";
               string letter = "a";
               char c = 'c';
-              bool isPrime = 1;
+              bool is_prime = 1;
             }
 
          - [ ] ``x``
@@ -46,9 +46,9 @@ Multiple Choice Exercises
 
            - ``c`` is a ``char``.
 
-         - [ ] ``isPrime``
+         - [ ] ``is_prime``
 
-           - ``isPrime`` is a ``bool``.
+           - ``is_prime`` is a ``bool``.
 
    .. tb-tab:: Q2
 
@@ -201,7 +201,7 @@ Multiple Choice Exercises
 
             int main() {
               string quote = "Why so serious?";
-              int index = quote.find("a");
+              int index = quote.find('a');
               cout << index;
             }
 
@@ -450,7 +450,7 @@ Multiple Choice Exercises
                  }
                  index = index + 1;
                }
-               cout << count << endl;
+               cout << count << '\n';
             }
 
          - [ ] 3
@@ -485,10 +485,10 @@ Multiple Choice Exercises
                  quote[index] = 'M';
                  index = index * 2;
                }
-               cout << quote << endl;
+               cout << quote << '\n';
             }
 
-         - [x] "IMM MondM James Mond"
+         - [x] "IMM mond_m James Mond"
 
            + Correct! We change indices 1,2,4,8,16 to M before ``index`` becomes ``>`` ``quote.size()``.
 
@@ -496,11 +496,11 @@ Multiple Choice Exercises
 
            - We are not increasing ``index`` by 1, instead we are doubling it.
 
-         - [ ] "MMM MondM James Mond"
+         - [ ] "MMM mond_m James Mond"
 
            - We don't start at position 0 this time.
 
-         - [ ] "IMsMBMnM,MJMmMsMBMnM"
+         - [ ] "i_ms_mb_mn_m,mj_mm_ms_mb_mn_m"
 
            - we are not increasing ``index`` by 2, instead we are doubling it.
 

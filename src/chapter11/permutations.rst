@@ -88,7 +88,7 @@ choices for the second member, and so on.
            for(const int& value: data) {
              std::cout << value << '\t';
            }
-           std::cout << std::endl;
+           std::cout << '\n';
          }
 
          int main() {
@@ -137,7 +137,7 @@ choices for the second member, and so on.
            for(const int& value: data) {
              std::cout << value << '\t';
            }
-           std::cout << std::endl;
+           std::cout << '\n';
          }
 
          int main() {

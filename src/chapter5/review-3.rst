@@ -147,10 +147,10 @@ Coding Practice
                            cout << ' ';
                            space--;
                        }
-                       int numAsterisks = 2 * count - 1;
-                       while (numAsterisks > 0) {
+                       int num_asterisks = 2 * count - 1;
+                       while (num_asterisks > 0) {
                            cout << '*';
-                           numAsterisks--;
+                           num_asterisks--;
                        }
                        cout << '\n';
                        count++;
@@ -199,9 +199,9 @@ Coding Practice
          .. tb-tab:: Question
 
             A common coding interview question that's also a popular children's game used to teach division is
-            FizzBuzz. Write a program that uses a while loop and prints the numbers 1 through 100, but every
+            fizz_buzz. Write a program that uses a while loop and prints the numbers 1 through 100, but every
             multiple of 3 is replaced with the word "Fizz," every multiple of 5 is replaced with the word "Buzz," 
-            and every multiple of both 3 and 5 is replaced with "FizzBuzz." Your output should be the following:
+            and every multiple of both 3 and 5 is replaced with "fizz_buzz." Your output should be the following:
 
             :: 
 
@@ -212,7 +212,7 @@ Coding Practice
                 Buzz
                 ...
                 14
-                FizzBuzz
+                fizz_buzz
                 16
                 ...
                 98
@@ -233,9 +233,9 @@ Coding Practice
 
          .. tb-tab:: Answer
 
-            Below is one way to implement the "FizzBuzz" program. We use conditionals
+            Below is one way to implement the "fizz_buzz" program. We use conditionals
             with modulus operators in a while loop to categorize every number and print
-            the correct output. Feel free to search up on the FizzBuzz coding interview 
+            the correct output. Feel free to search up on the fizz_buzz coding interview 
             problem if you are interested in other ways to code this program!
 
             .. tb-code:: cpp
@@ -250,7 +250,7 @@ Coding Practice
                    int n = 1;
                    while (n <= 100) {
                        if (n % 15 == 0) {
-                           cout << "FizzBuzz\n";
+                           cout << "fizz_buzz\n";
                        }
                        else if (n % 3 == 0) {
                            cout << "Fizz\n";
@@ -322,11 +322,11 @@ Coding Practice
                #include <iomanip>
                #include <iostream>
                #include <string>
-               template <class T, class Compare = std::equal_to<T>>
+               template <class t, class compare = std::equal_to<t>>
                void check (const std::string& name, 
-                           const T& actual, 
-                           const T& expected,
-                           const Compare& op = Compare())
+                           const t& actual, 
+                           const t& expected,
+                           const compare& op = compare())
                {
                  std::cout << std::left << std::setfill('.') 
                            << std::setw(50) << name 
@@ -378,11 +378,11 @@ Coding Practice
                #include <iomanip>
                #include <iostream>
                #include <string>
-               template <class T, class Compare = std::equal_to<T>>
+               template <class t, class compare = std::equal_to<t>>
                void check (const std::string& name, 
-                           const T& actual, 
-                           const T& expected,
-                           const Compare& op = Compare())
+                           const t& actual, 
+                           const t& expected,
+                           const compare& op = compare())
                {
                  std::cout << std::left << std::setfill('.') 
                            << std::setw(50) << name 
@@ -515,11 +515,11 @@ Coding Practice
          #include <iomanip>
          #include <iostream>
          #include <string>
-         template <class T, class Compare = std::equal_to<T>>
+         template <class t, class compare = std::equal_to<t>>
          void check (const std::string& name, 
-                     const T& actual, 
-                     const T& expected,
-                     const Compare& op = Compare())
+                     const t& actual, 
+                     const t& expected,
+                     const compare& op = compare())
          {
            std::cout << std::left << std::setfill('.') 
                      << std::setw(50) << name 

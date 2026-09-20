@@ -113,7 +113,7 @@ extra problems at the end for help.
        ranks[12] = "Queen";
        ranks[13] = "King";
 
-       std::cout << ranks[rank] << " of " << suits[suit] << std::endl;
+       std::cout << ranks[rank] << " of " << suits[suit] << '\n';
    }
 
    card_deck::card_deck () {

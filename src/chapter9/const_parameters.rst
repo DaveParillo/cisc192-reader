@@ -1,7 +1,7 @@
 ``const`` parameters
 --------------------
 
-You might have noticed that the parameters for ``after`` and ``addTime``
+You might have noticed that the parameters for ``after`` and ``add_time``
 are being passed by reference. Since these are pure functions, they do
 not modify the parameters they receive, so I could just as well have
 passed them by value.
@@ -26,8 +26,8 @@ parameter**. The syntax looks like this:
 
 ::
 
-   void printTime (const Time& time) ...
-   Time addTime (const Time& t1, const Time& t2) ...
+   void print_time (const time& time) ...
+   time add_time (const time& t1, const time& t2) ...
 
 I've included only the first line of the functions.
 If you tell the compiler that you don't intend to change a parameter,
@@ -56,7 +56,7 @@ or at least a warning.
    - [x] Can be used when you intend to modify a parameter.
 
      It is used when you are writing a function and you do not intend to modify a parameter.
-   - [ ] The syntax can look like this: void printTime (const Time& time)...
+   - [ ] The syntax can look like this: void print_time (const time& time)...
 
      This is true
 

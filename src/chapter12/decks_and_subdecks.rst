@@ -48,7 +48,7 @@ unnecessary details while capturing relevant behavior.”
 .. tb-choice::
    :name: decks_and_subdecks_1
 
-   Which is false about the ``findBisect()`` funtion?
+   Which is false about the ``find_bisect()`` funtion?
 
    - [ ] It uses binary search to locate the card in the deck.
 
@@ -58,7 +58,7 @@ unnecessary details while capturing relevant behavior.”
      This is true. If the user doesn't follow the rules, we might be in trouble.
    - [x] It can only access the part of the deck that is between the bounds high and low.
 
-     This is false! findBisect() can access the entire deck, even when you pass high and low parameters.
+     This is false! find_bisect() can access the entire deck, even when you pass high and low parameters.
    - [ ] There is no such thing as an empty object.
 
      This is true.  When you create an object, it is given default values.

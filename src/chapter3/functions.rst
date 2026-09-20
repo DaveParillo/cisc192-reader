@@ -200,7 +200,7 @@ example only demonstrates two:
          .. code-block:: cpp
 
             void print_x() {
-                cout << "X";
+                cout << 'X';
             }
 
             void print_var(int a) {
@@ -226,7 +226,7 @@ example only demonstrates two:
 
             Correct.
 
-         .. tb-miss:: text:cout << "X";
+         .. tb-miss:: text:cout << 'X';
 
             Remember, the operator '=' is used for assignment.
 
@@ -284,7 +284,7 @@ example only demonstrates two:
          .. code-block:: cpp
 
             void print_x() {
-                cout << "X";
+                cout << 'X';
             }
 
             void print_var(int a) {
@@ -309,7 +309,7 @@ example only demonstrates two:
 
             Remember, the operator '=' is used for assignment.
 
-         .. tb-miss:: text:cout << "X";
+         .. tb-miss:: text:cout << 'X';
 
             Remember, the operator '=' is used for assignment.
 

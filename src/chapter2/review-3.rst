@@ -23,7 +23,7 @@ Answer the following **Activecode** questions to assess what you have learned in
                #include <iostream>
 
                int main () {
-                   char true = 'T';
+                   char true = 't';
                    char false = 'F';
                    std::cout << "Program complete.\n";
                }
@@ -40,7 +40,7 @@ Answer the following **Activecode** questions to assess what you have learned in
                #include <iostream>
 
                int main () {
-                   char t = 'T';
+                   char t = 't';
                    char f = 'F';
                    std::cout << "Program complete.\n";
                }    
@@ -60,11 +60,11 @@ Answer the following **Activecode** questions to assess what you have learned in
          #include <iomanip>
          #include <iostream>
          #include <string>
-         template <class T, class Compare = std::equal_to<T>>
+         template <class t, class compare = std::equal_to<t>>
          void check (const std::string& name, 
-                     const T& actual, 
-                     const T& expected,
-                     const Compare& op = Compare())
+                     const t& actual, 
+                     const t& expected,
+                     const compare& op = compare())
          {
            std::cout << std::left << std::setfill('.') 
                      << std::setw(50) << name 
@@ -155,11 +155,11 @@ Answer the following **Activecode** questions to assess what you have learned in
          #include <iomanip>
          #include <iostream>
          #include <string>
-         template <class T, class Compare = std::equal_to<T>>
+         template <class t, class compare = std::equal_to<t>>
          void check (const std::string& name, 
-                     const T& actual, 
-                     const T& expected,
-                     const Compare& op = Compare())
+                     const t& actual, 
+                     const t& expected,
+                     const compare& op = compare())
          {
            std::cout << std::left << std::setfill('.') 
                      << std::setw(50) << name 
@@ -293,7 +293,7 @@ Answer the following **Activecode** questions to assess what you have learned in
                #include <iostream>
 
                int main () {
-                   std::cout << "Live\nLaugh\nLove";
+                   std::cout << "Live\n_laugh\n_love";
                } 
 
 
@@ -315,11 +315,11 @@ Answer the following **Activecode** questions to assess what you have learned in
          #include <iomanip>
          #include <iostream>
          #include <string>
-         template <class T, class Compare = std::equal_to<T>>
+         template <class t, class compare = std::equal_to<t>>
          void check (const std::string& name, 
-                     const T& actual, 
-                     const T& expected,
-                     const Compare& op = Compare())
+                     const t& actual, 
+                     const t& expected,
+                     const compare& op = compare())
          {
            std::cout << std::left << std::setfill('.') 
                      << std::setw(50) << name 
@@ -376,11 +376,11 @@ Answer the following **Activecode** questions to assess what you have learned in
                #include <iomanip>
                #include <iostream>
                #include <string>
-               template <class T, class Compare = std::equal_to<T>>
+               template <class t, class compare = std::equal_to<t>>
                void check (const std::string& name, 
-                           const T& actual, 
-                           const T& expected,
-                           const Compare& op = Compare())
+                           const t& actual, 
+                           const t& expected,
+                           const compare& op = compare())
                {
                  std::cout << std::left << std::setfill('.') 
                            << std::setw(50) << name 
@@ -421,11 +421,11 @@ Answer the following **Activecode** questions to assess what you have learned in
                #include <iomanip>
                #include <iostream>
                #include <string>
-               template <class T, class Compare = std::equal_to<T>>
+               template <class t, class compare = std::equal_to<t>>
                void check (const std::string& name, 
-                           const T& actual, 
-                           const T& expected,
-                           const Compare& op = Compare())
+                           const t& actual, 
+                           const t& expected,
+                           const compare& op = compare())
                {
                  std::cout << std::left << std::setfill('.') 
                            << std::setw(50) << name 
@@ -472,6 +472,6 @@ Answer the following **Activecode** questions to assess what you have learned in
          int main () {
 
              // DO NOT MODIFY ANYTHING BELOW THIS LINE.
-             std::cout << "\nYour program should have printed 2.365\n";
+             std::cout << "\n_your program should have printed 2.365\n";
          }
 

@@ -101,11 +101,11 @@ to be private functions. Notice how we are no longer able to call
    }
 
    void complex_number::print_cartesian () {
-     std::cout << get_real() << " + " << get_imag() << "i" << std::endl;
+     std::cout << get_real() << " + " << get_imag() << 'i' << '\n';
    }
 
    void complex_number::print_polar () {
-     std::cout << get_mag() << " e^ " << get_theta() << "i" << std::endl;
+     std::cout << get_mag() << " e^ " << get_theta() << 'i' << '\n';
    }
 
    complex_number add (complex_number& a, complex_number& b) {

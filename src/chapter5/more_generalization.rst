@@ -45,7 +45,7 @@ name (just like local variables):
        cout << n*i << "   ";
        i = i + 1;
      }
-     cout << endl;
+     cout << '\n';
    }
 
    void multiples_table (std::size_t table_size) {

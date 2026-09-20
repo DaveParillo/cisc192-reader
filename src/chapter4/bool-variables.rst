@@ -66,7 +66,7 @@ presence or absence of some condition.
             variable declaration
          fred = true;
             assignment
-         bool testResult = false;
+         bool test_result = false;
             initialization
 
    .. tb-tab:: Q3
@@ -81,14 +81,14 @@ presence or absence of some condition.
              int n = 16;
              int x = 4;
 
-             bool evenFlag = (n % 2 == 0);
-             bool plusFlag = (x > 0);
+             bool even_flag = (n % 2 == 0);
+             bool plus_flag = (x > 0);
 
-             if (evenFlag) {
+             if (even_flag) {
                cout << "n was even when I checked it ";
              }
 
-             if (plusFlag) {
+             if (plus_flag) {
                cout << "x was positive when I checked it";
              }
 
@@ -132,15 +132,15 @@ presence or absence of some condition.
                if(!power_outage){
 
                  if(low_battery){
-                     cout<<"Charging your phone"<<endl;
+                     cout<<"Charging your phone"<<'\n';
                  }
                  else{
-                     cout<<"Battery is charged"<<endl;
+                     cout<<"Battery is charged"<<'\n';
                  }
 
                }
                else{
-                 cout<<"There is no power"<<endl>>;
+                 cout<<"There is no power"<<'\n'>>;
                }
              }
 

@@ -180,13 +180,13 @@ assess what you have learned in this chapter.
          .. code-block:: cpp
 
             {{group}}
-            void printLetterGrade (double grade) {
+            void print_letter_grade (double grade) {
             {{endgroup}}
             {{group}}
              if (grade < 70) {
             {{endgroup}}
             {{group}}
-              cout << "F"; }
+              cout << 'F'; }
             {{endgroup}}
             {{group}}
              else if (grade < 80) {
@@ -196,7 +196,7 @@ assess what you have learned in this chapter.
              if (grade < 80) {
             {{endgroup}}
             {{group}}
-              cout << "C"; }
+              cout << 'C'; }
             {{endgroup}}
             {{group}}
              else if (grade < 90) {
@@ -206,7 +206,7 @@ assess what you have learned in this chapter.
              if (grade < 90) {
             {{endgroup}}
             {{group}}
-              cout << "B"; }
+              cout << 'B'; }
             {{endgroup}}
             {{group}}
              else {
@@ -220,7 +220,7 @@ assess what you have learned in this chapter.
              if (grade < 100) {
             {{endgroup}}
             {{group}}
-              cout << "A"; }
+              cout << 'A'; }
             {{endgroup}}
             {{group}}
             }
@@ -240,7 +240,7 @@ assess what you have learned in this chapter.
          .. code-block:: cpp
 
             {{group}}
-            void knightKnave (bool truth, bool told) {
+            void knight_knave (bool truth, bool told) {
             {{endgroup}}
             {{group}}
              if (truth == true) {
@@ -284,7 +284,7 @@ assess what you have learned in this chapter.
          .. code-block:: cpp
 
             {{group}}
-            void makeVocals (string animal, string mood) {
+            void make_vocals (string animal, string mood) {
             {{endgroup}}
             {{group}}
              if (mood == "bad") {
@@ -328,7 +328,7 @@ assess what you have learned in this chapter.
          .. code-block:: cpp
 
             {{group}}
-            void takeSum () {
+            void take_sum () {
             {{endgroup}}
             {{group}}
              cout << "Input a positive number!";

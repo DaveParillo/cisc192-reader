@@ -22,7 +22,7 @@ Mixed Up Code Practice
             {{endgroup}}
             {{distractor}}
             {{group}}
-            struct Song {  #distractor
+            struct song {  #distractor
             {{endgroup}}
             {{distractor}}
             {{group}}
@@ -72,7 +72,7 @@ Mixed Up Code Practice
             int main() {
             {{endgroup}}
             {{group}}
-               Song fly;
+               song fly;
             {{endgroup}}
             {{distractor}}
             {{group}}
@@ -120,17 +120,17 @@ Mixed Up Code Practice
          .. code-block:: cpp
 
             {{group}}
-            void print_song (Song s) {
+            void print_song (song s) {
             {{endgroup}}
             {{distractor}}
             {{group}}
-            struct print_song (Song s) {
+            struct print_song (song s) {
             {{endgroup}}
             {{group}}
                using std::cout;
             {{endgroup}}
             {{group}}
-               cout << "\"" << s.title << "\" by " << s.artist;
+               cout << '"' << s.title << "\" by " << s.artist;
             {{endgroup}}
             {{group}}
                cout << " (" << s.album << ", " << s.year << ")\n";
@@ -141,7 +141,7 @@ Mixed Up Code Practice
             {{endgroup}}
             {{distractor}}
             {{group}}
-               cout << "\"" << title << "\" by " << artist;  #distractor
+               cout << '"' << title << "\" by " << artist;  #distractor
             {{endgroup}}
             {{distractor}}
             {{group}}
@@ -162,7 +162,7 @@ Mixed Up Code Practice
 
          Let's write the code for the struct definition of ``unicorn``. 
          The unicorn structure will have the instance variables name, 
-         age, hornLength, hairColor, and isSparkly in that order. A unicorn's
+         age, horn_length, hair_color, and is_sparkly in that order. A unicorn's
          horn length is measured to the nearest tenth of a unit.
          Put the necessary blocks of code in the correct order.
 
@@ -268,7 +268,7 @@ Mixed Up Code Practice
 
          Let's write the code for the ``unicorn_power`` function. unicorn_power
          takes a unicorn as a parameter and 
-         sets isSparkly to true and changes the color to rainbow.
+         sets is_sparkly to true and changes the color to rainbow.
          Put the necessary blocks of code in the correct order.
 
          .. code-block:: cpp
@@ -307,50 +307,50 @@ Mixed Up Code Practice
       .. tb-parsons::
          :name: mucp_8_7
 
-         Let's write the code for the struct definitions of Address and Employee. 
-         The Address structure will have the instance variables houseNumber, 
-         state (abbreviation), and postalAddress in that order. The Employee 
+         Let's write the code for the struct definitions of address and employee. 
+         The address structure will have the instance variables house_number, 
+         state (abbreviation), and postal_address in that order. The employee 
          structure will be a nested structure with the instance variables name 
-         and Address address in that order. 
-         Put the necessary blocks of code in the correct order, with Address defined before Employee.
+         and address address in that order. 
+         Put the necessary blocks of code in the correct order, with address defined before employee.
 
          .. code-block:: cpp
 
             {{group}}
-            struct Address {
+            struct address {
             {{endgroup}}
             {{distractor}}
             {{group}}
-            Struct Address {  #distractor
+            Struct address {  #distractor
             {{endgroup}}
             {{group}}
-               int houseNumber;
+               int house_number;
             {{endgroup}}
             {{group}}
                string state;
             {{endgroup}}
             {{group}}
-               int postalAddress;
+               int postal_address;
             {{endgroup}}
             {{distractor}}
             {{group}}
-               Employee employee;  #distractor
+               employee employee;  #distractor
             {{endgroup}}
             {{group}}
             };
             {{endgroup}}
             {{group}}
-            struct Employee {
+            struct employee {
             {{endgroup}}
             {{distractor}}
             {{group}}
-            Struct Employee {  #distractor
+            Struct employee {  #distractor
             {{endgroup}}
             {{group}}
                string name;
             {{endgroup}}
             {{group}}
-               Address address;
+               address address;
             {{endgroup}}
             {{group}}
             };
@@ -361,7 +361,7 @@ Mixed Up Code Practice
             {{endgroup}}
             {{distractor}}
             {{group}}
-               Address;  #distractor
+               address;  #distractor
             {{endgroup}}
             {{distractor}}
             {{group}}
@@ -373,19 +373,19 @@ Mixed Up Code Practice
       .. tb-parsons::
          :name: mucp_8_8
 
-         Let's write the code for the printAddress function. printAddress takes
-         an Employee as a parameter and should print out the information of the employee in the 
-         following format: name (id) lives at houseNumber in state, postalAddress.
+         Let's write the code for the print_address function. print_address takes
+         an employee as a parameter and should print out the information of the employee in the 
+         following format: name (id) lives at house_number in state, postal_address.
          Put the necessary blocks of code in the correct order.
 
          .. code-block:: cpp
 
             {{group}}
-            void printAddress (Employee e) {
+            void print_address (employee e) {
             {{endgroup}}
             {{distractor}}
             {{group}}
-            string printAddress (Employee& e) {
+            string print_address (employee& e) {
             {{endgroup}}
             {{group}}
                cout << e.name << " (" << e.id << ") lives at ";
@@ -396,14 +396,14 @@ Mixed Up Code Practice
             {{endgroup}}
             {{distractor}}
             {{group}}
-               cout << e.name << "(" << e.address.id << ") lives at";  #distractor
+               cout << e.name << '(' << e.address.id << ") lives at";  #distractor
             {{endgroup}}
             {{group}}
-               cout << e.address.houseNumber << " in " << e.address.state << ", " << e.address.postalAddress << endl;
+               cout << e.address.house_number << " in " << e.address.state << ", " << e.address.postal_address << '\n';
             {{endgroup}}
             {{distractor}}
             {{group}}
-               cout << e.houseNumber << " in " << e.state << ", " << e.postalAddress << endl;  #distractor
+               cout << e.house_number << " in " << e.state << ", " << e.postal_address << '\n';  #distractor
             {{endgroup}}
             {{group}}
             }
@@ -415,26 +415,26 @@ Mixed Up Code Practice
          :name: mucp_8_9
 
          Sometimes employees will move around and thus we'll need to update their addresses.
-         Let's write the code for the updateAddress function. updateAddress takes an
-         Employee and a new Address as parameters and sets the employee's address to the new address.
+         Let's write the code for the update_address function. update_address takes an
+         employee and a new address as parameters and sets the employee's address to the new address.
          Put the necessary blocks of code in the correct order.
 
          .. code-block:: cpp
 
             {{group}}
-            void updateAddress (Employee& e, Address a) {
+            void update_address (employee& e, address a) {
             {{endgroup}}
             {{distractor}}
             {{group}}
-            void updateAddress (Employee e, Address& a) {  #distractor
+            void update_address (employee e, address& a) {  #distractor
             {{endgroup}}
             {{distractor}}
             {{group}}
-            void updateAddress (Employee e, Address a) {  #distractor
+            void update_address (employee e, address a) {  #distractor
             {{endgroup}}
             {{distractor}}
             {{group}}
-            Employee updateAddress (Employee e, Address a) {  #distractor
+            employee update_address (employee e, address a) {  #distractor
             {{endgroup}}
             {{group}}
                e.address = a;
@@ -445,7 +445,7 @@ Mixed Up Code Practice
             {{endgroup}}
             {{distractor}}
             {{group}}
-               e.address.houseNumber = a.houseNumber;  #distractor
+               e.address.house_number = a.house_number;  #distractor
             {{endgroup}}
             {{distractor}}
             {{group}}
@@ -453,11 +453,11 @@ Mixed Up Code Practice
             {{endgroup}}
             {{distractor}}
             {{group}}
-               e.address.houseNumber = a.houseNumber;  #distractor
+               e.address.house_number = a.house_number;  #distractor
             {{endgroup}}
             {{distractor}}
             {{group}}
-               e.address.postalAddress = a.postalAddress;  #distractor
+               e.address.postal_address = a.postal_address;  #distractor
             {{endgroup}}
             {{group}}
             }
@@ -472,25 +472,25 @@ Mixed Up Code Practice
       .. tb-parsons::
          :name: mucp_8_10
 
-         Let's write the code for the storeEmployeeData function. storeEmployeeData doesn't
+         Let's write the code for the store_employee_data function. store_employee_data doesn't
          take any parameters and prompts the user for information regarding their
-         name, id, salary, and address in that order. It then returns an Employee object with
+         name, id, salary, and address in that order. It then returns an employee object with
          the stored data. Declare all variables before prompting the user.
          Put the necessary blocks of code in the correct order.
 
          .. code-block:: cpp
 
             {{group}}
-            Employee storeEmployeeData () {
+            employee store_employee_data () {
             {{endgroup}}
             {{group}}
-            Employee storeEmployeeData (Employee e) {
+            employee store_employee_data (employee e) {
             {{endgroup}}
             {{group}}
-            void storeEmployeeData () {
+            void store_employee_data () {
             {{endgroup}}
             {{group}}
-               Employee e;
+               employee e;
             {{endgroup}}
             {{group}}
                cout << "What is your full name? ";
@@ -506,11 +506,11 @@ Mixed Up Code Practice
                cout << "What is your house number? ";
             {{endgroup}}
             {{group}}
-               cin >> e.address.houseNumber;
+               cin >> e.address.house_number;
             {{endgroup}}
             {{distractor}}
             {{group}}
-               cin >> e.houseNumber;
+               cin >> e.house_number;
             {{endgroup}}
             {{group}}
                cout << "What state do you live in? ";
@@ -526,14 +526,14 @@ Mixed Up Code Practice
                cout << "What is your postal address? ";
             {{endgroup}}
             {{group}}
-               cin >> e.address.postalAddress;
+               cin >> e.address.postal_address;
             {{endgroup}}
             {{group}}
                return e;
             {{endgroup}}
             {{distractor}}
             {{group}}
-               return Employee e;
+               return employee e;
             {{endgroup}}
             {{group}}
             }

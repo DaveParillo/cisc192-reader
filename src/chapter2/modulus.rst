@@ -26,7 +26,7 @@ and the modulus operator.
        int quotient = 7 / 3;
        int remainder = 7 % 3;
        cout << "The quotient is: " << quotient
-            << "\nThe remainder is: " << remainder << '\n';
+            << "\n_the remainder is: " << remainder << '\n';
    }
 
 The first operator, integer division, yields 2. The second operator

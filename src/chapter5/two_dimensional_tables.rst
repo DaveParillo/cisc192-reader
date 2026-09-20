@@ -13,7 +13,7 @@ Run the active code below, which uses a simple loop that prints the multiples
 of 2, all on one line.
 
 .. tb-code:: cpp
-   :name: twoD_tables_AC_1
+   :name: two_d_tables_ac_1
    :caption: Two-dimensional tables
    :compileargs: ['-Wall', '-std=c++11']
 
@@ -25,7 +25,7 @@ of 2, all on one line.
        std::cout << 2*i << "   ";
        i = i + 1;
      }
-     cout << endl;
+     cout << '\n';
      return 0;
    }
 
@@ -59,11 +59,11 @@ So far, so good. The next step is to **encapsulate** and **generalize**.
       .. tb-choice::
          :name: mce_5_1
 
-         What should be the return type of the function ``convertToCelsius``?
+         What should be the return type of the function ``convert_to_celsius``?
 
          .. code-block:: cpp
 
-           ______ convertToCelsius (double fahrenheit) {
+           ______ convert_to_celsius (double fahrenheit) {
              double celsius;
              celsius = (fahrenheit - 32) * 5 / 9;
              return celsius;
@@ -90,11 +90,11 @@ So far, so good. The next step is to **encapsulate** and **generalize**.
       .. tb-choice::
          :name: mce_5_2
 
-         What would be returned by ``secretFunction`` if the input was 14?
+         What would be returned by ``secret_function`` if the input was 14?
 
          .. code-block:: cpp
 
-           int secretFunction (int input) {
+           int secret_function (int input) {
              if (input % 2 == 0) {
                return 3 * input - 2;
              }

@@ -63,19 +63,19 @@ Multiple Choice Exercises
    We want to make sure the file we wanted to open was opened successfully. Which of the
    following checks this and prints the proper output?
 
-   - [ ] ``if (infile.good()) { cout << "File opened unsuccessfully" << endl; }``
+   - [ ] ``if (infile.good()) { cout << "File opened unsuccessfully" << '\n'; }``
 
      - If the ``if`` statement evaluates to true, then the file was opened successfully.
 
-   - [x] ``if (!infile.is_open()) { cout << "File opened unsuccessfully" << endl; }``
+   - [x] ``if (!infile.is_open()) { cout << "File opened unsuccessfully" << '\n'; }``
 
      + ``is_open()`` is another function that returns ``true`` if a file is opened successfully.
 
-   - [x] ``if (infile.good() == false) { cout << "File opened unsuccessfully" << endl; }``
+   - [x] ``if (infile.good() == false) { cout << "File opened unsuccessfully" << '\n'; }``
 
      + If the file isn't opened successfully, an error message is printed.
 
-   - [ ] ``if (!infile.open()) { cout << "File opened unsuccessfully" << endl; }``
+   - [ ] ``if (!infile.open()) { cout << "File opened unsuccessfully" << '\n'; }``
 
      - The ``open()`` function is different from ``is_open()`` and does not return a ``bool``.
 
@@ -115,11 +115,11 @@ Multiple Choice Exercises
          ofstream outfile("output.txt");
 
          if (!outfile.good()) {
-           cout << "Unable to open file" << endl;
+           cout << "Unable to open file" << '\n';
          }
 
          cout << "Powers of 2: ";
-         outfile << "2 4 8 16 32 64" << endl;  
+         outfile << "2 4 8 16 32 64" << '\n';  
        }
 
    - [x] 2 4 8 16 32 64
@@ -153,37 +153,37 @@ Multiple Choice Exercises
 
        int main() {
          string junk;
-         int studentNum;
+         int student_num;
          double mid1, mid2, final;
          ifstream infile("scores.txt");
          ofstream outfile("averages.txt");
 
          if (!infile.good() || !outfile.good()) {
-           cout << "Unable to open a file" << endl;
+           cout << "Unable to open a file" << '\n';
          }
 
          getline(infile, junk);
-         outfile << "Student#\tAverage" << endl;
+         outfile << "student#\t_average" << '\n';
 
-         while (infile >> studentNum >> mid1 >> mid2 >> final) {
+         while (infile >> student_num >> mid1 >> mid2 >> final) {
            double avg = (mid1 + mid2 + final) / 3;
            ???  
          }  
        }
 
-   - [ ] ``cout << avg << endl``
+   - [ ] ``cout << avg << '\n'``
 
      - This will output the average to standard output.
 
-   - [ ] ``outfile << avg << endl``
+   - [ ] ``outfile << avg << '\n'``
 
      - Take another look at the code. Is there a clue as to what data should be in the output file?
 
-   - [ ] ``infile << studentNum << "\t" << avg << endl``
+   - [ ] ``infile << student_num << '\t' << avg << '\n'``
 
      - The data should be written to the output file.
 
-   - [x] ``outfile << studentNum << "\t" << avg << endl``
+   - [x] ``outfile << student_num << '\t' << avg << '\n'``
 
      + This properly outputs the student number and the student's average to the output file.
 
@@ -200,14 +200,14 @@ Multiple Choice Exercises
 
        int main() {
          string original = "430-0444";
-         string digitString = "";
+         string digit_string = "";
 
          for (size_t i = 0; i < original.length(); i++) {
            if (isdigit(original[original.length() - 1 - i])) {
-             digitString += original[original.length() - 1 - i];
+             digit_string += original[original.length() - 1 - i];
            }
          }
-         cout << atoi(digitString.c_str()) << endl;
+         cout << atoi(digit_string.c_str()) << '\n';
        }
 
    - [ ] The code converts the original string to an integer and outputs the integer.
@@ -220,7 +220,7 @@ Multiple Choice Exercises
 
    - [ ] The code outputs the sum of all the original string's digits.
 
-     - The ``digitString`` variable is a ``string``, not an ``int``.
+     - The ``digit_string`` variable is a ``string``, not an ``int``.
 
    - [x] The code converts the original string to an integer in reverse and outputs the integer in reverse.
 
@@ -304,7 +304,7 @@ Multiple Choice Exercises
              n += mat[i][j];
            }
          }
-         cout << n << endl;
+         cout << n << '\n';
        }
 
    - [ ] 8

@@ -9,30 +9,30 @@ Multiple Choice Exercises
       .. tb-choice::
          :name: mce_9_1
 
-         Which of the following are variables of type ``Book``?
+         Which of the following are variables of type ``book``?
 
          .. code-block:: cpp
 
-           struct Book {
+           struct book {
              string title, author;
-             int yearPublished;
+             int year_published;
              double price;
            };
 
            int main() {
-             Book gatsby = { "The Great Gatsby", "F. Scott Fitzgerald", 1925, 4.75 };
-             Book frankenstein = { "Frankenstein", "Mary Shelley", 1823, 5.99 };
+             book gatsby = { "The Great Gatsby", "F. Scott Fitzgerald", 1925, 4.75 };
+             book frankenstein = { "Frankenstein", "Mary Shelley", 1823, 5.99 };
              string flies = "Lord of the Flies";
              int year = 1954;
            }
 
          - [x] ``gatsby``
 
-           + ``gatsby`` is a ``Book``. 
+           + ``gatsby`` is a ``book``. 
 
          - [x] ``frankenstein``
 
-           + ``frankenstein`` is a ``Book``. 
+           + ``frankenstein`` is a ``book``. 
 
          - [ ] ``flies``
 
@@ -47,38 +47,38 @@ Multiple Choice Exercises
       .. tb-choice::
          :name: mce_9_2
 
-         Which of the following are instance variables of type ``Book``?
+         Which of the following are instance variables of type ``book``?
 
          .. code-block:: cpp
 
-           struct Book {
+           struct book {
              string title, author;
-             int yearPublished;
+             int year_published;
              double price;
            };
 
            int main() {
-             Book gatsby = { "The Great Gatsby", "F. Scott Fitzgerald", 1925, 4.75 };
-             Book frankenstein = { "Frankenstein", "Mary Shelley", 1823, 5.99 };
+             book gatsby = { "The Great Gatsby", "F. Scott Fitzgerald", 1925, 4.75 };
+             book frankenstein = { "Frankenstein", "Mary Shelley", 1823, 5.99 };
              string flies = "Lord of the Flies";
              int year = 1954;
            }
 
          - [ ] ``gatsby``
 
-           - ``gatsby`` is a ``Book``, not an instance variable of ``Book``. 
+           - ``gatsby`` is a ``book``, not an instance variable of ``book``. 
 
          - [x] ``title``
 
-           + ``title`` is an instance variable of ``Book``. 
+           + ``title`` is an instance variable of ``book``. 
 
          - [ ] ``year``
 
-           - ``year`` is an ``int`` declared in ``main``, not an instance variable of ``Book``. 
+           - ``year`` is an ``int`` declared in ``main``, not an instance variable of ``book``. 
 
          - [x] ``price``
 
-           + ``price`` is an instance variable of ``Book``. 
+           + ``price`` is an instance variable of ``book``. 
 
    .. tb-tab:: Q3
 
@@ -89,21 +89,21 @@ Multiple Choice Exercises
 
          .. code-block:: cpp
 
-           struct Book {
+           struct book {
              string title, author;
-             int yearPublished;
+             int year_published;
              double price;
            };
 
-           void printBook (Book& b) {
-             cout << "\"" << b.title << "\" by " << b.author << " (" << b.yearPublished << "), $" << b.price << endl;
+           void print_book (book& b) {
+             cout << '"' << b.title << "\" by " << b.author << " (" << b.year_published << "), $" << b.price << '\n';
            }
 
            int main() {
-             Book mockingbird = { "To Kill a Mockingbird", "Harper Lee", 1960, 9.25 };
-             double discountedPrice = 7.19;
-             b.price = discountedPrice;
-             printBook (mockingbird);
+             book mockingbird = { "To Kill a Mockingbird", "Harper Lee", 1960, 9.25 };
+             double discounted_price = 7.19;
+             b.price = discounted_price;
+             print_book (mockingbird);
            }
 
          - [ ] To Kill a Mockingbird by Harper Lee (1960), $9.25
@@ -127,40 +127,40 @@ Multiple Choice Exercises
       .. tb-choice::
          :name: mce_9_4
 
-         What kind of function is ``printBook``?
+         What kind of function is ``print_book``?
 
          .. code-block:: cpp
 
-           struct Book {
+           struct book {
              string title, author;
-             int yearPublished;
+             int year_published;
              double price;
            };
 
-           void printBook (Book& b) {
-             cout << "\"" << b.title << "\" by " << b.author << " (" << b.yearPublished << "), $" << b.price << endl;
+           void print_book (book& b) {
+             cout << '"' << b.title << "\" by " << b.author << " (" << b.year_published << "), $" << b.price << '\n';
            }
 
            int main() {
-             Book dracula = { "Dracula", "Bram Stoker", 1897, 3.95 };
-             printBook (dracula);
+             book dracula = { "Dracula", "Bram Stoker", 1897, 3.95 };
+             print_book (dracula);
            }
 
          - [x] Pure function
 
-           + ``printBook`` takes  a ``Book`` as an object but it doesn't modify it.
+           + ``print_book`` takes  a ``book`` as an object but it doesn't modify it.
 
          - [ ] Modifier function
 
-           - Does ``printBook`` modify the ``Book`` object?
+           - Does ``print_book`` modify the ``book`` object?
 
          - [ ] Fill-in function
 
-           - ``printBook`` takes one parameter, and its parameter is not an empty ``Book`` object.
+           - ``print_book`` takes one parameter, and its parameter is not an empty ``book`` object.
 
          - [ ] Fruitful function
 
-           - ``printBook`` does not return anything.
+           - ``print_book`` does not return anything.
 
    .. tb-tab:: Q5
 
@@ -171,37 +171,37 @@ Multiple Choice Exercises
 
          .. code-block:: cpp
 
-           struct Book {
+           struct book {
              string title, author;
-             int yearPublished;
+             int year_published;
              double price;
            }
 
-           void printBook (Book& b) {
-             cout << "\"" << b.title << "\" by " << b.author << " (" << b.yearPublished << "), $" << b.price << endl;
+           void print_book (book& b) {
+             cout << '"' << b.title << "\" by " << b.author << " (" << b.year_published << "), $" << b.price << '\n';
            }
 
-           void applyDiscount (const Book& b, double discount) {
+           void apply_discount (const book& b, double discount) {
              b.price -= discount;
            }
 
            int main() {
-             Book godfather = { "The Godfather", "Mario Puzo", 1969, 10.90 };
-             applyDiscount (godfather, 5.40);
-             printBook (godfather);
+             book godfather = { "The Godfather", "Mario Puzo", 1969, 10.90 };
+             apply_discount (godfather, 5.40);
+             print_book (godfather);
            }
 
          - [x] The ``struct`` definition is missing a semicolon at the end.
 
            + It's a common mistake to forget the semicolon at the end of ``struct`` definitions.
 
-         - [ ] We are not allowed to pass in a ``Book`` object by reference in ``printBook``.
+         - [ ] We are not allowed to pass in a ``book`` object by reference in ``print_book``.
 
            - We are allowed to do this. It's usually a good idea to pass structures by reference since it won't make copies of the structures, thus saving memory space.
 
-         - [x] The keyword ``const`` needs to be removed in the function definition for ``applyDiscount``.
+         - [x] The keyword ``const`` needs to be removed in the function definition for ``apply_discount``.
 
-           + Since the ``applyDiscount`` function modifies the ``Book`` passed into it, we don't it to be ``const``.
+           + Since the ``apply_discount`` function modifies the ``book`` passed into it, we don't it to be ``const``.
 
          - [ ] There are no errors with the code.
 
@@ -212,45 +212,45 @@ Multiple Choice Exercises
       .. tb-choice::
          :name: mce_9_6
 
-         What kind of function is ``applyDiscount``?
+         What kind of function is ``apply_discount``?
 
          .. code-block:: cpp
 
-           struct Book {
+           struct book {
              string title, author;
-             int yearPublished;
+             int year_published;
              double price;
            };
 
-           void printBook (Book& b) {
-             cout << "\"" << b.title << "\" by " << b.author << " (" << b.yearPublished << "), $" << b.price << endl;
+           void print_book (book& b) {
+             cout << '"' << b.title << "\" by " << b.author << " (" << b.year_published << "), $" << b.price << '\n';
            }
 
-           void applyDiscount (Book& b, double discount) {
+           void apply_discount (book& b, double discount) {
              b.price -= discount;
            }
 
            int main() {
-             Book godfather = { "The Godfather", "Mario Puzo", 1969, 10.90 };
-             applyDiscount (godfather, 5.40);
-             printBook (godfather);
+             book godfather = { "The Godfather", "Mario Puzo", 1969, 10.90 };
+             apply_discount (godfather, 5.40);
+             print_book (godfather);
            }
 
          - [ ] Pure function
 
-           - Does ``applyDiscount`` modify the ``Book`` object?
+           - Does ``apply_discount`` modify the ``book`` object?
 
          - [x] Modifier function
 
-           + ``applyDiscount`` modifies the ``Book`` object by updating the price.
+           + ``apply_discount`` modifies the ``book`` object by updating the price.
 
          - [ ] Fill-in function
 
-           - ``applyDiscount`` does not take an empty ``Book`` object as a parameter.
+           - ``apply_discount`` does not take an empty ``book`` object as a parameter.
 
          - [ ] Fruitful function
 
-           - ``applyDiscount`` does not return anything.
+           - ``apply_discount`` does not return anything.
 
    .. tb-tab:: Q7
 
@@ -261,26 +261,26 @@ Multiple Choice Exercises
 
          .. code-block:: cpp
 
-           struct Point3D {
+           struct point_3d {
              double x, y, z;
            };
 
-           void printPoint3D (const Point3D& p) {
-             cout << "(" << p.x << ", " << p.y << ", " << p.z << ")" << endl;
+           void print_point_3d (const point_3d& p) {
+             cout << '(' << p.x << ", " << p.y << ", " << p.z << ')' << '\n';
            }
 
-           void midpoint (const Point3D& p1, const Point3D& p2, Point3D p3) {
+           void midpoint (const point_3d& p1, const point_3d& p2, point_3d p3) {
              p3.x = (p1.x + p2.x) / 2;
              p3.y = (p1.y + p2.y) / 2;
              p3.z = (p1.z + p2.z) / 2;
            }
 
            int main() {
-             Point3D p1 = { 3.0, 5.0, 2.0 };
-             Point3D p2 = { 6.0, 3.5, 9.3 };
-             Point3D p3 = { 0.0, 0.0, 0.0 };
+             point_3d p1 = { 3.0, 5.0, 2.0 };
+             point_3d p2 = { 6.0, 3.5, 9.3 };
+             point_3d p3 = { 0.0, 0.0, 0.0 };
              midpoint (p1, p2, p3);
-             printPoint3D (p3);
+             print_point_3d (p3);
            }
 
          - [ ] (4.5, 4.25, 5.65)
@@ -308,39 +308,39 @@ Multiple Choice Exercises
 
          .. code-block:: cpp
 
-           struct Point3D {
+           struct point_3d {
              double x, y, z;
            };
 
-           void printPoint3D (const Point3D& p) {
-             cout << "(" << p.x << ", " << p.y << ", " << p.z << ")" << endl;
+           void print_point_3d (const point_3d& p) {
+             cout << '(' << p.x << ", " << p.y << ", " << p.z << ')' << '\n';
            }
 
-           void midpoint (const Point3D& p1, const Point3D& p2, Point3D& p3) {
+           void midpoint (const point_3d& p1, const point_3d& p2, point_3d& p3) {
              p3.x = (p1.x + p2.x) / 2;
              p3.y = (p1.y + p2.y) / 2;
              p3.z = (p1.z + p2.z) / 2;
            }
 
            int main() {
-             Point3D p1 = { 3.0, 5.0, 2.0 };
-             Point3D p2 = { 6.0, 3.5, 9.3 };
-             Point3D p3 = { 0.0, 0.0, 0.0 };
+             point_3d p1 = { 3.0, 5.0, 2.0 };
+             point_3d p2 = { 6.0, 3.5, 9.3 };
+             point_3d p3 = { 0.0, 0.0, 0.0 };
              midpoint (p1, p2, p3);
-             printPoint3D (p3);
+             print_point_3d (p3);
            }
 
          - [ ] Pure function
 
-           - Does ``midpoint`` modify a ``Point3D`` object?
+           - Does ``midpoint`` modify a ``point_3d`` object?
 
          - [x] Modifier function
 
-           + ``midpoint`` modifies the last ``Point3D`` object.
+           + ``midpoint`` modifies the last ``point_3d`` object.
 
          - [x] Fill-in function
 
-           + ``midpoint`` takes an "empty" third ``Point3D`` and fills it with the average of the other two ``Point3D`` objects.
+           + ``midpoint`` takes an "empty" third ``point_3d`` and fills it with the average of the other two ``point_3d`` objects.
 
          - [ ] Fruitful function
 
@@ -355,35 +355,35 @@ Multiple Choice Exercises
 
          .. code-block:: cpp
 
-           struct Point3D {
+           struct point_3d {
              double x, y, z;
            };
 
-           void printPoint3D (const Point3D& p) {
-             cout << "(" << p.x << ", " << p.y << ", " << p.z << ")" << endl;
+           void print_point_3d (const point_3d& p) {
+             cout << '(' << p.x << ", " << p.y << ", " << p.z << ')' << '\n';
            }
 
-           void midpoint (const Point3D& p1, const Point3D& p2, Point3D& p3) {
+           void midpoint (const point_3d& p1, const point_3d& p2, point_3d& p3) {
              p3.x = (p1.x + p2.x) / 2;
              p3.y = (p1.y + p2.y) / 2;
              p3.z = (p1.z + p2.z) / 2;
            }
 
-           Point3D reflectXYPlane(const Point3D& p) {
-             Point3D flipped = p;
+           point_3d reflect_xy_plane(const point_3d& p) {
+             point_3d flipped = p;
              flipped.z = -flipped.z;
              return flipped;
            }
 
            int main() {
-             Point3D p = { 11.3, 4.5, 2.9 };
-             Point3D pReflected = reflectXYPlane (p);
-             printPoint3D (pReflected);
+             point_3d p = { 11.3, 4.5, 2.9 };
+             point_3d p_reflected = reflect_xy_plane (p);
+             print_point_3d (p_reflected);
            }
 
          - [ ] (11.3, 4.5, 2.9)
 
-           - Take a closer look at the implementation of ``reflectXYPlane``.
+           - Take a closer look at the implementation of ``reflect_xy_plane``.
 
          - [x] (11.3, 4.5, -2.9)
 
@@ -391,11 +391,11 @@ Multiple Choice Exercises
 
          - [ ] (-11.3, -4.5, 2.9)
 
-           - Take a closer look at the implementation of ``reflectXYPlane``.
+           - Take a closer look at the implementation of ``reflect_xy_plane``.
 
          - [ ] (5.65, 2.25, 1.45)
 
-           - Take a closer look at the implementation of ``reflectXYPlane``.
+           - Take a closer look at the implementation of ``reflect_xy_plane``.
 
    .. tb-tab:: Q10
 
@@ -406,38 +406,38 @@ Multiple Choice Exercises
 
          .. code-block:: cpp
 
-           struct Point3D {
+           struct point_3d {
              double x, y, z;
            };
 
-           void printPoint3D (const Point3D& p) {
-             cout << "(" << p.x << ", " << p.y << ", " << p.z << ")" << endl;
+           void print_point_3d (const point_3d& p) {
+             cout << '(' << p.x << ", " << p.y << ", " << p.z << ')' << '\n';
            }
 
-           void midpoint (const Point3D& p1, const Point3D& p2, Point3D& p3) {
+           void midpoint (const point_3d& p1, const point_3d& p2, point_3d& p3) {
              p3.x = (p1.x + p2.x) / 2;
              p3.y = (p1.y + p2.y) / 2;
              p3.z = (p1.z + p2.z) / 2;
            }
 
-           Point3D reflectXYPlane(const Point3D& p) {
-             Point3D flipped = p;
+           point_3d reflect_xy_plane(const point_3d& p) {
+             point_3d flipped = p;
              flipped.z = -flipped.z;
              return flipped;
            }
 
            int main() {
-             Point3D p1 = { 7.0, 3.5, 6.7 };
-             Point3D p2 = { 2.0, 1.0, 0.0 };
-             Point3D p3 = { 3.9, 4.5, 10.0 };
-             Point3D p4 = reflectXYPlane (p1);
+             point_3d p1 = { 7.0, 3.5, 6.7 };
+             point_3d p2 = { 2.0, 1.0, 0.0 };
+             point_3d p3 = { 3.9, 4.5, 10.0 };
+             point_3d p4 = reflect_xy_plane (p1);
              midpoint (p4, p3, p2);
-             printPoint3D (p2);
+             print_point_3d (p2);
            }
 
          - [x] (5.45, 4, 1.65)
 
-           + Take a closer look at the implementation of ``reflectXYPlane``.
+           + Take a closer look at the implementation of ``reflect_xy_plane``.
 
          - [ ] (5.45, 4, 8.35)
 

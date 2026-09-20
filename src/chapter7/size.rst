@@ -96,7 +96,7 @@ using the ``size`` function.
          .. code-block:: cpp
 
             string s = "coding rocks";
-            cout << s.length() << endl;
+            cout << s.length() << '\n';
 
 
          - [ ] 11
@@ -116,7 +116,7 @@ using the ``size`` function.
          .. code-block:: cpp
 
             string s = "coding rocks";
-            cout << (s[s.length()-5]) << endl;
+            cout << (s[s.length()-5]) << '\n';
 
 
          - [ ] o
@@ -163,7 +163,7 @@ using the ``size`` function.
                num_chars = length(course); #distractor
             {{endgroup}}
             {{group}}
-               cout << num_chars << endl;
+               cout << num_chars << '\n';
             {{endgroup}}
             {{group}}
             }

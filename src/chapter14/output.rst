@@ -9,12 +9,12 @@ two functions:
 
    void complex_number::print_cartesian ()
    {
-     std::cout << get_real() << " + " << get_imag() << "i" << std::endl;
+     std::cout << get_real() << " + " << get_imag() << 'i' << '\n';
    }
 
    void complex_number::print_polar ()
    {
-     std::cout << get_mag() << " e^ " << get_theta() << "i" << std::endl;
+     std::cout << get_mag() << " e^ " << get_theta() << 'i' << '\n';
    }
 
 The nice thing here is that we can output any ``complex_number`` object in
@@ -100,11 +100,11 @@ Feel free to modify the code and experiment around!
    }
 
    void complex_number::print_cartesian () {
-     std::cout << get_real() << " + " << get_imag() << "i" << std::endl;
+     std::cout << get_real() << " + " << get_imag() << 'i' << '\n';
    }
 
    void complex_number::print_polar () {
-     std::cout << get_mag() << " e^ " << get_theta() << "i" << std::endl;
+     std::cout << get_mag() << " e^ " << get_theta() << 'i' << '\n';
    }
 
 
@@ -150,9 +150,9 @@ Feel free to modify the code and experiment around!
    .. code-block:: cpp
 
       int main() {
-        Complex c1 (3.0, 4.0);
-        // c1.printCartesian();
-        c1.printPolar();
+        complex c1 (3.0, 4.0);
+        // c1.print_cartesian();
+        c1.print_polar();
       }
 
    - [x] 5 e^ 0.927295i

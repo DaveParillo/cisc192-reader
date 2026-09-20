@@ -105,39 +105,39 @@ read from top to bottom. Instead, **follow the flow of execution**.
             #include <iostream>
             using namespace std;
 
-            void newLine () {
-              cout << endl;
+            void new_line () {
+              cout << '\n';
             }
 
-            void threeLine () {
-              newLine ();  newLine ();  newLine ();
+            void three_line () {
+              new_line ();  new_line ();  new_line ();
             }
 
             int main () {
-              cout << "First Line." << endl;
-              threeLine ();
-              cout << "Second Line." << endl;
+              cout << "First Line." << '\n';
+              three_line ();
+              cout << "Second Line." << '\n';
               return 0;
             }
 
          Which of the following reflects the order in which these functions 
          are executed in C++?
 
-         - [ ] ``newLine, threeLine, main``
+         - [ ] ``new_line, three_line, main``
 
            -   Remember to follow the order of execution, which is not necessarily the order the program is written.
 
-         - [ ] ``newLine, threeLine, newLine, newLine, newLine, main``
+         - [ ] ``new_line, three_line, new_line, new_line, new_line, main``
 
            -   Remember to follow the order of execution, which is not necessarily the order the program is written.
 
-         - [x] ``main, threeLine, newLine, newLine, newLine``
+         - [x] ``main, three_line, new_line, new_line, new_line``
 
            +   Execution begins in the main, then functions are executed as they are called.
 
-         - [ ] ``main, threeLine``
+         - [ ] ``main, three_line``
 
-           -   Note that ``newLine`` is called inside of ``threeLine``.
+           -   Note that ``new_line`` is called inside of ``three_line``.
 
    .. tb-tab:: Q3
 

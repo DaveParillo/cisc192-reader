@@ -1,8 +1,8 @@
-Time
+time
 ----
 
 As a second example of a user-defined structure, we will define a type
-called ``Time``, which is used to record the time of day. The various
+called ``time``, which is used to record the time of day. The various
 pieces of information that form a time are the hour, minute and second,
 so these will be the instance variables of the structure.
 
@@ -12,7 +12,7 @@ keep things interesting, let’s make ``second`` a ``double``, so we can
 record fractions of a second.
 
 The active code below shows what the structure definition looks like. 
-We can create a ``Time`` object in the usual way.
+We can create a ``time`` object in the usual way.
 
 .. tb-code:: cpp
    :name: time_AC_1
@@ -21,13 +21,13 @@ We can create a ``Time`` object in the usual way.
 
    #include <iostream>
 
-   struct Time {
+   struct time {
        int hour, minute;
        double second;
    };
 
    int main() {
-       Time time = { 11, 59, 3.14159 };
+       time time = { 11, 59, 3.14159 };
        std::cout << time.hour << ':' << time.minute << ':' << time.second;
    }
 
@@ -69,22 +69,22 @@ type has a copy of the instance variables for that type.
       .. tb-click::
          :name: time_1
 
-         Click on all the statements that are variables of type ``Price``.  If you make a mistake you can click on the statement again to unhighlight it.
+         Click on all the statements that are variables of type ``price``.  If you make a mistake you can click on the statement again to unhighlight it.
 
          .. code-block:: cpp
 
-            struct Price {
+            struct price {
             int dollar;
             int cents;
             };
             int main() {
-                Price sandwich = { 3, 45 };
-                Price coffee = { 2, 50 };
-                Price pastry = { 2, 0 };
+                price sandwich = { 3, 45 };
+                price coffee = { 2, 50 };
+                price pastry = { 2, 0 };
             }
 
 
-         .. tb-miss:: text:struct Price {
+         .. tb-miss:: text:struct price {
 
             Variables *use* a type, they are not part of the type.
 
@@ -104,15 +104,15 @@ type has a copy of the instance variables for that type.
 
             Variables *use* a type, they are not part of the type.
 
-         .. tb-hit:: text:Price sandwich = { 3, 45 };
+         .. tb-hit:: text:price sandwich = { 3, 45 };
 
             Correct.
 
-         .. tb-hit:: text:Price coffee = { 2, 50 };
+         .. tb-hit:: text:price coffee = { 2, 50 };
 
             Correct.
 
-         .. tb-hit:: text:Price pastry = { 2, 0 };
+         .. tb-hit:: text:price pastry = { 2, 0 };
 
             Correct.
 
@@ -121,22 +121,22 @@ type has a copy of the instance variables for that type.
       .. tb-click::
          :name: time_2
 
-         Click on all the statements that are instance variables of type ``Price``.
+         Click on all the statements that are instance variables of type ``price``.
 
          .. code-block:: cpp
 
-            struct Price {
+            struct price {
             int dollar;
             int cents;
             };
             int main() {
-                Price sandwich = { 3, 45 };
-                Price coffee = { 2, 50 };
-                Price pastry = { 2, 0 };
+                price sandwich = { 3, 45 };
+                price coffee = { 2, 50 };
+                price pastry = { 2, 0 };
             }
 
 
-         .. tb-miss:: text:struct Price {
+         .. tb-miss:: text:struct price {
 
             Try again.
 
@@ -156,22 +156,22 @@ type has a copy of the instance variables for that type.
 
             Try again.
 
-         .. tb-miss:: text:Price sandwich = { 3, 45 };
+         .. tb-miss:: text:price sandwich = { 3, 45 };
 
             Try again.
 
-         .. tb-miss:: text:Price coffee = { 2, 50 };
+         .. tb-miss:: text:price coffee = { 2, 50 };
 
             Try again.
 
-         .. tb-miss:: text:Price pastry = { 2, 0 };
+         .. tb-miss:: text:price pastry = { 2, 0 };
 
             Try again.
 
    .. tb-tab:: Q3
 
-      Try writing the ``printTime`` function in the commented section
-      of the active code below. ``printTime`` should print out the time
+      Try writing the ``print_time`` function in the commented section
+      of the active code below. ``print_time`` should print out the time
       in the HOUR:MINUTE:SECONDS format. If you get stuck, you can reveal the extra problem
       at the end for help. 
 
@@ -182,22 +182,22 @@ type has a copy of the instance variables for that type.
 
          #include <iostream>
 
-         struct Time {
+         struct time {
              int hour;
              int minute;
              double second;
          };
 
-         void printTime(Time& time) {
-             // ``printTime`` should print out the time in the   
+         void print_time(time& time) {
+             // ``print_time`` should print out the time in the   
              // HOUR:MINUTE:SECONDS format. Write your implementation here.
          }
 
          int main() {
-             Time time = { 11, 59, 3.14159 };
+             time time = { 11, 59, 3.14159 };
 
              // Should output "11:59:3.14159"
-             printTime(time);
+             print_time(time);
          }
 
       .. tb-reveal:: Reveal Problem
@@ -206,23 +206,23 @@ type has a copy of the instance variables for that type.
          .. tb-parsons::
             :name: time_4
 
-            Let's write the code for the ``printTime`` function. ``printTime`` 
+            Let's write the code for the ``print_time`` function. ``print_time`` 
             should print out the time in the HOUR:MINUTE:SECONDS format.
 
             .. code-block:: cpp
 
                {{group}}
-               void printTime(Time& time) {
+               void print_time(time& time) {
                {{endgroup}}
                {{distractor}}
                {{group}}
-               Time printTime(Time& time) {
+               time print_time(time& time) {
                {{endgroup}}
                {{group}}
-                  cout << time.hour << ":" << time.minute << ":" << time.second;
+                  cout << time.hour << ':' << time.minute << ':' << time.second;
                {{endgroup}}
                {{distractor}}
                {{group}}
-                  cout << hour << ":" << minute << ":" << second;
+                  cout << hour << ':' << minute << ':' << second;
                }
                {{endgroup}}

@@ -130,7 +130,7 @@ exceptions.
             {{endgroup}}
             {{distractor}}
             {{group}}
-             cout << "r"; #distractor
+             cout << 'r'; #distractor
             {{endgroup}}
             {{group}}
             }

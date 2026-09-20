@@ -102,7 +102,7 @@ modify the code and experiment around.
      int target = 6;
      std::vector<int> numbers = make_vector (num_values, upper_bound);
      print (numbers);
-     cout << "\nThe number " << target << " appears " 
+     cout << "\n_the number " << target << " appears " 
           << how_many(numbers,target) << " times in our vector!";
    }
 

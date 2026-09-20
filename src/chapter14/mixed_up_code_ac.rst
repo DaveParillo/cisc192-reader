@@ -82,7 +82,7 @@ Answer the following **Activecode** questions to assess what you have learned in
                      return radius;
                  }
                  void set_radius (double r) {
-                     if (r < 0) { std::cout << "Error! Cannot have a negative radius!" << std::endl; }
+                     if (r < 0) { std::cout << "Error! Cannot have a negative radius!" << '\n'; }
                      else { radius = r; }
                  }
          };
@@ -124,16 +124,16 @@ Answer the following **Activecode** questions to assess what you have learned in
                      return radius;
                  }
                  void set_radius (double r) {
-                     if (r < 0) { std::cout << "Error! Cannot have a negative radius!" << std::endl; }
+                     if (r < 0) { std::cout << "Error! Cannot have a negative radius!" << '\n'; }
                      else { radius = r; }
                  }
          };
 
          int main() {
              circle c(2.4);
-             std::cout << "Radius: " << c.get_radius () << std::endl;
+             std::cout << "Radius: " << c.get_radius () << '\n';
              c.set_radius (3.6);
-             std::cout << "New radius: " << c.get_radius () << std::endl;
+             std::cout << "New radius: " << c.get_radius () << '\n';
          }
 
 .. tb-group::
@@ -370,12 +370,12 @@ Answer the following **Activecode** questions to assess what you have learned in
              point p2(8, 1.5);
              rectangle r(p1, p2);
              r.calculate_sides();
-             std::cout << "Length: " << r.length << ", Height: " << r.height << std::endl;
-             std::cout << "Area: " << r.calculate_area() << std::endl;
+             std::cout << "length: " << r.length << ", Height: " << r.height << '\n';
+             std::cout << "Area: " << r.calculate_area() << '\n';
              point p3(4.2, 10.7);
              r.set_upper_left(p3);
              r.calculate_sides();
-             std::cout << "New area: " << r.calculate_area() << std::endl;
+             std::cout << "New area: " << r.calculate_area() << '\n';
          }
 
 .. tb-group::
@@ -476,10 +476,10 @@ Answer the following **Activecode** questions to assess what you have learned in
 
          void date::print_date () {
              if (get_year() < 0) {
-                 std::cout << get_month() << "/" << get_day() << "/" << -get_year() << " BCE" << std::endl;
+                 std::cout << get_month() << '/' << get_day() << '/' << -get_year() << " BCE" << '\n';
              }
              else {
-                 std::cout << get_month() << "/" << get_day() << "/" << get_year() << " CE" << std::endl;
+                 std::cout << get_month() << '/' << get_day() << '/' << get_year() << " CE" << '\n';
              }
          }
 

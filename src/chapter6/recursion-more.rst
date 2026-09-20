@@ -95,7 +95,7 @@ the passed argument.
    }
 
    int main () {
-       std::cout << factorial(3) << std::endl;
+       std::cout << factorial(3) << '\n';
    }
 
 

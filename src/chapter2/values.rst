@@ -36,7 +36,7 @@ way:
 
 ::
 
-    cout << '}' << endl;
+    cout << '}' << '\n';
 
 This example outputs a single close curly-brace on a line by itself.
 
@@ -75,12 +75,12 @@ soon.
                 int x = 7;
                 char c = '8';
                 while (x < 10) {
-                    cout << c << endl;
+                    cout << c << '\n';
                     x++;
                 }
                 c = '9';
                 cout << "It's the year 3000!";
-                cout << "Just kidding, it's " << 2020 << "!";
+                cout << "Just kidding, it's " << 2020 << '!';
             }
 
 
@@ -101,7 +101,7 @@ soon.
 
             Try again!
 
-         .. tb-miss:: text:'8'
+         .. tb-miss:: text:8
 
             Try again!
 
@@ -113,7 +113,7 @@ soon.
 
             Try again!
 
-         .. tb-miss:: text:'9'
+         .. tb-miss:: text:9
 
             Try again!
 
@@ -145,10 +145,10 @@ soon.
             int main() {
                 char init1 = 'R';
                 string init2 = "M";
-                cout << init1 << "+" << init2 << endl;
+                cout << init1 << '+' << init2 << '\n';
                 string init3 = "R";
                 char init4 = 'P';
-                cout << init3 << '+' << init4 << endl;
+                cout << init3 << '+' << init4 << '\n';
                 cout << "Carved their initials in a tree!";
             }
 
@@ -158,7 +158,7 @@ soon.
 
             Try again!
 
-         .. tb-miss:: text:'R'
+         .. tb-miss:: text:R
 
             Try again!
 
@@ -174,7 +174,7 @@ soon.
 
             Try again!
 
-         .. tb-hit:: text:"+"
+         .. tb-hit:: text:+
 
             Correct.
 
@@ -186,7 +186,7 @@ soon.
 
             Try again!
 
-         .. tb-hit:: text:"R"
+         .. tb-hit:: text:R#2
 
             Correct.
 
@@ -194,7 +194,7 @@ soon.
 
             Try again!
 
-         .. tb-miss:: text:'P'
+         .. tb-miss:: text:P
 
             Try again!
 
@@ -202,7 +202,7 @@ soon.
 
             Try again!
 
-         .. tb-miss:: text:'+'
+         .. tb-miss:: text:+#2
 
             Try again!
 

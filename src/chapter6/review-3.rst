@@ -76,7 +76,7 @@ assess what you have learned in this chapter.
          #include <iostream>
          #include <string>
 
-         std::string whichDoor (double grade) {
+         std::string which_door (double grade) {
              s = "";
              if (grade < 50) {
                  s = "C";
@@ -111,19 +111,19 @@ assess what you have learned in this chapter.
                #include <iostream>
                using std::cout;
 
-               void countBy2 (int num) {
+               void count_by_2 (int num) {
                    if (num != 10) {
                        cout << num;
-                       countBy2 (num + 2);
+                       count_by_2 (num + 2);
                    }
                    else {    
                        cout << num 
-                            << "\nDone counting!";
+                            << "\n_done counting!";
                    }
                }
 
                int main () {
-                   countBy2(6);
+                   count_by_2(6);
                }
 
          .. tb-tab:: Answer
@@ -142,19 +142,19 @@ assess what you have learned in this chapter.
                #include <iostream>
                using std::cout;
 
-               void countBy2 (int num) {
+               void count_by_2 (int num) {
                    if (num < 9) {
                        cout << num;
-                       countBy2 (num + 2);
+                       count_by_2 (num + 2);
                    }
                    else {    
                        cout << num 
-                            << "\nDone counting!";
+                            << "\n_done counting!";
                    }
                }
 
                int main () {
-                   countBy2(6);
+                   count_by_2(6);
                }
 
 
@@ -340,7 +340,7 @@ assess what you have learned in this chapter.
 
                void countdown (int num) {
                    if (num != 0){
-                       cout << num << endl;
+                       cout << num << '\n';
                        num -= 1;
                        countdown (num);
                    }

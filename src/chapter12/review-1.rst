@@ -10,9 +10,9 @@ Multiple Choice Exercises
 
      + C++ allows for a variety of different compositions.
 
-   - [ ] In order to check to see if two ``Card``\s are equal, we can use the ``==`` operator.
+   - [ ] In order to check to see if two ``card``\s are equal, we can use the ``==`` operator.
 
-     - We have to write a function that compares two ``Card``\s.
+     - We have to write a function that compares two ``card``\s.
 
    - [x] There is no faster way to search through an unsorted vector than using a linear search.
 
@@ -50,22 +50,22 @@ Multiple Choice Exercises
 
    .. code-block:: cpp
 
-       struct Card {
+       struct card {
          int suit, rank;
-         Card ();
-         Card (int s, int r);
+         card ();
+         card (int s, int r);
        };
 
-       Card::Card () {
+       card::card () {
          suit = 0;  rank = 0;
        }
 
-       Card::Card (int s, int r) {
+       card::card (int s, int r) {
          suit = s;  rank = r;
        }
 
        int main() {
-         Card card (2, 8);
+         card card (2, 8);
        }
 
    - [ ] Ace of Clubs
@@ -91,19 +91,19 @@ Multiple Choice Exercises
 
    .. code-block:: cpp
 
-       struct Card {
+       struct card {
          int suit, rank;
-         Card ();
-         Card (int s, int r);
+         card ();
+         card (int s, int r);
          void print () const;
        };
 
        int main() {
-         Card card (1,3);
+         card card (1,3);
          print (card);
        }
 
-   - [ ] ``card`` is not a valid ``Card``.
+   - [ ] ``card`` is not a valid ``card``.
 
      - A ``suit`` of 1 and a ``rank`` of 3 maps to the 3 of Diamonds.
 
@@ -126,18 +126,18 @@ Multiple Choice Exercises
 
    .. code-block:: cpp
 
-      struct Card {
+      struct card {
         int suit, rank;
-        Card ();
-        Card (int s, int r);
+        card ();
+        card (int s, int r);
         void print () const;
-        bool isGreater (const Card& c2) const;
+        bool is_greater (const card& c2) const;
       };
 
       int main() {
-        Card card1 (2,12);
-        Card card2 (2,2);
-        cout << card1.isGreater (card2) << endl;
+        card card1 (2,12);
+        card card2 (2,2);
+        cout << card1.is_greater (card2) << '\n';
       }
 
    - [ ] True
@@ -163,27 +163,27 @@ Multiple Choice Exercises
 
    .. code-block:: cpp
 
-      struct Card {
+      struct card {
         int suit, rank;
-        Card ();
-        Card (int s, int r);
+        card ();
+        card (int s, int r);
         void print () const;
-        bool isGreater (const Card& c2) const;
+        bool is_greater (const card& c2) const;
       };
 
-      vector<Card> buildDeck();
+      vector<card> build_deck();
 
-      bool equals (const Card& c1, const Card& c2){
+      bool equals (const card& c1, const card& c2){
         return (c1.rank == c2.rank && c1.suit == c2.suit);
       }
 
-      void printDeck(const vector<Card>& deck);
+      void print_deck(const vector<card>& deck);
 
-      int find (const Card& card, const vector<Card>& deck);
+      int find (const card& card, const vector<card>& deck);
 
       int main() {
-        vector<Card> deck = buildDeck();
-        Card card (3, 13);
+        vector<card> deck = build_deck();
+        card card (3, 13);
         cout << find(card, deck);
       }
 
@@ -210,16 +210,16 @@ Multiple Choice Exercises
 
    .. code-block:: cpp
 
-      struct Card {
+      struct card {
         int suit, rank;
-        Card ();
-        Card (int s, int r);
+        card ();
+        card (int s, int r);
         void print () const;
-        bool isGreater (const Card& c2) const;
+        bool is_greater (const card& c2) const;
       };
 
-      vector<Card> createDeck() {
-        vector<Card> deck (12);
+      vector<card> create_deck() {
+        vector<card> deck (12);
         int i = 0;
         for (int suit = 0; suit <= 3; suit++) {
           for (int rank = 1; rank < 4; rank++) {
@@ -232,12 +232,12 @@ Multiple Choice Exercises
       }
 
       int main() {
-        vector<Card> deck = createDeck();
+        vector<card> deck = create_deck();
       }
 
-   - [x] It contains 12 ``Card``\s.
+   - [x] It contains 12 ``card``\s.
 
-     + ``createDeck`` returns a ``vector`` of size 12, corresponding to 12 ``Card``\s.
+     + ``create_deck`` returns a ``vector`` of size 12, corresponding to 12 ``card``\s.
 
    - [ ] The highest ``rank`` is 4.
 
@@ -254,28 +254,28 @@ Multiple Choice Exercises
 .. tb-choice::
    :name: mce_12_8
 
-   How many times does ``findBisect`` need to call itself in order to find the King of Diamonds?
+   How many times does ``find_bisect`` need to call itself in order to find the King of Diamonds?
 
    .. code-block:: cpp
 
-       struct Card {
+       struct card {
          int suit, rank;
-         Card ();
-         Card (int s, int r);
+         card ();
+         card (int s, int r);
          void print () const;
-         bool isGreater (const Card& c2) const;
+         bool is_greater (const card& c2) const;
        };
 
-       vector<Card> buildDeck();
-       bool equals (const Card& c1, const Card& c2);
-       void printDeck(const vector<Card>& deck);
-       int find (const Card& card, const vector<Card>& deck);
-       int findBisect (const Card& card, const vector<Card>& deck, int low, int high);
+       vector<card> build_deck();
+       bool equals (const card& c1, const card& c2);
+       void print_deck(const vector<card>& deck);
+       int find (const card& card, const vector<card>& deck);
+       int find_bisect (const card& card, const vector<card>& deck, int low, int high);
 
        int main() {
-         vector<Card> deck = buildDeck();
-         Card card (1, 13);
-         cout << findBisect(card, deck, 0, 51);
+         vector<card> deck = build_deck();
+         card card (1, 13);
+         cout << find_bisect(card, deck, 0, 51);
        }
 
    - [x] 0
@@ -297,34 +297,34 @@ Multiple Choice Exercises
 .. tb-choice::
    :name: mce_12_9
 
-   We want to write the function ``findAllQueens``, which searches through a deck and 
+   We want to write the function ``find_all_queens``, which searches through a deck and 
    prints out the location of all 4 queens in the ``deck``. What should go in the blanks?
 
    .. code-block:: cpp
 
-       struct Card {
+       struct card {
          int suit, rank;
-         Card ();
-         Card (int s, int r);
+         card ();
+         card (int s, int r);
          void print () const;
-         bool isGreater (const Card& c2) const;
+         bool is_greater (const card& c2) const;
        };
 
-       vector<Card> buildDeck();
-       bool equals (const Card& c1, const Card& c2);
-       void printDeck(const vector<Card>& deck);
+       vector<card> build_deck();
+       bool equals (const card& c1, const card& c2);
+       void print_deck(const vector<card>& deck);
 
-       void findAllQueens (const vector<Card>& deck) {
+       void find_all_queens (const vector<card>& deck) {
          for (size_t i = 0; i < deck.____; ++i) {
            if (deck[i].____ == 12) {
-             cout << ____ << " ";
+             cout << ____ << ' ';
            }
          }
        }
 
        int main() {
-         vector<Card> deck = buildDeck();
-         findAllQueens (deck);
+         vector<card> deck = build_deck();
+         find_all_queens (deck);
        }
 
    - [ ] ``push_back()``, ``suit``, ``i``

@@ -339,7 +339,7 @@ Coding Practice
              std::vector<int> vec = { 5, 1, 4, 2, 8 };
              bubble_sort (vec);
              for (std::size_t i = 0; i < vec.size(); ++i) {
-                 std::cout << vec[i] << " ";
+                 std::cout << vec[i] << ' ';
              }
          }
 
@@ -379,7 +379,7 @@ Coding Practice
              std::vector<int> vec = { 5, 1, 4, 2, 8 };
              bubble_sort (vec);
              for (std::size_t i = 0; i < vec.size(); ++i) {
-                 std::cout << vec[i] << " ";
+                 std::cout << vec[i] << ' ';
              }
          }
 

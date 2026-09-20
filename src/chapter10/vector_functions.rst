@@ -30,7 +30,7 @@ We can use then vector function :vector:`push_back` for that purpose.
      }
      std::size_t len = values.size();
      for (std::size_t i = 0; i < len; i++) {
-       cout << values[i] << endl;
+       cout << values[i] << '\n';
      }
    }
 
@@ -176,7 +176,7 @@ even numbers less than or equal to 10 to the vector ``values``.
                cout << numbers[i] << "  ";
             }
 
-            cout << endl;
+            cout << '\n';
 
          - [ ] 4 3 2 1 0
 

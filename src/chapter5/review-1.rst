@@ -192,7 +192,7 @@ Multiple Choice Exercises
             int main() {
               int x = 1;
               while (x < 6) {
-                cout << x << "\t" << pow (x, 5) / pow (x, 3) << endl;
+                cout << x << '\t' << pow (x, 5) / pow (x, 3) << '\n';
                 x++;
               }
             }
@@ -218,18 +218,18 @@ Multiple Choice Exercises
       .. tb-choice::
          :name: mce_6_7
 
-         Why are we allowed to use the variable ``x`` in both ``main`` and in the function definition of ``superSecretFunction``?
+         Why are we allowed to use the variable ``x`` in both ``main`` and in the function definition of ``super_secret_function``?
 
          .. code-block:: cpp
 
-            int superSecretFunction (int n) {
+            int super_secret_function (int n) {
               int x = 0;
               return (2 + (n * n) - 5 * n / 7) * x;
             }
 
             int main() {
               int x = 1;
-              cout << "After using the super secret function, we get " << superSecretFunction (x);
+              cout << "After using the super secret function, we get " << super_secret_function (x);
             }
 
          - [ ] We're using the same variable, but just reassigning the value from 0 to 1.
@@ -238,7 +238,7 @@ Multiple Choice Exercises
 
          - [x] Although the name of both variables is ``x``, they represent different locations in memory, and thus are different variables.
 
-           + One ``x`` is a local variable of ``superSecretFunction`` while the other is a local variable of ``main``.
+           + One ``x`` is a local variable of ``super_secret_function`` while the other is a local variable of ``main``.
 
          - [ ] We can assign them different values but not the same value. Thus, if both were initialized to 0, then we'd get an error.
 
@@ -257,7 +257,7 @@ Multiple Choice Exercises
 
          .. code-block:: cpp
 
-            int loopFive (int n) {
+            int loop_five (int n) {
               while (n % 5 != 0) {
                 n = n + 3;
               }
@@ -265,9 +265,9 @@ Multiple Choice Exercises
             }
 
             int main() {
-              cout << loopFive (2);
-              cout << loopFive (3);
-              cout << loopFive (4);
+              cout << loop_five (2);
+              cout << loop_five (3);
+              cout << loop_five (4);
             }
 
          - [x] 51510
@@ -291,7 +291,7 @@ Multiple Choice Exercises
       .. tb-choice::
          :name: mce_6_9
 
-         The super evil villian RePete wants to annoy the city by
+         The super evil villian re_pete wants to annoy the city by
          hacking into the city's helper robots and making them repeat
          everything they say 5 times. However, there's an error in his 
          code and now the robots won't stop repeating! Can you find the
@@ -332,7 +332,7 @@ Multiple Choice Exercises
       .. tb-choice::
          :name: mce_6_10
 
-         After making some changes to his code, RePete tries again.
+         After making some changes to his code, re_pete tries again.
          This time, however, the robots don't repeat anything!
          Can you find the new error?
 

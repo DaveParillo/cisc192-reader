@@ -52,7 +52,7 @@ can print an appropriate error message:
      if (polar == false) {
        std::cout <<
        "calculate_cartesian failed because the polar representation is invalid"
-        << std::endl;
+        << '\n';
        std::exit (1);
      }
      real = mag * std::cos (theta);
@@ -156,11 +156,11 @@ fails and thus we get an error.
    }
 
    void complex_number::print_cartesian () {
-     std::cout << get_real() << " + " << get_imag() << "i" << std::endl;
+     std::cout << get_real() << " + " << get_imag() << 'i' << '\n';
    }
 
    void complex_number::print_polar () {
-     std::cout << get_mag() << " e^ " << get_theta() << "i" << std::endl;
+     std::cout << get_mag() << " e^ " << get_theta() << 'i' << '\n';
    }
 
    complex_number add (complex_number& a, complex_number& b) {

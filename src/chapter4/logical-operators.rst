@@ -34,7 +34,7 @@ statements.
 
             if (x > 0) {
               if (x < 10) {
-                cout << "x is a positive single digit" << endl;
+                cout << "x is a positive single digit" << '\n';
               }
             }
 

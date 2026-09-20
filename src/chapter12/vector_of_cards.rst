@@ -100,7 +100,7 @@ the ``build_deck`` function.
       ranks[12] = "Queen";
       ranks[13] = "King";
 
-      std::cout << ranks[rank] << " of " << suits[suit] << std::endl;
+      std::cout << ranks[rank] << " of " << suits[suit] << '\n';
    }
 
 
@@ -138,7 +138,7 @@ the ``build_deck`` function.
 
    int main() {
        std::vector<playing_card> deck = build_deck();
-       std::cout << "We just created our deck of 52 cards. We can access an individual card by indexing." << std::endl;
+       std::cout << "We just created our deck of 52 cards. We can access an individual card by indexing." << '\n';
        std::cout << "For example, the first card in the deck is: ";
        deck[0].print();
    }
@@ -149,8 +149,8 @@ the ``build_deck`` function.
    Take a look at the code below. What can we say about the deck that is created?
    ::
 
-     vector<Card> createDeck() {
-        vector<Card> deck (16);
+     vector<card> create_deck() {
+        vector<card> deck (16);
         int i = 0;
         for (int suit = 0; suit <= 1; suit++) {
            for (int rank = 4; rank <= 11; rank++) {

@@ -183,7 +183,7 @@ Answer the following **Mixed-Up Code** questions to assess what you have learned
 
          <pre> <code>
 
-            vector<string> words = {"cAr", "cAt", "switch", "mArio"}
+            vector<string> words = {"c_ar", "c_at", "switch", "m_ario"}
 
          </code> </pre>
 
@@ -378,11 +378,11 @@ Answer the following **Mixed-Up Code** questions to assess what you have learned
 
       .. admonition:: Parsons exercise
 
-         Suppose you have the following function <code>howMany</code> and vector <code>exclamations</code>
+         Suppose you have the following function <code>how_many</code> and vector <code>exclamations</code>
 
          ::
 
-            int howMany (const vector<string>& vec, char let) {
+            int how_many (const vector<string>& vec, char let) {
                 int count = 0;
                 for (size_t i = 0; i < vec.size(); i++) {
                     for (size_t c = 0; c < vec[i].size(); c++) {
@@ -409,7 +409,7 @@ Answer the following **Mixed-Up Code** questions to assess what you have learned
             for (int i = 0; i < punc.size(); ++i) {
             {{endgroup}}
             {{group}}
-             counts.push_back(howMany(excl, punc[i]));
+             counts.push_back(how_many(excl, punc[i]));
             {{endgroup}}
             {{group}}
             }
@@ -425,5 +425,5 @@ Answer the following **Mixed-Up Code** questions to assess what you have learned
             {{endgroup}}
             {{distractor}}
             {{group}}
-            counts.push_back(howMany(excl, i)); #distractor
+            counts.push_back(how_many(excl, i)); #distractor
             {{endgroup}}

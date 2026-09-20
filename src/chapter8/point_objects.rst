@@ -1,4 +1,4 @@
-``Point`` objects
+``point`` objects
 -----------------
 
 As a simple example of a compound structure, consider the concept of a
@@ -89,22 +89,22 @@ object with two named instance variables.
       .. tb-choice::
          :name: point_objects_1
 
-         Which of the following would be the correct way to initialize the ``x`` instance variable of the ``Point`` object?
+         Which of the following would be the correct way to initialize the ``x`` instance variable of the ``point`` object?
 
          .. code-block:: cpp
 
-            struct Point () {
+            struct point () {
               double x, y;
             };
 
             int main() {
-              Point nice;
+              point nice;
             }
 
          - [ ] blank.x = 3.0;
 
            This declaration would not work for the specific code block below.
-         - [ ] Point.x = 3.0;
+         - [ ] point.x = 3.0;
 
            The specific name of the structure should be used, not its type.
          - [x] nice.x = 3.0;

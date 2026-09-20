@@ -136,16 +136,16 @@ performing floating-point operations.
              int servings = 12;
              int people = 5;
 
-             double servingSize = servings / people;
+             double serving_size = servings / people;
 
-         Based on the value of ``servingSize``, you tell your friend that each
+         Based on the value of ``serving_size``, you tell your friend that each
          slice is {{blank:blank1}} servings.  This is {{blank:blank2}} (more, less, the same) than/as
          the actual serving size of her slice.
 
          .. tb-answer:: blank1
             :match: 2
             :feedback: Correct! C++ performs integer division.
-            :incorrect: servingSize and people are integer variables!
+            :incorrect: serving_size and people are integer variables!
 
          .. tb-answer:: blank2
             :match: less

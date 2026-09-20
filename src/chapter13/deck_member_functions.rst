@@ -56,7 +56,7 @@ to print out the deck instead of writing a for loop in main.
        ranks[12] = "Queen";
        ranks[13] = "King";
 
-       std::cout << ranks[rank] << " of " << suits[suit] << std::endl;
+       std::cout << ranks[rank] << " of " << suits[suit] << '\n';
    }
 
    card_deck::card_deck () {
@@ -178,18 +178,18 @@ One solution is to declare ``card_deck`` before ``playing_card`` and then define
 .. tb-choice::
    :name: deck_members_1
 
-   Multiple Response: What are some tricks we can use to write ``find`` as a ``Card`` member function?
+   Multiple Response: What are some tricks we can use to write ``find`` as a ``card`` member function?
 
    - [x] Use the keyword this.
 
-     We use this to refer to the Card that the function is invoked on.
-   - [ ] Define Deck before Card.
+     We use this to refer to the card that the function is invoked on.
+   - [ ] Define deck before card.
 
-     We don't have to define Deck before Card.
-   - [ ] Pass a Card parameter in the Card member function find.
+     We don't have to define deck before card.
+   - [ ] Pass a card parameter in the card member function find.
 
      What do we pass as a parameter in find?
-   - [x] Declare Deck before Card and then define Deck afterwards.
+   - [x] Declare deck before card and then define deck afterwards.
 
      This is how we implemented our code!
 
@@ -268,7 +268,7 @@ The active code below uses the ``find`` function that we just wrote.
        ranks[12] = "Queen";
        ranks[13] = "King";
 
-       std::cout << ranks[rank] << " of " << suits[suit] << std::endl;
+       std::cout << ranks[rank] << " of " << suits[suit] << '\n';
    }
 
    card_deck::card_deck () {
@@ -342,7 +342,7 @@ The active code below uses the ``find`` function that we just wrote.
        playing_card card (clubs, ace);
        playing_card card2 (diamonds, ace);
        // Should output 0 and 13
-       std::cout << deck.find(card) << std::endl;
-       std::cout << deck.find(card2) << std::endl;
+       std::cout << deck.find(card) << '\n';
+       std::cout << deck.find(card2) << '\n';
    }
 

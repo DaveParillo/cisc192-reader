@@ -79,14 +79,14 @@ is a best practice or not.
              int main () {
                int x = 0;
                if (x == 0) {
-                 cout << "Hey!" << endl;
+                 cout << "Hey!" << '\n';
                }
                else {
                  if (x > 0) {
-                   cout << "Hi!" << endl;
+                   cout << "Hi!" << '\n';
                  }
                  else {
-                   cout << "Hello!" << endl;
+                   cout << "Hello!" << '\n';
                  }
                }
                return 0;
@@ -121,14 +121,14 @@ is a best practice or not.
              int main () {
                int x = -4;
                if (x == 0) {
-                 cout << "Hey!" << endl;
+                 cout << "Hey!" << '\n';
                }
                else {
                  if (x > 0) {
-                   cout << "Hi!" << endl;
+                   cout << "Hi!" << '\n';
                  }
                  else {
-                   cout << "Hello!" << endl;
+                   cout << "Hello!" << '\n';
                  }
                }
                return 0;
@@ -158,7 +158,7 @@ is a best practice or not.
 
          ::
 
-             string seatingArrangement(char first, char last) {
+             string seating_arrangement(char first, char last) {
                if (last > m) {
                  if (first > m) {
                    return "Back Left!";
@@ -198,7 +198,7 @@ is a best practice or not.
 .. admonition:: More to Explore
 
    - :lang:`if` from cppreference.com
-   - `The 'Arrow anti-pattern' <http://wiki.c2.com/?ArrowAntiPattern>`__ from
+   - `The 'Arrow anti-pattern' <http://wiki.c2.com/?arrow_anti_pattern>`__ from
      the Portland Pattern Repository (the very first wiki!)
    - `Flattening arrow code <https://blog.codinghorror.com/flattening-arrow-code/>`__
      from Jeff Atwood's blog.

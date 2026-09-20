@@ -105,7 +105,7 @@ at the end for help.
        ranks[12] = "Queen";
        ranks[13] = "King";
 
-       std::cout << ranks[rank] << " of " << suits[suit] << std::endl;
+       std::cout << ranks[rank] << " of " << suits[suit] << '\n';
    }
 
    bool playing_card::is_greater (const playing_card& c2) const {

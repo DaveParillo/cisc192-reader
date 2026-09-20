@@ -9,11 +9,11 @@ Multiple Choice Exercises
       .. tb-choice::
          :name: mce_5_1
 
-         What should be the return type of the function ``convertToCelsius``?
+         What should be the return type of the function ``convert_to_celsius``?
 
          .. code-block:: cpp
 
-           ______ convertToCelsius (double fahrenheit) {
+           ______ convert_to_celsius (double fahrenheit) {
              double celsius;
              celsius = (fahrenheit - 32) * 5 / 9;
              return celsius;
@@ -40,11 +40,11 @@ Multiple Choice Exercises
       .. tb-choice::
          :name: mce_5_2
 
-         What would be returned by ``secretFunction`` if the input was 14?
+         What would be returned by ``secret_function`` if the input was 14?
 
          .. code-block:: cpp
 
-           int secretFunction (int input) {
+           int secret_function (int input) {
              if (input % 2 == 0) {
                return 3 * input - 2;
              }
@@ -82,22 +82,22 @@ Multiple Choice Exercises
       .. tb-choice::
          :name: mce_5_3
 
-         If we wanted to create a boolean function called ``isPrime``, which takes an ``int input``
+         If we wanted to create a boolean function called ``is_prime``, which takes an ``int input``
          as a parameter, which of the following would be the correct function header?
 
-         - [ ] ``boolean isPrime (int input) {``
+         - [ ] ``boolean is_prime (int input) {``
 
            - In C++, use the ``bool`` keyword for a boolean. 
 
-         - [ ] ``bool isPrime (input) {``
+         - [ ] ``bool is_prime (input) {``
 
            - In a function header, the type of each variable must be specified in the parameter list.
 
-         - [x] ``bool isPrime (int input) {`` 
+         - [x] ``bool is_prime (int input) {`` 
 
            + This is the correct function header for the function.
 
-         - [ ] ``int isPrime (bool input) {``
+         - [ ] ``int is_prime (bool input) {``
 
            - Take a closer look at what the return type is.
 
@@ -212,7 +212,7 @@ Multiple Choice Exercises
 
          .. code-block:: cpp
 
-           bool isEven (int num) {
+           bool is_even (int num) {
              if (num % 2 == 0) {
                return true;
              }
@@ -245,11 +245,11 @@ Multiple Choice Exercises
 
            double Free_time (int day) {
              if (day==1||day==2||day==3||day==4) {
-               cout<<"Better study on weekday!"<<endl;
+               cout<<"Better study on weekday!"<<'\n';
                return day*0.25;
              }
              else{
-               cout<<"Happy weekend"<<endl;
+               cout<<"Happy weekend"<<'\n';
                return day;
              }
            }
@@ -279,9 +279,9 @@ Multiple Choice Exercises
 
          .. code-block:: cpp
 
-           void moonWeight (double earth) {
+           void moon_weight (double earth) {
              double moon = 0.165 * earth;
-             cout << "You would weigh " << moon << " pounds on the moon." << endl;
+             cout << "You would weigh " << moon << " pounds on the moon." << '\n';
              return moon;
            }
 
@@ -376,7 +376,7 @@ Multiple Choice Exercises
                 //we can have an empty return to a void function
              }
              else {
-               cout<<n<<" ";
+               cout<<n<<' ';
                print_sequence(n-1);
              }
            }

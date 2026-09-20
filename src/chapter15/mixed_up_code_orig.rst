@@ -30,7 +30,7 @@ Mixed Up Code Practice
          if (infile.good()) {
       {{endgroup}}
       {{group}}
-            std::cout << "Unable to open the file." << std::endl;
+            std::cout << "Unable to open the file." << '\n';
       {{endgroup}}
       {{group}}
             std::exit(1);
@@ -82,7 +82,7 @@ Mixed Up Code Practice
          if (infile.good() == false) {
       {{endgroup}}
       {{group}}
-            std::cout << "Unable to open the file." << std::endl;
+            std::cout << "Unable to open the file." << '\n';
       {{endgroup}}
       {{group}}
             std::exit(1);
@@ -115,7 +115,7 @@ Mixed Up Code Practice
       {{endgroup}}
       {{group}}
          if (outfile.good() == false) {
-            std::cout << "Unable to open the file." << std::endl;
+            std::cout << "Unable to open the file." << '\n';
             std::exit(1);
          }
       {{endgroup}}
@@ -139,11 +139,11 @@ Mixed Up Code Practice
          sum = n1 + n2 + n3 + n4 + n5;
       {{endgroup}}
       {{group}}
-         outfile << "The average is " << sum / 5.0 << std::endl;
+         outfile << "The average is " << sum / 5.0 << '\n';
       {{endgroup}}
       {{distractor}}
       {{group}}
-         std::cout << "The average is " << sum / 5.0 << std::endl;
+         std::cout << "The average is " << sum / 5.0 << '\n';
       {{endgroup}}
       {{group}}
       }
@@ -173,7 +173,7 @@ Mixed Up Code Practice
       {{endgroup}}
       {{group}}
          if (infile.good() == false || outfile.good() == false) {
-            std::cout << "Unable to open a file." << std::endl;
+            std::cout << "Unable to open a file." << '\n';
             std::exit(1);
          }
       {{endgroup}}
@@ -212,7 +212,7 @@ Mixed Up Code Practice
          }
       {{endgroup}}
       {{group}}
-         outfile << "Number of data: " << num_data << ", min: " << min << ", max: " << max << std::endl;
+         outfile << "Number of data: " << num_data << ", min: " << min << ", max: " << max << '\n';
       {{endgroup}}
       {{group}}
       }
@@ -258,7 +258,7 @@ Mixed Up Code Practice
       {{endgroup}}
       {{group}}
          if (infile.good() == false) {
-            std::cout << "Unable to open the file." << std::endl;
+            std::cout << "Unable to open the file." << '\n';
             std::exit(1);
          }
       {{endgroup}}
@@ -330,7 +330,7 @@ Mixed Up Code Practice
       {{endgroup}}
       {{group}}
          if (infile.good() == false || outfile.good() == false) {
-            std::cout << "Unable to open a file." << std::endl;
+            std::cout << "Unable to open a file." << '\n';
             std::exit(1);
          }
       {{endgroup}}
@@ -348,7 +348,7 @@ Mixed Up Code Practice
             upper_to_lower(word);
       {{endgroup}}
       {{group}}
-            outfile << upper << " ";
+            outfile << upper << ' ';
       {{endgroup}}
       {{group}}
          }
@@ -385,7 +385,7 @@ Mixed Up Code Practice
       {{endgroup}}
       {{group}}
          if (!odds.good() || !evens.good() || !outfile.good()) {
-            std::cout << "Unable to open a file." << std::endl;
+            std::cout << "Unable to open a file." << '\n';
             std::exit(1);
          }
       {{endgroup}}
@@ -396,7 +396,7 @@ Mixed Up Code Practice
          while (odds >> odd && evens >> even) {
       {{endgroup}}
       {{group}}
-            outfile << odd << " " << even << " ";
+            outfile << odd << ' ' << even << ' ';
       {{endgroup}}
       {{group}}
          }

@@ -72,29 +72,29 @@ or local variables.
       .. tb-choice::
          :name: stack_1
 
-         Refer to the ``nLines`` function below.  It is the same as the ``nLines``
-         function defined on the previous page.  How many instances of ``nLines``
+         Refer to the ``n_lines`` function below.  It is the same as the ``n_lines``
+         function defined on the previous page.  How many instances of ``n_lines``
          would there be in the stack diagram if we begin with n = 4?
 
          ::
 
-             void nLines(int n) {
+             void n_lines(int n) {
                if (n > 0) {
-                 cout << endl;
-                 nLines(n + 1);
+                 cout << '\n';
+                 n_lines(n + 1);
                }
              }
 
          - [ ] 3
 
-           If nLines could reach its base case, it cannot be done in 3 function calls.
+           If n_lines could reach its base case, it cannot be done in 3 function calls.
          - [ ] 4
 
-           If nLines could reach its base case, it cannot be done in 4 function calls.
+           If n_lines could reach its base case, it cannot be done in 4 function calls.
          - [ ] 5
 
-           If nLines could reach its base case, it could be done in 5 function calls, but does it ever reach the base case?
+           If n_lines could reach its base case, it could be done in 5 function calls, but does it ever reach the base case?
          - [x] infinite
 
-           The nLines function never reaches its base case, so the stack diagram would be infinitely long.
+           The n_lines function never reaches its base case, so the stack diagram would be infinitely long.
 

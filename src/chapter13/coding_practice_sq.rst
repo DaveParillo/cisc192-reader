@@ -53,42 +53,42 @@ Coding Practice
             {{endgroup}}
             {{group}}
                      case 1:
-                         std::cout << "planet Mercury has 88 number of days in a year!" << std::endl;
+                         std::cout << "planet Mercury has 88 number of days in a year!" << '\n';
                          break;
             {{endgroup}}
             {{group}}
                      case 2:
-                         std::cout << "planet Venus has 225 number of days in a year!" << std::endl;
+                         std::cout << "planet Venus has 225 number of days in a year!" << '\n';
                          break;
             {{endgroup}}
             {{group}}
                      case 3:
-                         std::cout << "planet Earth has 365 number of days in a year!" << std::endl;
+                         std::cout << "planet Earth has 365 number of days in a year!" << '\n';
                          break;
             {{endgroup}}
             {{group}}
                      case 4:
-                         std::cout << "planet Mars has 687 number of days in a year!" << std::endl;
+                         std::cout << "planet Mars has 687 number of days in a year!" << '\n';
                          break;
             {{endgroup}}
             {{group}}
                      case 5:
-                         std::cout << "planet Jupiter has 4333 number of days in a year!" << std::endl;
+                         std::cout << "planet Jupiter has 4333 number of days in a year!" << '\n';
                          break;
             {{endgroup}}
             {{group}}
                      case 6:
-                         std::cout << "planet Saturn has 10759 number of days in a year!" << std::endl;
+                         std::cout << "planet Saturn has 10759 number of days in a year!" << '\n';
                          break;
             {{endgroup}}
             {{group}}
                      case 7:
-                         std::cout << "planet Uranus has 30687 number of days in a year!" << std::endl;
+                         std::cout << "planet Uranus has 30687 number of days in a year!" << '\n';
                          break;
             {{endgroup}}
             {{group}}
                      case 8:
-                         std::cout << "planet Neptune has 60190 number of days in a year!" << std::endl;
+                         std::cout << "planet Neptune has 60190 number of days in a year!" << '\n';
                          break;
             {{endgroup}}
             {{group}}
@@ -326,13 +326,13 @@ Coding Practice
                      for (std::size_t i = 0; i < board[j].size(); i++) {
             {{endgroup}}
             {{group}}
-                         std::cout << board[j][i].value << "\t";
+                         std::cout << board[j][i].value << '\t';
             {{endgroup}}
             {{group}}
                      }
             {{endgroup}}
             {{group}}
-                     std::cout << std::endl;
+                     std::cout << '\n';
             {{endgroup}}
             {{group}}
                  }
@@ -376,7 +376,7 @@ Coding Practice
              std::vector<int> vec = { 1, 3, 5, 4, 6, 8, 9 };
              fast_bubble_sort (vec);
              for (std::size_t i = 0; i < vec.size(); ++i) {
-                 std::cout << vec[i] << " ";
+                 std::cout << vec[i] << ' ';
              }
          }
 

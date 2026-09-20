@@ -42,7 +42,7 @@ values. Somewhere in main I would add:
 ::
 
     double dist = distance (1.0, 2.0, 4.0, 6.0);
-    cout << dist << endl;
+    cout << dist << '\n';
 
 I chose these values so that the horizontal distance is 3 and the
 vertical distance is 4; that way, the result will be 5 (the hypotenuse
@@ -63,8 +63,8 @@ temporary variables named dx and dy.
     double distance (double x1, double y1, double x2, double y2) {
       double dx = x2 - x1;
       double dy = y2 - y1;
-      cout << "dx is " << dx << endl;
-      cout << "dy is " << dy << endl;
+      cout << "dx is " << dx << '\n';
+      cout << "dy is " << dy << '\n';
       return 0.0;
     }
 
@@ -136,7 +136,7 @@ talking about and outputs the result.
 
    int main () {
        double dist = distance (1.0, 2.0, 4.0, 6.0);
-       std::cout << dist << std::endl;
+       std::cout << dist << '\n';
        return 0;
    }
 
@@ -223,8 +223,8 @@ The key aspects of the process are:
              double distance (double x1, double y1, double x2, double y2) {
                double dx = x2 - x1;
                double dy = y2 - y1;
-               cout << "dx is " << dx << endl;
-               cout << "dy is " << dy << endl;
+               cout << "dx is " << dx << '\n';
+               cout << "dy is " << dy << '\n';
                return 0.0;
              }
 
