@@ -1,0 +1,536 @@
+Mixed Up Code Practice
+----------------------
+
+.. tb-group::
+   :name: self_check
+
+   .. tb-tab:: Q1
+
+      .. tb-parsons::
+         :name: mucp_6_1
+         :no-indent:
+
+         The program below should print out the even numbers between 20 and 40, inclusive, 
+         but the code is mixed up and contains extra blocks. Put the necessary blocks
+         in the correct order.
+
+         .. code-block:: cpp
+
+            {{group}}
+            int main() {
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+            main(int) {
+            {{endgroup}}
+            {{group}}
+               int n = 20;
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+               int n = 0; #distractor
+            {{endgroup}}
+            {{group}}
+               while (n <= 40) {
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+               while (n < 40) {
+            {{endgroup}}
+            {{group}}
+                  cout << n << endl;
+            {{endgroup}}
+            {{group}}
+                  n = n + 2;
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+                  n++;                 #distractor
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+                  n = n * 2;                 #distractor
+            {{endgroup}}
+            {{group}}
+               }
+            {{endgroup}}
+            {{group}}
+            }
+            {{endgroup}}
+
+   .. tb-tab:: Q2
+
+      .. tb-parsons::
+         :name: mucp_6_2
+         :no-indent:
+
+         The program below should count down from 100 to 0 in decrements of 
+         10 but the code is mixed up and contains extra blocks. Put the necessary blocks
+         in the correct order.
+
+         .. code-block:: cpp
+
+            {{group}}
+            int main() {
+            {{endgroup}}
+            {{group}}
+               int n = 100;
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+               int n = 10; #distractor
+            {{endgroup}}
+            {{group}}
+               while (n >= 0) {
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+               while (n < 0) { #distractor
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+               while (n > 0) { #distractor
+            {{endgroup}}
+            {{group}}
+                  cout << n << endl;
+            {{endgroup}}
+            {{group}}
+                  n -= 10;
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+                  n += 10;                 #distractor
+            {{endgroup}}
+            {{group}}
+               }
+            {{endgroup}}
+            {{group}}
+            }
+            {{endgroup}}
+
+   .. tb-tab:: Q3
+
+      .. tb-parsons::
+         :name: mucp_6_3
+         :no-indent:
+
+         The program below should find the sum of the first 10 natural numbers,
+         but the code is mixed up and contains extra blocks. Put the necessary blocks
+         in the correct order.
+
+         .. code-block:: cpp
+
+            {{group}}
+            int main() {
+            {{endgroup}}
+            {{group}}
+               int n = 1;
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+               int n = 10; #distractor
+            {{endgroup}}
+            {{group}}
+               int sum = 0;
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+               int sum = n;  #distractor
+            {{endgroup}}
+            {{group}}
+               while (n <= 10) {
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+               while (n < 100) {  #distractor
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+               while (n <= 9) {  #distractor
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+                  cout << n << endl;  #distractor
+            {{endgroup}}
+            {{group}}
+                  sum = sum + n;
+            {{endgroup}}
+            {{group}}
+                  n++;
+            {{endgroup}}
+            {{group}}
+               }
+            {{endgroup}}
+            {{group}}
+            }
+            {{endgroup}}
+
+   .. tb-tab:: Q4
+
+      .. tb-parsons::
+         :name: mucp_6_4
+
+         Let's write the code for the repeatHello function. repeatHello 
+         should be a void function that takes no arguments and uses a while
+         loop to print out "hello" three times.  
+
+         .. code-block:: cpp
+
+            {{group}}
+            void repeatHello () {
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+            repeatHello () {
+            {{endgroup}}
+            {{group}}
+               int n = 0;
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+               int n = 0
+            {{endgroup}}
+            {{group}}
+               while (n < 3) {
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+               while (n > 3) {
+            {{endgroup}}
+            {{group}}
+                  cout << "hello" << endl;
+            {{endgroup}}
+            {{group}}
+                  n++;
+            {{endgroup}}
+            {{group}}
+               }
+            {{endgroup}}
+            {{group}}
+            }
+            {{endgroup}}
+
+   .. tb-tab:: Q5
+
+      .. tb-parsons::
+         :name: mucp_6_5
+
+         Now let's generalize the repeatHello function so that it repeats a given string three times.
+         Let's write the code for the repeatString function, which takes 
+         input as a parameter and uses a while loop to print out the string three times.  
+
+         .. code-block:: cpp
+
+            {{group}}
+            void repeatString (string input) {
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+            void repeatString () {
+            {{endgroup}}
+            {{group}}
+               int n = 0;
+            {{endgroup}}
+            {{group}}
+               while (n < 3) {
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+               while (3 > n) {
+            {{endgroup}}
+            {{group}}
+                  cout << input << endl;
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+                  cout << string << endl;
+            {{endgroup}}
+            {{group}}
+                  n++;
+            {{endgroup}}
+            {{group}}
+               }
+            {{endgroup}}
+            {{group}}
+            }
+            {{endgroup}}
+
+   .. tb-tab:: Q6
+
+      .. tb-parsons::
+         :name: mucp_6_6
+
+         We can further generalize repeatString so that it repeats a given string a given number of times. 
+         Let's write the code for the new repeatString function, which takes 
+         input and x as parameters and uses a while loop to print out the string x number of times.  
+
+         .. code-block:: cpp
+
+            {{group}}
+            void repeatString (string input, int x) {
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+            void repeatString (string input, string x) {
+            {{endgroup}}
+            {{group}}
+               int n = 0;
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+               int n = x;
+            {{endgroup}}
+            {{group}}
+               while (n < x) {
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+               while (x < n) {
+            {{endgroup}}
+            {{group}}
+                  cout << input << endl;
+            {{endgroup}}
+            {{group}}
+                  n++;
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+                  x++;
+            {{endgroup}}
+            {{group}}
+               }
+            {{endgroup}}
+            {{group}}
+            }
+            {{endgroup}}
+
+   .. tb-tab:: Q7
+
+      .. tb-parsons::
+         :name: mucp_6_7
+
+         On the last day of every year, we count down the seconds before the new year arrives.
+         Write the function newYearCountdown, which prints out a countdown from 10 and then
+         prints out "Happy New Year!".
+
+         .. code-block:: cpp
+
+            {{group}}
+            void newYearCountdown () {
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+            void newYearCountdown (string input) {
+            {{endgroup}}
+            {{group}}
+               int n = 10;
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+               int n = 0;
+            {{endgroup}}
+            {{group}}
+               while (n > 0) {
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+               while (n != 10) {
+            {{endgroup}}
+            {{group}}
+                  cout << n << " ";
+            {{endgroup}}
+            {{group}}
+                  n--;
+            {{endgroup}}
+            {{group}}
+                  n++;  #
+            {{endgroup}}
+            {{group}}
+               }
+            {{endgroup}}
+            {{group}}
+               cout << "Happy New Year!" << endl;
+            }
+            {{endgroup}}
+
+   .. tb-tab:: Q8
+
+      .. tb-parsons::
+         :name: mucp_6_8
+
+         Help Goku reach power levels of over 9000! Write the function
+         powerUp which takes powerLevel as a parameter.
+         powerUp checks to see if powerLevel is over 9000. If it 
+         isn't, it repeatedly prints "More power!" and increments powerLevel by 
+         1000 until powerLevel is over 9000. Then powerUp prints "It's over 9000!".
+         Put the necessary blocks in the correct order.
+
+         .. code-block:: cpp
+
+            {{group}}
+            void powerUp (int powerLevel) {
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+            void powerUp () {
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+               int n = 0;  #distractor
+            {{endgroup}}
+            {{group}}
+               while (powerLevel < 9000) {
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+               while (powerLevel > 9000) {
+            {{endgroup}}
+            {{group}}
+                  cout << "More power!" << endl;
+            {{endgroup}}
+            {{group}}
+                  powerLevel = powerLevel + 1000;
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+                  powerLevel++;
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+                  n++;  #distractor
+            {{endgroup}}
+            {{group}}
+               }
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+               if (powerLevel < 9000) {  #distractor
+            {{endgroup}}
+            {{group}}
+               cout << "It's over 9000!" << endl;
+            }
+            {{endgroup}}
+
+   .. tb-tab:: Q9
+
+      .. tb-parsons::
+         :name: mucp_6_9
+
+         Write the function summation which takes two 
+         parameters, start and end. summation adds
+         all the integers from start to end, inclusive, together and returns
+         the sum. Put the necessary blocks in the correct order.
+
+         .. code-block:: cpp
+
+            {{group}}
+            int summation (int start, int end) {
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+            void summation (int start, int end) {  #distractor
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+            int summation () {  #distractor
+            {{endgroup}}
+            {{group}}
+               int n = start;
+            {{endgroup}}
+            {{group}}
+               int sum = 0;
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+               int sum = start;  #distractor
+            {{endgroup}}
+            {{group}}
+               while (n <= end) {
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+               while (n < end) {
+            {{endgroup}}
+            {{group}}
+                  sum = sum + n;
+            {{endgroup}}
+            {{group}}
+                  n++;
+            {{endgroup}}
+            {{group}}
+               }
+            {{endgroup}}
+            {{group}}
+               return sum;
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+               return n;  #distractor
+            {{endgroup}}
+            {{group}}
+            }
+            {{endgroup}}
+
+   .. tb-tab:: Q10
+
+      .. tb-parsons::
+         :name: mucp_6_10
+
+         Write the function reverseNumber which takes num
+         as a parameter and returns num but with its digits reversed.
+         For example, reverseNumber (1324) returns 4231. 
+         Put the necessary blocks in the correct order, with reverse
+         declared first, then temp, and lastly remainder.
+
+         .. code-block:: cpp
+
+            {{group}}
+            int reverseNumber (int num) {
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+            void reverseNumber (int num) {  #distractor
+            {{endgroup}}
+            {{group}}
+               int reverse = 0;
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+               int reverse = 0  #distractor
+            {{endgroup}}
+            {{group}}
+               int temp = num;
+            {{endgroup}}
+            {{group}}
+               int remainder = 0;
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+               int remainder;  #distractor
+            {{endgroup}}
+            {{group}}
+               while (temp > 0) {
+            {{endgroup}}
+            {{group}}
+                  remainder = temp % 10;
+            {{endgroup}}
+            {{group}}
+                  reverse = reverse * 10 + remainder;
+            {{endgroup}}
+            {{group}}
+                  temp = temp / 10;
+            {{endgroup}}
+            {{group}}
+               }
+            {{endgroup}}
+            {{group}}
+               return reverse;
+            {{endgroup}}
+            {{distractor}}
+            {{group}}
+               return temp;  #distractor
+            {{endgroup}}
+            {{group}}
+            }
+            {{endgroup}}
+

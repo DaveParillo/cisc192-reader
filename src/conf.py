@@ -1,0 +1,133 @@
+# Configuration for the CISC 192 reader/textbook.
+import os
+import shutil
+import sys
+import tomllib
+from pathlib import Path
+
+sys.path.insert(0, os.path.abspath('./_extensions'))
+
+
+def project_version() -> str:
+    pyproject = Path(__file__).resolve().parents[1] / 'pyproject.toml'
+    with pyproject.open('rb') as stream:
+        data = tomllib.load(stream)
+    return data['project']['version']
+
+language = 'en'
+smartquotes = False
+master_doc = 'index'
+project = 'CISC 192 Textbook'
+author = 'Dave Parillo'
+copyright = '2017-2026 Dave Parillo'
+version = project_version()
+release = version
+
+extensions = [
+    'sphinx.ext.mathjax',
+    'sphinx.ext.graphviz',
+    'sphinx.ext.extlinks',
+    'sphinx_accessibility',
+    'sphinx_copybutton',
+    'cppreference',
+    'cpp_admonitions',
+    'sphinx_touchbook',
+]
+
+graphviz_output_format = 'svg'
+
+plot_include_source = False
+plot_html_show_source_link = False
+plot_html_show_formats = False
+
+extlinks = {
+    'c': ('https://en.cppreference.com/c/%s', '%s'),
+    'compare': ('https://en.cppreference.com/cpp/utility/compare/%s', '%s'),
+    'cpp': ('https://en.cppreference.com/cpp/%s', '%s'),
+    'cmath': ('https://en.cppreference.com/cpp/numeric/math/%s', '%s'),
+    'guidelines': ('https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines.html#%s', '%s'),
+    'cstdio': ('https://en.cppreference.com/cpp/io/c/%s', '%s'),
+    'cstring': ('https://en.cppreference.com/cpp/string/byte/%s', '%s'),
+    'algorithm': ('https://en.cppreference.com/cpp/algorithm/%s', '%s'),
+    'chrono': ('https://en.cppreference.com/cpp/chrono/%s', '%s'),
+    'container': ('https://en.cppreference.com/cpp/container/%s', '%s'),
+    'error': ('https://en.cppreference.com/cpp/error/%s', '%s'),
+    'functional': ('https://en.cppreference.com/cpp/utility/functional/%s', '%s'),
+    'header': ('https://en.cppreference.com/cpp/header/%s', '%s'),
+    'io': ('https://en.cppreference.com/cpp/io/%s', '%s'),
+    'iterator': ('https://en.cppreference.com/cpp/iterator/%s', '%s'),
+    'keyword': ('https://en.cppreference.com/cpp/keyword/%s', '%s'),
+    'lang': ('https://en.cppreference.com/cpp/language/%s', '%s'),
+    'memory': ('https://en.cppreference.com/cpp/memory/%s', '%s'),
+    'req': ('https://en.cppreference.com/cpp/named_req/%s', '%s'),
+    'numeric': ('https://en.cppreference.com/cpp/numeric/%s', '%s'),
+    'string': ('https://en.cppreference.com/cpp/string/basic_string/%s', '%s'),
+    'utility': ('https://en.cppreference.com/cpp/utility/%s', '%s'),
+    'vector': ('https://en.cppreference.com/cpp/container/vector/%s', '%s'),
+    'types': ('https://en.cppreference.com/cpp/types/%s', '%s'),
+    'wiki': ('https://en.wikipedia.org/wiki/%s', '%s'),
+    'core': ('https://en.cppreference.com/w/cpp/%s', '%s'),
+    'issue': ('https://github.com/DaveParillo/cisc192-reader/issues/%s', 'issue %s'),
+}
+
+linkcheck_allowed_redirects = {
+        r'https://en\.cppreference\.com/w/cpp/.*' : r'https://stackoverflow\.com/.*',
+        r'https://github\.com/.*' : r'https://github\.com/.*',
+}
+
+source_suffix = {
+    '.rst': 'restructuredtext',
+}
+highlight_language = 'cpp'
+exclude_patterns = []
+
+# Appearance
+pygments_style = 'default'
+#html_theme = 'pydata_sphinx_theme'
+html_theme = 'sphinx_nefertiti'
+html_static_path = ['_static']
+html_css_files = [
+    'cpp_admonitions.css',
+    'custom.css',
+]
+html_js_files = [
+  'nefertiti-logo-scheme.js',
+]
+
+
+html_theme_options = {
+     'doc_headers_font': 'Nunito',
+     'header_links': [
+         {
+             'text': 'on GitHub',
+             'link': 'https://github.com/DaveParillo/cisc192-reader',
+         },
+     ],
+     'logo': 'touchbook-logo.svg',
+     'logo_alt': 'CISC 192 textbook home',
+     'logo_width': 40,
+     'logo_height': 24,
+     'pygments_light_style': 'a11y-light',
+     'pygments_dark_style': 'a11y-dark',
+     'style_header_neutral': True,
+ }
+
+# Touchbook defaults
+
+# jobe = 'http://localhost:4000/jobe/index.php/restapi/'
+# tb_code_default_endpoint = jobe + 'runs/'
+# tb_code_languages_endpoint = jobe + 'languages'
+# tb_code_files_endpoint = jobe + 'files/'
+
+tb_code_default_language = 'cpp'
+tb_code_language_map = {
+    'cpp': 'cpp',
+    'c++': 'cpp',
+    'javascript': 'nodejs',
+    'js': 'nodejs',
+    'python': 'python3',
+}
+tb_code_language_defaults = {
+    'cpp': {'compileargs': ['-Wall', '-Wextra', '-pedantic', '-std=c++20']},
+}
+tb_code_block_defaults = {'linenos': True, 'show-tutor': True}

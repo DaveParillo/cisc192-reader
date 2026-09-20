@@ -1,0 +1,117 @@
+name: Publish Docs
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build docs
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+
+      - name: Set up Chrome for Mermaid
+        id: setup-chrome
+        uses: browser-actions/setup-chrome@v2
+
+      - name: Install dependencies
+        env:
+          PUPPETEER_SKIP_DOWNLOAD: "true"
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            graphviz \
+            latexmk \
+            tex-gyre \
+            texlive-fonts-recommended \
+            texlive-latex-extra \
+            texlive-latex-recommended \
+            texlive-xetex
+          python -m pip install ".[docs]"
+          npm install -g @mermaid-js/mermaid-cli
+
+      - name: Build HTML docs
+        env:
+          MERMAID_BROWSER: ${{ steps.setup-chrome.outputs.chrome-path }}
+        run: python -m sphinx -b html src build/html --fail-on-warning
+
+      - name: Build PDF docs
+        env:
+          MERMAID_BROWSER: ${{ steps.setup-chrome.outputs.chrome-path }}
+        run: |
+          set +e
+          python -m sphinx -M latexpdf src build/latexpdf --fail-on-warning
+          status=$?
+          if [ "$status" -ne 0 ]; then
+            find build/latexpdf -name '*.log' -print -exec sh -c '
+              for log_file do
+                echo "::group::${log_file}"
+                tail -n 240 "$log_file"
+                echo "::endgroup::"
+              done
+            ' sh {} +
+            exit "$status"
+          fi
+          mkdir -p build/html/_downloads
+          find build/latexpdf/latex -name '*.pdf' -exec cp {} build/html/_downloads/ \;
+
+      - name: Verify Pages artifact root
+        run: test -f build/html/index.html
+
+      - name: Disable Jekyll processing
+        run: touch build/html/.nojekyll
+
+      - name: Configure GitHub Pages
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v6
+
+      - name: Upload Pages artifact
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: build/html
+
+  deploy:
+    name: Deploy docs
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
