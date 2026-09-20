@@ -1,3 +1,5 @@
+.. _recursion-recursion:
+
 Recursion
 ---------
 
@@ -125,7 +127,6 @@ You can have a little bit of fun with recursion.  Try this guessing game below!
 .. tb-code:: cpp
    :name: recursion_AC_2
    :caption: Guessing Game.
-   :compileargs: ['-Wall', '-Wextra', '-pedantic', '-std=c++11']
 
    #include <iostream>
    #include <random>

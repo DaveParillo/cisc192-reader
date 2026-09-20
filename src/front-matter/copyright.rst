@@ -2,6 +2,8 @@
     Permission is granted to copy, distribute and/or modify this document
     under the terms of the Creative Commons License CC BY-NC license.
 
+.. _front-copyright-notice:
+
 Copyright Notice
 ================
 
@@ -18,7 +20,7 @@ Unless otherwise noted, all content in this work is licensed as follows.
 
       <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">CISC 192 Reader</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://daveparillo.github.io/cisc192-reader" property="cc:attributionName" rel="cc:attributionURL">Dave Parillo, Barbara Ericson, and Allen B. Downey.</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.<br />Based on the work <a xmlns:dct="http://purl.org/dc/terms/" href="https://runestone.academy/ns/books/published/thinkcpp/index.html" rel="dct:source">How to Think Like a Computer Scientist, C++ Edition</a>.<br />Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="https://runestone.academy/" rel="cc:morePermissions">Runestone Academy</a>.
 
-This is a human-readable summary of (and not a substitute for) the :doc:`license`. 
+This is a human-readable summary of (and not a substitute for) the :ref:`license <front-license>`.
 
 .. topic:: You are free to:
 
@@ -57,5 +59,5 @@ This is a human-readable summary of (and not a substitute for) the :doc:`license
    may limit how you use the material.
 
 
-See :doc:`license` for the full license text.
+See :ref:`license <front-license>` for the full license text.
 

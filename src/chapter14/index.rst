@@ -1,4 +1,5 @@
 
+.. _idx-classes-invariants:
 .. _c192_class:
 
 Classes and invariants

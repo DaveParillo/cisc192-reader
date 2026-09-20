@@ -1,3 +1,5 @@
+.. _variables-types-outputting-variables:
+
 Outputting Variables
 --------------------
 
@@ -11,7 +13,6 @@ provide for hour and minute.
 .. tb-code:: cpp
    :name: output_vars_AC_1
    :caption: time Output
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 
@@ -58,7 +59,6 @@ statements have been condensed to one line.  This is better style.
 .. tb-code:: cpp
    :name: output_vars_AC_2
    :caption: Condensing The Code
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 

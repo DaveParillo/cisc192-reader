@@ -1,3 +1,4 @@
+.. _fruitful-functions-returning-early:
 .. _return_early:
 
 Returning early
@@ -17,7 +18,6 @@ an error message, try changing the value of x.
 .. tb-code:: cpp
    :name: return_AC_1
    :caption: Terminating a Function with a Return
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
    #include <cmath>
@@ -191,7 +191,6 @@ returns true?
 .. tb-code:: cpp
    :name: return_vals_AC_1
    :caption: Return Values
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 
@@ -246,7 +245,6 @@ can be simplified to eliminate the else block entirely:
 .. tb-code:: cpp
    :name: return_vals_AC_2
    :caption: Return Values
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 

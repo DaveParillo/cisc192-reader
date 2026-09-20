@@ -1,3 +1,5 @@
+.. _iteration-tables:
+
 Tables
 ------
 
@@ -30,7 +32,6 @@ and their logarithms in the right column.
 .. tb-code:: cpp
    :name: tables_AC_1
    :caption: Tables
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <cmath>
    #include <iostream>
@@ -123,7 +124,6 @@ we could modify the program like this. Run the active code below.
 .. tb-code:: cpp
    :name: tables_AC_2
    :caption: Tables
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <cmath>
    #include <iostream>
@@ -175,7 +175,6 @@ Print it out and memorize it.
       .. tb-code:: cpp
          :name: tables_AC_3
          :caption: Tables
-         :compileargs: ['-Wall', '-std=c++11']
 
          #include <iostream>
          #include <cmath>

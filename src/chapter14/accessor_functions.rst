@@ -1,3 +1,5 @@
+.. _classes-invariants-accessor-functions:
+
 Accessor functions
 ------------------
 
@@ -46,7 +48,6 @@ accessor function.
 .. tb-code:: cpp
    :name: c192_fourteenfour
    :caption: Example c192_fourteenfour
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <iostream>
    #include <cmath>
@@ -95,7 +96,6 @@ functions works. If you get stuck, you can reveal the extra problem at the end f
 .. tb-code:: cpp
    :name: c192_fourteenfive-support
    :hidden:
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    complex_number::complex_number () { cartesian = true;  polar = false; }
 
@@ -125,7 +125,6 @@ functions works. If you get stuck, you can reveal the extra problem at the end f
    :name: c192_fourteenfive
    :caption: Example c192_fourteenfive
    :run-after: c192_fourteenfive-support
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <iostream>
    #include <cmath>

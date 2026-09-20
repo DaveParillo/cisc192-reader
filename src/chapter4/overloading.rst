@@ -1,3 +1,5 @@
+.. _fruitful-functions-overloading:
+
 Overloading
 -----------
 
@@ -73,7 +75,6 @@ For example:
       .. tb-code:: cpp
          :name: overloading-AC1
          :caption: Example overloading-AC1
-         :compileargs: ['-Wall', '-Wextra', '-pedantic', '-std=c++11']
 
          #include <iostream>
          using std::cout;
@@ -105,7 +106,6 @@ For example:
       .. tb-code:: cpp
          :name: volume-overloading-AC2
          :caption: Example volume-overloading-AC2
-         :compileargs: ['-Wall', '-Wextra', '-pedantic', '-std=c++11']
 
          #include <iostream>
          #include <cmath>

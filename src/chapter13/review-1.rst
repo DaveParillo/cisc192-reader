@@ -1,3 +1,5 @@
+.. _objects-vectors-multiple-choice-exercises:
+
 Multiple Choice Exercises
 -------------------------
 

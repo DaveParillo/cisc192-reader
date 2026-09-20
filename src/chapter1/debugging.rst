@@ -1,4 +1,6 @@
-﻿What is Debugging?
+.. _program-what-is-debugging:
+
+What is Debugging?
 ------------------
 
 .. index::
@@ -15,6 +17,8 @@ them is called **debugging**.
 There are a few different kinds of errors that can occur in a program,
 and it is useful to distinguish between them in order to track them down
 more quickly.
+
+.. _program-compile-time-errors:
 
 Compile-time errors
 ~~~~~~~~~~~~~~~~~~~
@@ -53,6 +57,7 @@ you will probably spend a lot of time tracking down syntax errors. As
 you gain experience, though, you will make fewer errors and find them
 faster.
 
+.. _program-run-time-errors:
 .. _run-time:
 
 Run-time errors
@@ -67,6 +72,8 @@ error does not appear until you run the program.
 For the simple sorts of programs we will be writing for the next few
 weeks, run-time errors are rare, so it might be a little while before
 you encounter one.
+
+.. _program-logic-errors-and-semantics:
 
 Logic errors and semantics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -92,6 +99,8 @@ The problem is that the program you wrote is not the program you wanted
 to write. The meaning of the program is wrong. Identifying semantic errors 
 can be tricky, since it requires you to work backwards by looking at the 
 output of the program and trying to figure out what it is doing.
+
+.. _program-experimental-debugging:
 
 Experimental debugging
 ~~~~~~~~~~~~~~~~~~~~~~

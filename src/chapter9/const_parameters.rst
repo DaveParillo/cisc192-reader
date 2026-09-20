@@ -1,3 +1,5 @@
+.. _more-structures-const-parameters:
+
 ``const`` parameters
 --------------------
 

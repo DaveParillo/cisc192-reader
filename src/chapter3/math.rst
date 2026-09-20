@@ -2,6 +2,8 @@
    pair: log; math
    pair: sin; math
 
+.. _functions-math-functions:
+
 Math Functions
 --------------
 
@@ -33,7 +35,6 @@ from the cmath library.
 .. tb-code:: cpp
    :name: math_functions_AC_1
    :caption: Using the cmath Library
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <cmath>
    #include <iostream>
@@ -83,7 +84,6 @@ degrees.
 .. tb-code:: cpp
    :name: math_functions_AC_2
    :caption: Working with Angles
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <cmath>
    #include <iostream>

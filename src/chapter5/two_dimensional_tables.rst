@@ -1,3 +1,5 @@
+.. _iteration-two-dimensional-tables:
+
 Two-dimensional tables
 ----------------------
 
@@ -15,7 +17,6 @@ of 2, all on one line.
 .. tb-code:: cpp
    :name: two_d_tables_ac_1
    :caption: Two-dimensional tables
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 

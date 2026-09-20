@@ -1,3 +1,5 @@
+.. _idx-more-structures:
+
 More Structures
 ===============
 

@@ -1,3 +1,5 @@
+.. _structures-structures-as-parameters:
+
 Structures as parameters
 ------------------------
 
@@ -19,7 +21,6 @@ see the output!
 .. tb-code:: cpp
    :name: structures_parameters_AC_1
    :caption: Example structures_parameters_AC_1
-   :compileargs: ['-Wall', '-std=c++20']
 
    #include <iostream>
    using namespace std;
@@ -60,7 +61,6 @@ parameters instead of four ``double``\ s.
       .. tb-code:: cpp
          :name: structures_parameters_AC_2
          :caption: Example structures_parameters_AC_2
-         :compileargs: ['-Wall', '-std=c++20']
 
          #include <iostream>
          #include <cmath>

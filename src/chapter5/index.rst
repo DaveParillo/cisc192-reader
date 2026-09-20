@@ -1,3 +1,5 @@
+.. _idx-iteration:
+
 Iteration
 =========
 

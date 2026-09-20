@@ -1,3 +1,5 @@
+.. _strings-things-containers-for-strings:
+
 Containers for strings
 ----------------------
 

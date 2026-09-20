@@ -1,3 +1,5 @@
+.. _objects-vectors-glossary:
+
 Glossary
 --------
 

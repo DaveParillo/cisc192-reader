@@ -1,4 +1,5 @@
 
+.. _objects-vectors-sorting:
 .. _c192_sorting:
 
 Sorting
@@ -43,7 +44,7 @@ looking in the vector of cards.
 
 This process, using pseudocode to figure out what helper functions are
 needed, is sometimes called **top-down design**, in contrast to the
-bottom-up design I discussed In :doc:`../chapter11/counting`.
+bottom-up design I discussed In :ref:`../chapter11/counting <random-numbers-counting>`.
 
 Once again, I am going to leave the implementation up to the reader.
 
@@ -73,7 +74,6 @@ at the end for help.
 .. tb-code:: cpp
    :name: c192_sorting_deck_2-support
    :hidden:
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    playing_card::playing_card () {
        suit = spades;  rank = ace;
@@ -159,7 +159,6 @@ at the end for help.
    :name: c192_sorting_deck_2
    :caption: Example c192_sorting_deck_2
    :run-after: c192_sorting_deck_2-support
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <cstddef>
    #include <random>

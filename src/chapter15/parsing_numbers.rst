@@ -1,3 +1,5 @@
+.. _files-containers-parsing-numbers-with-error-reporting:
+
 Parsing numbers with error reporting
 ====================================
 
@@ -18,7 +20,6 @@ arithmetic conversion loses leading zeros and other meaningful formatting.
 .. tb-code:: cpp
    :name: c192_15_6
    :caption: Example c192_15_6
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <cstddef>
    #include <iostream>

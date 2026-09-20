@@ -1,3 +1,5 @@
+.. _structures-accessing-instance-variables:
+
 Accessing instance variables
 ----------------------------
 
@@ -30,7 +32,6 @@ Next, we display the distance from the origin.
 .. tb-code:: cpp
    :name: accessing_instance_variables_AC_1
    :caption: Example accessing_instance_variables_AC_1
-   :compileargs: ['-Wall', '-std=c++20']
 
    #include <cmath>
    #include <iostream>

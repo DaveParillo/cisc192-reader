@@ -1,3 +1,5 @@
+.. _structures-compound-values:
+
 Compound values
 ---------------
 .. index::

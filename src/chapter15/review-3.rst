@@ -1,3 +1,5 @@
+.. _files-containers-coding-practice:
+
 Coding Practice
 ---------------
 
@@ -38,7 +40,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_15_ac_1q
          :caption: Example c192_cp_15_ac_1q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
          :files: poem.txt
 
          #include <iostream>
@@ -83,7 +84,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_15_ac_1a
          :caption: Example c192_cp_15_ac_1a
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
          :files: poem.txt
 
          #include <cstddef>
@@ -120,9 +120,9 @@ Coding Practice
 
    The legacy Runestone question pool ``c192_cp_15_ac_2_sq`` is represented by these exercises:
 
-   * :doc:`c192_cp_15_ac_2q <coding_practice_sq>`
+   * :ref:`c192_cp_15_ac_2q <files-containers-coding-practice-2>`
 
-   * :doc:`c192_cp_15_ac_2q_pp <coding_practice_sq>`
+   * :ref:`c192_cp_15_ac_2q_pp <files-containers-coding-practice-2>`
 
 .. tb-file::
    :name: heights-txt
@@ -146,7 +146,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_15_ac_3q
          :caption: Example c192_cp_15_ac_3q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
          :files: heights.txt
 
          #include <iostream>
@@ -178,7 +177,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_15_ac_3a
          :caption: Example c192_cp_15_ac_3a
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
          :files: heights.txt
 
          #include <cstdlib>
@@ -219,9 +217,9 @@ Coding Practice
 
    The legacy Runestone question pool ``c192_cp_15_ac_4_sq`` is represented by these exercises:
 
-   * :doc:`c192_cp_15_ac_4q <coding_practice_sq>`
+   * :ref:`c192_cp_15_ac_4q <files-containers-coding-practice-2>`
 
-   * :doc:`c192_cp_15_ac_4q_pp <coding_practice_sq>`
+   * :ref:`c192_cp_15_ac_4q_pp <files-containers-coding-practice-2>`
 
 .. tb-file::
    :name: message-txt
@@ -247,7 +245,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_15_ac_5q
          :caption: Example c192_cp_15_ac_5q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
          :files: message.txt
 
          #include <iostream>
@@ -277,7 +274,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_15_ac_5a
          :caption: Example c192_cp_15_ac_5a
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
          :files: message.txt
 
          #include <cstddef>
@@ -338,9 +334,9 @@ Coding Practice
 
    The legacy Runestone question pool ``c192_cp_15_ac_6_sq`` is represented by these exercises:
 
-   * :doc:`c192_cp_15_ac_6q <coding_practice_sq>`
+   * :ref:`c192_cp_15_ac_6q <files-containers-coding-practice-2>`
 
-   * :doc:`c192_cp_15_ac_6q_pp <coding_practice_sq>`
+   * :ref:`c192_cp_15_ac_6q_pp <files-containers-coding-practice-2>`
 
 .. tb-file::
    :name: class_data-txt
@@ -367,7 +363,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_15_ac_7q
          :caption: Example c192_cp_15_ac_7q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
          :files: class_data.txt
 
          #include <iostream>
@@ -402,7 +397,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_15_ac_7a
          :caption: Example c192_cp_15_ac_7a
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
          :files: class_data.txt
 
          #include <cstdlib>
@@ -441,9 +435,9 @@ Coding Practice
 
    The legacy Runestone question pool ``c192_cp_15_ac_8_sq`` is represented by these exercises:
 
-   * :doc:`c192_cp_15_ac_8q <coding_practice_sq>`
+   * :ref:`c192_cp_15_ac_8q <files-containers-coding-practice-2>`
 
-   * :doc:`c192_cp_15_ac_8q_pp <coding_practice_sq>`
+   * :ref:`c192_cp_15_ac_8q_pp <files-containers-coding-practice-2>`
 
 .. tb-file::
    :name: mult_table-txt
@@ -463,7 +457,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_15_ac_9q
          :caption: Example c192_cp_15_ac_9q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
          :files: mult_table.txt
 
          #include <iostream>
@@ -483,7 +476,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_15_ac_9a
          :caption: Example c192_cp_15_ac_9a
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
          :files: mult_table.txt
 
          #include <cstddef>
@@ -520,6 +512,6 @@ Coding Practice
 
    The legacy Runestone question pool ``c192_cp_15_ac_10_sq`` is represented by these exercises:
 
-   * :doc:`c192_cp_15_ac_10q <coding_practice_sq>`
+   * :ref:`c192_cp_15_ac_10q <files-containers-coding-practice-2>`
 
-   * :doc:`c192_cp_15_ac_10q_pp <coding_practice_sq>`
+   * :ref:`c192_cp_15_ac_10q_pp <files-containers-coding-practice-2>`

@@ -1,3 +1,4 @@
+.. _fruitful-functions-chained-conditionals:
 .. _chained-conditional:
 
 Chained Conditionals
@@ -18,7 +19,6 @@ make sure it works.
 .. tb-code:: cpp
    :name: chained_conditionals_AC_1
    :caption: Classifying a Number as +, -, or 0.
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 

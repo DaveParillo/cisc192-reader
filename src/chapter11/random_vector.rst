@@ -1,4 +1,6 @@
-﻿Vector of random numbers
+.. _random-numbers-vector-of-random-numbers:
+
+Vector of random numbers
 ------------------------
 
 The first step is to generate a large number of random values and store
@@ -65,7 +67,7 @@ Try running the active code below!
 .. tb-code:: cpp
    :name: vector_of_rand_nums_AC_1
    :caption: Example vector_of_rand_nums_AC_1
-   :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
+   :compileargs: ['-Werror']
 
    #include <cstddef>
    #include <iostream>

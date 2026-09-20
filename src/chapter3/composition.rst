@@ -1,3 +1,5 @@
+.. _functions-composition:
+
 Composition
 -----------
 
@@ -30,7 +32,6 @@ result of this computation is assigned to x.
 .. tb-code:: cpp
    :name: function_comp_AC_1
    :caption: Composition of Math Functions
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <cmath>
    #include <iostream>

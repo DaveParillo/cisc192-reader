@@ -1,3 +1,5 @@
+.. _files-containers-key-value-associations-with-std-map:
+
 Key-value associations with std::map
 ====================================
 
@@ -9,7 +11,6 @@ count without searching a vector of records ourselves.
 .. tb-code:: cpp
    :name: c192_map_counts
    :caption: Example c192_map_counts
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <cstddef>
    #include <iostream>
@@ -39,7 +40,6 @@ for counting, but can be a bug in code that only intended to look up a value.
 .. tb-code:: cpp
    :name: c192_map_lookup
    :caption: Example c192_map_lookup
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <iostream>
    #include <map>

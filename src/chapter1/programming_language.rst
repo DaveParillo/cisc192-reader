@@ -1,4 +1,6 @@
-﻿What is a Programming Language?
+.. _program-what-is-a-programming-language:
+
+What is a Programming Language?
 -------------------------------
 
 .. index::

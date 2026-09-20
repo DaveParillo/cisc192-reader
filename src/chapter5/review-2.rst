@@ -1,3 +1,5 @@
+.. _iteration-mixed-up-code-practice:
+
 Mixed Up Code Practice
 ----------------------
 

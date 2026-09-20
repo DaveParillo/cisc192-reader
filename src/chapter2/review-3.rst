@@ -1,3 +1,5 @@
+.. _variables-types-activecode-exercises:
+
 Activecode Exercises
 --------------------
 

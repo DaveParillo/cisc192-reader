@@ -1,4 +1,6 @@
-﻿Vectors
+.. _vectors-vectors:
+
+Vectors
 =======
 
 .. index::

@@ -1,3 +1,5 @@
+.. _idx-files-and-standard-library-containers:
+
 Files and standard-library containers
 =====================================
 

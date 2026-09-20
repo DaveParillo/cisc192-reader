@@ -1,3 +1,5 @@
+.. _classes-invariants-multiple-choice-exercises:
+
 Multiple Choice Exercises
 -------------------------
 

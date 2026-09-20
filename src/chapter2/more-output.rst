@@ -1,3 +1,5 @@
+.. _variables-types-more-output:
+
 More Output
 -----------
 
@@ -11,7 +13,6 @@ using ``endl``.
 .. tb-code:: cpp
    :name: more_output_AC_1
    :caption: Two Lines of Output
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 
@@ -47,7 +48,6 @@ This program prints two different statements on the same line.
 .. tb-code:: cpp
    :name: more_output_AC_2
    :caption: Two Statements, One Line of Output
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 
@@ -73,7 +73,6 @@ components of each line.  This is a matter of personal preference.
 .. tb-code:: cpp
    :name: more_output_AC_3
    :caption: Spaces Removed (messy)
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 
@@ -96,7 +95,6 @@ hard to follow.
 .. tb-code:: cpp
    :name: more_output_AC_4
    :caption: Spaces removed, One Line (very messy)
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
    int main(){std::cout<<"Goodbye, ";std::cout<<"cruel world!"<<'\n';}
@@ -119,7 +117,6 @@ The ``endl`` object actually performs two tasks:
 .. tb-code:: cpp
    :name: more_output_AC_5
    :caption: Replace endl with newline char
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 

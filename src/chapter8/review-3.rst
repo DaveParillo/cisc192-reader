@@ -1,3 +1,5 @@
+.. _structures-coding-practice:
+
 Coding Practice
 ---------------
 
@@ -19,7 +21,6 @@ Coding Practice
             .. tb-code:: cpp
                :name: cp_8_AC_1q
                :caption: Example cp_8_AC_1q
-               :compileargs: ['-Wall', '-std=c++11']
                :stdin: 4, 6
 
                #include <iostream>
@@ -42,7 +43,6 @@ Coding Practice
             .. tb-code:: cpp
                :name: cp_8_AC_1a
                :caption: Example cp_8_AC_1a
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <iostream>
 
@@ -66,7 +66,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: cp_8_AC_2q
          :caption: Example cp_8_AC_2q
-         :compileargs: ['-Wall', '-std=c++11']
          :stdin: Captain America
 
          #include <iostream>
@@ -97,7 +96,6 @@ Coding Practice
             .. tb-code:: cpp
                :name: cp_8_AC_3q
                :caption: Example cp_8_AC_3q
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <iostream>
 
@@ -123,7 +121,6 @@ Coding Practice
             .. tb-code:: cpp
                :name: cp_8_AC_3a
                :caption: Example cp_8_AC_3a
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <iostream>
                using namespace std;
@@ -161,7 +158,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: cp_8_AC_4q-support
          :hidden:
-         :compileargs: ['-Wall', '-std=c++11']
 
          void print_robot_data (robot r) {
              cout << r.name << " (" << r.model << ' ' << r.serial_number 
@@ -175,7 +171,6 @@ Coding Practice
          :name: cp_8_AC_4q
          :caption: Example cp_8_AC_4q
          :run-after: cp_8_AC_4q-support
-         :compileargs: ['-Wall', '-std=c++11']
 
          #include <iostream>
          using namespace std;
@@ -215,7 +210,6 @@ Coding Practice
             .. tb-code:: cpp
                :name: cp_8_AC_5q-support
                :hidden:
-               :compileargs: ['-Wall', '-std=c++11']
 
                void print_robot_data (robot r) {
                     cout << r.name << " (" << r.model << ' ' << r.serial_number 
@@ -230,7 +224,6 @@ Coding Practice
                :name: cp_8_AC_5q
                :caption: Example cp_8_AC_5q
                :run-after: cp_8_AC_5q-support
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <iostream>
                using namespace std;
@@ -266,7 +259,6 @@ Coding Practice
             .. tb-code:: cpp
                :name: cp_8_AC_5a-support
                :hidden:
-               :compileargs: ['-Wall', '-std=c++11']
 
                void print_robot_data (robot r) {
                     cout << r.name << " (" << r.model << ' ' << r.serial_number 
@@ -280,7 +272,6 @@ Coding Practice
                :name: cp_8_AC_5a
                :caption: Example cp_8_AC_5a
                :run-after: cp_8_AC_5a-support
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <iostream>
                using namespace std;
@@ -319,7 +310,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: cp_8_AC_6q
          :caption: Example cp_8_AC_6q
-         :compileargs: ['-Wall', '-std=c++11']
 
          #include <iostream>
          using namespace std;
@@ -362,7 +352,6 @@ Coding Practice
             .. tb-code:: cpp
                :name: cp_8_AC_7q-support
                :hidden:
-               :compileargs: ['-Wall', '-std=c++11']
 
                void print_poke_info(pokemon p) {
                    cout << p.poke_name << " (Lv. " << p.level << ", " << p.health_percentage << "% HP)" << '\n';
@@ -374,7 +363,6 @@ Coding Practice
                :name: cp_8_AC_7q
                :caption: Example cp_8_AC_7q
                :run-after: cp_8_AC_7q-support
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <iostream>
                using namespace std;
@@ -412,7 +400,6 @@ Coding Practice
             .. tb-code:: cpp
                :name: cp_8_AC_7a-support
                :hidden:
-               :compileargs: ['-Wall', '-std=c++11']
 
                void print_poke_info(pokemon p) {
                    cout << p.poke_name << " (Lv. " << p.level << ", " << p.health_percentage << "% HP)" << '\n';
@@ -423,7 +410,6 @@ Coding Practice
                :name: cp_8_AC_7a
                :caption: Example cp_8_AC_7a
                :run-after: cp_8_AC_7a-support
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <iostream>
                using namespace std;
@@ -475,7 +461,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: cp_8_AC_8q-support
          :hidden:
-         :compileargs: ['-Wall', '-std=c++11']
 
          void print_poke_info(pokemon p) {
              cout << p.poke_name << " (Lv. " << p.level << ", " << p.health_percentage << "% HP)" << '\n';
@@ -497,7 +482,6 @@ Coding Practice
          :name: cp_8_AC_8q
          :caption: Example cp_8_AC_8q
          :run-after: cp_8_AC_8q-support
-         :compileargs: ['-Wall', '-std=c++11']
 
          #include <iostream>
          using namespace std;
@@ -566,7 +550,6 @@ Coding Practice
             .. tb-code:: cpp
                :name: cp_8_AC_9q-support
                :hidden:
-               :compileargs: ['-Wall', '-std=c++11']
                :stdin: y
 
                void print_poke_info(pokemon p) {
@@ -598,7 +581,6 @@ Coding Practice
                :name: cp_8_AC_9q
                :caption: Example cp_8_AC_9q
                :run-after: cp_8_AC_9q-support
-               :compileargs: ['-Wall', '-std=c++11']
                :stdin: y
 
                #include <iostream>
@@ -645,7 +627,6 @@ Coding Practice
             .. tb-code:: cpp
                :name: cp_8_AC_9a-support
                :hidden:
-               :compileargs: ['-Wall', '-std=c++11']
                :stdin: y
 
                void print_poke_info(pokemon p) {
@@ -677,7 +658,6 @@ Coding Practice
                :name: cp_8_AC_9a
                :caption: Example cp_8_AC_9a
                :run-after: cp_8_AC_9a-support
-               :compileargs: ['-Wall', '-std=c++11']
                :stdin: y
 
                #include <iostream>
@@ -764,7 +744,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: cp_8_AC_10q
          :caption: Example cp_8_AC_10q
-         :compileargs: ['-Wall', '-std=c++11']
          :stdin: 145, 2
 
          #include <iostream>

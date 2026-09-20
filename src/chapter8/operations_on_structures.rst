@@ -1,3 +1,5 @@
+.. _structures-operations-on-structures:
+
 Operations on structures
 ------------------------
 
@@ -31,7 +33,6 @@ We can also copy one structure to another:
 .. tb-code:: cpp
    :name: operations_structures_AC_1
    :caption: Example operations_structures_AC_1
-   :compileargs: ['-Wall', '-std=c++20']
 
    #include <iostream>
 

@@ -1,3 +1,5 @@
+.. _recursion-infinite-recursion:
+
 Infinite Recursion
 ------------------
 

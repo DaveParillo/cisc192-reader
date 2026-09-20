@@ -1,3 +1,4 @@
+.. _idx-fruitful-functions:
 .. _idx-functions:
 
 Fruitful functions

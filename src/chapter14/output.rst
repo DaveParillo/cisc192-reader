@@ -1,3 +1,5 @@
+.. _classes-invariants-output:
+
 Output
 ------
 
@@ -54,7 +56,6 @@ Feel free to modify the code and experiment around!
 .. tb-code:: cpp
    :name: c192_fourteensix-support
    :hidden:
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    complex_number::complex_number () { cartesian = true;  polar = false; }
 
@@ -112,7 +113,6 @@ Feel free to modify the code and experiment around!
    :name: c192_fourteensix
    :caption: Example c192_fourteensix
    :run-after: c192_fourteensix-support
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <iostream>
    #include <cmath>

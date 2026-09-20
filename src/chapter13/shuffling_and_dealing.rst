@@ -1,3 +1,5 @@
+.. _objects-vectors-shuffling-and-dealing:
+
 Shuffling and dealing
 ---------------------
 
@@ -42,7 +44,6 @@ games like War, Poker, and Egyptian Ratscrew.
 .. tb-code:: cpp
    :name: c192_shuffle_deal_ac_1-support
    :hidden:
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    playing_card::playing_card () {
        suit = spades;  rank = ace;
@@ -178,7 +179,6 @@ games like War, Poker, and Egyptian Ratscrew.
    :name: c192_shuffle_deal_ac_1
    :caption: Example c192_shuffle_deal_ac_1
    :run-after: c192_shuffle_deal_ac_1-support
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <stdexcept>
    #include <iterator>

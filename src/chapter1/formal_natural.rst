@@ -1,4 +1,6 @@
-﻿.. _formal:
+.. _formal:
+
+.. _program-formal-and-natural-languages:
 
 Formal and Natural Languages
 ----------------------------

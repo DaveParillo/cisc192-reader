@@ -1,3 +1,5 @@
+.. _idx-the-way-of-the-program:
+
 The way of the program
 ======================
 

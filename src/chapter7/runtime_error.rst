@@ -1,3 +1,5 @@
+.. _strings-things-a-run-time-error:
+
 A run-time error
 ----------------
 
@@ -18,7 +20,6 @@ of indexing out of range?
 .. tb-code:: cpp
    :name: runtime_error_AC_1
    :caption: Example runtime_error_AC_1
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
    #include <string>

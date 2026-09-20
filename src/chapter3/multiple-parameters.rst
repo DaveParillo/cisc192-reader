@@ -1,3 +1,5 @@
+.. _functions-functions-with-multiple-parameters:
+
 Functions with Multiple Parameters
 ----------------------------------
 
@@ -48,7 +50,6 @@ are passed into the print_price function.
 .. tb-code:: cpp
    :name: multiple_params_AC_1
    :caption: Understanding Multiple Parameters
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 

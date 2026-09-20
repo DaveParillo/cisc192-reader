@@ -1,3 +1,5 @@
+.. _fruitful-functions-program-development:
+
 Program Development
 -------------------
 ..	index::
@@ -122,7 +124,6 @@ talking about and outputs the result.
 .. tb-code:: cpp
    :name: program_dvlmt_AC_1
    :caption: Program Development
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <cmath>
    #include <iostream>

@@ -1,3 +1,4 @@
+.. _fruitful-functions-alternative-execution:
 .. _alternative:
 
 Alternative Execution
@@ -65,7 +66,6 @@ see how the output is changed.
 .. tb-code:: cpp
    :name: alt_execution_AC_1
    :caption: Even or Odd?
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
    using std::cout;

@@ -1,4 +1,6 @@
-﻿Counting
+.. _random-numbers-counting:
+
+Counting
 --------
 
 .. index::
@@ -50,7 +52,7 @@ modify the code and experiment around.
 .. tb-code:: cpp
    :name: counting_AC_1-support
    :hidden:
-   :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
+   :compileargs: ['-Werror']
 
 
    std::size_t how_many (const std::vector<int>& data, int value) {
@@ -84,7 +86,7 @@ modify the code and experiment around.
    :name: counting_AC_1
    :caption: Example counting_AC_1
    :run-after: counting_AC_1-support
-   :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
+   :compileargs: ['-Werror']
 
    #include <cstddef>
    #include <iostream>

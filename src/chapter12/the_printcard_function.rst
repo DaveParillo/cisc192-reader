@@ -1,3 +1,5 @@
+.. _vectors-objects-the-printcard-function:
+
 The ``print_card`` function
 ---------------------------
 
@@ -84,7 +86,6 @@ change the output from the ``playing_card::print()`` function.
 .. tb-code:: cpp
    :name: c192_12_3-support
    :hidden:
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
 
    playing_card::playing_card () {
@@ -125,7 +126,6 @@ change the output from the ``playing_card::print()`` function.
    :name: c192_12_3
    :caption: Example c192_12_3
    :run-after: c192_12_3-support
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <iostream>
    #include <string>

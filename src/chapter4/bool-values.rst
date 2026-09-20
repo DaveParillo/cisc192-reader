@@ -1,3 +1,5 @@
+.. _fruitful-functions-boolean-values:
+
 Boolean Values
 --------------
 ..	index::

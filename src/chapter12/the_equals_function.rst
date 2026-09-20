@@ -1,3 +1,5 @@
+.. _vectors-objects-the-equals-function:
+
 The ``equals`` function
 -----------------------
 
@@ -64,7 +66,6 @@ Run the active code below to see how the ``equals()`` function works.
 .. tb-code:: cpp
    :name: c192_12_4-support
    :hidden:
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
 
    playing_card::playing_card () {
@@ -116,7 +117,6 @@ Run the active code below to see how the ``equals()`` function works.
    :name: c192_12_4
    :caption: Example c192_12_4
    :run-after: c192_12_4-support
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <iostream>
    #include <string>

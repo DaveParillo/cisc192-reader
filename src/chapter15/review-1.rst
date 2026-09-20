@@ -1,3 +1,5 @@
+.. _files-containers-multiple-choice-exercises:
+
 Multiple Choice Exercises
 -------------------------
 

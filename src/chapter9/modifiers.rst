@@ -1,3 +1,5 @@
+.. _more-structures-modifiers:
+
 Modifiers
 ---------
 
@@ -38,7 +40,6 @@ Run the active code to see what the output is!
 .. tb-code:: cpp
    :name: modifiers_AC_1
    :caption: Example modifiers_AC_1
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 
@@ -77,7 +78,6 @@ you can reveal the extra problem at the end for help.
 .. tb-code:: cpp
    :name: modifiers_AC_2
    :caption: Example modifiers_AC_2
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
    using namespace std;

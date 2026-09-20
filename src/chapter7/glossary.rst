@@ -1,3 +1,5 @@
+.. _strings-things-glossary:
+
 Glossary
 --------
 

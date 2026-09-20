@@ -1,3 +1,5 @@
+.. _classes-invariants-mixed-up-code-practice:
+
 Mixed Up Code Practice
 ----------------------
 

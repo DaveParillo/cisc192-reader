@@ -1,4 +1,6 @@
-﻿Checking the other values
+.. _random-numbers-checking-the-other-values:
+
+Checking the other values
 -------------------------
 
 ``how_many`` only counts the occurrences of a particular value, and we

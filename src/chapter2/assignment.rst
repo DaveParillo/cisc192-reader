@@ -1,3 +1,5 @@
+.. _variables-types-assignment:
+
 Assignment
 ----------
 

@@ -1,3 +1,5 @@
+.. _more-structures-time:
+
 time
 ----
 
@@ -17,7 +19,6 @@ We can create a ``time`` object in the usual way.
 .. tb-code:: cpp
    :name: time_AC_1
    :caption: Example time_AC_1
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 
@@ -181,7 +182,6 @@ type has a copy of the instance variables for that type.
       .. tb-code:: cpp
          :name: time_AC_2
          :caption: Example time_AC_2
-         :compileargs: ['-Wall', '-std=c++11']
 
          #include <iostream>
 

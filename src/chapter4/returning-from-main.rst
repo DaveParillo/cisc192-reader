@@ -1,3 +1,5 @@
+.. _fruitful-functions-returning-from-main:
+
 Returning from main
 -------------------
 

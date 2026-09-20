@@ -1,3 +1,5 @@
+.. _structures-rectangles:
+
 Rectangles
 ----------
 
@@ -115,7 +117,6 @@ This statement is an example of a **nested structure**.
       .. tb-code:: cpp
          :name: rectangles_AC_1
          :caption: Example rectangles_AC_1
-         :compileargs: ['-Wall', '-std=c++20']
 
          #include <iostream>
 

@@ -1,3 +1,5 @@
+.. _structures-getting-user-input:
+
 Getting user input
 ------------------
 
@@ -47,7 +49,6 @@ user might look like. Feel free to change 42 to other values!
 .. tb-code:: cpp
    :name: getting_user_input_AC_1
    :caption: Example getting_user_input_AC_1
-   :compileargs: ['-Wall', '-std=c++20']
    :stdin: 42
 
    #include <iostream>
@@ -114,7 +115,6 @@ to other values!
 .. tb-code:: cpp
    :name: getting_user_input_AC_2
    :caption: Example getting_user_input_AC_2
-   :compileargs: ['-Wall', '-std=c++20']
    :stdin: Harry Potter
 
    #include <iostream>

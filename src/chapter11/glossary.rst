@@ -1,4 +1,6 @@
-﻿Glossary
+.. _random-numbers-glossary:
+
+Glossary
 --------
 
 deterministic:

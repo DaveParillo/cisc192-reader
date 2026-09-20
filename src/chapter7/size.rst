@@ -1,3 +1,5 @@
+.. _strings-things-string-size:
+
 String size
 -----------
 
@@ -10,7 +12,6 @@ The active code below outputs the size of string ``fruit``.
 .. tb-code:: cpp
    :name: length_AC_1
    :caption: Finding the size of a string
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <cstddef>
    #include <iostream>
@@ -67,7 +68,6 @@ using the ``size`` function.
 .. tb-code:: cpp
    :name: length_AC_2
    :caption: Finding the size of a string and outputting it
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <cstddef>
    #include <iostream>

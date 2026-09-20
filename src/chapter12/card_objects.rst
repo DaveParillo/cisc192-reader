@@ -1,3 +1,5 @@
+.. _vectors-objects-playingcard-objects:
+
 ``playing_card`` objects
 ------------------------
 

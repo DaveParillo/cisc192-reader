@@ -1,3 +1,5 @@
+.. _functions-activecode-exercises:
+
 Activecode Exercises
 --------------------
 
@@ -21,7 +23,7 @@ assess what you have learned in this chapter.
             .. tb-code:: cpp
                :name: functions_a1q-support
                :hidden:
-               :compileargs: ['-Wall', '-Wextra', '-Wpedantic' '-Werror' '-std=c++11']
+               :compileargs: ['-Werror']
 
                #include <functional>
                #include <iomanip>
@@ -61,7 +63,7 @@ assess what you have learned in this chapter.
                :name: functions_a1q
                :caption: Example functions_a1q
                :run-after: functions_a1q-support
-               :compileargs: ['-Wall', '-Wextra', '-Wpedantic' '-Werror' '-std=c++11']
+               :compileargs: ['-Werror']
 
                double area(int r) {
                    constexpr double pi = sin(1.0);
@@ -78,7 +80,7 @@ assess what you have learned in this chapter.
             .. tb-code:: cpp
                :name: functions_a1a-support
                :hidden:
-               :compileargs: ['-Wall', '-Wextra', '-Wpedantic' '-Werror' '-std=c++11']
+               :compileargs: ['-Werror']
 
                #include <functional>
                #include <iomanip>
@@ -119,7 +121,7 @@ assess what you have learned in this chapter.
                :name: functions_a1a
                :caption: Example functions_a1a
                :run-after: functions_a1a-support
-               :compileargs: ['-Wall', '-Wextra', '-Wpedantic' '-Werror' '-std=c++11']
+               :compileargs: ['-Werror']
 
                #include <cmath>
 
@@ -136,7 +138,7 @@ assess what you have learned in this chapter.
       .. tb-code:: cpp
          :name: functions_a2
          :caption: Example functions_a2
-         :compileargs: ['-Wall', '-Wextra', '-Wpedantic' '-Werror' '-std=c++11']
+         :compileargs: ['-Werror']
 
          #include <iostream>
          using namespace std;
@@ -163,7 +165,7 @@ assess what you have learned in this chapter.
             .. tb-code:: cpp
                :name: functions_a3q
                :caption: Example functions_a3q
-               :compileargs: ['-Wall', '-Wextra', '-Wpedantic' '-Werror' '-std=c++11']
+               :compileargs: ['-Werror']
 
                #include <iostream>
 
@@ -190,7 +192,7 @@ assess what you have learned in this chapter.
             .. tb-code:: cpp
                :name: functions_a3a
                :caption: Example functions_a3a
-               :compileargs: ['-Wall', '-Wextra', '-Wpedantic' '-Werror' '-std=c++11']
+               :compileargs: ['-Werror']
 
                #include <iostream>
 
@@ -214,7 +216,7 @@ assess what you have learned in this chapter.
       .. tb-code:: cpp
          :name: functions_a4-support
          :hidden:
-         :compileargs: ['-Wall', '-Wextra', '-Wpedantic' '-Werror' '-std=c++11']
+         :compileargs: ['-Werror']
 
          #include <functional>
          #include <iomanip>
@@ -258,7 +260,7 @@ assess what you have learned in this chapter.
          :name: functions_a4
          :caption: Example functions_a4
          :run-after: functions_a4-support
-         :compileargs: ['-Wall', '-Wextra', '-Wpedantic' '-Werror' '-std=c++11']
+         :compileargs: ['-Werror']
 
 
          double log_subtract (double a) {
@@ -292,7 +294,7 @@ assess what you have learned in this chapter.
             .. tb-code:: cpp
                :name: functions_a5q
                :caption: Example functions_a5q
-               :compileargs: ['-Wall', '-Wextra', '-Wpedantic' '-Werror' '-std=c++11']
+               :compileargs: ['-Werror']
 
                #include <iostream>
                using namespace std;
@@ -313,7 +315,7 @@ assess what you have learned in this chapter.
             .. tb-code:: cpp
                :name: functions_a5a
                :caption: Example functions_a5a
-               :compileargs: ['-Wall', '-Wextra', '-Wpedantic' '-Werror' '-std=c++11']
+               :compileargs: ['-Werror']
 
                #include <iostream>
                using std::cout;
@@ -338,7 +340,7 @@ assess what you have learned in this chapter.
       .. tb-code:: cpp
          :name: functions_a6-support
          :hidden:
-         :compileargs: ['-Wall', '-Wextra', '-Wpedantic' '-Werror' '-std=c++11']
+         :compileargs: ['-Werror']
 
          #include <functional>
          #include <iomanip>
@@ -374,7 +376,7 @@ assess what you have learned in this chapter.
          :name: functions_a6
          :caption: Example functions_a6
          :run-after: functions_a6-support
-         :compileargs: ['-Wall', '-Wextra', '-Wpedantic' '-Werror' '-std=c++11']
+         :compileargs: ['-Werror']
 
          int int_division () {
 
@@ -397,7 +399,7 @@ assess what you have learned in this chapter.
             .. tb-code:: cpp
                :name: functions_a7q-support
                :hidden:
-               :compileargs: ['-Wall', '-Wextra', '-Wpedantic' '-Werror' '-std=c++11']
+               :compileargs: ['-Werror']
 
                #include <functional>
                #include <iomanip>
@@ -438,7 +440,7 @@ assess what you have learned in this chapter.
                :name: functions_a7q
                :caption: Example functions_a7q
                :run-after: functions_a7q-support
-               :compileargs: ['-Wall', '-Wextra', '-Wpedantic' '-Werror' '-std=c++11']
+               :compileargs: ['-Werror']
 
                double gpa_boost () {
 
@@ -454,7 +456,7 @@ assess what you have learned in this chapter.
             .. tb-code:: cpp
                :name: functions_a7a-support
                :hidden:
-               :compileargs: ['-Wall', '-Wextra', '-Wpedantic' '-Werror' '-std=c++11']
+               :compileargs: ['-Werror']
 
                #include <functional>
                #include <iomanip>
@@ -495,7 +497,7 @@ assess what you have learned in this chapter.
                :name: functions_a7a
                :caption: Example functions_a7a
                :run-after: functions_a7a-support
-               :compileargs: ['-Wall', '-Wextra', '-Wpedantic' '-Werror' '-std=c++11']
+               :compileargs: ['-Werror']
 
                #include <cmath>
 
@@ -512,7 +514,7 @@ assess what you have learned in this chapter.
       .. tb-code:: cpp
          :name: functions_a8-support
          :hidden:
-         :compileargs: ['-Wall', '-Wextra', '-Wpedantic' '-Werror' '-std=c++11']
+         :compileargs: ['-Werror']
 
          #include <functional>
          #include <iomanip>
@@ -552,7 +554,7 @@ assess what you have learned in this chapter.
          :name: functions_a8
          :caption: Example functions_a8
          :run-after: functions_a8-support
-         :compileargs: ['-Wall', '-Wextra', '-Wpedantic' '-Werror' '-std=c++11']
+         :compileargs: ['-Werror']
 
          volume_prism ();
 
@@ -571,7 +573,7 @@ assess what you have learned in this chapter.
             .. tb-code:: cpp
                :name: functions_a9q-support
                :hidden:
-               :compileargs: ['-Wall', '-Wextra', '-Wpedantic' '-Werror' '-std=c++11']
+               :compileargs: ['-Werror']
 
                #include <functional>
                #include <iomanip>
@@ -610,7 +612,7 @@ assess what you have learned in this chapter.
                :name: functions_a9q
                :caption: Example functions_a9q
                :run-after: functions_a9q-support
-               :compileargs: ['-Wall', '-Wextra', '-Wpedantic' '-Werror' '-std=c++11']
+               :compileargs: ['-Werror']
 
                tan_degrees ();
 
@@ -623,7 +625,6 @@ assess what you have learned in this chapter.
             .. tb-code:: cpp
                :name: functions_a9a-support
                :hidden:
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <functional>
                #include <iomanip>
@@ -662,7 +663,6 @@ assess what you have learned in this chapter.
                :name: functions_a9a
                :caption: Example functions_a9a
                :run-after: functions_a9a-support
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <cmath>
 
@@ -690,7 +690,7 @@ assess what you have learned in this chapter.
       .. tb-code:: cpp
          :name: functions_a10-support
          :hidden:
-         :compileargs: ['-Wall', '-Wextra', '-Wpedantic' '-Werror' '-std=c++11']
+         :compileargs: ['-Werror']
 
          #include <functional>
          #include <iomanip>
@@ -728,7 +728,7 @@ assess what you have learned in this chapter.
          :name: functions_a10
          :caption: Example functions_a10
          :run-after: functions_a10-support
-         :compileargs: ['-Wall', '-Wextra', '-Wpedantic' '-Werror' '-std=c++11']
+         :compileargs: ['-Werror']
 
          volume_sphere ();
 

@@ -1,3 +1,5 @@
+.. _vectors-objects-coding-practice:
+
 Coding Practice
 ---------------
 
@@ -15,7 +17,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_12_ac_1q
          :caption: Example c192_cp_12_ac_1q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <iostream>
          #include <vector>
@@ -30,7 +31,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_12_ac_1a
          :caption: Example c192_cp_12_ac_1a
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <iostream>
          #include <vector>
@@ -45,9 +45,9 @@ Coding Practice
 
    The legacy Runestone question pool ``c192_cp_12_ac_2_sq`` is represented by these exercises:
 
-   * :doc:`c192_cp_12_ac_2q <coding_practice_sq>`
+   * :ref:`c192_cp_12_ac_2q <vectors-objects-coding-practice-2>`
 
-   * :doc:`c192_cp_12_ac_2_pp <coding_practice_sq>`
+   * :ref:`c192_cp_12_ac_2_pp <vectors-objects-coding-practice-2>`
 
 .. tb-group::
    :name: c192_cp_12_3
@@ -60,7 +60,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_12_ac_3q
          :caption: Example c192_cp_12_ac_3q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <iostream>
          #include <vector>
@@ -87,7 +86,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_12_ac_3a
          :caption: Example c192_cp_12_ac_3a
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <iostream>
          #include <vector>
@@ -112,9 +110,9 @@ Coding Practice
 
    The legacy Runestone question pool ``c192_cp_12_ac_4_sq`` is represented by these exercises:
 
-   * :doc:`c192_cp_12_ac_4q <coding_practice_sq>`
+   * :ref:`c192_cp_12_ac_4q <vectors-objects-coding-practice-2>`
 
-   * :doc:`c192_cp_12_ac_4_pp <coding_practice_sq>`
+   * :ref:`c192_cp_12_ac_4_pp <vectors-objects-coding-practice-2>`
 
 .. tb-group::
    :name: c192_cp_12_5
@@ -129,7 +127,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_12_ac_5q-support
          :hidden:
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          void pixel::print_pixel() {
              cout << '('<< r << ", " << g << ", " << b << ')';
@@ -150,7 +147,6 @@ Coding Practice
          :name: c192_cp_12_ac_5q
          :caption: Example c192_cp_12_ac_5q
          :run-after: c192_cp_12_ac_5q-support
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <cstddef>
          #include <iostream>
@@ -197,7 +193,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_12_ac_5a-support
          :hidden:
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          void pixel::print_pixel() {
              cout << '('<< r << ", " << g << ", " << b << ')';
@@ -218,7 +213,6 @@ Coding Practice
          :name: c192_cp_12_ac_5a
          :caption: Example c192_cp_12_ac_5a
          :run-after: c192_cp_12_ac_5a-support
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <stdexcept>
          #include <cstddef>
@@ -274,9 +268,9 @@ Coding Practice
 
    The legacy Runestone question pool ``c192_cp_12_ac_6_sq`` is represented by these exercises:
 
-   * :doc:`c192_cp_12_ac_6q <coding_practice_sq>`
+   * :ref:`c192_cp_12_ac_6q <vectors-objects-coding-practice-2>`
 
-   * :doc:`c192_cp_12_ac_6_pp <coding_practice_sq>`
+   * :ref:`c192_cp_12_ac_6_pp <vectors-objects-coding-practice-2>`
 
 .. tb-group::
    :name: c192_cp_12_7
@@ -292,7 +286,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_12_ac_7q-support
          :hidden:
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          void pixel::print_pixel() {
              cout << '('<< r << ", " << g << ", " << b << ')';
@@ -336,7 +329,6 @@ Coding Practice
          :name: c192_cp_12_ac_7q
          :caption: Example c192_cp_12_ac_7q
          :run-after: c192_cp_12_ac_7q-support
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <stdexcept>
          #include <cstddef>
@@ -385,7 +377,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_12_ac_7a-support
          :hidden:
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          void pixel::print_pixel() {
              cout << '('<< r << ", " << g << ", " << b << ')';
@@ -429,7 +420,6 @@ Coding Practice
          :name: c192_cp_12_ac_7a
          :caption: Example c192_cp_12_ac_7a
          :run-after: c192_cp_12_ac_7a-support
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <stdexcept>
          #include <cstddef>
@@ -482,9 +472,9 @@ Coding Practice
 
    The legacy Runestone question pool ``c192_cp_12_ac_8_sq`` is represented by these exercises:
 
-   * :doc:`c192_cp_12_ac_8q <coding_practice_sq>`
+   * :ref:`c192_cp_12_ac_8q <vectors-objects-coding-practice-2>`
 
-   * :doc:`c192_cp_12_ac_8_pp <coding_practice_sq>`
+   * :ref:`c192_cp_12_ac_8_pp <vectors-objects-coding-practice-2>`
 
 .. tb-group::
    :name: c192_cp_12_9
@@ -498,7 +488,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_12_ac_9q-support
          :hidden:
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          void pixel::print_pixel() {
              cout << '('<< r << ", " << g << ", " << b << ')';
@@ -566,7 +555,6 @@ Coding Practice
          :name: c192_cp_12_ac_9q
          :caption: Example c192_cp_12_ac_9q
          :run-after: c192_cp_12_ac_9q-support
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <stdexcept>
          #include <cstddef>
@@ -618,7 +606,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_12_ac_9a-support
          :hidden:
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          void pixel::print_pixel() {
              cout << '('<< r << ", " << g << ", " << b << ')';
@@ -686,7 +673,6 @@ Coding Practice
          :name: c192_cp_12_ac_9a
          :caption: Example c192_cp_12_ac_9a
          :run-after: c192_cp_12_ac_9a-support
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <stdexcept>
          #include <cstddef>
@@ -743,7 +729,7 @@ Coding Practice
 
    The legacy Runestone question pool ``c192_cp_12_ac_10_sq`` is represented by these exercises:
 
-   * :doc:`c192_cp_12_ac_10q <coding_practice_sq>`
+   * :ref:`c192_cp_12_ac_10q <vectors-objects-coding-practice-2>`
 
-   * :doc:`c192_cp_12_ac_10_pp <coding_practice_sq>`
+   * :ref:`c192_cp_12_ac_10_pp <vectors-objects-coding-practice-2>`
 

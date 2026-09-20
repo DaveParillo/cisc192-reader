@@ -1,3 +1,5 @@
+.. _objects-vectors-subdecks:
+
 Subdecks
 --------
 
@@ -50,7 +52,6 @@ If you get stuck, you can reveal the extra problem at the end for help.
 .. tb-code:: cpp
    :name: c192_subdeck_cards_1-support
    :hidden:
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    playing_card::playing_card () {
        suit = spades;  rank = ace;
@@ -174,7 +175,6 @@ If you get stuck, you can reveal the extra problem at the end for help.
    :name: c192_subdeck_cards_1
    :caption: Example c192_subdeck_cards_1
    :run-after: c192_subdeck_cards_1-support
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <iterator>
    #include <stdexcept>

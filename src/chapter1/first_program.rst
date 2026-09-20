@@ -1,4 +1,6 @@
-﻿.. _hello:
+.. _hello:
+
+.. _program-the-first-program:
 
 The First Program
 -----------------

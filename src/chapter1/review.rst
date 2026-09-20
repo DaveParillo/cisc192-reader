@@ -1,3 +1,5 @@
+.. _program-multiple-choice-exercises:
+
 Multiple Choice Exercises
 -------------------------
 

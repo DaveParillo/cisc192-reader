@@ -1,3 +1,5 @@
+.. _classes-invariants-preconditions:
+
 Preconditions
 -------------
 
@@ -108,7 +110,6 @@ fails and thus we get an error.
 .. tb-code:: cpp
    :name: c192_fourteenten-support
    :hidden:
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    complex_number::complex_number () { cartesian = true;  polar = false; }
 
@@ -200,7 +201,6 @@ fails and thus we get an error.
    :name: c192_fourteenten
    :caption: Example c192_fourteenten
    :run-after: c192_fourteenten-support
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <iostream>
    #include <cmath>

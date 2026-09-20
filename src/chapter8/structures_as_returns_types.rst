@@ -1,3 +1,5 @@
+.. _structures-structures-as-return-types:
+
 Structures as return types
 --------------------------
 
@@ -36,7 +38,6 @@ it is being passed by reference), and assign the return value to a
       .. tb-code:: cpp
          :name: structures_return_types_AC_1
          :caption: Example structures_return_types_AC_1
-         :compileargs: ['-Wall', '-std=c++20']
 
          #include <iostream>
 

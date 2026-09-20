@@ -1,3 +1,5 @@
+.. _more-structures-functions-for-objects:
+
 Functions for objects
 ---------------------
 

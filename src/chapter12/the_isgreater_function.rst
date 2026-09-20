@@ -1,3 +1,5 @@
+.. _vectors-objects-the-isgreater-function:
+
 The ``is_greater`` function
 ---------------------------
 
@@ -85,7 +87,6 @@ Feel free to change the values of the cards.
 .. tb-code:: cpp
    :name: c192_12_5-support
    :hidden:
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
 
    playing_card::playing_card () {
@@ -147,7 +148,6 @@ Feel free to change the values of the cards.
    :name: c192_12_5
    :caption: Example c192_12_5
    :run-after: c192_12_5-support
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <iostream>
    #include <string>

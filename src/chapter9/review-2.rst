@@ -1,3 +1,5 @@
+.. _more-structures-mixed-up-code-practice:
+
 Mixed Up Code Practice
 ----------------------
 

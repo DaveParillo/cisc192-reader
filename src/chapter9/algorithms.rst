@@ -1,3 +1,5 @@
+.. _more-structures-algorithms:
+
 Algorithms
 ----------
 .. index::

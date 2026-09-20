@@ -1,3 +1,5 @@
+.. _structures-passing-other-types-by-reference:
+
 Passing other types by reference
 --------------------------------
 
@@ -34,7 +36,6 @@ for the output!
 .. tb-code:: cpp
    :name: pass_others_reference_AC_1
    :caption: Example pass_others_reference_AC_1
-   :compileargs: ['-Wall', '-std=c++20']
 
    #include <iostream>
 

@@ -1,3 +1,5 @@
+.. _iteration-coding-practice:
+
 Coding Practice
 ---------------
 
@@ -25,7 +27,6 @@ Coding Practice
             .. tb-code:: cpp
                :name: cp_6_AC_1q
                :caption: Example cp_6_AC_1q
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <iostream>
 
@@ -43,7 +44,6 @@ Coding Practice
             .. tb-code:: cpp
                :name: cp_6_AC_1a
                :caption: Example cp_6_AC_1a
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <iostream>
                using std::cout;
@@ -78,7 +78,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: cp_6_AC_2q
          :caption: Example cp_6_AC_2q
-         :compileargs: ['-Wall', '-std=c++11']
 
          #include <iostream>
 
@@ -111,7 +110,6 @@ Coding Practice
             .. tb-code:: cpp
                :name: cp_6_AC_3q
                :caption: Example cp_6_AC_3q
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <iostream>
 
@@ -134,7 +132,6 @@ Coding Practice
             .. tb-code:: cpp
                :name: cp_6_AC_3a
                :caption: Example cp_6_AC_3a
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <iostream>
                using std::cout;
@@ -179,7 +176,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: cp_6_AC_4q
          :caption: Example cp_6_AC_4q
-         :compileargs: ['-Wall', '-std=c++11']
 
          #include <iostream>
 
@@ -222,7 +218,6 @@ Coding Practice
             .. tb-code:: cpp
                :name: cp_6_AC_5q
                :caption: Example cp_6_AC_5q
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <iostream>
 
@@ -241,7 +236,6 @@ Coding Practice
             .. tb-code:: cpp
                :name: cp_6_AC_5a
                :caption: Example cp_6_AC_5a
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <iostream>
 
@@ -288,7 +282,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: cp_6_AC_6q
          :caption: Example cp_6_AC_6q
-         :compileargs: ['-Wall', '-std=c++11']
 
          #include <iostream>
 
@@ -315,7 +308,6 @@ Coding Practice
             .. tb-code:: cpp
                :name: cp_6_AC_7q-support
                :hidden:
-               :compileargs: ['-Wall', '-std=c++11']
 
 
                #include <functional>
@@ -353,7 +345,6 @@ Coding Practice
                :name: cp_6_AC_7q
                :caption: Example cp_6_AC_7q
                :run-after: cp_6_AC_7q-support
-               :compileargs: ['-Wall', '-std=c++11']
 
                bool is_prime (int num) {
                    // Write your implementation here.
@@ -372,7 +363,6 @@ Coding Practice
             .. tb-code:: cpp
                :name: cp_6_AC_7a-support
                :hidden:
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <functional>
                #include <iomanip>
@@ -409,7 +399,6 @@ Coding Practice
                :name: cp_6_AC_7a
                :caption: Example cp_6_AC_7a
                :run-after: cp_6_AC_7a-support
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <iostream>
 
@@ -434,7 +423,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: cp_6_AC_8q
          :caption: Example cp_6_AC_8q
-         :compileargs: ['-Wall', '-std=c++11']
 
          #include <iostream>
 
@@ -458,7 +446,6 @@ Coding Practice
             .. tb-code:: cpp
                :name: cp_6_AC_9q
                :caption: Example cp_6_AC_9q
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <iostream>
 
@@ -480,7 +467,6 @@ Coding Practice
             .. tb-code:: cpp
                :name: cp_6_AC_9a
                :caption: Example cp_6_AC_9a
-               :compileargs: ['-Wall', '-std=c++11']
 
                 #include <iostream>
 
@@ -509,7 +495,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: cp_6_AC_10q-support
          :hidden:
-         :compileargs: ['-Wall', '-std=c++11']
 
          #include <functional>
          #include <iomanip>
@@ -546,7 +531,6 @@ Coding Practice
          :name: cp_6_AC_10q
          :caption: Example cp_6_AC_10q
          :run-after: cp_6_AC_10q-support
-         :compileargs: ['-Wall', '-std=c++11']
 
          #include <iostream>
 

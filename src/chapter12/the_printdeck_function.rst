@@ -1,3 +1,4 @@
+.. _vectors-objects-the-print-deck-function:
 .. _c192_printdeck:
 
 The ``print_deck`` function
@@ -30,7 +31,6 @@ function will allow you to verify that you have done this correctly.
 .. tb-code:: cpp
    :name: c192_12_7-support
    :hidden:
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
 
    playing_card::playing_card () {
@@ -77,7 +77,6 @@ function will allow you to verify that you have done this correctly.
    :name: c192_12_7
    :caption: Example c192_12_7
    :run-after: c192_12_7-support
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <cstddef>
    #include <iostream>

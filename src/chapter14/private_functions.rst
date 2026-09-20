@@ -1,3 +1,5 @@
+.. _classes-invariants-private-functions:
+
 Private functions
 -----------------
 
@@ -53,7 +55,6 @@ to be private functions. Notice how we are no longer able to call
 .. tb-code:: cpp
    :name: c192_fourteeneleven-support
    :hidden:
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    complex_number::complex_number () { cartesian = true;  polar = false; }
 
@@ -145,7 +146,6 @@ to be private functions. Notice how we are no longer able to call
    :name: c192_fourteeneleven
    :caption: Example c192_fourteeneleven
    :run-after: c192_fourteeneleven-support
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <iostream>
    #include <cmath>

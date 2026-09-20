@@ -1,6 +1,8 @@
 .. index::
    pair: keyword; return
 
+.. _fruitful-functions-the-return-keyword:
+
 The ``return`` keyword
 ----------------------
 The :lang:`return` keyword immediately returns from a function.

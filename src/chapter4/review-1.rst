@@ -1,3 +1,5 @@
+.. _fruitful-functions-multiple-choice-exercises:
+
 Multiple Choice Exercises
 -------------------------
 

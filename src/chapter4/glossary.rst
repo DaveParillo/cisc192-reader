@@ -1,3 +1,5 @@
+.. _fruitful-functions-glossary:
+
 Glossary
 --------
 

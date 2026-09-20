@@ -1,3 +1,5 @@
+.. _vectors-objects-activecode-exercises:
+
 Activecode Exercises
 --------------------
 
@@ -14,7 +16,6 @@ Answer the following **Activecode** questions to assess what you have learned in
       .. tb-code:: cpp
          :name: c192_mucp_12_1_ac_q
          :caption: Example c192_mucp_12_1_ac_q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <iostream>
          // YOUR CODE HERE
@@ -26,7 +27,6 @@ Answer the following **Activecode** questions to assess what you have learned in
       .. tb-code:: cpp
          :name: c192_mucp_12_1_ac_a
          :caption: Example c192_mucp_12_1_ac_a
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <cstddef>
          #include <string>
@@ -50,7 +50,6 @@ Answer the following **Activecode** questions to assess what you have learned in
       .. tb-code:: cpp
          :name: c192_mucp_12_2_ac_q
          :caption: Example c192_mucp_12_2_ac_q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <iostream>
          #include <vector>
@@ -63,7 +62,6 @@ Answer the following **Activecode** questions to assess what you have learned in
       .. tb-code:: cpp
          :name: c192_mucp_12_2_ac_a
          :caption: Example c192_mucp_12_2_ac_a
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <cstddef>
          #include <string>
@@ -94,7 +92,6 @@ Answer the following **Activecode** questions to assess what you have learned in
       .. tb-code:: cpp
          :name: c192_mucp_12_3_ac_q
          :caption: Example c192_mucp_12_3_ac_q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <iostream>
 
@@ -107,7 +104,6 @@ Answer the following **Activecode** questions to assess what you have learned in
       .. tb-code:: cpp
          :name: c192_mucp_12_3_ac_a
          :caption: Example c192_mucp_12_3_ac_a
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <cstddef>
          #include <string>
@@ -142,7 +138,6 @@ Answer the following **Activecode** questions to assess what you have learned in
       .. tb-code:: cpp
          :name: c192_mucp_12_4_ac_q
          :caption: Example c192_mucp_12_4_ac_q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <iostream>
          #include <vector>
@@ -155,7 +150,6 @@ Answer the following **Activecode** questions to assess what you have learned in
       .. tb-code:: cpp
          :name: c192_mucp_12_4_ac_a
          :caption: Example c192_mucp_12_4_ac_a
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <cstddef>
          #include <string>
@@ -198,7 +192,6 @@ Answer the following **Activecode** questions to assess what you have learned in
       .. tb-code:: cpp
          :name: c192_mucp_12_5_ac_q
          :caption: Example c192_mucp_12_5_ac_q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <iostream>
          #include <vector>
@@ -211,7 +204,6 @@ Answer the following **Activecode** questions to assess what you have learned in
       .. tb-code:: cpp
          :name: c192_mucp_12_5_ac_a
          :caption: Example c192_mucp_12_5_ac_a
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <cstddef>
          #include <string>
@@ -259,7 +251,6 @@ Answer the following **Activecode** questions to assess what you have learned in
       .. tb-code:: cpp
          :name: c192_mucp_12_6_ac_q
          :caption: Example c192_mucp_12_6_ac_q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <iostream>
          // YOUR CODE HERE
@@ -271,7 +262,6 @@ Answer the following **Activecode** questions to assess what you have learned in
       .. tb-code:: cpp
          :name: c192_mucp_12_6_ac_a
          :caption: Example c192_mucp_12_6_ac_a
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <string>
          #include <iostream>
@@ -293,7 +283,6 @@ Answer the following **Activecode** questions to assess what you have learned in
       .. tb-code:: cpp
          :name: c192_mucp_12_7_ac_q
          :caption: Example c192_mucp_12_7_ac_q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <iostream>
          #include <vector>
@@ -306,7 +295,6 @@ Answer the following **Activecode** questions to assess what you have learned in
       .. tb-code:: cpp
          :name: c192_mucp_12_7_ac_a
          :caption: Example c192_mucp_12_7_ac_a
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <string>
          #include <iostream>
@@ -337,7 +325,6 @@ Answer the following **Activecode** questions to assess what you have learned in
       .. tb-code:: cpp
          :name: c192_mucp_12_8_ac_q
          :caption: Example c192_mucp_12_8_ac_q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <iostream>
          #include <vector>
@@ -350,7 +337,6 @@ Answer the following **Activecode** questions to assess what you have learned in
       .. tb-code:: cpp
          :name: c192_mucp_12_8_ac_a
          :caption: Example c192_mucp_12_8_ac_a
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <cstddef>
          #include <string>
@@ -397,7 +383,6 @@ Answer the following **Activecode** questions to assess what you have learned in
       .. tb-code:: cpp
          :name: c192_mucp_12_9_ac_q
          :caption: Example c192_mucp_12_9_ac_q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <iostream>
          #include <vector>
@@ -410,7 +395,6 @@ Answer the following **Activecode** questions to assess what you have learned in
       .. tb-code:: cpp
          :name: c192_mucp_12_9_ac_a
          :caption: Example c192_mucp_12_9_ac_a
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <cstddef>
          #include <string>
@@ -451,7 +435,6 @@ Answer the following **Activecode** questions to assess what you have learned in
       .. tb-code:: cpp
          :name: c192_mucp_12_10_ac_q
          :caption: Example c192_mucp_12_10_ac_q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <iostream>
          #include <vector>
@@ -464,7 +447,6 @@ Answer the following **Activecode** questions to assess what you have learned in
       .. tb-code:: cpp
          :name: c192_mucp_12_10_ac_a
          :caption: Example c192_mucp_12_10_ac_a
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <stdexcept>
          #include <cstddef>

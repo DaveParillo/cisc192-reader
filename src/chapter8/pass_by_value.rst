@@ -1,3 +1,5 @@
+.. _structures-pass-by-value:
+
 Pass by value
 -------------
 .. index::
@@ -62,7 +64,6 @@ function ``add_two`` changes the instance variables, but not on ``blank`` itself
 .. tb-code:: cpp
    :name: call_by_value_AC_1
    :caption: Example call_by_value_AC_1
-   :compileargs: ['-Wall', '-std=c++20']
 
    #include <iostream>
 

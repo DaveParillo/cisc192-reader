@@ -1,3 +1,5 @@
+.. _objects-vectors-coding-practice-2:
+
 Coding Practice
 ---------------
 
@@ -15,7 +17,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_13_ac_2q
          :caption: Example c192_cp_13_ac_2q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <iostream>
 
@@ -114,7 +115,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_13_ac_4q
          :caption: Example c192_cp_13_ac_4q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <iostream>
          // Add any relevant libraries here.
@@ -162,7 +162,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_13_ac_6q
          :caption: Example c192_cp_13_ac_6q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <iostream>
          #include <vector>
@@ -223,7 +222,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_13_ac_8q-support
          :hidden:
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          std::size_t random_int(std::size_t low, std::size_t high) {
              static std::mt19937 engine(std::random_device{}());
@@ -273,7 +271,6 @@ Coding Practice
          :name: c192_cp_13_ac_8q
          :caption: Example c192_cp_13_ac_8q
          :run-after: c192_cp_13_ac_8q-support
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <cstddef>
          #include <random>
@@ -358,7 +355,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_13_ac_10q
          :caption: Example c192_cp_13_ac_10q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <cstddef>
          #include <iostream>

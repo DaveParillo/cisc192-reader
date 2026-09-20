@@ -1,3 +1,5 @@
+.. _classes-invariants-private-data-and-classes:
+
 Private data and classes
 ------------------------
 
@@ -87,7 +89,6 @@ Run the active code below. Uncomment the commented out code to see what happens!
 .. tb-code:: cpp
    :name: c192_priv_data_ac_1-support
    :hidden:
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    playing_card::playing_card () {
        suit = 3;  rank = 0;
@@ -127,7 +128,6 @@ Run the active code below. Uncomment the commented out code to see what happens!
    :name: c192_priv_data_ac_1
    :caption: Example c192_priv_data_ac_1
    :run-after: c192_priv_data_ac_1-support
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <iostream>
    #include <string>

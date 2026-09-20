@@ -1,3 +1,5 @@
+.. _random-numbers-activecode-exercises:
+
 Activecode Exercises
 --------------------
 
@@ -20,7 +22,7 @@ Answer the following **Activecode** questions to assess what you have learned in
       .. tb-code:: cpp
          :name: vectors_a8
          :caption: Example vectors_a8
-         :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
+         :compileargs: ['-Werror']
 
          #include <iostream>
          #include <random>

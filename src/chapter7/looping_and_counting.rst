@@ -1,3 +1,5 @@
+.. _strings-things-looping-and-counting:
+
 Looping and counting
 --------------------
 
@@ -7,7 +9,6 @@ appears in a string ``fruit``.
 .. tb-code:: cpp
    :name: looping_and_counting_AC_1
    :caption: Looping and counting
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <cstddef>
    #include <iostream>

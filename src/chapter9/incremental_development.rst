@@ -1,3 +1,5 @@
+.. _more-structures-incremental-development-versus-planning:
+
 Incremental development versus planning
 ---------------------------------------
 .. index::
@@ -68,7 +70,6 @@ The active code below uses the ``convert_to_seconds`` and ``make_time`` function
 .. tb-code:: cpp
    :name: incremental_development_AC_1
    :caption: Example incremental_development_AC_1
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
    using namespace std;
@@ -126,7 +127,6 @@ way.
       .. tb-code:: cpp
          :name: incremental_development_AC_2
          :caption: Example incremental_development_AC_2
-         :compileargs: ['-Wall', '-std=c++11']
 
          #include <iostream>
          using namespace std;

@@ -1,3 +1,5 @@
+.. _classes-invariants-coding-practice-2:
+
 Coding Practice
 ---------------
 
@@ -12,7 +14,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_14_ac_2q
          :caption: Example c192_cp_14_ac_2q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <iostream>
 
@@ -141,7 +142,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_14_ac_4q
          :caption: Example c192_cp_14_ac_4q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <iostream>
 
@@ -228,7 +228,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_14_ac_6q
          :caption: Example c192_cp_14_ac_6q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <iostream>
          #include <vector>
@@ -282,7 +281,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_14_ac_8q-support
          :hidden:
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          my_vector::my_vector (std::vector<int> vec) {
              elements = vec;
@@ -301,7 +299,6 @@ Coding Practice
          :name: c192_cp_14_ac_8q
          :caption: Example c192_cp_14_ac_8q
          :run-after: c192_cp_14_ac_8q-support
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <stdexcept>
          #include <cstddef>
@@ -391,7 +388,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_14_ac_10q-support
          :hidden:
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          my_vector::my_vector (std::vector<int> vec) {
              elements = vec;
@@ -436,7 +432,6 @@ Coding Practice
          :name: c192_cp_14_ac_10q
          :caption: Example c192_cp_14_ac_10q
          :run-after: c192_cp_14_ac_10q-support
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <stdexcept>
          #include <cstddef>

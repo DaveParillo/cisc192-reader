@@ -1,3 +1,5 @@
+.. _classes-invariants-invariants:
+
 Invariants
 ----------
 

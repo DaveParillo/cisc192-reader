@@ -1,3 +1,5 @@
+.. _files-containers-unique-values-with-std-set:
+
 Unique values with std::set
 ===========================
 
@@ -8,7 +10,6 @@ and elements are not numbered: a set does not have an indexing operator.
 .. tb-code:: cpp
    :name: c192_15_7
    :caption: Example c192_15_7
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <iostream>
    #include <set>
@@ -38,7 +39,6 @@ which is either zero or one here.
 .. tb-code:: cpp
    :name: c192_set_find
    :caption: Example c192_set_find
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <iostream>
    #include <set>

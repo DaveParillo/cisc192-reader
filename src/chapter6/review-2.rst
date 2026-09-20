@@ -1,3 +1,5 @@
+.. _recursion-mixed-up-code-exercises:
+
 Mixed-Up Code Exercises
 -----------------------
 

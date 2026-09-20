@@ -1,3 +1,5 @@
+.. _fruitful-functions-nested-conditionals:
+
 Nested Conditionals
 -------------------
 
@@ -15,7 +17,6 @@ using nested conditionals.
 .. tb-code:: cpp
    :name: nested_conditionals_AC_1
    :caption: Classifying an Integer
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
    using std::cout;

@@ -1,3 +1,5 @@
+.. _recursion-activecode-exercises:
+
 Activecode Exercises
 --------------------
 
@@ -20,7 +22,6 @@ assess what you have learned in this chapter.
             .. tb-code:: cpp
                :name: cond_rec_a1q
                :caption: Example cond_rec_a1q
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <iostream>
 
@@ -44,7 +45,6 @@ assess what you have learned in this chapter.
             .. tb-code:: cpp
                :name: cond_rec_a1_a
                :caption: Example cond_rec_a1_a
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <iostream>
 
@@ -71,7 +71,6 @@ assess what you have learned in this chapter.
       .. tb-code:: cpp
          :name: cond_rec_a2
          :caption: Example cond_rec_a2
-         :compileargs: ['-Wall', '-std=c++11']
 
          #include <iostream>
          #include <string>
@@ -106,7 +105,6 @@ assess what you have learned in this chapter.
             .. tb-code:: cpp
                :name: cond_rec_a3q
                :caption: Example cond_rec_a3q
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <iostream>
                using std::cout;
@@ -137,7 +135,6 @@ assess what you have learned in this chapter.
             .. tb-code:: cpp
                :name: cond_rec_a3_a
                :caption: Example cond_rec_a3_a
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <iostream>
                using std::cout;
@@ -171,7 +168,6 @@ assess what you have learned in this chapter.
       .. tb-code:: cpp
          :name: cond_rec_4
          :caption: Example cond_rec_4
-         :compileargs: ['-Wall', '-std=c++11']
 
          #include <iostream>
 
@@ -195,7 +191,6 @@ assess what you have learned in this chapter.
             .. tb-code:: cpp
                :name: cond_rec_a5q
                :caption: Example cond_rec_a5q
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <iostream>
                #include <string>
@@ -218,7 +213,6 @@ assess what you have learned in this chapter.
             .. tb-code:: cpp
                :name: cond_rec_a5a
                :caption: Example cond_rec_a5a
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <iostream>
                #include <string>
@@ -247,7 +241,6 @@ assess what you have learned in this chapter.
       .. tb-code:: cpp
          :name: cond_rec_a6
          :caption: Example cond_rec_a6
-         :compileargs: ['-Wall', '-std=c++11']
 
          void greater () {
 
@@ -268,7 +261,6 @@ assess what you have learned in this chapter.
             .. tb-code:: cpp
                :name: cond_rec_a7q
                :caption: Example cond_rec_a7q
-               :compileargs: ['-Wall', '-std=c++11']
 
                void good_vibes (string mood) {
 
@@ -283,7 +275,6 @@ assess what you have learned in this chapter.
             .. tb-code:: cpp
                :name: cond_rec_a7a
                :caption: Example cond_rec_a7a
-               :compileargs: ['-Wall', '-std=c++11']
 
                void good_vibes (string mood) {
                    if (mood == "bad") {
@@ -302,7 +293,6 @@ assess what you have learned in this chapter.
       .. tb-code:: cpp
          :name: cond_rec_8
          :caption: Example cond_rec_8
-         :compileargs: ['-Wall', '-std=c++11']
 
          void exclusive_or (bool a, bool b) {
 
@@ -323,7 +313,6 @@ assess what you have learned in this chapter.
             .. tb-code:: cpp
                :name: cond_rec_a9q
                :caption: Example cond_rec_a9q
-               :compileargs: ['-Wall', '-std=c++11']
 
                void countdown (int num) {
 
@@ -336,7 +325,6 @@ assess what you have learned in this chapter.
             .. tb-code:: cpp
                :name: cond_rec_a9a
                :caption: Example cond_rec_a9a
-               :compileargs: ['-Wall', '-std=c++11']
 
                void countdown (int num) {
                    if (num != 0){
@@ -360,7 +348,6 @@ assess what you have learned in this chapter.
       .. tb-code:: cpp
          :name: cond_rec_a10
          :caption: Example cond_rec_a10
-         :compileargs: ['-Wall', '-std=c++11']
 
          void print_negative () {
 

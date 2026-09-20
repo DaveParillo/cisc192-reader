@@ -1,3 +1,5 @@
+.. _random-numbers-mixed-up-code-exercises:
+
 Mixed-Up Code Exercises
 -----------------------
 

@@ -1,3 +1,5 @@
+.. _functions-glossary:
+
 Glossary
 --------
 

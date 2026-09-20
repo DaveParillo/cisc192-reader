@@ -1,4 +1,6 @@
-﻿Accessing elements
+.. _vectors-accessing-elements:
+
+Accessing elements
 ------------------
 
 .. index::
@@ -91,7 +93,6 @@ We can modify the vectors by accessing its elements.
 .. tb-code:: cpp
    :name: accessing_elements_AC_1
    :caption: Example accessing_elements_AC_1
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <cstddef>   // std::size_t
    #include <iostream>

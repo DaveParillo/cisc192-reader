@@ -1,3 +1,5 @@
+.. _strings-things-string-s-are-comparable:
+
 ``string``\ s are comparable
 ----------------------------
 
@@ -10,7 +12,6 @@ equal to ``"banana"``.
 .. tb-code:: cpp
    :name: strings_comparable_AC_1
    :caption: Strings are comparable
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
    #include <string>
@@ -38,7 +39,6 @@ of ``word`` relative to ``"banana"``.
 .. tb-code:: cpp
    :name: strings_comparable_AC_2
    :caption: Strings are comparable
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
    #include <string>
@@ -79,7 +79,6 @@ Print a simple boolean value resulting from a string comparison.
 .. tb-code:: cpp
    :name: strings_comparable_AC_3
    :caption: String comparisons print 0 and 1 by default
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
    #include <string>
@@ -103,7 +102,6 @@ values as the words ``true`` or ``false``.
 .. tb-code:: cpp
    :name: strings_comparable_AC_4
    :caption: iomanip can change what iostream displays
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iomanip>
    #include <iostream>

@@ -1,3 +1,5 @@
+.. _iteration-encapsulation-and-generalization:
+
 Encapsulation and generalization
 --------------------------------
 Encapsulation usually means taking a piece of code and wrapping it up in
@@ -64,7 +66,6 @@ Try running the active code below, which uses ``print_multiples``.
 .. tb-code:: cpp
    :name: encapsulation_generalization_AC_1
    :caption: Two-dimensional tables
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 

@@ -1,3 +1,5 @@
+.. _strings-things-mixed-up-code-practice:
+
 Mixed Up Code Practice
 ----------------------
 

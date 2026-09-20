@@ -1,3 +1,5 @@
+.. _iteration-more-encapsulation:
+
 More encapsulation
 ------------------
 
@@ -28,7 +30,6 @@ Run the active code to see what happens!
 .. tb-code:: cpp
    :name: more_encapsulation_AC_1
    :caption: Two-dimensional tables
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 

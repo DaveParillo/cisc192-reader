@@ -1,3 +1,5 @@
+.. _variables-types-keywords:
+
 Keywords
 --------
 
@@ -185,7 +187,7 @@ More on scope and namespaces in the next chapter.
       .. tb-code:: cpp
          :name: keywords_4
          :caption: Example keywords_4
-         :compileargs: ['-Wall', '-Werror', '-std=c++11']
+         :compileargs: ['-Werror']
 
          int main () {
              int friend = 4;

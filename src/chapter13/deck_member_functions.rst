@@ -1,3 +1,5 @@
+.. _objects-vectors-carddeck-member-functions:
+
 ``card_deck`` member functions
 ------------------------------
 
@@ -24,7 +26,6 @@ to print out the deck instead of writing a for loop in main.
 .. tb-code:: cpp
    :name: c192_deck_members_ac_1-support
    :hidden:
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    playing_card::playing_card () {
        suit = spades;  rank = ace;
@@ -84,7 +85,6 @@ to print out the deck instead of writing a for loop in main.
    :name: c192_deck_members_ac_1
    :caption: Example c192_deck_members_ac_1
    :run-after: c192_deck_members_ac_1-support
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <cstddef>
    #include <iostream>
@@ -236,7 +236,6 @@ The active code below uses the ``find`` function that we just wrote.
 .. tb-code:: cpp
    :name: c192_deck_members_ac_2-support
    :hidden:
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    playing_card::playing_card () {
        suit = spades;  rank = ace;
@@ -309,7 +308,6 @@ The active code below uses the ``find`` function that we just wrote.
    :name: c192_deck_members_ac_2
    :caption: Example c192_deck_members_ac_2
    :run-after: c192_deck_members_ac_2-support
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <cstddef>
    #include <iostream>

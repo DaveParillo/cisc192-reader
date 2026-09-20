@@ -1,3 +1,5 @@
+.. _structures-pass-by-reference:
+
 Pass by reference
 -----------------
 .. index:: 
@@ -48,7 +50,6 @@ by reference. Notice that the output of this code matches what we expect it to b
 .. tb-code:: cpp
    :name: call_by_reference_AC_1
    :caption: Example call_by_reference_AC_1
-   :compileargs: ['-Wall', '-std=c++20']
 
    #include <iostream>
 

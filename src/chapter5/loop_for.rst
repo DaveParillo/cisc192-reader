@@ -1,4 +1,6 @@
-﻿The ``for`` statement
+.. _iteration-the-for-statement:
+
+The ``for`` statement
 ---------------------
 
 The loops we have written so far have a number of elements in common.

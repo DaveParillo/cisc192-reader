@@ -1,3 +1,5 @@
+.. _strings-things-string-s-are-mutable:
+
 ``string``\ s are mutable
 -------------------------
 
@@ -10,7 +12,6 @@ The active code below changes the first letter in ``greeting`` to be
 .. tb-code:: cpp
    :name: strings_are_mutable_AC_1
    :caption: String are mutable
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <cstddef>
    #include <iostream>

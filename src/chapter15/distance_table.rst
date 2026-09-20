@@ -1,3 +1,5 @@
+.. _files-containers-a-distance-table-with-maps-and-sets:
+
 A distance table with maps and sets
 ===================================
 
@@ -21,7 +23,6 @@ we print a dash instead of inventing a distance or searching for an indirect rou
 .. tb-code:: cpp
    :name: c192_distance_table
    :caption: Example c192_distance_table
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
    :files: c192_routes.txt
 
    #include <fstream>

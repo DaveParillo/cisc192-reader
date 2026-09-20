@@ -1,3 +1,5 @@
+.. _more-structures-multiple-choice-exercises:
+
 Multiple Choice Exercises
 -------------------------
 

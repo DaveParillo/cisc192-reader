@@ -3,6 +3,8 @@
    single: widening conversion
    single: truncate
 
+.. _functions-converting-from-double-to-int:
+
 Converting from ``double`` to ``int``
 ----------------------------------------
 As I mentioned, C++ converts ``int`` to ``double`` automatically if necessary,
@@ -93,7 +95,6 @@ What does this program produce?
 .. tb-code:: cpp
    :name: convert_AC_1
    :caption: Bad type conversion
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 
@@ -140,7 +141,7 @@ In each case, the code is (mostly) the same, but the results may be different.
       .. tb-code:: cpp
          :name: convert_summary_AC_1
          :caption: Explicit construction
-         :compileargs: ['-Wall', '-Wextra', '-Werror', '-std=c++11']
+         :compileargs: ['-Werror']
 
           #include <iostream>
           int main () {
@@ -155,7 +156,7 @@ In each case, the code is (mostly) the same, but the results may be different.
       .. tb-code:: cpp
          :name: convert_summary_AC_2
          :caption: Named cast
-         :compileargs: ['-Wall', '-Wextra', '-Werror', '-std=c++11']
+         :compileargs: ['-Werror']
 
           #include <iostream>
           int main () {
@@ -170,7 +171,7 @@ In each case, the code is (mostly) the same, but the results may be different.
       .. tb-code:: cpp
          :name: convert_summary_AC_3
          :caption: Functional cast
-         :compileargs: ['-Wall', '-Wextra', '-Werror', '-std=c++11']
+         :compileargs: ['-Werror']
 
           #include <iostream>
           int main () {
@@ -186,7 +187,7 @@ In each case, the code is (mostly) the same, but the results may be different.
       .. tb-code:: cpp
          :name: convert_summary_AC_4
          :caption: Bad type conversion
-         :compileargs: ['-Wall', '-Wextra', '-Werror', '-std=c++11']
+         :compileargs: ['-Werror']
 
           #include <iostream>
           int main () {

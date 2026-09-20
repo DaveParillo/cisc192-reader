@@ -1,3 +1,5 @@
+.. _more-structures-pure-functions:
+
 Pure functions
 --------------
 
@@ -17,7 +19,6 @@ Take a look at the active code below.
 .. tb-code:: cpp
    :name: pure_function_AC_1
    :caption: Example pure_function_AC_1
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 
@@ -71,7 +72,6 @@ it takes for your breadmaker to make bread, then you could use
 .. tb-code:: cpp
    :name: pure_function_AC_2
    :caption: Example pure_function_AC_2
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 
@@ -115,7 +115,6 @@ Here's a second, corrected version of this function.
 .. tb-code:: cpp
    :name: pure_function_AC_3
    :caption: Example pure_function_AC_3
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 

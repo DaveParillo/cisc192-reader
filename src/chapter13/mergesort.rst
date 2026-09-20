@@ -1,3 +1,5 @@
+.. _objects-vectors-mergesort:
+
 Mergesort
 ---------
 
@@ -155,7 +157,6 @@ at the end for help.
 .. tb-code:: cpp
    :name: c192_mergesort_2-support
    :hidden:
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    playing_card::playing_card () {
        suit = spades;  rank = ace;
@@ -291,7 +292,6 @@ at the end for help.
    :name: c192_mergesort_2
    :caption: Example c192_mergesort_2
    :run-after: c192_mergesort_2-support
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <stdexcept>
    #include <iterator>
@@ -457,7 +457,6 @@ deck of cards. If you get stuck, you can reveal the extra problems at the end fo
 .. tb-code:: cpp
    :name: c192_mergesort_3-support
    :hidden:
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    playing_card::playing_card () {
        suit = spades;  rank = ace;
@@ -624,7 +623,6 @@ deck of cards. If you get stuck, you can reveal the extra problems at the end fo
    :name: c192_mergesort_3
    :caption: Example c192_mergesort_3
    :run-after: c192_mergesort_3-support
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <stdexcept>
    #include <iterator>

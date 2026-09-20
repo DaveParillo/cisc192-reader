@@ -1,3 +1,5 @@
+.. _fruitful-functions-logical-operators:
+
 Logical operators
 -----------------
 .. index::

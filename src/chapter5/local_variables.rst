@@ -1,3 +1,5 @@
+.. _iteration-local-variables:
+
 Local variables
 ---------------
 .. index::

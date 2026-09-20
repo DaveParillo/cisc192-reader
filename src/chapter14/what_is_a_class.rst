@@ -1,3 +1,5 @@
+.. _classes-invariants-what-is-a-class:
+
 What is a class?
 ----------------
 

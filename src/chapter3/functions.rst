@@ -1,6 +1,8 @@
 .. index::
    pair: function; declaration and definition
 
+.. _functions-adding-new-functions:
+
 Adding New Functions
 --------------------
 
@@ -102,7 +104,6 @@ is called.
 .. tb-code:: cpp
    :name: new_functions_AC_1
    :caption: The three_line Function
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 

@@ -1,3 +1,5 @@
+.. _fruitful-functions-conditional-execution:
+
 Conditional Execution
 ---------------------
 
@@ -54,7 +56,6 @@ assess true/false situations.
 .. tb-code:: cpp
    :name: conditional_execution_AC_1
    :caption: Testing Values of x
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
    using std::cout;

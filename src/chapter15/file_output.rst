@@ -1,3 +1,5 @@
+.. _files-containers-file-output:
+
 File output
 ===========
 
@@ -14,7 +16,6 @@ when buffered output is flushed.
 .. tb-code:: cpp
    :name: c192_copy_file
    :caption: Example c192_copy_file
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
    :files: c192_readings.txt
 
    #include <fstream>

@@ -1,3 +1,5 @@
+.. _idx-cisc-192-course-reader:
+
 ======================
 CISC 192 Course Reader
 ======================
@@ -10,6 +12,7 @@ CISC 192 Course Reader
 
 .. toc_version: 1
 
+.. _idx-front-matter:
 .. _t_o_c:
 
 Front Matter
@@ -29,6 +32,8 @@ Front Matter
 ..    toc.rst
 
    
+.. _idx-chapters:
+
 Chapters
 ========
 
@@ -55,7 +60,9 @@ Chapters
 * :ref:`search`
 * :ref:`genindex`
 
-.. * :doc:`toc`
+.. * :ref:`toc <idx-chapters>`
+
+.. _idx-acknowledgements:
 
 Acknowledgements
 ----------------

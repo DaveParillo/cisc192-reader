@@ -1,3 +1,5 @@
+.. _strings-things-traversal:
+
 Traversal
 ---------
 .. index::
@@ -14,7 +16,6 @@ using a while loop.
 .. tb-code:: cpp
    :name: traversal_AC_1
    :caption: Accessing a string character
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <cstddef>
    #include <iostream>
@@ -57,7 +58,6 @@ If you get stuck, you can reveal the extra problem at the end for help.
 .. tb-code:: cpp
    :name: traversal_AC_2
    :caption: Example traversal_AC_2
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <cstddef>
    #include <iostream>

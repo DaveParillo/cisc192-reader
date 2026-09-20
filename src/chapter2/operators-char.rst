@@ -1,3 +1,5 @@
+.. _variables-types-operators-for-characters:
+
 Operators for Characters
 ------------------------
 
@@ -17,7 +19,6 @@ numeric value.
 .. tb-code:: cpp
    :name: char_operations_AC_1
    :caption: Adding to Characters
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 
@@ -40,7 +41,6 @@ to its ASCII value.
 .. tb-code:: cpp
    :name: char_operations_AC_2
    :caption: Automatic Type Conversion
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
    int main () {

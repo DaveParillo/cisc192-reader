@@ -1,3 +1,5 @@
+.. _vectors-activecode-exercises:
+
 Activecode Exercises
 --------------------
 
@@ -21,7 +23,7 @@ Answer the following **Activecode** questions to assess what you have learned in
             .. tb-code:: cpp
                :name: vectors_a1q
                :caption: Example vectors_a1q
-               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
+               :compileargs: ['-Werror']
 
                int make_vector () {
                    vector<int> nums (5) = 1;
@@ -41,7 +43,7 @@ Answer the following **Activecode** questions to assess what you have learned in
             .. tb-code:: cpp
                :name: vectors_a1a-support
                :hidden:
-               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
+               :compileargs: ['-Werror']
 
                #include <functional>
                #include <iomanip>
@@ -78,7 +80,7 @@ Answer the following **Activecode** questions to assess what you have learned in
                :name: vectors_a1a
                :caption: Example vectors_a1a
                :run-after: vectors_a1a-support
-               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
+               :compileargs: ['-Werror']
 
                #include <iostream>
                #include <vector>
@@ -96,7 +98,7 @@ Answer the following **Activecode** questions to assess what you have learned in
       .. tb-code:: cpp
          :name: vectors_a2-support
          :hidden:
-         :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
+         :compileargs: ['-Werror']
 
          #include <functional>
          #include <iomanip>
@@ -133,7 +135,7 @@ Answer the following **Activecode** questions to assess what you have learned in
          :name: vectors_a2
          :caption: Example vectors_a2
          :run-after: vectors_a2-support
-         :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
+         :compileargs: ['-Werror']
 
          #include <vector>
 
@@ -159,7 +161,7 @@ Answer the following **Activecode** questions to assess what you have learned in
             .. tb-code:: cpp
                :name: vectors_a3q-support
                :hidden:
-               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
+               :compileargs: ['-Werror']
 
                #include <functional>
                #include <iomanip>
@@ -197,7 +199,7 @@ Answer the following **Activecode** questions to assess what you have learned in
                :name: vectors_a3q
                :caption: Example vectors_a3q
                :run-after: vectors_a3q-support
-               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
+               :compileargs: ['-Werror']
 
                #include <iostream>
                #include <string>
@@ -228,7 +230,7 @@ Answer the following **Activecode** questions to assess what you have learned in
             .. tb-code:: cpp
                :name: vectors_a3a-support
                :hidden:
-               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
+               :compileargs: ['-Werror']
 
                  #include <functional>
                  #include <iomanip>
@@ -267,7 +269,7 @@ Answer the following **Activecode** questions to assess what you have learned in
                :name: vectors_a3a
                :caption: Example vectors_a3a
                :run-after: vectors_a3a-support
-               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
+               :compileargs: ['-Werror']
 
                #include <string>
                #include <vector>
@@ -294,7 +296,7 @@ Answer the following **Activecode** questions to assess what you have learned in
             .. tb-code:: cpp
                :name: vectors_a3a2-support
                :hidden:
-               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
+               :compileargs: ['-Werror']
 
                #include <functional>
                #include <iomanip>
@@ -332,7 +334,7 @@ Answer the following **Activecode** questions to assess what you have learned in
                :name: vectors_a3a2
                :caption: Example vectors_a3a2
                :run-after: vectors_a3a2-support
-               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
+               :compileargs: ['-Werror']
 
                #include <string>
                #include <vector>
@@ -355,7 +357,7 @@ Answer the following **Activecode** questions to assess what you have learned in
       .. tb-code:: cpp
          :name: vectors_a4-support
          :hidden:
-         :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
+         :compileargs: ['-Werror']
 
 
          #include <functional>
@@ -399,7 +401,7 @@ Answer the following **Activecode** questions to assess what you have learned in
          :name: vectors_a4
          :caption: Example vectors_a4
          :run-after: vectors_a4-support
-         :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
+         :compileargs: ['-Werror']
 
 
          int count_covid (const std::vector<double>& temps) {
@@ -418,7 +420,7 @@ Answer the following **Activecode** questions to assess what you have learned in
             .. tb-code:: cpp
                :name: vectors_a5q
                :caption: Example vectors_a5q
-               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
+               :compileargs: ['-Werror']
 
 
                int main () {
@@ -438,7 +440,7 @@ Answer the following **Activecode** questions to assess what you have learned in
             .. tb-code:: cpp
                :name: vectors_a5a
                :caption: Example vectors_a5a
-               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
+               :compileargs: ['-Werror']
 
                #include <string>
                #include <vector>
@@ -462,7 +464,7 @@ Answer the following **Activecode** questions to assess what you have learned in
       .. tb-code:: cpp
          :name: vectors_a6
          :caption: Example vectors_a6
-         :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
+         :compileargs: ['-Werror']
 
          #include <vector>
 
@@ -483,7 +485,7 @@ Answer the following **Activecode** questions to assess what you have learned in
             .. tb-code:: cpp
                :name: vectors_a7q
                :caption: Example vectors_a7q
-               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
+               :compileargs: ['-Werror']
 
                #include <vector>
 
@@ -498,7 +500,7 @@ Answer the following **Activecode** questions to assess what you have learned in
             .. tb-code:: cpp
                :name: vectors_a7a
                :caption: Example vectors_a7a
-               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
+               :compileargs: ['-Werror']
 
                #include <cstddef>
                #include <vector>
@@ -531,7 +533,7 @@ Answer the following **Activecode** questions to assess what you have learned in
             .. tb-code:: cpp
                :name: vectors_a9q
                :caption: Example vectors_a9q
-               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
+               :compileargs: ['-Werror']
 
                // student code goes here.
 
@@ -551,7 +553,7 @@ Answer the following **Activecode** questions to assess what you have learned in
             .. tb-code:: cpp
                :name: vectors_a8a
                :caption: Example vectors_a8a
-               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
+               :compileargs: ['-Werror']
 
                #include <vector>
 
@@ -574,7 +576,7 @@ Answer the following **Activecode** questions to assess what you have learned in
       .. tb-code:: cpp
          :name: vectors_a9
          :caption: Example vectors_a9
-         :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
+         :compileargs: ['-Werror']
 
          #include <vector>
 
@@ -593,7 +595,7 @@ Answer the following **Activecode** questions to assess what you have learned in
             .. tb-code:: cpp
                :name: vectors_a11q
                :caption: Example vectors_a11q
-               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
+               :compileargs: ['-Werror']
 
                #include <vector>
 
@@ -607,7 +609,7 @@ Answer the following **Activecode** questions to assess what you have learned in
             .. tb-code:: cpp
                :name: vectors_a11a
                :caption: Example vectors_a11a
-               :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
+               :compileargs: ['-Werror']
 
                #include <vector>
 
@@ -633,7 +635,7 @@ Answer the following **Activecode** questions to assess what you have learned in
       .. tb-code:: cpp
          :name: vectors_a11
          :caption: Example vectors_a11
-         :compileargs: ['-Wall', '-Wextra', '-Werror' '-std=c++11']
+         :compileargs: ['-Werror']
 
          // student code goes here.
 

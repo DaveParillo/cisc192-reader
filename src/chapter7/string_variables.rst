@@ -1,3 +1,5 @@
+.. _strings-things-string-variables:
+
 ``string`` variables
 --------------------
 .. index::
@@ -38,7 +40,6 @@ Run the active code below!
 .. tb-code:: cpp
    :name: string_variables_AC_2
    :caption: Outputting a string variable
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
    #include <string>

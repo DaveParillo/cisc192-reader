@@ -1,3 +1,5 @@
+.. _recursion-more-recursion:
+
 More recursion
 --------------
 .. index::
@@ -81,7 +83,6 @@ the passed argument.
 .. tb-code:: cpp
    :name: more_recursion_AC_1
    :caption: Factorial Recursion
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 

@@ -1,3 +1,5 @@
+.. _files-containers-growing-sequences-with-std-vector:
+
 Growing sequences with std::vector
 ==================================
 
@@ -15,7 +17,6 @@ count of used slots yourself.
 .. tb-code:: cpp
    :name: c192_vectors_growth
    :caption: Example c192_vectors_growth
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <iostream>
    #include <sstream>
@@ -48,7 +49,6 @@ table of zeros:
 .. tb-code:: cpp
    :name: c192_vectors_table
    :caption: Example c192_vectors_table
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <cstddef>
    #include <iostream>

@@ -1,3 +1,5 @@
+.. _files-containers-streams:
+
 Streams
 -------
 

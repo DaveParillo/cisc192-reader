@@ -1,4 +1,6 @@
-﻿Glossary
+.. _vectors-glossary:
+
+Glossary
 --------
 
 vector:

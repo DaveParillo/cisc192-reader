@@ -1,3 +1,5 @@
+.. _classes-invariants-complexnumber-numbers:
+
 complex_number numbers
 ----------------------
 
@@ -132,7 +134,6 @@ the triangle, which should be 12.
 .. tb-code:: cpp
    :name: c192_fourteentwo
    :caption: Example c192_fourteentwo
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <iostream>
 
@@ -165,7 +166,6 @@ angle between them. Notice how our ``main`` function is the exact same as before
 .. tb-code:: cpp
    :name: c192_fourteenthree
    :caption: Example c192_fourteenthree
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <iostream>
    #include <cmath>

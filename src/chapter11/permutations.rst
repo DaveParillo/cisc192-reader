@@ -16,6 +16,8 @@
    single: random shuffle
    single: shuffle
 
+.. _random-numbers-permutations:
+
 Permutations
 ------------
 A permutation of a sequence :math:`\mathbf{S}`
@@ -64,7 +66,6 @@ choices for the second member, and so on.
       .. tb-code:: cpp
          :name: math_permute_ac
          :caption: Example math_permute_ac
-         :compileargs: ['-Wall', '-Wextra', '-pedantic', '-std=c++11']
 
          #include <cstddef>
          #include <iostream>
@@ -120,7 +121,6 @@ choices for the second member, and so on.
       .. tb-code:: cpp
          :name: math_permute_shuffle_ac
          :caption: Example math_permute_shuffle_ac
-         :compileargs: ['-Wall', '-Wextra', '-pedantic', '-std=c++11']
 
          #include <algorithm>
          #include <cstddef>

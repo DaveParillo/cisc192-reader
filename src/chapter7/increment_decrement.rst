@@ -1,3 +1,5 @@
+.. _strings-things-increment-and-decrement-operators:
+
 Increment and decrement operators
 ---------------------------------
 .. index::
@@ -29,7 +31,6 @@ with ``cout`` statements can be confusing.
 .. tb-code:: cpp
    :name: increment_decrement_AC_1
    :caption: Looping and counting
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <cstddef>
    #include <iostream>

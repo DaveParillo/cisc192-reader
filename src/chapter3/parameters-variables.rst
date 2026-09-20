@@ -1,3 +1,5 @@
+.. _functions-parameters-and-variables-are-local:
+
 Parameters and Variables are Local
 ----------------------------------
 
@@ -15,7 +17,6 @@ variable 'phil'.
 .. tb-code:: cpp
    :name: locals_AC_1
    :caption: Understanding Parameters
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 

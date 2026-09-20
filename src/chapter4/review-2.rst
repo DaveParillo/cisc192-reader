@@ -1,3 +1,5 @@
+.. _fruitful-functions-mixed-up-code-practice:
+
 Mixed Up Code Practice
 ----------------------
 

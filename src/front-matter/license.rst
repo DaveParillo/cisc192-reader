@@ -1,5 +1,7 @@
 ..  Copyright (C)  Dave Parillo
 
+.. _front-license:
+
 License
 =======
 

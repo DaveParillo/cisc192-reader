@@ -1,11 +1,12 @@
 
+.. _objects-vectors-shuffling:
 .. _c192_shuffling:
 
 Shuffling
 ---------
 
 For most card games you need to be able to shuffle the deck; that is,
-put the cards in a random order. In :doc:`../chapter11/random_numbers` we
+put the cards in a random order. In :ref:`../chapter11/random_numbers <random-numbers-random-numbers>` we
 saw how to generate random numbers, but it is not obvious how to use
 them to shuffle a deck.
 
@@ -48,7 +49,7 @@ indices and switches the cards at the indicated positions.
    your program, **pseudocode** is a great place to start!
 
 You can probably figure out how to write ``random_int`` by looking at
-:doc:`../chapter11/random_numbers`, although you will have to be careful
+:ref:`../chapter11/random_numbers <random-numbers-random-numbers>`, although you will have to be careful
 about possibly generating indices that are out of range.
 
 You can also figure out ``swap_cards`` yourself. I will leave the
@@ -81,7 +82,6 @@ extra problems at the end for help.
 .. tb-code:: cpp
    :name: c192_shuffling_2-support
    :hidden:
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    playing_card::playing_card () {
        suit = spades;  rank = ace;
@@ -141,7 +141,6 @@ extra problems at the end for help.
    :name: c192_shuffling_2
    :caption: Example c192_shuffling_2
    :run-after: c192_shuffling_2-support
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <cstddef>
    #include <random>

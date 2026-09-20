@@ -1,4 +1,6 @@
-﻿Vector functions
+.. _vectors-vector-functions:
+
+Vector functions
 ----------------
 
 The best feature of a vector is its ability to resize.

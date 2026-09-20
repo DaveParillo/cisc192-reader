@@ -1,3 +1,5 @@
+.. _files-containers-file-input:
+
 File input
 ==========
 
@@ -27,7 +29,6 @@ condition avoids processing a value that was never successfully read.
 .. tb-code:: cpp
    :name: c192_file_input_readings
    :caption: Example c192_file_input_readings
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
    :files: c192_readings.txt
 
    #include <fstream>

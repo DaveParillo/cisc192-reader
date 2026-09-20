@@ -1,3 +1,5 @@
+.. _vectors-objects-coding-practice-2:
+
 Coding Practice
 ---------------
 
@@ -13,7 +15,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_12_ac_2q
          :caption: Example c192_cp_12_ac_2q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <iostream>
          #include <vector>
@@ -76,7 +77,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_12_ac_4q-support
          :hidden:
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          void pixel::print_pixel() {
              std::cout << '('<< r << ", " << g << ", " << b << ')';
@@ -86,7 +86,6 @@ Coding Practice
          :name: c192_cp_12_ac_4q
          :caption: Example c192_cp_12_ac_4q
          :run-after: c192_cp_12_ac_4q-support
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <cstddef>
          #include <iostream>
@@ -170,7 +169,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_12_ac_6q-support
          :hidden:
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          void pixel::print_pixel() {
              cout << '('<< r << ", " << g << ", " << b << ')';
@@ -207,7 +205,6 @@ Coding Practice
          :name: c192_cp_12_ac_6q
          :caption: Example c192_cp_12_ac_6q
          :run-after: c192_cp_12_ac_6q-support
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <stdexcept>
          #include <cstddef>
@@ -284,7 +281,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_12_ac_8q-support
          :hidden:
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          void pixel::print_pixel() {
              cout << '('<< r << ", " << g << ", " << b << ')';
@@ -339,7 +335,6 @@ Coding Practice
          :name: c192_cp_12_ac_8q
          :caption: Example c192_cp_12_ac_8q
          :run-after: c192_cp_12_ac_8q-support
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <stdexcept>
          #include <cstddef>
@@ -435,7 +430,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_12_ac_10q-support
          :hidden:
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          void pixel::print_pixel() {
              cout << '('<< r << ", " << g << ", " << b << ')';
@@ -514,7 +508,6 @@ Coding Practice
          :name: c192_cp_12_ac_10q
          :caption: Example c192_cp_12_ac_10q
          :run-after: c192_cp_12_ac_10q-support
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <stdexcept>
          #include <cstddef>

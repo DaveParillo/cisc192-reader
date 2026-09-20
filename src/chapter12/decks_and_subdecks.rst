@@ -1,3 +1,5 @@
+.. _vectors-objects-decks-and-subdecks:
+
 Decks and subdecks
 ------------------
 
@@ -32,7 +34,7 @@ A container can be empty: its size is zero. An object can also represent
 an absence of data through its interface. Neither meaning implies that
 ordinary local variables automatically receive usable values. Initialize
 data members and variables before reading them, as discussed in
-:doc:`../chapter8/operations_on_structures`.
+:ref:`../chapter8/operations_on_structures <structures-operations-on-structures>`.
 
 This kind of thinking, in which a program comes to take on meaning
 beyond what is literally encoded, is a very important part of thinking

@@ -1,4 +1,6 @@
-﻿A histogram
+.. _random-numbers-a-histogram:
+
+A histogram
 -----------
 
 It is often useful to take the data from the previous tables and store

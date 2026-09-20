@@ -1,3 +1,5 @@
+.. _vectors-objects-mixed-up-code-practice:
+
 Mixed Up Code Practice
 ----------------------
 

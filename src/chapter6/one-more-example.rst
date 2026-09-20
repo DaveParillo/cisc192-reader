@@ -1,3 +1,5 @@
+.. _recursion-one-more-example:
+
 One more example
 ----------------
 
@@ -12,7 +14,6 @@ example on the previous page.
 .. tb-code:: cpp
    :name: recursion_ex_AC_1
    :caption: Factorial Recursion
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 
@@ -51,7 +52,6 @@ fibonacci sequence.
 .. tb-code:: cpp
    :name: recursion_ex_AC_2
    :caption: Fibonacci Recursion
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 

@@ -128,7 +128,7 @@ tb_code_language_map = {
     'python': 'python3',
 }
 tb_code_language_defaults = {
-    'cpp': {'compileargs': ['-Wall', '-Wextra', '-pedantic', '-std=c++20']},
+    'cpp': {'compileargs': ['-Wall', '-Wextra', '-Wpedantic', '-std=c++20']},
 }
 tb_code_block_defaults = {'linenos': True, 'show-tutor': True}
 

@@ -1,5 +1,7 @@
 .. index:: function composition
 
+.. _fruitful-functions-function-composition:
+
 Function Composition
 --------------------
 
@@ -58,7 +60,6 @@ of the circle.
 .. tb-code:: cpp
    :name: fun_comp_AC_1
    :caption: Function Composition
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <cmath>
    #include <iostream>
@@ -152,7 +153,6 @@ also shows that calling two or more different functions is valid.
 .. tb-code:: cpp
    :name: multi_comp_1
    :caption: Function Composition
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 

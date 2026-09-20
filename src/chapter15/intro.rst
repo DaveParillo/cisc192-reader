@@ -1,3 +1,5 @@
+.. _files-containers-from-files-to-containers:
+
 From files to containers
 ========================
 

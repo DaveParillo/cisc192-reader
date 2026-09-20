@@ -1,3 +1,5 @@
+.. _functions-programs-with-multiple-functions:
+
 Programs with Multiple Functions
 --------------------------------
 
@@ -40,7 +42,6 @@ main.  See if you can follow the order of execution.
 .. tb-code:: cpp
    :name: multiple_functions_AC_1
    :caption: Multiply / Add Two
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 

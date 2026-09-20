@@ -1,3 +1,5 @@
+.. _more-structures-fill-in-functions:
+
 Fill-in functions
 -----------------
 
@@ -37,7 +39,6 @@ Feel free to modify the code!
 .. tb-code:: cpp
    :name: fillin_functions_AC_1
    :caption: Example fillin_functions_AC_1
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
    using namespace std;

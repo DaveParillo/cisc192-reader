@@ -1,3 +1,5 @@
+.. _recursion-multiple-choice-exercises:
+
 Multiple Choice Exercises
 -------------------------
 

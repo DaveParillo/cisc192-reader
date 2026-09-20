@@ -1,3 +1,5 @@
+.. _classes-invariants-another-function-on-complexnumber-numbers:
+
 Another function on ``complex_number`` numbers
 ----------------------------------------------
 
@@ -66,7 +68,6 @@ Feel free to modify the code and experiment around!
 .. tb-code:: cpp
    :name: c192_fourteeneight-support
    :hidden:
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    complex_number::complex_number () { cartesian = true;  polar = false; }
 
@@ -151,7 +152,6 @@ Feel free to modify the code and experiment around!
    :name: c192_fourteeneight
    :caption: Example c192_fourteeneight
    :run-after: c192_fourteeneight-support
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <iostream>
    #include <cmath>
@@ -232,7 +232,6 @@ you can reveal the extra problem at the end for help.
 .. tb-code:: cpp
    :name: c192_fourteennine-support
    :hidden:
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    complex_number::complex_number () { cartesian = true;  polar = false; }
 
@@ -317,7 +316,6 @@ you can reveal the extra problem at the end for help.
    :name: c192_fourteennine
    :caption: Example c192_fourteennine
    :run-after: c192_fourteennine-support
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <iostream>
    #include <cmath>

@@ -1,3 +1,5 @@
+.. _idx-structures:
+
 Structures
 ==========
 

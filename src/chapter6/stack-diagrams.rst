@@ -1,3 +1,5 @@
+.. _recursion-stack-diagrams-for-recursive-functions:
+
 Stack Diagrams for Recursive Functions
 --------------------------------------
 

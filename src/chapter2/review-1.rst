@@ -1,3 +1,5 @@
+.. _variables-types-multiple-choice-exercises:
+
 Multiple Choice Exercises
 -------------------------
 

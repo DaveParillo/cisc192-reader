@@ -1,3 +1,5 @@
+.. _idx-random-numbers:
+
 Random numbers
 ==============
 

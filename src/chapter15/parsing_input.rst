@@ -1,3 +1,5 @@
+.. _files-containers-parsing-quoted-records:
+
 Parsing quoted records
 ======================
 
@@ -17,7 +19,6 @@ unquoted word if there is no opening quote.
 .. tb-code:: cpp
    :name: c192_parse_record
    :caption: Example c192_parse_record
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <iomanip>
    #include <iostream>

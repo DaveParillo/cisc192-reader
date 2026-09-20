@@ -1,3 +1,5 @@
+.. _variables-types-variables:
+
 Variables
 ---------
 
@@ -65,7 +67,6 @@ Consider the following:
 .. tb-code:: cpp
    :name: variables_AC_1
    :caption: Bad variable declaration
-   :compileargs: ['-std=c++11', '-Wall', '-Wextra']
 
    #include <iostream>
 

@@ -1,3 +1,5 @@
+.. _fruitful-functions-coding-practice:
+
 Coding Practice
 ---------------
 
@@ -28,7 +30,6 @@ Run and test your code!
             .. tb-code:: cpp
                :name: cp_5_AC_1q-support
                :hidden:
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <functional>
                #include <iomanip>
@@ -67,7 +68,6 @@ Run and test your code!
                :name: cp_5_AC_1q
                :caption: Example cp_5_AC_1q
                :run-after: cp_5_AC_1q-support
-               :compileargs: ['-Wall', '-std=c++11']
 
                double calculator (double first, double second, char operation) {
                    // Write your implementation here.
@@ -81,7 +81,6 @@ Run and test your code!
             .. tb-code:: cpp
                :name: cp_5_AC_1a-support
                :hidden:
-               :compileargs: ['-Wall', '-std=c++11']
 
                 #include <functional>
                 #include <iomanip>
@@ -120,7 +119,6 @@ Run and test your code!
                :name: cp_5_AC_1a
                :caption: Example cp_5_AC_1a
                :run-after: cp_5_AC_1a-support
-               :compileargs: ['-Wall', '-std=c++11']
 
                 double calculator (double first, double second, char operation) {
                     if (operation == '+') {
@@ -146,7 +144,6 @@ Run and test your code!
       .. tb-code:: cpp
          :name: cp_5_AC_2q-support
          :hidden:
-         :compileargs: ['-Wall', '-std=c++11']
 
          #include <functional>
          #include <iomanip>
@@ -183,7 +180,6 @@ Run and test your code!
          :name: cp_5_AC_2q
          :caption: Example cp_5_AC_2q
          :run-after: cp_5_AC_2q-support
-         :compileargs: ['-Wall', '-std=c++11']
 
          int to_binary (int decimal) {
              // Write your implementation here.
@@ -209,7 +205,6 @@ Run and test your code!
             .. tb-code:: cpp
                :name: cp_5_AC_3q-support
                :hidden:
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <functional>
                #include <iomanip>
@@ -246,7 +241,6 @@ Run and test your code!
                :name: cp_5_AC_3q
                :caption: Example cp_5_AC_3q
                :run-after: cp_5_AC_3q-support
-               :compileargs: ['-Wall', '-std=c++11']
 
                double interior_angle (int sides) {
                    // Write your implementation here.
@@ -261,7 +255,6 @@ Run and test your code!
             .. tb-code:: cpp
                :name: cp_5_AC_3a-support
                :hidden:
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <functional>
                #include <iomanip>
@@ -296,7 +289,6 @@ Run and test your code!
                :name: cp_5_AC_3a
                :caption: Example cp_5_AC_3a
                :run-after: cp_5_AC_3a-support
-               :compileargs: ['-Wall', '-std=c++11']
 
                double interior_angle (int sides) {
                    return (sides - 2) * 180.0 / sides;
@@ -322,7 +314,6 @@ Run and test your code!
       .. tb-code:: cpp
          :name: cp_5_AC_4q-support
          :hidden:
-         :compileargs: ['-Wall', '-std=c++11']
 
          #include <functional>
          #include <iomanip>
@@ -365,7 +356,6 @@ Run and test your code!
          :name: cp_5_AC_4q
          :caption: Example cp_5_AC_4q
          :run-after: cp_5_AC_4q-support
-         :compileargs: ['-Wall', '-std=c++11']
 
          string birth_season (int month, int day) {
              // Write your implementation here.
@@ -390,7 +380,6 @@ Run and test your code!
             .. tb-code:: cpp
                :name: cp_5_AC_5q-support
                :hidden:
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <functional>
                #include <iomanip>
@@ -431,7 +420,6 @@ Run and test your code!
                :name: cp_5_AC_5q
                :caption: Example cp_5_AC_5q
                :run-after: cp_5_AC_5q-support
-               :compileargs: ['-Wall', '-std=c++11']
 
                int dog_to_human_years (int dog_age) {
                    // Write your implementation here.
@@ -447,7 +435,6 @@ Run and test your code!
             .. tb-code:: cpp
                :name: cp_5_AC_5a-support
                :hidden:
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <functional>
                #include <iomanip>
@@ -488,7 +475,6 @@ Run and test your code!
                :name: cp_5_AC_5a
                :caption: Example cp_5_AC_5a
                :run-after: cp_5_AC_5a-support
-               :compileargs: ['-Wall', '-std=c++11']
 
                int dog_to_human_years (int dog_age) {
                    if (dog_age < 1) {
@@ -511,7 +497,6 @@ Run and test your code!
       .. tb-code:: cpp
          :name: cp_5_AC_6q-support
          :hidden:
-         :compileargs: ['-Wall', '-std=c++11']
 
          #include <functional>
          #include <iomanip>
@@ -548,7 +533,6 @@ Run and test your code!
          :name: cp_5_AC_6q
          :caption: Example cp_5_AC_6q
          :run-after: cp_5_AC_6q-support
-         :compileargs: ['-Wall', '-std=c++11']
 
          bool is_common_factor (int num1, int num2, int factor) {
              // Write your implementation here.
@@ -570,7 +554,6 @@ Run and test your code!
             .. tb-code:: cpp
                :name: cp_5_AC_7q-support
                :hidden:
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <functional>
                #include <iomanip>
@@ -615,7 +598,6 @@ Run and test your code!
                :name: cp_5_AC_7q
                :caption: Example cp_5_AC_7q
                :run-after: cp_5_AC_7q-support
-               :compileargs: ['-Wall', '-std=c++11']
 
                bool is_leap_year (int year) {
                    // Write your implementation here.
@@ -629,7 +611,6 @@ Run and test your code!
             .. tb-code:: cpp
                :name: cp_5_AC_7a-support
                :hidden:
-               :compileargs: ['-Wall', '-std=c++11']
 
 
                #include <functional>
@@ -675,7 +656,6 @@ Run and test your code!
                :name: cp_5_AC_7a
                :caption: Example cp_5_AC_7a
                :run-after: cp_5_AC_7a-support
-               :compileargs: ['-Wall', '-std=c++11']
 
                bool is_leap_year (int year) {
                    if (year % 400 == 0) {
@@ -705,7 +685,6 @@ Run and test your code!
       .. tb-code:: cpp
          :name: cp_5_AC_8q-support
          :hidden:
-         :compileargs: ['-Wall', '-std=c++11']
 
          #include <functional>
          #include <iomanip>
@@ -752,7 +731,6 @@ Run and test your code!
          :name: cp_5_AC_8q
          :caption: Example cp_5_AC_8q
          :run-after: cp_5_AC_8q-support
-         :compileargs: ['-Wall', '-std=c++11']
 
          bool poisonous (char size, int num_spots, bool is_red) {
              // Write your implementation here.
@@ -776,7 +754,6 @@ Run and test your code!
             .. tb-code:: cpp
                :name: cp_5_AC_9q-support
                :hidden:
-               :compileargs: ['-Wall', '-std=c++11']
 
 
                #include <functional>
@@ -814,7 +791,6 @@ Run and test your code!
                :name: cp_5_AC_9q
                :caption: Example cp_5_AC_9q
                :run-after: cp_5_AC_9q-support
-               :compileargs: ['-Wall', '-std=c++11']
 
                int triangular_num (int n) {
                    // Write your implementation here.
@@ -830,7 +806,6 @@ Run and test your code!
             .. tb-code:: cpp
                :name: cp_5_AC_9a-support
                :hidden:
-               :compileargs: ['-Wall', '-std=c++11']
 
 
                #include <functional>
@@ -869,7 +844,6 @@ Run and test your code!
                :name: cp_5_AC_9a
                :caption: Example cp_5_AC_9a
                :run-after: cp_5_AC_9a-support
-               :compileargs: ['-Wall', '-std=c++11']
 
                int triangular_num (int n) {
                    if (n == 1) {
@@ -887,7 +861,6 @@ Run and test your code!
       .. tb-code:: cpp
          :name: cp_5_AC_10q-support
          :hidden:
-         :compileargs: ['-Wall', '-std=c++11']
 
          #include <functional>
          #include <iomanip>
@@ -929,7 +902,6 @@ Run and test your code!
          :name: cp_5_AC_10q
          :caption: Example cp_5_AC_10q
          :run-after: cp_5_AC_10q-support
-         :compileargs: ['-Wall', '-std=c++11']
 
          int digit_sum (int num) {
              // Write your implementation here.

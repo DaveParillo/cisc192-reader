@@ -1,3 +1,5 @@
+.. _more-structures-coding-practice:
+
 Coding Practice
 ---------------
 
@@ -16,7 +18,6 @@ Coding Practice
             .. tb-code:: cpp
                :name: cp_9_AC_1q
                :caption: Example cp_9_AC_1q
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <iostream>
                using namespace std;
@@ -36,7 +37,6 @@ Coding Practice
             .. tb-code:: cpp
                :name: cp_9_AC_1a
                :caption: Example cp_9_AC_1a
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <iostream>
                using namespace std;
@@ -62,7 +62,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: cp_9_AC_2q
          :caption: Example cp_9_AC_2q
-         :compileargs: ['-Wall', '-std=c++11']
 
          #include <iostream>
          using namespace std;
@@ -97,7 +96,6 @@ Coding Practice
             .. tb-code:: cpp
                :name: cp_9_AC_3q-support
                :hidden:
-               :compileargs: ['-Wall', '-std=c++11']
                :stdin: test
 
                void print_cake_info (cake c) {
@@ -125,7 +123,6 @@ Coding Practice
                :name: cp_9_AC_3q
                :caption: Example cp_9_AC_3q
                :run-after: cp_9_AC_3q-support
-               :compileargs: ['-Wall', '-std=c++11']
                :stdin: test
 
                #include <iostream>
@@ -154,7 +151,6 @@ Coding Practice
             .. tb-code:: cpp
                :name: cp_9_AC_3a-support
                :hidden:
-               :compileargs: ['-Wall', '-std=c++11']
                :stdin: test
 
                void print_cake_info (cake c) {
@@ -181,7 +177,6 @@ Coding Practice
                :name: cp_9_AC_3a
                :caption: Example cp_9_AC_3a
                :run-after: cp_9_AC_3a-support
-               :compileargs: ['-Wall', '-std=c++11']
                :stdin: test
 
                #include <iostream>
@@ -235,7 +230,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: cp_9_AC_4q-support
          :hidden:
-         :compileargs: ['-Wall', '-std=c++11']
 
          void print_cake_info (cake c) {
              if (c.name == "n/a") {
@@ -286,7 +280,6 @@ Coding Practice
          :name: cp_9_AC_4q
          :caption: Example cp_9_AC_4q
          :run-after: cp_9_AC_4q-support
-         :compileargs: ['-Wall', '-std=c++11']
 
          #include <iostream>
          using namespace std;
@@ -324,7 +317,6 @@ Coding Practice
             .. tb-code:: cpp
                :name: cp_9_AC_5q-support
                :hidden:
-               :compileargs: ['-Wall', '-std=c++11']
                :stdin: test
 
                 void print_cake_info (cake c) {
@@ -377,7 +369,6 @@ Coding Practice
                :name: cp_9_AC_5q
                :caption: Example cp_9_AC_5q
                :run-after: cp_9_AC_5q-support
-               :compileargs: ['-Wall', '-std=c++11']
                :stdin: test
 
                #include <iostream>
@@ -409,7 +400,6 @@ Coding Practice
             .. tb-code:: cpp
                :name: cp_9_AC_5a-support
                :hidden:
-               :compileargs: ['-Wall', '-std=c++11']
                :stdin: test
 
                 void print_cake_info (cake c) {
@@ -461,7 +451,6 @@ Coding Practice
                :name: cp_9_AC_5a
                :caption: Example cp_9_AC_5a
                :run-after: cp_9_AC_5a-support
-               :compileargs: ['-Wall', '-std=c++11']
                :stdin: test
 
                #include <iostream>
@@ -495,7 +484,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: cp_9_AC_6q
          :caption: Example cp_9_AC_6q
-         :compileargs: ['-Wall', '-std=c++11']
 
          #include <iostream>
          using namespace std;
@@ -518,7 +506,6 @@ Coding Practice
             .. tb-code:: cpp
                :name: cp_9_AC_7q
                :caption: Example cp_9_AC_7q
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <iostream>
                using namespace std;
@@ -538,7 +525,6 @@ Coding Practice
             .. tb-code:: cpp
                :name: cp_9_AC_7a
                :caption: Example cp_9_AC_7a
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <iostream>
                using namespace std;
@@ -559,7 +545,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: cp_9_AC_8q
          :caption: Example cp_9_AC_8q
-         :compileargs: ['-Wall', '-std=c++11']
 
          #include <iostream>
          using namespace std;
@@ -585,7 +570,6 @@ Coding Practice
             .. tb-code:: cpp
                :name: cp_9_AC_9q
                :caption: Example cp_9_AC_9q
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <iostream>
                using namespace std;
@@ -623,7 +607,6 @@ Coding Practice
             .. tb-code:: cpp
                :name: cp_9_AC_9a
                :caption: Example cp_9_AC_9a
-               :compileargs: ['-Wall', '-std=c++11']
 
                #include <iostream>
                using namespace std;
@@ -677,7 +660,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: cp_9_AC_10q
          :caption: Example cp_9_AC_10q
-         :compileargs: ['-Wall', '-std=c++11']
 
          #include <iostream>
          using namespace std;

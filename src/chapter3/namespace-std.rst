@@ -11,6 +11,8 @@
 .. index::
    pair: namespace; using directive
 
+.. _functions-prefer-using-declarations-to-using-namespace-std:
+
 Prefer using declarations to ``using namespace std``
 ----------------------------------------------------
 What's wrong with ``using namespace std;``?

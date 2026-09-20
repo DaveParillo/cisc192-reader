@@ -1,3 +1,5 @@
+.. _iteration-more-generalization:
+
 More generalization
 -------------------
 
@@ -79,7 +81,6 @@ Run the active code to see what happens!
 .. tb-code:: cpp
    :name: more_generalization_AC_1
    :caption: Two-dimensional tables
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <cstddef>
    #include <iostream>
@@ -149,7 +150,6 @@ then the default value is used.
 .. tb-code:: cpp
    :name: more_generalization_AC_2
    :caption: Table with default parameters
-   :compileargs: ['-Wall', '-Wextra', '-Wpedantic', '-std=c++11']
 
    #include <cstddef>
    #include <iostream>
@@ -231,7 +231,6 @@ The compiler can't know either, so it will report an error.
       .. tb-code:: cpp
          :name: more_generalization_AC_3
          :caption: Two-dimensional tables
-         :compileargs: ['-Wall', '-Wextra', '-Wpedantic', '-std=c++11']
 
          #include <cstddef>
          #include <iostream>

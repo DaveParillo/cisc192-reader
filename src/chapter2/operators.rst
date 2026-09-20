@@ -1,3 +1,5 @@
+.. _variables-types-operators:
+
 Operators
 ---------
 
@@ -38,7 +40,6 @@ you expect.  Read on to find out why!
 .. tb-code:: cpp
    :name: operators_AC_1
    :caption: Integer Division
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
    using std::cout;

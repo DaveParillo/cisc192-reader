@@ -1,3 +1,5 @@
+.. _functions-parameters-and-arguments:
+
 Parameters and Arguments
 ------------------------
 
@@ -78,7 +80,7 @@ have the same value (in this case, the character ’b’).
 
 This rule is important, but it is sometimes confusing because C++ 
 sometimes converts arguments from one type to another automatically. 
-Recall the section :doc:`convert`.
+Recall the section :ref:`convert <functions-converting-from-double-to-int>`.
 What is true in expressions is also true for function arguments.
 For now focus on the general rule, and we will deal with 
 exceptions later.
@@ -94,7 +96,6 @@ exceptions later.
       .. tb-code:: cpp
          :name: params_args_AC_1
          :caption: Parameter Practice
-         :compileargs: ['-Wall', '-std=c++11']
 
          #include <iostream>
 

@@ -1,3 +1,5 @@
+.. _strings-things-our-own-version-of-find:
+
 Our own version of ``find``
 ---------------------------
 
@@ -31,7 +33,6 @@ Then we use the built-in ``find`` function to demonstrate how the starting index
 .. tb-code:: cpp
    :name: own_version_find_AC_1
    :caption: Our own find function
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <cstddef>
    #include <iostream>

@@ -1,3 +1,5 @@
+.. _functions-functions-with-results:
+
 Functions with Results
 ----------------------
 

@@ -1,3 +1,5 @@
+.. _objects-vectors-switch-statement:
+
 ``switch`` statement
 --------------------
 
@@ -59,7 +61,6 @@ the ``break`` statements in each case. What happens if you run the code with ``t
 .. tb-code:: cpp
    :name: c192_switch_ac_1
    :caption: Example c192_switch_ac_1
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <iostream>
    #include <string>

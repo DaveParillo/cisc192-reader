@@ -1,3 +1,5 @@
+.. _vectors-objects-bisection-search:
+
 Bisection search
 ----------------
 
@@ -153,7 +155,6 @@ This time, it uses bisection search to locate the card.
 .. tb-code:: cpp
    :name: c192_12_9-support
    :hidden:
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
 
    playing_card::playing_card () {
@@ -246,7 +247,6 @@ This time, it uses bisection search to locate the card.
    :name: c192_12_9
    :caption: Example c192_12_9
    :run-after: c192_12_9-support
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <iterator>
    #include <cstddef>

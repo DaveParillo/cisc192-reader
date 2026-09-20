@@ -1,3 +1,5 @@
+.. _variables-types-order-of-operations:
+
 Order of Operations
 -------------------
 
@@ -31,7 +33,6 @@ Observe the output of the code below to see how the placement of parentheses can
 .. tb-code:: cpp
    :name: order_of_operations_AC_1
    :caption: The Role of Parentheses
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 

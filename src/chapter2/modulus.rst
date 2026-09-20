@@ -1,3 +1,5 @@
+.. _variables-types-the-modulus-operator:
+
 The Modulus Operator
 --------------------
 
@@ -16,7 +18,6 @@ and the modulus operator.
 .. tb-code:: cpp
    :name: mod_operator_AC_1
    :caption: Modulus Operations
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 

@@ -1,3 +1,5 @@
+.. _objects-vectors-enumerated-types:
+
 Enumerated types
 ----------------
 
@@ -70,7 +72,6 @@ change the output from the ``print`` function. Notice how this is much clearer t
 .. tb-code:: cpp
    :name: c192_enum_type_ac_1-support
    :hidden:
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    playing_card::playing_card (card_suit s, card_rank r) {
        suit = s;  rank = r;
@@ -106,7 +107,6 @@ change the output from the ``print`` function. Notice how this is much clearer t
    :name: c192_enum_type_ac_1
    :caption: Example c192_enum_type_ac_1
    :run-after: c192_enum_type_ac_1-support
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <iostream>
    #include <string>
@@ -235,6 +235,8 @@ An unscoped enum can convert to an integer in an expression such as
       :match: 12|twelve
       :feedback: Correct!
       :incorrect: Incorrect! Try again.
+
+.. _objects-vectors-scoped-enumerations:
 
 Scoped enumerations
 ~~~~~~~~~~~~~~~~~~~

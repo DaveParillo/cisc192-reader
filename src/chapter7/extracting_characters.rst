@@ -1,3 +1,5 @@
+.. _strings-things-extracting-characters-from-a-string:
+
 Extracting characters from a string
 -----------------------------------
 .. index::
@@ -38,7 +40,6 @@ at index 1 from string ``fruit`` using ``[`` and ``]``.
 .. tb-code:: cpp
    :name: extracting_characters_AC_1
    :caption: Accessing a string character
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
    #include <string>
@@ -77,7 +78,6 @@ The active code below accesses the first character in string ``fruit``.
 .. tb-code:: cpp
    :name: extracting_characters_AC_2
    :caption: Accessing a string character
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
    #include <string>

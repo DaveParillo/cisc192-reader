@@ -1,3 +1,5 @@
+.. _vectors-multiple-choice-exercises:
+
 Multiple Choice Exercises
 -------------------------
 

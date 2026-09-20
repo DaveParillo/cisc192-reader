@@ -1,3 +1,5 @@
+.. _idx-variables-and-types:
+
 Variables and types
 ===================
 

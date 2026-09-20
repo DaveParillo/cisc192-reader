@@ -1,3 +1,5 @@
+.. _objects-vectors-another-constructor:
+
 Another constructor
 -------------------
 
@@ -31,7 +33,6 @@ The active code below prints out the cards in a deck using the loop from the pre
 .. tb-code:: cpp
    :name: c192_deck_constructor_ac_1-support
    :hidden:
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    playing_card::playing_card () {
        suit = spades;  rank = ace;
@@ -85,7 +86,6 @@ The active code below prints out the cards in a deck using the loop from the pre
    :name: c192_deck_constructor_ac_1
    :caption: Example c192_deck_constructor_ac_1
    :run-after: c192_deck_constructor_ac_1-support
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <cstddef>
    #include <iostream>

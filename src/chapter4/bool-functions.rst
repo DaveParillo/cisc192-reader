@@ -1,3 +1,4 @@
+.. _fruitful-functions-bool-functions:
 .. _bool-functions:
 
 Bool Functions
@@ -44,7 +45,6 @@ In main you can call this function in the usual ways:
 .. tb-code:: cpp
    :name: bool_fun_AC_1
    :caption: Bool Functions
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <cmath>
    #include <iostream>

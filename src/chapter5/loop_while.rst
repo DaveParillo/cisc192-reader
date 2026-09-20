@@ -1,3 +1,5 @@
+.. _iteration-the-while-statement:
+
 The ``while`` statement
 -----------------------
 
@@ -15,7 +17,6 @@ integer to see how the function works!
 .. tb-code:: cpp
    :name: the_while_statement_AC_1
    :caption: Multiple assignment
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
    using std::cout;

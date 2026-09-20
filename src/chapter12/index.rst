@@ -1,3 +1,5 @@
+.. _idx-vectors-of-objects:
+
 Vectors of Objects
 ::::::::::::::::::
 

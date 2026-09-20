@@ -1,3 +1,5 @@
+.. _variables-types-compound-expressions:
+
 Compound Expressions
 --------------------
 
@@ -20,7 +22,6 @@ This program performs multiplication and prints the result simultaneously.
 .. tb-code:: cpp
    :name: composition_AC_1
    :caption: Multiplication Output
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 
@@ -41,7 +42,6 @@ prints the result at the same time.
 .. tb-code:: cpp
    :name: composition_AC_2
    :caption: Variable Output
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 
@@ -62,7 +62,6 @@ assigns the result as the variable initial value.
 .. tb-code:: cpp
    :name: composition_AC_3
    :caption: Performing Calculations Before Assignment
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 
@@ -160,7 +159,6 @@ values. So the following is illegal: ``minute + 1 = hour;``.
       .. tb-code:: cpp
          :name: compos_4-support
          :hidden:
-         :compileargs: ['-Wall', '-std=c++11']
 
 
          #include <functional>
@@ -196,7 +194,6 @@ values. So the following is illegal: ``minute + 1 = hour;``.
          :name: compos_4
          :caption: Example compos_4
          :run-after: compos_4-support
-         :compileargs: ['-Wall', '-std=c++11']
 
          int velocity(int initial_velocity, int acceleration, int time) {
              // Modify the return statement to pass the tests
@@ -210,7 +207,6 @@ values. So the following is illegal: ``minute + 1 = hour;``.
       .. tb-code:: cpp
          :name: compos_5-support
          :hidden:
-         :compileargs: ['-Wall', '-std=c++11']
 
 
          #include <cmath>
@@ -252,7 +248,6 @@ values. So the following is illegal: ``minute + 1 = hour;``.
          :name: compos_5
          :caption: Example compos_5
          :run-after: compos_5-support
-         :compileargs: ['-Wall', '-std=c++11']
 
          double volume(int r, int h) {
              // Modify the return statement to pass the tests

@@ -1,3 +1,5 @@
+.. _files-containers-fixed-size-sequences-with-std-array:
+
 Fixed-size sequences with std::array
 ====================================
 
@@ -8,7 +10,6 @@ types. Use it when the number of elements is known at compile time.
 .. tb-code:: cpp
    :name: c192_arrays_readings
    :caption: Example c192_arrays_readings
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <array>
    #include <iostream>
@@ -46,7 +47,6 @@ pairs of brackets, not ``table[row, column]``.
 .. tb-code:: cpp
    :name: c192_arrays_table
    :caption: Example c192_arrays_table
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <array>
    #include <iostream>

@@ -1,3 +1,5 @@
+.. _iteration-multiple-choice-exercises:
+
 Multiple Choice Exercises
 -------------------------
 

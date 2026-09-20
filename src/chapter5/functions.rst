@@ -1,3 +1,5 @@
+.. _iteration-functions:
+
 Functions
 ---------
 In the last section I mentioned “all the things functions are good for.”
@@ -21,7 +23,6 @@ For example, instead of writing the 53 lines of code below...
 .. tb-code:: cpp
    :name: functions_AC_1
    :caption: Two-dimensional tables
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
    using std::cout;
@@ -84,7 +85,6 @@ the function many times without rewriting it each time.
 .. tb-code:: cpp
    :name: functions_AC_2
    :caption: Two-dimensional tables
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 

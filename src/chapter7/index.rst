@@ -1,3 +1,5 @@
+.. _idx-strings-and-things:
+
 Strings and things
 ==================
 

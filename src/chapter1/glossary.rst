@@ -1,3 +1,5 @@
+.. _program-glossary:
+
 Glossary
 --------
 

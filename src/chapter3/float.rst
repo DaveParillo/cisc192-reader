@@ -4,6 +4,8 @@
    single: floating point numbers
 
 
+.. _functions-floating-point:
+
 Floating-point
 --------------
 
@@ -197,7 +199,6 @@ performing floating-point operations.
       .. tb-code:: cpp
          :name: floating_point_a1
          :caption: Example floating_point_a1
-         :compileargs: ['-Wall', '-std=c++11']
 
          #include <iostream>
 

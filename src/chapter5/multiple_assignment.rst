@@ -1,3 +1,5 @@
+.. _iteration-multiple-assignment:
+
 Multiple assignment
 -------------------
 I haven’t said much about it, but it is legal in C++ to assign to
@@ -9,7 +11,6 @@ The code below reassigns ``fred`` from 5 to 7 and prints both values out.
 .. tb-code:: cpp
    :name: multiple_assignment_AC_1
    :caption: Multiple assignment
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 
@@ -30,7 +31,6 @@ value.
 .. tb-code:: cpp
    :name: multiple_assignment_AC_2
    :caption: Multiple assignment
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
 

@@ -1,3 +1,5 @@
+.. _strings-things-the-find-function:
+
 The ``find`` function
 ---------------------
 
@@ -14,7 +16,6 @@ the character ``'a'`` in string ``fruit`` and string ``dessert``.
 .. tb-code:: cpp
    :name: find_function_AC_1
    :caption: The find function
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <cstddef>
    #include <iostream>
@@ -55,7 +56,6 @@ The active code below finds the starting index of ``"nan"`` in ``fruit``.
 .. tb-code:: cpp
    :name: find_function_AC_2
    :caption: The find function
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <cstddef>
    #include <iostream>

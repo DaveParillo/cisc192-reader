@@ -1,3 +1,5 @@
+.. _functions-multiple-choice-exercises:
+
 Multiple Choice Exercises
 -------------------------
 

@@ -10,6 +10,8 @@
 
 .. index:: namespace
 
+.. _functions-namespaces:
+
 Namespaces
 ----------
 All functions in C++ are *by default* global.

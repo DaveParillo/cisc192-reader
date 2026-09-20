@@ -1,3 +1,5 @@
+.. _more-structures-which-is-best:
+
 Which is best?
 --------------
 .. index::

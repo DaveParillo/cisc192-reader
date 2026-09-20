@@ -1,3 +1,5 @@
+.. _strings-things-string-concatenation:
+
 String concatenation
 --------------------
 .. index::
@@ -13,7 +15,6 @@ In the active code below, we use the ``+`` operator to concatenate ``fruit`` wit
 .. tb-code:: cpp
    :name: string_concatenation_AC_1
    :caption: String concatenation
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
    using namespace std;
@@ -54,7 +55,6 @@ The active code below outputs the ducklings names in alphabetical order.
 .. tb-code:: cpp
    :name: string_concatenation_AC_2
    :caption: String concatenation
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
    #include <string>

@@ -1,3 +1,5 @@
+.. _strings-things-character-classification:
+
 Character classification
 ------------------------
 
@@ -64,7 +66,6 @@ If you get stuck, you can reveal the extra problems at the end for help.
 .. tb-code:: cpp
    :name: character_classification_AC_1
    :caption: Example character_classification_AC_1
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <cctype>
    #include <iostream>

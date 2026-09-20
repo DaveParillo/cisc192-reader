@@ -1,3 +1,5 @@
+.. _files-containers-coding-practice-2:
+
 Coding Practice
 ---------------
 
@@ -16,7 +18,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_15_ac_2q
          :caption: Example c192_cp_15_ac_2q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
          :stdin: speech.txt
          :files: speech.txt
 
@@ -112,7 +113,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_15_ac_4q
          :caption: Example c192_cp_15_ac_4q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
          :files: powers.txt
 
          #include <string>
@@ -223,7 +223,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_15_ac_6q
          :caption: Example c192_cp_15_ac_6q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
          :files: dream.txt
 
          #include <iostream>
@@ -330,7 +329,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_15_ac_8q
          :caption: Example c192_cp_15_ac_8q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
          :files: shrimp.txt
 
          #include <iostream>
@@ -431,7 +429,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_15_ac_10q
          :caption: Example c192_cp_15_ac_10q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <array>
          #include <cstddef>

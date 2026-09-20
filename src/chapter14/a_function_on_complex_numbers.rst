@@ -1,3 +1,5 @@
+.. _classes-invariants-a-function-on-complexnumber-numbers:
+
 A function on ``complex_number`` numbers
 ----------------------------------------
 
@@ -47,7 +49,6 @@ free to modify the code and experiment around!
 .. tb-code:: cpp
    :name: c192_fourteenseven-support
    :hidden:
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    complex_number::complex_number () { cartesian = true;  polar = false; }
 
@@ -112,7 +113,6 @@ free to modify the code and experiment around!
    :name: c192_fourteenseven
    :caption: Example c192_fourteenseven
    :run-after: c192_fourteenseven-support
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <iostream>
    #include <cmath>

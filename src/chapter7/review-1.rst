@@ -1,3 +1,5 @@
+.. _strings-things-multiple-choice-exercises:
+
 Multiple Choice Exercises
 -------------------------
 

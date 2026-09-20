@@ -1,4 +1,6 @@
-﻿Copying vectors
+.. _vectors-copying-vectors:
+
+Copying vectors
 ---------------
 
 There is one more constructor for ``vector``\ s, which is called a copy
@@ -24,7 +26,6 @@ Take a look at the active code below, which uses the copy constructor.
 .. tb-code:: cpp
    :name: copying_vectors_AC_1-support
    :hidden:
-   :compileargs: ['-Wall', '-std=c++11']
 
 
    void print_vec(std::vector<int> vec) {
@@ -42,7 +43,6 @@ Take a look at the active code below, which uses the copy constructor.
    :name: copying_vectors_AC_1
    :caption: Example copying_vectors_AC_1
    :run-after: copying_vectors_AC_1-support
-   :compileargs: ['-Wall', '-std=c++11']
 
    #include <iostream>
    #include <vector>

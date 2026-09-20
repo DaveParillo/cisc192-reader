@@ -1,3 +1,5 @@
+.. _strings-things-other-string-functions:
+
 Other ``string`` functions
 --------------------------
 

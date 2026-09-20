@@ -1,3 +1,5 @@
+.. _functions-mixed-up-code-exercises:
+
 Mixed-Up Code Exercises
 -----------------------
 

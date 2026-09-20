@@ -1,4 +1,6 @@
-﻿.. _random:
+.. _random:
+
+.. _random-numbers-random-numbers:
 
 Random numbers
 --------------
@@ -35,7 +37,6 @@ Take a look at the active code below, which generates 4 random numbers.
 .. tb-code:: cpp
    :name: random_numbers_AC_1
    :caption: Example random_numbers_AC_1
-   :compileargs: ['-Wall', '-Wextra', '-pedantic', '-std=c++11']
 
    #include <iostream>
    #include <random>

@@ -1,3 +1,5 @@
+.. _vectors-objects-vectors-of-cards:
+
 Vectors of cards
 ----------------
 
@@ -70,7 +72,6 @@ the ``build_deck`` function.
 .. tb-code:: cpp
    :name: c192_12_6-support
    :hidden:
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
 
    playing_card::playing_card () {
@@ -111,7 +112,6 @@ the ``build_deck`` function.
    :name: c192_12_6
    :caption: Example c192_12_6
    :run-after: c192_12_6-support
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <cstddef>
    #include <iostream>

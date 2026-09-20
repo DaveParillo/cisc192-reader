@@ -1,3 +1,5 @@
+.. _classes-invariants-coding-practice:
+
 Coding Practice
 ---------------
 
@@ -14,7 +16,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_14_ac_1q
          :caption: Example c192_cp_14_ac_1q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <iostream>
 
@@ -41,7 +42,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_14_ac_1a
          :caption: Example c192_cp_14_ac_1a
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <iostream>
 
@@ -65,9 +65,9 @@ Coding Practice
 
    The legacy Runestone question pool ``c192_cp_14_ac_2_sq`` is represented by these exercises:
 
-   * :doc:`c192_cp_14_ac_2q <coding_practice_sq>`
+   * :ref:`c192_cp_14_ac_2q <classes-invariants-coding-practice-2>`
 
-   * :doc:`c192_cp_14_ac_2q_pp <coding_practice_sq>`
+   * :ref:`c192_cp_14_ac_2q_pp <classes-invariants-coding-practice-2>`
 
 .. tb-group::
    :name: c192_cp_14_3
@@ -86,7 +86,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_14_ac_3q
          :caption: Example c192_cp_14_ac_3q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <iostream>
 
@@ -125,7 +124,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_14_ac_3a
          :caption: Example c192_cp_14_ac_3a
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <iostream>
 
@@ -169,9 +167,9 @@ Coding Practice
 
    The legacy Runestone question pool ``c192_cp_14_ac_4_sq`` is represented by these exercises:
 
-   * :doc:`c192_cp_14_ac_4q <coding_practice_sq>`
+   * :ref:`c192_cp_14_ac_4q <classes-invariants-coding-practice-2>`
 
-   * :doc:`c192_cp_14_ac_4q_pp <coding_practice_sq>`
+   * :ref:`c192_cp_14_ac_4q_pp <classes-invariants-coding-practice-2>`
 
 .. tb-group::
    :name: c192_cp_14_5
@@ -190,7 +188,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_14_ac_5q
          :caption: Example c192_cp_14_ac_5q
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <iostream>
          #include <vector>
@@ -206,7 +203,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_14_ac_5a
          :caption: Example c192_cp_14_ac_5a
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <iostream>
          #include <vector>
@@ -223,9 +219,9 @@ Coding Practice
 
    The legacy Runestone question pool ``c192_cp_14_ac_6_sq`` is represented by these exercises:
 
-   * :doc:`c192_cp_14_ac_6q <coding_practice_sq>`
+   * :ref:`c192_cp_14_ac_6q <classes-invariants-coding-practice-2>`
 
-   * :doc:`c192_cp_14_ac_6q_pp <coding_practice_sq>`
+   * :ref:`c192_cp_14_ac_6q_pp <classes-invariants-coding-practice-2>`
 
 .. tb-group::
    :name: c192_cp_14_7
@@ -248,7 +244,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_14_ac_7q-support
          :hidden:
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          my_vector::my_vector (std::vector<int> vec) {
              elements = vec;
@@ -259,7 +254,6 @@ Coding Practice
          :name: c192_cp_14_ac_7q
          :caption: Example c192_cp_14_ac_7q
          :run-after: c192_cp_14_ac_7q-support
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <iostream>
          #include <vector>
@@ -302,7 +296,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_14_ac_7a-support
          :hidden:
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          my_vector::my_vector (std::vector<int> vec) {
              elements = vec;
@@ -313,7 +306,6 @@ Coding Practice
          :name: c192_cp_14_ac_7a
          :caption: Example c192_cp_14_ac_7a
          :run-after: c192_cp_14_ac_7a-support
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <stdexcept>
          #include <cstddef>
@@ -351,9 +343,9 @@ Coding Practice
 
    The legacy Runestone question pool ``c192_cp_14_ac_8_sq`` is represented by these exercises:
 
-   * :doc:`c192_cp_14_ac_8q <coding_practice_sq>`
+   * :ref:`c192_cp_14_ac_8q <classes-invariants-coding-practice-2>`
 
-   * :doc:`c192_cp_14_ac_8q_pp <coding_practice_sq>`
+   * :ref:`c192_cp_14_ac_8q_pp <classes-invariants-coding-practice-2>`
 
 .. tb-group::
    :name: c192_cp_14_9
@@ -368,7 +360,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_14_ac_9q-support
          :hidden:
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          my_vector::my_vector (std::vector<int> vec) {
              elements = vec;
@@ -397,7 +388,6 @@ Coding Practice
          :name: c192_cp_14_ac_9q
          :caption: Example c192_cp_14_ac_9q
          :run-after: c192_cp_14_ac_9q-support
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <stdexcept>
          #include <cstddef>
@@ -445,7 +435,6 @@ Coding Practice
       .. tb-code:: cpp
          :name: c192_cp_14_ac_9a-support
          :hidden:
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          my_vector::my_vector (std::vector<int> vec) {
              elements = vec;
@@ -474,7 +463,6 @@ Coding Practice
          :name: c192_cp_14_ac_9a
          :caption: Example c192_cp_14_ac_9a
          :run-after: c192_cp_14_ac_9a-support
-         :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
          #include <stdexcept>
          #include <cstddef>
@@ -531,7 +519,7 @@ Coding Practice
 
    The legacy Runestone question pool ``c192_cp_14_ac_10_sq`` is represented by these exercises:
 
-   * :doc:`c192_cp_14_ac_10q <coding_practice_sq>`
+   * :ref:`c192_cp_14_ac_10q <classes-invariants-coding-practice-2>`
 
-   * :doc:`c192_cp_14_ac_10q_pp <coding_practice_sq>`
+   * :ref:`c192_cp_14_ac_10q_pp <classes-invariants-coding-practice-2>`
 

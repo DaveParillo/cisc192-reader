@@ -1,4 +1,6 @@
-﻿Vector size
+.. _vectors-vector-size:
+
+Vector size
 -----------
 
 There are a few functions you can invoke on an ``vector``. One of them

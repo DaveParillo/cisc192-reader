@@ -1,4 +1,6 @@
-﻿A single-pass solution
+.. _random-numbers-a-single-pass-solution:
+
+A single-pass solution
 ----------------------
 
 Although this code works, it is not as efficient as it could be. Every

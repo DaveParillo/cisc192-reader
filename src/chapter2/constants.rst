@@ -10,6 +10,8 @@
    single: constants
    pair: keyword; const
 
+.. _variables-types-constants:
+
 Constants
 =========
 As useful as variables are, sometimes we need to ensure

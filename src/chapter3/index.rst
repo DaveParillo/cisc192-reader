@@ -1,3 +1,6 @@
+.. _idx-function-definitions:
+.. _idx-functions-2:
+
 Functions
 =========
 

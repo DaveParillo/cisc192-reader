@@ -1,3 +1,5 @@
+.. _random-numbers-multiple-choice-exercises:
+
 Multiple Choice Exercises
 -------------------------
 

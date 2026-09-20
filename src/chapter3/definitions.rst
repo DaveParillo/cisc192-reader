@@ -1,3 +1,5 @@
+.. _functions-definitions-and-uses:
+
 Definitions and Uses
 --------------------
 
@@ -7,7 +9,7 @@ whole program looks like this:
 .. tb-code:: cpp
    :name: function_definitions_AC_1
    :caption: Using function definitions
-   :compileargs: ['-Wall', '-Wextra', '-Werror', '-std=c++11']
+   :compileargs: ['-Werror']
 
    #include <iostream>
 
@@ -43,7 +45,7 @@ These are called **forward declarations**.
 .. tb-code:: cpp
    :name: function_definitions_AC_2
    :caption: Using function definitions
-   :compileargs: ['-Wall', '-Wextra', '-Werror', '-std=c++11']
+   :compileargs: ['-Werror']
 
    #include <iostream>
 

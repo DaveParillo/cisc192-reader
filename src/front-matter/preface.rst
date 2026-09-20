@@ -1,3 +1,5 @@
+.. _front-preface:
+
 Preface
 =======
 
@@ -110,6 +112,8 @@ An important goal is to  provide multiple options for covering the material in e
 Hopefully, you will find
 your understanding is enhanced because you are able to experience
 content in more than just one way.
+
+.. _front-how-to-contribute:
 
 How to Contribute
 -----------------

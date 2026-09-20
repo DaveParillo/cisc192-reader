@@ -1,3 +1,4 @@
+.. _vectors-objects-searching:
 .. _c192_find:
 
 Searching
@@ -61,7 +62,6 @@ It returns the index that the card was located at.
 .. tb-code:: cpp
    :name: c192_12_8-support
    :hidden:
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
 
    playing_card::playing_card () {
@@ -128,7 +128,6 @@ It returns the index that the card was located at.
    :name: c192_12_8
    :caption: Example c192_12_8
    :run-after: c192_12_8-support
-   :compileargs: ['-Wall', '-Wextra', '-std=c++20']
 
    #include <cstddef>
    #include <iostream>
