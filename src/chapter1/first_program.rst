@@ -16,9 +16,9 @@ language.  Observe the program structure below.
    :caption: Hello World
 
    #include <iostream>
-   // main: generate some simple output
+   // generate some simple output
    int main () {
-       std::cout << "Hello, World!" << '\n';
+       std::cout << "Hello, World!\n";
    }
 
 
@@ -65,10 +65,11 @@ the standard library.
 The symbol ``<<`` is an operator that you apply to
 ``cout`` and a string, and that causes the string to be displayed.
 
-``endl`` is an object that represents the end of a line. When you
-send an ``'\n'`` to ``cout``, it causes the cursor to move to the next line of
-the display. The next time you output something, the new text appears on
-the next line.
+When you send the ``'\n'`` character to ``cout``, it causes the cursor to move
+to the next line of the display.
+The next time you output something, the new text appears on the next line.
+The ``std::endl`` object may also be used to add the end of line character.
+It also flushes the output buffer so output is displayed right away.
 
 Like all statements, the output statement ends with a semi-colon (``;``).
 
