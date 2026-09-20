@@ -9,7 +9,8 @@ The C++ version created by Barbara Ericson at the Unviersity of Michigan and
 is based on [How to Think Like a Computer Scientist: C++](https://open.umn.edu/opentextbooks/textbooks/how-to-think-like-a-computer-scientist-c-version).
 
 
-A textbook based on [sphinx-touchbook](https://github.com/DaveParillo/sphinx-touchbook).
+This version is based on
+[sphinx-touchbook](https://github.com/DaveParillo/sphinx-touchbook).
 
 This book tries to provide you with an interactive experience as you learn C++.
 You can read the text, watch videos, answer questions, write and run code.
