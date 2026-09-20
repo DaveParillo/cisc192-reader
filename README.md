@@ -1,4 +1,6 @@
-# CISC-192 C++ Course Reader
+# CISC 192 C++ Course Reader
+[![Docs](https://img.shields.io/github/actions/workflow/status/daveparillo/cisc192-reader/publish-docs.yml?branch=main&label=docs)](https://github.com/daveparillo/cisc192-reader/actions/workflows/publish-docs.yml)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/license-CC%20BY--NC%204.0-blue.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 
 This book is a modified version of 
 *How to Think Like a Computer Scientist - C++ Edition*
@@ -6,15 +8,11 @@ This book is a modified version of
 The C++ version created by Barbara Ericson at the Unviersity of Michigan and
 is based on [How to Think Like a Computer Scientist: C++](https://open.umn.edu/opentextbooks/textbooks/how-to-think-like-a-computer-scientist-c-version).
 
-This textbook is based on [runestone interactive](http://runestoneinteractive.org/build/html/index.html).
 
-This book is meant to provide you with an interactive experience as you learn C++.
-You can read the text, watch videos, answer questions, and write and execute code.
-In addition to simply executing code,
-there is a unique feature called 'codelens' that allows you to control the
-flow of execution in order to gain a better understanding of how the program
-works.
+A textbook based on [sphinx-touchbook](https://github.com/DaveParillo/sphinx-touchbook).
 
+This book tries to provide you with an interactive experience as you learn C++.
+You can read the text, watch videos, answer questions, write and run code.
 
 # Using this book
 If you simply want to check it out, read it or whatever,
@@ -25,50 +23,38 @@ You can see and read this book [online](https://daveparillo.github.io/cisc192-re
 We have tried to make it easy for you to build and use this book.  
 You can build it and host it yourself in just a few simple steps.
 
-Use whichever of these methods works best for you.
-
-## Install Docker and use a docker container
-If you don't already have a python development environment setup,
-I personally think this is easiest.
-Plus I use docker for other things every day.
-
-1. Install [Docker](https://www.docker.com/)
-2. Get the Runestone docker image.
-
-   The [repo](https://github.com/DaveParillo/runestone-docker)
-   has instructions and everything you need to build the image,
-   or you can just pull the latest from docker hub:
-
-
-   ```
-   docker pull dparillo/runestone
-   ```
-
-For details running and using the container, refer to the
-[README](https://github.com/DaveParillo/runestone-docker/blob/master/README.md)
-
 ## Install and make a Python virtualenv
  
 * Documentation here:  https://virtualenv.pypa.io/en/stable/
 * Video here:  https://www.youtube.com/watch?v=IX-v6yvGYFg
 * For the impatient:
 
+**Step 1: Create and load a virtual python environment**
+
 ```
-    $ sudo pip install virtualenv
-    $ virtualenv /path/to/some/directory
-    $ source /path/to/some/directory/bin/activate
+$ python -m venv .venv
+$ source .venv
 ```
      
-* You will need to do the last command **every time** you want to work on the book in your virtual environment.
-If you have not used Python virtual environments before I strongly recommend reading the docs or watching the video
+**NOTE:**
+
+You will need to do the last command **every time** you want to work on the
+book in your virtual environment.
+
+If you have not used Python virtual environments before I strongly recommend
+reading the docs or watching the video
  
 With the virtual environment installed and configured you can continue.
 
+**Step 2: Install doc build dependencies and build HTML**
 ```
-    $ pip install runestone
-
-    $ runestone build -- will build the html and put it in ``./docs/``
-    $ runestone serve   -- will start a webserver and serve the pages locally from ``./docs/``
-
+$ python -m pip install ".[docs]"
+$ python -m sphinx -b html src build/html
 ```
 
+Open your favorite web browser and open `build/html/index.html`.
+
+Sphinx-touchbook supports all the HTML builders, plain text, and LaTeX
+builders.
+You can build PDF versions of the documentation if you have a LaTeX
+engine installed.
