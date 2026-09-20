@@ -80,7 +80,6 @@ source_suffix = {
 }
 highlight_language = 'cpp'
 exclude_patterns = []
-suppress_warnings = ['misc.highlighting_failure']
 
 # Appearance
 pygments_style = 'default'
