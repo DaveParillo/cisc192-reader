@@ -62,6 +62,7 @@ jobs:
         run: python -m sphinx -b html src build/html --fail-on-warning
 
       - name: Build PDF docs
+        if: ${{ false }}
         env:
           MERMAID_BROWSER: ${{ steps.setup-chrome.outputs.chrome-path }}
         run: |
