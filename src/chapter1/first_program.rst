@@ -77,6 +77,14 @@ Like all statements, the output statement ends with a semi-colon (``;``).
    Failure to terminate a statement with a semicolon will result
    in a syntax (compile) error.
 
+The statement ``return 0;`` at the end fulfills the promise made by
+``int main`` to return a value.
+You will learn more about it in :ref:`idx-functions`.
+For now, you just need to know that it is optional.
+If you do not have that line at the end of ``main``, it is automatically added.
+You will see many code samples that take advantage of this in the coming
+chapters and omit that ``return 0;``.
+
 There are a few other things you should notice about the syntax of this
 program. First, C++ uses curly-braces (``{`` and ``}``) to group things
 together. In this case, the output statement is enclosed in
