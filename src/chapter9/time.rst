@@ -31,9 +31,12 @@ We can create a ``time`` object in the usual way.
        std::cout << time.hour << ':' << time.minute << ':' << time.second;
    }
 
-The state diagram for this object looks like this:
+The state diagram in :numref:`fig_time_state` shows this object:
 
 .. digraph:: state
+   :name: fig_time_state
+   :caption: Time object state diagram
+   :alt: time object state diagram showing hour, minute, and second fields
    :align: center
 
    graph [compound = true,

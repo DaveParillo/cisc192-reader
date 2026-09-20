@@ -12,14 +12,17 @@ that creates a new deck of 52 cards:
 Here is the state diagram for this object:
 
 .. figure:: Images/12.6deck_state_diagram.png
+   :name: fig_deck_state
    :scale: 60%
    :align: center
-   :alt: image
+   :alt: deck object state diagram showing a card vector and its card fields
+
+   Deck object state diagram
 
 The three dots represent the 48 cards I didn’t feel like drawing. Keep
-In mind that we haven’t initialized the instance variables of the cards
-yet. In some environments, they will get initialized to zero, as shown
-In the figure, but in others they could contain any possible value.
+in mind that we haven’t initialized the instance variables of the cards;
+in some environments, they will get initialized to zero, as shown in
+:numref:`fig_deck_state`, but in others they could contain any possible value.
 
 One way to initialize them would be to pass a ``playing_card`` as a second
 argument to the constructor:

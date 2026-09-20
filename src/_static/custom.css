@@ -52,6 +52,18 @@
   line-height: 1.35;
 }
 
+/* Nefertiti wraps Graphviz output in a div containing an inline object.
+   Center both the diagram and its caption as one figure. */
+figure.align-center > .graphviz {
+  display: flex;
+  justify-content: center;
+}
+
+figure.align-center > .graphviz object.graphviz {
+  display: block;
+  max-width: 100%;
+}
+
 @media (max-width: 48rem) {
   .float-image {
     float: none;

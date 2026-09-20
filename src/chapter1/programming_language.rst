@@ -41,8 +41,10 @@ program and does what it says. In effect, it translates the program
 line-by-line, alternately reading lines and carrying out commands.
 
 .. digraph:: interpreters
+   :name: fig_interpreter_process
+   :caption: Simplified interpreter process
+   :alt: diagram showing source code interpreted into an executable program
    :align: center
-   :alt: Simplified interpreter process
 
    fontname = "Bitstream Vera Sans"
    node [
@@ -53,8 +55,6 @@ line-by-line, alternately reading lines and carrying out commands.
    ]
    edge [constraint=false]
 
-   label="Simplified interpreter process";
-   labelloc=bottom;
    src [label="source \ncode", shape="box"];
    exe [label="executable\nprogram", shape="box"];
    src -> interpreter -> exe;
@@ -103,8 +103,10 @@ contain the object code, or program.exe to contain the executable.
 
 
 .. digraph:: compilers
+   :name: fig_compiler_process
+   :caption: Simplified compilation process
+   :alt: diagram showing source code compiled into object code and an executable program
    :align: center
-   :alt: Simplified compilation process
 
    fontname = "Bitstream Vera Sans"
    node [
@@ -115,8 +117,6 @@ contain the object code, or program.exe to contain the executable.
    ]
    edge [constraint=false]
 
-   label="Simplified compilation process";
-   labelloc=bottom;
    rankdir=LR;
    src [label="source\ncode", shape="box"];
    obj [label="object\ncode", shape="box"];

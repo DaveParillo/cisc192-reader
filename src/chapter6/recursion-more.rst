@@ -124,18 +124,18 @@ factorial of :math:`n-1`...
 The return value (2) gets multiplied by n, which is 3, and the result,
 6, is returned to main, or whoever called factorial (3).
 
-Here is what the stack diagram looks like for this sequence of function
+The stack diagram in :numref:`fig_factorial_stack` shows this sequence of function
 calls:
 
 The return values are shown being passed back as the stack unwinds.
 
 .. digraph:: factorial
+   :name: fig_factorial_stack
+   :caption: Stack diagram for factorial
+   :alt: stack diagram showing recursive factorial calls and results
    :align: center
-   :alt: Stack diagram for factorial
 
    fontname = "Bitstream Vera Sans"
-   label="Stack diagram for factorial"
-   labelloc=bottom
    ranksep=0.1
    nodesep=0.1
 

@@ -55,12 +55,12 @@ which function they belong to.
 For example, the stack diagram for ``print_twice`` looks like this:
 
 .. digraph:: state
+   :name: fig_print_twice_stack
+   :caption: Stack diagram for print_twice
+   :alt: stack diagram showing the print_twice call and its parameter
    :align: center
-   :alt: Stack diagram for print_twice
 
    fontname = "Bitstream Vera Sans"
-   label="Stack diagram for print_twice"
-   labelloc=bottom
    ranksep=0.1
 
    node [
@@ -83,7 +83,7 @@ in C++ (or any programming language).
 Whenever a function is called, it creates a new **instance** of that
 function (a new scope) and places it on top of the function call stack.
 Each instance of a function contains the parameters and local
-variables for that function. In the diagram an instance of a function is
+variables for that function. In :numref:`fig_print_twice_stack`, an instance of a function is
 represented by a box with the name of the function in the first section and
 the variables and parameters inside.
 A instance of a function on the stack are stored in

@@ -131,3 +131,5 @@ tb_code_language_defaults = {
     'cpp': {'compileargs': ['-Wall', '-Wextra', '-pedantic', '-std=c++20']},
 }
 tb_code_block_defaults = {'linenos': True, 'show-tutor': True}
+
+numfig = True

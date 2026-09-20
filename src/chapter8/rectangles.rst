@@ -33,15 +33,15 @@ thing is quite common. Of course, this means that in order to create a
      rectangle box = { corner, 100.0, 200.0 };
 
 This code creates a new ``rectangle`` structure and initializes the
-instance variables. The figure shows the effect of this assignment.
+instance variables. The :numref:`fig_rectangle_state` shows the effect of this assignment.
 
 .. digraph:: state
+   :name: fig_rectangle_state
+   :caption: Rectangle object state diagram
+   :alt: rectangle object state diagram
    :align: center
-   :alt: rectangle struct state diagram
 
    fontname = "Bitstream Vera Sans"
-   label="rectangle object state diagram";
-   labelloc=bottom;
    node [
       shape=record
       fontname = "Bitstream Vera Sans"

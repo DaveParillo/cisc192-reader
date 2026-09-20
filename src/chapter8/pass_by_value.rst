@@ -7,16 +7,16 @@ When you pass a structure as an argument, remember that the argument and
 the parameter are not the same variable. Instead, there are two
 variables (one in the caller and one in the callee) that have the same
 value, at least initially. For example, when we call ``print_point``,
-the stack diagram looks like this:
+the stack diagram in :numref:`fig_pass_by_value_stack` shows:
 
 .. digraph:: state
-   :align: center
+   :name: fig_pass_by_value_stack
+   :caption: Function call stack diagram
    :alt: function call stack diagram
+   :align: center
 
    graph [compound = true];
    fontname = "Bitstream Vera Sans"
-   label="Function call stack diagram";
-   labelloc=bottom;
    node [
       shape=record
       fontname = "Bitstream Vera Sans"
@@ -26,7 +26,6 @@ the stack diagram looks like this:
    ]
 
    subgraph cluster_main {
-      label="main"
       labelloc=top;
       subgraph cluster_0 {
          label="blank"

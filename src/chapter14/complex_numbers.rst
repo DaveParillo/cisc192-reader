@@ -42,12 +42,15 @@ the complex plane, polar coordinates specify the direction (or angle) of
 the point relative to the origin, and the distance (or magnitude) of the
 point.
 
-The following figure shows the two coordinate systems graphically.
+The :numref:`fig_polar_cartesian` shows the two coordinate systems graphically.
 
 .. figure:: Images/14.3polar_and_cartesian.png
+   :name: fig_polar_cartesian
    :scale: 80%
    :align: center
-   :alt: image
+   :alt: diagram relating polar and Cartesian representations of a complex number
+
+   Polar and Cartesian coordinates
 
 complex_number numbers in polar coordinates are written :math:`r e^{i \theta}`,
 where :math:`r` is the magnitude (radius), and :math:`\theta` is the

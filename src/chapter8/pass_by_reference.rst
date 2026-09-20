@@ -82,13 +82,13 @@ by reference. Notice that the output of this code matches what we expect it to b
 Here's how we would draw a stack diagram for this program:
 
 .. digraph:: state
-   :align: center
+   :name: fig_pass_by_reference_stack
+   :caption: Function call stack diagram
    :alt: function call stack diagram
+   :align: center
 
    graph [compound = true];
    fontname = "Bitstream Vera Sans"
-   label="Function call stack diagram";
-   labelloc=bottom;
    node [
       shape=record
       fontname = "Bitstream Vera Sans"
@@ -98,7 +98,6 @@ Here's how we would draw a stack diagram for this program:
    ]
 
    subgraph cluster_main {
-      label="main"
       labelloc=top;
       subgraph cluster_0 {
          label="blank"
@@ -123,7 +122,8 @@ The parameter ``p`` is a reference to the structure named ``blank``. The
 usual representation for a reference is a dot with an arrow that points
 to whatever the reference refers to.
 
-The important thing to see in this diagram is that any changes that
+The important thing to see in :numref:`fig_pass_by_reference_stack` is that any
+changes that
 ``reflect`` makes in ``p`` will also affect ``blank``.
 
 Passing structures by reference is more versatile than passing by value,

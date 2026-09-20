@@ -11,15 +11,16 @@ it easier to interpret a recursive function.
 Remember that every time a function gets called it creates a new
 instance that contains the function’s local variables and parameters.
 
-This figure shows a stack diagram for ``countdown``, called with ``n = 3``:
+The stack diagram in :numref:`fig_countdown_stack` shows ``countdown`` called
+with ``n = 3``:
 
 .. digraph:: stack
+   :name: fig_countdown_stack
+   :caption: Stack diagram for countdown
+   :alt: stack diagram showing countdown stack frames
    :align: center
-   :alt: Stack diagram for countdown
 
    fontname = "Bitstream Vera Sans"
-   label="Stack diagram for countdown";
-   labelloc=bottom;
    ranksep=0.1
 
    node [

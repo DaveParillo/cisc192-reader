@@ -55,12 +55,14 @@ A common way to represent variables on paper is to draw a box with the
 name of the variable on the outside and the value of the variable on the
 inside. This kind of figure is called a **state diagram** because is
 shows what state each of the variables is in (you can think of it as the
-variable’s "state of mind"). This diagram shows the effect of the three
+variable’s "state of mind"). The diagram in :numref:`fig_variable_state` shows the effect of the three
 assignment statements:
 
 .. digraph:: state
+   :name: fig_variable_state
+   :caption: Variable state diagram
+   :alt: state diagram showing variables and their values
    :align: center
-   :alt: Variable state diagram
 
    fontname = "Bitstream Vera Sans"
    node [
@@ -71,8 +73,6 @@ assignment statements:
    ]
    edge [style=invis, constraint=false]
 
-   label="Variable state diagram";
-   labelloc=bottom;
    letter [label="'a'"];
    hour [label="12", shape="box"];
    min [label="59", shape="box"];

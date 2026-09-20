@@ -25,12 +25,12 @@ named ``i`` are not in the same storage location. They can have
 different values, and changing one does not affect the other.
 
 .. digraph:: stack
+   :name: fig_multiples_stack
+   :caption: Stack diagram for multiples table
+   :alt: stack diagram showing local variables in the multiples table call stack
    :align: center
-   :alt: Stack diagram for multiples table
 
    fontname = "Bitstream Vera Sans"
-   label="Stack diagram for multiples table";
-   labelloc=bottom;
    ranksep=0.1
 
    node [
@@ -49,7 +49,7 @@ different values, and changing one does not affect the other.
 Notice that the value of the parameter ``n`` in ``print_multiples`` has
 to be the same as the value of ``i`` in ``multiples_table``. On the other
 hand, the value of ``i`` in ``print_multiples`` goes from 1 up to ``n``.
-In the diagram, it happens to be 3. The next time through the loop it
+In :numref:`fig_multiples_stack`, it happens to be 3. The next time through the loop it
 will be 4.
 
 It may be a good idea to use different variable names in different

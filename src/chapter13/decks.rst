@@ -38,9 +38,12 @@ Now we can create a deck of cards like this:
 Here is a state diagram showing what a ``card_deck`` object looks like:
 
 .. figure:: Images/13.3stackdiagram.png
+   :name: fig_deck_stack
    :scale: 35%
    :align: center
-   :alt: image
+   :alt: deck object state diagram showing the cards vector inside a deck
+
+   Deck object state diagram
 
 The object named ``deck`` has a single instance variable named
 ``cards``, which is a vector of ``playing_card`` objects. To access the cards in
@@ -72,7 +75,7 @@ demonstrates how to traverse the deck and output each card.
 .. tb-choice::
    :name: decks_2
 
-   Take a look at the state diagram above. When we create a deck of cards using ``deck deck (52)``, 
+   Take a look at the state diagram in :numref:`fig_deck_stack`. When we create a deck of cards using ``deck deck (52)``, 
    what is true about our new deck?
 
    - [ ] The ranks and suits of the cards are initialized to the proper ranks and suits in a standard deck of cards.

@@ -25,14 +25,15 @@ All of these are legal assignment statements.
 The effect of this code fragment is:
 
 .. graphviz::
+   :name: fig_vector_assignment
+   :caption: Vector assignment
+   :alt: diagram showing values assigned to vector elements
    :align: center
-   :alt: Vector assignment
 
    digraph c {
      rankdir=LR
      nodesep=0
      fontname = "Bitstream Vera Sans"
-     label="Vector assignment"
      node [
         fontname = "Courier"
         fontsize = 14
@@ -41,7 +42,6 @@ The effect of this code fragment is:
         fillcolor=lightblue
      ]
      subgraph cluster_0 {
-     label=""
      arr [
         label = "{7|14|1|-60|0}"
      ]

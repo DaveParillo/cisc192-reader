@@ -9,10 +9,14 @@ Imagine a string of beads, where each character is a bead in the string.
 
 
 .. graphviz::
+   :name: fig_string_characters
+   :caption: Characters in a string
+   :alt: a sequence of character cells representing a string
+   :align: center
+
 
    graph char_array {
      fontname = "Bitstream Vera Sans"
-     label="Beads on a 'string'"
      node [
         fontname = "Bitstream Vera Sans"
         fontsize = 14
@@ -212,4 +216,3 @@ The active code below accesses the first character in string ``fruit``.
             {{group}}
             cout << x[8] << '\n'; #distractor
             {{endgroup}}
-

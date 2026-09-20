@@ -55,15 +55,16 @@ list, even if it is empty.
 The dot notation is officially called the *member access operator*
 because it is the operator used to access the members of a struct.
 
-The result of these assignments is shown in the following state diagram:
+The result of these assignments is shown in the state diagram in
+:numref:`fig_point_object_state`:
 
 .. digraph:: state
+   :name: fig_point_object_state
+   :caption: Point object instance state diagram
+   :alt: point object instance state diagram
    :align: center
-   :alt: point struct state diagram
 
    fontname = "Bitstream Vera Sans"
-   label="blank object instance state diagram";
-   labelloc=bottom;
    node [
       shape=record
       fontname = "Bitstream Vera Sans"

@@ -48,18 +48,19 @@ initializes their instance variables.
 In this case, the constructor takes a single argument, 
 which is the size of the new vector.
 
-The following figure shows how ``count`` could be represented in a state
-diagram:
+The :numref:`fig_vector_state` shows how ``count`` could be represented
+in a state diagram:
 
 .. graphviz::
+   :name: fig_vector_state
+   :caption: Vector state diagram
+   :alt: vector state diagram showing indexed elements
    :align: center
-   :alt: Vector state diagram
 
    digraph c {
      rankdir=LR
      nodesep=0
      fontname = "Bitstream Vera Sans"
-     label="Vector state diagram"
      node [
         fontname = "Courier"
         fontsize = 14
@@ -68,7 +69,6 @@ diagram:
         fillcolor=lightblue
      ]
      subgraph cluster_0 {
-     label=""
      arr [
         label = "{0|0|0|0|0}"
      ]
@@ -104,14 +104,15 @@ This statement creates a vector of five elements and initializes all of
 them to three. 
 
 .. graphviz::
+   :name: fig_vector_filled
+   :caption: Vector filled with 3
+   :alt: vector whose elements are all initialized to 3
    :align: center
-   :alt: Vector filled with 3
 
    digraph c {
      rankdir=LR
      nodesep=0
      fontname = "Bitstream Vera Sans"
-     label="Vector filled with 3"
      node [
         fontname = "Courier"
         fontsize = 14
@@ -120,7 +121,6 @@ them to three.
         fillcolor=lightblue
      ]
      subgraph cluster_0 {
-     label=""
      arr [
         label = "{3|3|3|3|3}"
      ]
