@@ -17,32 +17,32 @@ with instance variables. In that case the complete class definition for
    class complex_number
    {
    private:
-     double real = 0.0, imag = 0.0;
-     double mag = 0.0, theta = 0.0;
-     bool cartesian, polar;
+     double m_real = 0.0, m_imag = 0.0;
+     double m_mag = 0.0, m_theta = 0.0;
+     bool m_cartesian, m_polar;
 
      void calculate_cartesian ();
      void calculate_polar ();
 
    public:
-     complex_number () { cartesian = true;  polar = false; }
+     complex_number () { m_cartesian = true;  m_polar = false; }
 
      complex_number (double r, double i)
      {
-       real = r;  imag = i;
-       cartesian = true;  polar = false;
+       m_real = r;  m_imag = i;
+       m_cartesian = true;  m_polar = false;
      }
 
      void print_cartesian ();
      void print_polar ();
 
-     double get_real ();
-     double get_imag ();
-     double get_mag ();
-     double get_theta ();
+     double real ();
+     double imag ();
+     double mag ();
+     double theta ();
 
-     void set_cartesian (double r, double i);
-     void set_polar (double m, double t);
+     void cartesian (double r, double i);
+     void polar (double m, double t);
    };
 
 The ``private`` label at the beginning is not necessary, but it is a
@@ -56,89 +56,89 @@ to be private functions. Notice how we are no longer able to call
    :name: c192_fourteeneleven-support
    :hidden:
 
-   complex_number::complex_number () { cartesian = true;  polar = false; }
+   complex_number::complex_number () { m_cartesian = true;  m_polar = false; }
 
    complex_number::complex_number (double r, double i) {
-     real = r;  imag = i;
-     cartesian = true;  polar = false;
+     m_real = r;  m_imag = i;
+     m_cartesian = true;  m_polar = false;
    }
 
    void complex_number::calculate_cartesian () {
-     assert (polar);
-     real = mag * std::cos (theta);
-     imag = mag * std::sin (theta);
-     cartesian = true;
-     assert (polar && cartesian);
+     assert (m_polar);
+     m_real = m_mag * std::cos (m_theta);
+     m_imag = m_mag * std::sin (m_theta);
+     m_cartesian = true;
+     assert (m_polar && m_cartesian);
    }
 
-   double complex_number::get_real () {
-     if (cartesian == false) calculate_cartesian ();
-     return real;
+   double complex_number::real () {
+     if (m_cartesian == false) calculate_cartesian ();
+     return m_real;
    }
 
-   double complex_number::get_imag () {
-     if (cartesian == false) calculate_cartesian ();
-     return imag;
+   double complex_number::imag () {
+     if (m_cartesian == false) calculate_cartesian ();
+     return m_imag;
    }
 
    void complex_number::calculate_polar () {
-     mag = std::sqrt(std::pow(real, 2) + std::pow(imag, 2));
-     theta = std::atan2(imag, real);
-     polar = true;
+     m_mag = std::sqrt(std::pow(m_real, 2) + std::pow(m_imag, 2));
+     m_theta = std::atan2(m_imag, m_real);
+     m_polar = true;
    }
 
-   double complex_number::get_mag () {
-     if (polar == false) {
+   double complex_number::mag () {
+     if (m_polar == false) {
        calculate_polar ();
      }
-     return mag;
+     return m_mag;
    }
 
-   double complex_number::get_theta () {
-     if (polar == false) {
+   double complex_number::theta () {
+     if (m_polar == false) {
        calculate_polar ();
      }
-     return theta;
+     return m_theta;
    }
 
    void complex_number::print_cartesian () {
-     std::cout << get_real() << " + " << get_imag() << 'i' << '\n';
+     std::cout << real() << " + " << imag() << 'i' << '\n';
    }
 
    void complex_number::print_polar () {
-     std::cout << get_mag() << " e^ " << get_theta() << 'i' << '\n';
+     std::cout << mag() << " e^ " << theta() << 'i' << '\n';
    }
 
    complex_number add (complex_number& a, complex_number& b) {
-     double real = a.get_real() + b.get_real();
-     double imag = a.get_imag() + b.get_imag();
-     complex_number sum (real, imag);
+     double m_real = a.real() + b.real();
+     double m_imag = a.imag() + b.imag();
+     complex_number sum (m_real, m_imag);
      return sum;
    }
 
    complex_number subtract (complex_number& a, complex_number& b) {
-     double real = a.get_real() - b.get_real();
-     double imag = a.get_imag() - b.get_imag();
-     complex_number diff (real, imag);
+     double m_real = a.real() - b.real();
+     double m_imag = a.imag() - b.imag();
+     complex_number diff (m_real, m_imag);
      return diff;
    }
 
-   void complex_number::set_polar (double m, double t) {
-     mag = m;  theta = t;
-     cartesian = false;  polar = true;
+   void complex_number::polar (double m, double t) {
+     m_mag = m;  m_theta = t;
+     m_cartesian = false;  m_polar = true;
    }
 
    complex_number mult (complex_number& a, complex_number& b) {
-     double mag = a.get_mag() * b.get_mag();
-     double theta = a.get_theta() + b.get_theta();
+     double m_mag = a.mag() * b.mag();
+     double m_theta = a.theta() + b.theta();
      complex_number product;
-     product.set_polar (mag, theta);
+     product.polar (m_mag, m_theta);
      return product;
    }
 
-   void complex_number::set_cartesian (double r, double i) {
-     real = r;    imag = i;
-     cartesian = true;  polar = false;
+   void complex_number::cartesian (double r, double i) {
+     m_real = r;    m_imag = i;
+     m_cartesian = true;  m_polar = false;
    }
 
 
@@ -153,23 +153,23 @@ to be private functions. Notice how we are no longer able to call
 
    class complex_number
    {
-     double real = 0.0, imag = 0.0;
-     double mag = 0.0, theta = 0.0;
-     bool cartesian, polar;
+     double m_real = 0.0, m_imag = 0.0;
+     double m_mag = 0.0, m_theta = 0.0;
+     bool m_cartesian, m_polar;
      void calculate_cartesian ();
      void calculate_polar ();
 
    public:
      complex_number ();
      complex_number (double r, double i);
-     double get_real ();
-     double get_imag ();
-     double get_mag ();
-     double get_theta ();
+     double real ();
+     double imag ();
+     double mag ();
+     double theta ();
      void print_cartesian ();
      void print_polar ();
-     void set_polar (double m, double t);
-     void set_cartesian (double r, double i);
+     void polar (double m, double t);
+     void cartesian (double r, double i);
    };
 
    complex_number add (complex_number& a, complex_number& b);
@@ -178,7 +178,7 @@ to be private functions. Notice how we are no longer able to call
 
    int main() {
      complex_number c1(-4.0, 0.0);
-     c1.set_polar(4.0, 3.1415);
+     c1.polar(4.0, 3.1415);
      // ``calculate_cartesian`` can't be called in main because
      // it is now a private member function
      c1.calculate_cartesian();

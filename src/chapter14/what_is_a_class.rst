@@ -19,16 +19,16 @@ I could have written the ``playing_card`` definition:
 
    class playing_card
    {
-     int suit, rank;
+     int m_suit, m_rank;
 
    public:
      playing_card ();
      playing_card (int s, int r);
 
-     int get_rank () const { return rank; }
-     int get_suit () const { return suit; }
-     void set_rank (int r) { rank = r; }
-     void set_suit (int s) { suit = s; }
+     int rank () const { return m_rank; }
+     int suit () const { return m_suit; }
+     void rank (int r) { m_rank = r; }
+     void suit (int s) { m_suit = s; }
    };
 
 I replaced the word ``struct`` with the word ``class`` and removed the
@@ -47,7 +47,7 @@ Also, it is common to refer to all user-defined types in C++ as
 .. tb-choice::
    :name: question14_2_1
 
-   By default, the data members of a ``class`` are private. 
+   By default, the data members of a ``class`` are private.
 
    - [x] True
 
@@ -59,7 +59,7 @@ Also, it is common to refer to all user-defined types in C++ as
 .. tb-choice::
    :name: question14_2_2
 
-   How can we change ``deck``, which is currently a ``struct``, into a ``class``? 
+   How can we change ``deck``, which is currently a ``struct``, into a ``class``?
 
    .. code-block:: cpp
 

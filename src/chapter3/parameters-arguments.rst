@@ -80,7 +80,7 @@ have the same value (in this case, the character ’b’).
 
 This rule is important, but it is sometimes confusing because C++ 
 sometimes converts arguments from one type to another automatically. 
-Recall the section :ref:`convert <functions-converting-from-double-to-int>`.
+Recall the section :ref:`functions-converting-from-double-to-int`.
 What is true in expressions is also true for function arguments.
 For now focus on the general rule, and we will deal with 
 exceptions later.

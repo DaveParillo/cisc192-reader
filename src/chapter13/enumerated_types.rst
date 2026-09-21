@@ -42,8 +42,8 @@ type ``card_rank`` and ``card_suit``:
 ::
 
    struct playing_card {
-     card_rank rank;
-     card_suit suit;
+     card_rank m_rank;
+     card_suit m_suit;
 
      playing_card (card_suit s, card_rank r);
    };
@@ -74,7 +74,7 @@ change the output from the ``print`` function. Notice how this is much clearer t
    :hidden:
 
    playing_card::playing_card (card_suit s, card_rank r) {
-       suit = s;  rank = r;
+       m_suit = s;  m_rank = r;
    }
 
    void playing_card::print () const {
@@ -99,7 +99,7 @@ change the output from the ``print`` function. Notice how this is much clearer t
        ranks[12] = "Queen";
        ranks[13] = "King";
 
-       std::cout << ranks[rank] << " of " << suits[suit] << '\n';
+       std::cout << ranks[m_rank] << " of " << suits[m_suit] << '\n';
    }
 
 
@@ -118,8 +118,8 @@ change the output from the ``print`` function. Notice how this is much clearer t
    ten, jack, queen, king };
 
    struct playing_card {
-       card_rank rank;
-       card_suit suit;
+       card_rank m_rank;
+       card_suit m_suit;
        playing_card (card_suit s, card_rank r);
        void print () const;
    };
@@ -141,10 +141,10 @@ changes in ``build_deck``, though:
 ::
 
      std::size_t index = 0;
-     for (int suit = clubs; suit <= spades; ++suit) {
-       for (int rank = ace; rank <= king; ++rank) {
-         deck[index].suit = static_cast<card_suit>(suit);
-         deck[index].rank = static_cast<card_rank>(rank);
+     for (int m_suit = clubs; m_suit <= spades; ++m_suit) {
+       for (int m_rank = ace; m_rank <= king; ++m_rank) {
+         deck[index].m_suit = static_cast<card_suit>(m_suit);
+         deck[index].m_rank = static_cast<card_rank>(m_rank);
          index++;
        }
      }
@@ -243,8 +243,8 @@ Scoped enumerations
 
 C++20 also supports scoped enumerations, introduced in C++11. For example::
 
-   enum class suit { clubs, diamonds, hearts, spades };
-   suit chosen = suit::hearts;
+   enum class m_suit { clubs, diamonds, hearts, spades };
+   m_suit chosen = m_suit::hearts;
 
 The qualified name prevents collisions with other names, and a scoped enum
 does not implicitly convert to an integer. Use ``static_cast`` when an integer

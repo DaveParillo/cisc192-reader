@@ -36,8 +36,8 @@ assignments to one or more instance variables:
    the second constructor
    calculate_cartesian
    calculate_polar
-   set_cartesian
-   set_polar
+   cartesian
+   polar
 
 In each case, it is straightforward to show that the function maintains
 each of the invariants I listed. We have to be a little careful, though.
@@ -58,7 +58,7 @@ best we can do is detect the error, output an error message, and exit.
 .. tb-choice::
    :name: question14_8_1
 
-   How does data encapsulation help us enforce invariants? 
+   How does data encapsulation help us enforce invariants?
 
    - [x] It prevents unrestricted access to the instance variables by making them private.
 
@@ -76,7 +76,7 @@ best we can do is detect the error, output an error message, and exit.
 .. tb-choice::
    :name: question14_8_2
 
-   An invariant can be false in the middle of a function as long as it is true at the start and end. 
+   An invariant can be false in the middle of a function as long as it is true at the start and end.
 
    - [x] True
 
@@ -88,7 +88,7 @@ best we can do is detect the error, output an error message, and exit.
 .. tb-choice::
    :name: question14_8_3
 
-   If an invariant is false at the start of the function, the function must fix it to be true by the end. 
+   If an invariant is false at the start of the function, the function must fix it to be true by the end.
 
    - [ ] True
 

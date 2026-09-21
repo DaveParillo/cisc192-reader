@@ -34,11 +34,11 @@ function will allow you to verify that you have done this correctly.
 
 
    playing_card::playing_card () {
-      suit = 0;  rank = 1;
+      m_suit = 0;  m_rank = 1;
    }
 
    playing_card::playing_card (int s, int r) {
-      suit = s;  rank = r;
+      m_suit = s;  m_rank = r;
    }
 
    void playing_card::print () const {
@@ -63,7 +63,7 @@ function will allow you to verify that you have done this correctly.
       ranks[12] = "Queen";
       ranks[13] = "King";
 
-      std::cout << ranks[rank] << " of " << suits[suit] << '\n';
+      std::cout << ranks[m_rank] << " of " << suits[m_suit] << '\n';
     }
 
     void print_deck (const std::vector<playing_card>& deck) {
@@ -84,7 +84,7 @@ function will allow you to verify that you have done this correctly.
    #include <vector>
 
    struct playing_card {
-       int suit, rank;
+       int m_suit, m_rank;
 
        playing_card ();
        playing_card (int s, int r);
@@ -94,10 +94,10 @@ function will allow you to verify that you have done this correctly.
    std::vector<playing_card> build_deck() {
        std::vector<playing_card> deck (52);
        std::size_t i = 0;
-       for (int suit = 0; suit <= 3; suit++) {
-           for (int rank = 1; rank <= 13; rank++) {
-               deck[i].suit = suit;
-               deck[i].rank = rank;
+       for (int m_suit = 0; m_suit <= 3; m_suit++) {
+           for (int m_rank = 1; m_rank <= 13; m_rank++) {
+               deck[i].m_suit = m_suit;
+               deck[i].m_rank = m_rank;
                i++;
            }
        }
@@ -119,11 +119,11 @@ below is just one of several correct solutions for creating the Euchre deck:
   std::vector<playing_card> build_euchre_deck() {
     std::vector<playing_card> deck (24);
     std::size_t i = 0;
-    for (int suit = 0; suit <= 3; suit++) {
-        for (int rank = 1; rank <= 13; rank++) {
-          if (rank == 1 || rank >= 9){
-            deck[i].suit = suit;
-            deck[i].rank = rank;
+    for (int m_suit = 0; m_suit <= 3; m_suit++) {
+        for (int m_rank = 1; m_rank <= 13; m_rank++) {
+          if (m_rank == 1 || m_rank >= 9){
+            deck[i].m_suit = m_suit;
+            deck[i].m_rank = m_rank;
             i++;
           }
         }

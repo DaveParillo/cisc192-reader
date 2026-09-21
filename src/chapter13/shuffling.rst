@@ -6,7 +6,7 @@ Shuffling
 ---------
 
 For most card games you need to be able to shuffle the deck; that is,
-put the cards in a random order. In :ref:`../chapter11/random_numbers <random-numbers-random-numbers>` we
+put the cards in a random order. In :ref:`random-numbers-random-numbers` we
 saw how to generate random numbers, but it is not obvious how to use
 them to shuffle a deck.
 
@@ -49,7 +49,7 @@ indices and switches the cards at the indicated positions.
    your program, **pseudocode** is a great place to start!
 
 You can probably figure out how to write ``random_int`` by looking at
-:ref:`../chapter11/random_numbers <random-numbers-random-numbers>`, although you will have to be careful
+:ref:`random-numbers-random-numbers`, although you will have to be careful
 about possibly generating indices that are out of range.
 
 You can also figure out ``swap_cards`` yourself. I will leave the
@@ -84,11 +84,11 @@ extra problems at the end for help.
    :hidden:
 
    playing_card::playing_card () {
-       suit = spades;  rank = ace;
+       m_suit = spades;  m_rank = ace;
    }
 
    playing_card::playing_card (card_suit s, card_rank r) {
-       suit = s;  rank = r;
+       m_suit = s;  m_rank = r;
    }
 
    void playing_card::print () const {
@@ -113,7 +113,7 @@ extra problems at the end for help.
        ranks[12] = "Queen";
        ranks[13] = "King";
 
-       std::cout << ranks[rank] << " of " << suits[suit] << '\n';
+       std::cout << ranks[m_rank] << " of " << suits[m_suit] << '\n';
    }
 
    card_deck::card_deck () {
@@ -121,10 +121,10 @@ extra problems at the end for help.
        cards = temp;
 
        std::size_t i = 0;
-       for (int suit = clubs; suit <= spades; ++suit) {
-           for (int rank = ace; rank <= king; ++rank) {
-               cards[i].suit = static_cast<card_suit>(suit);
-               cards[i].rank = static_cast<card_rank>(rank);
+       for (int m_suit = clubs; m_suit <= spades; ++m_suit) {
+           for (int m_rank = ace; m_rank <= king; ++m_rank) {
+               cards[i].m_suit = static_cast<card_suit>(m_suit);
+               cards[i].m_rank = static_cast<card_rank>(m_rank);
                i++;
            }
        }
@@ -160,8 +160,8 @@ extra problems at the end for help.
    }
 
    struct playing_card {
-       card_rank rank;
-       card_suit suit;
+       card_rank m_rank;
+       card_suit m_suit;
        playing_card ();
        playing_card (card_suit s, card_rank r);
        void print () const;
@@ -271,14 +271,14 @@ extra problems at the end for help.
           for (std::size_t i = 0; i < cards.size(); i++) {
          {{endgroup}}
          {{group}}
-           std::size_t x = random_int (i, cards.size() - 1);
+           std::size_t m_x = random_int (i, cards.size() - 1);
          {{endgroup}}
          {{distractor}}
          {{group}}
-           std::size_t x = random_int (i, cards.size());
+           std::size_t m_x = random_int (i, cards.size());
          {{endgroup}}
          {{group}}
-           swap_cards (i, x);
+           swap_cards (i, m_x);
           }
          }
          {{endgroup}}

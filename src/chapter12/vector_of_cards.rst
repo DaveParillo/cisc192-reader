@@ -46,10 +46,10 @@ of times the body is executed is 52 (13 times 4).
 ::
 
      std::size_t i = 0;
-     for (int suit = 0; suit <= 3; suit++) {
-       for (int rank = 1; rank <= 13; rank++) {
-         deck[i].suit = suit;
-         deck[i].rank = rank;
+     for (int m_suit = 0; m_suit <= 3; m_suit++) {
+       for (int m_rank = 1; m_rank <= 13; m_rank++) {
+         deck[i].m_suit = m_suit;
+         deck[i].m_rank = m_rank;
          i++;
        }
      }
@@ -75,11 +75,11 @@ the ``build_deck`` function.
 
 
    playing_card::playing_card () {
-      suit = 0;  rank = 1;
+      m_suit = 0;  m_rank = 1;
    }
 
    playing_card::playing_card (int s, int r) {
-      suit = s;  rank = r;
+      m_suit = s;  m_rank = r;
    }
 
    void playing_card::print () const {
@@ -104,7 +104,7 @@ the ``build_deck`` function.
       ranks[12] = "Queen";
       ranks[13] = "King";
 
-      std::cout << ranks[rank] << " of " << suits[suit] << '\n';
+      std::cout << ranks[m_rank] << " of " << suits[m_suit] << '\n';
    }
 
 
@@ -119,7 +119,7 @@ the ``build_deck`` function.
    #include <vector>
 
    struct playing_card {
-       int suit, rank;
+       int m_suit, m_rank;
 
        playing_card ();
        playing_card (int s, int r);
@@ -129,10 +129,10 @@ the ``build_deck`` function.
    std::vector<playing_card> build_deck() {
        std::vector<playing_card> deck (52);
        std::size_t i = 0;
-       for (int suit = 0; suit <= 3; suit++) {
-           for (int rank = 1; rank <= 13; rank++) {
-               deck[i].suit = suit;
-               deck[i].rank = rank;
+       for (int m_suit = 0; m_suit <= 3; m_suit++) {
+           for (int m_rank = 1; m_rank <= 13; m_rank++) {
+               deck[i].m_suit = m_suit;
+               deck[i].m_rank = m_rank;
                i++;
            }
        }
@@ -155,10 +155,10 @@ the ``build_deck`` function.
      vector<card> create_deck() {
         vector<card> deck (16);
         int i = 0;
-        for (int suit = 0; suit <= 1; suit++) {
-           for (int rank = 4; rank <= 11; rank++) {
-              deck[i].suit = suit;
-              deck[i].rank = rank;
+        for (int m_suit = 0; m_suit <= 1; m_suit++) {
+           for (int m_rank = 4; m_rank <= 11; m_rank++) {
+              deck[i].m_suit = m_suit;
+              deck[i].m_rank = m_rank;
               i++;
            }
         }

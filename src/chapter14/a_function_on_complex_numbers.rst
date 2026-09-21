@@ -16,9 +16,9 @@ functions:
 
    complex_number add (complex_number& a, complex_number& b)
    {
-     double real = a.get_real() + b.get_real();
-     double imag = a.get_imag() + b.get_imag();
-     complex_number sum (real, imag);
+     double m_real = a.real() + b.real();
+     double m_imag = a.imag() + b.imag();
+     complex_number sum (m_real, m_imag);
      return sum;
    }
 
@@ -50,61 +50,61 @@ free to modify the code and experiment around!
    :name: c192_fourteenseven-support
    :hidden:
 
-   complex_number::complex_number () { cartesian = true;  polar = false; }
+   complex_number::complex_number () { m_cartesian = true;  m_polar = false; }
 
    complex_number::complex_number (double r, double i) {
-     real = r;  imag = i;
-     cartesian = true;  polar = false;
+     m_real = r;  m_imag = i;
+     m_cartesian = true;  m_polar = false;
    }
 
    void complex_number::calculate_cartesian () {
-     real = mag * std::cos (theta);
-     imag = mag * std::sin (theta);
-     cartesian = true;
+     m_real = m_mag * std::cos (m_theta);
+     m_imag = m_mag * std::sin (m_theta);
+     m_cartesian = true;
    }
 
-   double complex_number::get_real () {
-     if (cartesian == false) calculate_cartesian ();
-     return real;
+   double complex_number::real () {
+     if (m_cartesian == false) calculate_cartesian ();
+     return m_real;
    }
 
-   double complex_number::get_imag () {
-     if (cartesian == false) calculate_cartesian ();
-     return imag;
+   double complex_number::imag () {
+     if (m_cartesian == false) calculate_cartesian ();
+     return m_imag;
    }
 
    void complex_number::calculate_polar () {
-     mag = std::sqrt(std::pow(real, 2) + std::pow(imag, 2));
-     theta = std::atan2(imag, real);
-     polar = true;
+     m_mag = std::sqrt(std::pow(m_real, 2) + std::pow(m_imag, 2));
+     m_theta = std::atan2(m_imag, m_real);
+     m_polar = true;
    }
 
-   double complex_number::get_mag () {
-     if (polar == false) {
+   double complex_number::mag () {
+     if (m_polar == false) {
        calculate_polar ();
      }
-     return mag;
+     return m_mag;
    }
 
-   double complex_number::get_theta () {
-     if (polar == false) {
+   double complex_number::theta () {
+     if (m_polar == false) {
        calculate_polar ();
      }
-     return theta;
+     return m_theta;
    }
 
    void complex_number::print_cartesian () {
-     std::cout << get_real() << " + " << get_imag() << 'i' << '\n';
+     std::cout << real() << " + " << imag() << 'i' << '\n';
    }
 
    void complex_number::print_polar () {
-     std::cout << get_mag() << " e^ " << get_theta() << 'i' << '\n';
+     std::cout << mag() << " e^ " << theta() << 'i' << '\n';
    }
 
    complex_number add (complex_number& a, complex_number& b) {
-     double real = a.get_real() + b.get_real();
-     double imag = a.get_imag() + b.get_imag();
-     complex_number sum (real, imag);
+     double m_real = a.real() + b.real();
+     double m_imag = a.imag() + b.imag();
+     complex_number sum (m_real, m_imag);
      return sum;
    }
 
@@ -119,19 +119,19 @@ free to modify the code and experiment around!
 
    class complex_number
    {
-     double real = 0.0, imag = 0.0;
-     double mag = 0.0, theta = 0.0;
-     bool cartesian, polar;
+     double m_real = 0.0, m_imag = 0.0;
+     double m_mag = 0.0, m_theta = 0.0;
+     bool m_cartesian, m_polar;
 
    public:
      complex_number ();
      complex_number (double r, double i);
      void calculate_cartesian ();
-     double get_real ();
-     double get_imag ();
+     double real ();
+     double imag ();
      void calculate_polar ();
-     double get_mag ();
-     double get_theta ();
+     double mag ();
+     double theta ();
      void print_cartesian ();
      void print_polar ();
    };
@@ -174,21 +174,21 @@ free to modify the code and experiment around!
          complex_number subtract (complex_number& a) {
          {{endgroup}}
          {{group}}
-            double real = a.get_real() - b.get_real();
+            double m_real = a.real() - b.real();
          {{endgroup}}
          {{distractor}}
          {{group}}
-            double real = a.get_real() + b.get_real();
+            double m_real = a.real() + b.real();
          {{endgroup}}
          {{group}}
-            double imag = a.get_imag() - b.get_imag();
+            double m_imag = a.imag() - b.imag();
          {{endgroup}}
          {{group}}
-            complex_number diff (real, imag);
+            complex_number diff (m_real, m_imag);
          {{endgroup}}
          {{distractor}}
          {{group}}
-            complex_number diff (imag, real);
+            complex_number diff (m_imag, m_real);
          {{endgroup}}
          {{group}}
             return diff;

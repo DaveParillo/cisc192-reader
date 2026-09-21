@@ -91,7 +91,7 @@ we could use something like:
 
 ::
 
-     switch (suit) {
+     switch (m_suit) {
      case CLUBS:     return "Clubs";
      case DIAMONDS:  return "Diamonds";
      case HEARTS:    return "Hearts";

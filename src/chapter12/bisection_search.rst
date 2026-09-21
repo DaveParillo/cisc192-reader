@@ -158,11 +158,11 @@ This time, it uses bisection search to locate the card.
 
 
    playing_card::playing_card () {
-      suit = 0;  rank = 1;
+      m_suit = 0;  m_rank = 1;
    }
 
    playing_card::playing_card (int s, int r) {
-      suit = s;  rank = r;
+      m_suit = s;  m_rank = r;
    }
 
    void playing_card::print () const {
@@ -187,16 +187,16 @@ This time, it uses bisection search to locate the card.
       ranks[12] = "Queen";
       ranks[13] = "King";
 
-      std::cout << ranks[rank] << " of " << suits[suit] << '\n';
+      std::cout << ranks[m_rank] << " of " << suits[m_suit] << '\n';
     }
 
    std::vector<playing_card> build_deck() {
       std::vector<playing_card> deck (52);
       std::size_t i = 0;
-      for (int suit = 0; suit <= 3; suit++) {
-         for (int rank = 1; rank <= 13; rank++) {
-            deck[i].suit = suit;
-            deck[i].rank = rank;
+      for (int m_suit = 0; m_suit <= 3; m_suit++) {
+         for (int m_rank = 1; m_rank <= 13; m_rank++) {
+            deck[i].m_suit = m_suit;
+            deck[i].m_rank = m_rank;
             i++;
          }
       }
@@ -233,11 +233,11 @@ This time, it uses bisection search to locate the card.
       }
    }
    bool playing_card::is_greater (const playing_card& c2) const {
-     if (suit > c2.suit) return true;
-     if (suit < c2.suit) return false;
+     if (m_suit > c2.m_suit) return true;
+     if (m_suit < c2.m_suit) return false;
 
-     if (rank > c2.rank) return true;
-     if (rank < c2.rank) return false;
+     if (m_rank > c2.m_rank) return true;
+     if (m_rank < c2.m_rank) return false;
 
      return false;
    }
@@ -255,7 +255,7 @@ This time, it uses bisection search to locate the card.
    #include <vector>
 
    struct playing_card {
-       int suit, rank;
+       int m_suit, m_rank;
 
        playing_card ();
        playing_card (int s, int r);
@@ -266,7 +266,7 @@ This time, it uses bisection search to locate the card.
    std::vector<playing_card> build_deck();
 
    bool equals (const playing_card& c1, const playing_card& c2){
-       return (c1.rank == c2.rank && c1.suit == c2.suit);
+       return (c1.m_rank == c2.m_rank && c1.m_suit == c2.m_suit);
    }
 
    void print_deck(const std::vector<playing_card>& deck);
@@ -287,7 +287,7 @@ bisection is much faster than a linear search, especially for large
 vectors.
 
 Two common errors in recursive programs are forgetting to include a base
-case and writing the recursive call so that the base case is never
+case and writing the recursive call so that the m_base case is never
 reached. Either error will cause an infinite recursion, in which case
 C++ will (eventually) generate a run-time error.
 

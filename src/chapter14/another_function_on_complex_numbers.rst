@@ -15,10 +15,10 @@ about the representation of the objects.
 
    complex_number mult (complex_number& a, complex_number& b)
    {
-     double mag = a.get_mag() * b.get_mag();
-     double theta = a.get_theta() + b.get_theta();
+     double m_mag = a.mag() * b.mag();
+     double m_theta = a.theta() + b.theta();
      complex_number product;
-     product.set_polar (mag, theta);
+     product.polar (m_mag, m_theta);
      return product;
    }
 
@@ -38,13 +38,13 @@ coordinates, the cartesian coordinates are no longer valid.
 
 ::
 
-   void complex_number::set_polar (double m, double t)
+   void complex_number::polar (double m, double t)
    {
-     mag = m;  theta = t;
-     cartesian = false;  polar = true;
+     m_mag = m;  m_theta = t;
+     m_cartesian = false;  m_polar = true;
    }
 
-As an exercise, write the corresponding function named ``set_cartesian``.
+As an exercise, write the corresponding function named ``cartesian``.
 
 To test the ``mult`` function, we can try something like:
 
@@ -62,88 +62,88 @@ The output of this program is
 
    -6 + 17i
 
-The active code below uses the ``mult`` and ``set_polar`` functions.
+The active code below uses the ``mult`` and ``polar`` functions.
 Feel free to modify the code and experiment around!
 
 .. tb-code:: cpp
    :name: c192_fourteeneight-support
    :hidden:
 
-   complex_number::complex_number () { cartesian = true;  polar = false; }
+   complex_number::complex_number () { m_cartesian = true;  m_polar = false; }
 
    complex_number::complex_number (double r, double i) {
-     real = r;  imag = i;
-     cartesian = true;  polar = false;
+     m_real = r;  m_imag = i;
+     m_cartesian = true;  m_polar = false;
    }
 
    void complex_number::calculate_cartesian () {
-     real = mag * std::cos (theta);
-     imag = mag * std::sin (theta);
-     cartesian = true;
+     m_real = m_mag * std::cos (m_theta);
+     m_imag = m_mag * std::sin (m_theta);
+     m_cartesian = true;
    }
 
-   double complex_number::get_real () {
-     if (cartesian == false) calculate_cartesian ();
-     return real;
+   double complex_number::real () {
+     if (m_cartesian == false) calculate_cartesian ();
+     return m_real;
    }
 
-   double complex_number::get_imag () {
-     if (cartesian == false) calculate_cartesian ();
-     return imag;
+   double complex_number::imag () {
+     if (m_cartesian == false) calculate_cartesian ();
+     return m_imag;
    }
 
    void complex_number::calculate_polar () {
-     mag = std::sqrt(std::pow(real, 2) + std::pow(imag, 2));
-     theta = std::atan2(imag, real);
-     polar = true;
+     m_mag = std::sqrt(std::pow(m_real, 2) + std::pow(m_imag, 2));
+     m_theta = std::atan2(m_imag, m_real);
+     m_polar = true;
    }
 
-   double complex_number::get_mag () {
-     if (polar == false) {
+   double complex_number::mag () {
+     if (m_polar == false) {
        calculate_polar ();
      }
-     return mag;
+     return m_mag;
    }
 
-   double complex_number::get_theta () {
-     if (polar == false) {
+   double complex_number::theta () {
+     if (m_polar == false) {
        calculate_polar ();
      }
-     return theta;
+     return m_theta;
    }
 
    void complex_number::print_cartesian () {
-     std::cout << get_real() << " + " << get_imag() << 'i' << '\n';
+     std::cout << real() << " + " << imag() << 'i' << '\n';
    }
 
    void complex_number::print_polar () {
-     std::cout << get_mag() << " e^ " << get_theta() << 'i' << '\n';
+     std::cout << mag() << " e^ " << theta() << 'i' << '\n';
    }
 
    complex_number add (complex_number& a, complex_number& b) {
-     double real = a.get_real() + b.get_real();
-     double imag = a.get_imag() + b.get_imag();
-     complex_number sum (real, imag);
+     double m_real = a.real() + b.real();
+     double m_imag = a.imag() + b.imag();
+     complex_number sum (m_real, m_imag);
      return sum;
    }
 
    complex_number subtract (complex_number& a, complex_number& b) {
-     double real = a.get_real() - b.get_real();
-     double imag = a.get_imag() - b.get_imag();
-     complex_number diff (real, imag);
+     double m_real = a.real() - b.real();
+     double m_imag = a.imag() - b.imag();
+     complex_number diff (m_real, m_imag);
      return diff;
    }
 
-   void complex_number::set_polar (double m, double t) {
-     mag = m;  theta = t;
-     cartesian = false;  polar = true;
+   void complex_number::polar (double m, double t) {
+     m_mag = m;  m_theta = t;
+     m_cartesian = false;  m_polar = true;
    }
 
    complex_number mult (complex_number& a, complex_number& b) {
-     double mag = a.get_mag() * b.get_mag();
-     double theta = a.get_theta() + b.get_theta();
+     double m_mag = a.mag() * b.mag();
+     double m_theta = a.theta() + b.theta();
      complex_number product;
-     product.set_polar (mag, theta);
+     product.polar (m_mag, m_theta);
      return product;
    }
 
@@ -158,22 +158,22 @@ Feel free to modify the code and experiment around!
 
    class complex_number
    {
-     double real = 0.0, imag = 0.0;
-     double mag = 0.0, theta = 0.0;
-     bool cartesian, polar;
+     double m_real = 0.0, m_imag = 0.0;
+     double m_mag = 0.0, m_theta = 0.0;
+     bool m_cartesian, m_polar;
 
    public:
      complex_number ();
      complex_number (double r, double i);
      void calculate_cartesian ();
-     double get_real ();
-     double get_imag ();
+     double real ();
+     double imag ();
      void calculate_polar ();
-     double get_mag ();
-     double get_theta ();
+     double mag ();
+     double theta ();
      void print_cartesian ();
      void print_polar ();
-     void set_polar (double m, double t);
+     void polar (double m, double t);
    };
 
    complex_number add (complex_number& a, complex_number& b);
@@ -224,7 +224,7 @@ that we get the right answer!
 
      Incorrect! Try using the active code above.
 
-Now let's try implementing the ``set_cartesian`` function. Write your
+Now let's try implementing the ``cartesian`` function. Write your
 implementation in the commented area of the active code below.
 Read the comments in ``main`` to test out your code! If you get stuck,
 you can reveal the extra problem at the end for help.
@@ -233,81 +233,81 @@ you can reveal the extra problem at the end for help.
    :name: c192_fourteennine-support
    :hidden:
 
-   complex_number::complex_number () { cartesian = true;  polar = false; }
+   complex_number::complex_number () { m_cartesian = true;  m_polar = false; }
 
    complex_number::complex_number (double r, double i) {
-     real = r;  imag = i;
-     cartesian = true;  polar = false;
+     m_real = r;  m_imag = i;
+     m_cartesian = true;  m_polar = false;
    }
 
    void complex_number::calculate_cartesian () {
-     real = mag * std::cos (theta);
-     imag = mag * std::sin (theta);
-     cartesian = true;
+     m_real = m_mag * std::cos (m_theta);
+     m_imag = m_mag * std::sin (m_theta);
+     m_cartesian = true;
    }
 
-   double complex_number::get_real () {
-     if (cartesian == false) calculate_cartesian ();
-     return real;
+   double complex_number::real () {
+     if (m_cartesian == false) calculate_cartesian ();
+     return m_real;
    }
 
-   double complex_number::get_imag () {
-     if (cartesian == false) calculate_cartesian ();
-     return imag;
+   double complex_number::imag () {
+     if (m_cartesian == false) calculate_cartesian ();
+     return m_imag;
    }
 
    void complex_number::calculate_polar () {
-     mag = std::sqrt(std::pow(real, 2) + std::pow(imag, 2));
-     theta = std::atan2(imag, real);
-     polar = true;
+     m_mag = std::sqrt(std::pow(m_real, 2) + std::pow(m_imag, 2));
+     m_theta = std::atan2(m_imag, m_real);
+     m_polar = true;
    }
 
-   double complex_number::get_mag () {
-     if (polar == false) {
+   double complex_number::mag () {
+     if (m_polar == false) {
        calculate_polar ();
      }
-     return mag;
+     return m_mag;
    }
 
-   double complex_number::get_theta () {
-     if (polar == false) {
+   double complex_number::theta () {
+     if (m_polar == false) {
        calculate_polar ();
      }
-     return theta;
+     return m_theta;
    }
 
    void complex_number::print_cartesian () {
-     std::cout << get_real() << " + " << get_imag() << 'i' << '\n';
+     std::cout << real() << " + " << imag() << 'i' << '\n';
    }
 
    void complex_number::print_polar () {
-     std::cout << get_mag() << " e^ " << get_theta() << 'i' << '\n';
+     std::cout << mag() << " e^ " << theta() << 'i' << '\n';
    }
 
    complex_number add (complex_number& a, complex_number& b) {
-     double real = a.get_real() + b.get_real();
-     double imag = a.get_imag() + b.get_imag();
-     complex_number sum (real, imag);
+     double m_real = a.real() + b.real();
+     double m_imag = a.imag() + b.imag();
+     complex_number sum (m_real, m_imag);
      return sum;
    }
 
    complex_number subtract (complex_number& a, complex_number& b) {
-     double real = a.get_real() - b.get_real();
-     double imag = a.get_imag() - b.get_imag();
-     complex_number diff (real, imag);
+     double m_real = a.real() - b.real();
+     double m_imag = a.imag() - b.imag();
+     complex_number diff (m_real, m_imag);
      return diff;
    }
 
-   void complex_number::set_polar (double m, double t) {
-     mag = m;  theta = t;
-     cartesian = false;  polar = true;
+   void complex_number::polar (double m, double t) {
+     m_mag = m;  m_theta = t;
+     m_cartesian = false;  m_polar = true;
    }
 
    complex_number mult (complex_number& a, complex_number& b) {
-     double mag = a.get_mag() * b.get_mag();
-     double theta = a.get_theta() + b.get_theta();
+     double m_mag = a.mag() * b.mag();
+     double m_theta = a.theta() + b.theta();
      complex_number product;
-     product.set_polar (mag, theta);
+     product.polar (m_mag, m_theta);
      return product;
    }
 
@@ -322,27 +322,27 @@ you can reveal the extra problem at the end for help.
 
    class complex_number
    {
-     double real = 0.0, imag = 0.0;
-     double mag = 0.0, theta = 0.0;
-     bool cartesian, polar;
+     double m_real = 0.0, m_imag = 0.0;
+     double m_mag = 0.0, m_theta = 0.0;
+     bool m_cartesian, m_polar;
 
    public:
      complex_number ();
      complex_number (double r, double i);
      void calculate_cartesian ();
-     double get_real ();
-     double get_imag ();
+     double real ();
+     double imag ();
      void calculate_polar ();
-     double get_mag ();
-     double get_theta ();
+     double mag ();
+     double theta ();
      void print_cartesian ();
      void print_polar ();
-     void set_polar (double m, double t);
-     void set_cartesian (double r, double i);
+     void polar (double m, double t);
+     void cartesian (double r, double i);
    };
 
-   void complex_number::set_cartesian (double r, double i) {
-     // ``set_cartesian`` should set real and imag to
+   void complex_number::cartesian (double r, double i) {
+     // ``cartesian`` should set real and imag to
      // r and i respectively and set the cartesian flag.
      // Write your implementation here.
    }
@@ -357,7 +357,7 @@ you can reveal the extra problem at the end for help.
      complex_number product = mult (c1, c2);
      product.print_cartesian();
      // Should output 1.5 + 2.7i
-     product.set_cartesian(1.5, 2.7);
+     product.cartesian(1.5, 2.7);
      product.print_cartesian();
    }
 
@@ -367,30 +367,30 @@ you can reveal the extra problem at the end for help.
    .. tb-parsons::
       :name: c192_question14_7_2
 
-      Let's write the code for the ``set_cartesian`` function.
+      Let's write the code for the ``cartesian`` function.
 
       .. code-block:: c++
 
          {{group}}
-         void complex_number::set_cartesian (double r, double i) {
+         void complex_number::cartesian (double r, double i) {
          {{endgroup}}
          {{distractor}}
          {{group}}
-         complex_number complex_number::set_cartesian (double r, double i) {
+         complex_number complex_number::cartesian (double r, double i) {
          {{endgroup}}
          {{group}}
-            real = r;    imag = i;
-         {{endgroup}}
-         {{distractor}}
-         {{group}}
-            real = i;    imag = r;
-         {{endgroup}}
-         {{group}}
-            cartesian = true;  polar = false;
+            m_real = r;    m_imag = i;
          {{endgroup}}
          {{distractor}}
          {{group}}
-            cartesian = false;  polar = true;
+            m_real = i;    m_imag = r;
+         {{endgroup}}
+         {{group}}
+            m_cartesian = true;  m_polar = false;
+         {{endgroup}}
+         {{distractor}}
+         {{group}}
+            m_cartesian = false;  m_polar = true;
          {{endgroup}}
          {{group}}
          }

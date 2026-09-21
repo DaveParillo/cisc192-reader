@@ -159,11 +159,11 @@ at the end for help.
    :hidden:
 
    playing_card::playing_card () {
-       suit = spades;  rank = ace;
+       m_suit = spades;  m_rank = ace;
    }
 
    playing_card::playing_card (card_suit s, card_rank r) {
-       suit = s;  rank = r;
+       m_suit = s;  m_rank = r;
    }
 
    void playing_card::print () const {
@@ -188,19 +188,19 @@ at the end for help.
        ranks[12] = "Queen";
        ranks[13] = "King";
 
-       cout << ranks[rank] << " of " << suits[suit] << '\n';
+       cout << ranks[m_rank] << " of " << suits[m_suit] << '\n';
    }
 
    bool playing_card::is_greater (const playing_card& c2) const {
-       if (suit > c2.suit) return true;
-       if (suit < c2.suit) return false;
-       if (rank > c2.rank) return true;
-       if (rank < c2.rank) return false;
+       if (m_suit > c2.m_suit) return true;
+       if (m_suit < c2.m_suit) return false;
+       if (m_rank > c2.m_rank) return true;
+       if (m_rank < c2.m_rank) return false;
        return false;
    }
 
    bool playing_card::equals (const playing_card& c2) const {
-       return (rank == c2.rank && suit == c2.suit);
+       return (m_rank == c2.m_rank && m_suit == c2.m_suit);
    }
 
    card_deck::card_deck () {
@@ -208,10 +208,10 @@ at the end for help.
        cards = temp;
 
        std::size_t i = 0;
-       for (int suit = clubs; suit <= spades; ++suit) {
-           for (int rank = ace; rank <= king; ++rank) {
-               cards[i].suit = static_cast<card_suit>(suit);
-               cards[i].rank = static_cast<card_rank>(rank);
+       for (int m_suit = clubs; m_suit <= spades; ++m_suit) {
+           for (int m_rank = ace; m_rank <= king; ++m_rank) {
+               cards[i].m_suit = static_cast<card_suit>(m_suit);
+               cards[i].m_rank = static_cast<card_rank>(m_rank);
                i++;
            }
        }
@@ -275,15 +275,15 @@ at the end for help.
 
    void card_deck::shuffle_deck () {
        for (std::size_t i = 0; i < cards.size(); i++) {
-           std::size_t x = random_int (i, cards.size() - 1);
-           swap_cards (i, x);
+           std::size_t m_x = random_int (i, cards.size() - 1);
+           swap_cards (i, m_x);
        }
    }
 
    void card_deck::sort_deck () {
        for (std::size_t i = 0; i < cards.size(); i++) {
-           std::size_t x = find_lowest_card (i);
-           swap_cards (i, x);
+           std::size_t m_x = find_lowest_card (i);
+           swap_cards (i, m_x);
        }
    }
 
@@ -310,8 +310,8 @@ at the end for help.
    std::size_t random_int(std::size_t low, std::size_t high);
 
    struct playing_card {
-       card_rank rank;
-       card_suit suit;
+       card_rank m_rank;
+       card_suit m_suit;
        playing_card ();
        playing_card (card_suit s, card_rank r);
        void print () const;
@@ -459,11 +459,11 @@ deck of cards. If you get stuck, you can reveal the extra problems at the end fo
    :hidden:
 
    playing_card::playing_card () {
-       suit = spades;  rank = ace;
+       m_suit = spades;  m_rank = ace;
    }
 
    playing_card::playing_card (card_suit s, card_rank r) {
-       suit = s;  rank = r;
+       m_suit = s;  m_rank = r;
    }
 
    void playing_card::print () const {
@@ -488,19 +488,19 @@ deck of cards. If you get stuck, you can reveal the extra problems at the end fo
        ranks[12] = "Queen";
        ranks[13] = "King";
 
-       std::cout << ranks[rank] << " of " << suits[suit] << '\n';
+       std::cout << ranks[m_rank] << " of " << suits[m_suit] << '\n';
    }
 
    bool playing_card::is_greater (const playing_card& c2) const {
-       if (suit > c2.suit) return true;
-       if (suit < c2.suit) return false;
-       if (rank > c2.rank) return true;
-       if (rank < c2.rank) return false;
+       if (m_suit > c2.m_suit) return true;
+       if (m_suit < c2.m_suit) return false;
+       if (m_rank > c2.m_rank) return true;
+       if (m_rank < c2.m_rank) return false;
        return false;
    }
 
    bool playing_card::equals (const playing_card& c2) const {
-       return (rank == c2.rank && suit == c2.suit);
+       return (m_rank == c2.m_rank && m_suit == c2.m_suit);
    }
 
    card_deck::card_deck () {
@@ -508,10 +508,10 @@ deck of cards. If you get stuck, you can reveal the extra problems at the end fo
        cards = temp;
 
        std::size_t i = 0;
-       for (int suit = clubs; suit <= spades; ++suit) {
-           for (int rank = ace; rank <= king; ++rank) {
-               cards[i].suit = static_cast<card_suit>(suit);
-               cards[i].rank = static_cast<card_rank>(rank);
+       for (int m_suit = clubs; m_suit <= spades; ++m_suit) {
+           for (int m_rank = ace; m_rank <= king; ++m_rank) {
+               cards[i].m_suit = static_cast<card_suit>(m_suit);
+               cards[i].m_rank = static_cast<card_rank>(m_rank);
                i++;
            }
        }
@@ -575,15 +575,15 @@ deck of cards. If you get stuck, you can reveal the extra problems at the end fo
 
    void card_deck::shuffle_deck () {
        for (std::size_t i = 0; i < cards.size(); i++) {
-           std::size_t x = random_int (i, cards.size() - 1);
-           swap_cards (i, x);
+           std::size_t m_x = random_int (i, cards.size() - 1);
+           swap_cards (i, m_x);
        }
    }
 
    void card_deck::sort_deck () {
        for (std::size_t i = 0; i < cards.size(); i++) {
-           std::size_t x = find_lowest_card (i);
-           swap_cards (i, x);
+           std::size_t m_x = find_lowest_card (i);
+           swap_cards (i, m_x);
        }
    }
 
@@ -640,8 +640,8 @@ deck of cards. If you get stuck, you can reveal the extra problems at the end fo
    std::size_t random_int(std::size_t low, std::size_t high);
 
    struct playing_card {
-       card_rank rank;
-       card_suit suit;
+       card_rank m_rank;
+       card_suit m_suit;
        playing_card ();
        playing_card (card_suit s, card_rank r);
        void print () const;

@@ -46,16 +46,16 @@ For example, we could have written the ``playing_card`` definition:
    struct playing_card
    {
    private:
-     int suit, rank;
+     int m_suit, m_rank;
 
    public:
      playing_card ();
      playing_card (int s, int r);
 
-     int get_rank () const { return rank; }
-     int get_suit () const { return suit; }
-     void set_rank (int r) { rank = r; }
-     void set_suit (int s) { suit = s; }
+     int rank () const { return m_rank; }
+     int suit () const { return m_suit; }
+     void rank (int r) { m_rank = r; }
+     void suit (int s) { m_suit = s; }
    };
 
 .. index::
@@ -73,12 +73,12 @@ they can be read and written only by ``playing_card`` member functions.
    single: accessor function
 
 It is still possible for client programs to read and write the instance
-variables using the **accessor functions** (the ones beginning with
-``get`` and ``set``). On the other hand, it is now easy to control which
+variables using the **accessor functions**. A reader function takes no arguments,
+while a writer function takes the replacement value. On the other hand, it is now easy to control which
 operations clients can perform on which instance variables. For example,
 it might be a good idea to make cards “read only” so that after they are
 constructed, they cannot be changed. To do that, all we have to do is
-remove the ``set`` functions.
+remove the writer functions.
 
 Another advantage of using accessor functions is that we can change the
 internal representations of cards without having to change any client
@@ -91,11 +91,11 @@ Run the active code below. Uncomment the commented out code to see what happens!
    :hidden:
 
    playing_card::playing_card () {
-       suit = 3;  rank = 0;
+       m_suit = 3;  m_rank = 0;
    }
 
    playing_card::playing_card (int s, int r) {
-       suit = s;  rank = r;
+       m_suit = s;  m_rank = r;
    }
 
    void playing_card::print () const {
@@ -120,7 +120,7 @@ Run the active code below. Uncomment the commented out code to see what happens!
        ranks[12] = "Queen";
        ranks[13] = "King";
 
-       std::cout << ranks[rank] << " of " << suits[suit] << '\n';
+       std::cout << ranks[m_rank] << " of " << suits[m_suit] << '\n';
    }
 
 
@@ -135,40 +135,40 @@ Run the active code below. Uncomment the commented out code to see what happens!
 
    struct playing_card {
        private:
-           int suit, rank;
+           int m_suit, m_rank;
        public:
            playing_card ();
            playing_card (int s, int r);
-           int get_rank () const { return rank; }
-           int get_suit () const { return suit; }
-           void set_rank (int r) { rank = r; }
-           void set_suit (int s) { suit = s; }
+           int rank () const { return m_rank; }
+           int suit () const { return m_suit; }
+           void rank (int r) { m_rank = r; }
+           void suit (int s) { m_suit = s; }
            void print () const;
    };
 
    int main() {
        playing_card card (3, 8);
        card.print();
-       std::cout << "card_rank: " << card.get_rank() << "    card_suit: " << card.get_suit() << '\n';
-       card.set_rank(12);
-       card.set_suit(2);
+       std::cout << "card_rank: " << card.rank() << "    card_suit: " << card.suit() << '\n';
+       card.rank(12);
+       card.suit(2);
        card.print();
-       std::cout << "card_rank: " << card.get_rank() << "    card_suit: " << card.get_suit() << '\n';
+       std::cout << "card_rank: " << card.rank() << "    card_suit: " << card.suit() << '\n';
 
        // If you uncomment the following code, you'll get an error! We cannot directly
        // access the private data members of playing_card, which is why we use accessor functions.
 
        /*
-       cout << "card_rank: " << card.rank << "\t card_suit: " << card.suit << '\n';
-       card.rank = 4;
-       card.suit = 0;
+       cout << "card_rank: " << card.m_rank << "\t card_suit: " << card.m_suit << '\n';
+       card.m_rank = 4;
+       card.m_suit = 0;
        */
    }
 
 .. tb-choice::
    :name: question14_1_1
 
-   Data encapsulation is based on the idea that each structure definition should provide a set of functions that 
+   Data encapsulation is based on the idea that each structure definition should provide a set of functions that
    apply to the structure, and allow unrestricted access to the internal representation.
 
    - [ ] True
@@ -196,16 +196,16 @@ Run the active code below. Uncomment the commented out code to see what happens!
 
    Multiple Response: Which of the following are examples of accessor functions?
 
-   - [x] get_suit
+   - [x] suit
 
      Correct!
-   - [x] set_rank
+   - [x] rank
 
      Correct! "Setter" functions are also known as "mutator" functions.
    - [ ] print
 
      Incorrect!
-   - [x] get_rank
+   - [x] rank
 
      Correct!
 

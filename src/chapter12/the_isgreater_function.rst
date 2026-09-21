@@ -43,12 +43,12 @@ it makes more sense to write ``is_greater`` as a member function:
 
    bool playing_card::is_greater (const playing_card& c2) const {
      // first check the suits
-     if (suit > c2.suit) return true;
-     if (suit < c2.suit) return false;
+     if (m_suit > c2.m_suit) return true;
+     if (m_suit < c2.m_suit) return false;
 
      // if the suits are equal, check the ranks
-     if (rank > c2.rank) return true;
-     if (rank < c2.rank) return false;
+     if (m_rank > c2.m_rank) return true;
+     if (m_rank < c2.m_rank) return false;
 
      // if the ranks are also equal, return false
      return false;
@@ -90,15 +90,15 @@ Feel free to change the values of the cards.
 
 
    playing_card::playing_card () {
-     suit = 0;  rank = 1;
+     m_suit = 0;  m_rank = 1;
    }
 
    playing_card::playing_card (int s, int r) {
-     suit = s;  rank = r;
+     m_suit = s;  m_rank = r;
    }
 
    bool playing_card::equals (const playing_card& c2) const {
-     bool boolean = (rank == c2.rank && suit == c2.suit);
+     bool boolean = (m_rank == c2.m_rank && m_suit == c2.m_suit);
      if (boolean == true) {
        cout << "Yup, that's the same card." << '\n';
      }
@@ -109,11 +109,11 @@ Feel free to change the values of the cards.
    }
 
    bool playing_card::is_greater (const playing_card& c2) const {
-     if (suit > c2.suit) return true;
-     if (suit < c2.suit) return false;
+     if (m_suit > c2.m_suit) return true;
+     if (m_suit < c2.m_suit) return false;
 
-     if (rank > c2.rank) return true;
-     if (rank < c2.rank) return false;
+     if (m_rank > c2.m_rank) return true;
+     if (m_rank < c2.m_rank) return false;
 
      return false;
    }
@@ -140,7 +140,7 @@ Feel free to change the values of the cards.
      ranks[12] = "Queen";
      ranks[13] = "King";
 
-      cout << ranks[rank] << " of " << suits[suit] << '\n';
+      cout << ranks[m_rank] << " of " << suits[m_suit] << '\n';
    }
 
 
@@ -155,7 +155,7 @@ Feel free to change the values of the cards.
    using std::cout;
 
    struct playing_card {
-       int suit, rank;
+       int m_suit, m_rank;
 
        playing_card ();
        playing_card (int s, int r);

@@ -21,7 +21,7 @@ As a member function, it looks like this:
 ::
 
    bool playing_card::equals (const playing_card& c2) const {
-     return (rank == c2.rank && suit == c2.suit);
+     return (m_rank == c2.m_rank && m_suit == c2.m_suit);
    }
 
 To use this function, we have to invoke it on one of the cards and pass
@@ -45,7 +45,7 @@ to rewrite ``equals`` as a nonmember function:
 ::
 
    bool equals (const playing_card& c1, const playing_card& c2) {
-     return (c1.rank == c2.rank && c1.suit == c2.suit);
+     return (c1.m_rank == c2.m_rank && c1.m_suit == c2.m_suit);
    }
 
 When we call this version of the function, the arguments appear
@@ -69,15 +69,15 @@ Run the active code below to see how the ``equals()`` function works.
 
 
    playing_card::playing_card () {
-     suit = 0;  rank = 1;
+     m_suit = 0;  m_rank = 1;
    }
 
    playing_card::playing_card (int s, int r) {
-     suit = s;  rank = r;
+     m_suit = s;  m_rank = r;
    }
 
    bool playing_card::equals (const playing_card& c2) const {
-     bool boolean = (rank == c2.rank && suit == c2.suit);
+     bool boolean = (m_rank == c2.m_rank && m_suit == c2.m_suit);
      if (boolean == true) {
        std::cout << "Yup, that's the same card." << '\n';
      }
@@ -109,7 +109,7 @@ Run the active code below to see how the ``equals()`` function works.
      ranks[12] = "Queen";
      ranks[13] = "King";
 
-      std::cout << ranks[rank] << " of " << suits[suit] << '\n';
+      std::cout << ranks[m_rank] << " of " << suits[m_suit] << '\n';
    }
 
 
@@ -123,7 +123,7 @@ Run the active code below to see how the ``equals()`` function works.
    #include <vector>
 
    struct playing_card {
-       int suit, rank;
+       int m_suit, m_rank;
 
        playing_card ();
        playing_card (int s, int r);
@@ -190,24 +190,24 @@ Run the active code below to see how the ``equals()`` function works.
       bool playing_card::is_trump (std::string trump_suit) {
       {{endgroup}}
       {{group}}
-       if (suit == trump_suit) {
+       if (m_suit == trump_suit) {
         return true;
        }
       {{endgroup}}
       {{distractor}}
       {{group}}
-       if (suit != trump_suit) {
+       if (m_suit != trump_suit) {
         return false;
        }
       {{endgroup}}
       {{group}}
-       else if (rank == "Jack" && suit == same_color()) {
+       else if (m_rank == "Jack" && m_suit == same_color()) {
         return true;
        }
       {{endgroup}}
       {{distractor}}
       {{group}}
-       else if (rank == "Jack") {
+       else if (m_rank == "Jack") {
         return true;
        }
       {{endgroup}}

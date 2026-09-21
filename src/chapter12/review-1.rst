@@ -53,17 +53,17 @@ Multiple Choice Exercises
    .. code-block:: cpp
 
        struct card {
-         int suit, rank;
+         int m_suit, m_rank;
          card ();
          card (int s, int r);
        };
 
        card::card () {
-         suit = 0;  rank = 0;
+         m_suit = 0;  m_rank = 0;
        }
 
        card::card (int s, int r) {
-         suit = s;  rank = r;
+         m_suit = s;  m_rank = r;
        }
 
        int main() {
@@ -94,7 +94,7 @@ Multiple Choice Exercises
    .. code-block:: cpp
 
        struct card {
-         int suit, rank;
+         int m_suit, m_rank;
          card ();
          card (int s, int r);
          void print () const;
@@ -129,7 +129,7 @@ Multiple Choice Exercises
    .. code-block:: cpp
 
       struct card {
-        int suit, rank;
+        int m_suit, m_rank;
         card ();
         card (int s, int r);
         void print () const;
@@ -166,7 +166,7 @@ Multiple Choice Exercises
    .. code-block:: cpp
 
       struct card {
-        int suit, rank;
+        int m_suit, m_rank;
         card ();
         card (int s, int r);
         void print () const;
@@ -176,7 +176,7 @@ Multiple Choice Exercises
       vector<card> build_deck();
 
       bool equals (const card& c1, const card& c2){
-        return (c1.rank == c2.rank && c1.suit == c2.suit);
+        return (c1.m_rank == c2.m_rank && c1.m_suit == c2.m_suit);
       }
 
       void print_deck(const vector<card>& deck);
@@ -213,7 +213,7 @@ Multiple Choice Exercises
    .. code-block:: cpp
 
       struct card {
-        int suit, rank;
+        int m_suit, m_rank;
         card ();
         card (int s, int r);
         void print () const;
@@ -223,10 +223,10 @@ Multiple Choice Exercises
       vector<card> create_deck() {
         vector<card> deck (12);
         int i = 0;
-        for (int suit = 0; suit <= 3; suit++) {
-          for (int rank = 1; rank < 4; rank++) {
-            deck[i].suit = suit;
-            deck[i].rank = rank;
+        for (int m_suit = 0; m_suit <= 3; m_suit++) {
+          for (int m_rank = 1; m_rank < 4; m_rank++) {
+            deck[i].m_suit = m_suit;
+            deck[i].m_rank = m_rank;
             i++;
           }
         }
@@ -261,7 +261,7 @@ Multiple Choice Exercises
    .. code-block:: cpp
 
        struct card {
-         int suit, rank;
+         int m_suit, m_rank;
          card ();
          card (int s, int r);
          void print () const;
@@ -305,7 +305,7 @@ Multiple Choice Exercises
    .. code-block:: cpp
 
        struct card {
-         int suit, rank;
+         int m_suit, m_rank;
          card ();
          card (int s, int r);
          void print () const;

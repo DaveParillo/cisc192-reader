@@ -21,11 +21,3 @@ Files and standard-library containers
    review-1.rst
    review-2.rst
    review-3.rst
-
-.. toctree::
-   :hidden:
-
-   coding_practice_sq.rst
-   mixed_up_code_ac.rst
-   mixed_up_code_orig.rst
-

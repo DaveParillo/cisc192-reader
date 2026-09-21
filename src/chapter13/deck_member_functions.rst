@@ -28,11 +28,11 @@ to print out the deck instead of writing a for loop in main.
    :hidden:
 
    playing_card::playing_card () {
-       suit = spades;  rank = ace;
+       m_suit = spades;  m_rank = ace;
    }
 
    playing_card::playing_card (card_suit s, card_rank r) {
-       suit = s;  rank = r;
+       m_suit = s;  m_rank = r;
    }
 
    void playing_card::print () const {
@@ -57,7 +57,7 @@ to print out the deck instead of writing a for loop in main.
        ranks[12] = "Queen";
        ranks[13] = "King";
 
-       std::cout << ranks[rank] << " of " << suits[suit] << '\n';
+       std::cout << ranks[m_rank] << " of " << suits[m_suit] << '\n';
    }
 
    card_deck::card_deck () {
@@ -65,10 +65,10 @@ to print out the deck instead of writing a for loop in main.
        cards = temp;
 
        std::size_t i = 0;
-       for (int suit = clubs; suit <= spades; ++suit) {
-           for (int rank = ace; rank <= king; ++rank) {
-               cards[i].suit = static_cast<card_suit>(suit);
-               cards[i].rank = static_cast<card_rank>(rank);
+       for (int m_suit = clubs; m_suit <= spades; ++m_suit) {
+           for (int m_rank = ace; m_rank <= king; ++m_rank) {
+               cards[i].m_suit = static_cast<card_suit>(m_suit);
+               cards[i].m_rank = static_cast<card_rank>(m_rank);
                i++;
            }
        }
@@ -97,8 +97,8 @@ to print out the deck instead of writing a for loop in main.
    ten, jack, queen, king };
 
    struct playing_card {
-       card_rank rank;
-       card_suit suit;
+       card_rank m_rank;
+       card_suit m_suit;
        playing_card ();
        playing_card (card_suit s, card_rank r);
        void print () const;
@@ -153,7 +153,7 @@ One solution is to declare ``card_deck`` before ``playing_card`` and then define
 
    // that way we can refer to it in the definition of playing_card
    struct playing_card {
-     int suit, rank;
+     int m_suit, m_rank;
 
      playing_card ();
      playing_card (int s, int r);
@@ -238,11 +238,11 @@ The active code below uses the ``find`` function that we just wrote.
    :hidden:
 
    playing_card::playing_card () {
-       suit = spades;  rank = ace;
+       m_suit = spades;  m_rank = ace;
    }
 
    playing_card::playing_card (card_suit s, card_rank r) {
-       suit = s;  rank = r;
+       m_suit = s;  m_rank = r;
    }
 
    void playing_card::print () const {
@@ -267,7 +267,7 @@ The active code below uses the ``find`` function that we just wrote.
        ranks[12] = "Queen";
        ranks[13] = "King";
 
-       std::cout << ranks[rank] << " of " << suits[suit] << '\n';
+       std::cout << ranks[m_rank] << " of " << suits[m_suit] << '\n';
    }
 
    card_deck::card_deck () {
@@ -275,10 +275,10 @@ The active code below uses the ``find`` function that we just wrote.
        cards = temp;
 
        std::size_t i = 0;
-       for (int suit = clubs; suit <= spades; ++suit) {
-           for (int rank = ace; rank <= king; ++rank) {
-               cards[i].suit = static_cast<card_suit>(suit);
-               cards[i].rank = static_cast<card_rank>(rank);
+       for (int m_suit = clubs; m_suit <= spades; ++m_suit) {
+           for (int m_rank = ace; m_rank <= king; ++m_rank) {
+               cards[i].m_suit = static_cast<card_suit>(m_suit);
+               cards[i].m_rank = static_cast<card_rank>(m_rank);
                i++;
            }
        }
@@ -300,7 +300,7 @@ The active code below uses the ``find`` function that we just wrote.
    }
 
    bool playing_card::equals (const playing_card& c2) const {
-       return (rank == c2.rank && suit == c2.suit);
+       return (m_rank == c2.m_rank && m_suit == c2.m_suit);
    }
 
 
@@ -320,8 +320,8 @@ The active code below uses the ``find`` function that we just wrote.
    ten, jack, queen, king };
 
    struct playing_card {
-       card_rank rank;
-       card_suit suit;
+       card_rank m_rank;
+       card_suit m_suit;
        playing_card ();
        playing_card (card_suit s, card_rank r);
        void print () const;

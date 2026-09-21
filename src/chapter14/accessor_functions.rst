@@ -3,20 +3,20 @@
 Accessor functions
 ------------------
 
-By convention, accessor functions have names that begin with ``get`` and
-end with the name of the instance variable they fetch. The return type,
+Accessor functions should use the value name directly; the function signature
+shows whether the operation reads or writes the value. The return type,
 naturally, is the type of the corresponding instance variable.
 
 In this case, the accessor functions give us an opportunity to make sure
 that the value of the variable is valid before we return it. Here’s what
-``get_real`` looks like:
+``real`` looks like:
 
 ::
 
-   double complex_number::get_real ()
+   double complex_number::real ()
    {
-     if (cartesian == false) calculate_cartesian ();
-     return real;
+     if (m_cartesian == false) calculate_cartesian ();
+     return m_real;
    }
 
 If the ``cartesian`` flag is true then ``real`` contains valid data, and
@@ -27,9 +27,9 @@ to convert from polar coordinates to Cartesian coordinates:
 
    void complex_number::calculate_cartesian ()
    {
-     real = mag * std::cos (theta);
-     imag = mag * std::sin (theta);
-     cartesian = true;
+     m_real = m_mag * std::cos (m_theta);
+     m_imag = m_mag * std::sin (m_theta);
+     m_cartesian = true;
    }
 
 Assuming that the polar coordinates are valid, we can calculate the
@@ -38,11 +38,11 @@ we set the ``cartesian`` flag, indicating that ``real`` and ``imag`` now
 contain valid data.
 
 As an exercise, write a corresponding function called ``calculate_polar``
-and then write ``get_mag`` and ``get_theta``. One unusual thing about
+and then write ``mag`` and ``theta``. One unusual thing about
 these accessor functions is that they are not ``const``, because
 invoking them might modify the instance variables.
 
-Take a look at the active code below, which uses the ``get_real``
+Take a look at the active code below, which uses the ``real``
 accessor function.
 
 .. tb-code:: cpp
@@ -54,42 +54,42 @@ accessor function.
 
    class complex_number
    {
-     double real = 0.0, imag = 0.0;
-     double mag = 0.0, theta = 0.0;
-     bool cartesian, polar;
+     double m_real = 0.0, m_imag = 0.0;
+     double m_mag = 0.0, m_theta = 0.0;
+     bool m_cartesian, m_polar;
 
    public:
-     complex_number () { cartesian = true;  polar = false; }
+     complex_number () { m_cartesian = true;  m_polar = false; }
      complex_number (double r, double i)
      {
-       real = r;  imag = i;
-       cartesian = true;  polar = false;
+       m_real = r;  m_imag = i;
+       m_cartesian = true;  m_polar = false;
      }
      void calculate_cartesian ()
      {
-       real = mag * std::cos (theta);
-       imag = mag * std::sin (theta);
-       cartesian = true;
+       m_real = m_mag * std::cos (m_theta);
+       m_imag = m_mag * std::sin (m_theta);
+       m_cartesian = true;
      }
-     double get_real ()
+     double real ()
      {
-       if (cartesian == false) calculate_cartesian ();
-       return real;
+       if (m_cartesian == false) calculate_cartesian ();
+       return m_real;
      }
-     double get_imag ()
+     double imag ()
      {
-       if (cartesian == false) calculate_cartesian ();
-       return imag;
+       if (m_cartesian == false) calculate_cartesian ();
+       return m_imag;
      }
    };
 
    int main() {
      complex_number c1 (5.0, 3.5);
-     std::cout << c1.get_real() << ", " << c1.get_imag() << '\n';
+     std::cout << c1.real() << ", " << c1.imag() << '\n';
    }
 
 Write your implementation of ``calculate_polar`` in the commented area of the active
-code below. Once you're done with that, write the ``get_mag`` and ``get_theta``
+code below. Once you're done with that, write the ``mag`` and ``theta``
 accessor functions. Read the comments in ``main`` to see how we'll test if your
 functions works. If you get stuck, you can reveal the extra problem at the end for help.
 
@@ -97,27 +97,27 @@ functions works. If you get stuck, you can reveal the extra problem at the end f
    :name: c192_fourteenfive-support
    :hidden:
 
-   complex_number::complex_number () { cartesian = true;  polar = false; }
+   complex_number::complex_number () { m_cartesian = true;  m_polar = false; }
 
    complex_number::complex_number (double r, double i) {
-     real = r;  imag = i;
-     cartesian = true;  polar = false;
+     m_real = r;  m_imag = i;
+     m_cartesian = true;  m_polar = false;
    }
 
    void complex_number::calculate_cartesian () {
-     real = mag * std::cos (theta);
-     imag = mag * std::sin (theta);
-     cartesian = true;
+     m_real = m_mag * std::cos (m_theta);
+     m_imag = m_mag * std::sin (m_theta);
+     m_cartesian = true;
    }
 
-   double complex_number::get_real () {
-     if (cartesian == false) calculate_cartesian ();
-     return real;
+   double complex_number::real () {
+     if (m_cartesian == false) calculate_cartesian ();
+     return m_real;
    }
 
-   double complex_number::get_imag () {
-     if (cartesian == false) calculate_cartesian ();
-     return imag;
+   double complex_number::imag () {
+     if (m_cartesian == false) calculate_cartesian ();
+     return m_imag;
    }
 
 
@@ -131,19 +131,19 @@ functions works. If you get stuck, you can reveal the extra problem at the end f
 
    class complex_number
    {
-     double real = 0.0, imag = 0.0;
-     double mag = 0.0, theta = 0.0;
-     bool cartesian, polar;
+     double m_real = 0.0, m_imag = 0.0;
+     double m_mag = 0.0, m_theta = 0.0;
+     bool m_cartesian, m_polar;
 
    public:
      complex_number ();
      complex_number (double r, double i);
      void calculate_cartesian ();
-     double get_real ();
-     double get_imag ();
+     double real ();
+     double imag ();
      void calculate_polar ();
-     double get_mag ();
-     double get_theta ();
+     double mag ();
+     double theta ();
    };
 
    void complex_number::calculate_polar () {
@@ -152,14 +152,14 @@ functions works. If you get stuck, you can reveal the extra problem at the end f
      // Write your implementation here.
    }
 
-   double complex_number::get_mag () {
-     // ``get_mag`` should return the magnitude.
+   double complex_number::mag () {
+     // ``mag`` should return the magnitude.
      // Delete the return 0 and write your implementation here.
      return 0;
    }
 
-   double complex_number::get_theta () {
-     // ``get_mag`` should return the theta.
+   double complex_number::theta () {
+     // ``mag`` should return the theta.
      // Delete the return 0 and write your implementation here.
      return 0;
    }
@@ -167,7 +167,7 @@ functions works. If you get stuck, you can reveal the extra problem at the end f
    int main() {
      complex_number c1 (0.0, 1.0);
      // Magnitude should be 1, theta should be pi/2, or about 1.5708
-     std::cout << c1.get_mag() << ", " << c1.get_theta() << '\n';
+     std::cout << c1.mag() << ", " << c1.theta() << '\n';
    }
 
 .. tb-reveal:: Reveal Problem
@@ -189,22 +189,22 @@ functions works. If you get stuck, you can reveal the extra problem at the end f
          void complex_number::calculate_cartesian () {
          {{endgroup}}
          {{group}}
-            mag = std::sqrt(std::pow(real, 2) + std::pow(imag, 2));
+            m_mag = std::sqrt(std::pow(m_real, 2) + std::pow(m_imag, 2));
          {{endgroup}}
          {{distractor}}
          {{group}}
-            mag = std::pow(real, 2) + std::pow(imag, 2);
+            m_mag = std::pow(m_real, 2) + std::pow(m_imag, 2);
          {{endgroup}}
          {{group}}
-            theta = std::atan2(imag, real);
+            m_theta = std::atan2(m_imag, m_real);
          {{endgroup}}
          {{group}}
-            polar = true;
+            m_polar = true;
          }
          {{endgroup}}
          {{distractor}}
          {{group}}
-            cartesian = true;
+            m_cartesian = true;
          }
          {{endgroup}}
 
@@ -214,27 +214,27 @@ functions works. If you get stuck, you can reveal the extra problem at the end f
    .. tb-parsons::
       :name: c192_question14_4_2
 
-      Let's write the code for the ``get_mag`` function,
+      Let's write the code for the ``mag`` function,
       which should return the magnitude of a ``complex_number`` object.
 
       .. code-block:: c++
 
          {{group}}
-         double complex_number::get_mag () {
+         double complex_number::mag () {
          {{endgroup}}
          {{distractor}}
          {{group}}
-         void complex_number::get_mag () {
+         void complex_number::mag () {
          {{endgroup}}
          {{group}}
-            if (polar == false) {
+            if (m_polar == false) {
          {{endgroup}}
          {{group}}
                calculate_polar ();
             }
          {{endgroup}}
          {{group}}
-            return mag;
+            return m_mag;
          }
          {{endgroup}}
 
@@ -244,20 +244,20 @@ functions works. If you get stuck, you can reveal the extra problem at the end f
    .. tb-parsons::
       :name: c192_question14_4_3
 
-      Let's write the code for the ``get_theta`` function,
+      Let's write the code for the ``theta`` function,
       which should return the magnitude of a ``complex_number`` object.
 
       .. code-block:: c++
 
          {{group}}
-         double complex_number::get_theta () {
+         double complex_number::theta () {
          {{endgroup}}
          {{distractor}}
          {{group}}
-         double complex_number::get_mag () {
+         double complex_number::mag () {
          {{endgroup}}
          {{group}}
-            if (polar == false) {
+            if (m_polar == false) {
          {{endgroup}}
          {{group}}
                calculate_polar ();
@@ -269,7 +269,7 @@ functions works. If you get stuck, you can reveal the extra problem at the end f
             }
          {{endgroup}}
          {{group}}
-            return theta;
+            return m_theta;
          }
          {{endgroup}}
 

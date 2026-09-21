@@ -65,11 +65,11 @@ It returns the index that the card was located at.
 
 
    playing_card::playing_card () {
-      suit = 0;  rank = 1;
+      m_suit = 0;  m_rank = 1;
    }
 
    playing_card::playing_card (int s, int r) {
-      suit = s;  rank = r;
+      m_suit = s;  m_rank = r;
    }
 
    void playing_card::print () const {
@@ -94,7 +94,7 @@ It returns the index that the card was located at.
       ranks[12] = "Queen";
       ranks[13] = "King";
 
-      std::cout << ranks[rank] << " of " << suits[suit] << '\n';
+      std::cout << ranks[m_rank] << " of " << suits[m_suit] << '\n';
     }
 
     void print_deck (const std::vector<playing_card>& deck) {
@@ -106,10 +106,10 @@ It returns the index that the card was located at.
    std::vector<playing_card> build_deck() {
       std::vector<playing_card> deck (52);
       std::size_t i = 0;
-      for (int suit = 0; suit <= 3; suit++) {
-         for (int rank = 1; rank <= 13; rank++) {
-            deck[i].suit = suit;
-            deck[i].rank = rank;
+      for (int m_suit = 0; m_suit <= 3; m_suit++) {
+         for (int m_rank = 1; m_rank <= 13; m_rank++) {
+            deck[i].m_suit = m_suit;
+            deck[i].m_rank = m_rank;
             i++;
          }
       }
@@ -135,7 +135,7 @@ It returns the index that the card was located at.
    #include <vector>
 
    struct playing_card {
-       int suit, rank;
+       int m_suit, m_rank;
 
        playing_card ();
        playing_card (int s, int r);
@@ -145,7 +145,7 @@ It returns the index that the card was located at.
    std::vector<playing_card> build_deck();
 
    bool equals (const playing_card& c1, const playing_card& c2){
-       return (c1.rank == c2.rank && c1.suit == c2.suit);
+       return (c1.m_rank == c2.m_rank && c1.m_suit == c2.m_suit);
    }
 
    void print_deck(const std::vector<playing_card>& deck);

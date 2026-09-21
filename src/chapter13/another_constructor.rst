@@ -15,10 +15,10 @@ be more natural to write a second ``card_deck`` constructor.
      cards = temp;
 
      std::size_t i = 0;
-     for (int suit = clubs; suit <= spades; ++suit) {
-       for (int rank = ace; rank <= king; ++rank) {
-         cards[i].suit = static_cast<card_suit>(suit);
-         cards[i].rank = static_cast<card_rank>(rank);
+     for (int m_suit = clubs; m_suit <= spades; ++m_suit) {
+       for (int m_rank = ace; m_rank <= king; ++m_rank) {
+         cards[i].m_suit = static_cast<card_suit>(m_suit);
+         cards[i].m_rank = static_cast<card_rank>(m_rank);
          i++;
        }
      }
@@ -35,11 +35,11 @@ The active code below prints out the cards in a deck using the loop from the pre
    :hidden:
 
    playing_card::playing_card () {
-       suit = spades;  rank = ace;
+       m_suit = spades;  m_rank = ace;
    }
 
    playing_card::playing_card (card_suit s, card_rank r) {
-       suit = s;  rank = r;
+       m_suit = s;  m_rank = r;
    }
 
    void playing_card::print () const {
@@ -64,7 +64,7 @@ The active code below prints out the cards in a deck using the loop from the pre
        ranks[12] = "Queen";
        ranks[13] = "King";
 
-       std::cout << ranks[rank] << " of " << suits[suit] << '\n';
+       std::cout << ranks[m_rank] << " of " << suits[m_suit] << '\n';
    }
 
    card_deck::card_deck () {
@@ -72,10 +72,10 @@ The active code below prints out the cards in a deck using the loop from the pre
        cards = temp;
 
        std::size_t i = 0;
-       for (int suit = clubs; suit <= spades; ++suit) {
-           for (int rank = ace; rank <= king; ++rank) {
-               cards[i].suit = static_cast<card_suit>(suit);
-               cards[i].rank = static_cast<card_rank>(rank);
+       for (int m_suit = clubs; m_suit <= spades; ++m_suit) {
+           for (int m_rank = ace; m_rank <= king; ++m_rank) {
+               cards[i].m_suit = static_cast<card_suit>(m_suit);
+               cards[i].m_rank = static_cast<card_rank>(m_rank);
                i++;
            }
        }
@@ -98,8 +98,8 @@ The active code below prints out the cards in a deck using the loop from the pre
    ten, jack, queen, king };
 
    struct playing_card {
-       card_rank rank;
-       card_suit suit;
+       card_rank m_rank;
+       card_suit m_suit;
        playing_card ();
        playing_card (card_suit s, card_rank r);
        void print () const;
@@ -160,27 +160,27 @@ The active code below prints out the cards in a deck using the loop from the pre
             std::size_t i = 0;
       {{endgroup}}
       {{group}}
-            for (int suit = clubs; suit <= spades; ++suit) {
+            for (int m_suit = clubs; m_suit <= spades; ++m_suit) {
       {{endgroup}}
       {{distractor}}
       {{group}}
-            for (card_suit suit = clubs; suit < spades; suit = card_suit(suit+1)) {
+            for (card_suit m_suit = clubs; m_suit < spades; m_suit = card_suit(m_suit+1)) {
       {{endgroup}}
       {{group}}
-               for (card_rank rank = ace; rank <= ten; rank = card_rank(rank+1)) {
-      {{endgroup}}
-      {{distractor}}
-      {{group}}
-               for (int rank = ace; rank <= king; ++rank) {
-      {{endgroup}}
-      {{group}}
-                 cards[i].suit = static_cast<card_suit>(suit);
-                 cards[i].rank = static_cast<card_rank>(rank);
+               for (card_rank m_rank = ace; m_rank <= ten; m_rank = card_rank(m_rank+1)) {
       {{endgroup}}
       {{distractor}}
       {{group}}
-                 cards[i].suit = rank;
-                 cards[i].rank = suit;
+               for (int m_rank = ace; m_rank <= king; ++m_rank) {
+      {{endgroup}}
+      {{group}}
+                 cards[i].m_suit = static_cast<card_suit>(m_suit);
+                 cards[i].m_rank = static_cast<card_rank>(m_rank);
+      {{endgroup}}
+      {{distractor}}
+      {{group}}
+                 cards[i].m_suit = m_rank;
+                 cards[i].m_rank = m_suit;
       {{endgroup}}
       {{group}}
                  i++;

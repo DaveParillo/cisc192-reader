@@ -61,7 +61,7 @@ on which it is invoked:
      ranks[12] = "Queen";
      ranks[13] = "King";
 
-     std::cout << ranks[rank] << " of " << suits[suit] << '\n';
+     std::cout << ranks[m_rank] << " of " << suits[m_suit] << '\n';
    }
 
 The expression ``suits[suit]`` means “use the instance variable ``suit``
@@ -89,11 +89,11 @@ change the output from the ``playing_card::print()`` function.
 
 
    playing_card::playing_card () {
-     suit = 0;  rank = 1;
+     m_suit = 0;  m_rank = 1;
    }
 
    playing_card::playing_card (int s, int r) {
-     suit = s;  rank = r;
+     m_suit = s;  m_rank = r;
    }
 
    void playing_card::print () const {
@@ -118,7 +118,7 @@ change the output from the ``playing_card::print()`` function.
      ranks[12] = "Queen";
      ranks[13] = "King";
 
-      std::cout << ranks[rank] << " of " << suits[suit] << '\n';
+      std::cout << ranks[m_rank] << " of " << suits[m_suit] << '\n';
    }
 
 
@@ -132,7 +132,7 @@ change the output from the ``playing_card::print()`` function.
    #include <vector>
 
    struct playing_card {
-       int suit, rank;
+       int m_suit, m_rank;
 
        playing_card ();
        playing_card (int s, int r);

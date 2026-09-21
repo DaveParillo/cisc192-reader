@@ -159,7 +159,7 @@ Multiple Choice Exercises
    .. code-block:: cpp
 
        struct card {
-         int suit, rank;
+         int m_suit, m_rank;
 
          card ();
          card (int s, int r);

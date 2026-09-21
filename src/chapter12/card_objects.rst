@@ -55,18 +55,18 @@ definition for the ``playing_card`` type looks like this:
 ::
 
    struct playing_card {
-     int suit, rank;
+     int m_suit, m_rank;
 
      playing_card ();
      playing_card (int s, int r);
    };
 
    playing_card::playing_card () {
-     suit = 0;  rank = 1;
+     m_suit = 0;  m_rank = 1;
    }
 
    playing_card::playing_card (int s, int r) {
-     suit = s;  rank = r;
+     m_suit = s;  m_rank = r;
    }
 
 There are two constructors for ``playing_card``\ s. You can tell that they are
@@ -87,8 +87,8 @@ that object's ordinary data members.
 Constructor member initializer lists initialize members directly. For example,
 the two constructors above can instead be written inside the structure as::
 
-   playing_card() : suit{0}, rank{1} {}
-   playing_card(int s, int r) : suit{s}, rank{r} {}
+   playing_card() : m_suit{0}, m_rank{1} {}
+   playing_card(int s, int r) : m_suit{s}, m_rank{r} {}
 
 The empty braces are the constructor body; the expressions after the colon
 initialize the members in their declaration order.

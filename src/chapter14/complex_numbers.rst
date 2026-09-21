@@ -18,11 +18,11 @@ The following is a class definition for a user-defined type called
 
    class complex_number
    {
-     double real = 0.0, imag = 0.0;
+     double m_real = 0.0, m_imag = 0.0;
 
    public:
      complex_number () = default;
-     complex_number (double r, double i) { real = r;  imag = i; }
+     complex_number (double r, double i) { m_real = r;  m_imag = i; }
    };
 
 Because this is a ``class`` definition, the instance variables ``real``
@@ -54,7 +54,7 @@ The :numref:`fig_polar_cartesian` shows the two coordinate systems graphically.
 
    Polar and Cartesian coordinates
 
-complex_number numbers in polar coordinates are written :math:`r e^{i \theta}`,
+complex_number numbers in m_polar coordinates are written :math:`r e^{i \m_theta}`,
 where :math:`r` is the magnitude (radius), and :math:`\theta` is the
 angle in radians.
 
@@ -65,8 +65,8 @@ angle in radians.
    .. math::
 
      \begin{aligned}
-     r       & = &  \sqrt{x^2 + y^2} \\
-     \theta  & = &  \operatorname{atan2}(y, x)\end{aligned}
+     r       & = &  \sqrt{m_x^2 + m_y^2} \\
+     \m_theta  & = &  \operatorname{atan2}(m_y, m_x)\end{aligned}
 
    To go from polar to Cartesian,
 
@@ -74,7 +74,7 @@ angle in radians.
 
      \begin{aligned}
      x       & = &  r \cos \theta \\
-     y       & = &  r \sin \theta\end{aligned}
+     m_y       & = &  r \sin \m_theta\end{aligned}
 
 So which representation should we use? Well, the whole reason there are
 multiple representations is that some operations are easier to perform
@@ -87,17 +87,17 @@ between them automatically, as needed.
 
    class complex_number
    {
-     double real = 0.0, imag = 0.0;
-     double mag = 0.0, theta = 0.0;
-     bool cartesian, polar;
+     double m_real = 0.0, m_imag = 0.0;
+     double m_mag = 0.0, m_theta = 0.0;
+     bool m_cartesian, m_polar;
 
    public:
-     complex_number () { cartesian = true;  polar = false; }
+     complex_number () { m_cartesian = true;  m_polar = false; }
 
      complex_number (double r, double i)
      {
-       real = r;  imag = i;
-       cartesian = true;  polar = false;
+       m_real = r;  m_imag = i;
+       m_cartesian = true;  m_polar = false;
      }
    };
 
@@ -214,14 +214,14 @@ angle between them. Notice how our ``main`` function is the exact same as before
       {
       {{endgroup}}
       {{group}}
-        mag = m;   theta = t;
+        m_mag = m;   m_theta = t;
       {{endgroup}}
       {{group}}
-        cartesian = false;   polar = true;
+        m_cartesian = false;   m_polar = true;
       {{endgroup}}
       {{distractor}}
       {{group}}
-        cartesian = true;   polar = false;
+        m_cartesian = true;   m_polar = false;
       {{endgroup}}
       {{group}}
       }
